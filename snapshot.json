@@ -1,15 +1,9 @@
 {
   "schema": 1,
-  "published_at": "2026-08-03T21:16:12Z",
+  "published_at": "2026-08-03T21:21:21Z",
   "gate_alert": {
-    "active": true,
-    "units": [
-      {
-        "id": "AL1-HARDENING",
-        "kind": "escalate",
-        "raised_at": 1785791496
-      }
-    ]
+    "active": false,
+    "units": []
   },
   "throttling": {
     "codex": {
@@ -20,7 +14,7 @@
       "spark": [
         [
           1785186000,
-          96
+          95
         ],
         [
           1785189600,
@@ -634,8 +628,8 @@
     {
       "id": "AL1-HARDENING",
       "status": "building",
-      "stage": "interviewing",
-      "stage_i": 2,
+      "stage": "merge+cleanup",
+      "stage_i": 6,
       "ctx_pct": 8,
       "last_commit_at": 1785790722,
       "head": "f5c7fde6",
@@ -672,7 +666,7 @@
         "build": true,
         "review": true
       },
-      "gate_open": true
+      "gate_open": false
     }
   ],
   "eligible": [
@@ -769,7 +763,15 @@
     }
   ],
   "commands": {
-    "results": []
+    "results": [
+      {
+        "verb": "say",
+        "unit": "AL1-HARDENING",
+        "status": "ok",
+        "reason": null,
+        "at": 1785792018
+      }
+    ]
   },
-  "snapshot_id": "04f70bd2bcf39db7"
+  "snapshot_id": "cc7d5bdf4f429cec"
 }
