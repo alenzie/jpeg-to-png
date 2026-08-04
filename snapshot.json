@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-04T06:16:50Z",
+  "published_at": "2026-08-04T06:22:01Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -9,8 +9,8 @@
     "codex": {
       "target": 100,
       "projected": 103,
-      "used": 42,
-      "at": 1785809093,
+      "used": 44,
+      "at": 1785820848,
       "spark": [
         [
           1785286800,
@@ -230,6 +230,10 @@
         ],
         [
           1785808800,
+          103
+        ],
+        [
+          1785819600,
           103
         ]
       ]
@@ -595,7 +599,7 @@
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
     "monitor_alive": true,
-    "last_pass_at": 1785822744
+    "last_pass_at": 1785824454
   },
   "runstate": {
     "auto": false,
@@ -622,15 +626,19 @@
       "status": "building",
       "stage": "subfencing",
       "stage_i": 4,
-      "ctx_pct": 50,
-      "last_commit_at": 1785823896,
-      "head": "05e3ae8a",
+      "ctx_pct": 53,
+      "last_commit_at": 1785824409,
+      "head": "15eea081",
       "subfence": {
         "done": 3,
         "total": 10
       },
       "review_rounds": [],
       "commits": [
+        {
+          "sha": "15eea081",
+          "at": 1785824409
+        },
         {
           "sha": "05e3ae8a",
           "at": 1785823896
@@ -646,15 +654,33 @@
         {
           "sha": "6a0c754b",
           "at": 1785821133
-        },
-        {
-          "sha": "2224aea6",
-          "at": 1785820659
         }
       ],
       "fences": {
         "plan": true,
         "synth": true,
+        "build": false,
+        "review": false
+      },
+      "gate_open": false
+    },
+    {
+      "id": "W4",
+      "status": "not-started",
+      "stage": "planning",
+      "stage_i": 1,
+      "ctx_pct": 10,
+      "last_commit_at": null,
+      "head": null,
+      "subfence": {
+        "done": 0,
+        "total": null
+      },
+      "review_rounds": [],
+      "commits": [],
+      "fences": {
+        "plan": false,
+        "synth": false,
         "build": false,
         "review": false
       },
@@ -764,5 +790,5 @@
       }
     ]
   },
-  "snapshot_id": "0b4b5ed3ee6ace79"
+  "snapshot_id": "cc4b0e8c2196f944"
 }
