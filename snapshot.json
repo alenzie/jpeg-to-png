@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-05T11:32:14Z",
+  "published_at": "2026-08-05T11:37:23Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -282,14 +282,10 @@
       {
         "target": 200,
         "label": "A",
-        "projected": 242,
-        "used": 58,
-        "at": 1785921586,
+        "projected": 238,
+        "used": 59,
+        "at": 1785926180,
         "spark": [
-          [
-            1785322800,
-            146
-          ],
           [
             1785402000,
             143
@@ -457,6 +453,10 @@
           [
             1785920400,
             242
+          ],
+          [
+            1785924000,
+            238
           ]
         ]
       },
@@ -676,9 +676,9 @@
     {
       "id": "W3A",
       "status": "building",
-      "stage": "subfencing",
-      "stage_i": 4,
-      "ctx_pct": 76,
+      "stage": "phase-4 review",
+      "stage_i": 5,
+      "ctx_pct": 5,
       "last_commit_at": 1785929325,
       "head": "4e1945e7",
       "subfence": {
@@ -711,26 +711,9 @@
       "fences": {
         "plan": true,
         "synth": true,
-        "build": false,
+        "build": true,
         "review": false
       },
-      "gate_open": false
-    },
-    {
-      "id": "W3a",
-      "status": "building",
-      "stage": "building",
-      "stage_i": 3,
-      "ctx_pct": null,
-      "last_commit_at": null,
-      "head": null,
-      "subfence": {
-        "done": 0,
-        "total": null
-      },
-      "review_rounds": [],
-      "commits": [],
-      "fences": {},
       "gate_open": false
     }
   ],
@@ -757,6 +740,12 @@
   ],
   "merge_feed": [
     {
+      "pr": 256,
+      "unit": "W3A",
+      "merged_at": 1785929583,
+      "sha": "5d5c10e4"
+    },
+    {
       "pr": 255,
       "unit": "W4",
       "merged_at": 1785905406,
@@ -779,12 +768,6 @@
       "unit": "MAP1A-2",
       "merged_at": 1785765998,
       "sha": "cf852f17"
-    },
-    {
-      "pr": 251,
-      "unit": "ADMIN-STAFF-TOWER",
-      "merged_at": 1785725653,
-      "sha": "83181764"
     }
   ],
   "decisions": [
@@ -837,5 +820,5 @@
       }
     ]
   },
-  "snapshot_id": "eac81481acba3b29"
+  "snapshot_id": "5f59e76ab0810524"
 }
