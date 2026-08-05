@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-05T04:48:29Z",
+  "published_at": "2026-08-05T04:53:45Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -270,9 +270,9 @@
       {
         "target": 200,
         "label": "A",
-        "projected": 252,
+        "projected": 251,
         "used": 52,
-        "at": 1785901125,
+        "at": 1785901951,
         "spark": [
           [
             1785322800,
@@ -623,7 +623,7 @@
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
     "monitor_alive": true,
-    "last_pass_at": 1785905231
+    "last_pass_at": 1785905324
   },
   "runstate": {
     "auto": false,
@@ -650,7 +650,7 @@
       "status": "building",
       "stage": "subfencing",
       "stage_i": 4,
-      "ctx_pct": 25,
+      "ctx_pct": 28,
       "last_commit_at": 1785904675,
       "head": "620fa40c",
       "subfence": {
@@ -690,34 +690,17 @@
     },
     {
       "id": "W4",
-      "status": "building",
-      "stage": "phase-4 review",
-      "stage_i": 5,
-      "ctx_pct": 44,
+      "status": "done",
+      "stage": "done",
+      "stage_i": 7,
+      "ctx_pct": 6,
       "last_commit_at": 1785905160,
       "head": "28091b59",
       "subfence": {
         "done": 15,
         "total": 15
       },
-      "review_rounds": [
-        {
-          "round": 1,
-          "seats": "Sonnet-high swarm ×4",
-          "must": 2,
-          "should": 1,
-          "could": 2,
-          "nit": 0
-        },
-        {
-          "round": 1,
-          "seats": "codex gpt-5.6-solxhigh ×3",
-          "must": 6,
-          "should": 17,
-          "could": 0,
-          "nit": 0
-        }
-      ],
+      "review_rounds": [],
       "commits": [
         {
           "sha": "28091b59",
@@ -744,7 +727,7 @@
         "plan": true,
         "synth": true,
         "build": true,
-        "review": false
+        "review": true
       },
       "gate_open": false
     },
@@ -767,6 +750,7 @@
     }
   ],
   "eligible": [
+    "WARM-REPLY",
     "MAP1b",
     "INT7",
     "W5",
@@ -781,10 +765,18 @@
     "MSG-MIGRATION-OPS",
     "ONB1",
     "W3-DP5",
+    "W4b",
+    "W4c",
     "W3-EMP",
     "W7"
   ],
   "merge_feed": [
+    {
+      "pr": 255,
+      "unit": "W4",
+      "merged_at": 1785905406,
+      "sha": "0014136f"
+    },
     {
       "pr": 254,
       "unit": "SD-FREE-COVERAGE",
@@ -808,12 +800,6 @@
       "unit": "ADMIN-STAFF-TOWER",
       "merged_at": 1785725653,
       "sha": "83181764"
-    },
-    {
-      "pr": 249,
-      "unit": "MAP1a",
-      "merged_at": 1785698208,
-      "sha": "b9189eee"
     }
   ],
   "decisions": [
@@ -866,5 +852,5 @@
       }
     ]
   },
-  "snapshot_id": "2f73b0f9acefd896"
+  "snapshot_id": "0f6aec7970b22198"
 }
