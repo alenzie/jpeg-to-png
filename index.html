@@ -4,288 +4,727 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self' https://api.github.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
-<title>jpeg-converter</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<title>SPINDLE · PM tower</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>">
 <style>
-/* FE11 locked palette (values only) */
-:root{
-  --void:#2B3B50; --bg:#32445C; --s-lowest:#3C4F68; --s-low:#465A74; --s:#506580;
-  --s-high:#5A7089; --on-surface:#EEF3FC; --on-variant:#B9CBE3; --on-faint:#A6B6CF;
-  --line:rgba(255,255,255,.07); --line-2:rgba(255,255,255,.12); --line-strong:rgba(255,255,255,.18);
-  --turquoise:#34D9CB; --primary:#85A8D6; --primary-bright:#9BB9DF;
-  --new:#94a3b8; --contacted:#60a5fa; --dialog:#f59e0b; --replied:#22d3ee; --booked:#10b981; --dead:#f43f5e;
-  --warn-text:#fde68a; --ok-text:#99f6e4;
+/* =============================================================================
+   SPINDLE · PM tower — "loom control-room at night"
+   A dim ops room, cool indigo substrate, one warm spun-copper thread accent.
+   Token NAMES are held stable so the untouched JS (var(--purple)/var(--dim)
+   in the sparkline SVG) keeps resolving; only their VALUES are re-tuned.
+   ============================================================================= */
+:root {
   color-scheme: dark;
+
+  /* — substrate & ink — */
+  --bg:     #0B0F1A;   /* warp   — midnight-indigo substrate            */
+  --panel:  #141B2B;   /* loom   — a lit console panel                  */
+  --panel2: #0E1422;   /* well   — recessed track / thread groove       */
+  --line:   #26314A;   /* reed   — cool hairline                        */
+  --fg:     #D9E0F0;   /* linen  — primary ink                          */
+  --dim:    #7C89A6;   /* flax   — muted label ink                      */
+
+  /* — status family (disciplined, one job each) — */
+  --info:   #6E8BD6;   /* weft periwinkle — building / active / calm    */
+  --ok:     #5DBE9A;   /* spun jade       — merged / done / healthy     */
+  --warn:   #E0A93C;   /* amber           — waiting / hot / stale       */
+  --bad:    #E8686B;   /* alarm           — gate open / stalled / down  */
+
+  /* — THE accent: spun copper thread. Held in --purple because the JS
+       sparkline hardcodes stroke="var(--purple)". One accent, used sparingly. */
+  --purple: #EA8B57;
+  --copper: #EA8B57;
+  --copper-deep: #B0592A;
+  --copper-hi:   #F5B183;
+  --copper-glow: rgba(234,139,87,.30);
+
+  --mono: ui-monospace, "SF Mono", "Cascadia Code", "Fira Code", Menlo, Consolas, monospace;
+  --disp: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* — type scale — */
+  --fs-eyebrow: 10.5px;
+  --fs-cap:     11.5px;
+  --fs-meta:    12.5px;
+  --fs-body:    13.5px;
+  --fs-lead:    15px;
+  --fs-logo:    15px;
+  --fs-h2:      20px;
+
+  /* — rhythm — */
+  --r:    13px;
+  --r-sm: 9px;
+  --r-xs: 6px;
+  --sh:   0 10px 30px -22px rgba(0,0,0,.9), 0 1px 0 rgba(255,255,255,.03) inset;
+  --sh-lift: 0 16px 34px -20px rgba(0,0,0,.95), 0 0 0 1px color-mix(in srgb, var(--copper) 30%, transparent);
 }
-*{box-sizing:border-box;margin:0}
-body{background:var(--void);color:var(--on-surface);font:15px/1.45 -apple-system,'Segoe UI',Roboto,sans-serif;padding:10px;max-width:820px;margin:0 auto}
-.card{background:var(--bg);border:1px solid var(--line-2);border-radius:12px;padding:12px 14px;margin:10px 0}
-h1{font-size:17px;letter-spacing:.3px;display:flex;align-items:center;gap:8px}
-h2{font-size:13px;color:var(--on-variant);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px}
-.small{font-size:12px;color:var(--on-faint)}
-.banner{background:linear-gradient(90deg,#5c1f2e,#7a2438);border:1px solid var(--dead);border-radius:12px;padding:12px 14px;margin:10px 0;position:sticky;top:8px;z-index:9;display:none}
-.banner.on{display:block}
-.banner b{color:#ffd7dd}
-.stale{background:#4a3320;border:1px solid var(--dialog);border-radius:12px;padding:10px 14px;margin:10px 0;display:none}
-.stale.on{display:block}
-.row{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
-.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--dead);margin-right:5px}
-.dot.up{background:var(--booked)}
-.bar{height:8px;background:var(--s-lowest);border-radius:5px;overflow:hidden;margin:6px 0}
-.bar>i{display:block;height:100%;background:var(--turquoise);border-radius:5px;transition:width .4s}
-.stages{display:flex;gap:3px;margin:8px 0 4px}
-.stages>i{flex:1;height:7px;border-radius:3px;background:var(--s-lowest)}
-.stages>i.done{background:var(--primary)}
-.stages>i.cur{background:var(--turquoise)}
-.gauge{margin:8px 0}
-.gauge .lbl{display:flex;justify-content:space-between;font-size:12px;color:var(--on-variant)}
-.gauge .num{font-variant-numeric:tabular-nums;color:var(--on-surface)}
-.hot{color:var(--dialog)!important}.cold{color:var(--contacted)!important}.ok{color:var(--ok-text)!important}
-svg.spark{width:100%;height:34px;display:block;margin-top:3px}
-details{margin-top:8px}
-summary{cursor:pointer;color:var(--primary-bright);font-size:13px}
-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:6px}
-th,td{text-align:left;padding:3px 6px;border-bottom:1px solid var(--line);color:var(--on-variant)}
-th{color:var(--on-faint);font-weight:600}
-td.n{font-variant-numeric:tabular-nums}
-.chip{display:inline-block;background:var(--s-low);border:1px solid var(--line-2);border-radius:20px;padding:1px 9px;font-size:12px;color:var(--on-variant);margin:2px}
-.feed li{list-style:none;padding:4px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--on-variant)}
-button{background:var(--s-low);color:var(--on-surface);border:1px solid var(--line-strong);border-radius:9px;padding:8px 13px;font-size:13px;cursor:pointer}
-button:active{background:var(--s-high)}
-button.accent{background:var(--turquoise);color:#0c2b28;border:0;font-weight:600}
-button.danger{background:#5c1f2e;border-color:var(--dead)}
-input,textarea,select{background:var(--s-lowest);color:var(--on-surface);border:1px solid var(--line-2);border-radius:8px;padding:8px;font-size:13px;width:100%}
-.cmdgrid{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
-#gear{margin-left:auto;background:none;border:0;font-size:17px;cursor:pointer}
-.toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--s-high);color:var(--on-surface);border:1px solid var(--line-strong);padding:9px 16px;border-radius:10px;font-size:13px;opacity:0;transition:opacity .3s;pointer-events:none;max-width:90vw}
-.toast.on{opacity:1}
-.slide{position:relative;background:var(--s-lowest);border-radius:24px;height:44px;margin-top:8px;overflow:hidden;user-select:none}
-.slide .track{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--warn-text)}
-.slide .knob{position:absolute;top:3px;left:3px;width:38px;height:38px;border-radius:50%;background:var(--dead);display:flex;align-items:center;justify-content:center;touch-action:none;cursor:grab}
-dialog{background:var(--bg);color:var(--on-surface);border:1px solid var(--line-strong);border-radius:14px;padding:16px;max-width:340px;width:92vw}
-dialog::backdrop{background:rgba(10,16,26,.7)}
-.age{font-variant-numeric:tabular-nums}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    /* "day workshop" — cool paper, not cream; same copper thread */
+    --bg:     #E6E9F1;
+    --panel:  #FBFCFE;
+    --panel2: #EDF0F7;
+    --line:   #CCD4E4;
+    --fg:     #1A2030;
+    --dim:    #5C6884;
+
+    --info:   #3D5EA8;
+    --ok:     #1F8F68;
+    --warn:   #B27A16;
+    --bad:    #CB4A4D;
+
+    --purple: #C0692E;
+    --copper: #C0692E;
+    --copper-deep: #9A501F;
+    --copper-hi:   #DA8A4C;
+    --copper-glow: rgba(192,105,46,.24);
+
+    --sh: 0 10px 26px -22px rgba(24,34,64,.55), 0 1px 0 rgba(255,255,255,.7) inset;
+    --sh-lift: 0 16px 30px -20px rgba(24,34,64,.5), 0 0 0 1px color-mix(in srgb, var(--copper) 34%, transparent);
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--fg);
+  font: var(--fs-body)/1.5 var(--disp);
+  font-variant-numeric: tabular-nums;
+  -webkit-text-size-adjust: 100%;
+  background:
+    radial-gradient(130% 90% at 50% -12%, color-mix(in srgb, var(--info) 9%, var(--bg)) 0%, var(--bg) 58%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+a { color: var(--copper); text-underline-offset: 2px; }
+
+/* ---- header : the persistent brand moment + spun-thread hairline ------------ */
+header {
+  display: flex; align-items: center; gap: .7rem;
+  padding: .55rem .8rem;
+  background: color-mix(in srgb, var(--panel) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 5;
+}
+/* the thread: a fine copper filament strung under the whole console */
+header::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0, transparent 4%,
+    color-mix(in srgb, var(--copper) 55%, transparent) 18%,
+    color-mix(in srgb, var(--copper) 20%, transparent) 50%,
+    color-mix(in srgb, var(--copper) 55%, transparent) 82%,
+    transparent 96%);
+}
+.logo {
+  font-weight: 800; font-size: var(--fs-logo); letter-spacing: .1em;
+  white-space: nowrap; text-transform: uppercase; color: var(--fg);
+}
+nav { display: flex; gap: .2rem; overflow-x: auto; scrollbar-width: none; }
+nav::-webkit-scrollbar { display: none; }
+nav button {
+  background: none; border: 1px solid transparent; color: var(--dim);
+  padding: .35rem .7rem; border-radius: var(--r-sm); cursor: pointer;
+  font-family: var(--disp); font-size: 12px; font-weight: 600;
+  letter-spacing: .05em; text-transform: uppercase; white-space: nowrap;
+  position: relative; transition: color .18s ease, background .18s ease;
+}
+nav button:hover { color: var(--fg); }
+nav button.active { color: var(--fg); background: color-mix(in srgb, var(--copper) 8%, transparent); }
+/* active tab hangs a short copper thread */
+nav button.active::after {
+  content: ""; position: absolute; left: 22%; right: 22%; bottom: -.4rem; height: 2px;
+  border-radius: 2px; background: var(--copper);
+  box-shadow: 0 0 8px var(--copper-glow);
+}
+.badge {
+  background: var(--bad); color: #0B0F1A; border-radius: 999px;
+  padding: .05em .45em; font-size: 10px; font-weight: 800; font-family: var(--mono);
+  vertical-align: top; margin-left: .3em;
+}
+
+.conn {
+  margin-left: auto; font-size: var(--fs-cap); color: var(--bad);
+  display: flex; align-items: center; gap: .4rem; white-space: nowrap;
+  text-transform: uppercase; letter-spacing: .08em; font-weight: 600;
+}
+.conn .dot2 { width: 7px; height: 7px; border-radius: 50%; background: var(--bad); }
+.conn.on { color: var(--ok); }
+.conn.on .dot2 {
+  background: var(--ok);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--ok) 60%, transparent);
+  animation: beacon 2.6s ease-out infinite;
+}
+
+main { padding: .9rem; max-width: 1120px; margin: 0 auto; }
+
+/* ---- section headings : eyebrow with a copper thread-tick ------------------- */
+h2 { font-size: var(--fs-h2); font-weight: 750; letter-spacing: -.01em; margin: 0 0 .7rem; }
+h3 {
+  margin: 0 0 .6rem; font-size: var(--fs-eyebrow); color: var(--dim);
+  text-transform: uppercase; letter-spacing: .16em; font-weight: 700;
+  display: flex; align-items: center; gap: .5rem;
+}
+.panel > h3::before {
+  content: ""; width: 12px; height: 2px; border-radius: 2px; flex: none;
+  background: var(--copper); box-shadow: 0 0 6px var(--copper-glow);
+}
+.dim { color: var(--dim); }
+.fg  { color: var(--fg); }
+.good { color: var(--ok); }
+.bad  { color: var(--bad); }
+.note { color: var(--dim); font-size: var(--fs-cap); margin-top: .55rem; font-style: italic; }
+
+/* ---- banners --------------------------------------------------------------- */
+.stale-banner, .gate-banner {
+  border-radius: var(--r); padding: .65rem .85rem; margin-bottom: .8rem;
+  font-size: var(--fs-meta); line-height: 1.45; box-shadow: var(--sh);
+}
+.stale-banner {
+  background: color-mix(in srgb, var(--warn) 15%, var(--panel));
+  border: 1px solid color-mix(in srgb, var(--warn) 55%, var(--line));
+}
+.gate-banner {
+  background: color-mix(in srgb, var(--bad) 15%, var(--panel));
+  border: 1px solid color-mix(in srgb, var(--bad) 60%, var(--line));
+  color: color-mix(in srgb, var(--bad) 30%, var(--fg));
+}
+.gate-banner b { color: var(--fg); }
+
+/* ---- panels ---------------------------------------------------------------- */
+.panel {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--fg) 2.5%, var(--panel)) 0, var(--panel) 40%);
+  border: 1px solid var(--line); border-radius: var(--r);
+  padding: .9rem 1rem; margin-bottom: .8rem; box-shadow: var(--sh);
+}
+.panel.wide { grid-column: 1 / -1; }
+.panels { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+@media (max-width: 760px) { .panels { grid-template-columns: 1fr; } }
+
+/* ---- key/value rows -------------------------------------------------------- */
+.kv { display: flex; flex-wrap: wrap; gap: .35rem 1.3rem; font-size: var(--fs-meta); color: var(--dim); }
+.kv > span { display: inline-flex; align-items: baseline; gap: .4ch; }
+.kv b { color: var(--fg); font-weight: 700; font-variant-numeric: tabular-nums; }
+.kv b.good { color: var(--ok); }
+.kv b.bad  { color: var(--bad); }
+
+/* ---- chips (daemons, eligible, fences) ------------------------------------- */
+.chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+.chip {
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: var(--panel2); border: 1px solid var(--line); border-radius: 999px;
+  padding: .18rem .65rem; font-size: var(--fs-cap); color: var(--fg);
+  font-family: var(--mono); letter-spacing: .01em;
+}
+.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--bad); flex: none;
+       box-shadow: 0 0 0 3px color-mix(in srgb, var(--bad) 16%, transparent); }
+.dot.up { background: var(--ok); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ok) 16%, transparent); }
+
+/* ---- empty states ---------------------------------------------------------- */
+.empty, .empty-inline { color: var(--dim); text-align: center; line-height: 1.55; }
+.empty { padding: 3.2rem 1.2rem; font-size: var(--fs-meta); }
+.empty-inline { padding: 1.1rem; font-size: var(--fs-meta); }
+
+/* ---- throttling gauges ----------------------------------------------------- */
+.tgauge { margin: 0 0 1rem; }
+.tgauge:last-child { margin-bottom: 0; }
+.tg-lbl { display: flex; justify-content: space-between; gap: .5rem; flex-wrap: wrap;
+          font-size: var(--fs-meta); font-weight: 600; }
+.tg-lbl > span:first-child { text-transform: uppercase; letter-spacing: .06em; }
+.tg-num { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 700; color: var(--fg); }
+.hot   { color: var(--warn); }
+.cold  { color: var(--info); }
+.ok-c  { color: var(--ok); }
+.bar {
+  height: 9px; background: var(--panel2); border-radius: 999px; overflow: hidden;
+  margin: .4rem 0 .35rem; border: 1px solid var(--line);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.35);
+}
+.bar > i {
+  display: block; height: 100%; border-radius: 999px;
+  background: linear-gradient(90deg, var(--copper-deep), var(--copper) 70%, var(--copper-hi));
+  box-shadow: 0 0 10px var(--copper-glow);
+}
+/* sparklines rendered as fine spun thread */
+svg.spark { width: 100%; height: 32px; display: block; margin-top: .3rem;
+            filter: drop-shadow(0 1px 3px color-mix(in srgb, var(--copper) 22%, transparent)); }
+svg.spark path { stroke-linecap: round; stroke-linejoin: round; }
+
+/* ============================================================================
+   SIGNATURE — the stage bar as THREAD WOUND ON A SPINDLE
+   Markup is untouched: .stages > i(.done|.cur|·). Purely restyled here.
+   done = copper coil wraps · cur = glowing winder · rest = bare bobbin shaft.
+   ============================================================================ */
+.stages {
+  position: relative; display: flex; gap: 2px; height: 13px;
+  margin: .55rem 4px .45rem; padding: 0 1px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, #000 30%, var(--panel2)), var(--panel2));
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.5);
+}
+/* bobbin flanges at each end */
+.stages::before, .stages::after {
+  content: ""; position: absolute; top: -3px; bottom: -3px; width: 3px; border-radius: 2px;
+  background: linear-gradient(180deg, var(--copper-deep), color-mix(in srgb, var(--copper-deep) 40%, #000));
+}
+.stages::before { left: -5px; }
+.stages::after  { right: -5px; }
+
+.stages > i {
+  flex: 1; border-radius: 1px; background: transparent; position: relative;
+  border-top: 1px solid color-mix(in srgb, #fff 4%, transparent);
+}
+/* wound copper thread — fine coil striping reads as individual wraps */
+.stages > i.done {
+  background:
+    repeating-linear-gradient(90deg,
+      var(--copper) 0 2px,
+      color-mix(in srgb, var(--copper-deep) 80%, var(--copper)) 2px 4px);
+  box-shadow: inset 0 -2px 3px rgba(0,0,0,.35), inset 0 1px 1px var(--copper-hi);
+}
+/* the live winding point */
+.stages > i.cur {
+  background: linear-gradient(90deg, var(--copper) 0, var(--copper-hi) 100%);
+  box-shadow: 0 0 10px var(--copper-glow), inset 0 1px 1px var(--copper-hi);
+}
+.stages > i.cur::after {
+  content: ""; position: absolute; top: 50%; right: -2px; width: 6px; height: 6px;
+  border-radius: 50%; transform: translateY(-50%);
+  background: var(--copper-hi);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--copper) 30%, transparent), 0 0 9px var(--copper);
+  animation: winder 2.4s ease-in-out infinite;
+}
+
+/* ---- context gauge --------------------------------------------------------- */
+.gauge {
+  height: 8px; background: var(--panel2); border-radius: 999px; overflow: hidden;
+  border: 1px solid var(--line); margin: .35rem 0;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.35);
+}
+.gauge > div { height: 100%; border-radius: 999px;
+               background: linear-gradient(90deg, color-mix(in srgb, var(--ok) 70%, #000), var(--ok)); }
+.gauge.warn > div { background: linear-gradient(90deg, color-mix(in srgb, var(--warn) 70%, #000), var(--warn)); }
+.gauge.bad  > div { background: linear-gradient(90deg, color-mix(in srgb, var(--bad) 70%, #000), var(--bad)); }
+
+/* ---- fleet tiles ----------------------------------------------------------- */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(252px, 1fr)); gap: .8rem; }
+.tile {
+  position: relative; overflow: hidden; --tc: var(--info);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--fg) 2.5%, var(--panel)) 0, var(--panel) 42%);
+  border: 1px solid var(--line); border-radius: var(--r); padding: .85rem .95rem .9rem 1.05rem;
+  cursor: pointer; box-shadow: var(--sh);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+/* status accent strip down the spine of the tile */
+.tile::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--tc); }
+.tile:has(.status.done), .tile:has(.status.success) { --tc: var(--ok); }
+.tile:has(.status.waiting), .tile:has(.status.interrupted), .tile:has(.status.subfencing) { --tc: var(--warn); }
+.tile:has(.status.idle), .tile:has(.status.queued) { --tc: var(--dim); }
+.tile:has(.status.error), .tile:has(.stall) { --tc: var(--bad); }
+.tile:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--copper) 45%, var(--line)); box-shadow: var(--sh-lift); }
+.tile h3 {
+  margin: 0 0 .35rem; font-size: var(--fs-lead); color: var(--fg); font-family: var(--mono);
+  text-transform: none; letter-spacing: .01em; font-weight: 700;
+  display: flex; justify-content: space-between; align-items: center; gap: .5rem;
+}
+.tile h3::before { content: none; }
+.tile .meta { color: var(--dim); font-size: var(--fs-meta); margin-bottom: .1rem; text-transform: capitalize; }
+
+/* status pill — one custom prop drives colour, border, tint */
+.status {
+  --sc: var(--dim);
+  font-size: 10px; padding: .12rem .55rem; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: .07em; font-weight: 700; white-space: nowrap;
+  color: var(--sc);
+  border: 1px solid color-mix(in srgb, var(--sc) 45%, var(--line));
+  background: color-mix(in srgb, var(--sc) 14%, transparent);
+}
+.status.busy, .status.building, .status.planning { --sc: var(--info); }
+.status.idle, .status.queued { --sc: var(--dim); }
+.status.waiting, .status.interrupted, .status.subfencing { --sc: var(--warn); }
+.status.error { --sc: var(--bad); }
+.status.done, .status.success { --sc: var(--ok); }
+
+.hb {
+  font-size: var(--fs-cap); color: var(--dim); margin-top: .4rem;
+  font-family: var(--mono); font-variant-numeric: tabular-nums; line-height: 1.5;
+}
+.stall {
+  color: var(--bad); font-size: var(--fs-meta); margin-top: .45rem; font-weight: 800;
+  letter-spacing: .04em; text-transform: uppercase;
+}
+
+/* ---- inbox cards ----------------------------------------------------------- */
+.card {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--fg) 2.5%, var(--panel)) 0, var(--panel) 42%);
+  border: 1px solid var(--line); border-left: 3px solid var(--warn);
+  border-radius: var(--r); padding: .85rem .95rem; margin-bottom: .7rem; box-shadow: var(--sh);
+}
+.card.hold { border-left-color: var(--bad); }
+.card h4 { margin: 0 0 .3rem; font-size: var(--fs-lead); font-weight: 700; }
+.card .meta { color: var(--dim); font-size: var(--fs-meta); }
+
+/* ---- tables (unit / history) ----------------------------------------------- */
+table { width: 100%; border-collapse: collapse; font-size: var(--fs-meta); }
+th, td { text-align: left; padding: .34rem .55rem; border-bottom: 1px solid var(--line); }
+th {
+  color: var(--dim); font-weight: 700; font-size: var(--fs-eyebrow);
+  text-transform: uppercase; letter-spacing: .1em;
+}
+tr:last-child td { border-bottom: none; }
+td { font-variant-numeric: tabular-nums; }
+td.num { font-family: var(--mono); text-align: right; color: var(--fg); }
+.mm { color: var(--bad); font-weight: 800; }
+.zero { color: color-mix(in srgb, var(--ok) 75%, var(--dim)); }
+
+/* ---- feed lists ------------------------------------------------------------ */
+.feed { list-style: none; margin: 0; padding: 0; }
+.feed li {
+  padding: .45rem 0 .45rem .9rem; border-bottom: 1px solid var(--line);
+  font-size: var(--fs-meta); position: relative;
+}
+.feed li::before {
+  content: ""; position: absolute; left: 0; top: .85rem; width: 5px; height: 5px;
+  border-radius: 50%; background: color-mix(in srgb, var(--copper) 60%, var(--line));
+}
+.feed li:last-child { border-bottom: none; }
+.feed b { color: var(--fg); font-weight: 700; }
+
+/* ---- buttons / unit picker ------------------------------------------------- */
+.act {
+  background: var(--panel2); border: 1px solid var(--line); color: var(--fg);
+  border-radius: var(--r-sm); padding: .38rem .8rem; cursor: pointer;
+  font-family: var(--mono); font-size: var(--fs-meta); font-weight: 600;
+  transition: border-color .16s ease, color .16s ease, background .16s ease;
+}
+.act:hover { border-color: color-mix(in srgb, var(--copper) 55%, var(--line)); color: var(--copper); }
+.pick { display: flex; gap: .45rem; flex-wrap: wrap; margin-bottom: .9rem; }
+.unit-head { display: flex; align-items: center; gap: .7rem; margin-bottom: .35rem; flex-wrap: wrap; }
+.unit-head h2 { margin: 0; }
+
+footer {
+  text-align: center; color: var(--dim); font-size: var(--fs-cap);
+  font-family: var(--mono); font-variant-numeric: tabular-nums;
+  letter-spacing: .04em; padding: 1.2rem .8rem 2.4rem;
+}
+
+/* ---- motion (persistent elements only — #view re-renders every 10s) -------- */
+@keyframes beacon {
+  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--ok) 55%, transparent); }
+  70%  { box-shadow: 0 0 0 6px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+@keyframes winder {
+  0%, 100% { opacity: .65; transform: translateY(-50%) scale(.85); }
+  50%      { opacity: 1;   transform: translateY(-50%) scale(1.1); }
+}
+@keyframes headerIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  header { animation: headerIn .5s ease both; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .conn.on .dot2, .stages > i.cur::after { animation: none; }
+  * { scroll-behavior: auto; }
+}
+
+/* ---- focus (keyboard) ------------------------------------------------------ */
+:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 2px;
+  border-radius: var(--r-xs);
+}
+
+/* ---- narrow phones (~360px) ------------------------------------------------ */
+@media (max-width: 380px) {
+  main { padding: .7rem; }
+  header { gap: .5rem; padding: .5rem .6rem; }
+  .logo { font-size: 13px; letter-spacing: .06em; }
+  nav button { padding: .3rem .5rem; font-size: 11px; }
+  .tiles { grid-template-columns: 1fr; }
+  h2 { font-size: 18px; }
+}
 </style>
 </head>
 <body>
-<h1>🖼️ jpeg-converter <span class="small" id="snapAge"></span><button id="gear" title="settings">⚙️</button></h1>
-<div id="staleBox" class="stale">⚠️ snapshot is stale (<span id="staleAge"></span> old) — publisher may be down or fleet unchanged for a long time.</div>
-<div id="gateBanner" class="banner"></div>
-<div class="card" id="unitsCard"><h2>fleet</h2><div id="units"></div><div id="runstate" class="small"></div></div>
-<div class="card"><h2>burn</h2><div id="gauges"></div></div>
-<div class="card"><h2>pm</h2><div id="pmRow" class="small"></div><div id="daemons" style="margin-top:6px"></div></div>
-<div class="card"><h2>merges</h2><ul class="feed" id="merges"></ul></div>
-<div class="card"><h2>pm decisions</h2><ul class="feed" id="decisions"></ul></div>
-<div class="card" id="cmdCard" style="display:none"><h2>commands</h2>
-  <div id="cmdButtons" class="cmdgrid"></div>
-  <div style="margin-top:10px"><textarea id="sayText" rows="2" placeholder="say <awaiting unit> …"></textarea>
-  <div class="cmdgrid"><select id="sayUnit" style="max-width:46%"></select><button class="accent" id="sayBtn">say</button></div></div>
-  <details><summary>command log</summary><ul class="feed" id="cmdLog"></ul></details>
-</div>
-<div class="small" style="text-align:center;margin:14px 0" id="foot"></div>
-<div class="toast" id="toast"></div>
-
-<dialog id="cfgDlg">
-  <h2 style="margin-bottom:8px">settings</h2>
-  <label class="small">repo (owner/name)</label><input id="cfgRepo" placeholder="owner/jpeg-to-png">
-  <label class="small" style="margin-top:6px;display:block">fine-grained PAT (Issues RW only)</label><input id="cfgPat" type="password">
-  <label class="small" style="margin-top:6px;display:block">command key (base64url, 32B)</label><input id="cfgKey" type="password">
-  <div class="cmdgrid" style="margin-top:12px">
-    <button class="accent" id="cfgSave">save</button>
-    <button id="cfgClose">close</button>
-    <button class="danger" id="cfgWipe">wipe credentials</button>
-  </div>
-  <p class="small" style="margin-top:8px">Credentials live only in this browser (localStorage). Pair via the terminal QR (<code>#cfg=</code> fragment) or paste here.</p>
-</dialog>
-
+<header>
+  <span class="logo">🧵 SPINDLE</span>
+  <nav id="tabs">
+    <button data-tab="pm" class="active">PM</button>
+    <button data-tab="fleet">Fleet</button>
+    <button data-tab="inbox">Inbox <span id="inbox-badge" class="badge" hidden></span></button>
+    <button data-tab="unit">Unit</button>
+    <button data-tab="history">History</button>
+  </nav>
+  <span id="conn" class="conn"><span class="dot2"></span><span id="conn-txt">connecting…</span></span>
+</header>
+<main id="view"></main>
+<footer id="foot"></footer>
 <script>
 "use strict";
-const $=id=>document.getElementById(id);
-const esc=s=>{const d=document.createElement('span');d.textContent=String(s??'');return d.innerHTML;};
-const STAGES=["queued","planning","interviewing","building","subfencing","phase-4 review","merge+cleanup","done"];
-let SNAP=null, CFG=null;
+const $ = (s, el = document) => el.querySelector(s);
+const view = $('#view');
+const STAGES = ["queued","planning","interviewing","building","subfencing","phase-4 review","merge+cleanup","done"];
 
-/* ---------- config (command mode) ---------- */
-function loadCfg(){ try{CFG=JSON.parse(localStorage.getItem('jc_cfg')||'null');}catch(e){CFG=null;} }
-function saveCfg(c){ localStorage.setItem('jc_cfg',JSON.stringify(c)); CFG=c; }
-(function importFragment(){
-  if(location.hash.startsWith('#cfg=')){
-    try{ const c=JSON.parse(atob(location.hash.slice(5).replace(/-/g,'+').replace(/_/g,'/')));
-      if(c.pat&&c.repo&&c.command_key){ saveCfg(c); toast('paired ✓'); } }catch(e){}
-    history.replaceState(null,'',location.pathname+location.search);
+let SNAP = null, tab = 'pm', currentUnit = null;
+
+// ---- helpers --------------------------------------------------------------------------------
+const escp = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;');
+const escq = (s) => String(s ?? '').replace(/"/g, '&quot;');
+function toEpoch(v) {
+  if (v == null) return null;
+  if (typeof v === 'number') return v;
+  const p = Date.parse(v);
+  return isNaN(p) ? null : p / 1000;
+}
+function ago(v) {
+  const t = toEpoch(v);
+  if (t == null) return '—';
+  const s = Math.max(0, Date.now() / 1000 - t);
+  if (s < 90) return Math.round(s) + 's';
+  if (s < 5400) return Math.round(s / 60) + 'm';
+  if (s < 172800) return (s / 3600).toFixed(1) + 'h';
+  return Math.round(s / 86400) + 'd';
+}
+function gaugeClass(pct) {
+  if (pct == null) return '';
+  return pct >= 90 ? 'bad' : pct >= 75 ? 'warn' : '';
+}
+function emptyState(msg) { return `<div class="empty">${escp(msg)}</div>`; }
+function spark(pts, target) {
+  if (!pts || pts.length < 2) return '';
+  const w = 300, h = 30, xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs);
+  const tgt = target || 0;
+  const y0 = Math.min(...ys, tgt * 0.5), y1 = Math.max(...ys, tgt * 1.3 || 1);
+  const X = (t) => ((t - x0) / (x1 - x0 || 1) * w).toFixed(1);
+  const Y = (v) => (h - 4 - (v - y0) / (y1 - y0 || 1) * (h - 8)).toFixed(1);
+  const line = pts.map((p, i) => (i ? 'L' : 'M') + X(p[0]) + ',' + Y(p[1])).join(' ');
+  const tgtLine = target ? `<line x1="0" x2="${w}" y1="${Y(tgt)}" y2="${Y(tgt)}" stroke="var(--dim)" stroke-opacity=".4" stroke-dasharray="3 4"/>` : '';
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">${tgtLine}<path d="${line}" fill="none" stroke="var(--purple)" stroke-width="1.6"/></svg>`;
+}
+
+// ---- PM tab -----------------------------------------------------------------------------------
+function gaugeCard(g) {
+  const proj = g.projected ?? 0;
+  const cls = g.target ? (proj > g.target * 1.1 ? 'hot' : proj < g.target * 0.85 ? 'cold' : 'ok-c') : '';
+  const pct = g.target ? Math.min(100, proj / g.target / 1.5 * 100) : 0;
+  return `<div class="tgauge">
+    <div class="tg-lbl"><span>${escp(g.name)} <span class="dim">(target ${g.target ?? '—'})</span></span>
+    <span class="tg-num ${cls}">proj ${proj}%${g.used != null ? ` · used ${g.used}%` : ''}</span></div>
+    <div class="bar"><i style="width:${pct}%"></i></div>
+    ${spark(g.spark, g.target)}
+    <div class="dim" style="font-size:11px">read ${ago(g.at)} ago</div>
+  </div>`;
+}
+function renderPM() {
+  if (!SNAP) { view.innerHTML = emptyState('waiting for snapshot…'); return; }
+  const s = SNAP;
+  const pa = s.published_at ? toEpoch(s.published_at) : null;
+  const staleSecs = pa != null ? (Date.now() / 1000 - pa) : null;
+  const stale = staleSecs != null && staleSecs > 600;
+
+  const g = s.gate_alert || {};
+  const gateHtml = (g.active && g.units && g.units.length)
+    ? `<div class="gate-banner">${g.units.map(u => `🚨 <b>${escp(u.id)}</b> ${escp(u.kind || '')} — waiting ${ago(u.raised_at)}`).join('<br>')}</div>`
+    : '';
+
+  const r = s.runstate || {};
+  const runstateHtml = `<div class="kv">
+    <span>auto <b class="${r.auto ? 'good' : ''}">${r.auto ? 'ON' : 'off'}</b></span>
+    <span>parallel <b>${r.parallel ?? '—'}</b></span>
+    <span>pickconfirm <b>${r.pickconfirm ? 'on' : 'off'}</b></span>
+    <span>eligible <b>${(s.eligible || []).length}</b></span>
+  </div>`;
+
+  const pm = s.pm || {};
+  const pmHtml = `<div class="kv">
+    <span>monitor <b class="${pm.monitor_alive ? 'good' : 'bad'}">${pm.monitor_alive ? 'alive' : 'DOWN'}</b></span>
+    <span>last pass <b>${ago(pm.last_pass_at)}</b> ago</span>
+    <span>pm ctx <b>${pm.ctx_proxy_pct != null ? pm.ctx_proxy_pct + '%' : 'n/a'}</b></span>
+  </div>`;
+  const daemonsHtml = Object.entries(s.daemons || {}).map(([k, v]) =>
+    `<span class="chip"><span class="dot ${v.up ? 'up' : ''}"></span>${escp(k)}</span>`).join('') || '<span class="dim">none reported</span>';
+
+  const gauges = [];
+  const th = s.throttling || {};
+  if (th.codex) gauges.push({ name: 'codex', ...th.codex });
+  (th.claude || []).forEach(c => gauges.push({ name: 'claude ' + (c.label || ''), ...c }));
+  const gaugesHtml = gauges.length ? gauges.map(gaugeCard).join('') : '<div class="empty-inline">no throttling readings in this snapshot</div>';
+
+  const eligibleHtml = (s.eligible || []).length
+    ? `<div class="chips">${s.eligible.map(u => `<span class="chip">${escp(u)}</span>`).join('')}</div>`
+    : '<div class="empty-inline">none eligible</div>';
+
+  const cmdLog = (s.commands && s.commands.results) || [];
+  const cmdLogHtml = cmdLog.length
+    ? `<ul class="feed">${cmdLog.slice(0, 10).map(c => `<li>${escp(c.verb)} ${escp(c.unit || '')} → <b>${escp(c.status)}</b> <span class="dim">${ago(c.at)} ago</span></li>`).join('')}</ul>`
+    : '<div class="empty-inline">no commands logged in this snapshot</div>';
+
+  view.innerHTML = `
+    ${stale ? `<div class="stale-banner">⚠️ snapshot is stale (${ago(pa)} old) — publisher may be down, or the fleet has been quiet a while.</div>` : ''}
+    ${gateHtml}
+    <div class="panel"><h3>Runstate</h3>${runstateHtml}</div>
+    <div class="panel"><h3>PM</h3>${pmHtml}<div class="chips" style="margin-top:.5rem">${daemonsHtml}</div></div>
+    <div class="panel"><h3>Throttling</h3>${gaugesHtml}</div>
+    <div class="panel"><h3>Eligible to dispatch</h3>${eligibleHtml}<div class="note">read-only — dispatch via desktop switchboard / Discord</div></div>
+    <div class="panel"><h3>Recent commands</h3>${cmdLogHtml}</div>
+  `;
+}
+
+// ---- Fleet --------------------------------------------------------------------------------
+function unitTile(u) {
+  const si = u.stage_i ?? 0;
+  const stagesHtml = STAGES.map((label, i) => `<i class="${i < si ? 'done' : i === si ? 'cur' : ''}" title="${escq(label)}"></i>`).join('');
+  const sub = u.subfence && (u.subfence.total || u.subfence.done)
+    ? `${u.subfence.done ?? 0}${u.subfence.total ? '/' + u.subfence.total : ''}` : '—';
+  return `<div class="tile" data-unit="${escq(u.id)}">
+    <h3>${escp(u.id)} <span class="status ${escp(u.status || '')}">${escp(u.status || '—')}</span></h3>
+    <div class="meta">${escp(u.stage || '—')}</div>
+    <div class="stages">${stagesHtml}</div>
+    <div class="gauge ${gaugeClass(u.ctx_pct)}" title="context ${u.ctx_pct ?? '—'}%"><div style="width:${u.ctx_pct ?? 0}%"></div></div>
+    <div class="hb">ctx ${u.ctx_pct ?? '—'}% · fences ${sub} · commit ${ago(u.last_commit_at)} ago · ${u.head ? escp(String(u.head).slice(0, 10)) : '—'}</div>
+    ${u.gate_open ? `<div class="stall">🚨 GATE OPEN</div>` : ''}
+  </div>`;
+}
+function renderFleet() {
+  if (!SNAP) { view.innerHTML = emptyState('waiting for snapshot…'); return; }
+  const units = SNAP.units || [];
+  if (!units.length) { view.innerHTML = emptyState('no units in the fleet'); return; }
+  view.innerHTML = `<div class="tiles">${units.map(unitTile).join('')}</div>`;
+  view.querySelectorAll('[data-unit]').forEach(t => t.onclick = () => { currentUnit = t.dataset.unit; setTab('unit'); });
+}
+
+// ---- Inbox (no backend — snapshot may or may not carry asks/holds) ------------------------
+function renderInbox() {
+  if (!SNAP) { view.innerHTML = emptyState('waiting for snapshot…'); return; }
+  const inbox = SNAP.inbox;
+  const asks = (inbox && inbox.asks) || [];
+  const holds = (inbox && inbox.holds) || [];
+  if (!asks.length && !holds.length) {
+    view.innerHTML = emptyState('no inbox data published in this snapshot — asks/holds are a live-console feature. Check the desktop switchboard or Discord for anything waiting on you.');
+    return;
   }
-})();
-loadCfg();
-
-/* ---------- toast ---------- */
-let toastT=null;
-function toast(m){ const t=$('toast'); t.textContent=m; t.classList.add('on');
-  clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('on'),3200); }
-
-/* ---------- helpers ---------- */
-const ago=ts=>{ if(!ts)return '—'; const s=Math.max(0,Date.now()/1e3-ts);
-  if(s<90)return Math.round(s)+'s'; if(s<5400)return Math.round(s/60)+'m';
-  if(s<172800)return (s/3600).toFixed(1)+'h'; return Math.round(s/86400)+'d'; };
-function spark(pts,target){
-  if(!pts||pts.length<2)return '';
-  const w=300,h=34,xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]);
-  const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys,target*0.5),y1=Math.max(...ys,target*1.3);
-  const X=t=>( (t-x0)/(x1-x0||1)*w ).toFixed(1), Y=v=>( h-4-(v-y0)/(y1-y0||1)*(h-8) ).toFixed(1);
-  const line=pts.map((p,i)=>(i?'L':'M')+X(p[0])+','+Y(p[1])).join(' ');
-  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
-    <line x1="0" x2="${w}" y1="${Y(target)}" y2="${Y(target)}" stroke="rgba(255,255,255,.25)" stroke-dasharray="3 4"/>
-    <path d="${line}" fill="none" stroke="#34D9CB" stroke-width="1.6"/></svg>`;
+  view.innerHTML = holds.map(h => `<div class="card hold"><h4>✋ ${escp(h.unit)} — HOLD: ${escp(h.reason || '')}</h4>
+      <div class="meta">${escp(h.detail || '')} · raised ${ago(h.raised_at)} ago</div></div>`).join('') +
+    asks.map(a => `<div class="card"><h4>🙋 ${escp(a.unit)} — ${escp(a.kind || 'ask')}</h4>
+      <div class="meta">${escp(a.detail || '')} · ${ago(a.asked_at)} ago</div></div>`).join('') +
+    '<div class="note">read-only — answer via desktop switchboard / Discord</div>';
 }
 
-/* ---------- render ---------- */
-function render(){
-  const s=SNAP; if(!s)return;
-  // stale + age
-  const pa=s.published_at?Date.parse(s.published_at)/1e3:null;
-  $('snapAge').textContent=pa?('· '+ago(pa)+' ago'):'';
-  const stale=pa&&(Date.now()/1e3-pa>600);
-  $('staleBox').classList.toggle('on',!!stale);
-  if(stale)$('staleAge').textContent=ago(pa);
-  // gate banner
-  const g=s.gate_alert; const b=$('gateBanner');
-  if(g&&g.active&&g.units.length){
-    b.classList.add('on');
-    b.innerHTML=g.units.map(u=>`🚨 <b>${esc(u.id)}</b> ${esc(u.kind)} — waiting <span class="age">${ago(u.raised_at)}</span>`).join('<br>');
-  } else b.classList.remove('on');
-  // units
-  $('units').innerHTML=(s.units||[]).map(u=>{
-    const si=u.stage_i??0;
-    const stages=STAGES.map((_,i)=>`<i class="${i<si?'done':i===si?'cur':''}"></i>`).join('');
-    const sub=u.subfence&&u.subfence.total?` · fences ${u.subfence.done}/${u.subfence.total}`:'';
-    const rr=(u.review_rounds||[]);
-    const conv=rr.length?`<details><summary>convergence (${rr.length} rounds)</summary><table><tr><th>R</th><th>seats</th><th>must</th><th>should</th><th>could</th><th>nit</th></tr>${
-      rr.map(r=>`<tr><td class="n">${r.round}</td><td>${esc(r.seats)}</td><td class="n">${r.must}</td><td class="n">${r.should}</td><td class="n">${r.could}</td><td class="n">${r.nit}</td></tr>`).join('')}</table></details>`:'';
-    const commits=(u.commits||[]).length?`<details><summary>commits</summary><table>${u.commits.map(c=>`<tr><td>${esc(c.sha)}</td><td class="n">${ago(c.at)} ago</td></tr>`).join('')}</table></details>`:'';
-    const fences=u.fences&&Object.keys(u.fences).length?`<details><summary>fences</summary><div>${Object.entries(u.fences).map(([k,v])=>`<span class="chip">${v?'✅':'▢'} ${esc(k)}</span>`).join('')}</div></details>`:'';
-    return `<div style="padding:8px 0;border-bottom:1px solid var(--line)">
-      <div class="row"><b>${esc(u.id)}</b><span class="small">${esc(u.stage)}${sub}</span></div>
-      <div class="stages">${stages}</div>
-      <div class="small">ctx ${u.ctx_pct??'—'}% · last commit <span class="age">${ago(u.last_commit_at)}</span> ago ${u.gate_open?' · <b style="color:var(--warn-text)">GATE OPEN</b>':''}</div>
-      ${conv}${commits}${fences}</div>`;
-  }).join('')||'<div class="small">fleet idle</div>';
-  const r=s.runstate||{};
-  $('runstate').textContent=`auto ${r.auto?'ON':'off'} · parallel ${r.parallel??'—'} · pickconfirm ${r.pickconfirm?'on':'off'} · eligible ${s.eligible?.length??0}`;
-  // gauges
-  const gs=[]; const th=s.throttling||{};
-  if(th.codex) gs.push({name:'codex',...th.codex});
-  (th.claude||[]).forEach(c=>gs.push({name:'claude '+c.label,...c}));
-  $('gauges').innerHTML=gs.map(g=>{
-    const cls=g.projected>g.target*1.1?'hot':(g.projected<g.target*0.85?'cold':'ok');
-    return `<div class="gauge"><div class="lbl"><span>${esc(g.name)} <span class="small">(target ${g.target})</span></span>
-      <span class="num ${cls}">proj ${g.projected??'—'}%</span></div>
-      <div class="bar"><i style="width:${Math.min(100,(g.projected||0)/g.target/1.5*100)}%"></i></div>
-      ${spark(g.spark,g.target)}<div class="small">read ${ago(g.at)} ago</div></div>`;
-  }).join('')||'<span class="small">no readings</span>';
-  // pm + daemons
-  const pm=s.pm||{};
-  $('pmRow').textContent=`monitor ${pm.monitor_alive?'alive':'DOWN'} · last pass ${ago(pm.last_pass_at)} ago · pm ctx ${pm.ctx_proxy_pct??'n/a'}${pm.ctx_proxy_pct?'%':''}`;
-  $('daemons').innerHTML=Object.entries(s.daemons||{}).map(([k,v])=>`<span class="chip"><span class="dot ${v.up?'up':''}"></span>${esc(k)}</span>`).join('');
-  // merges + decisions
-  $('merges').innerHTML=(s.merge_feed||[]).map(m=>`<li>#${m.pr} <b>${esc(m.unit||'?')}</b> · ${esc(m.sha)} · ${ago(m.merged_at)} ago</li>`).join('')||'<li>none</li>';
-  $('decisions').innerHTML=(s.decisions||[]).map(d=>`<li>${esc(d.at)} · <b>${esc(d.category)}</b> ${d.units.map(u=>`<span class="chip">${esc(u)}</span>`).join('')}${d.summary?'<br><span class="small">'+esc(d.summary)+'</span>':''}</li>`).join('')||'<li>none</li>';
-  // command log
-  $('cmdLog').innerHTML=((s.commands||{}).results||[]).map(c=>`<li>${esc(c.verb)} ${esc(c.unit||'')} → <b>${esc(c.status)}</b> <span class="small">${ago(c.at)} ago</span></li>`).join('')||'<li>none yet</li>';
-  $('foot').textContent=`snapshot ${s.snapshot_id||''}`;
-  renderCmd();
+// ---- Unit detail ----------------------------------------------------------------------------
+function roundRow(r) {
+  return `<tr><td>R${escp(r.round ?? '—')}</td><td>${escp(r.seats || '—')}</td>
+    <td class="num ${r.must ? 'mm' : 'zero'}">${r.must ?? '—'}</td>
+    <td class="num ${r.should ? 'mm' : 'zero'}">${r.should ?? '—'}</td>
+    <td class="num">${r.could ?? '—'}</td>
+    <td class="num">${r.nit ?? '—'}</td></tr>`;
+}
+function renderUnit() {
+  if (!SNAP) { view.innerHTML = emptyState('waiting for snapshot…'); return; }
+  const units = SNAP.units || [];
+  if (!currentUnit) {
+    if (!units.length) { view.innerHTML = emptyState('no units in the fleet'); return; }
+    view.innerHTML = `<h2>Pick a unit</h2><div class="pick">${units.map(u => `<button class="act" data-u="${escq(u.id)}">${escp(u.id)}</button>`).join('')}</div>`;
+    view.querySelectorAll('[data-u]').forEach(b => b.onclick = () => { currentUnit = b.dataset.u; render(); });
+    return;
+  }
+  const u = units.find(x => x.id === currentUnit);
+  if (!u) {
+    view.innerHTML = `<div class="unit-head"><button class="act" id="back-fleet">← pick another</button></div>` +
+      emptyState(`unit "${currentUnit}" is not in the current snapshot (it may have finished, or the id is stale).`);
+    $('#back-fleet').onclick = () => { currentUnit = null; render(); };
+    return;
+  }
+  const si = u.stage_i ?? 0;
+  const stagesHtml = STAGES.map((label, i) => `<i class="${i < si ? 'done' : i === si ? 'cur' : ''}" title="${escq(label)}"></i>`).join('');
+  const rounds = u.review_rounds || [];
+  const roundsHtml = rounds.length
+    ? `<table><tr><th>Rd</th><th>seats</th><th>must</th><th>should</th><th>could</th><th>nit</th></tr>${rounds.map(roundRow).join('')}</table>`
+    : '<div class="empty-inline">no review rounds yet</div>';
+  const commits = u.commits || [];
+  const commitsHtml = commits.length
+    ? `<table><tr><th>sha</th><th>age</th></tr>${commits.map(c => `<tr><td>${escp(String(c.sha || '').slice(0, 10))}</td><td class="num">${ago(c.at)} ago</td></tr>`).join('')}</table>`
+    : '<div class="empty-inline">no commits yet</div>';
+  const fenceEntries = Object.entries(u.fences || {});
+  const fencesHtml = fenceEntries.length
+    ? `<div class="chips">${fenceEntries.map(([k, v]) => `<span class="chip">${v ? '✅' : '▢'} ${escp(k)}</span>`).join('')}</div>`
+    : '<div class="empty-inline">no fence data</div>';
+
+  view.innerHTML = `
+    <div class="unit-head"><button class="act" id="back-fleet">← fleet</button>
+      <h2>${escp(u.id)} <span class="status ${escp(u.status || '')}">${escp(u.status || '—')}</span></h2>
+    </div>
+    <div class="meta dim">stage <b class="fg">${escp(u.stage || '—')}</b>${u.gate_open ? ' · <b class="bad">GATE OPEN</b>' : ''} · head ${u.head ? escp(String(u.head).slice(0, 10)) : '—'}</div>
+    <div class="stages">${stagesHtml}</div>
+    <div class="gauge ${gaugeClass(u.ctx_pct)}"><div style="width:${u.ctx_pct ?? 0}%"></div></div>
+    <div class="hb" style="margin-bottom:.8rem">ctx ${u.ctx_pct ?? '—'}% · fences ${u.subfence?.done ?? '—'}/${u.subfence?.total ?? '—'} · last commit ${ago(u.last_commit_at)} ago</div>
+    <div class="panels">
+      <div class="panel"><h3>Convergence (${rounds.length} rounds)</h3>${roundsHtml}</div>
+      <div class="panel"><h3>Commits</h3>${commitsHtml}</div>
+      <div class="panel wide"><h3>Fences</h3>${fencesHtml}</div>
+    </div>`;
+  $('#back-fleet').onclick = () => { currentUnit = null; setTab('fleet'); };
 }
 
-/* ---------- command mode (encrypted GitHub Issues) ---------- */
-async function aesEncrypt(keyB64u,obj){
-  const raw=Uint8Array.from(atob(keyB64u.replace(/-/g,'+').replace(/_/g,'/')),c=>c.charCodeAt(0));
-  const key=await crypto.subtle.importKey('raw',raw,'AES-GCM',false,['encrypt']);
-  const iv=crypto.getRandomValues(new Uint8Array(12));
-  const meta={v:1,id:[...crypto.getRandomValues(new Uint8Array(16))].map(b=>b.toString(16).padStart(2,'0')).join(''),
-              device:CFG.device_id||'web',issued_at:Math.floor(Date.now()/1e3),
-              expires_at:Math.floor(Date.now()/1e3)+(obj.verb==='confirm'?600:120),
-              snapshot_id:SNAP?.snapshot_id||null};
-  const aad=new TextEncoder().encode(JSON.stringify(meta));
-  const ct=await crypto.subtle.encrypt({name:'AES-GCM',iv,additionalData:aad},key,
-    new TextEncoder().encode(JSON.stringify(obj)));
-  const b64u=b=>btoa(String.fromCharCode(...new Uint8Array(b))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
-  return {...meta,iv:b64u(iv),ciphertext:b64u(ct)};
+// ---- History ------------------------------------------------------------------------------
+function renderHistory() {
+  if (!SNAP) { view.innerHTML = emptyState('waiting for snapshot…'); return; }
+  const merges = SNAP.merge_feed || [];
+  const decisions = SNAP.decisions || [];
+  const mergesHtml = merges.length
+    ? `<table><tr><th>PR</th><th>unit</th><th>sha</th><th>merged</th></tr>
+       ${merges.map(m => `<tr><td>#${escp(m.pr)}</td><td>${escp(m.unit || '—')}</td><td>${escp(String(m.sha || '').slice(0, 10))}</td><td>${ago(m.merged_at)} ago</td></tr>`).join('')}</table>`
+    : '<div class="empty-inline">no merges in this snapshot</div>';
+  const decisionsHtml = decisions.length
+    ? `<ul class="feed">${decisions.map(d => `<li>${escp(d.at)} · <b>${escp(d.category)}</b> ${(d.units || []).map(u => `<span class="chip">${escp(u)}</span>`).join(' ')}${d.summary ? `<div class="dim" style="margin-top:.2rem">${escp(d.summary)}</div>` : ''}</li>`).join('')}</ul>`
+    : '<div class="empty-inline">no decisions logged in this snapshot</div>';
+  view.innerHTML = `<div class="panel"><h3>Merges</h3>${mergesHtml}</div><div class="panel"><h3>PM decisions</h3>${decisionsHtml}</div>`;
 }
-async function sendCmd(obj,label){
-  if(!CFG){toast('no credentials — open ⚙️');return;}
-  try{
-    const body=await aesEncrypt(CFG.command_key,obj);
-    const res=await fetch(`https://api.github.com/repos/${CFG.repo}/issues`,{
-      method:'POST',
-      headers:{Authorization:'Bearer '+CFG.pat,Accept:'application/vnd.github+json'},
-      body:JSON.stringify({title:'cmd:'+body.id,body:JSON.stringify(body)})});
-    if(res.status===201){toast('sent: '+label+' ⏳ (result ≤90s)');}
-    else{toast('send FAILED: HTTP '+res.status);}
-  }catch(e){toast('send error: '+e.message);}
-}
-function slideConfirm(label,onConfirm){
-  const dlg=document.createElement('dialog');
-  dlg.innerHTML=`<h2>confirm</h2><p style="margin:8px 0">${esc(label)}</p>
-    <div class="slide"><div class="track">slide to confirm →</div><div class="knob">➤</div></div>
-    <div class="cmdgrid" style="margin-top:10px"><button id="xc">cancel</button></div>`;
-  document.body.appendChild(dlg); dlg.showModal();
-  const knob=dlg.querySelector('.knob'), slide=dlg.querySelector('.slide');
-  let startX=null;
-  const move=e=>{ if(startX===null)return; const x=(e.touches?e.touches[0].clientX:e.clientX)-startX;
-    const max=slide.clientWidth-44; const nx=Math.max(0,Math.min(max,x));
-    knob.style.left=(3+nx)+'px';
-    if(nx>=max-2){ startX=null; dlg.close(); dlg.remove(); onConfirm(); } };
-  knob.addEventListener('pointerdown',e=>{startX=e.clientX-parseInt(knob.style.left||3);knob.setPointerCapture(e.pointerId);});
-  knob.addEventListener('pointermove',move);
-  knob.addEventListener('pointerup',()=>{startX=null;knob.style.left='3px';});
-  dlg.querySelector('#xc').onclick=()=>{dlg.close();dlg.remove();};
-}
-function renderCmd(){
-  const on=!!CFG;
-  $('cmdCard').style.display=on?'':'none';
-  if(!on)return;
-  const s=SNAP||{}; const btns=[];
-  (s.eligible||[]).slice(0,8).forEach(u=>btns.push({l:'▶ '+u,f:()=>sendCmd({verb:'u',unit:u,args:[]},'dispatch '+u)}));
-  const r=s.runstate||{};
-  [1,2,3].forEach(n=>{ if(r.parallel!==n) btns.push({l:'parallel '+n,f:()=>sendCmd({verb:'parallel',args:[String(n)]},'parallel '+n)});});
-  btns.push({l:r.auto?'auto off':'auto on',danger:!r.auto,f:()=>{
-    const v=r.auto?'off':'on';
-    if(v==='on') slideConfirm('turn AUTO ON (fleet self-dispatches)',()=>sendCmd({verb:'auto',args:['on']},'auto on'));
-    else sendCmd({verb:'auto',args:['off']},'auto off');}});
-  (s.units||[]).forEach(u=>{
-    btns.push({l:'💀 kill '+u.id,danger:true,f:()=>slideConfirm('KILL '+u.id+' (engine + windows down)',()=>sendCmd({verb:'kill',unit:u.id,args:[]},'kill '+u.id))});
-    btns.push({l:'⟳ resume '+u.id,f:()=>sendCmd({verb:'resume',unit:u.id,args:[]},'resume '+u.id)});
-  });
-  $('cmdButtons').innerHTML='';
-  btns.forEach(b=>{const el=document.createElement('button'); el.textContent=b.l;
-    if(b.danger)el.classList.add('danger'); el.onclick=b.f; $('cmdButtons').appendChild(el);});
-  const su=$('sayUnit'); su.innerHTML='';
-  const gu=((SNAP.gate_alert||{}).units||[]).map(u=>u.id);
-  (gu.length?gu:(s.units||[]).map(u=>u.id)).forEach(u=>{const o=document.createElement('option');o.value=o.textContent=u;su.appendChild(o);});
-}
-$('sayBtn').onclick=()=>{ const t=$('sayText').value.trim(); const u=$('sayUnit').value;
-  if(!t||!u){toast('pick a unit + write text');return;}
-  if(t.length>1500){toast('too long (>1500)');return;}
-  const gr=((SNAP.gate_alert||{}).units||[]).find(x=>x.id===u);
-  sendCmd({verb:'say',unit:u,text:t,gate_rev:gr?String(gr.raised_at):null},'say '+u);
-  $('sayText').value=''; };
 
-/* ---------- settings dialog ---------- */
-$('gear').onclick=()=>{ if(CFG){$('cfgRepo').value=CFG.repo||'';} $('cfgDlg').showModal(); };
-$('cfgClose').onclick=()=>$('cfgDlg').close();
-$('cfgSave').onclick=()=>{ const c={repo:$('cfgRepo').value.trim(),pat:$('cfgPat').value.trim(),
-    command_key:$('cfgKey').value.trim(),device_id:'web-'+Math.random().toString(36).slice(2,8)};
-  if(!c.repo||!c.pat||!c.command_key){toast('all three fields required');return;}
-  saveCfg(c); $('cfgDlg').close(); toast('saved ✓'); renderCmd(); };
-$('cfgWipe').onclick=()=>{ localStorage.removeItem('jc_cfg'); CFG=null; $('cfgDlg').close(); toast('wiped'); renderCmd(); };
-
-/* ---------- poll ---------- */
-async function poll(){
-  try{
-    const res=await fetch('snapshot.json?t='+Date.now(),{cache:'no-store'});
-    if(res.ok){ SNAP=await res.json(); render(); }
-  }catch(e){}
+// ---- tab machinery + polling -----------------------------------------------------------------
+const renderers = { pm: renderPM, fleet: renderFleet, inbox: renderInbox, unit: renderUnit, history: renderHistory };
+function setTab(t) {
+  tab = t;
+  document.querySelectorAll('nav button').forEach(b => b.classList.toggle('active', b.dataset.tab === t));
+  render();
 }
-poll(); setInterval(poll,60000);
-setInterval(()=>{ if(SNAP) render(); },30000);  // re-tick ages
+function render() {
+  try { renderers[tab](); }
+  catch (e) { view.innerHTML = `<div class="empty">render error: ${escp(e.message)}</div>`; }
+  renderFoot();
+}
+function renderFoot() {
+  if (!SNAP) { $('#foot').textContent = ''; return; }
+  const pa = SNAP.published_at ? ago(SNAP.published_at) + ' ago' : '—';
+  $('#foot').textContent = `snapshot ${SNAP.snapshot_id || '—'} · published ${pa}`;
+}
+document.querySelectorAll('nav button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
+
+function setConn(ok) {
+  const el = $('#conn');
+  el.classList.toggle('on', ok);
+  $('#conn-txt').textContent = ok ? 'live' : 'offline';
+}
+
+async function poll() {
+  try {
+    const res = await fetch('snapshot.json?t=' + Date.now(), { cache: 'no-store' });
+    if (res.ok) { SNAP = await res.json(); setConn(true); render(); }
+    else setConn(false);
+  } catch (e) { setConn(false); }
+}
+poll();
+setInterval(poll, 10000);           // stay fresh — the publisher writes every ~5 min, we just poll faster
+setInterval(() => { if (SNAP) render(); }, 15000); // re-tick "ago" ages between polls
 </script>
 </body>
 </html>
