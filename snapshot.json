@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-06T20:10:52Z",
+  "published_at": "2026-08-06T20:16:01Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -618,74 +618,17 @@
   "units": [
     {
       "id": "INT7",
-      "status": "building",
-      "stage": "phase-4 review",
-      "stage_i": 5,
-      "ctx_pct": 29,
+      "status": "done",
+      "stage": "done",
+      "stage_i": 7,
+      "ctx_pct": 8,
       "last_commit_at": 1786046722,
       "head": "00eaf5f4",
       "subfence": {
         "done": 10,
         "total": 10
       },
-      "review_rounds": [
-        {
-          "round": 1,
-          "seats": "gpt-5.5deepxhigh fresh opener",
-          "must": 1,
-          "should": 2,
-          "could": 2,
-          "nit": 0
-        },
-        {
-          "round": 2,
-          "seats": "gpt-5.5deepxhigh fresh CONFIRM",
-          "must": 1,
-          "should": 1,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 3,
-          "seats": "gpt-5.5deepxhigh fresh CONFIRM",
-          "must": 3,
-          "should": 0,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 4,
-          "seats": "gpt-5.5deepxhigh fresh CONFIRM",
-          "must": 0,
-          "should": 0,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 2,
-          "seats": "codex gpt-5.5deepxhigh --commit 3d40bcc0",
-          "must": 2,
-          "should": 2,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 3,
-          "seats": "codex gpt-5.5deepxhigh --commit 3bab1be3",
-          "must": 2,
-          "should": 4,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 4,
-          "seats": "codex gpt-5.5deepxhigh --commit 70067260",
-          "must": 2,
-          "should": 1,
-          "could": 0,
-          "nit": 0
-        }
-      ],
+      "review_rounds": [],
       "commits": [
         {
           "sha": "00eaf5f4",
@@ -712,7 +655,7 @@
         "plan": true,
         "synth": true,
         "build": true,
-        "review": false
+        "review": true
       },
       "gate_open": false
     },
@@ -763,6 +706,13 @@
   "eligible": [
     "WARM-REPLY",
     "MAP1b",
+    "INT7-MARKETPLACE",
+    "INT7-MCP-REMOTE",
+    "INT7-PUBLIC-API",
+    "INT7-RT-AIRTABLE",
+    "INT7-RT-NOTION",
+    "INT7-RT-SHEETS",
+    "INT7-RT-ZOHO",
     "W5",
     "COMP",
     "D15-REVISED",
@@ -780,6 +730,12 @@
     "W7"
   ],
   "merge_feed": [
+    {
+      "pr": 257,
+      "unit": "INT7",
+      "merged_at": 1786047044,
+      "sha": "f44409f1"
+    },
     {
       "pr": 256,
       "unit": "W3A",
@@ -803,12 +759,6 @@
       "unit": "AL1-HARDENING",
       "merged_at": 1785805642,
       "sha": "927f8856"
-    },
-    {
-      "pr": 252,
-      "unit": "MAP1A-2",
-      "merged_at": 1785765998,
-      "sha": "cf852f17"
     }
   ],
   "decisions": [
@@ -965,5 +915,5 @@
       ]
     }
   },
-  "snapshot_id": "b4e4e8cb9fd23d04"
+  "snapshot_id": "a27080b98e125f25"
 }
