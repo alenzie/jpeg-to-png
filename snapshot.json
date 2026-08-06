@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-06T14:37:35Z",
+  "published_at": "2026-08-06T14:42:44Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -613,7 +613,7 @@
   "pm": {
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
-    "monitor_alive": true,
+    "monitor_alive": false,
     "last_pass_at": 1786025090
   },
   "runstate": {
@@ -632,24 +632,93 @@
       "up": true
     },
     "monitor": {
-      "up": true
+      "up": false
     }
   },
   "units": [
     {
       "id": "INT7",
       "status": "building",
-      "stage": "subfencing",
-      "stage_i": 4,
-      "ctx_pct": 53,
-      "last_commit_at": 1786026361,
-      "head": "4940a22d",
+      "stage": "phase-4 review",
+      "stage_i": 5,
+      "ctx_pct": 0,
+      "last_commit_at": 1786027294,
+      "head": "0f374ce7",
       "subfence": {
         "done": 10,
         "total": 10
       },
-      "review_rounds": [],
+      "review_rounds": [
+        {
+          "round": 1,
+          "seats": "gpt-5.5deepxhigh fresh opener",
+          "must": 1,
+          "should": 2,
+          "could": 2,
+          "nit": 0
+        },
+        {
+          "round": 2,
+          "seats": "gpt-5.5deepxhigh fresh CONFIRM",
+          "must": 1,
+          "should": 1,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 3,
+          "seats": "gpt-5.5deepxhigh fresh CONFIRM",
+          "must": 3,
+          "should": 0,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 4,
+          "seats": "gpt-5.5deepxhigh fresh CONFIRM",
+          "must": 0,
+          "should": 0,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 2,
+          "seats": "codex gpt-5.5deepxhigh --commit 3d40bcc0",
+          "must": 2,
+          "should": 2,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 3,
+          "seats": "codex gpt-5.5deepxhigh --commit 3bab1be3",
+          "must": 2,
+          "should": 4,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 4,
+          "seats": "codex gpt-5.5deepxhigh --commit 70067260",
+          "must": 2,
+          "should": 1,
+          "could": 0,
+          "nit": 0
+        }
+      ],
       "commits": [
+        {
+          "sha": "0f374ce7",
+          "at": 1786027294
+        },
+        {
+          "sha": "c0ba7bc8",
+          "at": 1786027158
+        },
+        {
+          "sha": "32ab1fff",
+          "at": 1786027081
+        },
         {
           "sha": "4940a22d",
           "at": 1786026361
@@ -657,24 +726,12 @@
         {
           "sha": "70067260",
           "at": 1786025636
-        },
-        {
-          "sha": "3bab1be3",
-          "at": 1786024633
-        },
-        {
-          "sha": "3d40bcc0",
-          "at": 1786023608
-        },
-        {
-          "sha": "458cc8fb",
-          "at": 1786022381
         }
       ],
       "fences": {
         "plan": true,
         "synth": true,
-        "build": false,
+        "build": true,
         "review": false
       },
       "gate_open": false
@@ -684,7 +741,7 @@
       "status": "building",
       "stage": "subfencing",
       "stage_i": 4,
-      "ctx_pct": 13,
+      "ctx_pct": 17,
       "last_commit_at": 1786026819,
       "head": "2433715c",
       "subfence": {
@@ -928,5 +985,5 @@
       ]
     }
   },
-  "snapshot_id": "d5c9c451d8e9bcdf"
+  "snapshot_id": "6256d4cf1a4d82c6"
 }
