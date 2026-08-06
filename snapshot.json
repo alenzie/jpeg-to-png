@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-06T07:14:52Z",
+  "published_at": "2026-08-06T07:20:01Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -11,6 +11,7 @@
       "projected": 117,
       "used": 81,
       "at": 1785980401,
+      "reset": "23:22 on 7 Aug",
       "spark": [
         [
           1785398400,
@@ -292,11 +293,12 @@
     },
     "claude": [
       {
-        "target": 200,
+        "target": 100,
         "label": "A",
         "projected": 117,
         "used": 80,
         "at": 1785971505,
+        "reset": "Aug 7, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1785402000,
@@ -485,11 +487,12 @@
         ]
       },
       {
-        "target": 200,
+        "target": 100,
         "label": "B",
         "projected": 120,
         "used": 87,
         "at": 1785995077,
+        "reset": "Aug 7, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1785394800,
@@ -658,8 +661,8 @@
   "pm": {
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
-    "monitor_alive": false,
-    "last_pass_at": 1785997795
+    "monitor_alive": true,
+    "last_pass_at": 1786000786
   },
   "runstate": {
     "auto": false,
@@ -677,7 +680,7 @@
       "up": true
     },
     "monitor": {
-      "up": false
+      "up": true
     }
   },
   "units": [
@@ -686,15 +689,19 @@
       "status": "building",
       "stage": "subfencing",
       "stage_i": 4,
-      "ctx_pct": 31,
-      "last_commit_at": 1785998644,
-      "head": "1d148af3",
+      "ctx_pct": 33,
+      "last_commit_at": 1786000636,
+      "head": "b347f793",
       "subfence": {
         "done": 6,
         "total": 10
       },
       "review_rounds": [],
       "commits": [
+        {
+          "sha": "b347f793",
+          "at": 1786000636
+        },
         {
           "sha": "1d148af3",
           "at": 1785998644
@@ -710,10 +717,6 @@
         {
           "sha": "ca9bb716",
           "at": 1785997155
-        },
-        {
-          "sha": "418a51f5",
-          "at": 1785996091
         }
       ],
       "fences": {
@@ -841,8 +844,8 @@
         "effort": "xhigh"
       },
       {
-        "role": "hultra.discovery.codex",
-        "model": "gpt-5.6-sol",
+        "role": "hultra.discovery.breadth",
+        "model": "claude-opus-4-8",
         "effort": "xhigh"
       },
       {
@@ -931,5 +934,5 @@
       ]
     }
   },
-  "snapshot_id": "471a161b04506f84"
+  "snapshot_id": "5cd0788be76095ce"
 }
