@@ -414,6 +414,40 @@ footer {
   letter-spacing: .04em; padding: 1.2rem .8rem 2.4rem;
 }
 
+/* ---- Models tab : reuses the loom vocabulary (wells, gauges, threads) ------- */
+.mcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(224px, 1fr)); gap: .8rem; }
+.mcard {
+  position: relative; overflow: hidden; --tc: var(--info);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--fg) 2.5%, var(--panel)) 0, var(--panel) 42%);
+  border: 1px solid var(--line); border-radius: var(--r); padding: .85rem .95rem .9rem 1.05rem; box-shadow: var(--sh);
+}
+.mcard.codex  { --tc: var(--copper); }
+.mcard.claude { --tc: var(--info); }
+.mcard::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--tc); }
+.mcard-h { display: flex; justify-content: space-between; align-items: center; gap: .5rem; margin-bottom: .35rem; }
+.mname { font-family: var(--mono); font-weight: 700; font-size: var(--fs-lead); text-transform: uppercase; letter-spacing: .03em; }
+.mbig {
+  font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 750;
+  font-size: 26px; line-height: 1.05; display: flex; align-items: baseline; gap: .55ch; color: var(--fg);
+}
+.mbig .munit { font-family: var(--disp); font-size: 10px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--dim); }
+.mbig.hot { color: var(--warn); } .mbig.cold { color: var(--info); } .mbig.ok-c { color: var(--ok); }
+.mstats { display: flex; flex-wrap: wrap; gap: .25rem .9rem; font-size: var(--fs-cap); color: var(--dim); margin: .45rem 0 .15rem; }
+.mstats b { color: var(--fg); font-variant-numeric: tabular-nums; font-family: var(--mono); }
+.fam {
+  font-size: 9.5px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700;
+  padding: .12rem .5rem; border-radius: 999px; border: 1px solid; white-space: nowrap;
+}
+.fam.codex  { color: var(--copper); border-color: color-mix(in srgb, var(--copper) 45%, var(--line)); background: color-mix(in srgb, var(--copper) 13%, transparent); }
+.fam.claude { color: var(--info);   border-color: color-mix(in srgb, var(--info) 45%, var(--line));   background: color-mix(in srgb, var(--info) 13%, transparent); }
+.fdot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: .55ch; vertical-align: middle; flex: none; }
+.fdot.codex { background: var(--copper); } .fdot.claude { background: var(--info); } .fdot.other { background: var(--dim); }
+.fam-t.codex { color: var(--copper); } .fam-t.claude { color: var(--info); } .fam-t.other { color: var(--fg); }
+.mono { font-family: var(--mono); }
+.tscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tscroll table { min-width: max-content; }
+.tscroll td.mono, .tscroll th { white-space: nowrap; }
+
 /* ---- motion (persistent elements only — #view re-renders every 10s) -------- */
 @keyframes beacon {
   0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--ok) 55%, transparent); }
@@ -449,7 +483,7 @@ footer {
   header { gap: .5rem; padding: .5rem .6rem; }
   .logo { font-size: 13px; letter-spacing: .06em; }
   nav button { padding: .3rem .5rem; font-size: 11px; }
-  .tiles { grid-template-columns: 1fr; }
+  .tiles, .mcards { grid-template-columns: 1fr; }
   h2 { font-size: 18px; }
 }
 </style>
@@ -460,6 +494,7 @@ footer {
   <nav id="tabs">
     <button data-tab="pm" class="active">PM</button>
     <button data-tab="fleet">Fleet</button>
+    <button data-tab="models">Models</button>
     <button data-tab="inbox">Inbox <span id="inbox-badge" class="badge" hidden></span></button>
     <button data-tab="unit">Unit</button>
     <button data-tab="history">History</button>
@@ -690,8 +725,85 @@ function renderHistory() {
   view.innerHTML = `<div class="panel"><h3>Merges</h3>${mergesHtml}</div><div class="panel"><h3>PM decisions</h3>${decisionsHtml}</div>`;
 }
 
+// ---- Models (read-only model switchboard) -------------------------------------------------
+function familyOf(model) {
+  const m = String(model || '').toLowerCase();
+  if (m.startsWith('claude')) return 'claude';
+  if (m.startsWith('gpt') || m.includes('codex')) return 'codex';
+  return 'other';
+}
+function burnCard(g) {
+  const proj = g.projected ?? 0;
+  const target = g.target;
+  const cls = target ? (proj > target * 1.1 ? 'hot' : proj < target * 0.85 ? 'cold' : 'ok-c') : '';
+  const fill = target ? Math.min(100, proj / target * 100) : 0;
+  const room = target != null ? target - proj : null;
+  const roomHtml = room == null ? ''
+    : room < 0 ? `<span class="hot">over target by ${-room}</span>`
+    : `<span class="${cls}">headroom ${room}</span>`;
+  return `<div class="mcard ${g.fam}">
+    <div class="mcard-h"><span class="mname">${escp(g.name)}</span><span class="fam ${g.fam}">${escp(g.fam)}</span></div>
+    <div class="mbig ${cls}">${proj}%<span class="munit">proj @ reset</span></div>
+    <div class="bar" title="projected vs target"><i style="width:${fill}%"></i></div>
+    <div class="mstats"><span>used <b>${g.used != null ? g.used + '%' : '—'}</b></span><span>target <b>${target ?? '—'}</b></span>${roomHtml}</div>
+    ${spark(g.spark, g.target)}
+    <div class="dim" style="font-size:11px">read ${ago(g.at)} ago</div>
+  </div>`;
+}
+function renderModels() {
+  if (!SNAP) { view.innerHTML = emptyState('waiting for snapshot…'); return; }
+  const th = SNAP.throttling || {};
+  const accts = [];
+  if (th.codex) accts.push({ name: 'codex', fam: 'codex', ...th.codex });
+  (th.claude || []).forEach(c => accts.push({ name: 'claude ' + (c.label || ''), fam: 'claude', ...c }));
+  const burnHtml = accts.length
+    ? `<div class="mcards">${accts.map(burnCard).join('')}</div>
+       <div class="note">Headroom is target minus projected-at-reset — more headroom means more room before the weekly limit resets. Codex targets 100; each Claude account targets 200.</div>`
+    : '<div class="empty-inline">no throttling readings in this snapshot</div>';
+
+  const rt = SNAP.routing;
+  let routingHtml;
+  if (!rt || !(rt.phases || []).length) {
+    routingHtml = `<div class="panel"><h3>Routing map</h3><div class="empty-inline">no routing published in this snapshot — the switchboard appears once the routing resolver reports in.</div></div>`;
+  } else {
+    const phaseRows = (rt.phases || []).map(p => {
+      const fam = familyOf(p.model);
+      const role = String(p.role || '').replace(/^hultra\./, '');
+      return `<tr><td>${escp(role)}</td>
+        <td class="mono"><span class="fdot ${fam}"></span><span class="fam-t ${fam}">${escp(p.model)}</span></td>
+        <td class="mono eff">${escp(p.effort || '—')}</td></tr>`;
+    }).join('');
+    const phasesTable = `<div class="tscroll"><table><tr><th>phase</th><th>model</th><th>effort</th></tr>${phaseRows}</table></div>`;
+
+    const rev = rt.review || {};
+    const tiers = rev.tiers || [];
+    const tierRows = tiers.map(t => {
+      const lens = t.claude_lens;
+      return `<tr><td class="mono">${escp(t.tier)}</td>
+        <td class="mono"><span class="fdot codex"></span><span class="fam-t codex">${escp(t.codex_model || '—')}</span></td>
+        <td>${escp(t.profile || '—')}</td>
+        <td class="num">${t.round_cap ?? '—'}</td>
+        <td class="mono">${lens ? `<span class="fdot claude"></span><span class="fam-t claude">${escp(lens)}</span>` : '<span class="dim">—</span>'}</td>
+        <td class="mono">${escp(t.lens_effort || '—')}</td></tr>`;
+    }).join('');
+    const tiersTable = tiers.length
+      ? `<div class="tscroll"><table><tr><th>tier</th><th>codex</th><th>profile</th><th>cap</th><th>claude lens</th><th>lens eff</th></tr>${tierRows}</table></div>`
+      : '<div class="empty-inline">no review tiers reported</div>';
+    const revStats = `<div class="kv" style="margin-top:.6rem">
+      <span>concurrency cap <b>${rev.concurrency_cap ?? '—'}</b></span>
+      <span>fill model <b class="mono">${escp(rev.fill_model || '—')}</b></span>
+      <span>spark pool <b class="mono">${escp(rev.spark || '—')}</b></span>
+    </div>`;
+    const note = `<div class="note">resolver: ${escp(rt.source || 'unknown')} — reflects the routing resolver's defaults; the latest hultra.md seat tweaks (fable co-plan, terra confirms, sol seats) may not appear here.</div>`;
+    routingHtml = `<div class="panel"><h3>Routing · phases</h3>${phasesTable}</div>
+      <div class="panel"><h3>Routing · review posture</h3>${tiersTable}${revStats}${note}</div>`;
+  }
+
+  view.innerHTML = `<div class="panel"><h3>Burn / headroom</h3>${burnHtml}</div>${routingHtml}`;
+}
+
 // ---- tab machinery + polling -----------------------------------------------------------------
-const renderers = { pm: renderPM, fleet: renderFleet, inbox: renderInbox, unit: renderUnit, history: renderHistory };
+const renderers = { pm: renderPM, fleet: renderFleet, models: renderModels, inbox: renderInbox, unit: renderUnit, history: renderHistory };
 function setTab(t) {
   tab = t;
   document.querySelectorAll('nav button').forEach(b => b.classList.toggle('active', b.dataset.tab === t));
