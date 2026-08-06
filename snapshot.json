@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-06T06:54:17Z",
+  "published_at": "2026-08-06T06:59:26Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -686,7 +686,7 @@
       "status": "building",
       "stage": "subfencing",
       "stage_i": 4,
-      "ctx_pct": 19,
+      "ctx_pct": 23,
       "last_commit_at": 1785998644,
       "head": "1d148af3",
       "subfence": {
@@ -842,13 +842,13 @@
       },
       {
         "role": "hultra.discovery.codex",
-        "model": "gpt-5.5",
-        "effort": "deep"
+        "model": "gpt-5.6-sol",
+        "effort": "xhigh"
       },
       {
         "role": "hultra.invariant_map",
-        "model": "gpt-5.5",
-        "effort": "deep"
+        "model": "claude-opus-4-8",
+        "effort": "xhigh"
       },
       {
         "role": "hultra.plan",
@@ -856,8 +856,13 @@
         "effort": "xhigh"
       },
       {
+        "role": "hultra.coplan.fable",
+        "model": "claude-fable-5",
+        "effort": "max"
+      },
+      {
         "role": "hultra.coplan.codex",
-        "model": "gpt-5.5",
+        "model": "gpt-5.6-sol",
         "effort": "deep"
       },
       {
@@ -868,6 +873,11 @@
       {
         "role": "hultra.build.hard",
         "model": "claude-opus-4-8",
+        "effort": "xhigh"
+      },
+      {
+        "role": "hultra.build.checkpoint_confirm",
+        "model": "gpt-5.6-terra",
         "effort": "xhigh"
       },
       {
@@ -921,5 +931,5 @@
       ]
     }
   },
-  "snapshot_id": "376e860234a3bca2"
+  "snapshot_id": "dbf802958f67040b"
 }
