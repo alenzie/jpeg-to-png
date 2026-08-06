@@ -447,6 +447,12 @@ footer {
 .tscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .tscroll table { min-width: max-content; }
 .tscroll td.mono, .tscroll th { white-space: nowrap; }
+/* weekly reset time — the copper thread accent makes it the prominent line */
+.reset-at {
+  font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: var(--fs-cap);
+  font-weight: 700; color: var(--copper); letter-spacing: .01em; margin-top: .4rem;
+}
+.reset-read { font-size: 11px; margin-top: .1rem; }
 
 /* ---- motion (persistent elements only — #view re-renders every 10s) -------- */
 @keyframes beacon {
@@ -533,6 +539,13 @@ function gaugeClass(pct) {
   if (pct == null) return '';
   return pct >= 90 ? 'bad' : pct >= 75 ? 'warn' : '';
 }
+// weekly reset time (rendered verbatim from the snapshot — never recomputed) + data-freshness
+function resetLine(g) {
+  const read = `<div class="dim reset-read">read ${ago(g.at)} ago</div>`;
+  return g.reset
+    ? `<div class="reset-at">↻ resets · ${escp(g.reset)}</div>${read}`
+    : read;
+}
 function emptyState(msg) { return `<div class="empty">${escp(msg)}</div>`; }
 function spark(pts, target) {
   if (!pts || pts.length < 2) return '';
@@ -557,7 +570,7 @@ function gaugeCard(g) {
     <span class="tg-num ${cls}">proj ${proj}%${g.used != null ? ` · used ${g.used}%` : ''}</span></div>
     <div class="bar"><i style="width:${pct}%"></i></div>
     ${spark(g.spark, g.target)}
-    <div class="dim" style="font-size:11px">read ${ago(g.at)} ago</div>
+    ${resetLine(g)}
   </div>`;
 }
 function renderPM() {
@@ -747,7 +760,7 @@ function burnCard(g) {
     <div class="bar" title="projected vs target"><i style="width:${fill}%"></i></div>
     <div class="mstats"><span>used <b>${g.used != null ? g.used + '%' : '—'}</b></span><span>target <b>${target ?? '—'}</b></span>${roomHtml}</div>
     ${spark(g.spark, g.target)}
-    <div class="dim" style="font-size:11px">read ${ago(g.at)} ago</div>
+    ${resetLine(g)}
   </div>`;
 }
 function renderModels() {
@@ -758,7 +771,7 @@ function renderModels() {
   (th.claude || []).forEach(c => accts.push({ name: 'claude ' + (c.label || ''), fam: 'claude', ...c }));
   const burnHtml = accts.length
     ? `<div class="mcards">${accts.map(burnCard).join('')}</div>
-       <div class="note">Headroom is target minus projected-at-reset — more headroom means more room before the weekly limit resets. Codex targets 100; each Claude account targets 200.</div>`
+       <div class="note">Headroom is target minus projected-at-reset — more headroom means more room before the weekly limit resets. Each card reads its own target from the snapshot.</div>`
     : '<div class="empty-inline">no throttling readings in this snapshot</div>';
 
   const rt = SNAP.routing;
