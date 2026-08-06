@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-06T05:16:19Z",
+  "published_at": "2026-08-06T05:21:29Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -823,5 +823,99 @@
       }
     ]
   },
-  "snapshot_id": "8f77e9a97df0138c"
+  "routing": {
+    "source": "built-in defaults",
+    "phases": [
+      {
+        "role": "hultra.lead",
+        "model": "claude-opus-4-8",
+        "effort": "xhigh"
+      },
+      {
+        "role": "hultra.discovery.worker",
+        "model": "claude-opus-4-8",
+        "effort": "xhigh"
+      },
+      {
+        "role": "hultra.discovery.codex",
+        "model": "gpt-5.5",
+        "effort": "deep"
+      },
+      {
+        "role": "hultra.invariant_map",
+        "model": "gpt-5.5",
+        "effort": "deep"
+      },
+      {
+        "role": "hultra.plan",
+        "model": "claude-opus-4-8",
+        "effort": "xhigh"
+      },
+      {
+        "role": "hultra.coplan.codex",
+        "model": "gpt-5.5",
+        "effort": "deep"
+      },
+      {
+        "role": "hultra.prebuild_review.codex",
+        "model": "gpt-5.5",
+        "effort": "deep"
+      },
+      {
+        "role": "hultra.build.hard",
+        "model": "claude-opus-4-8",
+        "effort": "xhigh"
+      },
+      {
+        "role": "hultra.build.rote",
+        "model": "claude-sonnet-4-6",
+        "effort": "high"
+      },
+      {
+        "role": "hultra.clippy_fix.worker",
+        "model": "claude-sonnet-4-6",
+        "effort": "high"
+      },
+      {
+        "role": "hultra.auto_proxy",
+        "model": "claude-opus-4-8",
+        "effort": "xhigh"
+      },
+      {
+        "role": "hultra.consult.codex",
+        "model": "gpt-5.5",
+        "effort": "xhigh"
+      }
+    ],
+    "review": {
+      "spark": "gpt-5.3-codex-spark",
+      "concurrency_cap": 4,
+      "fill_model": "gpt-5.4",
+      "tiers": [
+        {
+          "tier": "low",
+          "codex_model": "gpt-5.4",
+          "profile": "broad",
+          "round_cap": 2
+        },
+        {
+          "tier": "med",
+          "codex_model": "gpt-5.5",
+          "profile": "broad",
+          "round_cap": 3,
+          "claude_lens": "claude-sonnet-4-6",
+          "lens_effort": "high"
+        },
+        {
+          "tier": "high",
+          "codex_model": "gpt-5.5",
+          "profile": "deep",
+          "round_cap": 8,
+          "claude_lens": "claude-opus-4-8",
+          "lens_effort": "xhigh"
+        }
+      ]
+    }
+  },
+  "snapshot_id": "1d15c948efe2df55"
 }
