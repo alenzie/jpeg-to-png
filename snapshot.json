@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-06T07:30:20Z",
+  "published_at": "2026-08-06T07:35:28Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -8,9 +8,9 @@
   "throttling": {
     "codex": {
       "target": 100,
-      "projected": 117,
-      "used": 81,
-      "at": 1785980401,
+      "projected": 114,
+      "used": 82,
+      "at": 1785997889,
       "reset": "23:22 on 7 Aug",
       "spark": [
         [
@@ -288,6 +288,10 @@
         [
           1785978000,
           117
+        ],
+        [
+          1785996000,
+          114
         ]
       ]
     },
@@ -662,7 +666,7 @@
   },
   "runstate": {
     "auto": false,
-    "parallel": 1,
+    "parallel": 2,
     "pickconfirm": true
   },
   "daemons": {
@@ -686,14 +690,18 @@
       "stage": "subfencing",
       "stage_i": 4,
       "ctx_pct": 37,
-      "last_commit_at": 1786000636,
-      "head": "b347f793",
+      "last_commit_at": 1786001462,
+      "head": "c1f9bfeb",
       "subfence": {
         "done": 6,
         "total": 10
       },
       "review_rounds": [],
       "commits": [
+        {
+          "sha": "c1f9bfeb",
+          "at": 1786001462
+        },
         {
           "sha": "b347f793",
           "at": 1786000636
@@ -709,15 +717,33 @@
         {
           "sha": "7e134319",
           "at": 1785997929
-        },
-        {
-          "sha": "ca9bb716",
-          "at": 1785997155
         }
       ],
       "fences": {
         "plan": true,
         "synth": true,
+        "build": false,
+        "review": false
+      },
+      "gate_open": false
+    },
+    {
+      "id": "SAG2",
+      "status": "proposed",
+      "stage": "planning",
+      "stage_i": 1,
+      "ctx_pct": 12,
+      "last_commit_at": null,
+      "head": null,
+      "subfence": {
+        "done": 0,
+        "total": null
+      },
+      "review_rounds": [],
+      "commits": [],
+      "fences": {
+        "plan": false,
+        "synth": false,
         "build": false,
         "review": false
       },
@@ -930,5 +956,5 @@
       ]
     }
   },
-  "snapshot_id": "8cb09921e16d410c"
+  "snapshot_id": "08c3b230a83c5d64"
 }
