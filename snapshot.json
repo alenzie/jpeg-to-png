@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-05T23:47:35Z",
+  "published_at": "2026-08-06T00:13:06Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -8,9 +8,9 @@
   "throttling": {
     "codex": {
       "target": 100,
-      "projected": 123,
+      "projected": 118,
       "used": 80,
-      "at": 1785956357,
+      "at": 1785971505,
       "spark": [
         [
           1785398400,
@@ -279,6 +279,10 @@
         [
           1785952800,
           123
+        ],
+        [
+          1785970800,
+          118
         ]
       ]
     },
@@ -286,9 +290,9 @@
       {
         "target": 200,
         "label": "A",
-        "projected": 203,
-        "used": 60,
-        "at": 1785955547,
+        "projected": 117,
+        "used": 80,
+        "at": 1785971505,
         "spark": [
           [
             1785402000,
@@ -469,6 +473,10 @@
           [
             1785952800,
             203
+          ],
+          [
+            1785970800,
+            117
           ]
         ]
       },
@@ -643,7 +651,7 @@
   },
   "runstate": {
     "auto": false,
-    "parallel": 2,
+    "parallel": 1,
     "pickconfirm": true
   },
   "daemons": {
@@ -660,7 +668,30 @@
       "up": true
     }
   },
-  "units": [],
+  "units": [
+    {
+      "id": "INT7",
+      "status": "not-started",
+      "stage": "planning",
+      "stage_i": 1,
+      "ctx_pct": 9,
+      "last_commit_at": null,
+      "head": null,
+      "subfence": {
+        "done": 0,
+        "total": null
+      },
+      "review_rounds": [],
+      "commits": [],
+      "fences": {
+        "plan": false,
+        "synth": false,
+        "build": false,
+        "review": false
+      },
+      "gate_open": false
+    }
+  ],
   "eligible": [
     "WARM-REPLY",
     "MAP1b",
@@ -764,5 +795,5 @@
       }
     ]
   },
-  "snapshot_id": "7d7bfc136c641c67"
+  "snapshot_id": "6006a8926904d2d8"
 }
