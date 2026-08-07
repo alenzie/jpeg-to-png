@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-07T04:50:30Z",
+  "published_at": "2026-08-07T04:55:38Z",
   "gate_alert": {
     "active": true,
     "units": [
@@ -250,10 +250,6 @@
         "at": 1785971505,
         "reset": "Aug 7, 9:59pm (America/Los_Angeles)",
         "spark": [
-          [
-            1785470400,
-            164
-          ],
           [
             1785474000,
             166
@@ -583,17 +579,54 @@
     {
       "id": "SAG2",
       "status": "building",
-      "stage": "subfencing",
-      "stage_i": 4,
-      "ctx_pct": 62,
-      "last_commit_at": 1786078186,
-      "head": "577c858f",
+      "stage": "phase-4 review",
+      "stage_i": 5,
+      "ctx_pct": 11,
+      "last_commit_at": 1786078362,
+      "head": "22e80992",
       "subfence": {
         "done": 15,
         "total": 15
       },
-      "review_rounds": [],
+      "review_rounds": [
+        {
+          "round": 2,
+          "seats": "codex-5.5xhigh",
+          "must": 0,
+          "should": 3,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 3,
+          "seats": "codex-5.5xhigh",
+          "must": 3,
+          "should": 1,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 4,
+          "seats": "codex-5.5xhigh",
+          "must": 2,
+          "should": 0,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 5,
+          "seats": "codex-5.5xhigh",
+          "must": 1,
+          "should": 0,
+          "could": 0,
+          "nit": 0
+        }
+      ],
       "commits": [
+        {
+          "sha": "22e80992",
+          "at": 1786078362
+        },
         {
           "sha": "577c858f",
           "at": 1786078186
@@ -609,16 +642,12 @@
         {
           "sha": "1017384e",
           "at": 1786076767
-        },
-        {
-          "sha": "1aecf05f",
-          "at": 1786076345
         }
       ],
       "fences": {
         "plan": true,
         "synth": true,
-        "build": false,
+        "build": true,
         "review": false
       },
       "gate_open": false
@@ -835,5 +864,5 @@
       ]
     }
   },
-  "snapshot_id": "c063d1863b69f05d"
+  "snapshot_id": "806c4c87ebd29893"
 }
