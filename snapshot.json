@@ -1,9 +1,15 @@
 {
   "schema": 1,
-  "published_at": "2026-08-08T22:31:35Z",
+  "published_at": "2026-08-08T22:36:43Z",
   "gate_alert": {
-    "active": false,
-    "units": []
+    "active": true,
+    "units": [
+      {
+        "id": "REVIEW-REQUESTS",
+        "kind": "needs-owner",
+        "raised_at": 1786228500
+      }
+    ]
   },
   "throttling": {
     "codex": {
@@ -526,7 +532,7 @@
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
     "monitor_alive": true,
-    "last_pass_at": 1786228093
+    "last_pass_at": 1786228393
   },
   "runstate": {
     "auto": false,
@@ -551,50 +557,29 @@
     {
       "id": "REVIEW-REQUESTS",
       "status": "building",
-      "stage": "phase-4 review",
-      "stage_i": 5,
-      "ctx_pct": 36,
-      "last_commit_at": 1786227410,
-      "head": "700e7db2",
+      "stage": "interviewing",
+      "stage_i": 2,
+      "ctx_pct": 40,
+      "last_commit_at": 1786228466,
+      "head": "ced9d6d1",
       "subfence": {
         "done": 15,
         "total": 15
       },
-      "review_rounds": [
-        {
-          "round": 1,
-          "seats": "Sonnet-high swarm ×4 Anthropic budget NE",
-          "must": 3,
-          "should": 8,
-          "could": 3,
-          "nit": 1
-        },
-        {
-          "round": 2,
-          "seats": "codex gpt-5.5deepxhigh opener",
-          "must": 4,
-          "should": 4,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 3,
-          "seats": "codex gpt-5.5deepxhigh confirm + invaria",
-          "must": 1,
-          "should": 0,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 4,
-          "seats": "codex-5.5deepxhigh fresh confirm + invar",
-          "must": 2,
-          "should": 4,
-          "could": 2,
-          "nit": 0
-        }
-      ],
+      "review_rounds": [],
       "commits": [
+        {
+          "sha": "ced9d6d1",
+          "at": 1786228466
+        },
+        {
+          "sha": "e5fb6b0c",
+          "at": 1786228409
+        },
+        {
+          "sha": "9ee57ba3",
+          "at": 1786228384
+        },
         {
           "sha": "700e7db2",
           "at": 1786227410
@@ -602,18 +587,6 @@
         {
           "sha": "176bec4c",
           "at": 1786227384
-        },
-        {
-          "sha": "99ff52ce",
-          "at": 1786225913
-        },
-        {
-          "sha": "d19d8207",
-          "at": 1786225837
-        },
-        {
-          "sha": "2c5e8cdb",
-          "at": 1786224263
         }
       ],
       "fences": {
@@ -622,7 +595,7 @@
         "build": true,
         "review": false
       },
-      "gate_open": false
+      "gate_open": true
     }
   ],
   "eligible": [
@@ -835,5 +808,5 @@
       ]
     }
   },
-  "snapshot_id": "10c607bb56862b3c"
+  "snapshot_id": "2e24b0b17d654d66"
 }
