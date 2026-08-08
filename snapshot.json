@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-08T14:04:52Z",
+  "published_at": "2026-08-08T14:10:09Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -526,7 +526,7 @@
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
     "monitor_alive": true,
-    "last_pass_at": 1786197749
+    "last_pass_at": 1786198051
   },
   "runstate": {
     "auto": false,
@@ -551,17 +551,46 @@
     {
       "id": "INT7-RT-ZOHO",
       "status": "building",
-      "stage": "subfencing",
-      "stage_i": 4,
-      "ctx_pct": 51,
-      "last_commit_at": 1786197591,
-      "head": "20c18a43",
+      "stage": "phase-4 review",
+      "stage_i": 5,
+      "ctx_pct": 11,
+      "last_commit_at": 1786198040,
+      "head": "26710c2a",
       "subfence": {
         "done": 9,
         "total": 9
       },
-      "review_rounds": [],
+      "review_rounds": [
+        {
+          "round": 1,
+          "seats": "gpt-5.6-soldeep seed",
+          "must": 7,
+          "should": 3,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 2,
+          "seats": "gpt-5.5deep fresh open",
+          "must": 2,
+          "should": 1,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 3,
+          "seats": "gpt-5.5deep fresh confirm",
+          "must": 0,
+          "should": 0,
+          "could": 0,
+          "nit": 0
+        }
+      ],
       "commits": [
+        {
+          "sha": "26710c2a",
+          "at": 1786198040
+        },
         {
           "sha": "20c18a43",
           "at": 1786197591
@@ -577,16 +606,12 @@
         {
           "sha": "f460cc55",
           "at": 1786195592
-        },
-        {
-          "sha": "07a87c2e",
-          "at": 1786194722
         }
       ],
       "fences": {
         "plan": true,
         "synth": true,
-        "build": false,
+        "build": true,
         "review": false
       },
       "gate_open": false
@@ -845,5 +870,5 @@
       ]
     }
   },
-  "snapshot_id": "6d1f813c61062b7a"
+  "snapshot_id": "c95f11f0d5f58837"
 }
