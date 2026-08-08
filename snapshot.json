@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-08T18:49:56Z",
+  "published_at": "2026-08-08T18:55:04Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -526,7 +526,7 @@
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
     "monitor_alive": true,
-    "last_pass_at": 1786214878
+    "last_pass_at": 1786215178
   },
   "runstate": {
     "auto": false,
@@ -551,17 +551,50 @@
     {
       "id": "REVIEW-REQUESTS",
       "status": "building",
-      "stage": "subfencing",
-      "stage_i": 4,
-      "ctx_pct": 46,
-      "last_commit_at": 1786214533,
-      "head": "67d87517",
+      "stage": "phase-4 review",
+      "stage_i": 5,
+      "ctx_pct": 0,
+      "last_commit_at": 1786215243,
+      "head": "bf58a456",
       "subfence": {
         "done": 15,
         "total": 15
       },
-      "review_rounds": [],
+      "review_rounds": [
+        {
+          "round": 1,
+          "seats": "Sonnet-high swarm ×4 Anthropic budget NE",
+          "must": 3,
+          "should": 8,
+          "could": 3,
+          "nit": 1
+        },
+        {
+          "round": 2,
+          "seats": "codex gpt-5.5deepxhigh opener",
+          "must": 4,
+          "should": 4,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 3,
+          "seats": "codex gpt-5.5deepxhigh confirm + invaria",
+          "must": 1,
+          "should": 0,
+          "could": 0,
+          "nit": 0
+        }
+      ],
       "commits": [
+        {
+          "sha": "bf58a456",
+          "at": 1786215243
+        },
+        {
+          "sha": "53028c11",
+          "at": 1786215096
+        },
         {
           "sha": "67d87517",
           "at": 1786214533
@@ -573,20 +606,12 @@
         {
           "sha": "84f97f60",
           "at": 1786213879
-        },
-        {
-          "sha": "12900c6a",
-          "at": 1786213804
-        },
-        {
-          "sha": "3278a27b",
-          "at": 1786212712
         }
       ],
       "fences": {
         "plan": true,
         "synth": true,
-        "build": false,
+        "build": true,
         "review": false
       },
       "gate_open": false
@@ -802,5 +827,5 @@
       ]
     }
   },
-  "snapshot_id": "9a62f17c0ae07ad2"
+  "snapshot_id": "338099f676a17bb3"
 }
