@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-08T16:09:37Z",
+  "published_at": "2026-08-08T16:14:51Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -526,7 +526,7 @@
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
     "monitor_alive": true,
-    "last_pass_at": 1786205263
+    "last_pass_at": 1786205563
   },
   "runstate": {
     "auto": false,
@@ -550,74 +550,17 @@
   "units": [
     {
       "id": "INT7-RT-ZOHO",
-      "status": "building",
-      "stage": "phase-4 review",
-      "stage_i": 5,
-      "ctx_pct": 12,
+      "status": "done",
+      "stage": "done",
+      "stage_i": 7,
+      "ctx_pct": 6,
       "last_commit_at": 1786205054,
       "head": "b358b0d1",
       "subfence": {
         "done": 9,
         "total": 9
       },
-      "review_rounds": [
-        {
-          "round": 1,
-          "seats": "gpt-5.6-soldeep seed",
-          "must": 7,
-          "should": 3,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 2,
-          "seats": "gpt-5.5deep fresh open",
-          "must": 2,
-          "should": 1,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 3,
-          "seats": "gpt-5.5deep fresh confirm",
-          "must": 0,
-          "should": 0,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 1,
-          "seats": "Sonnet-high swarm ×4 + codex gpt-5.6-sol",
-          "must": 0,
-          "should": 2,
-          "could": 4,
-          "nit": 1
-        },
-        {
-          "round": 2,
-          "seats": "codex gpt-5.6-solxhigh R1 fix-diff + bla",
-          "must": 0,
-          "should": 3,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 4,
-          "seats": "codex gpt-5.5deepxhigh R3 fix-diff re-co",
-          "must": 0,
-          "should": 2,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 5,
-          "seats": "codex gpt-5.5deepxhigh R4 fix-diff re-co",
-          "must": 0,
-          "should": 2,
-          "could": 0,
-          "nit": 0
-        }
-      ],
+      "review_rounds": [],
       "commits": [
         {
           "sha": "b358b0d1",
@@ -644,7 +587,7 @@
         "plan": true,
         "synth": true,
         "build": true,
-        "review": false
+        "review": true
       },
       "gate_open": false
     },
@@ -653,7 +596,7 @@
       "status": "building",
       "stage": "subfencing",
       "stage_i": 4,
-      "ctx_pct": 41,
+      "ctx_pct": 43,
       "last_commit_at": 1786204710,
       "head": "3c893ce4",
       "subfence": {
@@ -718,6 +661,12 @@
   ],
   "merge_feed": [
     {
+      "pr": 260,
+      "unit": "INT7-RT-ZOHO",
+      "merged_at": 1786205496,
+      "sha": "3e27fd45"
+    },
+    {
       "pr": 259,
       "unit": "INT7-RT-SHEETS",
       "merged_at": 1786112118,
@@ -740,12 +689,6 @@
       "unit": "W3A",
       "merged_at": 1785929583,
       "sha": "5d5c10e4"
-    },
-    {
-      "pr": 255,
-      "unit": "W4",
-      "merged_at": 1785905406,
-      "sha": "0014136f"
     }
   ],
   "decisions": [
@@ -902,5 +845,5 @@
       ]
     }
   },
-  "snapshot_id": "b559f82ec757ea80"
+  "snapshot_id": "cf6f82071ce0749a"
 }
