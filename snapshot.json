@@ -1,15 +1,9 @@
 {
   "schema": 1,
-  "published_at": "2026-08-09T02:17:23Z",
+  "published_at": "2026-08-09T02:22:31Z",
   "gate_alert": {
-    "active": true,
-    "units": [
-      {
-        "id": "REVIEW-REQUESTS",
-        "kind": "needs-owner",
-        "raised_at": 1786228500
-      }
-    ]
+    "active": false,
+    "units": []
   },
   "throttling": {
     "codex": {
@@ -524,7 +518,7 @@
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
     "monitor_alive": true,
-    "last_pass_at": 1786241608
+    "last_pass_at": 1786241908
   },
   "runstate": {
     "auto": false,
@@ -549,16 +543,57 @@
     {
       "id": "REVIEW-REQUESTS",
       "status": "building",
-      "stage": "interviewing",
-      "stage_i": 2,
-      "ctx_pct": 40,
+      "stage": "phase-4 review",
+      "stage_i": 5,
+      "ctx_pct": 41,
       "last_commit_at": 1786228466,
       "head": "ced9d6d1",
       "subfence": {
         "done": 15,
         "total": 15
       },
-      "review_rounds": [],
+      "review_rounds": [
+        {
+          "round": 1,
+          "seats": "Sonnet-high swarm ×4 Anthropic budget NE",
+          "must": 3,
+          "should": 8,
+          "could": 3,
+          "nit": 1
+        },
+        {
+          "round": 2,
+          "seats": "codex gpt-5.5deepxhigh opener",
+          "must": 4,
+          "should": 4,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 3,
+          "seats": "codex gpt-5.5deepxhigh confirm + invaria",
+          "must": 1,
+          "should": 0,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 4,
+          "seats": "codex-5.5deepxhigh fresh confirm + invar",
+          "must": 2,
+          "should": 4,
+          "could": 2,
+          "nit": 0
+        },
+        {
+          "round": 10,
+          "seats": "codex-5.5deepxhigh fresh confirm over bf",
+          "must": 3,
+          "should": 3,
+          "could": 0,
+          "nit": 0
+        }
+      ],
       "commits": [
         {
           "sha": "ced9d6d1",
@@ -587,7 +622,7 @@
         "build": true,
         "review": false
       },
-      "gate_open": true
+      "gate_open": false
     }
   ],
   "eligible": [
@@ -800,5 +835,5 @@
       ]
     }
   },
-  "snapshot_id": "762b4ff933bbf4fe"
+  "snapshot_id": "c5eca37332cbeaae"
 }
