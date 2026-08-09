@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-09T08:34:28Z",
+  "published_at": "2026-08-09T08:39:38Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -13,10 +13,6 @@
       "at": 1786162006,
       "reset": "23:22",
       "spark": [
-        [
-          1785657600,
-          105
-        ],
         [
           1785661200,
           103
@@ -337,14 +333,14 @@
       {
         "target": 100,
         "label": "B",
-        "projected": 287,
+        "projected": 286,
         "used": 47,
-        "at": 1786260579,
+        "at": 1786261033,
         "reset": "Aug 14, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1785657600,
-            270
+            268
           ],
           [
             1785661200,
@@ -494,7 +490,7 @@
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
     "monitor_alive": true,
-    "last_pass_at": 1786264439
+    "last_pass_at": 1786264740
   },
   "runstate": {
     "auto": false,
@@ -519,17 +515,25 @@
     {
       "id": "CAL-HARDENING",
       "status": "building",
-      "stage": "planning",
-      "stage_i": 1,
-      "ctx_pct": 70,
-      "last_commit_at": 1786264433,
-      "head": "4d81bda3",
+      "stage": "building",
+      "stage_i": 3,
+      "ctx_pct": 9,
+      "last_commit_at": 1786264600,
+      "head": "cf8c76c4",
       "subfence": {
         "done": 0,
         "total": 17
       },
       "review_rounds": [],
       "commits": [
+        {
+          "sha": "cf8c76c4",
+          "at": 1786264600
+        },
+        {
+          "sha": "f65c95a8",
+          "at": 1786264538
+        },
         {
           "sha": "4d81bda3",
           "at": 1786264433
@@ -541,18 +545,10 @@
         {
           "sha": "4aab6d6e",
           "at": 1786262209
-        },
-        {
-          "sha": "845bfdbc",
-          "at": 1786261150
-        },
-        {
-          "sha": "54a9a272",
-          "at": 1786259900
         }
       ],
       "fences": {
-        "plan": false,
+        "plan": true,
         "synth": true,
         "build": false,
         "review": false
@@ -562,17 +558,38 @@
     {
       "id": "INT7-RT-AIRTABLE",
       "status": "building",
-      "stage": "building",
-      "stage_i": 3,
-      "ctx_pct": 31,
-      "last_commit_at": null,
-      "head": null,
+      "stage": "subfencing",
+      "stage_i": 4,
+      "ctx_pct": 35,
+      "last_commit_at": 1786264160,
+      "head": "8567bcde",
       "subfence": {
-        "done": 0,
-        "total": null
+        "done": 2,
+        "total": 7
       },
       "review_rounds": [],
-      "commits": [],
+      "commits": [
+        {
+          "sha": "8567bcde",
+          "at": 1786264160
+        },
+        {
+          "sha": "85a4cd63",
+          "at": 1786263788
+        },
+        {
+          "sha": "975432f6",
+          "at": 1786263296
+        },
+        {
+          "sha": "2b5d3f5a",
+          "at": 1786262991
+        },
+        {
+          "sha": "5db3d7c8",
+          "at": 1786262411
+        }
+      ],
       "fences": {
         "plan": true,
         "synth": true,
@@ -847,5 +864,5 @@
       ]
     }
   },
-  "snapshot_id": "416b7ac9f8a83646"
+  "snapshot_id": "f6733f300fa607b8"
 }
