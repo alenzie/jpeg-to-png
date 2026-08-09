@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-09T02:27:42Z",
+  "published_at": "2026-08-09T02:32:51Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -357,10 +357,10 @@
       {
         "target": 100,
         "label": "B",
-        "projected": 120,
-        "used": 87,
-        "at": 1785995077,
-        "reset": "Aug 7, 10pm (America/Los_Angeles)",
+        "projected": 281,
+        "used": 36,
+        "at": 1786238982,
+        "reset": "Aug 14, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1785636000,
@@ -509,6 +509,10 @@
           [
             1785992400,
             120
+          ],
+          [
+            1786237200,
+            281
           ]
         ]
       }
@@ -518,7 +522,7 @@
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
     "monitor_alive": true,
-    "last_pass_at": 1786242209
+    "last_pass_at": 1786242509
   },
   "runstate": {
     "auto": false,
@@ -542,58 +546,17 @@
   "units": [
     {
       "id": "REVIEW-REQUESTS",
-      "status": "building",
-      "stage": "phase-4 review",
-      "stage_i": 5,
-      "ctx_pct": 44,
+      "status": "done",
+      "stage": "done",
+      "stage_i": 7,
+      "ctx_pct": 7,
       "last_commit_at": 1786242197,
       "head": "1e3c6bbc",
       "subfence": {
         "done": 15,
         "total": 15
       },
-      "review_rounds": [
-        {
-          "round": 1,
-          "seats": "Sonnet-high swarm ×4 Anthropic budget NE",
-          "must": 3,
-          "should": 8,
-          "could": 3,
-          "nit": 1
-        },
-        {
-          "round": 2,
-          "seats": "codex gpt-5.5deepxhigh opener",
-          "must": 4,
-          "should": 4,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 3,
-          "seats": "codex gpt-5.5deepxhigh confirm + invaria",
-          "must": 1,
-          "should": 0,
-          "could": 0,
-          "nit": 0
-        },
-        {
-          "round": 4,
-          "seats": "codex-5.5deepxhigh fresh confirm + invar",
-          "must": 2,
-          "should": 4,
-          "could": 2,
-          "nit": 0
-        },
-        {
-          "round": 10,
-          "seats": "codex-5.5deepxhigh fresh confirm over bf",
-          "must": 3,
-          "should": 3,
-          "could": 0,
-          "nit": 0
-        }
-      ],
+      "review_rounds": [],
       "commits": [
         {
           "sha": "1e3c6bbc",
@@ -620,7 +583,7 @@
         "plan": true,
         "synth": true,
         "build": true,
-        "review": false
+        "review": true
       },
       "gate_open": false
     }
@@ -639,6 +602,7 @@
     "MERGE-ERASURE",
     "CONTACT-SEND",
     "OUT",
+    "REVIEW-HOSTED-SWEEP",
     "MSG7-DNC-MANUAL-CONSENT",
     "MSG11",
     "MSG-MIGRATION-OPS",
@@ -835,5 +799,5 @@
       ]
     }
   },
-  "snapshot_id": "d1270ac9612eb1e9"
+  "snapshot_id": "06c7d72abb1504db"
 }
