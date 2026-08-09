@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-09T21:20:50Z",
+  "published_at": "2026-08-09T21:25:58Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -325,9 +325,9 @@
       {
         "target": 100,
         "label": "B",
-        "projected": 221,
+        "projected": 220,
         "used": 53,
-        "at": 1786306674,
+        "at": 1786307086,
         "reset": "Aug 14, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
@@ -486,7 +486,7 @@
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
     "monitor_alive": true,
-    "last_pass_at": 1786310177
+    "last_pass_at": 1786310478
   },
   "runstate": {
     "auto": false,
@@ -511,17 +511,86 @@
     {
       "id": "INT7-RT-AIRTABLE",
       "status": "building",
-      "stage": "subfencing",
-      "stage_i": 4,
+      "stage": "phase-4 review",
+      "stage_i": 5,
       "ctx_pct": 11,
-      "last_commit_at": 1786310447,
-      "head": "cdcc1b58",
+      "last_commit_at": 1786310651,
+      "head": "a726e617",
       "subfence": {
         "done": 7,
         "total": 7
       },
-      "review_rounds": [],
+      "review_rounds": [
+        {
+          "round": 1,
+          "seats": "Sonnet swarm ×4 anchorsforkconsentcomple",
+          "must": 1,
+          "should": 3,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 1,
+          "seats": "codex gpt-5.6-soldeep SEED",
+          "must": 5,
+          "should": 4,
+          "could": 1,
+          "nit": 1
+        },
+        {
+          "round": 1,
+          "seats": "codex gpt-5.5deep +seat",
+          "must": 1,
+          "should": 2,
+          "could": 1,
+          "nit": 0
+        },
+        {
+          "round": 1,
+          "seats": "codex gpt-5.6-terra +seat",
+          "must": 2,
+          "should": 1,
+          "could": 0,
+          "nit": 1
+        },
+        {
+          "round": 2,
+          "seats": "codex gpt-5.5deep",
+          "must": 3,
+          "should": 1,
+          "could": 0,
+          "nit": 1
+        },
+        {
+          "round": 2,
+          "seats": "codex gpt-5.6-terra",
+          "must": 5,
+          "should": 0,
+          "could": 0,
+          "nit": 1
+        },
+        {
+          "round": 3,
+          "seats": "codex gpt-5.6-terra confirm",
+          "must": 0,
+          "should": 0,
+          "could": 0,
+          "nit": 0
+        },
+        {
+          "round": 4,
+          "seats": "codex gpt-5.6-terra confirm",
+          "must": 1,
+          "should": 0,
+          "could": 0,
+          "nit": 0
+        }
+      ],
       "commits": [
+        {
+          "sha": "a726e617",
+          "at": 1786310651
+        },
         {
           "sha": "cdcc1b58",
           "at": 1786310447
@@ -537,16 +606,12 @@
         {
           "sha": "0023dcb5",
           "at": 1786309727
-        },
-        {
-          "sha": "8175af4a",
-          "at": 1786309689
         }
       ],
       "fences": {
         "plan": true,
         "synth": true,
-        "build": false,
+        "build": true,
         "review": false
       },
       "gate_open": false
@@ -817,5 +882,5 @@
       ]
     }
   },
-  "snapshot_id": "26974d7b354c73fd"
+  "snapshot_id": "52e7067f1df460f7"
 }
