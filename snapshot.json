@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-09T04:41:52Z",
+  "published_at": "2026-08-09T04:47:07Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -356,7 +356,7 @@
         "spark": [
           [
             1785643200,
-            251
+            250
           ],
           [
             1785646800,
@@ -506,7 +506,7 @@
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
     "monitor_alive": true,
-    "last_pass_at": 1786250315
+    "last_pass_at": 1786250616
   },
   "runstate": {
     "auto": false,
@@ -530,10 +530,10 @@
   "units": [
     {
       "id": "CAL-HARDENING",
-      "status": "scoped",
+      "status": "building",
       "stage": "planning",
       "stage_i": 1,
-      "ctx_pct": 12,
+      "ctx_pct": 14,
       "last_commit_at": null,
       "head": null,
       "subfence": {
@@ -555,7 +555,7 @@
       "status": "building",
       "stage": "planning",
       "stage_i": 1,
-      "ctx_pct": 11,
+      "ctx_pct": 14,
       "last_commit_at": null,
       "head": null,
       "subfence": {
@@ -683,72 +683,127 @@
     "source": "spindle-policy.json",
     "phases": [
       {
-        "role": "hultra.lead",
+        "role": "lead",
         "model": "claude-opus-4-8",
         "effort": "xhigh"
       },
       {
-        "role": "hultra.discovery.worker",
+        "role": "discovery.worker",
         "model": "claude-opus-4-8",
         "effort": "xhigh"
       },
       {
-        "role": "hultra.discovery.breadth",
+        "role": "discovery.breadth",
         "model": "claude-opus-4-8",
         "effort": "xhigh"
       },
       {
-        "role": "hultra.invariant_map",
+        "role": "discovery.breadth_sonnet",
+        "model": "claude-sonnet-4-6",
+        "effort": "xhigh"
+      },
+      {
+        "role": "discovery.web_claude",
         "model": "claude-opus-4-8",
         "effort": "xhigh"
       },
       {
-        "role": "hultra.plan",
+        "role": "discovery.web_codex",
+        "model": "gpt-5.4",
+        "effort": "—"
+      },
+      {
+        "role": "invariant_map",
         "model": "claude-opus-4-8",
         "effort": "xhigh"
       },
       {
-        "role": "hultra.coplan.fable",
+        "role": "plan",
+        "model": "claude-opus-4-8",
+        "effort": "xhigh"
+      },
+      {
+        "role": "coplan.fable",
         "model": "claude-fable-5",
         "effort": "max"
       },
       {
-        "role": "hultra.coplan.codex",
+        "role": "coplan.codex",
         "model": "gpt-5.6-sol",
         "effort": "deep"
       },
       {
-        "role": "hultra.prebuild_review.codex",
+        "role": "plan_scrutiny.sol_seed",
+        "model": "gpt-5.6-sol",
+        "effort": "deep"
+      },
+      {
+        "role": "plan_scrutiny.opener",
         "model": "gpt-5.5",
         "effort": "deep"
       },
       {
-        "role": "hultra.build.hard",
+        "role": "plan_scrutiny.iterate",
+        "model": "gpt-5.4",
+        "effort": "—"
+      },
+      {
+        "role": "plan_scrutiny.confirm",
+        "model": "gpt-5.5",
+        "effort": "deep"
+      },
+      {
+        "role": "prebuild_review.codex",
+        "model": "gpt-5.5",
+        "effort": "deep"
+      },
+      {
+        "role": "build.hard",
         "model": "claude-opus-4-8",
         "effort": "xhigh"
       },
       {
-        "role": "hultra.build.checkpoint_confirm",
+        "role": "build.checkpoint_confirm",
         "model": "gpt-5.6-terra",
         "effort": "xhigh"
       },
       {
-        "role": "hultra.build.rote",
+        "role": "build.rote",
         "model": "claude-sonnet-4-6",
         "effort": "high"
       },
       {
-        "role": "hultra.clippy_fix.worker",
+        "role": "p4.r1_swarm",
         "model": "claude-sonnet-4-6",
         "effort": "high"
       },
       {
-        "role": "hultra.auto_proxy",
+        "role": "p4.iterate",
+        "model": "gpt-5.6-sol",
+        "effort": "xhigh"
+      },
+      {
+        "role": "p4.confirm",
+        "model": "gpt-5.5",
+        "effort": "deep"
+      },
+      {
+        "role": "clippy_fix.worker",
+        "model": "claude-sonnet-4-6",
+        "effort": "high"
+      },
+      {
+        "role": "auto_proxy",
         "model": "claude-sonnet-4-6",
         "effort": "xhigh"
       },
       {
-        "role": "hultra.consult.codex",
+        "role": "auto_questionnaire_proxy",
+        "model": "claude-opus-4-8",
+        "effort": "xhigh"
+      },
+      {
+        "role": "consult.codex",
         "model": "gpt-5.5",
         "effort": "xhigh"
       }
@@ -783,5 +838,5 @@
       ]
     }
   },
-  "snapshot_id": "6d26a8abfc3c8733"
+  "snapshot_id": "ad6cf32a4dda05a2"
 }
