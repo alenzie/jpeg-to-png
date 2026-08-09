@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "published_at": "2026-08-09T04:36:04Z",
+  "published_at": "2026-08-09T04:41:52Z",
   "gate_alert": {
     "active": false,
     "units": []
@@ -13,10 +13,6 @@
       "at": 1786162006,
       "reset": "23:22",
       "spark": [
-        [
-          1785643200,
-          87
-        ],
         [
           1785646800,
           92
@@ -215,10 +211,10 @@
       {
         "target": 100,
         "label": "A",
-        "projected": 163,
-        "used": 96,
-        "at": 1786132738,
-        "reset": "Aug 10, 10:59am (America/Los_Angeles)",
+        "projected": 263,
+        "used": 37,
+        "at": 1786246731,
+        "reset": "Aug 14, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1785852000,
@@ -343,6 +339,10 @@
           [
             1786129200,
             164
+          ],
+          [
+            1786244400,
+            263
           ]
         ]
       },
@@ -356,7 +356,7 @@
         "spark": [
           [
             1785643200,
-            252
+            251
           ],
           [
             1785646800,
@@ -506,11 +506,11 @@
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
     "monitor_alive": true,
-    "last_pass_at": 1786250015
+    "last_pass_at": 1786250315
   },
   "runstate": {
     "auto": false,
-    "parallel": 1,
+    "parallel": 2,
     "pickconfirm": true
   },
   "daemons": {
@@ -527,14 +527,58 @@
       "up": true
     }
   },
-  "units": [],
+  "units": [
+    {
+      "id": "CAL-HARDENING",
+      "status": "scoped",
+      "stage": "planning",
+      "stage_i": 1,
+      "ctx_pct": 12,
+      "last_commit_at": null,
+      "head": null,
+      "subfence": {
+        "done": 0,
+        "total": null
+      },
+      "review_rounds": [],
+      "commits": [],
+      "fences": {
+        "plan": false,
+        "synth": false,
+        "build": false,
+        "review": false
+      },
+      "gate_open": false
+    },
+    {
+      "id": "INT7-RT-AIRTABLE",
+      "status": "building",
+      "stage": "planning",
+      "stage_i": 1,
+      "ctx_pct": 11,
+      "last_commit_at": null,
+      "head": null,
+      "subfence": {
+        "done": 0,
+        "total": null
+      },
+      "review_rounds": [],
+      "commits": [],
+      "fences": {
+        "plan": false,
+        "synth": false,
+        "build": false,
+        "review": false
+      },
+      "gate_open": false
+    }
+  ],
   "eligible": [
     "WARM-REPLY",
     "MAP1b",
     "INT7-MARKETPLACE",
     "INT7-MCP-REMOTE",
     "INT7-PUBLIC-API",
-    "INT7-RT-AIRTABLE",
     "INT7-RT-NOTION",
     "W5",
     "COMP",
@@ -739,5 +783,5 @@
       ]
     }
   },
-  "snapshot_id": "687e8fe6ca890904"
+  "snapshot_id": "6d26a8abfc3c8733"
 }
