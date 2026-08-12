@@ -597,6 +597,12 @@ footer {
   .tiles, .mcards { grid-template-columns: 1fr; }
   h2 { font-size: 18px; }
 }
+
+.projstrip{display:flex;gap:6px;padding:4px 14px 8px;flex-wrap:wrap}
+.projbtn{background:transparent;border:1px solid var(--line,#333);border-radius:14px;
+  padding:2px 12px;font:inherit;color:inherit;cursor:pointer;opacity:.65}
+.projbtn.active{opacity:1;border-color:var(--acc,#7ee787)}
+.projct{margin-left:6px;font-size:.85em;opacity:.8}
 </style>
 </head>
 <body>
@@ -610,6 +616,9 @@ footer {
     <button data-tab="unit">Unit</button>
     <button data-tab="history">History</button>
   </nav>
+  <div id="proj-strip" class="projstrip" hidden></div>
+  <nav hidden>
+  </nav>
   <span id="conn" class="conn"><span class="dot2"></span><span id="conn-txt">connecting…</span></span>
 </header>
 <main id="view"></main>
@@ -620,7 +629,39 @@ const $ = (s, el = document) => el.querySelector(s);
 const view = $('#view');
 const STAGES = ["queued","planning","interviewing","building","subfencing","phase-4 review","merge+cleanup","done"];
 
-let SNAP = null, tab = 'pm', currentUnit = null;
+let RAW = null, SNAP = null, tab = 'pm', currentUnit = null;
+let PROJ = localStorage.getItem('spindle.proj') || 'outbound';
+function deriveSnap() {
+  if (!RAW) { SNAP = null; return; }
+  if (RAW.schema === 2 && RAW.projects) {
+    const names = Object.keys(RAW.projects);
+    if (!names.includes(PROJ)) PROJ = names[0];
+    SNAP = Object.assign({}, RAW.projects[PROJ],
+      { published_at: RAW.published_at, snapshot_id: RAW.snapshot_id, throttling: RAW.throttling });
+  } else { SNAP = RAW; }
+  renderProjStrip();
+}
+function projCounts(sec) {
+  const us = (sec && sec.units) || [];
+  const live = us.filter(u => u.stage && u.stage !== 'done' && u.stage !== 'queued').length;
+  const gates = (sec && sec.gate_alert) ? 1 : 0;
+  return { live, gates };
+}
+function renderProjStrip() {
+  const el = document.getElementById('proj-strip');
+  if (!el) return;
+  if (!RAW || RAW.schema !== 2 || !RAW.projects) { el.hidden = true; return; }
+  el.hidden = false;
+  el.innerHTML = Object.keys(RAW.projects).map(n => {
+    const c = projCounts(RAW.projects[n]);
+    return `<button class="projbtn${n === PROJ ? ' active' : ''}" data-proj="${n}">` +
+      `${n}<span class="projct">${c.live}▶${c.gates ? ' ⚠' : ''}</span></button>`;
+  }).join('');
+  el.querySelectorAll('[data-proj]').forEach(b => b.onclick = () => {
+    PROJ = b.dataset.proj; localStorage.setItem('spindle.proj', PROJ);
+    currentUnit = null; deriveSnap(); render();
+  });
+}
 
 // ---- helpers --------------------------------------------------------------------------------
 const escp = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;');
@@ -1154,7 +1195,7 @@ function setConn(ok) {
 async function poll() {
   try {
     const res = await fetch('snapshot.json?t=' + Date.now(), { cache: 'no-store' });
-    if (res.ok) { SNAP = await res.json(); setConn(true); render(); }
+    if (res.ok) { RAW = await res.json(); deriveSnap(); setConn(true); render(); }
     else setConn(false);
   } catch (e) { setConn(false); }
 }
