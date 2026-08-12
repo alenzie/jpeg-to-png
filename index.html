@@ -543,6 +543,44 @@ footer {
   font-family: var(--disp); letter-spacing: .03em; pointer-events: none; }
 @media (max-width: 560px) { .rflow-hint { display: none; } }
 
+/* lead track (distinct top lane) + parallel brace + end cap */
+.rf-lead-band { fill: color-mix(in srgb, var(--copper) 13%, var(--panel)); stroke: color-mix(in srgb, var(--copper) 48%, var(--line)); stroke-width: 1.2; }
+.rf-lead-t { font-size: 12px; font-weight: 800; letter-spacing: .05em; fill: var(--copper); font-family: var(--disp); text-transform: uppercase; }
+.rf-lead-s { font-size: 10px; fill: var(--dim); font-family: var(--mono); }
+.rf-lead-tick { stroke: color-mix(in srgb, var(--copper) 38%, transparent); stroke-width: 1; stroke-dasharray: 2 5; fill: none; }
+.rf-stage-band.par { fill: color-mix(in srgb, var(--copper) 4%, transparent); stroke: color-mix(in srgb, var(--copper) 28%, var(--line)); }
+.rf-par-brace { fill: none; stroke: color-mix(in srgb, var(--copper) 60%, var(--line)); stroke-width: 1.4; stroke-linecap: round; }
+.rf-par-t { font-size: 9px; fill: var(--copper); font-family: var(--disp); font-weight: 700; letter-spacing: .03em; }
+.rf-cap-ok { font-size: 9.5px; fill: var(--ok); font-family: var(--disp); }
+
+/* mobile vertical loom — stage cards, native scroll, explicit parallel groups */
+.rflow-legend.static { position: static; margin-top: .6rem; display: inline-flex; backdrop-filter: none; }
+.mloom { display: flex; flex-direction: column; gap: 0; }
+.mcap { text-align: center; font-family: var(--mono); font-size: 11px; color: var(--dim); padding: .35rem; letter-spacing: .05em; }
+.mcap.end { color: var(--ok); font-weight: 700; }
+.mlead { border: 1px solid color-mix(in srgb, var(--copper) 48%, var(--line)); border-radius: var(--r); margin-bottom: .15rem;
+  padding: .6rem .85rem; background: color-mix(in srgb, var(--copper) 11%, var(--panel)); box-shadow: inset 3px 0 0 var(--copper); }
+.mlead-t { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--copper); }
+.mlead-s { font-size: 11px; font-family: var(--mono); color: var(--dim); margin-top: .12rem; }
+.mconn { width: 2px; height: 15px; margin: 0 auto; background: linear-gradient(var(--copper), color-mix(in srgb, var(--copper) 25%, transparent)); }
+.mconn.dash { background: none; border-left: 2px dashed color-mix(in srgb, var(--copper) 45%, transparent); }
+.mstage { border: 1px solid var(--line); background: linear-gradient(180deg, color-mix(in srgb, var(--fg) 2%, var(--panel)), var(--panel));
+  border-radius: var(--r); padding: .55rem .75rem .65rem; box-shadow: var(--sh); }
+.mstage.support { border-style: dashed; opacity: .92; }
+.mstage-h { display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; }
+.mstage-t { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--copper); }
+.mtag { font-size: 9px; font-weight: 700; padding: .08rem .45rem; border-radius: 999px; letter-spacing: .02em; white-space: nowrap; }
+.mtag.par { color: var(--copper); border: 1px solid color-mix(in srgb, var(--copper) 45%, var(--line)); background: color-mix(in srgb, var(--copper) 12%, transparent); }
+.mtag.loop { color: var(--info); border: 1px solid color-mix(in srgb, var(--info) 45%, var(--line)); background: color-mix(in srgb, var(--info) 12%, transparent); }
+.mstage-s { font-size: 10px; color: var(--dim); margin: .12rem 0 .45rem; }
+.mseats { display: flex; flex-direction: column; gap: .35rem; }
+.mseats.par { padding-left: .55rem; margin-left: .1rem; border-left: 2px solid color-mix(in srgb, var(--copper) 42%, var(--line)); }
+.mseat { display: flex; justify-content: space-between; align-items: baseline; gap: .6rem;
+  background: color-mix(in srgb, var(--fg) 3%, var(--panel2)); border-left: 3px solid var(--nc);
+  border-radius: var(--r-xs); padding: .32rem .55rem; }
+.mseat-role { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--fg); }
+.mseat-model { font-family: var(--mono); font-size: 10px; color: var(--nc); text-align: right; }
+
 /* ---- narrow phones (~360px) ------------------------------------------------ */
 @media (max-width: 380px) {
   main { padding: .7rem; }
@@ -837,40 +875,62 @@ function rfNode(x, y, role, mi, effort) {
   </g>`;
 }
 
+// DESKTOP loom: SVG in NATURAL px (no viewBox fit) so nodes are readable at 1:1;
+// the rf-cam transform (RFLOW) pans/zooms in those same px. Lead = a distinct top
+// track; parallel stages get a brace + "∥ N parallel" tag.
 function buildLoom(phases) {
   const byRole = {}; (phases||[]).forEach(p => { byRole[String(p.role||'').replace(/^hultra\./,'')] = p; });
-  const COLW=214, NW=168, NH=46, STEP=60, X0=34, HDR=54;
-  const stages = RF_STAGES.map(st => ({...st, seats: st.roles.map(r=>byRole[r]).filter(Boolean)})).filter(st => st.seats.length);
+  const leadP = byRole['lead'];
+  const COLW=216, NW=170, NH=48, STEP=64, X0=40, LEADY=12, LEADH=44;
+  const stages = RF_STAGES.filter(st => st.id!=='lead')
+    .map(st => ({...st, seats: st.roles.map(r=>byRole[r]).filter(Boolean)})).filter(st => st.seats.length);
   if (!stages.length) return null;
   const support = { ...RF_SUPPORT, seats: RF_SUPPORT.roles.map(r=>byRole[r]).filter(Boolean) };
   const maxSeats = Math.max(1, ...stages.map(s=>s.seats.length));
-  const halfH = (maxSeats-1)*STEP/2, spineY = HDR + halfH + 24;
+  const halfH = (maxSeats-1)*STEP/2;
+  const HDR = LEADY + LEADH + 24;
+  const spineY = HDR + 34 + halfH + NH/2;
   const supY = spineY + halfH + 96;
   stages.forEach((st,i) => { st.cx = X0 + NW/2 + i*COLW; });
   const last = stages[stages.length-1];
+  const worldW = last.cx + NW/2 + 70, worldH = supY + NH/2 + 22;
   const under = [], over = [], nodes = [];
+
+  if (leadP) {
+    const mi = modelInfo(leadP.model), lx=X0-14, lw=worldW-lx-24, ly=LEADY;
+    over.push(`<rect class="rf-lead-band" x="${lx}" y="${ly}" width="${lw}" height="${LEADH}" rx="11"/>`);
+    over.push(`<circle class="rf-dot" cx="${lx+18}" cy="${ly+LEADH/2}" r="4" style="fill:var(${mi.v})"/>`);
+    over.push(`<text class="rf-lead-t" x="${lx+32}" y="${ly+LEADH/2-1}">LEAD — orchestrates every stage</text>`);
+    over.push(`<text class="rf-lead-s" x="${lx+32}" y="${ly+LEADH/2+14}">${escp(mi.short)} · ${escp(leadP.effort||'')}</text>`);
+    stages.forEach(st => under.push(`<path class="rf-lead-tick" d="M${st.cx},${ly+LEADH} L${st.cx},${HDR+2}"/>`));
+  }
 
   for (let i=0;i<stages.length-1;i++)
     under.push(`<path class="rf-thread" stroke-width="3" d="${rfCurve(stages[i].cx+NW/2+16, spineY, stages[i+1].cx-NW/2-16, spineY)}"/>`);
-  under.push(`<path class="rf-thread" stroke-width="3" d="M${(stages[0].cx-NW/2-34).toFixed(1)},${spineY} L${(stages[0].cx-NW/2-16).toFixed(1)},${spineY}"/>`);
-  under.push(`<path class="rf-thread" stroke-width="3" d="M${(last.cx+NW/2+16).toFixed(1)},${spineY} L${(last.cx+NW/2+44).toFixed(1)},${spineY}"/>`);
-  over.push(`<text class="rf-stage-s" x="${(stages[0].cx-NW/2-38).toFixed(1)}" y="${spineY-8}" text-anchor="end">unit ▸</text>`);
-  over.push(`<text class="rf-stage-s" x="${(last.cx+NW/2+50).toFixed(1)}" y="${(spineY+4).toFixed(1)}" style="fill:var(--ok)">merged ✓</text>`);
+  under.push(`<path class="rf-thread" stroke-width="3" d="M${(stages[0].cx-NW/2-36).toFixed(1)},${spineY} L${(stages[0].cx-NW/2-16).toFixed(1)},${spineY}"/>`);
+  under.push(`<path class="rf-thread" stroke-width="3" d="M${(last.cx+NW/2+16).toFixed(1)},${spineY} L${(last.cx+NW/2+46).toFixed(1)},${spineY}"/>`);
+  over.push(`<text class="rf-stage-s" x="${(stages[0].cx-NW/2-40).toFixed(1)}" y="${spineY-8}" text-anchor="end">unit ▸</text>`);
+  over.push(`<text class="rf-cap-ok" x="${(last.cx+NW/2+52).toFixed(1)}" y="${(spineY+4).toFixed(1)}">merged ✓</text>`);
 
   stages.forEach(st => {
-    const cx=st.cx, n=st.seats.length, top=spineY-(n-1)*STEP/2;
+    const cx=st.cx, n=st.seats.length, top=spineY-(n-1)*STEP/2, par=n>1;
     const ex=cx-NW/2-16, xx=cx+NW/2+16;
-    over.push(`<rect class="rf-stage-band" x="${cx-COLW/2+10}" y="${HDR-16}" width="${COLW-20}" height="${(maxSeats-1)*STEP+NH+20}" rx="10"/>`);
-    over.push(`<text class="rf-stage-t" x="${cx}" y="20" text-anchor="middle">${escp(st.t)}</text>`);
-    over.push(`<text class="rf-stage-s" x="${cx}" y="34" text-anchor="middle">${escp(st.s)}</text>`);
+    over.push(`<rect class="rf-stage-band ${par?'par':''}" x="${cx-COLW/2+10}" y="${HDR-4}" width="${COLW-20}" height="${(maxSeats-1)*STEP+NH+34}" rx="11"/>`);
+    over.push(`<text class="rf-stage-t" x="${cx}" y="${HDR+12}" text-anchor="middle">${escp(st.t)}</text>`);
+    over.push(`<text class="rf-stage-s" x="${cx}" y="${HDR+26}" text-anchor="middle">${escp(st.s)}</text>`);
+    if (par) {
+      const stHalf=(n-1)*STEP/2, tY=spineY-stHalf-NH/2, bY=spineY+stHalf+NH/2, bx=cx-NW/2-22;
+      over.push(`<path class="rf-par-brace" d="M${bx+7},${tY} Q${bx},${tY} ${bx},${tY+9} L${bx},${(spineY-6).toFixed(1)} M${bx},${(spineY+6).toFixed(1)} L${bx},${bY-9} Q${bx},${bY} ${bx+7},${bY}"/>`);
+      over.push(`<text class="rf-par-t" x="${cx}" y="${HDR+38}" text-anchor="middle">∥ ${n} in parallel</text>`);
+    }
     st.seats.forEach((p,j) => {
       const y=top+j*STEP, mi=modelInfo(p.model);
-      under.push(`<path class="rf-branch" style="stroke:var(${mi.v})" stroke-opacity=".33" stroke-width="1.5" d="${rfCurve(ex, spineY, cx-NW/2, y)}"/>`);
-      under.push(`<path class="rf-branch" style="stroke:var(${mi.v})" stroke-opacity=".33" stroke-width="1.5" d="${rfCurve(cx+NW/2, y, xx, spineY)}"/>`);
+      under.push(`<path class="rf-branch" style="stroke:var(${mi.v})" stroke-opacity=".34" stroke-width="1.5" d="${rfCurve(ex, spineY, cx-NW/2, y)}"/>`);
+      under.push(`<path class="rf-branch" style="stroke:var(${mi.v})" stroke-opacity=".34" stroke-width="1.5" d="${rfCurve(cx+NW/2, y, xx, spineY)}"/>`);
       nodes.push(rfNode(cx-NW/2, y-NH/2, rfShort(p.role), mi, p.effort));
     });
     if (st.loop) {
-      const ty = top - NH/2 - 20;
+      const ty = top - NH/2 - 22;
       over.push(`<path class="rf-loop" stroke-width="1.6" d="M${xx.toFixed(1)},${spineY} C${(xx+16).toFixed(1)},${ty.toFixed(1)} ${(ex-16).toFixed(1)},${ty.toFixed(1)} ${ex.toFixed(1)},${spineY}"/>`);
       over.push(`<text class="rf-loop-t" x="${cx}" y="${(ty-4).toFixed(1)}" text-anchor="middle">↻ ${escp(st.loop)}</text>`);
     }
@@ -878,46 +938,79 @@ function buildLoom(phases) {
 
   if (support.seats.length) {
     const cx=stages[0].cx;
-    under.push(`<path class="rf-loop" stroke-opacity=".4" stroke-width="1.6" d="${rfCurve(cx, spineY+NH/2, cx, supY-44)}"/>`);
-    over.push(`<text class="rf-stage-t" x="${cx}" y="${(supY-50).toFixed(1)}" text-anchor="middle">${escp(support.t)}</text>`);
-    over.push(`<text class="rf-stage-s" x="${cx}" y="${(supY-36).toFixed(1)}" text-anchor="middle">${escp(support.s)}</text>`);
+    under.push(`<path class="rf-loop" stroke-opacity=".4" stroke-width="1.6" d="${rfCurve(cx, spineY+halfH+NH/2, cx, supY-46)}"/>`);
+    over.push(`<text class="rf-stage-t" x="${cx}" y="${(supY-52).toFixed(1)}" text-anchor="middle">${escp(support.t)}</text>`);
+    over.push(`<text class="rf-stage-s" x="${cx}" y="${(supY-38).toFixed(1)}" text-anchor="middle">${escp(support.s)}</text>`);
     support.seats.forEach((p,j) => { const x=X0+j*(NW+18); nodes.push(rfNode(x, supY-NH/2, rfShort(p.role), modelInfo(p.model), p.effort)); });
   }
 
-  const worldW = last.cx + NW/2 + 64, worldH = supY + NH/2 + 20;
-  const svg = `<svg class="rflow-svg" viewBox="0 0 ${worldW.toFixed(0)} ${worldH.toFixed(0)}" preserveAspectRatio="xMidYMid meet">
+  return `<svg class="rflow-svg" data-w="${worldW.toFixed(0)}" data-h="${worldH.toFixed(0)}" preserveAspectRatio="xMinYMin meet">
     <g class="rf-cam">${under.join('')}${over.join('')}${nodes.join('')}</g></svg>`;
-  return svg;
+}
+
+function buildLoomMobile(phases) {
+  const byRole = {}; (phases||[]).forEach(p => { byRole[String(p.role||'').replace(/^hultra\./,'')] = p; });
+  const seat = (p) => { const mi=modelInfo(p.model); return `<div class="mseat" style="--nc:var(${mi.v})">
+    <span class="mseat-role">${escp(rfShort(p.role))}</span>
+    <span class="mseat-model">${escp(mi.short)}${p.effort?` · ${escp(p.effort)}`:''}</span></div>`; };
+  const leadP = byRole['lead'];
+  const lead = leadP ? `<div class="mlead"><div class="mlead-t">LEAD — orchestrates every stage</div>
+    <div class="mlead-s">${escp(modelInfo(leadP.model).short)} · ${escp(leadP.effort||'')}</div></div>` : '';
+  const body = RF_STAGES.filter(st=>st.id!=='lead').map(st => {
+    const seats = st.roles.map(r=>byRole[r]).filter(Boolean); if (!seats.length) return '';
+    const par = seats.length>1;
+    return `<div class="mconn"></div><div class="mstage">
+      <div class="mstage-h"><span class="mstage-t">${escp(st.t)}</span>
+        ${st.loop?`<span class="mtag loop">↻ ${escp(st.loop)}</span>`:''}
+        ${par?`<span class="mtag par">∥ ${seats.length} parallel</span>`:''}</div>
+      <div class="mstage-s">${escp(st.s)}</div>
+      <div class="mseats ${par?'par':''}">${seats.map(seat).join('')}</div></div>`;
+  }).join('');
+  const sup = RF_SUPPORT.roles.map(r=>byRole[r]).filter(Boolean);
+  const supHtml = sup.length ? `<div class="mconn dash"></div><div class="mstage support">
+    <div class="mstage-h"><span class="mstage-t">${escp(RF_SUPPORT.t)}</span></div>
+    <div class="mstage-s">${escp(RF_SUPPORT.s)}</div><div class="mseats">${sup.map(seat).join('')}</div></div>` : '';
+  return `<div class="mloom">${lead}<div class="mcap start">unit ▸</div>${body}<div class="mconn"></div><div class="mcap end">merged ✓</div>${supHtml}</div>`;
 }
 
 function rfSvgPt(svg, cx, cy) {
   const pt = svg.createSVGPoint(); pt.x = cx; pt.y = cy;
-  const m = svg.getScreenCTM(); if (!m) return { x:0, y:0, s:1 };
-  const p = pt.matrixTransform(m.inverse()); return { x:p.x, y:p.y, s:m.a || 1 };
+  const m = svg.getScreenCTM(); if (!m) return { x:0, y:0 };
+  const p = pt.matrixTransform(m.inverse()); return { x:p.x, y:p.y };
 }
 function rfApply(cam) { cam.setAttribute('transform', `translate(${RFLOW.x.toFixed(2)},${RFLOW.y.toFixed(2)}) scale(${RFLOW.k.toFixed(4)})`); }
 function rfZoomTo(px, py, factor, svg, cam) {
   const p = rfSvgPt(svg, px, py);
   const wx = (p.x - RFLOW.x) / RFLOW.k, wy = (p.y - RFLOW.y) / RFLOW.k;
-  const nk = Math.min(4.5, Math.max(0.45, RFLOW.k * factor));
+  const nk = Math.min(3.2, Math.max(0.4, RFLOW.k * factor));
   RFLOW.k = nk; RFLOW.x = p.x - wx*nk; RFLOW.y = p.y - wy*nk; rfApply(cam);
 }
 function wireLoom() {
   const wrap = document.querySelector('.rflow-wrap'); if (!wrap) return;
   const svg = wrap.querySelector('.rflow-svg'), cam = wrap.querySelector('.rf-cam'); if (!svg || !cam) return;
+  const wW = +svg.dataset.w || 1000, wH = +svg.dataset.h || 400;
+  if (!RFLOW.inited) {                       // default: fit to HEIGHT so nodes stay readable, start at the left
+    const b = wrap.getBoundingClientRect();
+    const k = Math.max(0.4, Math.min(1.15, (b.height - 22) / wH));
+    RFLOW = { k, x: 16, y: Math.max(6, (b.height - wH*k) / 2), inited: true };
+  }
   rfApply(cam);
-  wrap.addEventListener('wheel', ev => { ev.preventDefault(); rfZoomTo(ev.clientX, ev.clientY, Math.exp(-ev.deltaY*0.0015), svg, cam); }, { passive:false });
+  wrap.addEventListener('wheel', ev => {
+    ev.preventDefault();
+    const d = Math.max(-50, Math.min(50, ev.deltaY));
+    rfZoomTo(ev.clientX, ev.clientY, Math.exp(-d * 0.0011), svg, cam);
+  }, { passive:false });
   let drag = null;
   wrap.addEventListener('pointerdown', ev => { if (ev.button) return; drag = { sx:ev.clientX, sy:ev.clientY, ox:RFLOW.x, oy:RFLOW.y, s:(svg.getScreenCTM()||{a:1}).a || 1 };
     wrap.classList.add('grabbing'); try { wrap.setPointerCapture(ev.pointerId); } catch(_){} });
   wrap.addEventListener('pointermove', ev => { if (!drag) return; RFLOW.x = drag.ox + (ev.clientX-drag.sx)/drag.s; RFLOW.y = drag.oy + (ev.clientY-drag.sy)/drag.s; rfApply(cam); });
   const end = () => { drag = null; wrap.classList.remove('grabbing'); };
   wrap.addEventListener('pointerup', end); wrap.addEventListener('pointercancel', end); wrap.addEventListener('pointerleave', end);
-  const r = () => svg.getBoundingClientRect();
+  const c = () => wrap.getBoundingClientRect();
   const btn = (z) => wrap.querySelector(`[data-z="${z}"]`);
-  if (btn('in'))  btn('in').onclick  = () => { const b=r(); rfZoomTo(b.left+b.width/2, b.top+b.height/2, 1.3, svg, cam); };
-  if (btn('out')) btn('out').onclick = () => { const b=r(); rfZoomTo(b.left+b.width/2, b.top+b.height/2, 1/1.3, svg, cam); };
-  if (btn('fit')) btn('fit').onclick = () => { RFLOW = { k:1, x:0, y:0 }; rfApply(cam); };
+  if (btn('in'))  btn('in').onclick  = () => { const b=c(); rfZoomTo(b.left+b.width/2, b.top+b.height/2, 1.25, svg, cam); };
+  if (btn('out')) btn('out').onclick = () => { const b=c(); rfZoomTo(b.left+b.width/2, b.top+b.height/2, 1/1.25, svg, cam); };
+  if (btn('fit')) btn('fit').onclick = () => { const b=c(); const k=Math.max(0.4,Math.min(1.15,(b.height-22)/wH)); RFLOW={k,x:16,y:Math.max(6,(b.height-wH*k)/2),inited:true}; rfApply(cam); };
 }
 
 // ---- Models (read-only model switchboard) -------------------------------------------------
@@ -961,14 +1054,22 @@ function renderModels() {
   if (!rt || !(rt.phases || []).length) {
     routingHtml = `<div class="panel"><h3>Routing map</h3><div class="empty-inline">no routing published in this snapshot — the switchboard appears once the routing resolver reports in.</div></div>`;
   } else {
-    const loomSvg = buildLoom(rt.phases);
-    const loomHtml = loomSvg
-      ? `<div class="rflow-wrap">${loomSvg}
-          <div class="rflow-ctl"><button data-z="in" title="zoom in" aria-label="zoom in">+</button><button data-z="out" title="zoom out" aria-label="zoom out">−</button><button data-z="fit" title="reset view" aria-label="reset view">⤢</button></div>
-          <div class="rflow-legend"><span><i style="background:var(--info)"></i>opus</span><span><i style="background:var(--sonnet)"></i>sonnet</span><span><i style="background:var(--fable)"></i>fable</span><span><i style="background:var(--copper)"></i>terra · 5.5</span><span><i style="background:var(--sol)"></i>sol</span></div>
-          <div class="rflow-hint">drag to pan · scroll to zoom</div>
-        </div>`
-      : '<div class="empty-inline">no phases to map</div>';
+    const legendInner = `<span><i style="background:var(--info)"></i>opus</span><span><i style="background:var(--sonnet)"></i>sonnet</span><span><i style="background:var(--fable)"></i>fable</span><span><i style="background:var(--copper)"></i>terra · 5.5</span><span><i style="background:var(--sol)"></i>sol</span>`;
+    const legend = `<div class="rflow-legend">${legendInner}</div>`;
+    const isNarrow = window.matchMedia('(max-width: 720px)').matches;
+    let loomHtml;
+    if (isNarrow) {
+      loomHtml = buildLoomMobile(rt.phases) + `<div class="rflow-legend static">${legendInner}</div>`;
+    } else {
+      const loomSvg = buildLoom(rt.phases);
+      loomHtml = loomSvg
+        ? `<div class="rflow-wrap">${loomSvg}
+            <div class="rflow-ctl"><button data-z="in" title="zoom in" aria-label="zoom in">+</button><button data-z="out" title="zoom out" aria-label="zoom out">−</button><button data-z="fit" title="reset view" aria-label="reset view">⤢</button></div>
+            ${legend}
+            <div class="rflow-hint">drag to pan · scroll to zoom</div>
+          </div>`
+        : '<div class="empty-inline">no phases to map</div>';
+    }
 
     const rev = rt.review || {};
     const tiers = rev.tiers || [];
@@ -1033,6 +1134,7 @@ async function poll() {
 poll();
 setInterval(poll, 10000);           // stay fresh — the publisher writes every ~5 min, we just poll faster
 setInterval(() => { if (SNAP) render(); }, 15000); // re-tick "ago" ages between polls
+let rzT; window.addEventListener('resize', () => { clearTimeout(rzT); rzT = setTimeout(() => { RFLOW.inited = false; if (SNAP && tab === 'models') render(); }, 200); });
 </script>
 </body>
 </html>
