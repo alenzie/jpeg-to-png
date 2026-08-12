@@ -1,9 +1,15 @@
 {
   "schema": 1,
-  "published_at": "2026-08-12T04:38:44Z",
+  "published_at": "2026-08-12T04:43:50Z",
   "gate_alert": {
-    "active": false,
-    "units": []
+    "active": true,
+    "units": [
+      {
+        "id": "W4B",
+        "kind": "needs-owner",
+        "raised_at": 1786509705
+      }
+    ]
   },
   "throttling": {
     "codex": {
@@ -418,7 +424,7 @@
     "ctx_proxy_pct": null,
     "ctx_proxy_basis": "unavailable",
     "monitor_alive": true,
-    "last_pass_at": 1786509224
+    "last_pass_at": 1786509825
   },
   "runstate": {
     "auto": false,
@@ -445,7 +451,7 @@
       "status": "building",
       "stage": "subfencing",
       "stage_i": 4,
-      "ctx_pct": 35,
+      "ctx_pct": 39,
       "last_commit_at": 1786509072,
       "head": "5693eaea",
       "subfence": {
@@ -486,9 +492,9 @@
     {
       "id": "W4B",
       "status": "building",
-      "stage": "planning",
-      "stage_i": 1,
-      "ctx_pct": 21,
+      "stage": "interviewing",
+      "stage_i": 2,
+      "ctx_pct": 24,
       "last_commit_at": null,
       "head": null,
       "subfence": {
@@ -503,7 +509,7 @@
         "build": false,
         "review": false
       },
-      "gate_open": false
+      "gate_open": true
     },
     {
       "id": "W4b",
@@ -657,8 +663,8 @@
       },
       {
         "role": "discovery.web_codex",
-        "model": "gpt-5.4",
-        "effort": "—"
+        "model": "gpt-5.6-terra",
+        "effort": "xhigh"
       },
       {
         "role": "invariant_map",
@@ -692,8 +698,8 @@
       },
       {
         "role": "plan_scrutiny.iterate",
-        "model": "gpt-5.4",
-        "effort": "—"
+        "model": "gpt-5.6-terra",
+        "effort": "xhigh"
       },
       {
         "role": "plan_scrutiny.confirm",
@@ -759,11 +765,11 @@
     "review": {
       "spark": "gpt-5.3-codex-spark",
       "concurrency_cap": 4,
-      "fill_model": "gpt-5.4",
+      "fill_model": "gpt-5.6-terra",
       "tiers": [
         {
           "tier": "low",
-          "codex_model": "gpt-5.4",
+          "codex_model": "gpt-5.6-terra",
           "profile": "broad",
           "round_cap": 2
         },
@@ -786,5 +792,5 @@
       ]
     }
   },
-  "snapshot_id": "8edca1b9cf1a1e29"
+  "snapshot_id": "cd3db1bf5685cd30"
 }
