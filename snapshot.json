@@ -1,26 +1,13 @@
 {
-  "schema": 1,
-  "published_at": "2026-08-12T13:28:53Z",
-  "gate_alert": {
-    "active": false,
-    "units": []
-  },
+  "schema": 2,
   "throttling": {
     "codex": {
       "target": 100,
-      "projected": 152,
-      "used": 32,
-      "at": 1786533178,
+      "projected": 127,
+      "used": 34,
+      "at": 1786567700,
       "reset": "17:47 on 17 Aug",
       "spark": [
-        [
-          1785952800,
-          123
-        ],
-        [
-          1785970800,
-          118
-        ],
         [
           1785978000,
           117
@@ -104,6 +91,10 @@
         [
           1786532400,
           152
+        ],
+        [
+          1786564800,
+          128
         ]
       ]
     },
@@ -111,19 +102,11 @@
       {
         "target": 100,
         "label": "A",
-        "projected": 105,
-        "used": 27,
-        "at": 1786535999,
-        "reset": "Aug 17, 10:59am (America/Los_Angeles)",
+        "projected": 116,
+        "used": 36,
+        "at": 1786569440,
+        "reset": "Aug 17, 11am (America/Los_Angeles)",
         "spark": [
-          [
-            1785952800,
-            203
-          ],
-          [
-            1785970800,
-            117
-          ],
           [
             1786078800,
             169
@@ -239,6 +222,18 @@
           [
             1786532400,
             100
+          ],
+          [
+            1786561200,
+            96
+          ],
+          [
+            1786564800,
+            101
+          ],
+          [
+            1786568400,
+            116
           ]
         ]
       },
@@ -250,10 +245,6 @@
         "at": 1786442912,
         "reset": "Aug 14, 10pm (America/Los_Angeles)",
         "spark": [
-          [
-            1785952800,
-            120
-          ],
           [
             1785974400,
             118
@@ -426,398 +417,955 @@
       }
     ]
   },
-  "pm": {
-    "ctx_proxy_pct": null,
-    "ctx_proxy_basis": "unavailable",
-    "monitor_alive": true,
-    "last_pass_at": 1786541079
-  },
-  "runstate": {
-    "auto": false,
-    "parallel": 2,
-    "pickconfirm": true
-  },
-  "daemons": {
-    "sterling": {
-      "up": true
-    },
-    "bridge": {
-      "up": true
-    },
-    "repl": {
-      "up": true
-    },
-    "monitor": {
-      "up": true
-    }
-  },
-  "units": [
-    {
-      "id": "INT7-PUBLIC-API",
-      "status": "building",
-      "stage": "subfencing",
-      "stage_i": 4,
-      "ctx_pct": 40,
-      "last_commit_at": 1786540663,
-      "head": "03cf6676",
-      "subfence": {
-        "done": 11,
-        "total": 15
+  "projects": {
+    "flowmaster": {
+      "schema": 1,
+      "gate_alert": {
+        "active": false,
+        "units": []
       },
-      "review_rounds": [],
-      "commits": [
-        {
-          "sha": "03cf6676",
-          "at": 1786540663
+      "pm": {
+        "ctx_proxy_pct": null,
+        "ctx_proxy_basis": "unavailable",
+        "monitor_alive": false,
+        "last_pass_at": null
+      },
+      "runstate": {
+        "auto": null,
+        "parallel": null,
+        "pickconfirm": null
+      },
+      "daemons": {
+        "sterling": {
+          "up": false
         },
-        {
-          "sha": "d1702699",
-          "at": 1786538624
+        "bridge": {
+          "up": false
         },
-        {
-          "sha": "5ae1eeb6",
-          "at": 1786538491
+        "repl": {
+          "up": false
         },
-        {
-          "sha": "83cbb8a5",
-          "at": 1786537296
-        },
-        {
-          "sha": "eeab140e",
-          "at": 1786536204
+        "monitor": {
+          "up": false
         }
-      ],
-      "fences": {
-        "plan": true,
-        "synth": true,
-        "build": false,
-        "review": false
       },
-      "gate_open": false
-    },
-    {
-      "id": "W4B",
-      "status": "building",
-      "stage": "subfencing",
-      "stage_i": 4,
-      "ctx_pct": 35,
-      "last_commit_at": 1786541121,
-      "head": "692e460a",
-      "subfence": {
-        "done": 7,
-        "total": 14
-      },
-      "review_rounds": [],
-      "commits": [
-        {
-          "sha": "692e460a",
-          "at": 1786541121
-        },
-        {
-          "sha": "2e4673ec",
-          "at": 1786539565
-        },
-        {
-          "sha": "cf959411",
-          "at": 1786538200
-        },
-        {
-          "sha": "db783f25",
-          "at": 1786538168
-        },
-        {
-          "sha": "29bfd760",
-          "at": 1786538108
-        }
-      ],
-      "fences": {
-        "plan": true,
-        "synth": true,
-        "build": false,
-        "review": false
-      },
-      "gate_open": false
-    },
-    {
-      "id": "W4b",
-      "status": "building",
-      "stage": "building",
-      "stage_i": 3,
-      "ctx_pct": null,
-      "last_commit_at": null,
-      "head": null,
-      "subfence": {
-        "done": 0,
-        "total": null
-      },
-      "review_rounds": [],
-      "commits": [],
-      "fences": {},
-      "gate_open": false
-    }
-  ],
-  "eligible": [
-    "WARM-REPLY",
-    "MAP1b",
-    "INT7-MARKETPLACE",
-    "INT7-MCP-REMOTE",
-    "INT7-RT-NOTION",
-    "INT7-RT-RENEWAL-RECOVERY",
-    "W5",
-    "CONSENT-ARTIFACT",
-    "D15-REVISED",
-    "MERGE-ERASURE",
-    "CONTACT-SEND",
-    "OUT",
-    "MSG7-DNC-MANUAL-CONSENT",
-    "MSG11",
-    "MSG-MIGRATION-OPS",
-    "ONB1",
-    "W3-DP5",
-    "W4c",
-    "W3-EMP",
-    "W7"
-  ],
-  "merge_feed": [
-    {
-      "pr": 267,
-      "unit": "COMP",
-      "merged_at": 1786493843,
-      "sha": "799c0197"
-    },
-    {
-      "pr": 266,
-      "unit": "REVIEW-HOSTED-SWEEP",
-      "merged_at": 1786458012,
-      "sha": "4d2d3b6c"
-    },
-    {
-      "pr": 265,
-      "unit": "decisions-MSG7-DNC-MANUA",
-      "merged_at": 1786435750,
-      "sha": "f5d467d3"
-    },
-    {
-      "pr": 263,
-      "unit": "REPO-WIDE-SOL-REVIEW",
-      "merged_at": 1786418700,
-      "sha": "7d163cf3"
-    },
-    {
-      "pr": 264,
-      "unit": "CAL-HARDENING",
-      "merged_at": 1786372571,
-      "sha": "b184d97a"
-    }
-  ],
-  "decisions": [
-    {
-      "at": "2026-08-03T07:22:22Z",
-      "category": "PROXY",
-      "units": [
-        "AL1",
-        "AL1-HARDENING"
-      ],
-      "summary": null
-    },
-    {
-      "at": "2026-08-03T10:18:27Z",
-      "category": "STEER",
-      "units": [
-        "AL1"
-      ],
-      "summary": null
-    },
-    {
-      "at": "2026-08-03T13:56:37Z",
-      "category": "CONVERGENCE-RULI",
       "units": [],
-      "summary": null
-    },
-    {
-      "at": "2026-08-03T20:56:48Z",
-      "category": "BUILD",
-      "units": [],
-      "summary": null
-    },
-    {
-      "at": "2026-08-03T21:41:26Z",
-      "category": "BUILD",
-      "units": [
-        "AL1"
+      "eligible": [
+        "PLAYER-CORE",
+        "ED-SOUND-SPIKE",
+        "FMDT-FORMAT",
+        "LLM-PROXY"
       ],
-      "summary": null
-    }
-  ],
-  "commands": {
-    "results": [
-      {
-        "verb": "say",
-        "unit": "AL1-HARDENING",
-        "status": "ok",
-        "reason": null,
-        "at": 1785792018
-      }
-    ]
-  },
-  "routing": {
-    "source": "spindle-policy.json",
-    "phases": [
-      {
-        "role": "lead",
-        "model": "claude-opus-4-8",
-        "effort": "xhigh"
+      "merge_feed": [],
+      "decisions": [],
+      "commands": {
+        "results": [
+          {
+            "verb": "say",
+            "unit": "AL1-HARDENING",
+            "status": "ok",
+            "reason": null,
+            "at": 1785792018
+          }
+        ]
       },
-      {
-        "role": "discovery.worker",
-        "model": "claude-opus-4-8",
-        "effort": "xhigh"
-      },
-      {
-        "role": "discovery.breadth",
-        "model": "claude-opus-4-8",
-        "effort": "xhigh"
-      },
-      {
-        "role": "discovery.breadth_sonnet",
-        "model": "claude-sonnet-4-6",
-        "effort": "xhigh"
-      },
-      {
-        "role": "discovery.web_claude",
-        "model": "claude-opus-4-8",
-        "effort": "xhigh"
-      },
-      {
-        "role": "discovery.web_codex",
-        "model": "gpt-5.6-terra",
-        "effort": "xhigh"
-      },
-      {
-        "role": "invariant_map",
-        "model": "claude-opus-4-8",
-        "effort": "xhigh"
-      },
-      {
-        "role": "plan",
-        "model": "claude-opus-4-8",
-        "effort": "xhigh"
-      },
-      {
-        "role": "coplan.fable",
-        "model": "claude-fable-5",
-        "effort": "max"
-      },
-      {
-        "role": "coplan.codex",
-        "model": "gpt-5.6-sol",
-        "effort": "deep"
-      },
-      {
-        "role": "plan_scrutiny.sol_seed",
-        "model": "gpt-5.6-sol",
-        "effort": "deep"
-      },
-      {
-        "role": "plan_scrutiny.opener",
-        "model": "gpt-5.5",
-        "effort": "deep"
-      },
-      {
-        "role": "plan_scrutiny.iterate",
-        "model": "gpt-5.6-terra",
-        "effort": "xhigh"
-      },
-      {
-        "role": "plan_scrutiny.confirm",
-        "model": "gpt-5.5",
-        "effort": "deep"
-      },
-      {
-        "role": "prebuild_review.codex",
-        "model": "gpt-5.5",
-        "effort": "deep"
-      },
-      {
-        "role": "build.hard",
-        "model": "claude-opus-4-8",
-        "effort": "xhigh"
-      },
-      {
-        "role": "build.checkpoint_confirm",
-        "model": "gpt-5.6-terra",
-        "effort": "xhigh"
-      },
-      {
-        "role": "build.rote",
-        "model": "claude-sonnet-4-6",
-        "effort": "high"
-      },
-      {
-        "role": "p4.r1_swarm",
-        "model": "claude-sonnet-4-6",
-        "effort": "high"
-      },
-      {
-        "role": "p4.iterate",
-        "model": "gpt-5.6-terra",
-        "effort": "xhigh"
-      },
-      {
-        "role": "p4.confirm",
-        "model": "gpt-5.5",
-        "effort": "deep"
-      },
-      {
-        "role": "clippy_fix.worker",
-        "model": "claude-sonnet-4-6",
-        "effort": "high"
-      },
-      {
-        "role": "auto_proxy",
-        "model": "claude-sonnet-4-6",
-        "effort": "xhigh"
-      },
-      {
-        "role": "auto_questionnaire_proxy",
-        "model": "claude-opus-4-8",
-        "effort": "xhigh"
-      },
-      {
-        "role": "consult.codex",
-        "model": "gpt-5.5",
-        "effort": "xhigh"
-      }
-    ],
-    "review": {
-      "spark": "gpt-5.3-codex-spark",
-      "concurrency_cap": 4,
-      "fill_model": "gpt-5.6-terra",
-      "tiers": [
-        {
-          "tier": "low",
-          "codex_model": "gpt-5.6-terra",
-          "profile": "broad",
-          "round_cap": 2
-        },
-        {
-          "tier": "med",
-          "codex_model": "gpt-5.5",
-          "profile": "broad",
-          "round_cap": 3,
-          "claude_lens": "claude-sonnet-4-6",
-          "lens_effort": "high"
-        },
-        {
-          "tier": "high",
-          "codex_model": "gpt-5.5",
-          "profile": "deep",
-          "round_cap": 8,
-          "claude_lens": "claude-opus-4-8",
-          "lens_effort": "xhigh"
+      "routing": {
+        "source": "spindle-policy.json",
+        "phases": [
+          {
+            "role": "lead",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.worker",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.breadth",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.breadth_sonnet",
+            "model": "claude-sonnet-4-6",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.web_claude",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.web_codex",
+            "model": "gpt-5.6-terra",
+            "effort": "xhigh"
+          },
+          {
+            "role": "invariant_map",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "plan",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "coplan.fable",
+            "model": "claude-fable-5",
+            "effort": "max"
+          },
+          {
+            "role": "coplan.codex",
+            "model": "gpt-5.6-sol",
+            "effort": "deep"
+          },
+          {
+            "role": "plan_scrutiny.sol_seed",
+            "model": "gpt-5.6-sol",
+            "effort": "deep"
+          },
+          {
+            "role": "plan_scrutiny.opener",
+            "model": "gpt-5.5",
+            "effort": "deep"
+          },
+          {
+            "role": "plan_scrutiny.iterate",
+            "model": "gpt-5.6-terra",
+            "effort": "xhigh"
+          },
+          {
+            "role": "plan_scrutiny.confirm",
+            "model": "gpt-5.5",
+            "effort": "deep"
+          },
+          {
+            "role": "prebuild_review.codex",
+            "model": "gpt-5.5",
+            "effort": "deep"
+          },
+          {
+            "role": "build.hard",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "build.checkpoint_confirm",
+            "model": "gpt-5.6-terra",
+            "effort": "xhigh"
+          },
+          {
+            "role": "build.rote",
+            "model": "claude-sonnet-4-6",
+            "effort": "high"
+          },
+          {
+            "role": "p4.r1_swarm",
+            "model": "claude-sonnet-4-6",
+            "effort": "high"
+          },
+          {
+            "role": "p4.iterate",
+            "model": "gpt-5.6-terra",
+            "effort": "xhigh"
+          },
+          {
+            "role": "p4.confirm",
+            "model": "gpt-5.5",
+            "effort": "deep"
+          },
+          {
+            "role": "clippy_fix.worker",
+            "model": "claude-sonnet-4-6",
+            "effort": "high"
+          },
+          {
+            "role": "auto_proxy",
+            "model": "claude-sonnet-4-6",
+            "effort": "xhigh"
+          },
+          {
+            "role": "auto_questionnaire_proxy",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "consult.codex",
+            "model": "gpt-5.5",
+            "effort": "xhigh"
+          }
+        ],
+        "review": {
+          "spark": "gpt-5.3-codex-spark",
+          "concurrency_cap": 4,
+          "fill_model": "gpt-5.6-terra",
+          "tiers": [
+            {
+              "tier": "low",
+              "codex_model": "gpt-5.6-terra",
+              "profile": "broad",
+              "round_cap": 2
+            },
+            {
+              "tier": "med",
+              "codex_model": "gpt-5.5",
+              "profile": "broad",
+              "round_cap": 3,
+              "claude_lens": "claude-sonnet-4-6",
+              "lens_effort": "high"
+            },
+            {
+              "tier": "high",
+              "codex_model": "gpt-5.5",
+              "profile": "deep",
+              "round_cap": 8,
+              "claude_lens": "claude-opus-4-8",
+              "lens_effort": "xhigh"
+            }
+          ]
         }
-      ]
+      },
+      "snapshot_id": "161a980fd0ee420c"
+    },
+    "outbound": {
+      "schema": 1,
+      "gate_alert": {
+        "active": true,
+        "units": [
+          {
+            "id": "W4B",
+            "kind": "needs-owner",
+            "raised_at": 1786572874
+          }
+        ]
+      },
+      "pm": {
+        "ctx_proxy_pct": null,
+        "ctx_proxy_basis": "unavailable",
+        "monitor_alive": false,
+        "last_pass_at": 1786571693
+      },
+      "runstate": {
+        "auto": false,
+        "parallel": 4,
+        "pickconfirm": true
+      },
+      "daemons": {
+        "sterling": {
+          "up": true
+        },
+        "bridge": {
+          "up": true
+        },
+        "repl": {
+          "up": false
+        },
+        "monitor": {
+          "up": false
+        }
+      },
+      "units": [
+        {
+          "id": "INT7-PUBLIC-API",
+          "status": "building",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 44,
+          "last_commit_at": 1786576430,
+          "head": "d3981910",
+          "subfence": {
+            "done": 14,
+            "total": 15
+          },
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "gpt-5.5deepxhigh fresh opener",
+              "must": 2,
+              "should": 2,
+              "could": 1,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "gpt-5.6-terraxhigh iterating",
+              "must": 5,
+              "should": 7,
+              "could": 1,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terraxhigh cumulative",
+              "must": 6,
+              "should": 4,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "gpt-5.5deepxhigh confirm",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            }
+          ],
+          "commits": [
+            {
+              "sha": "d3981910",
+              "at": 1786576430
+            },
+            {
+              "sha": "0b84192a",
+              "at": 1786575200
+            },
+            {
+              "sha": "5d9a2c1a",
+              "at": 1786572925
+            },
+            {
+              "sha": "99c8b338",
+              "at": 1786572851
+            },
+            {
+              "sha": "28628f84",
+              "at": 1786572524
+            }
+          ],
+          "fences": {
+            "plan": true,
+            "synth": true,
+            "build": true,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "INT7-RT-RENEWAL-RECOVERY",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 29,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "W3-DP5",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 45,
+          "last_commit_at": 1786577215,
+          "head": "c7afd5f7",
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [
+            {
+              "sha": "c7afd5f7",
+              "at": 1786577215
+            },
+            {
+              "sha": "fb93ae40",
+              "at": 1786576674
+            },
+            {
+              "sha": "36554250",
+              "at": 1786576011
+            },
+            {
+              "sha": "ed4862d5",
+              "at": 1786575332
+            },
+            {
+              "sha": "f2cb1f4b",
+              "at": 1786574323
+            }
+          ],
+          "fences": {
+            "plan": false,
+            "synth": true,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "W4B",
+          "status": "building",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 41,
+          "last_commit_at": 1786571921,
+          "head": "4eb7e331",
+          "subfence": {
+            "done": 7,
+            "total": 14
+          },
+          "review_rounds": [],
+          "commits": [
+            {
+              "sha": "4eb7e331",
+              "at": 1786571921
+            },
+            {
+              "sha": "db4008f7",
+              "at": 1786570878
+            },
+            {
+              "sha": "692e460a",
+              "at": 1786541121
+            },
+            {
+              "sha": "2e4673ec",
+              "at": 1786539565
+            },
+            {
+              "sha": "cf959411",
+              "at": 1786538200
+            }
+          ],
+          "fences": {
+            "plan": true,
+            "synth": true,
+            "build": false,
+            "review": false
+          },
+          "gate_open": true
+        },
+        {
+          "id": "W4b",
+          "status": "building",
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": null,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {},
+          "gate_open": false
+        }
+      ],
+      "eligible": [
+        "WARM-REPLY",
+        "MAP1b",
+        "INT7-MARKETPLACE",
+        "INT7-MCP-REMOTE",
+        "INT7-RT-NOTION",
+        "W5",
+        "CONSENT-ARTIFACT",
+        "D15-REVISED",
+        "MERGE-ERASURE",
+        "CONTACT-SEND",
+        "OUT",
+        "MSG7-DNC-MANUAL-CONSENT",
+        "MSG11",
+        "MSG-MIGRATION-OPS",
+        "ONB1",
+        "W4c",
+        "W3-EMP",
+        "W7"
+      ],
+      "merge_feed": [
+        {
+          "pr": 267,
+          "unit": "COMP",
+          "merged_at": 1786493843,
+          "sha": "799c0197"
+        },
+        {
+          "pr": 266,
+          "unit": "REVIEW-HOSTED-SWEEP",
+          "merged_at": 1786458012,
+          "sha": "4d2d3b6c"
+        },
+        {
+          "pr": 265,
+          "unit": "decisions-MSG7-DNC-MANUA",
+          "merged_at": 1786435750,
+          "sha": "f5d467d3"
+        },
+        {
+          "pr": 263,
+          "unit": "REPO-WIDE-SOL-REVIEW",
+          "merged_at": 1786418700,
+          "sha": "7d163cf3"
+        },
+        {
+          "pr": 264,
+          "unit": "CAL-HARDENING",
+          "merged_at": 1786372571,
+          "sha": "b184d97a"
+        }
+      ],
+      "decisions": [
+        {
+          "at": "2026-08-03T07:22:22Z",
+          "category": "PROXY",
+          "units": [
+            "AL1",
+            "AL1-HARDENING"
+          ],
+          "summary": null
+        },
+        {
+          "at": "2026-08-03T10:18:27Z",
+          "category": "STEER",
+          "units": [
+            "AL1"
+          ],
+          "summary": null
+        },
+        {
+          "at": "2026-08-03T13:56:37Z",
+          "category": "CONVERGENCE-RULI",
+          "units": [],
+          "summary": null
+        },
+        {
+          "at": "2026-08-03T20:56:48Z",
+          "category": "BUILD",
+          "units": [],
+          "summary": null
+        },
+        {
+          "at": "2026-08-03T21:41:26Z",
+          "category": "BUILD",
+          "units": [
+            "AL1"
+          ],
+          "summary": null
+        }
+      ],
+      "commands": {
+        "results": [
+          {
+            "verb": "say",
+            "unit": "AL1-HARDENING",
+            "status": "ok",
+            "reason": null,
+            "at": 1785792018
+          }
+        ]
+      },
+      "routing": {
+        "source": "spindle-policy.json",
+        "phases": [
+          {
+            "role": "lead",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.worker",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.breadth",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.breadth_sonnet",
+            "model": "claude-sonnet-4-6",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.web_claude",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.web_codex",
+            "model": "gpt-5.6-terra",
+            "effort": "xhigh"
+          },
+          {
+            "role": "invariant_map",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "plan",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "coplan.fable",
+            "model": "claude-fable-5",
+            "effort": "max"
+          },
+          {
+            "role": "coplan.codex",
+            "model": "gpt-5.6-sol",
+            "effort": "deep"
+          },
+          {
+            "role": "plan_scrutiny.sol_seed",
+            "model": "gpt-5.6-sol",
+            "effort": "deep"
+          },
+          {
+            "role": "plan_scrutiny.opener",
+            "model": "gpt-5.5",
+            "effort": "deep"
+          },
+          {
+            "role": "plan_scrutiny.iterate",
+            "model": "gpt-5.6-terra",
+            "effort": "xhigh"
+          },
+          {
+            "role": "plan_scrutiny.confirm",
+            "model": "gpt-5.5",
+            "effort": "deep"
+          },
+          {
+            "role": "prebuild_review.codex",
+            "model": "gpt-5.5",
+            "effort": "deep"
+          },
+          {
+            "role": "build.hard",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "build.checkpoint_confirm",
+            "model": "gpt-5.6-terra",
+            "effort": "xhigh"
+          },
+          {
+            "role": "build.rote",
+            "model": "claude-sonnet-4-6",
+            "effort": "high"
+          },
+          {
+            "role": "p4.r1_swarm",
+            "model": "claude-sonnet-4-6",
+            "effort": "high"
+          },
+          {
+            "role": "p4.iterate",
+            "model": "gpt-5.6-terra",
+            "effort": "xhigh"
+          },
+          {
+            "role": "p4.confirm",
+            "model": "gpt-5.5",
+            "effort": "deep"
+          },
+          {
+            "role": "clippy_fix.worker",
+            "model": "claude-sonnet-4-6",
+            "effort": "high"
+          },
+          {
+            "role": "auto_proxy",
+            "model": "claude-sonnet-4-6",
+            "effort": "xhigh"
+          },
+          {
+            "role": "auto_questionnaire_proxy",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "consult.codex",
+            "model": "gpt-5.5",
+            "effort": "xhigh"
+          }
+        ],
+        "review": {
+          "spark": "gpt-5.3-codex-spark",
+          "concurrency_cap": 4,
+          "fill_model": "gpt-5.6-terra",
+          "tiers": [
+            {
+              "tier": "low",
+              "codex_model": "gpt-5.6-terra",
+              "profile": "broad",
+              "round_cap": 2
+            },
+            {
+              "tier": "med",
+              "codex_model": "gpt-5.5",
+              "profile": "broad",
+              "round_cap": 3,
+              "claude_lens": "claude-sonnet-4-6",
+              "lens_effort": "high"
+            },
+            {
+              "tier": "high",
+              "codex_model": "gpt-5.5",
+              "profile": "deep",
+              "round_cap": 8,
+              "claude_lens": "claude-opus-4-8",
+              "lens_effort": "xhigh"
+            }
+          ]
+        }
+      },
+      "snapshot_id": "58cc03d711ce1a3e"
+    },
+    "scriptgen": {
+      "schema": 1,
+      "gate_alert": {
+        "active": false,
+        "units": []
+      },
+      "pm": {
+        "ctx_proxy_pct": null,
+        "ctx_proxy_basis": "unavailable",
+        "monitor_alive": false,
+        "last_pass_at": null
+      },
+      "runstate": {
+        "auto": null,
+        "parallel": null,
+        "pickconfirm": null
+      },
+      "daemons": {
+        "sterling": {
+          "up": false
+        },
+        "bridge": {
+          "up": false
+        },
+        "repl": {
+          "up": false
+        },
+        "monitor": {
+          "up": false
+        }
+      },
+      "units": [],
+      "eligible": [],
+      "merge_feed": [
+        {
+          "pr": 5,
+          "unit": "s3-6-caption-sync",
+          "merged_at": 1785195931,
+          "sha": "c317133"
+        },
+        {
+          "pr": 3,
+          "unit": "s3-timeline-viz",
+          "merged_at": 1785020555,
+          "sha": "c8612b0"
+        },
+        {
+          "pr": 2,
+          "unit": "s2-analysis-engine",
+          "merged_at": 1785010495,
+          "sha": "0bc56a6"
+        },
+        {
+          "pr": 1,
+          "unit": "s1-transcript-ingestion",
+          "merged_at": 1784841297,
+          "sha": "d6106a8"
+        }
+      ],
+      "decisions": [],
+      "commands": {
+        "results": [
+          {
+            "verb": "say",
+            "unit": "AL1-HARDENING",
+            "status": "ok",
+            "reason": null,
+            "at": 1785792018
+          }
+        ]
+      },
+      "routing": {
+        "source": "spindle-policy.json",
+        "phases": [
+          {
+            "role": "lead",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.worker",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.breadth",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.breadth_sonnet",
+            "model": "claude-sonnet-4-6",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.web_claude",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "discovery.web_codex",
+            "model": "gpt-5.6-terra",
+            "effort": "xhigh"
+          },
+          {
+            "role": "invariant_map",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "plan",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "coplan.fable",
+            "model": "claude-fable-5",
+            "effort": "max"
+          },
+          {
+            "role": "coplan.codex",
+            "model": "gpt-5.6-sol",
+            "effort": "deep"
+          },
+          {
+            "role": "plan_scrutiny.sol_seed",
+            "model": "gpt-5.6-sol",
+            "effort": "deep"
+          },
+          {
+            "role": "plan_scrutiny.opener",
+            "model": "gpt-5.5",
+            "effort": "deep"
+          },
+          {
+            "role": "plan_scrutiny.iterate",
+            "model": "gpt-5.6-terra",
+            "effort": "xhigh"
+          },
+          {
+            "role": "plan_scrutiny.confirm",
+            "model": "gpt-5.5",
+            "effort": "deep"
+          },
+          {
+            "role": "prebuild_review.codex",
+            "model": "gpt-5.5",
+            "effort": "deep"
+          },
+          {
+            "role": "build.hard",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "build.checkpoint_confirm",
+            "model": "gpt-5.6-terra",
+            "effort": "xhigh"
+          },
+          {
+            "role": "build.rote",
+            "model": "claude-sonnet-4-6",
+            "effort": "high"
+          },
+          {
+            "role": "p4.r1_swarm",
+            "model": "claude-sonnet-4-6",
+            "effort": "high"
+          },
+          {
+            "role": "p4.iterate",
+            "model": "gpt-5.6-terra",
+            "effort": "xhigh"
+          },
+          {
+            "role": "p4.confirm",
+            "model": "gpt-5.5",
+            "effort": "deep"
+          },
+          {
+            "role": "clippy_fix.worker",
+            "model": "claude-sonnet-4-6",
+            "effort": "high"
+          },
+          {
+            "role": "auto_proxy",
+            "model": "claude-sonnet-4-6",
+            "effort": "xhigh"
+          },
+          {
+            "role": "auto_questionnaire_proxy",
+            "model": "claude-opus-4-8",
+            "effort": "xhigh"
+          },
+          {
+            "role": "consult.codex",
+            "model": "gpt-5.5",
+            "effort": "xhigh"
+          }
+        ],
+        "review": {
+          "spark": "gpt-5.3-codex-spark",
+          "concurrency_cap": 4,
+          "fill_model": "gpt-5.6-terra",
+          "tiers": [
+            {
+              "tier": "low",
+              "codex_model": "gpt-5.6-terra",
+              "profile": "broad",
+              "round_cap": 2
+            },
+            {
+              "tier": "med",
+              "codex_model": "gpt-5.5",
+              "profile": "broad",
+              "round_cap": 3,
+              "claude_lens": "claude-sonnet-4-6",
+              "lens_effort": "high"
+            },
+            {
+              "tier": "high",
+              "codex_model": "gpt-5.5",
+              "profile": "deep",
+              "round_cap": 8,
+              "claude_lens": "claude-opus-4-8",
+              "lens_effort": "xhigh"
+            }
+          ]
+        }
+      },
+      "snapshot_id": "8cb6bd51f5ddee34"
     }
   },
-  "snapshot_id": "a0ba79b39878907c"
+  "snapshot_id": "f370fdbb7d00d468",
+  "published_at": "2026-08-12T23:28:46Z"
 }
