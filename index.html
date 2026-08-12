@@ -39,6 +39,11 @@
   --copper-hi:   #F5B183;
   --copper-glow: rgba(234,139,87,.30);
 
+  /* — model-family hues for the routing loom (theme-aware) — */
+  --fable:  #B58BE6;   /* fable violet   — the MAX co-plan drafter        */
+  --sonnet: #8AA6E6;   /* sonnet weft    — lighter than opus periwinkle   */
+  --sol:    #E7A24A;   /* codex sol gold — deep, vs terra's copper        */
+
   --mono: ui-monospace, "SF Mono", "Cascadia Code", "Fira Code", Menlo, Consolas, monospace;
   --disp: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
@@ -80,6 +85,10 @@
     --copper-deep: #9A501F;
     --copper-hi:   #DA8A4C;
     --copper-glow: rgba(192,105,46,.24);
+
+    --fable:  #7E56C0;
+    --sonnet: #4E6DBE;
+    --sol:    #C07A22;
 
     --sh: 0 10px 26px -22px rgba(24,34,64,.55), 0 1px 0 rgba(255,255,255,.7) inset;
     --sh-lift: 0 16px 30px -20px rgba(24,34,64,.5), 0 0 0 1px color-mix(in srgb, var(--copper) 34%, transparent);
@@ -483,6 +492,57 @@ footer {
   border-radius: var(--r-xs);
 }
 
+/* ============================================================================
+   SIGNATURE — ROUTING as a THREADED LOOM (the pipeline as a flowchart)
+   A run is a warp thread strung L->R through stage stations; each seat is a
+   node on the thread, colour = model family. Drag to pan, wheel to zoom to the
+   cursor. The bed carries faint reed lines so the thread reads as woven warp.
+   ============================================================================ */
+.rflow-wrap {
+  position: relative; height: clamp(360px, 60vh, 560px);
+  border: 1px solid var(--line); border-radius: var(--r); overflow: hidden;
+  background:
+    radial-gradient(120% 130% at 18% -12%, color-mix(in srgb, var(--info) 8%, var(--panel2)) 0, var(--panel2) 62%),
+    repeating-linear-gradient(90deg, transparent 0 47px, color-mix(in srgb, var(--line) 42%, transparent) 47px 48px);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.42); cursor: grab; touch-action: none; user-select: none;
+}
+.rflow-wrap.grabbing { cursor: grabbing; }
+.rflow-svg { width: 100%; height: 100%; display: block; }
+.rflow-svg text { font-family: var(--mono); fill: var(--fg); pointer-events: none; }
+.rf-stage-t { font-size: 11px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
+  fill: var(--copper); font-family: var(--disp); }
+.rf-stage-s { font-size: 9.5px; fill: var(--dim); font-family: var(--disp); }
+.rf-stage-band { fill: color-mix(in srgb, var(--fg) 2.2%, transparent); stroke: var(--line); stroke-dasharray: 2 5; }
+.rf-thread { fill: none; stroke: var(--copper); stroke-opacity: .6; stroke-linecap: round;
+  filter: drop-shadow(0 0 3px color-mix(in srgb, var(--copper) 30%, transparent)); }
+.rf-branch { fill: none; stroke-linecap: round; }
+.rf-loop   { fill: none; stroke: var(--copper); stroke-opacity: .55; stroke-dasharray: 3 4; }
+.rf-loop-t { font-size: 9px; fill: var(--copper); font-family: var(--disp); letter-spacing: .04em; }
+.rf-node { cursor: default; }
+.rf-node .rf-card { fill: color-mix(in srgb, var(--fg) 4%, var(--panel)); stroke: var(--line); stroke-width: 1;
+  transition: stroke .15s ease, filter .15s ease; }
+.rf-node .rf-strip { fill: var(--nc); }
+.rf-node .rf-dot { fill: var(--nc); }
+.rf-role  { font-size: 12px; font-weight: 700; fill: var(--fg); }
+.rf-model { font-size: 10.5px; fill: var(--nc); font-weight: 600; }
+.rf-eff   { font-size: 8.5px; fill: var(--dim); letter-spacing: .08em; text-transform: uppercase; }
+.rf-node:hover .rf-card { stroke: color-mix(in srgb, var(--nc) 75%, var(--line));
+  filter: drop-shadow(0 0 9px color-mix(in srgb, var(--nc) 45%, transparent)); }
+.rflow-legend { position: absolute; left: .55rem; bottom: .5rem; display: flex; gap: .65rem; flex-wrap: wrap;
+  align-items: center; background: color-mix(in srgb, var(--panel) 82%, transparent); backdrop-filter: blur(6px);
+  border: 1px solid var(--line); border-radius: 999px; padding: .26rem .7rem; font-size: 10px; color: var(--dim); }
+.rflow-legend span { display: inline-flex; align-items: center; white-space: nowrap; }
+.rflow-legend i { width: 8px; height: 8px; border-radius: 50%; margin-right: .4ch; }
+.rflow-ctl { position: absolute; right: .55rem; top: .55rem; display: flex; gap: .3rem; }
+.rflow-ctl button { width: 27px; height: 27px; border-radius: var(--r-xs); border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel) 84%, transparent); color: var(--fg); cursor: pointer;
+  font-family: var(--mono); font-size: 14px; line-height: 1; display: grid; place-items: center;
+  transition: border-color .15s ease, color .15s ease; }
+.rflow-ctl button:hover { border-color: var(--copper); color: var(--copper); }
+.rflow-hint { position: absolute; right: .6rem; bottom: .55rem; font-size: 9.5px; color: var(--dim);
+  font-family: var(--disp); letter-spacing: .03em; pointer-events: none; }
+@media (max-width: 560px) { .rflow-hint { display: none; } }
+
 /* ---- narrow phones (~360px) ------------------------------------------------ */
 @media (max-width: 380px) {
   main { padding: .7rem; }
@@ -738,6 +798,128 @@ function renderHistory() {
   view.innerHTML = `<div class="panel"><h3>Merges</h3>${mergesHtml}</div><div class="panel"><h3>PM decisions</h3>${decisionsHtml}</div>`;
 }
 
+// ---- Routing loom : the pipeline as a threaded flowchart -----------------------------------
+const RF_STAGES = [
+  { id:'lead',      t:'Orchestrate',    s:'the lead spins the run',     roles:['lead'] },
+  { id:'discovery', t:'Discovery',      s:'parallel fleet maps ground', roles:['discovery.worker','discovery.breadth','discovery.breadth_sonnet','invariant_map','discovery.web_claude','discovery.web_codex'] },
+  { id:'draft',     t:'Plan · draft',   s:'two blind co-drafters',      roles:['plan','coplan.fable','coplan.codex'] },
+  { id:'scrutiny',  t:'Plan · scrutiny',s:'convergence loop', loop:'re-scrutinise', roles:['plan_scrutiny.sol_seed','plan_scrutiny.opener','plan_scrutiny.iterate','plan_scrutiny.confirm'] },
+  { id:'prebuild',  t:'Pre-build',      s:'plan + skeleton check',      roles:['prebuild_review.codex'] },
+  { id:'build',     t:'Build',          s:'per-step + checkpoints',     roles:['build.hard','build.rote','build.checkpoint_confirm'] },
+  { id:'review',    t:'Phase-4 review', s:'convergent loop', loop:'another round', roles:['p4.r1_swarm','p4.iterate','p4.confirm'] },
+  { id:'finish',    t:'Gate · merge',   s:'clippy floor → PR',          roles:['clippy_fix.worker'] },
+];
+const RF_SUPPORT = { id:'support', t:'On-demand', s:'auto-mode proxies · consult', roles:['auto_proxy','auto_questionnaire_proxy','consult.codex'] };
+let RFLOW = { k:1, x:0, y:0 };
+
+function modelInfo(model) {
+  const m = String(model || '').toLowerCase();
+  if (m.includes('fable'))  return { fam:'fable',  v:'--fable',  short:'fable-5' };
+  if (m.includes('opus'))   return { fam:'claude', v:'--info',   short:'opus-4.8' };
+  if (m.includes('sonnet')) return { fam:'claude', v:'--sonnet', short:'sonnet-4.6' };
+  if (m.includes('sol'))    return { fam:'codex',  v:'--sol',    short:'sol' };
+  if (m.includes('terra'))  return { fam:'codex',  v:'--copper', short:'terra' };
+  if (m.includes('gpt'))    return { fam:'codex',  v:'--copper', short:m.replace('gpt-','') };
+  return { fam:'other', v:'--dim', short:m || '—' };
+}
+const rfShort = (role) => { const r = String(role||'').replace(/^hultra\./,''); const d = r.indexOf('.'); return d < 0 ? r : r.slice(d+1); };
+const rfCurve = (x1,y1,x2,y2) => { const mx=((x1+x2)/2).toFixed(1); return `M${x1.toFixed(1)},${y1.toFixed(1)} C${mx},${y1.toFixed(1)} ${mx},${y2.toFixed(1)} ${x2.toFixed(1)},${y2.toFixed(1)}`; };
+
+function rfNode(x, y, role, mi, effort) {
+  return `<g class="rf-node" style="--nc:var(${mi.v})">
+    <rect class="rf-card" x="${x}" y="${y}" width="168" height="46" rx="9"/>
+    <rect class="rf-strip" x="${x}" y="${y}" width="4" height="46" rx="2"/>
+    <circle class="rf-dot" cx="${x+15}" cy="${y+23}" r="3"/>
+    <text class="rf-role"  x="${x+26}" y="${y+18}">${escp(role)}</text>
+    <text class="rf-model" x="${x+26}" y="${y+33}">${escp(mi.short)}</text>
+    <text class="rf-eff"   x="${x+158}" y="${y+40}" text-anchor="end">${escp(effort||'')}</text>
+    <title>${escp(role)} · ${escp(mi.short)}${effort?` · ${escp(effort)}`:''}</title>
+  </g>`;
+}
+
+function buildLoom(phases) {
+  const byRole = {}; (phases||[]).forEach(p => { byRole[String(p.role||'').replace(/^hultra\./,'')] = p; });
+  const COLW=214, NW=168, NH=46, STEP=60, X0=34, HDR=54;
+  const stages = RF_STAGES.map(st => ({...st, seats: st.roles.map(r=>byRole[r]).filter(Boolean)})).filter(st => st.seats.length);
+  if (!stages.length) return null;
+  const support = { ...RF_SUPPORT, seats: RF_SUPPORT.roles.map(r=>byRole[r]).filter(Boolean) };
+  const maxSeats = Math.max(1, ...stages.map(s=>s.seats.length));
+  const halfH = (maxSeats-1)*STEP/2, spineY = HDR + halfH + 24;
+  const supY = spineY + halfH + 96;
+  stages.forEach((st,i) => { st.cx = X0 + NW/2 + i*COLW; });
+  const last = stages[stages.length-1];
+  const under = [], over = [], nodes = [];
+
+  for (let i=0;i<stages.length-1;i++)
+    under.push(`<path class="rf-thread" stroke-width="3" d="${rfCurve(stages[i].cx+NW/2+16, spineY, stages[i+1].cx-NW/2-16, spineY)}"/>`);
+  under.push(`<path class="rf-thread" stroke-width="3" d="M${(stages[0].cx-NW/2-34).toFixed(1)},${spineY} L${(stages[0].cx-NW/2-16).toFixed(1)},${spineY}"/>`);
+  under.push(`<path class="rf-thread" stroke-width="3" d="M${(last.cx+NW/2+16).toFixed(1)},${spineY} L${(last.cx+NW/2+44).toFixed(1)},${spineY}"/>`);
+  over.push(`<text class="rf-stage-s" x="${(stages[0].cx-NW/2-38).toFixed(1)}" y="${spineY-8}" text-anchor="end">unit ▸</text>`);
+  over.push(`<text class="rf-stage-s" x="${(last.cx+NW/2+50).toFixed(1)}" y="${(spineY+4).toFixed(1)}" style="fill:var(--ok)">merged ✓</text>`);
+
+  stages.forEach(st => {
+    const cx=st.cx, n=st.seats.length, top=spineY-(n-1)*STEP/2;
+    const ex=cx-NW/2-16, xx=cx+NW/2+16;
+    over.push(`<rect class="rf-stage-band" x="${cx-COLW/2+10}" y="${HDR-16}" width="${COLW-20}" height="${(maxSeats-1)*STEP+NH+20}" rx="10"/>`);
+    over.push(`<text class="rf-stage-t" x="${cx}" y="20" text-anchor="middle">${escp(st.t)}</text>`);
+    over.push(`<text class="rf-stage-s" x="${cx}" y="34" text-anchor="middle">${escp(st.s)}</text>`);
+    st.seats.forEach((p,j) => {
+      const y=top+j*STEP, mi=modelInfo(p.model);
+      under.push(`<path class="rf-branch" style="stroke:var(${mi.v})" stroke-opacity=".33" stroke-width="1.5" d="${rfCurve(ex, spineY, cx-NW/2, y)}"/>`);
+      under.push(`<path class="rf-branch" style="stroke:var(${mi.v})" stroke-opacity=".33" stroke-width="1.5" d="${rfCurve(cx+NW/2, y, xx, spineY)}"/>`);
+      nodes.push(rfNode(cx-NW/2, y-NH/2, rfShort(p.role), mi, p.effort));
+    });
+    if (st.loop) {
+      const ty = top - NH/2 - 20;
+      over.push(`<path class="rf-loop" stroke-width="1.6" d="M${xx.toFixed(1)},${spineY} C${(xx+16).toFixed(1)},${ty.toFixed(1)} ${(ex-16).toFixed(1)},${ty.toFixed(1)} ${ex.toFixed(1)},${spineY}"/>`);
+      over.push(`<text class="rf-loop-t" x="${cx}" y="${(ty-4).toFixed(1)}" text-anchor="middle">↻ ${escp(st.loop)}</text>`);
+    }
+  });
+
+  if (support.seats.length) {
+    const cx=stages[0].cx;
+    under.push(`<path class="rf-loop" stroke-opacity=".4" stroke-width="1.6" d="${rfCurve(cx, spineY+NH/2, cx, supY-44)}"/>`);
+    over.push(`<text class="rf-stage-t" x="${cx}" y="${(supY-50).toFixed(1)}" text-anchor="middle">${escp(support.t)}</text>`);
+    over.push(`<text class="rf-stage-s" x="${cx}" y="${(supY-36).toFixed(1)}" text-anchor="middle">${escp(support.s)}</text>`);
+    support.seats.forEach((p,j) => { const x=X0+j*(NW+18); nodes.push(rfNode(x, supY-NH/2, rfShort(p.role), modelInfo(p.model), p.effort)); });
+  }
+
+  const worldW = last.cx + NW/2 + 64, worldH = supY + NH/2 + 20;
+  const svg = `<svg class="rflow-svg" viewBox="0 0 ${worldW.toFixed(0)} ${worldH.toFixed(0)}" preserveAspectRatio="xMidYMid meet">
+    <g class="rf-cam">${under.join('')}${over.join('')}${nodes.join('')}</g></svg>`;
+  return svg;
+}
+
+function rfSvgPt(svg, cx, cy) {
+  const pt = svg.createSVGPoint(); pt.x = cx; pt.y = cy;
+  const m = svg.getScreenCTM(); if (!m) return { x:0, y:0, s:1 };
+  const p = pt.matrixTransform(m.inverse()); return { x:p.x, y:p.y, s:m.a || 1 };
+}
+function rfApply(cam) { cam.setAttribute('transform', `translate(${RFLOW.x.toFixed(2)},${RFLOW.y.toFixed(2)}) scale(${RFLOW.k.toFixed(4)})`); }
+function rfZoomTo(px, py, factor, svg, cam) {
+  const p = rfSvgPt(svg, px, py);
+  const wx = (p.x - RFLOW.x) / RFLOW.k, wy = (p.y - RFLOW.y) / RFLOW.k;
+  const nk = Math.min(4.5, Math.max(0.45, RFLOW.k * factor));
+  RFLOW.k = nk; RFLOW.x = p.x - wx*nk; RFLOW.y = p.y - wy*nk; rfApply(cam);
+}
+function wireLoom() {
+  const wrap = document.querySelector('.rflow-wrap'); if (!wrap) return;
+  const svg = wrap.querySelector('.rflow-svg'), cam = wrap.querySelector('.rf-cam'); if (!svg || !cam) return;
+  rfApply(cam);
+  wrap.addEventListener('wheel', ev => { ev.preventDefault(); rfZoomTo(ev.clientX, ev.clientY, Math.exp(-ev.deltaY*0.0015), svg, cam); }, { passive:false });
+  let drag = null;
+  wrap.addEventListener('pointerdown', ev => { if (ev.button) return; drag = { sx:ev.clientX, sy:ev.clientY, ox:RFLOW.x, oy:RFLOW.y, s:(svg.getScreenCTM()||{a:1}).a || 1 };
+    wrap.classList.add('grabbing'); try { wrap.setPointerCapture(ev.pointerId); } catch(_){} });
+  wrap.addEventListener('pointermove', ev => { if (!drag) return; RFLOW.x = drag.ox + (ev.clientX-drag.sx)/drag.s; RFLOW.y = drag.oy + (ev.clientY-drag.sy)/drag.s; rfApply(cam); });
+  const end = () => { drag = null; wrap.classList.remove('grabbing'); };
+  wrap.addEventListener('pointerup', end); wrap.addEventListener('pointercancel', end); wrap.addEventListener('pointerleave', end);
+  const r = () => svg.getBoundingClientRect();
+  const btn = (z) => wrap.querySelector(`[data-z="${z}"]`);
+  if (btn('in'))  btn('in').onclick  = () => { const b=r(); rfZoomTo(b.left+b.width/2, b.top+b.height/2, 1.3, svg, cam); };
+  if (btn('out')) btn('out').onclick = () => { const b=r(); rfZoomTo(b.left+b.width/2, b.top+b.height/2, 1/1.3, svg, cam); };
+  if (btn('fit')) btn('fit').onclick = () => { RFLOW = { k:1, x:0, y:0 }; rfApply(cam); };
+}
+
 // ---- Models (read-only model switchboard) -------------------------------------------------
 function familyOf(model) {
   const m = String(model || '').toLowerCase();
@@ -779,14 +961,14 @@ function renderModels() {
   if (!rt || !(rt.phases || []).length) {
     routingHtml = `<div class="panel"><h3>Routing map</h3><div class="empty-inline">no routing published in this snapshot — the switchboard appears once the routing resolver reports in.</div></div>`;
   } else {
-    const phaseRows = (rt.phases || []).map(p => {
-      const fam = familyOf(p.model);
-      const role = String(p.role || '').replace(/^hultra\./, '');
-      return `<tr><td>${escp(role)}</td>
-        <td class="mono"><span class="fdot ${fam}"></span><span class="fam-t ${fam}">${escp(p.model)}</span></td>
-        <td class="mono eff">${escp(p.effort || '—')}</td></tr>`;
-    }).join('');
-    const phasesTable = `<div class="tscroll"><table><tr><th>phase</th><th>model</th><th>effort</th></tr>${phaseRows}</table></div>`;
+    const loomSvg = buildLoom(rt.phases);
+    const loomHtml = loomSvg
+      ? `<div class="rflow-wrap">${loomSvg}
+          <div class="rflow-ctl"><button data-z="in" title="zoom in" aria-label="zoom in">+</button><button data-z="out" title="zoom out" aria-label="zoom out">−</button><button data-z="fit" title="reset view" aria-label="reset view">⤢</button></div>
+          <div class="rflow-legend"><span><i style="background:var(--info)"></i>opus</span><span><i style="background:var(--sonnet)"></i>sonnet</span><span><i style="background:var(--fable)"></i>fable</span><span><i style="background:var(--copper)"></i>terra · 5.5</span><span><i style="background:var(--sol)"></i>sol</span></div>
+          <div class="rflow-hint">drag to pan · scroll to zoom</div>
+        </div>`
+      : '<div class="empty-inline">no phases to map</div>';
 
     const rev = rt.review || {};
     const tiers = rev.tiers || [];
@@ -808,11 +990,12 @@ function renderModels() {
       <span>spark pool <b class="mono">${escp(rev.spark || '—')}</b></span>
     </div>`;
     const note = `<div class="note">resolver: ${escp(rt.source || 'unknown')} — reflects the routing resolver's defaults; the latest hultra.md seat tweaks (fable co-plan, terra confirms, sol seats) may not appear here.</div>`;
-    routingHtml = `<div class="panel"><h3>Routing · phases</h3>${phasesTable}</div>
+    routingHtml = `<div class="panel"><h3>Routing · loom <span class="dim" style="text-transform:none;letter-spacing:0;font-weight:400">— the pipeline, threaded</span></h3>${loomHtml}</div>
       <div class="panel"><h3>Routing · review posture</h3>${tiersTable}${revStats}${note}</div>`;
   }
 
   view.innerHTML = `<div class="panel"><h3>Burn / headroom</h3>${burnHtml}</div>${routingHtml}`;
+  if (SNAP.routing && (SNAP.routing.phases || []).length) wireLoom();
 }
 
 // ---- tab machinery + polling -----------------------------------------------------------------
