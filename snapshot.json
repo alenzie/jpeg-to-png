@@ -425,14 +425,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "W4B",
-            "kind": "needs-owner",
-            "raised_at": null
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -905,7 +899,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 61,
+          "ctx_pct": 63,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1587,7 +1581,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 22,
+          "ctx_pct": 24,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1602,7 +1596,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "XC5",
@@ -1827,19 +1821,13 @@
           ]
         }
       },
-      "snapshot_id": "45cd6e13a13b48aa"
+      "snapshot_id": "56fcc8aaa82822f8"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "W4B",
-            "kind": "needs-owner",
-            "raised_at": 1786606354
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -1872,7 +1860,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 61,
+          "ctx_pct": 63,
           "last_commit_at": 1786608649,
           "head": "35df9140",
           "subfence": {
@@ -1956,17 +1944,42 @@
         {
           "id": "W4B",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 22,
-          "last_commit_at": 1786606303,
-          "head": "1ba100b9",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 24,
+          "last_commit_at": 1786609497,
+          "head": "08785b93",
           "subfence": {
             "done": 14,
             "total": 14
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "Sonnet-high swarm ×4",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 1
+            },
+            {
+              "round": 1,
+              "seats": "codex terraxhigh breadth ×1 whole-diff",
+              "must": 2,
+              "should": 3,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "08785b93",
+              "at": 1786609497
+            },
+            {
+              "sha": "276ab4f6",
+              "at": 1786609226
+            },
             {
               "sha": "1ba100b9",
               "at": 1786606303
@@ -1978,14 +1991,6 @@
             {
               "sha": "150a7f0f",
               "at": 1786605155
-            },
-            {
-              "sha": "2a61412d",
-              "at": 1786605047
-            },
-            {
-              "sha": "a0040798",
-              "at": 1786605025
             }
           ],
           "fences": {
@@ -1994,7 +1999,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "W4b",
@@ -2277,19 +2282,13 @@
           ]
         }
       },
-      "snapshot_id": "bd44c94d8a3ccb38"
+      "snapshot_id": "cedcc5ea83b7bd59"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "W4B",
-            "kind": "needs-owner",
-            "raised_at": null
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2762,7 +2761,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 61,
+          "ctx_pct": 63,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3444,7 +3443,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 22,
+          "ctx_pct": 24,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3459,7 +3458,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "XC5",
@@ -3709,9 +3708,9 @@
           ]
         }
       },
-      "snapshot_id": "9534ee9494e2fc3f"
+      "snapshot_id": "42fff4d0484f1a84"
     }
   },
-  "snapshot_id": "2977498912eb58ef",
-  "published_at": "2026-08-13T08:20:20Z"
+  "snapshot_id": "d24d1229d199ca1a",
+  "published_at": "2026-08-13T08:25:32Z"
 }
