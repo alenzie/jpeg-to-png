@@ -90,10 +90,10 @@
       {
         "target": 100,
         "label": "A",
-        "projected": 163,
+        "projected": 162,
         "used": 64,
-        "at": 1786619141,
-        "reset": "Aug 17, 11am (America/Los_Angeles)",
+        "at": 1786619526,
+        "reset": "Aug 17, 10:59am (America/Los_Angeles)",
         "spark": [
           [
             1786078800,
@@ -915,7 +915,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 7,
+          "ctx_pct": null,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1531,7 +1531,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 47,
+          "ctx_pct": 13,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1837,7 +1837,7 @@
           ]
         }
       },
-      "snapshot_id": "0a1c8ab3b7140405"
+      "snapshot_id": "ed90f8695e827353"
     },
     "outbound": {
       "schema": 1,
@@ -1872,62 +1872,80 @@
       },
       "units": [
         {
-          "id": "INT7-RT-RENEWAL-RECOVERY",
-          "status": "done",
-          "stage": "done",
-          "stage_i": 7,
-          "ctx_pct": 7,
-          "last_commit_at": 1786622336,
-          "head": "a0d6196d",
-          "subfence": {
-            "done": 8,
-            "total": 8
-          },
-          "review_rounds": [],
-          "commits": [
-            {
-              "sha": "a0d6196d",
-              "at": 1786622336
-            },
-            {
-              "sha": "5896f7d9",
-              "at": 1786622211
-            },
-            {
-              "sha": "5bf777e7",
-              "at": 1786621080
-            },
-            {
-              "sha": "90752510",
-              "at": 1786619653
-            },
-            {
-              "sha": "be08eef0",
-              "at": 1786619558
-            }
-          ],
-          "fences": {
-            "plan": true,
-            "synth": true,
-            "build": true,
-            "review": true
-          },
-          "gate_open": false
-        },
-        {
           "id": "W3-DP5",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 47,
-          "last_commit_at": 1786622800,
-          "head": "c821e9fe",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 13,
+          "last_commit_at": 1786622918,
+          "head": "35f33923",
           "subfence": {
             "done": 9,
             "total": 9
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "gpt-5.5deepxhigh fresh open",
+              "must": 5,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "gpt-5.6-terraxhigh iterate",
+              "must": 3,
+              "should": 2,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terraxhigh iterate",
+              "must": 3,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "gpt-5.5deepxhigh CONFIRM",
+              "must": 2,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "gpt-5.6-terraxhigh iterate",
+              "must": 4,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 6,
+              "seats": "gpt-5.5deepxhigh CONFIRM",
+              "must": 2,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 7,
+              "seats": "gpt-5.5deepxhigh CONFIRM",
+              "must": 0,
+              "should": 0,
+              "could": 1,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "35f33923",
+              "at": 1786622918
+            },
             {
               "sha": "c821e9fe",
               "at": 1786622800
@@ -1943,16 +1961,12 @@
             {
               "sha": "a7296606",
               "at": 1786621678
-            },
-            {
-              "sha": "1457fb26",
-              "at": 1786621400
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
-            "build": false,
+            "build": true,
             "review": false
           },
           "gate_open": false
@@ -2222,7 +2236,7 @@
           ]
         }
       },
-      "snapshot_id": "63517d249c05d026"
+      "snapshot_id": "70ba1c56c4007511"
     },
     "scriptgen": {
       "schema": 1,
@@ -2701,7 +2715,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 7,
+          "ctx_pct": null,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3317,7 +3331,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 47,
+          "ctx_pct": 13,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3648,9 +3662,9 @@
           ]
         }
       },
-      "snapshot_id": "adeb738267133cbc"
+      "snapshot_id": "64254daea52a382a"
     }
   },
-  "snapshot_id": "9239f37fcd63433c",
-  "published_at": "2026-08-13T12:08:28Z"
+  "snapshot_id": "69e5ff9c3b981cdd",
+  "published_at": "2026-08-13T12:13:36Z"
 }
