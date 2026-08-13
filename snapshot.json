@@ -90,10 +90,10 @@
       {
         "target": 100,
         "label": "A",
-        "projected": 161,
-        "used": 63,
-        "at": 1786618159,
-        "reset": "Aug 17, 10:59am (America/Los_Angeles)",
+        "projected": 163,
+        "used": 64,
+        "at": 1786619141,
+        "reset": "Aug 17, 11am (America/Los_Angeles)",
         "spark": [
           [
             1786078800,
@@ -274,6 +274,10 @@
           [
             1786615200,
             159
+          ],
+          [
+            1786618800,
+            163
           ]
         ]
       },
@@ -911,7 +915,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 41,
+          "ctx_pct": 7,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1527,7 +1531,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 46,
+          "ctx_pct": 47,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1833,7 +1837,7 @@
           ]
         }
       },
-      "snapshot_id": "0fb9be515d7f854c"
+      "snapshot_id": "0a1c8ab3b7140405"
     },
     "outbound": {
       "schema": 1,
@@ -1845,7 +1849,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1786621010
+        "last_pass_at": 1786622804
       },
       "runstate": {
         "auto": false,
@@ -1869,82 +1873,17 @@
       "units": [
         {
           "id": "INT7-RT-RENEWAL-RECOVERY",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 41,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 7,
           "last_commit_at": 1786622336,
           "head": "a0d6196d",
           "subfence": {
             "done": 8,
             "total": 8
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "codex gpt-5.6-terraxhigh",
-              "must": 2,
-              "should": 3,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "codex gpt-5.6-terraxhigh",
-              "must": 2,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "codex gpt-5.6-terraxhigh",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 1
-            },
-            {
-              "round": 4,
-              "seats": "codex gpt-5.6-terraxhigh",
-              "must": 2,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "codex gpt-5.6-terraxhigh confirm",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 1
-            },
-            {
-              "round": 1,
-              "seats": "Sonnet-high swarm ×4",
-              "must": 0,
-              "should": 0,
-              "could": 1,
-              "nit": 2
-            },
-            {
-              "round": 1,
-              "seats": "codex gpt-5.6-soldeepxhigh breadth",
-              "must": 0,
-              "should": 7,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "codex gpt-5.6-terradeepxhigh",
-              "must": 0,
-              "should": 3,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "a0d6196d",
@@ -1971,7 +1910,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         },
@@ -1980,15 +1919,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 46,
-          "last_commit_at": 1786621997,
-          "head": "8609933b",
+          "ctx_pct": 47,
+          "last_commit_at": 1786622800,
+          "head": "c821e9fe",
           "subfence": {
             "done": 9,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "c821e9fe",
+              "at": 1786622800
+            },
             {
               "sha": "8609933b",
               "at": 1786621997
@@ -2004,10 +1947,6 @@
             {
               "sha": "1457fb26",
               "at": 1786621400
-            },
-            {
-              "sha": "2f6aeecf",
-              "at": 1786621004
             }
           ],
           "fences": {
@@ -2027,6 +1966,7 @@
         "INT7-PUBLIC-API-OAUTH-CC",
         "INT7-PUBLIC-API-SDK",
         "INT7-RT-NOTION",
+        "INT7-RT-PAT-REAUTH-RACE",
         "W5",
         "CONSENT-ARTIFACT",
         "D15-REVISED",
@@ -2042,6 +1982,12 @@
         "W7"
       ],
       "merge_feed": [
+        {
+          "pr": 270,
+          "unit": "INT7-RT-RENEWAL-RECOVERY",
+          "merged_at": 1786622633,
+          "sha": "bc9cb9e2"
+        },
         {
           "pr": 269,
           "unit": "W4B",
@@ -2065,12 +2011,6 @@
           "unit": "decisions-MSG7-DNC-MANUA",
           "merged_at": 1786435750,
           "sha": "f5d467d3"
-        },
-        {
-          "pr": 263,
-          "unit": "REPO-WIDE-SOL-REVIEW",
-          "merged_at": 1786418700,
-          "sha": "7d163cf3"
         }
       ],
       "decisions": [
@@ -2282,7 +2222,7 @@
           ]
         }
       },
-      "snapshot_id": "cc9097b0189cbd7f"
+      "snapshot_id": "63517d249c05d026"
     },
     "scriptgen": {
       "schema": 1,
@@ -2761,7 +2701,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 41,
+          "ctx_pct": 7,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3377,7 +3317,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 46,
+          "ctx_pct": 47,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3708,9 +3648,9 @@
           ]
         }
       },
-      "snapshot_id": "9fa9fd478c9edef2"
+      "snapshot_id": "adeb738267133cbc"
     }
   },
-  "snapshot_id": "cc35e06fef55d343",
-  "published_at": "2026-08-13T12:03:22Z"
+  "snapshot_id": "9239f37fcd63433c",
+  "published_at": "2026-08-13T12:08:28Z"
 }
