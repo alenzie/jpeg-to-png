@@ -400,9 +400,9 @@
       {
         "target": 100,
         "label": "B",
-        "projected": 96,
-        "used": 91,
-        "at": 1786736583,
+        "projected": 97,
+        "used": 92,
+        "at": 1786737095,
         "reset": "Aug 14, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1057,7 +1057,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 30,
+          "ctx_pct": 9,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1783,7 +1783,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 39,
+          "ctx_pct": 43,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2029,7 +2029,7 @@
           ]
         }
       },
-      "snapshot_id": "10aeb88a68c06a8b"
+      "snapshot_id": "bb2577188c66c31c"
     },
     "outbound": {
       "schema": 1,
@@ -2041,7 +2041,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1786738811
+        "last_pass_at": 1786740611
       },
       "runstate": {
         "auto": false,
@@ -2065,58 +2065,17 @@
       "units": [
         {
           "id": "INT7-RT-PAT-REAUTH-RACE",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 30,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 8,
           "last_commit_at": 1786740366,
           "head": "634a6aaf",
           "subfence": {
             "done": 3,
             "total": 3
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-5.5xhigh fresh-eyes opener  sol-seed",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 2
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.5xhigh fresh confirm",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 1
-            },
-            {
-              "round": 1,
-              "seats": "codex gpt-5.6-solxhigh breadth whole dif",
-              "must": 0,
-              "should": 3,
-              "could": 3,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "codex gpt-5.6-terraxhigh whole live diff",
-              "must": 0,
-              "should": 4,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "codex gpt-5.5deep confirm whole live dif",
-              "must": 0,
-              "should": 5,
-              "could": 1,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "634a6aaf",
@@ -2143,7 +2102,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         },
@@ -2152,7 +2111,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 39,
+          "ctx_pct": 43,
           "last_commit_at": 1786740075,
           "head": "699f4acb",
           "subfence": {
@@ -2215,6 +2174,7 @@
         "INT7-MCP-REMOTE",
         "INT7-PUBLIC-API-OAUTH-CC",
         "INT7-PUBLIC-API-SDK-PY",
+        "INT7-RT-CRM-CUSTODY-HARDENING",
         "INT7-RT-NOTION",
         "W5",
         "CONSENT-ARTIFACT",
@@ -2230,6 +2190,12 @@
         "W7"
       ],
       "merge_feed": [
+        {
+          "pr": 273,
+          "unit": "INT7-RT-PAT-REAUTH-RACE",
+          "merged_at": 1786740552,
+          "sha": "43d22009"
+        },
         {
           "pr": 272,
           "unit": "INT7-PUBLIC-API-SDK",
@@ -2253,12 +2219,6 @@
           "unit": "W4B",
           "merged_at": 1786610410,
           "sha": "30e4d9df"
-        },
-        {
-          "pr": 267,
-          "unit": "COMP",
-          "merged_at": 1786493843,
-          "sha": "799c0197"
         }
       ],
       "decisions": [
@@ -2470,7 +2430,7 @@
           ]
         }
       },
-      "snapshot_id": "63a536237c1d0cf2"
+      "snapshot_id": "db2d888bd55e52d4"
     },
     "scriptgen": {
       "schema": 1,
@@ -2971,7 +2931,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 30,
+          "ctx_pct": 9,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3697,7 +3657,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 40,
+          "ctx_pct": 43,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3962,9 +3922,9 @@
           ]
         }
       },
-      "snapshot_id": "e8615b817d05a55a"
+      "snapshot_id": "44a13abc5cc5a8aa"
     }
   },
-  "snapshot_id": "89f02edaa5e18a77",
-  "published_at": "2026-08-14T20:49:20Z"
+  "snapshot_id": "42bd7e11950550ed",
+  "published_at": "2026-08-14T20:54:30Z"
 }
