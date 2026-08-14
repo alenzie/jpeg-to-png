@@ -517,8 +517,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-RT-PAT-REAUTH-RACE",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -1013,7 +1019,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 35,
+          "ctx_pct": 37,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1028,7 +1034,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-RT-RENEWAL-RECOVERY",
@@ -1739,7 +1745,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 55,
+          "ctx_pct": 56,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1995,13 +2001,19 @@
           ]
         }
       },
-      "snapshot_id": "712bf9ec82086a13"
+      "snapshot_id": "2d2478cebc017db6"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-RT-PAT-REAUTH-RACE",
+            "kind": "needs-owner",
+            "raised_at": 1786711571
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2032,17 +2044,21 @@
         {
           "id": "INT7-RT-PAT-REAUTH-RACE",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 35,
-          "last_commit_at": 1786710824,
-          "head": "4ce41b00",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 37,
+          "last_commit_at": 1786711572,
+          "head": "0e13f684",
           "subfence": {
             "done": 3,
             "total": 3
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "0e13f684",
+              "at": 1786711572
+            },
             {
               "sha": "4ce41b00",
               "at": 1786710824
@@ -2058,10 +2074,6 @@
             {
               "sha": "f953f7fe",
               "at": 1786709972
-            },
-            {
-              "sha": "9978163d",
-              "at": 1786709653
             }
           ],
           "fences": {
@@ -2070,22 +2082,30 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W4C",
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 55,
-          "last_commit_at": 1786710797,
-          "head": "b3afeb27",
+          "ctx_pct": 56,
+          "last_commit_at": 1786711527,
+          "head": "3d7cb53b",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "3d7cb53b",
+              "at": 1786711527
+            },
+            {
+              "sha": "99979e1d",
+              "at": 1786711499
+            },
             {
               "sha": "b3afeb27",
               "at": 1786710797
@@ -2097,14 +2117,6 @@
             {
               "sha": "51c6a8e1",
               "at": 1786709970
-            },
-            {
-              "sha": "b09bff8a",
-              "at": 1786709928
-            },
-            {
-              "sha": "e4a938e0",
-              "at": 1786709400
             }
           ],
           "fences": {
@@ -2395,13 +2407,19 @@
           ]
         }
       },
-      "snapshot_id": "061d3c99fa3d8f28"
+      "snapshot_id": "ca7539b08b075044"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-RT-PAT-REAUTH-RACE",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2896,7 +2914,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 35,
+          "ctx_pct": 37,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2911,7 +2929,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-RT-RENEWAL-RECOVERY",
@@ -3622,7 +3640,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 55,
+          "ctx_pct": 56,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3887,9 +3905,9 @@
           ]
         }
       },
-      "snapshot_id": "169ef658478bab1a"
+      "snapshot_id": "a521d82581de4d4e"
     }
   },
-  "snapshot_id": "f332c913c34412ae",
-  "published_at": "2026-08-14T12:44:48Z"
+  "snapshot_id": "7eb10d0f901393f3",
+  "published_at": "2026-08-14T12:49:57Z"
 }
