@@ -126,9 +126,9 @@
       {
         "target": 100,
         "label": "A",
-        "projected": 174,
-        "used": 93,
-        "at": 1786703912,
+        "projected": 176,
+        "used": 94,
+        "at": 1786704295,
         "reset": "Aug 17, 10:59am (America/Los_Angeles)",
         "spark": [
           [
@@ -947,7 +947,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 10,
+          "ctx_pct": 8,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1013,7 +1013,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 14,
+          "ctx_pct": 16,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1739,7 +1739,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 37,
+          "ctx_pct": 43,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1995,7 +1995,7 @@
           ]
         }
       },
-      "snapshot_id": "6c2200db8fbeb64d"
+      "snapshot_id": "c657cb7680fba5f5"
     },
     "outbound": {
       "schema": 1,
@@ -2031,82 +2031,17 @@
       "units": [
         {
           "id": "INT7-PUBLIC-API-SDK",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 10,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 8,
           "last_commit_at": 1786707462,
           "head": "d6dc4ad9",
           "subfence": {
             "done": 14,
             "total": 15
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "Sonnet-high swarm ×4 + codex-solxhigh br",
-              "must": 3,
-              "should": 10,
-              "could": 2,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "codex-terraxhigh iterating R1 fix diff",
-              "must": 3,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "codex-terraxhigh CUMULATIVE R1+R2 whole",
-              "must": 2,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "codex-terraxhigh CUMULATIVE R1+R3 whole",
-              "must": 1,
-              "should": 4,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.5deepxhigh CONFIRM",
-              "must": 0,
-              "should": 4,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "gpt-5.5deepxhigh CONFIRM fresh",
-              "must": 0,
-              "should": 5,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 7,
-              "seats": "gpt-5.5deepxhigh CONFIRM fresh",
-              "must": 0,
-              "should": 7,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 8,
-              "seats": "gpt-5.5deepxhigh CONFIRM targeted R7-dif",
-              "must": 0,
-              "should": 1,
-              "could": 1,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "d6dc4ad9",
@@ -2133,7 +2068,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         },
@@ -2142,15 +2077,19 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 14,
-          "last_commit_at": 1786707423,
-          "head": "6b7bb6a2",
+          "ctx_pct": 16,
+          "last_commit_at": 1786707929,
+          "head": "abde9ce9",
           "subfence": {
             "done": 0,
             "total": 3
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "abde9ce9",
+              "at": 1786707929
+            },
             {
               "sha": "6b7bb6a2",
               "at": 1786707423
@@ -2166,10 +2105,6 @@
             {
               "sha": "18259e80",
               "at": 1786706156
-            },
-            {
-              "sha": "5dba8ab6",
-              "at": 1786705142
             }
           ],
           "fences": {
@@ -2185,18 +2120,39 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 37,
-          "last_commit_at": null,
-          "head": null,
+          "ctx_pct": 43,
+          "last_commit_at": 1786707866,
+          "head": "bd5a5013",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
-          "commits": [],
+          "commits": [
+            {
+              "sha": "bd5a5013",
+              "at": 1786707866
+            },
+            {
+              "sha": "428d2a1f",
+              "at": 1786706311
+            },
+            {
+              "sha": "48cf134b",
+              "at": 1786706054
+            },
+            {
+              "sha": "0028fd0f",
+              "at": 1786705956
+            },
+            {
+              "sha": "5bec77d6",
+              "at": 1786705223
+            }
+          ],
           "fences": {
             "plan": false,
-            "synth": false,
+            "synth": true,
             "build": false,
             "review": false
           },
@@ -2226,6 +2182,7 @@
         "INT7-MARKETPLACE",
         "INT7-MCP-REMOTE",
         "INT7-PUBLIC-API-OAUTH-CC",
+        "INT7-PUBLIC-API-SDK-PY",
         "INT7-RT-NOTION",
         "W5",
         "CONSENT-ARTIFACT",
@@ -2481,7 +2438,7 @@
           ]
         }
       },
-      "snapshot_id": "d4f68daab997e9f9"
+      "snapshot_id": "3144f5b7c6f30d79"
     },
     "scriptgen": {
       "schema": 1,
@@ -2916,7 +2873,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 10,
+          "ctx_pct": 8,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2982,7 +2939,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 14,
+          "ctx_pct": 16,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3708,7 +3665,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 37,
+          "ctx_pct": 43,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3973,9 +3930,9 @@
           ]
         }
       },
-      "snapshot_id": "50ff2b4dcfc06b46"
+      "snapshot_id": "39c4c3563fdf3c55"
     }
   },
-  "snapshot_id": "aaee9aff9b9ea8e2",
-  "published_at": "2026-08-14T11:42:56Z"
+  "snapshot_id": "a5a0a1aeba449689",
+  "published_at": "2026-08-14T11:48:07Z"
 }
