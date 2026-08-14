@@ -557,14 +557,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "INT7-RT-PAT-REAUTH-RACE",
-            "kind": "needs-owner",
-            "raised_at": null
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -1059,7 +1053,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 15,
+          "ctx_pct": 18,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1074,7 +1068,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "INT7-RT-RENEWAL-RECOVERY",
@@ -1785,7 +1779,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": null,
+          "ctx_pct": 11,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2031,19 +2025,13 @@
           ]
         }
       },
-      "snapshot_id": "68795f4de64ee37c"
+      "snapshot_id": "a73c5e6823e57dc0"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "INT7-RT-PAT-REAUTH-RACE",
-            "kind": "needs-owner",
-            "raised_at": 1786711571
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2074,17 +2062,21 @@
         {
           "id": "INT7-RT-PAT-REAUTH-RACE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 15,
-          "last_commit_at": 1786711572,
-          "head": "0e13f684",
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 18,
+          "last_commit_at": 1786736721,
+          "head": "a7d3b835",
           "subfence": {
             "done": 3,
             "total": 3
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "a7d3b835",
+              "at": 1786736721
+            },
             {
               "sha": "0e13f684",
               "at": 1786711572
@@ -2100,10 +2092,6 @@
             {
               "sha": "ba401df7",
               "at": 1786710151
-            },
-            {
-              "sha": "f953f7fe",
-              "at": 1786709972
             }
           ],
           "fences": {
@@ -2112,18 +2100,18 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "W4C",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": null,
+          "ctx_pct": 11,
           "last_commit_at": 1786736474,
           "head": "09854115",
           "subfence": {
-            "done": 4,
+            "done": 5,
             "total": 16
           },
           "review_rounds": [],
@@ -2437,19 +2425,13 @@
           ]
         }
       },
-      "snapshot_id": "0327eee022a32063"
+      "snapshot_id": "ff0a3a3a8106537b"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "INT7-RT-PAT-REAUTH-RACE",
-            "kind": "needs-owner",
-            "raised_at": null
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2944,7 +2926,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 15,
+          "ctx_pct": 18,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2959,7 +2941,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "INT7-RT-RENEWAL-RECOVERY",
@@ -3670,7 +3652,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": null,
+          "ctx_pct": 11,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3935,9 +3917,9 @@
           ]
         }
       },
-      "snapshot_id": "acac8d839c842417"
+      "snapshot_id": "fcbb83c361c300cf"
     }
   },
-  "snapshot_id": "31c11f73caabb381",
-  "published_at": "2026-08-14T19:42:18Z"
+  "snapshot_id": "24840795540031e2",
+  "published_at": "2026-08-14T19:47:27Z"
 }
