@@ -601,8 +601,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "W4C",
+            "kind": "escalate",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -1823,7 +1829,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 68,
+          "ctx_pct": 69,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1838,7 +1844,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "XC5",
@@ -2069,13 +2075,19 @@
           ]
         }
       },
-      "snapshot_id": "2257da2e9b69a0d5"
+      "snapshot_id": "7263f4af921b3b02"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "W4C",
+            "kind": "escalate",
+            "raised_at": 1786770917
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2106,17 +2118,21 @@
         {
           "id": "W4C",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 68,
-          "last_commit_at": 1786770828,
-          "head": "739f3f52",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 69,
+          "last_commit_at": 1786770915,
+          "head": "d0d6ffe1",
           "subfence": {
             "done": 15,
             "total": 16
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "d0d6ffe1",
+              "at": 1786770915
+            },
             {
               "sha": "739f3f52",
               "at": 1786770828
@@ -2132,10 +2148,6 @@
             {
               "sha": "9ebda64f",
               "at": 1786770116
-            },
-            {
-              "sha": "5cd2ff48",
-              "at": 1786769456
             }
           ],
           "fences": {
@@ -2144,7 +2156,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W4c",
@@ -2427,13 +2439,19 @@
           ]
         }
       },
-      "snapshot_id": "721a5a5ff739bda0"
+      "snapshot_id": "8e36b2001f61d276"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "W4C",
+            "kind": "escalate",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3654,7 +3672,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 68,
+          "ctx_pct": 69,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3669,7 +3687,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "XC5",
@@ -3919,9 +3937,9 @@
           ]
         }
       },
-      "snapshot_id": "bcb8e734db2f67a7"
+      "snapshot_id": "a2f2054d58034d2e"
     }
   },
-  "snapshot_id": "e54e14112d262a11",
-  "published_at": "2026-08-15T05:14:53Z"
+  "snapshot_id": "f83cdbb50bae7ea0",
+  "published_at": "2026-08-15T05:20:05Z"
 }
