@@ -657,8 +657,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CONSENT-ARTIFACT",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -845,7 +851,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 51,
+          "ctx_pct": 52,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -860,7 +866,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "CONTACTS-FOLLOW",
@@ -2213,13 +2219,19 @@
           ]
         }
       },
-      "snapshot_id": "e587273c6b5f930a"
+      "snapshot_id": "b20a54116ca43c01"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CONSENT-ARTIFACT",
+            "kind": "needs-owner",
+            "raised_at": 1786822601
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2250,17 +2262,21 @@
         {
           "id": "CONSENT-ARTIFACT",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 51,
-          "last_commit_at": 1786821887,
-          "head": "12d976dc",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 52,
+          "last_commit_at": 1786822558,
+          "head": "cde2f8bc",
           "subfence": {
             "done": 6,
             "total": 12
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "cde2f8bc",
+              "at": 1786822558
+            },
             {
               "sha": "12d976dc",
               "at": 1786821887
@@ -2276,10 +2292,6 @@
             {
               "sha": "5db66bca",
               "at": 1786818529
-            },
-            {
-              "sha": "13a948d4",
-              "at": 1786817915
             }
           ],
           "fences": {
@@ -2288,7 +2300,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -2554,13 +2566,19 @@
           ]
         }
       },
-      "snapshot_id": "86fbf2745f07a52f"
+      "snapshot_id": "77457661981d049e"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CONSENT-ARTIFACT",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2747,7 +2765,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 51,
+          "ctx_pct": 52,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2762,7 +2780,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "CONTACTS-FOLLOW",
@@ -4117,9 +4135,9 @@
           ]
         }
       },
-      "snapshot_id": "9bea0d054ee1ef2e"
+      "snapshot_id": "61ea09b708869ea1"
     }
   },
-  "snapshot_id": "d14e99e663140916",
-  "published_at": "2026-08-15T19:27:33Z"
+  "snapshot_id": "ed24ed8f955f8e3f",
+  "published_at": "2026-08-15T19:37:50Z"
 }
