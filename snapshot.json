@@ -609,14 +609,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "W4C",
-            "kind": "escalate",
-            "raised_at": null
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -1837,7 +1831,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 9,
+          "ctx_pct": 11,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1852,7 +1846,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "XC5",
@@ -1897,11 +1891,27 @@
             "review": false
           },
           "gate_open": false
+        },
+        {
+          "id": "FMDT-FORMAT",
+          "status": "building",
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": null,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {},
+          "gate_open": false
         }
       ],
       "eligible": [
         "ED-SOUND-SPIKE",
-        "FMDT-FORMAT",
         "LLM-PROXY"
       ],
       "merge_feed": [
@@ -2083,19 +2093,13 @@
           ]
         }
       },
-      "snapshot_id": "b40e58393746c10c"
+      "snapshot_id": "ae4a25f21a14183c"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "W4C",
-            "kind": "escalate",
-            "raised_at": 1786773357
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2126,17 +2130,25 @@
         {
           "id": "W4C",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 9,
-          "last_commit_at": 1786770915,
-          "head": "d0d6ffe1",
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 11,
+          "last_commit_at": 1786774589,
+          "head": "eb3d50e9",
           "subfence": {
             "done": 15,
             "total": 16
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "eb3d50e9",
+              "at": 1786774589
+            },
+            {
+              "sha": "93f36873",
+              "at": 1786774381
+            },
             {
               "sha": "d0d6ffe1",
               "at": 1786770915
@@ -2148,14 +2160,6 @@
             {
               "sha": "c1e06ea3",
               "at": 1786770525
-            },
-            {
-              "sha": "01a00934",
-              "at": 1786770239
-            },
-            {
-              "sha": "9ebda64f",
-              "at": 1786770116
             }
           ],
           "fences": {
@@ -2164,23 +2168,6 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
-        },
-        {
-          "id": "W4c",
-          "status": "building",
-          "stage": "building",
-          "stage_i": 3,
-          "ctx_pct": null,
-          "last_commit_at": null,
-          "head": null,
-          "subfence": {
-            "done": 0,
-            "total": null
-          },
-          "review_rounds": [],
-          "commits": [],
-          "fences": {},
           "gate_open": false
         }
       ],
@@ -2208,6 +2195,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 274,
+          "unit": "W4C",
+          "merged_at": 1786774381,
+          "sha": "93f36873"
+        },
+        {
           "pr": 273,
           "unit": "INT7-RT-PAT-REAUTH-RACE",
           "merged_at": 1786740552,
@@ -2230,12 +2223,6 @@
           "unit": "INT7-RT-RENEWAL-RECOVERY",
           "merged_at": 1786622633,
           "sha": "bc9cb9e2"
-        },
-        {
-          "pr": 269,
-          "unit": "W4B",
-          "merged_at": 1786610410,
-          "sha": "30e4d9df"
         }
       ],
       "decisions": [
@@ -2447,19 +2434,13 @@
           ]
         }
       },
-      "snapshot_id": "0d189ff0cd4ffc4c"
+      "snapshot_id": "2a40e968e4b975c5"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "W4C",
-            "kind": "escalate",
-            "raised_at": null
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3680,7 +3661,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 9,
+          "ctx_pct": 11,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3695,7 +3676,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "XC5",
@@ -3945,9 +3926,9 @@
           ]
         }
       },
-      "snapshot_id": "86f683774a985eff"
+      "snapshot_id": "4b17f9253d2ddf9b"
     }
   },
-  "snapshot_id": "9533ba413c1fcfb5",
-  "published_at": "2026-08-15T06:11:28Z"
+  "snapshot_id": "d45f88bc03c38e8b",
+  "published_at": "2026-08-15T06:16:37Z"
 }
