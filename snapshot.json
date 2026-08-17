@@ -1955,7 +1955,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 68,
+          "ctx_pct": 5,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2344,7 +2344,7 @@
           ]
         }
       },
-      "snapshot_id": "2f457f63a783ef6a"
+      "snapshot_id": "544dc1f7c5c80405"
     },
     "outbound": {
       "schema": 1,
@@ -2383,7 +2383,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 68,
+          "ctx_pct": 5,
           "last_commit_at": 1786939621,
           "head": "d22c0bb1",
           "subfence": {
@@ -2685,7 +2685,7 @@
           ]
         }
       },
-      "snapshot_id": "5d47ff61dec9b1f2"
+      "snapshot_id": "2fbd4e9a6e86e7fd"
     },
     "scriptgen": {
       "schema": 1,
@@ -3824,7 +3824,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 68,
+          "ctx_pct": 5,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4226,9 +4226,43 @@
           ]
         }
       },
-      "snapshot_id": "13865faef96202cc"
+      "snapshot_id": "e66a8e1c7cadce38"
     }
   },
-  "snapshot_id": "440e2a9fa46ed7a8",
-  "published_at": "2026-08-17T04:10:25Z"
+  "pm": {
+    "attendance": {
+      "mode": "attended",
+      "fleets": {},
+      "updated": "2026-08-17T02:30:00Z",
+      "by": "init (unified-PM build)",
+      "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode."
+    },
+    "pm_session": {
+      "lock": "",
+      "fresh": false
+    },
+    "sterling_up": true,
+    "fleets": [
+      {
+        "fleet": "outbound",
+        "repl_up": false,
+        "bridge_up": true,
+        "monitor_last_pass_min": 27
+      },
+      {
+        "fleet": "flowmaster",
+        "repl_up": true,
+        "bridge_up": true,
+        "monitor_last_pass_min": 229
+      },
+      {
+        "fleet": "scriptgen",
+        "repl_up": true,
+        "bridge_up": true,
+        "monitor_last_pass_min": 1785
+      }
+    ]
+  },
+  "snapshot_id": "4d1b864e4aaa0142",
+  "published_at": "2026-08-17T04:11:23Z"
 }
