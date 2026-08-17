@@ -657,6 +657,20 @@ function renderProjStrip() {
     return `<button class="projbtn${n === PROJ ? ' active' : ''}" data-proj="${n}">` +
       `${n}<span class="projct">${c.live}▶${c.gates ? ' ⚠' : ''}</span></button>`;
   }).join('');
+  // unified-PM status chips (owner 2026-08-17): attendance · PM session · sterling · per-fleet repl/bridge/monitor
+  if (RAW.pm) {
+    const pm = RAW.pm, att = (pm.attendance && pm.attendance.mode) || 'unknown';
+    const chip = (txt, ok) => `<span class="projct" style="margin-left:6px;padding:2px 7px;border-radius:9px;background:${ok ? 'rgba(46,160,67,.25)' : 'rgba(248,81,73,.3)'}">${txt}</span>`;
+    let html = chip(`watch: ${att}`, att === 'attended')
+             + chip(pm.pm_session && pm.pm_session.fresh ? 'PM on' : 'PM off', !!(pm.pm_session && pm.pm_session.fresh))
+             + chip('sterling', !!pm.sterling_up);
+    (pm.fleets || []).forEach(f => {
+      const ok = f.repl_up && f.bridge_up;
+      const mon = (f.monitor_last_pass_min >= 0 && f.monitor_last_pass_min < 45) ? '·mon' : '';
+      html += chip(`${f.fleet.slice(0,2)} ${f.repl_up ? 'repl' : 'REPL✗'}${f.bridge_up ? '' : ' br✗'}${mon}`, ok);
+    });
+    el.innerHTML += `<span style="display:inline-flex;align-items:center;flex-wrap:wrap">${html}</span>`;
+  }
   el.querySelectorAll('[data-proj]').forEach(b => b.onclick = () => {
     PROJ = b.dataset.proj; localStorage.setItem('spindle.proj', PROJ);
     currentUnit = null; deriveSnap(); render();
