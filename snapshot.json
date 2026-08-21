@@ -1072,8 +1072,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-RT-NOTION",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -1590,7 +1596,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 22,
+          "ctx_pct": 24,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1605,7 +1611,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-RT-PAT-REAUTH-RACE",
@@ -2621,13 +2627,19 @@
           ]
         }
       },
-      "snapshot_id": "e0193eda8253cadc"
+      "snapshot_id": "ca4b439b1c5b96fa"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-RT-NOTION",
+            "kind": "needs-owner",
+            "raised_at": 1787307636
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2658,9 +2670,9 @@
         {
           "id": "INT7-RT-NOTION",
           "status": "not-started",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 22,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 24,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2675,7 +2687,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -2941,13 +2953,19 @@
           ]
         }
       },
-      "snapshot_id": "174938c8b8304594"
+      "snapshot_id": "46e5036299d9f23b"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-RT-NOTION",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3464,7 +3482,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 22,
+          "ctx_pct": 24,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3479,7 +3497,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-RT-PAT-REAUTH-RACE",
@@ -4498,7 +4516,7 @@
           ]
         }
       },
-      "snapshot_id": "9b841646bcdea3d1"
+      "snapshot_id": "aa9787025fd1812a"
     }
   },
   "pm": {
@@ -4519,22 +4537,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2124
+        "monitor_last_pass_min": 2129
       }
     ]
   },
-  "snapshot_id": "1ae7132f33e3104a",
-  "published_at": "2026-08-21T10:18:41Z"
+  "snapshot_id": "825a89ade0302a75",
+  "published_at": "2026-08-21T10:23:52Z"
 }
