@@ -272,6 +272,12 @@ svg.tchart { width: 100%; height: auto; max-width: 540px; display: block; margin
 .tleg { display: inline-flex; align-items: center; gap: .3rem; font-weight: 600; white-space: nowrap; }
 .tleg > i { width: 9px; height: 9px; border-radius: 2px; display: inline-block; flex: 0 0 auto; }
 .tleg b { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.usagectl { display: flex; flex-wrap: wrap; gap: .4rem .5rem; align-items: center; margin: .1rem 0 .6rem; font-size: var(--fs-meta); }
+.usagectl button { background: var(--panel2); border: 1px solid var(--line); color: var(--fg); border-radius: 8px; padding: .25rem .6rem; cursor: pointer; font: inherit; }
+.usagectl button.active { border-color: var(--copper); background: color-mix(in srgb, var(--copper) 12%, transparent); }
+.usagectl input[type=date] { background: var(--panel2); border: 1px solid var(--line); color: var(--fg); border-radius: 8px; padding: .18rem .4rem; font: inherit; color-scheme: dark; }
+.usagectl .sp { flex: 1 1 8px; }
+svg.uchart { width: 100%; height: auto; max-width: 920px; display: block; margin: .2rem 0 .3rem; }
 
 /* ============================================================================
    SIGNATURE — the stage bar as THREAD WOUND ON A SPINDLE
@@ -626,6 +632,7 @@ footer {
     <button data-tab="inbox">Inbox <span id="inbox-badge" class="badge" hidden></span></button>
     <button data-tab="unit">Unit</button>
     <button data-tab="history">History</button>
+    <button data-tab="usage">Usage</button>
   </nav>
   <div id="proj-strip" class="projstrip" hidden></div>
   <nav hidden>
@@ -947,6 +954,78 @@ function renderUnit() {
 }
 
 // ---- History ------------------------------------------------------------------------------
+let USAGE = (() => { try { return JSON.parse(localStorage.getItem('spindle.usage')) || {}; } catch (e) { return {}; } })();
+if (!USAGE.span) USAGE.span = 7 * 86400;
+if (!USAGE.mode) USAGE.mode = 'span';
+function saveUsage() { try { localStorage.setItem('spindle.usage', JSON.stringify(USAGE)); } catch (e) {} }
+function usageWindow() {
+  const now = Date.now() / 1000;
+  if (USAGE.mode === 'custom' && USAGE.min && USAGE.max) return [USAGE.min, USAGE.max];
+  const end = USAGE.end || now;
+  return [end - USAGE.span, Math.min(end, now)];
+}
+function usageChart(series, t0, t1) {
+  const M = { l: 27, r: 11, t: 10, b: 26 }, W = 920, Ht = 300;
+  const PW = W - M.l - M.r, PH = Ht - M.t - M.b, span = (t1 - t0) || 1;
+  const X = t => M.l + (t - t0) / span * PW;
+  const Y = u => M.t + PH - Math.max(0, Math.min(100, u)) / 100 * PH;
+  let grid = '';
+  [0, 25, 50, 75, 100].forEach(v => {
+    grid += `<line x1="${M.l}" y1="${Y(v)}" x2="${W - M.r}" y2="${Y(v)}" stroke="var(--line)" stroke-opacity=".5"/>`;
+    grid += `<text x="${M.l - 4}" y="${Y(v) + 2.6}" fill="var(--dim)" font-size="8" text-anchor="end">${v}</text>`;
+  });
+  const ticks = 5; let xlab = '';
+  for (let i = 0; i <= ticks; i++) {
+    const t = t0 + span * i / ticks, x = X(t);
+    grid += `<line x1="${x.toFixed(1)}" y1="${M.t}" x2="${x.toFixed(1)}" y2="${M.t + PH}" stroke="var(--line)" stroke-opacity=".28"/>`;
+    xlab += `<text x="${x.toFixed(1)}" y="${Ht - 9}" fill="var(--dim)" font-size="8" text-anchor="middle">${new Date(t * 1000).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}</text>`;
+  }
+  let paths = '';
+  series.forEach(sr => {
+    const pts = (sr.pts || []).filter(p => p[0] >= t0 && p[0] <= t1);
+    if (!pts.length) return;
+    if (pts.length > 1) {
+      const d = pts.map((p, i) => (i ? 'L' : 'M') + X(p[0]).toFixed(1) + ',' + Y(p[1]).toFixed(1)).join(' ');
+      paths += `<path d="${d}" fill="none" stroke="${sr.color}" stroke-width="1.4" stroke-opacity=".92" stroke-linejoin="round"/>`;
+    }
+    const last = pts[pts.length - 1];
+    paths += `<circle cx="${X(last[0]).toFixed(1)}" cy="${Y(last[1]).toFixed(1)}" r="2.4" fill="${sr.color}"/>`;
+  });
+  const leg = series.map(sr => `<span class="tleg"><i style="background:${sr.color}"></i>${escp(sr.name)}</span>`).join('');
+  return `<svg class="uchart" viewBox="0 0 ${W} ${Ht}" role="img" aria-label="usage over time">${grid}${paths}${xlab}</svg><div class="tlegendrow">${leg}</div>`;
+}
+function renderUsage() {
+  if (!SNAP) { view.innerHTML = emptyState('waiting for snapshot…'); return; }
+  const H = (SNAP.throttling || {}).history || {};
+  const series = [];
+  if (H.codex) series.push({ name: 'codex', color: '#3FB8C4', pts: H.codex });
+  if (H.claude) Object.keys(H.claude).sort().forEach((k, i) => series.push({ name: 'claude ' + k, color: ['#EA8B57', '#F0B07E', '#B85C22'][i] || '#EA8B57', pts: H.claude[k] }));
+  if (H.glm) series.push({ name: 'glm', color: '#A78BFA', pts: H.glm });
+  const hasData = series.some(s => (s.pts || []).length);
+  const [t0, t1] = usageWindow();
+  const dISO = t => new Date(t * 1000).toISOString().slice(0, 10);
+  const mb = (lbl, sp) => `<button data-span="${sp}" class="${(USAGE.mode === 'span' && !USAGE.end && USAGE.span === sp) ? 'active' : ''}">${lbl}</button>`;
+  const ctl = `<div class="usagectl">${mb('24h', 86400)}${mb('7d', 7 * 86400)}${mb('30d', 30 * 86400)}` +
+    `<button data-nav="back" title="earlier">←</button><button data-nav="fwd" title="later">→</button>` +
+    `<span class="sp"></span><span class="dim">from</span><input type="date" data-d="min" value="${dISO(t0)}">` +
+    `<span class="dim">to</span><input type="date" data-d="max" value="${dISO(t1)}"></div>`;
+  const chart = hasData ? usageChart(series, t0, t1) : '<div class="empty-inline">no usage history in this snapshot</div>';
+  view.innerHTML = `<div class="panel"><h3>Usage over time <span class="dim" style="font-weight:400">· used % · weekly resets show as drops</span></h3>${ctl}${chart}</div>`;
+  view.querySelectorAll('[data-span]').forEach(b => b.onclick = () => { USAGE.span = +b.dataset.span; USAGE.end = null; USAGE.mode = 'span'; saveUsage(); render(); });
+  view.querySelectorAll('[data-nav]').forEach(b => b.onclick = () => {
+    const w = usageWindow(), sp = w[1] - w[0], now = Date.now() / 1000;
+    let end = USAGE.end || (USAGE.mode === 'custom' ? w[1] : now);
+    if (USAGE.mode === 'custom') { USAGE.mode = 'span'; USAGE.span = sp; }
+    end += (b.dataset.nav === 'fwd' ? sp : -sp);
+    USAGE.end = Math.min(end, now); saveUsage(); render();
+  });
+  view.querySelectorAll('[data-d]').forEach(inp => inp.onchange = () => {
+    const w = usageWindow(); let mn = w[0], mx = w[1];
+    const v = Date.parse(inp.value + 'T00:00:00Z') / 1000;
+    if (!isNaN(v)) { if (inp.dataset.d === 'min') mn = v; else mx = v + 86399; }
+    USAGE.mode = 'custom'; USAGE.min = Math.min(mn, mx); USAGE.max = Math.max(mn, mx); saveUsage(); render();
+  });
+}
 function renderHistory() {
   if (!SNAP) { view.innerHTML = emptyState('waiting for snapshot…'); return; }
   const merges = SNAP.merge_feed || [];
@@ -1246,7 +1325,7 @@ function renderModels() {
 }
 
 // ---- tab machinery + polling -----------------------------------------------------------------
-const renderers = { pm: renderPM, fleet: renderFleet, models: renderModels, inbox: renderInbox, unit: renderUnit, history: renderHistory };
+const renderers = { pm: renderPM, fleet: renderFleet, models: renderModels, inbox: renderInbox, unit: renderUnit, history: renderHistory, usage: renderUsage };
 function setTab(t) {
   tab = t;
   document.querySelectorAll('nav button').forEach(b => b.classList.toggle('active', b.dataset.tab === t));
@@ -1279,7 +1358,7 @@ async function poll() {
 }
 poll();
 setInterval(poll, 10000);           // stay fresh — the publisher writes every ~5 min, we just poll faster
-setInterval(() => { if (SNAP) render(); }, 15000); // re-tick "ago" ages between polls
+setInterval(() => { const a = document.activeElement; if (SNAP && !(a && view.contains(a) && /INPUT|SELECT/.test(a.tagName))) render(); }, 15000); // re-tick "ago" ages between polls
 let rzT; window.addEventListener('resize', () => { clearTimeout(rzT); rzT = setTimeout(() => { RFLOW.inited = false; if (SNAP && tab === 'models') render(); }, 200); });
 </script>
 </body>
