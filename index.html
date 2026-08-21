@@ -43,6 +43,7 @@
   --fable:  #B58BE6;   /* fable violet   — the MAX co-plan drafter        */
   --sonnet: #8AA6E6;   /* sonnet weft    — lighter than opus periwinkle   */
   --sol:    #E7A24A;   /* codex sol gold — deep, vs terra's copper        */
+  --glm:    #9B8CFF;   /* glm violet     — distinct from codex/claude/sol  */
 
   --mono: ui-monospace, "SF Mono", "Cascadia Code", "Fira Code", Menlo, Consolas, monospace;
   --disp: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -89,6 +90,7 @@
     --fable:  #7E56C0;
     --sonnet: #4E6DBE;
     --sol:    #C07A22;
+    --glm:    #6E5AE0;
 
     --sh: 0 10px 26px -22px rgba(24,34,64,.55), 0 1px 0 rgba(255,255,255,.7) inset;
     --sh-lift: 0 16px 30px -20px rgba(24,34,64,.5), 0 0 0 1px color-mix(in srgb, var(--copper) 34%, transparent);
@@ -184,6 +186,7 @@ h3 {
   background: var(--copper); box-shadow: 0 0 6px var(--copper-glow);
 }
 .dim { color: var(--dim); }
+.mult { color: var(--sol); font-weight: 700; font-family: var(--mono); font-size: .92em; }
 .fg  { color: var(--fg); }
 .good { color: var(--ok); }
 .bad  { color: var(--bad); }
@@ -432,6 +435,7 @@ footer {
 }
 .mcard.codex  { --tc: var(--copper); }
 .mcard.claude { --tc: var(--info); }
+.mcard.glm    { --tc: var(--glm); }
 .mcard::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--tc); }
 .mcard-h { display: flex; justify-content: space-between; align-items: center; gap: .5rem; margin-bottom: .35rem; }
 .mname { font-family: var(--mono); font-weight: 700; font-size: var(--fs-lead); text-transform: uppercase; letter-spacing: .03em; }
@@ -449,9 +453,10 @@ footer {
 }
 .fam.codex  { color: var(--copper); border-color: color-mix(in srgb, var(--copper) 45%, var(--line)); background: color-mix(in srgb, var(--copper) 13%, transparent); }
 .fam.claude { color: var(--info);   border-color: color-mix(in srgb, var(--info) 45%, var(--line));   background: color-mix(in srgb, var(--info) 13%, transparent); }
+.fam.glm    { color: var(--glm);    border-color: color-mix(in srgb, var(--glm) 45%, var(--line));    background: color-mix(in srgb, var(--glm) 13%, transparent); }
 .fdot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: .55ch; vertical-align: middle; flex: none; }
-.fdot.codex { background: var(--copper); } .fdot.claude { background: var(--info); } .fdot.other { background: var(--dim); }
-.fam-t.codex { color: var(--copper); } .fam-t.claude { color: var(--info); } .fam-t.other { color: var(--fg); }
+.fdot.codex { background: var(--copper); } .fdot.claude { background: var(--info); } .fdot.glm { background: var(--glm); } .fdot.other { background: var(--dim); }
+.fam-t.codex { color: var(--copper); } .fam-t.claude { color: var(--info); } .fam-t.glm { color: var(--glm); } .fam-t.other { color: var(--fg); }
 .mono { font-family: var(--mono); }
 .tscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .tscroll table { min-width: max-content; }
@@ -726,7 +731,7 @@ function gaugeCard(g) {
   const cls = g.target ? (proj > g.target * 1.1 ? 'hot' : proj < g.target * 0.85 ? 'cold' : 'ok-c') : '';
   const pct = g.target ? Math.min(100, proj / g.target / 1.5 * 100) : 0;
   return `<div class="tgauge">
-    <div class="tg-lbl"><span>${escp(g.name)} <span class="dim">(target ${g.target ?? '—'})</span></span>
+    <div class="tg-lbl"><span>${escp(g.name)}${g.mult ? ` <span class="mult">(${escp(g.mult)})</span>` : ''} <span class="dim">(target ${g.target ?? '—'})</span></span>
     <span class="tg-num ${cls}">proj ${proj}%${g.used != null ? ` · used ${g.used}%` : ''}</span></div>
     <div class="bar"><i style="width:${pct}%"></i></div>
     ${spark(g.spark, g.target)}
@@ -766,6 +771,7 @@ function renderPM() {
   const th = s.throttling || {};
   if (th.codex) gauges.push({ name: 'codex', ...th.codex });
   (th.claude || []).forEach(c => gauges.push({ name: 'claude ' + (c.label || ''), ...c }));
+  if (th.glm) gauges.push({ name: 'glm', ...th.glm });
   const gaugesHtml = gauges.length ? gauges.map(gaugeCard).join('') : '<div class="empty-inline">no throttling readings in this snapshot</div>';
 
   const eligibleHtml = (s.eligible || []).length
@@ -1112,7 +1118,7 @@ function burnCard(g) {
     : room < 0 ? `<span class="hot">over target by ${-room}</span>`
     : `<span class="${cls}">headroom ${room}</span>`;
   return `<div class="mcard ${g.fam}">
-    <div class="mcard-h"><span class="mname">${escp(g.name)}</span><span class="fam ${g.fam}">${escp(g.fam)}</span></div>
+    <div class="mcard-h"><span class="mname">${escp(g.name)}${g.mult ? ` <span class="mult">(${escp(g.mult)})</span>` : ''}</span><span class="fam ${g.fam}">${escp(g.fam)}</span></div>
     <div class="mbig ${cls}">${proj}%<span class="munit">proj @ reset</span></div>
     <div class="bar" title="projected vs target"><i style="width:${fill}%"></i></div>
     <div class="mstats"><span>used <b>${g.used != null ? g.used + '%' : '—'}</b></span><span>target <b>${target ?? '—'}</b></span>${roomHtml}</div>
@@ -1126,6 +1132,7 @@ function renderModels() {
   const accts = [];
   if (th.codex) accts.push({ name: 'codex', fam: 'codex', ...th.codex });
   (th.claude || []).forEach(c => accts.push({ name: 'claude ' + (c.label || ''), fam: 'claude', ...c }));
+  if (th.glm) accts.push({ name: 'glm', fam: 'glm', ...th.glm });
   const burnHtml = accts.length
     ? `<div class="mcards">${accts.map(burnCard).join('')}</div>
        <div class="note">Headroom is target minus projected-at-reset — more headroom means more room before the weekly limit resets. Each card reads its own target from the snapshot.</div>`
