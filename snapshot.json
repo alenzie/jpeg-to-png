@@ -2206,7 +2206,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 39,
+          "ctx_pct": 41,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2606,7 +2606,7 @@
           ]
         }
       },
-      "snapshot_id": "27e9244dea4a17e4"
+      "snapshot_id": "7a09e9f961a34f2e"
     },
     "outbound": {
       "schema": 1,
@@ -2642,50 +2642,17 @@
       "units": [
         {
           "id": "TEXT-IN-CAPTURE",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 39,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 41,
           "last_commit_at": 1787278855,
           "head": "1d3c9e26",
           "subfence": {
             "done": 15,
             "total": 15
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-5.5deepxhigh fresh opener",
-              "must": 6,
-              "should": 2,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-terraxhigh iterating",
-              "must": 10,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terraxhigh iterating",
-              "must": 9,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "codex gpt-5.5xhighdeep FRESH confirm pos",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "1d3c9e26",
@@ -2712,7 +2679,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -2741,6 +2708,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 276,
+          "unit": "TEXT-IN-CAPTURE",
+          "merged_at": 1787279199,
+          "sha": "11421b0f"
+        },
+        {
           "pr": 275,
           "unit": "CONSENT-ARTIFACT",
           "merged_at": 1786856643,
@@ -2763,12 +2736,6 @@
           "unit": "INT7-PUBLIC-API-SDK",
           "merged_at": 1786707753,
           "sha": "378087b1"
-        },
-        {
-          "pr": 271,
-          "unit": "W3-DP5",
-          "merged_at": 1786634343,
-          "sha": "dc406bc7"
         }
       ],
       "decisions": [
@@ -2980,7 +2947,7 @@
           ]
         }
       },
-      "snapshot_id": "21a6d93d8f869efb"
+      "snapshot_id": "9c205d881ad4a016"
     },
     "scriptgen": {
       "schema": 1,
@@ -4119,7 +4086,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 39,
+          "ctx_pct": 41,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4521,7 +4488,7 @@
           ]
         }
       },
-      "snapshot_id": "ddd4551317134e92"
+      "snapshot_id": "df4aab0052fe4d36"
     }
   },
   "pm": {
@@ -4542,22 +4509,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 24
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 24
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 1651
+        "monitor_last_pass_min": 1656
       }
     ]
   },
-  "snapshot_id": "bb55e74f0f2f1a93",
-  "published_at": "2026-08-21T02:25:53Z"
+  "snapshot_id": "079331e6139a0825",
+  "published_at": "2026-08-21T02:31:04Z"
 }
