@@ -266,6 +266,12 @@ h3 {
 svg.spark { width: 100%; height: 32px; display: block; margin-top: .3rem;
             filter: drop-shadow(0 1px 3px color-mix(in srgb, var(--copper) 22%, transparent)); }
 svg.spark path { stroke-linecap: round; stroke-linejoin: round; }
+svg.tchart { width: 100%; height: auto; max-width: 540px; display: block; margin: .3rem auto .55rem; }
+.tlegendrow { display: flex; flex-wrap: wrap; gap: .3rem .9rem; justify-content: center;
+              font-size: var(--fs-meta); }
+.tleg { display: inline-flex; align-items: center; gap: .3rem; font-weight: 600; white-space: nowrap; }
+.tleg > i { width: 9px; height: 9px; border-radius: 2px; display: inline-block; flex: 0 0 auto; }
+.tleg b { font-family: var(--mono); font-variant-numeric: tabular-nums; }
 
 /* ============================================================================
    SIGNATURE — the stage bar as THREAD WOUND ON A SPINDLE
@@ -726,6 +732,54 @@ function spark(pts, target) {
 }
 
 // ---- PM tab -----------------------------------------------------------------------------------
+function shortReset(r) { return (r || '').split('(')[0].replace(':00', '').trim(); }
+function throttlingChart(th) {
+  th = th || {};
+  const series = [];
+  if (th.codex) series.push(Object.assign({ name: 'codex', color: '#3FB8C4' }, th.codex));
+  (th.claude || []).forEach((c, i) => series.push(Object.assign(
+    { name: 'claude ' + (c.label || ''), color: ['#EA8B57', '#F0B07E', '#B85C22'][i] || '#EA8B57' }, c)));
+  if (th.glm) series.push(Object.assign({ name: 'glm', color: '#A78BFA' }, th.glm));
+  if (!series.some(s => (s.trail || []).length)) return null;   // no trail data -> caller falls back to gauges
+
+  const M = { l: 24, r: 9, t: 9, b: 22 }, W = 260, H = 210;
+  const PW = W - M.l - M.r, PH = H - M.t - M.b;
+  const X = e => M.l + Math.max(0, Math.min(100, e)) / 100 * PW;
+  const Y = u => M.t + PH - Math.max(0, Math.min(105, u)) / 105 * PH;
+  let grid = '';
+  [0, 25, 50, 75, 100].forEach(v => {
+    grid += `<line x1="${X(0)}" y1="${Y(v)}" x2="${X(100)}" y2="${Y(v)}" stroke="var(--line)" stroke-opacity=".55"/>`;
+    grid += `<line x1="${X(v)}" y1="${Y(0)}" x2="${X(v)}" y2="${Y(105)}" stroke="var(--line)" stroke-opacity=".55"/>`;
+  });
+  const diag = `<line x1="${X(0)}" y1="${Y(0)}" x2="${X(100)}" y2="${Y(100)}" stroke="var(--dim)" stroke-dasharray="3 3" stroke-opacity=".75"/>`;
+  let lbl = '';
+  [0, 50, 100].forEach(v => {
+    lbl += `<text x="${X(v)}" y="${Y(0) + 12}" fill="var(--dim)" font-size="7.5" text-anchor="middle">${v}</text>`;
+    lbl += `<text x="${X(0) - 4}" y="${Y(v) + 2.6}" fill="var(--dim)" font-size="7.5" text-anchor="end">${v}</text>`;
+  });
+  lbl += `<text x="${X(50)}" y="${H - 3}" fill="var(--dim)" font-size="8" text-anchor="middle">elapsed %</text>`;
+  lbl += `<text x="9" y="${Y(52)}" fill="var(--dim)" font-size="8" text-anchor="middle" transform="rotate(-90 9 ${Y(52)})">used %</text>`;
+  lbl += `<text x="${X(78)}" y="${Y(88)}" fill="var(--dim)" font-size="6.5" opacity=".8" transform="rotate(-33 ${X(78)} ${Y(88)})">ideal</text>`;
+  let marks = '';
+  series.forEach(sr => {
+    const t = sr.trail || [];
+    if (!t.length) return;
+    if (t.length > 1) {
+      const d = t.map((p, i) => (i ? 'L' : 'M') + X(p[0]).toFixed(1) + ',' + Y(p[1]).toFixed(1)).join(' ');
+      marks += `<path d="${d}" fill="none" stroke="${sr.color}" stroke-width="1" stroke-opacity=".4" stroke-linejoin="round"/>`;
+    }
+    const now = t[t.length - 1];
+    marks += `<circle cx="${X(now[0]).toFixed(1)}" cy="${Y(now[1]).toFixed(1)}" r="2.7" fill="${sr.color}">` +
+      `<title>${escp(sr.name)} — used ${sr.used}% at elapsed ${now[0]}% (proj ${sr.projected}%)</title></circle>`;
+  });
+  const svg = `<svg class="tchart" viewBox="0 0 ${W} ${H}" role="img" aria-label="throttling: used vs elapsed">` +
+    grid + diag + marks + lbl + `</svg>`;
+  const cls = s => (s.projected > 110 ? 'hot' : (s.projected < 85 ? 'cold' : 'ok-c'));
+  const leg = series.map(s => `<span class="tleg"><i style="background:${s.color}"></i>${escp(s.name)}` +
+    `${s.mult ? ` <span class="dim">${escp(s.mult)}</span>` : ''} <b class="${cls(s)}">${s.used}%</b>` +
+    `<span class="dim">·proj ${s.projected}%${s.reset ? ` ·↻ ${escp(shortReset(s.reset))}` : ''}</span></span>`).join('');
+  return svg + `<div class="tlegendrow">${leg}</div>`;
+}
 function gaugeCard(g) {
   const proj = g.projected ?? 0;
   const cls = g.target ? (proj > g.target * 1.1 ? 'hot' : proj < g.target * 0.85 ? 'cold' : 'ok-c') : '';
@@ -767,12 +821,15 @@ function renderPM() {
   const daemonsHtml = Object.entries(s.daemons || {}).map(([k, v]) =>
     `<span class="chip"><span class="dot ${v.up ? 'up' : ''}"></span>${escp(k)}</span>`).join('') || '<span class="dim">none reported</span>';
 
-  const gauges = [];
   const th = s.throttling || {};
-  if (th.codex) gauges.push({ name: 'codex', ...th.codex });
-  (th.claude || []).forEach(c => gauges.push({ name: 'claude ' + (c.label || ''), ...c }));
-  if (th.glm) gauges.push({ name: 'glm', ...th.glm });
-  const gaugesHtml = gauges.length ? gauges.map(gaugeCard).join('') : '<div class="empty-inline">no throttling readings in this snapshot</div>';
+  let throttlingHtml = throttlingChart(th);
+  if (!throttlingHtml) {
+    const gauges = [];
+    if (th.codex) gauges.push({ name: 'codex', ...th.codex });
+    (th.claude || []).forEach(c => gauges.push({ name: 'claude ' + (c.label || ''), ...c }));
+    if (th.glm) gauges.push({ name: 'glm', ...th.glm });
+    throttlingHtml = gauges.length ? gauges.map(gaugeCard).join('') : '<div class="empty-inline">no throttling readings in this snapshot</div>';
+  }
 
   const eligibleHtml = (s.eligible || []).length
     ? `<div class="chips">${s.eligible.map(u => `<span class="chip">${escp(u)}</span>`).join('')}</div>`
@@ -788,7 +845,7 @@ function renderPM() {
     ${gateHtml}
     <div class="panel"><h3>Runstate</h3>${runstateHtml}</div>
     <div class="panel"><h3>PM</h3>${pmHtml}<div class="chips" style="margin-top:.5rem">${daemonsHtml}</div></div>
-    <div class="panel"><h3>Throttling</h3>${gaugesHtml}</div>
+    <div class="panel"><h3>Throttling</h3>${throttlingHtml}</div>
     <div class="panel"><h3>Eligible to dispatch</h3>${eligibleHtml}<div class="note">read-only — dispatch via desktop switchboard / Discord</div></div>
     <div class="panel"><h3>Recent commands</h3>${cmdLogHtml}</div>
   `;
