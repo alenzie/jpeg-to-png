@@ -3,9 +3,9 @@
   "throttling": {
     "codex": {
       "target": 100,
-      "projected": 48,
-      "used": 12,
-      "at": 1787348811,
+      "projected": 52,
+      "used": 13,
+      "at": 1787349041,
       "reset": "22:00 on 26 Aug",
       "spark": [
         [
@@ -455,9 +455,9 @@
         "target": 100,
         "label": "A",
         "mult": "20x",
-        "projected": 132,
-        "used": 79,
-        "at": 1787348811,
+        "projected": 133,
+        "used": 80,
+        "at": 1787349041,
         "reset": "Aug 24, 11am (America/Los_Angeles)",
         "spark": [
           [
@@ -1598,7 +1598,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 7,
+          "ctx_pct": 22,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2280,7 +2280,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 66,
+          "ctx_pct": 15,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2651,7 +2651,7 @@
           ]
         }
       },
-      "snapshot_id": "f87263f89ff1ac17"
+      "snapshot_id": "11d892f91ecd5df4"
     },
     "outbound": {
       "schema": 1,
@@ -2690,7 +2690,7 @@
           "status": "not-started",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 6,
+          "ctx_pct": 20,
           "last_commit_at": 1787352377,
           "head": "58e56c8c",
           "subfence": {
@@ -2731,17 +2731,25 @@
         {
           "id": "W3-EMP",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 66,
-          "last_commit_at": 1787351838,
-          "head": "af0bfb5b",
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": 15,
+          "last_commit_at": 1787352551,
+          "head": "b5460ea4",
           "subfence": {
             "done": 0,
-            "total": null
+            "total": 12
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "b5460ea4",
+              "at": 1787352551
+            },
+            {
+              "sha": "91fd695d",
+              "at": 1787352527
+            },
             {
               "sha": "af0bfb5b",
               "at": 1787351838
@@ -2753,18 +2761,10 @@
             {
               "sha": "a1d88780",
               "at": 1787351103
-            },
-            {
-              "sha": "c9882a7d",
-              "at": 1787351082
-            },
-            {
-              "sha": "a0e7d957",
-              "at": 1787350452
             }
           ],
           "fences": {
-            "plan": false,
+            "plan": true,
             "synth": true,
             "build": false,
             "review": false
@@ -3034,7 +3034,7 @@
           ]
         }
       },
-      "snapshot_id": "72665343b196357f"
+      "snapshot_id": "4a7a613537a77252"
     },
     "scriptgen": {
       "schema": 1,
@@ -3557,7 +3557,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 9,
+          "ctx_pct": 22,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4239,7 +4239,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 66,
+          "ctx_pct": 15,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4613,7 +4613,7 @@
           ]
         }
       },
-      "snapshot_id": "530a815cc9e3a7f8"
+      "snapshot_id": "b06cda5e35816a87"
     }
   },
   "pm": {
@@ -4634,22 +4634,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       }
     ]
   },
-  "snapshot_id": "2cac89da17dad471",
-  "published_at": "2026-08-21T22:48:03Z"
+  "snapshot_id": "89515b0f8f56bd4b",
+  "published_at": "2026-08-21T22:53:15Z"
 }
