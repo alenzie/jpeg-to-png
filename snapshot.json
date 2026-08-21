@@ -681,7 +681,7 @@
         "spark": [
           [
             1786734000,
-            96
+            97
           ],
           [
             1786737600,
@@ -1076,8 +1076,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "W3-EMP",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -1594,7 +1600,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 26,
+          "ctx_pct": 27,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2276,7 +2282,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 25,
+          "ctx_pct": 27,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2291,7 +2297,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W3A",
@@ -2647,7 +2653,7 @@
           ]
         }
       },
-      "snapshot_id": "67b7fae8e6a4ebb2"
+      "snapshot_id": "3bba4bead6a0e20b"
     },
     "outbound": {
       "schema": 1,
@@ -2655,9 +2661,9 @@
         "active": true,
         "units": [
           {
-            "id": "INT7-RT-NOTION",
+            "id": "W3-EMP",
             "kind": "needs-owner",
-            "raised_at": 1787307636
+            "raised_at": 1787341377
           }
         ]
       },
@@ -2690,31 +2696,9 @@
         {
           "id": "INT7-RT-NOTION",
           "status": "not-started",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 26,
-          "last_commit_at": null,
-          "head": null,
-          "subfence": {
-            "done": 0,
-            "total": null
-          },
-          "review_rounds": [],
-          "commits": [],
-          "fences": {
-            "plan": false,
-            "synth": false,
-            "build": false,
-            "review": false
-          },
-          "gate_open": true
-        },
-        {
-          "id": "W3-EMP",
-          "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 25,
+          "ctx_pct": 27,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2730,6 +2714,28 @@
             "review": false
           },
           "gate_open": false
+        },
+        {
+          "id": "W3-EMP",
+          "status": "building",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 27,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -2994,13 +3000,19 @@
           ]
         }
       },
-      "snapshot_id": "f7de9c87c15ea2a7"
+      "snapshot_id": "abf2963e1fc4b0fd"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "W3-EMP",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3517,7 +3529,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 26,
+          "ctx_pct": 27,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4199,7 +4211,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 25,
+          "ctx_pct": 27,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4214,7 +4226,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W3A",
@@ -4573,7 +4585,7 @@
           ]
         }
       },
-      "snapshot_id": "519e66b4d2dc9957"
+      "snapshot_id": "f8285e769cc4582d"
     }
   },
   "pm": {
@@ -4594,22 +4606,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2
+        "monitor_last_pass_min": 8
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3
+        "monitor_last_pass_min": 8
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2685
+        "monitor_last_pass_min": 2690
       }
     ]
   },
-  "snapshot_id": "b480f6749067ae9f",
-  "published_at": "2026-08-21T19:40:14Z"
+  "snapshot_id": "d2c812b04845c4e1",
+  "published_at": "2026-08-21T19:45:26Z"
 }
