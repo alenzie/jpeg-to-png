@@ -3,9 +3,9 @@
   "throttling": {
     "codex": {
       "target": 100,
-      "projected": 42,
+      "projected": 41,
       "used": 7,
-      "at": 1787299120,
+      "at": 1787302203,
       "reset": "22:00 on 26 Aug",
       "spark": [
         [
@@ -435,6 +435,10 @@
         [
           1787295600,
           42
+        ],
+        [
+          1787299200,
+          41
         ]
       ]
     },
@@ -443,9 +447,9 @@
         "target": 100,
         "label": "A",
         "mult": "20x",
-        "projected": 93,
+        "projected": 92,
         "used": 48,
-        "at": 1787299120,
+        "at": 1787302203,
         "reset": "Aug 24, 11am (America/Los_Angeles)",
         "spark": [
           [
@@ -647,6 +651,10 @@
           [
             1787295600,
             93
+          ],
+          [
+            1787299200,
+            92
           ]
         ]
       },
@@ -1066,7 +1074,7 @@
         "last_pass_at": 1787305015
       },
       "runstate": {
-        "auto": false,
+        "auto": true,
         "parallel": 4,
         "pickconfirm": true
       },
@@ -1553,6 +1561,28 @@
           "stage": "building",
           "stage_i": 3,
           "ctx_pct": null,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "INT7-RT-NOTION",
+          "status": "building",
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": 11,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2568,7 +2598,7 @@
           ]
         }
       },
-      "snapshot_id": "e8baec9601688c71"
+      "snapshot_id": "24f62d69f757c840"
     },
     "outbound": {
       "schema": 1,
@@ -2583,7 +2613,7 @@
         "last_pass_at": 1787305024
       },
       "runstate": {
-        "auto": false,
+        "auto": true,
         "parallel": 4,
         "pickconfirm": true
       },
@@ -2601,7 +2631,30 @@
           "up": true
         }
       },
-      "units": [],
+      "units": [
+        {
+          "id": "INT7-RT-NOTION",
+          "status": "not-started",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 11,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        }
+      ],
       "eligible": [
         "WARM-REPLY",
         "MAP1b",
@@ -2865,7 +2918,7 @@
           ]
         }
       },
-      "snapshot_id": "14ca0f8e1026eff7"
+      "snapshot_id": "1f7edd6f4f9d7663"
     },
     "scriptgen": {
       "schema": 1,
@@ -2880,7 +2933,7 @@
         "last_pass_at": 1787180077
       },
       "runstate": {
-        "auto": false,
+        "auto": true,
         "parallel": 4,
         "pickconfirm": true
       },
@@ -3367,6 +3420,28 @@
           "stage": "building",
           "stage_i": 3,
           "ctx_pct": null,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "INT7-RT-NOTION",
+          "status": "building",
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": 11,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4384,15 +4459,15 @@
           ]
         }
       },
-      "snapshot_id": "a7337f2e13ab3b49"
+      "snapshot_id": "4ee59a06eba1cd13"
     }
   },
   "pm": {
     "attendance": {
       "mode": "attended",
       "fleets": {},
-      "updated": "2026-08-17T19:30:03Z",
-      "by": "pm-continue (owner back)",
+      "updated": "2026-08-21T09:49:51Z",
+      "by": "pm-on-watch (owner asleep, auto ON all 3 fleets, 3 overnight units; owner 2026-08-21)",
       "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode."
     },
     "pm_session": {
@@ -4405,22 +4480,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 15
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 15
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2092
+        "monitor_last_pass_min": 2098
       }
     ]
   },
-  "snapshot_id": "9bdf9aa45f3758ca",
-  "published_at": "2026-08-21T09:47:29Z"
+  "snapshot_id": "1c8d11fabb9c6975",
+  "published_at": "2026-08-21T09:52:41Z"
 }
