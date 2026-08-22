@@ -9,8 +9,9 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>">
 <style>
 /* =============================================================================
-   SPINDLE · PM tower — "loom control-room at night"
-   A dim ops room, cool indigo substrate, one warm spun-copper thread accent.
+   SPINDLE · PM tower — "quiet precision"
+   Sleek, modern console: near-black neutral substrate, glass surfaces,
+   one iris accent, soft depth, restrained motion.
    Token NAMES are held stable so the untouched JS (var(--purple)/var(--dim)
    in the sparkline SVG) keeps resolving; only their VALUES are re-tuned.
    ============================================================================= */
@@ -18,32 +19,32 @@
   color-scheme: dark;
 
   /* — substrate & ink — */
-  --bg:     #0B0F1A;   /* warp   — midnight-indigo substrate            */
-  --panel:  #141B2B;   /* loom   — a lit console panel                  */
-  --panel2: #0E1422;   /* well   — recessed track / thread groove       */
-  --line:   #26314A;   /* reed   — cool hairline                        */
-  --fg:     #D9E0F0;   /* linen  — primary ink                          */
-  --dim:    #7C89A6;   /* flax   — muted label ink                      */
+  --bg:     #09090B;   /* near-black, neutral                            */
+  --panel:  #121215;   /* elevated surface                               */
+  --panel2: #0C0C0F;   /* recessed well                                  */
+  --line:   #26262C;   /* hairline                                       */
+  --fg:     #EDEDF0;   /* primary ink                                    */
+  --dim:    #8B8B96;   /* muted label ink                                */
 
   /* — status family (disciplined, one job each) — */
-  --info:   #6E8BD6;   /* weft periwinkle — building / active / calm    */
-  --ok:     #5DBE9A;   /* spun jade       — merged / done / healthy     */
-  --warn:   #E0A93C;   /* amber           — waiting / hot / stale       */
-  --bad:    #E8686B;   /* alarm           — gate open / stalled / down  */
+  --info:   #5C9DFF;   /* blue   — building / active / calm              */
+  --ok:     #3ECF8E;   /* green  — merged / done / healthy               */
+  --warn:   #FFB224;   /* amber  — waiting / hot / stale                 */
+  --bad:    #FF6B6E;   /* red    — gate open / stalled / down            */
 
-  /* — THE accent: spun copper thread. Held in --purple because the JS
-       sparkline hardcodes stroke="var(--purple)". One accent, used sparingly. */
-  --purple: #EA8B57;
-  --copper: #EA8B57;
-  --copper-deep: #B0592A;
-  --copper-hi:   #F5B183;
-  --copper-glow: rgba(234,139,87,.30);
+  /* — THE accent: iris. Held in --purple because the JS sparkline
+       hardcodes stroke="var(--purple)". One accent, used sparingly. */
+  --purple: #6E6BF7;
+  --copper: #6E6BF7;
+  --copper-deep: #4B48D6;
+  --copper-hi:   #9B99FF;
+  --copper-glow: rgba(110,107,247,.32);
 
   /* — model-family hues for the routing loom (theme-aware) — */
-  --fable:  #B58BE6;   /* fable violet   — the MAX co-plan drafter        */
-  --sonnet: #8AA6E6;   /* sonnet weft    — lighter than opus periwinkle   */
-  --sol:    #E7A24A;   /* codex sol gold — deep, vs terra's copper        */
-  --glm:    #9B8CFF;   /* glm violet     — distinct from codex/claude/sol  */
+  --fable:  #A78BFA;   /* fable violet                                   */
+  --sonnet: #7FA3F0;   /* sonnet blue                                    */
+  --sol:    #E8A33D;   /* codex sol gold                                 */
+  --glm:    #8F86FF;   /* glm indigo                                     */
 
   --mono: ui-monospace, "SF Mono", "Cascadia Code", "Fira Code", Menlo, Consolas, monospace;
   --disp: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -54,46 +55,50 @@
   --fs-meta:    12.5px;
   --fs-body:    13.5px;
   --fs-lead:    15px;
-  --fs-logo:    15px;
-  --fs-h2:      20px;
+  --fs-logo:    14px;
+  --fs-h2:      21px;
 
   /* — rhythm — */
-  --r:    13px;
-  --r-sm: 9px;
-  --r-xs: 6px;
-  --sh:   0 10px 30px -22px rgba(0,0,0,.9), 0 1px 0 rgba(255,255,255,.03) inset;
-  --sh-lift: 0 16px 34px -20px rgba(0,0,0,.95), 0 0 0 1px color-mix(in srgb, var(--copper) 30%, transparent);
+  --r:    14px;
+  --r-sm: 10px;
+  --r-xs: 7px;
+  --sh:   0 1px 2px rgba(0,0,0,.5), 0 12px 32px -24px rgba(0,0,0,.85),
+          0 1px 0 rgba(255,255,255,.035) inset;
+  --sh-lift: 0 2px 4px rgba(0,0,0,.5), 0 20px 40px -24px rgba(0,0,0,.9),
+             0 0 0 1px color-mix(in srgb, var(--copper) 32%, transparent);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color-scheme: light;
-    /* "day workshop" — cool paper, not cream; same copper thread */
-    --bg:     #E6E9F1;
-    --panel:  #FBFCFE;
-    --panel2: #EDF0F7;
-    --line:   #CCD4E4;
-    --fg:     #1A2030;
-    --dim:    #5C6884;
+    /* clean studio — soft neutral paper, same iris accent */
+    --bg:     #F6F6F8;
+    --panel:  #FFFFFF;
+    --panel2: #F0F0F4;
+    --line:   #E3E3EA;
+    --fg:     #17171C;
+    --dim:    #6E6E7A;
 
-    --info:   #3D5EA8;
-    --ok:     #1F8F68;
-    --warn:   #B27A16;
-    --bad:    #CB4A4D;
+    --info:   #2E63D8;
+    --ok:     #0E8A5F;
+    --warn:   #A9700A;
+    --bad:    #D64549;
 
-    --purple: #C0692E;
-    --copper: #C0692E;
-    --copper-deep: #9A501F;
-    --copper-hi:   #DA8A4C;
-    --copper-glow: rgba(192,105,46,.24);
+    --purple: #524FDB;
+    --copper: #524FDB;
+    --copper-deep: #3B39BC;
+    --copper-hi:   #7B79EC;
+    --copper-glow: rgba(82,79,219,.20);
 
-    --fable:  #7E56C0;
-    --sonnet: #4E6DBE;
-    --sol:    #C07A22;
-    --glm:    #6E5AE0;
+    --fable:  #7C5CD6;
+    --sonnet: #4A6ED0;
+    --sol:    #AD7410;
+    --glm:    #5F55E8;
 
-    --sh: 0 10px 26px -22px rgba(24,34,64,.55), 0 1px 0 rgba(255,255,255,.7) inset;
-    --sh-lift: 0 16px 30px -20px rgba(24,34,64,.5), 0 0 0 1px color-mix(in srgb, var(--copper) 34%, transparent);
+    --sh: 0 1px 2px rgba(23,23,40,.06), 0 10px 28px -20px rgba(23,23,40,.28),
+          0 1px 0 rgba(255,255,255,.85) inset;
+    --sh-lift: 0 2px 4px rgba(23,23,40,.07), 0 18px 36px -20px rgba(23,23,40,.3),
+               0 0 0 1px color-mix(in srgb, var(--copper) 30%, transparent);
   }
 }
 
@@ -106,63 +111,72 @@ body {
   font-variant-numeric: tabular-nums;
   -webkit-text-size-adjust: 100%;
   background:
-    radial-gradient(130% 90% at 50% -12%, color-mix(in srgb, var(--info) 9%, var(--bg)) 0%, var(--bg) 58%),
+    radial-gradient(90% 48% at 50% -10%, color-mix(in srgb, var(--copper) 7%, var(--bg)) 0%, var(--bg) 62%),
     var(--bg);
   min-height: 100vh;
 }
 
 a { color: var(--copper); text-underline-offset: 2px; }
 
-/* ---- header : the persistent brand moment + spun-thread hairline ------------ */
+/* ---- header : frosted glass rail with a gradient hairline ------------------- */
 header {
-  display: flex; align-items: center; gap: .7rem;
-  padding: .55rem .8rem;
-  background: color-mix(in srgb, var(--panel) 88%, transparent);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
+  display: flex; align-items: center; gap: .8rem;
+  padding: .6rem .9rem;
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  backdrop-filter: blur(16px) saturate(1.5);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
   position: sticky; top: 0; z-index: 5;
 }
-/* the thread: a fine copper filament strung under the whole console */
+/* gradient hairline strung under the rail */
 header::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px;
   background: linear-gradient(90deg,
-    transparent 0, transparent 4%,
-    color-mix(in srgb, var(--copper) 55%, transparent) 18%,
-    color-mix(in srgb, var(--copper) 20%, transparent) 50%,
-    color-mix(in srgb, var(--copper) 55%, transparent) 82%,
-    transparent 96%);
+    transparent 0, transparent 6%,
+    color-mix(in srgb, var(--copper) 45%, transparent) 30%,
+    color-mix(in srgb, var(--copper-hi) 55%, transparent) 50%,
+    color-mix(in srgb, var(--copper) 45%, transparent) 70%,
+    transparent 94%);
 }
 .logo {
-  font-weight: 800; font-size: var(--fs-logo); letter-spacing: .1em;
-  white-space: nowrap; text-transform: uppercase; color: var(--fg);
+  font-weight: 750; font-size: var(--fs-logo); letter-spacing: .14em;
+  white-space: nowrap; text-transform: uppercase;
+  background: linear-gradient(120deg, var(--fg) 30%, color-mix(in srgb, var(--copper-hi) 70%, var(--fg)) 90%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: var(--fg);
 }
-nav { display: flex; gap: .2rem; overflow-x: auto; scrollbar-width: none; }
+nav { display: flex; gap: .25rem; overflow-x: auto; scrollbar-width: none; }
 nav::-webkit-scrollbar { display: none; }
 nav button {
   background: none; border: 1px solid transparent; color: var(--dim);
-  padding: .35rem .7rem; border-radius: var(--r-sm); cursor: pointer;
+  padding: .34rem .8rem; border-radius: 999px; cursor: pointer;
   font-family: var(--disp); font-size: 12px; font-weight: 600;
-  letter-spacing: .05em; text-transform: uppercase; white-space: nowrap;
-  position: relative; transition: color .18s ease, background .18s ease;
+  letter-spacing: .02em; white-space: nowrap;
+  position: relative; transition: color .18s ease, background .18s ease, border-color .18s ease;
 }
-nav button:hover { color: var(--fg); }
-nav button.active { color: var(--fg); background: color-mix(in srgb, var(--copper) 8%, transparent); }
-/* active tab hangs a short copper thread */
+nav button:hover { color: var(--fg); background: color-mix(in srgb, var(--fg) 5%, transparent); }
+nav button.active {
+  color: var(--fg);
+  background: color-mix(in srgb, var(--fg) 8%, transparent);
+  border-color: color-mix(in srgb, var(--fg) 10%, transparent);
+  box-shadow: 0 1px 0 rgba(255,255,255,.05) inset;
+}
+/* active tab keeps a slim accent underline */
 nav button.active::after {
-  content: ""; position: absolute; left: 22%; right: 22%; bottom: -.4rem; height: 2px;
-  border-radius: 2px; background: var(--copper);
-  box-shadow: 0 0 8px var(--copper-glow);
+  content: ""; position: absolute; left: 30%; right: 30%; bottom: -.44rem; height: 2px;
+  border-radius: 2px; background: linear-gradient(90deg, var(--copper), var(--copper-hi));
+  box-shadow: 0 0 10px var(--copper-glow);
 }
 .badge {
-  background: var(--bad); color: #0B0F1A; border-radius: 999px;
+  background: var(--bad); color: #fff; border-radius: 999px;
   padding: .05em .45em; font-size: 10px; font-weight: 800; font-family: var(--mono);
   vertical-align: top; margin-left: .3em;
 }
 
 .conn {
   margin-left: auto; font-size: var(--fs-cap); color: var(--bad);
-  display: flex; align-items: center; gap: .4rem; white-space: nowrap;
-  text-transform: uppercase; letter-spacing: .08em; font-weight: 600;
+  display: flex; align-items: center; gap: .45rem; white-space: nowrap;
+  letter-spacing: .04em; font-weight: 600;
 }
 .conn .dot2 { width: 7px; height: 7px; border-radius: 50%; background: var(--bad); }
 .conn.on { color: var(--ok); }
@@ -172,70 +186,71 @@ nav button.active::after {
   animation: beacon 2.6s ease-out infinite;
 }
 
-main { padding: .9rem; max-width: 1120px; margin: 0 auto; }
+main { padding: 1rem; max-width: 1120px; margin: 0 auto; }
 
-/* ---- section headings : eyebrow with a copper thread-tick ------------------- */
-h2 { font-size: var(--fs-h2); font-weight: 750; letter-spacing: -.01em; margin: 0 0 .7rem; }
+/* ---- section headings : eyebrow with an accent tick ------------------------- */
+h2 { font-size: var(--fs-h2); font-weight: 700; letter-spacing: -.02em; margin: 0 0 .75rem; }
 h3 {
   margin: 0 0 .6rem; font-size: var(--fs-eyebrow); color: var(--dim);
-  text-transform: uppercase; letter-spacing: .16em; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .14em; font-weight: 700;
   display: flex; align-items: center; gap: .5rem;
 }
 .panel > h3::before {
-  content: ""; width: 12px; height: 2px; border-radius: 2px; flex: none;
-  background: var(--copper); box-shadow: 0 0 6px var(--copper-glow);
+  content: ""; width: 14px; height: 2px; border-radius: 2px; flex: none;
+  background: linear-gradient(90deg, var(--copper), var(--copper-hi));
 }
 .dim { color: var(--dim); }
 .mult { color: var(--sol); font-weight: 700; font-family: var(--mono); font-size: .92em; }
 .fg  { color: var(--fg); }
 .good { color: var(--ok); }
 .bad  { color: var(--bad); }
-.note { color: var(--dim); font-size: var(--fs-cap); margin-top: .55rem; font-style: italic; }
+.note { color: var(--dim); font-size: var(--fs-cap); margin-top: .55rem; }
 
 /* ---- banners --------------------------------------------------------------- */
 .stale-banner, .gate-banner {
-  border-radius: var(--r); padding: .65rem .85rem; margin-bottom: .8rem;
+  border-radius: var(--r); padding: .7rem .9rem; margin-bottom: .85rem;
   font-size: var(--fs-meta); line-height: 1.45; box-shadow: var(--sh);
 }
 .stale-banner {
-  background: color-mix(in srgb, var(--warn) 15%, var(--panel));
-  border: 1px solid color-mix(in srgb, var(--warn) 55%, var(--line));
+  background: color-mix(in srgb, var(--warn) 10%, var(--panel));
+  border: 1px solid color-mix(in srgb, var(--warn) 40%, var(--line));
 }
 .gate-banner {
-  background: color-mix(in srgb, var(--bad) 15%, var(--panel));
-  border: 1px solid color-mix(in srgb, var(--bad) 60%, var(--line));
-  color: color-mix(in srgb, var(--bad) 30%, var(--fg));
+  background: color-mix(in srgb, var(--bad) 10%, var(--panel));
+  border: 1px solid color-mix(in srgb, var(--bad) 45%, var(--line));
+  color: color-mix(in srgb, var(--bad) 25%, var(--fg));
 }
 .gate-banner b { color: var(--fg); }
 
 /* ---- panels ---------------------------------------------------------------- */
 .panel {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--fg) 2.5%, var(--panel)) 0, var(--panel) 40%);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--fg) 2.5%, var(--panel)) 0, var(--panel) 46%);
   border: 1px solid var(--line); border-radius: var(--r);
-  padding: .9rem 1rem; margin-bottom: .8rem; box-shadow: var(--sh);
+  padding: 1rem 1.1rem; margin-bottom: .85rem; box-shadow: var(--sh);
 }
 .panel.wide { grid-column: 1 / -1; }
-.panels { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+.panels { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; }
 @media (max-width: 760px) { .panels { grid-template-columns: 1fr; } }
 
 /* ---- key/value rows -------------------------------------------------------- */
 .kv { display: flex; flex-wrap: wrap; gap: .35rem 1.3rem; font-size: var(--fs-meta); color: var(--dim); }
 .kv > span { display: inline-flex; align-items: baseline; gap: .4ch; }
-.kv b { color: var(--fg); font-weight: 700; font-variant-numeric: tabular-nums; }
+.kv b { color: var(--fg); font-weight: 650; font-variant-numeric: tabular-nums; }
 .kv b.good { color: var(--ok); }
 .kv b.bad  { color: var(--bad); }
 
 /* ---- chips (daemons, eligible, fences) ------------------------------------- */
 .chips { display: flex; flex-wrap: wrap; gap: .35rem; }
 .chip {
-  display: inline-flex; align-items: center; gap: .4rem;
-  background: var(--panel2); border: 1px solid var(--line); border-radius: 999px;
-  padding: .18rem .65rem; font-size: var(--fs-cap); color: var(--fg);
+  display: inline-flex; align-items: center; gap: .45rem;
+  background: color-mix(in srgb, var(--fg) 3%, var(--panel2));
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: .2rem .7rem; font-size: var(--fs-cap); color: var(--fg);
   font-family: var(--mono); letter-spacing: .01em;
 }
 .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--bad); flex: none;
-       box-shadow: 0 0 0 3px color-mix(in srgb, var(--bad) 16%, transparent); }
-.dot.up { background: var(--ok); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ok) 16%, transparent); }
+       box-shadow: 0 0 0 3px color-mix(in srgb, var(--bad) 14%, transparent); }
+.dot.up { background: var(--ok); box-shadow: 0 0 0 3px color-mix(in srgb, var(--ok) 14%, transparent); }
 
 /* ---- empty states ---------------------------------------------------------- */
 .empty, .empty-inline { color: var(--dim); text-align: center; line-height: 1.55; }
@@ -247,111 +262,106 @@ h3 {
 .tgauge:last-child { margin-bottom: 0; }
 .tg-lbl { display: flex; justify-content: space-between; gap: .5rem; flex-wrap: wrap;
           font-size: var(--fs-meta); font-weight: 600; }
-.tg-lbl > span:first-child { text-transform: uppercase; letter-spacing: .06em; }
+.tg-lbl > span:first-child { letter-spacing: .02em; }
 .tg-num { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 700; color: var(--fg); }
 .hot   { color: var(--warn); }
 .cold  { color: var(--info); }
 .ok-c  { color: var(--ok); }
 .bar {
-  height: 9px; background: var(--panel2); border-radius: 999px; overflow: hidden;
+  height: 8px; background: var(--panel2); border-radius: 999px; overflow: hidden;
   margin: .4rem 0 .35rem; border: 1px solid var(--line);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.35);
 }
 .bar > i {
   display: block; height: 100%; border-radius: 999px;
-  background: linear-gradient(90deg, var(--copper-deep), var(--copper) 70%, var(--copper-hi));
+  background: linear-gradient(90deg, var(--copper-deep), var(--copper) 60%, var(--copper-hi));
   box-shadow: 0 0 10px var(--copper-glow);
 }
-/* sparklines rendered as fine spun thread */
+/* sparklines */
 svg.spark { width: 100%; height: 32px; display: block; margin-top: .3rem;
-            filter: drop-shadow(0 1px 3px color-mix(in srgb, var(--copper) 22%, transparent)); }
+            filter: drop-shadow(0 1px 4px color-mix(in srgb, var(--copper) 25%, transparent)); }
 svg.spark path { stroke-linecap: round; stroke-linejoin: round; }
 svg.tchart { width: 100%; height: auto; max-width: 540px; display: block; margin: .3rem auto .55rem; }
 .tlegendrow { display: flex; flex-wrap: wrap; gap: .3rem .9rem; justify-content: center;
               font-size: var(--fs-meta); }
 .tleg { display: inline-flex; align-items: center; gap: .3rem; font-weight: 600; white-space: nowrap; }
-.tleg > i { width: 9px; height: 9px; border-radius: 2px; display: inline-block; flex: 0 0 auto; }
+.tleg > i { width: 9px; height: 9px; border-radius: 3px; display: inline-block; flex: 0 0 auto; }
 .tleg b { font-family: var(--mono); font-variant-numeric: tabular-nums; }
 .usagectl { display: flex; flex-wrap: wrap; gap: .4rem .5rem; align-items: center; margin: .1rem 0 .6rem; font-size: var(--fs-meta); }
-.usagectl button { background: var(--panel2); border: 1px solid var(--line); color: var(--fg); border-radius: 8px; padding: .25rem .6rem; cursor: pointer; font: inherit; }
-.usagectl button.active { border-color: var(--copper); background: color-mix(in srgb, var(--copper) 12%, transparent); }
-.usagectl input[type=date] { background: var(--panel2); border: 1px solid var(--line); color: var(--fg); border-radius: 8px; padding: .18rem .4rem; font: inherit; color-scheme: dark; }
+.usagectl button {
+  background: var(--panel2); border: 1px solid var(--line); color: var(--fg);
+  border-radius: 999px; padding: .26rem .7rem; cursor: pointer; font: inherit;
+  transition: border-color .15s ease, background .15s ease;
+}
+.usagectl button:hover { border-color: color-mix(in srgb, var(--copper) 45%, var(--line)); }
+.usagectl button.active { border-color: color-mix(in srgb, var(--copper) 60%, var(--line)); background: color-mix(in srgb, var(--copper) 12%, transparent); }
+.usagectl input[type=date] { background: var(--panel2); border: 1px solid var(--line); color: var(--fg); border-radius: 999px; padding: .2rem .55rem; font: inherit; }
 .usagectl .sp { flex: 1 1 8px; }
 svg.uchart { width: 100%; height: auto; max-width: 920px; display: block; margin: .2rem 0 .3rem; }
 
 /* ============================================================================
-   SIGNATURE — the stage bar as THREAD WOUND ON A SPINDLE
+   SIGNATURE — the stage bar as a SEGMENTED PROGRESS RAIL
    Markup is untouched: .stages > i(.done|.cur|·). Purely restyled here.
-   done = copper coil wraps · cur = glowing winder · rest = bare bobbin shaft.
+   done = filled accent segment · cur = live glowing segment · rest = track.
    ============================================================================ */
 .stages {
-  position: relative; display: flex; gap: 2px; height: 13px;
-  margin: .55rem 4px .45rem; padding: 0 1px;
-  background:
-    linear-gradient(180deg, color-mix(in srgb, #000 30%, var(--panel2)), var(--panel2));
-  border-radius: 3px;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.5);
+  position: relative; display: flex; gap: 3px; height: 7px;
+  margin: .6rem 0 .5rem; padding: 0;
+  background: none;
+  border-radius: 999px;
 }
-/* bobbin flanges at each end */
-.stages::before, .stages::after {
-  content: ""; position: absolute; top: -3px; bottom: -3px; width: 3px; border-radius: 2px;
-  background: linear-gradient(180deg, var(--copper-deep), color-mix(in srgb, var(--copper-deep) 40%, #000));
-}
-.stages::before { left: -5px; }
-.stages::after  { right: -5px; }
+.stages::before, .stages::after { content: none; }
 
 .stages > i {
-  flex: 1; border-radius: 1px; background: transparent; position: relative;
-  border-top: 1px solid color-mix(in srgb, #fff 4%, transparent);
+  flex: 1; border-radius: 999px; position: relative;
+  background: var(--panel2);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--line) 80%, transparent);
 }
-/* wound copper thread — fine coil striping reads as individual wraps */
 .stages > i.done {
-  background:
-    repeating-linear-gradient(90deg,
-      var(--copper) 0 2px,
-      color-mix(in srgb, var(--copper-deep) 80%, var(--copper)) 2px 4px);
-  box-shadow: inset 0 -2px 3px rgba(0,0,0,.35), inset 0 1px 1px var(--copper-hi);
+  background: linear-gradient(90deg, var(--copper-deep), var(--copper));
+  box-shadow: none;
 }
-/* the live winding point */
+/* the live segment */
 .stages > i.cur {
-  background: linear-gradient(90deg, var(--copper) 0, var(--copper-hi) 100%);
-  box-shadow: 0 0 10px var(--copper-glow), inset 0 1px 1px var(--copper-hi);
+  background: linear-gradient(90deg, var(--copper), var(--copper-hi));
+  box-shadow: 0 0 12px var(--copper-glow);
 }
 .stages > i.cur::after {
-  content: ""; position: absolute; top: 50%; right: -2px; width: 6px; height: 6px;
+  content: ""; position: absolute; top: 50%; right: -1px; width: 7px; height: 7px;
   border-radius: 50%; transform: translateY(-50%);
   background: var(--copper-hi);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--copper) 30%, transparent), 0 0 9px var(--copper);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--copper) 25%, transparent), 0 0 10px var(--copper);
   animation: winder 2.4s ease-in-out infinite;
 }
 
 /* ---- context gauge --------------------------------------------------------- */
 .gauge {
-  height: 8px; background: var(--panel2); border-radius: 999px; overflow: hidden;
+  height: 7px; background: var(--panel2); border-radius: 999px; overflow: hidden;
   border: 1px solid var(--line); margin: .35rem 0;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.35);
 }
 .gauge > div { height: 100%; border-radius: 999px;
-               background: linear-gradient(90deg, color-mix(in srgb, var(--ok) 70%, #000), var(--ok)); }
-.gauge.warn > div { background: linear-gradient(90deg, color-mix(in srgb, var(--warn) 70%, #000), var(--warn)); }
-.gauge.bad  > div { background: linear-gradient(90deg, color-mix(in srgb, var(--bad) 70%, #000), var(--bad)); }
+               background: linear-gradient(90deg, color-mix(in srgb, var(--ok) 75%, var(--panel2)), var(--ok)); }
+.gauge.warn > div { background: linear-gradient(90deg, color-mix(in srgb, var(--warn) 75%, var(--panel2)), var(--warn)); }
+.gauge.bad  > div { background: linear-gradient(90deg, color-mix(in srgb, var(--bad) 75%, var(--panel2)), var(--bad)); }
 
 /* ---- fleet tiles ----------------------------------------------------------- */
-.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(252px, 1fr)); gap: .8rem; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(252px, 1fr)); gap: .85rem; }
 .tile {
   position: relative; overflow: hidden; --tc: var(--info);
-  background: linear-gradient(180deg, color-mix(in srgb, var(--fg) 2.5%, var(--panel)) 0, var(--panel) 42%);
-  border: 1px solid var(--line); border-radius: var(--r); padding: .85rem .95rem .9rem 1.05rem;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--fg) 2.5%, var(--panel)) 0, var(--panel) 46%);
+  border: 1px solid var(--line); border-radius: var(--r); padding: .9rem 1rem .95rem 1.1rem;
   cursor: pointer; box-shadow: var(--sh);
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 /* status accent strip down the spine of the tile */
-.tile::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--tc); }
+.tile::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: linear-gradient(180deg, var(--tc), color-mix(in srgb, var(--tc) 45%, transparent));
+}
 .tile:has(.status.done), .tile:has(.status.success) { --tc: var(--ok); }
 .tile:has(.status.waiting), .tile:has(.status.interrupted), .tile:has(.status.subfencing) { --tc: var(--warn); }
 .tile:has(.status.idle), .tile:has(.status.queued) { --tc: var(--dim); }
 .tile:has(.status.error), .tile:has(.stall) { --tc: var(--bad); }
-.tile:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--copper) 45%, var(--line)); box-shadow: var(--sh-lift); }
+.tile:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--copper) 40%, var(--line)); box-shadow: var(--sh-lift); }
 .tile h3 {
   margin: 0 0 .35rem; font-size: var(--fs-lead); color: var(--fg); font-family: var(--mono);
   text-transform: none; letter-spacing: .01em; font-weight: 700;
@@ -363,11 +373,11 @@ svg.uchart { width: 100%; height: auto; max-width: 920px; display: block; margin
 /* status pill — one custom prop drives colour, border, tint */
 .status {
   --sc: var(--dim);
-  font-size: 10px; padding: .12rem .55rem; border-radius: 999px;
-  text-transform: uppercase; letter-spacing: .07em; font-weight: 700; white-space: nowrap;
+  font-size: 10px; padding: .14rem .6rem; border-radius: 999px;
+  text-transform: uppercase; letter-spacing: .06em; font-weight: 700; white-space: nowrap;
   color: var(--sc);
-  border: 1px solid color-mix(in srgb, var(--sc) 45%, var(--line));
-  background: color-mix(in srgb, var(--sc) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--sc) 35%, transparent);
+  background: color-mix(in srgb, var(--sc) 11%, transparent);
 }
 .status.busy, .status.building, .status.planning { --sc: var(--info); }
 .status.idle, .status.queued { --sc: var(--dim); }
@@ -386,19 +396,19 @@ svg.uchart { width: 100%; height: auto; max-width: 920px; display: block; margin
 
 /* ---- inbox cards ----------------------------------------------------------- */
 .card {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--fg) 2.5%, var(--panel)) 0, var(--panel) 42%);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--fg) 2.5%, var(--panel)) 0, var(--panel) 46%);
   border: 1px solid var(--line); border-left: 3px solid var(--warn);
-  border-radius: var(--r); padding: .85rem .95rem; margin-bottom: .7rem; box-shadow: var(--sh);
+  border-radius: var(--r); padding: .9rem 1rem; margin-bottom: .7rem; box-shadow: var(--sh);
 }
 .card.hold { border-left-color: var(--bad); }
-.card h4 { margin: 0 0 .3rem; font-size: var(--fs-lead); font-weight: 700; }
+.card h4 { margin: 0 0 .3rem; font-size: var(--fs-lead); font-weight: 650; letter-spacing: -.01em; }
 .card .meta { color: var(--dim); font-size: var(--fs-meta); }
 
 /* ---- tables (unit / history) ----------------------------------------------- */
 table { width: 100%; border-collapse: collapse; font-size: var(--fs-meta); }
-th, td { text-align: left; padding: .34rem .55rem; border-bottom: 1px solid var(--line); }
+th, td { text-align: left; padding: .4rem .55rem; border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
 th {
-  color: var(--dim); font-weight: 700; font-size: var(--fs-eyebrow);
+  color: var(--dim); font-weight: 600; font-size: var(--fs-eyebrow);
   text-transform: uppercase; letter-spacing: .1em;
 }
 tr:last-child td { border-bottom: none; }
@@ -410,24 +420,29 @@ td.num { font-family: var(--mono); text-align: right; color: var(--fg); }
 /* ---- feed lists ------------------------------------------------------------ */
 .feed { list-style: none; margin: 0; padding: 0; }
 .feed li {
-  padding: .45rem 0 .45rem .9rem; border-bottom: 1px solid var(--line);
+  padding: .48rem 0 .48rem .95rem; border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
   font-size: var(--fs-meta); position: relative;
 }
 .feed li::before {
-  content: ""; position: absolute; left: 0; top: .85rem; width: 5px; height: 5px;
-  border-radius: 50%; background: color-mix(in srgb, var(--copper) 60%, var(--line));
+  content: ""; position: absolute; left: 0; top: .9rem; width: 5px; height: 5px;
+  border-radius: 50%; background: color-mix(in srgb, var(--copper) 65%, var(--line));
 }
 .feed li:last-child { border-bottom: none; }
-.feed b { color: var(--fg); font-weight: 700; }
+.feed b { color: var(--fg); font-weight: 650; }
 
 /* ---- buttons / unit picker ------------------------------------------------- */
 .act {
   background: var(--panel2); border: 1px solid var(--line); color: var(--fg);
-  border-radius: var(--r-sm); padding: .38rem .8rem; cursor: pointer;
+  border-radius: var(--r-sm); padding: .4rem .85rem; cursor: pointer;
   font-family: var(--mono); font-size: var(--fs-meta); font-weight: 600;
-  transition: border-color .16s ease, color .16s ease, background .16s ease;
+  box-shadow: 0 1px 0 rgba(255,255,255,.03) inset;
+  transition: border-color .16s ease, color .16s ease, background .16s ease, transform .16s ease;
 }
-.act:hover { border-color: color-mix(in srgb, var(--copper) 55%, var(--line)); color: var(--copper); }
+.act:hover {
+  border-color: color-mix(in srgb, var(--copper) 55%, var(--line));
+  color: var(--copper-hi); transform: translateY(-1px);
+  background: color-mix(in srgb, var(--copper) 7%, var(--panel2));
+}
 .pick { display: flex; gap: .45rem; flex-wrap: wrap; margin-bottom: .9rem; }
 .unit-head { display: flex; align-items: center; gap: .7rem; margin-bottom: .35rem; flex-wrap: wrap; }
 .unit-head h2 { margin: 0; }
@@ -438,22 +453,26 @@ footer {
   letter-spacing: .04em; padding: 1.2rem .8rem 2.4rem;
 }
 
-/* ---- Models tab : reuses the loom vocabulary (wells, gauges, threads) ------- */
-.mcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(224px, 1fr)); gap: .8rem; }
+/* ---- Models tab ------------------------------------------------------------- */
+.mcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(224px, 1fr)); gap: .85rem; }
 .mcard {
   position: relative; overflow: hidden; --tc: var(--info);
-  background: linear-gradient(180deg, color-mix(in srgb, var(--fg) 2.5%, var(--panel)) 0, var(--panel) 42%);
-  border: 1px solid var(--line); border-radius: var(--r); padding: .85rem .95rem .9rem 1.05rem; box-shadow: var(--sh);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--fg) 2.5%, var(--panel)) 0, var(--panel) 46%);
+  border: 1px solid var(--line); border-radius: var(--r); padding: .9rem 1rem .95rem 1.1rem; box-shadow: var(--sh);
 }
-.mcard.codex  { --tc: var(--copper); }
+.mcard.codex  { --tc: var(--sol); }
 .mcard.claude { --tc: var(--info); }
 .mcard.glm    { --tc: var(--glm); }
-.mcard::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--tc); }
+.mcard::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: linear-gradient(180deg, var(--tc), color-mix(in srgb, var(--tc) 45%, transparent));
+}
 .mcard-h { display: flex; justify-content: space-between; align-items: center; gap: .5rem; margin-bottom: .35rem; }
 .mname { font-family: var(--mono); font-weight: 700; font-size: var(--fs-lead); text-transform: uppercase; letter-spacing: .03em; }
 .mbig {
   font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 750;
-  font-size: 26px; line-height: 1.05; display: flex; align-items: baseline; gap: .55ch; color: var(--fg);
+  font-size: 27px; line-height: 1.05; display: flex; align-items: baseline; gap: .55ch; color: var(--fg);
+  letter-spacing: -.02em;
 }
 .mbig .munit { font-family: var(--disp); font-size: 10px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--dim); }
 .mbig.hot { color: var(--warn); } .mbig.cold { color: var(--info); } .mbig.ok-c { color: var(--ok); }
@@ -461,22 +480,22 @@ footer {
 .mstats b { color: var(--fg); font-variant-numeric: tabular-nums; font-family: var(--mono); }
 .fam {
   font-size: 9.5px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700;
-  padding: .12rem .5rem; border-radius: 999px; border: 1px solid; white-space: nowrap;
+  padding: .13rem .55rem; border-radius: 999px; border: 1px solid; white-space: nowrap;
 }
-.fam.codex  { color: var(--copper); border-color: color-mix(in srgb, var(--copper) 45%, var(--line)); background: color-mix(in srgb, var(--copper) 13%, transparent); }
-.fam.claude { color: var(--info);   border-color: color-mix(in srgb, var(--info) 45%, var(--line));   background: color-mix(in srgb, var(--info) 13%, transparent); }
-.fam.glm    { color: var(--glm);    border-color: color-mix(in srgb, var(--glm) 45%, var(--line));    background: color-mix(in srgb, var(--glm) 13%, transparent); }
+.fam.codex  { color: var(--sol);  border-color: color-mix(in srgb, var(--sol) 35%, transparent);  background: color-mix(in srgb, var(--sol) 11%, transparent); }
+.fam.claude { color: var(--info); border-color: color-mix(in srgb, var(--info) 35%, transparent); background: color-mix(in srgb, var(--info) 11%, transparent); }
+.fam.glm    { color: var(--glm);  border-color: color-mix(in srgb, var(--glm) 35%, transparent);  background: color-mix(in srgb, var(--glm) 11%, transparent); }
 .fdot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: .55ch; vertical-align: middle; flex: none; }
-.fdot.codex { background: var(--copper); } .fdot.claude { background: var(--info); } .fdot.glm { background: var(--glm); } .fdot.other { background: var(--dim); }
-.fam-t.codex { color: var(--copper); } .fam-t.claude { color: var(--info); } .fam-t.glm { color: var(--glm); } .fam-t.other { color: var(--fg); }
+.fdot.codex { background: var(--sol); } .fdot.claude { background: var(--info); } .fdot.glm { background: var(--glm); } .fdot.other { background: var(--dim); }
+.fam-t.codex { color: var(--sol); } .fam-t.claude { color: var(--info); } .fam-t.glm { color: var(--glm); } .fam-t.other { color: var(--fg); }
 .mono { font-family: var(--mono); }
 .tscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .tscroll table { min-width: max-content; }
 .tscroll td.mono, .tscroll th { white-space: nowrap; }
-/* weekly reset time — the copper thread accent makes it the prominent line */
+/* weekly reset time — the accent makes it the prominent line */
 .reset-at {
   font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: var(--fs-cap);
-  font-weight: 700; color: var(--copper); letter-spacing: .01em; margin-top: .4rem;
+  font-weight: 700; color: var(--copper-hi); letter-spacing: .01em; margin-top: .4rem;
 }
 .reset-read { font-size: 11px; margin-top: .1rem; }
 
@@ -510,31 +529,29 @@ footer {
 }
 
 /* ============================================================================
-   SIGNATURE — ROUTING as a THREADED LOOM (the pipeline as a flowchart)
-   A run is a warp thread strung L->R through stage stations; each seat is a
-   node on the thread, colour = model family. Drag to pan, wheel to zoom to the
-   cursor. The bed carries faint reed lines so the thread reads as woven warp.
+   SIGNATURE — ROUTING flowchart (pipeline strung L->R through stage stations)
+   Drag to pan, wheel to zoom to the cursor. Faint column grid on the bed.
    ============================================================================ */
 .rflow-wrap {
   position: relative; height: clamp(360px, 60vh, 560px);
   border: 1px solid var(--line); border-radius: var(--r); overflow: hidden;
   background:
-    radial-gradient(120% 130% at 18% -12%, color-mix(in srgb, var(--info) 8%, var(--panel2)) 0, var(--panel2) 62%),
-    repeating-linear-gradient(90deg, transparent 0 47px, color-mix(in srgb, var(--line) 42%, transparent) 47px 48px);
-  box-shadow: inset 0 1px 3px rgba(0,0,0,.42); cursor: grab; touch-action: none; user-select: none;
+    radial-gradient(120% 130% at 18% -12%, color-mix(in srgb, var(--copper) 6%, var(--panel2)) 0, var(--panel2) 62%),
+    repeating-linear-gradient(90deg, transparent 0 47px, color-mix(in srgb, var(--line) 40%, transparent) 47px 48px);
+  cursor: grab; touch-action: none; user-select: none;
 }
 .rflow-wrap.grabbing { cursor: grabbing; }
 .rflow-svg { width: 100%; height: 100%; display: block; }
 .rflow-svg text { font-family: var(--mono); fill: var(--fg); pointer-events: none; }
 .rf-stage-t { font-size: 11px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
-  fill: var(--copper); font-family: var(--disp); }
+  fill: var(--copper-hi); font-family: var(--disp); }
 .rf-stage-s { font-size: 9.5px; fill: var(--dim); font-family: var(--disp); }
 .rf-stage-band { fill: color-mix(in srgb, var(--fg) 2.2%, transparent); stroke: var(--line); stroke-dasharray: 2 5; }
 .rf-thread { fill: none; stroke: var(--copper); stroke-opacity: .6; stroke-linecap: round;
-  filter: drop-shadow(0 0 3px color-mix(in srgb, var(--copper) 30%, transparent)); }
+  filter: drop-shadow(0 0 3px color-mix(in srgb, var(--copper) 32%, transparent)); }
 .rf-branch { fill: none; stroke-linecap: round; }
 .rf-loop   { fill: none; stroke: var(--copper); stroke-opacity: .55; stroke-dasharray: 3 4; }
-.rf-loop-t { font-size: 9px; fill: var(--copper); font-family: var(--disp); letter-spacing: .04em; }
+.rf-loop-t { font-size: 9px; fill: var(--copper-hi); font-family: var(--disp); letter-spacing: .04em; }
 .rf-node { cursor: default; }
 .rf-node .rf-card { fill: color-mix(in srgb, var(--fg) 4%, var(--panel)); stroke: var(--line); stroke-width: 1;
   transition: stroke .15s ease, filter .15s ease; }
@@ -546,38 +563,39 @@ footer {
 .rf-node:hover .rf-card { stroke: color-mix(in srgb, var(--nc) 75%, var(--line));
   filter: drop-shadow(0 0 9px color-mix(in srgb, var(--nc) 45%, transparent)); }
 .rflow-legend { position: absolute; left: .55rem; bottom: .5rem; display: flex; gap: .65rem; flex-wrap: wrap;
-  align-items: center; background: color-mix(in srgb, var(--panel) 82%, transparent); backdrop-filter: blur(6px);
-  border: 1px solid var(--line); border-radius: 999px; padding: .26rem .7rem; font-size: 10px; color: var(--dim); }
+  align-items: center; background: color-mix(in srgb, var(--panel) 78%, transparent); backdrop-filter: blur(8px);
+  border: 1px solid var(--line); border-radius: 999px; padding: .28rem .75rem; font-size: 10px; color: var(--dim); }
 .rflow-legend span { display: inline-flex; align-items: center; white-space: nowrap; }
 .rflow-legend i { width: 8px; height: 8px; border-radius: 50%; margin-right: .4ch; }
 .rflow-ctl { position: absolute; right: .55rem; top: .55rem; display: flex; gap: .3rem; }
-.rflow-ctl button { width: 27px; height: 27px; border-radius: var(--r-xs); border: 1px solid var(--line);
-  background: color-mix(in srgb, var(--panel) 84%, transparent); color: var(--fg); cursor: pointer;
+.rflow-ctl button { width: 28px; height: 28px; border-radius: var(--r-xs); border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel) 82%, transparent); color: var(--fg); cursor: pointer;
+  backdrop-filter: blur(8px);
   font-family: var(--mono); font-size: 14px; line-height: 1; display: grid; place-items: center;
   transition: border-color .15s ease, color .15s ease; }
-.rflow-ctl button:hover { border-color: var(--copper); color: var(--copper); }
+.rflow-ctl button:hover { border-color: var(--copper); color: var(--copper-hi); }
 .rflow-hint { position: absolute; right: .6rem; bottom: .55rem; font-size: 9.5px; color: var(--dim);
   font-family: var(--disp); letter-spacing: .03em; pointer-events: none; }
 @media (max-width: 560px) { .rflow-hint { display: none; } }
 
 /* lead track (distinct top lane) + parallel brace + end cap */
-.rf-lead-band { fill: color-mix(in srgb, var(--copper) 13%, var(--panel)); stroke: color-mix(in srgb, var(--copper) 48%, var(--line)); stroke-width: 1.2; }
-.rf-lead-t { font-size: 12px; font-weight: 800; letter-spacing: .05em; fill: var(--copper); font-family: var(--disp); text-transform: uppercase; }
+.rf-lead-band { fill: color-mix(in srgb, var(--copper) 11%, var(--panel)); stroke: color-mix(in srgb, var(--copper) 45%, var(--line)); stroke-width: 1.2; }
+.rf-lead-t { font-size: 12px; font-weight: 800; letter-spacing: .05em; fill: var(--copper-hi); font-family: var(--disp); text-transform: uppercase; }
 .rf-lead-s { font-size: 10px; fill: var(--dim); font-family: var(--mono); }
 .rf-lead-tick { stroke: color-mix(in srgb, var(--copper) 38%, transparent); stroke-width: 1; stroke-dasharray: 2 5; fill: none; }
 .rf-stage-band.par { fill: color-mix(in srgb, var(--copper) 4%, transparent); stroke: color-mix(in srgb, var(--copper) 28%, var(--line)); }
 .rf-par-brace { fill: none; stroke: color-mix(in srgb, var(--copper) 60%, var(--line)); stroke-width: 1.4; stroke-linecap: round; }
-.rf-par-t { font-size: 9px; fill: var(--copper); font-family: var(--disp); font-weight: 700; letter-spacing: .03em; }
+.rf-par-t { font-size: 9px; fill: var(--copper-hi); font-family: var(--disp); font-weight: 700; letter-spacing: .03em; }
 .rf-cap-ok { font-size: 9.5px; fill: var(--ok); font-family: var(--disp); }
 
-/* mobile vertical loom — stage cards, native scroll, explicit parallel groups */
+/* mobile vertical flow — stage cards, native scroll, explicit parallel groups */
 .rflow-legend.static { position: static; margin-top: .6rem; display: inline-flex; backdrop-filter: none; }
 .mloom { display: flex; flex-direction: column; gap: 0; }
 .mcap { text-align: center; font-family: var(--mono); font-size: 11px; color: var(--dim); padding: .35rem; letter-spacing: .05em; }
 .mcap.end { color: var(--ok); font-weight: 700; }
-.mlead { border: 1px solid color-mix(in srgb, var(--copper) 48%, var(--line)); border-radius: var(--r); margin-bottom: .15rem;
-  padding: .6rem .85rem; background: color-mix(in srgb, var(--copper) 11%, var(--panel)); box-shadow: inset 3px 0 0 var(--copper); }
-.mlead-t { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--copper); }
+.mlead { border: 1px solid color-mix(in srgb, var(--copper) 45%, var(--line)); border-radius: var(--r); margin-bottom: .15rem;
+  padding: .6rem .85rem; background: color-mix(in srgb, var(--copper) 9%, var(--panel)); box-shadow: inset 3px 0 0 var(--copper); }
+.mlead-t { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--copper-hi); }
 .mlead-s { font-size: 11px; font-family: var(--mono); color: var(--dim); margin-top: .12rem; }
 .mconn { width: 2px; height: 15px; margin: 0 auto; background: linear-gradient(var(--copper), color-mix(in srgb, var(--copper) 25%, transparent)); }
 .mconn.dash { background: none; border-left: 2px dashed color-mix(in srgb, var(--copper) 45%, transparent); }
@@ -585,10 +603,10 @@ footer {
   border-radius: var(--r); padding: .55rem .75rem .65rem; box-shadow: var(--sh); }
 .mstage.support { border-style: dashed; opacity: .92; }
 .mstage-h { display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; }
-.mstage-t { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--copper); }
+.mstage-t { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--copper-hi); }
 .mtag { font-size: 9px; font-weight: 700; padding: .08rem .45rem; border-radius: 999px; letter-spacing: .02em; white-space: nowrap; }
-.mtag.par { color: var(--copper); border: 1px solid color-mix(in srgb, var(--copper) 45%, var(--line)); background: color-mix(in srgb, var(--copper) 12%, transparent); }
-.mtag.loop { color: var(--info); border: 1px solid color-mix(in srgb, var(--info) 45%, var(--line)); background: color-mix(in srgb, var(--info) 12%, transparent); }
+.mtag.par { color: var(--copper-hi); border: 1px solid color-mix(in srgb, var(--copper) 40%, transparent); background: color-mix(in srgb, var(--copper) 11%, transparent); }
+.mtag.loop { color: var(--info); border: 1px solid color-mix(in srgb, var(--info) 40%, transparent); background: color-mix(in srgb, var(--info) 11%, transparent); }
 .mstage-s { font-size: 10px; color: var(--dim); margin: .12rem 0 .45rem; }
 .mseats { display: flex; flex-direction: column; gap: .35rem; }
 .mseats.par { padding-left: .55rem; margin-left: .1rem; border-left: 2px solid color-mix(in srgb, var(--copper) 42%, var(--line)); }
@@ -598,27 +616,30 @@ footer {
 .mseat-role { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--fg); display: inline-flex; align-items: center; }
 .mseat-model { font-family: var(--mono); font-size: 10px; color: var(--nc); text-align: right; }
 .rf-par-t.seq { fill: var(--info); }
-.mtag.seq { color: var(--info); border: 1px solid color-mix(in srgb, var(--info) 45%, var(--line)); background: color-mix(in srgb, var(--info) 12%, transparent); }
+.mtag.seq { color: var(--info); border: 1px solid color-mix(in srgb, var(--info) 40%, transparent); background: color-mix(in srgb, var(--info) 11%, transparent); }
 .mseats.spine { margin-bottom: .35rem; }
-.mseats.spine .mseat { border-left-color: var(--copper); background: color-mix(in srgb, var(--copper) 9%, var(--panel2)); }
+.mseats.spine .mseat { border-left-color: var(--copper); background: color-mix(in srgb, var(--copper) 8%, var(--panel2)); }
 .mseats.seq { padding-left: .55rem; margin-left: .1rem; border-left: 2px dashed color-mix(in srgb, var(--info) 42%, var(--line)); }
 .mseat-no { display: inline-block; min-width: 1.5em; margin-right: .45ch; padding: 0 .3em; border-radius: 999px; font-size: 9px; font-weight: 800;
-  color: var(--copper); background: color-mix(in srgb, var(--copper) 14%, transparent); border: 1px solid color-mix(in srgb, var(--copper) 40%, var(--line)); text-align: center; }
+  color: var(--copper-hi); background: color-mix(in srgb, var(--copper) 13%, transparent); border: 1px solid color-mix(in srgb, var(--copper) 35%, transparent); text-align: center; }
 
 /* ---- narrow phones (~360px) ------------------------------------------------ */
 @media (max-width: 380px) {
   main { padding: .7rem; }
   header { gap: .5rem; padding: .5rem .6rem; }
-  .logo { font-size: 13px; letter-spacing: .06em; }
-  nav button { padding: .3rem .5rem; font-size: 11px; }
+  .logo { font-size: 12.5px; letter-spacing: .08em; }
+  nav button { padding: .3rem .55rem; font-size: 11px; }
   .tiles, .mcards { grid-template-columns: 1fr; }
   h2 { font-size: 18px; }
 }
 
 .projstrip{display:flex;gap:6px;padding:4px 14px 8px;flex-wrap:wrap}
-.projbtn{background:transparent;border:1px solid var(--line,#333);border-radius:14px;
-  padding:2px 12px;font:inherit;color:inherit;cursor:pointer;opacity:.65}
-.projbtn.active{opacity:1;border-color:var(--acc,#7ee787)}
+.projbtn{background:transparent;border:1px solid var(--line);border-radius:999px;
+  padding:2px 12px;font:inherit;color:inherit;cursor:pointer;opacity:.6;
+  transition:opacity .15s ease,border-color .15s ease}
+.projbtn:hover{opacity:.85}
+.projbtn.active{opacity:1;border-color:color-mix(in srgb,var(--copper) 60%,var(--line));
+  background:color-mix(in srgb,var(--copper) 8%,transparent)}
 .projct{margin-left:6px;font-size:.85em;opacity:.8}
 </style>
 </head>
