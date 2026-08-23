@@ -10,7 +10,7 @@
       "spark": [
         [
           1786921200,
-          153
+          154
         ],
         [
           1786924800,
@@ -2063,8 +2063,8 @@
           81.0
         ],
         [
-          1786921318,
-          84.0
+          1786923019,
+          85.0
         ],
         [
           1786925593,
@@ -3284,8 +3284,8 @@
             78.0
           ],
           [
-            1786921318,
-            86.0
+            1786923019,
+            87.0
           ],
           [
             1786925593,
@@ -3493,8 +3493,8 @@
           0.0
         ],
         [
-          1786921318,
-          11.0
+          1786923019,
+          20.0
         ],
         [
           1786925593,
@@ -3931,8 +3931,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-RT-RETENTION-SWEEP",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4515,7 +4521,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 19,
+          "ctx_pct": 21,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4530,7 +4536,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-RT-SHEETS",
@@ -5153,7 +5159,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 23,
+          "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5541,13 +5547,19 @@
           ]
         }
       },
-      "snapshot_id": "8c985cc866c11011"
+      "snapshot_id": "5103ea86f39ad264"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-RT-RETENTION-SWEEP",
+            "kind": "needs-owner",
+            "raised_at": 1787526065
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5578,9 +5590,9 @@
         {
           "id": "INT7-RT-RETENTION-SWEEP",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 19,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 21,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5595,14 +5607,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W3-EMP",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 23,
+          "ctx_pct": 28,
           "last_commit_at": 1787525210,
           "head": "73e0d2d6",
           "subfence": {
@@ -5902,13 +5914,19 @@
           ]
         }
       },
-      "snapshot_id": "901cd954ab3a30f0"
+      "snapshot_id": "77e784c7fcfb8d90"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-RT-RETENTION-SWEEP",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6491,7 +6509,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 19,
+          "ctx_pct": 21,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6506,7 +6524,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-RT-SHEETS",
@@ -7129,7 +7147,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 23,
+          "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7486,7 +7504,7 @@
           ]
         }
       },
-      "snapshot_id": "b9dc1e7273ee5eb8"
+      "snapshot_id": "849db0b866cb396a"
     }
   },
   "pm": {
@@ -7507,22 +7525,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 751
+        "monitor_last_pass_min": 756
       }
     ]
   },
-  "snapshot_id": "808068ecfed6ca41",
-  "published_at": "2026-08-23T22:59:08Z"
+  "snapshot_id": "5010cd7d261586e6",
+  "published_at": "2026-08-23T23:04:20Z"
 }
