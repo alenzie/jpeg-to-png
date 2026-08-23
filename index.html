@@ -570,6 +570,13 @@ footer {
 .rf-par-t { font-size: 9px; fill: var(--copper); font-family: var(--disp); font-weight: 700; letter-spacing: .03em; }
 .rf-cap-ok { font-size: 9.5px; fill: var(--ok); font-family: var(--disp); }
 
+/* attached sub-block (e.g. BUILD's per-step checkpoint) — dashed, hangs off the stage band's bottom */
+.rf-attach-tick { stroke: color-mix(in srgb, var(--copper) 30%, transparent); stroke-width: 1; stroke-dasharray: 2 4; fill: none; }
+.rf-attach-band { fill: color-mix(in srgb, var(--copper) 3%, transparent); stroke: var(--line); stroke-dasharray: 2 4; }
+.rf-attach-t     { font-size: 9.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; fill: var(--copper); font-family: var(--disp); }
+.rf-attach-role  { font-size: 9.5px; font-family: var(--mono); }
+.rf-attach-s     { font-size: 8.5px; fill: var(--dim); font-family: var(--disp); }
+
 /* mobile vertical loom — stage cards, native scroll, explicit parallel groups */
 .rflow-legend.static { position: static; margin-top: .6rem; display: inline-flex; backdrop-filter: none; }
 .mloom { display: flex; flex-direction: column; gap: 0; }
@@ -604,6 +611,14 @@ footer {
 .mseats.seq { padding-left: .55rem; margin-left: .1rem; border-left: 2px dashed color-mix(in srgb, var(--info) 42%, var(--line)); }
 .mseat-no { display: inline-block; min-width: 1.5em; margin-right: .45ch; padding: 0 .3em; border-radius: 999px; font-size: 9px; font-weight: 800;
   color: var(--copper); background: color-mix(in srgb, var(--copper) 14%, transparent); border: 1px solid color-mix(in srgb, var(--copper) 40%, var(--line)); text-align: center; }
+
+/* mobile attached sub-block (mirrors .rf-attach-* on desktop) */
+.mstage-attach  { margin-top: .5rem; padding: .4rem .55rem; border-radius: var(--r-xs);
+  border: 1px dashed color-mix(in srgb, var(--copper) 40%, var(--line)); background: color-mix(in srgb, var(--copper) 4%, transparent); }
+.mattach-h      { font-size: 9.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--copper); }
+.mattach-role   { font-family: var(--mono); font-size: 11px; font-weight: 700; margin-top: .15rem; color: var(--nc); }
+.mattach-model  { color: var(--dim); font-weight: 500; }
+.mattach-s      { font-size: 9.5px; color: var(--dim); margin-top: .15rem; }
 
 /* ---- narrow phones (~360px) ------------------------------------------------ */
 @media (max-width: 380px) {
@@ -1047,8 +1062,9 @@ const RF_STAGES = [
   { id:'draft',     t:'Plan · draft',   s:'lead spine + 2 blind co-drafters', flow:'coplan', spine:'plan', roles:['plan','coplan.fable','coplan.codex'] },
   { id:'scrutiny',  t:'Plan · scrutiny',s:'convergence loop', flow:'sequence', loop:'re-scrutinise', roles:['plan_scrutiny.sol_seed','plan_scrutiny.opener','plan_scrutiny.iterate','plan_scrutiny.confirm'] },
   { id:'prebuild',  t:'Pre-build',      s:'plan + skeleton check', flow:'single', roles:['prebuild_review.codex'] },
-  { id:'build',     t:'Build',          s:'per-step roles', flow:'roles', roles:['build.hard','build.rote','build.checkpoint_confirm'] },
-  { id:'review',    t:'Phase-4 review', s:'convergent loop', flow:'sequence', loop:'another round', roles:['p4.r1_swarm','p4.iterate','p4.confirm'] },
+  { id:'build',     t:'Build',          s:'per-step roles', flow:'roles', roles:['build.hard','build.rote'],
+    attach:{ role:'build.checkpoint_confirm', t:'per-step checkpoint', s:'find → glm-5.3 (default, every rung) · declare → codex, rung-scaled' } },
+  { id:'review',    t:'Phase-4 review', s:'whole-unit convergent review · budget-gated', flow:'sequence', loop:'another round · until 0 core must/should', roles:['p4.r1_swarm','p4.iterate','p4.confirm'] },
   { id:'finish',    t:'Gate · merge',   s:'clippy floor → PR', flow:'single', roles:['clippy_fix.worker'] },
 ];
 // classify a stage's seats by REAL concurrency: parallel fleet vs sequential rounds vs a lead spine.
@@ -1071,12 +1087,20 @@ function modelInfo(model) {
   if (m.includes('sol'))    return { fam:'codex',  v:'--sol',    short:'sol' };
   if (m.includes('terra'))  return { fam:'codex',  v:'--copper', short:'terra' };
   if (m.includes('gpt'))    return { fam:'codex',  v:'--copper', short:m.replace('gpt-','') };
+  if (m.includes('glm'))    return { fam:'glm',    v:'--glm',    short:m || 'glm-5.3' };
   return { fam:'other', v:'--dim', short:m || '—' };
 }
 const rfShort = (role) => { const r = String(role||'').replace(/^hultra\./,''); const d = r.indexOf('.'); return d < 0 ? r : r.slice(d+1); };
+// static hover-annotations for seats whose flattened policy value hides a rung-scaled/GLM-overlaid
+// story (checkpoint_fence + burn_balance.glm) — DISPLAY ONLY, doesn't change what the value shown is.
+const RF_SEAT_NOTE = {
+  'p4.r1_swarm':              '≤10 reviewers, 1 per code commit — NEVER opus',
+  'p4.iterate':                'GLM-default (glm-5.3 holds loop-iterate); shown value is the codex fallback',
+  'build.checkpoint_confirm': 'standard-rung DECLARE only; glm-5.3 holds the FIND round at every rung; A1 (consent/money/pg) skips GLM entirely',
+};
 const rfCurve = (x1,y1,x2,y2) => { const mx=((x1+x2)/2).toFixed(1); return `M${x1.toFixed(1)},${y1.toFixed(1)} C${mx},${y1.toFixed(1)} ${mx},${y2.toFixed(1)} ${x2.toFixed(1)},${y2.toFixed(1)}`; };
 
-function rfNode(x, y, role, mi, effort, badge) {
+function rfNode(x, y, role, mi, effort, badge, extraTitle) {
   const W=170, H=48;
   let bdg='';
   if (badge==='lead') bdg=`<rect x="${x+W-48}" y="${y+7}" width="42" height="15" rx="7" style="fill:color-mix(in srgb,var(--copper) 18%,var(--panel));stroke:var(--copper);stroke-width:.8"/><text x="${x+W-27}" y="${y+17.5}" text-anchor="middle" style="font-size:8px;fill:var(--copper);font-weight:800;letter-spacing:.06em">LEAD</text>`;
@@ -1089,7 +1113,7 @@ function rfNode(x, y, role, mi, effort, badge) {
     <text class="rf-model" x="${x+26}" y="${y+34}">${escp(mi.short)}</text>
     <text class="rf-eff"   x="${x+W-10}" y="${y+42}" text-anchor="end">${escp(effort||'')}</text>
     ${bdg}
-    <title>${escp(role)} · ${escp(mi.short)}${effort?` · ${escp(effort)}`:''}</title>
+    <title>${escp(role)} · ${escp(mi.short)}${effort?` · ${escp(effort)}`:''}${extraTitle?` — ${escp(extraTitle)}`:''}</title>
   </g>`;
 }
 
@@ -1149,12 +1173,29 @@ function buildLoom(phases) {
       under.push(`<path class="rf-branch" style="stroke:var(${mi.v})" stroke-opacity=".34" stroke-width="1.5" d="${rfCurve(ex, spineY, cx-NW/2, y)}"/>`);
       under.push(`<path class="rf-branch" style="stroke:var(${mi.v})" stroke-opacity=".34" stroke-width="1.5" d="${rfCurve(cx+NW/2, y, xx, spineY)}"/>`);
       const badge = info.spine===p ? 'lead' : (seqNo[j] ? ('#'+seqNo[j]) : null);
-      nodes.push(rfNode(cx-NW/2, y-NH/2, rfShort(p.role), mi, p.effort, badge));
+      nodes.push(rfNode(cx-NW/2, y-NH/2, rfShort(p.role), mi, p.effort, badge, RF_SEAT_NOTE[p.role]));
     });
     if (st.loop) {
       const ty = top - NH/2 - 22;
       over.push(`<path class="rf-loop" stroke-width="1.6" d="M${xx.toFixed(1)},${spineY} C${(xx+16).toFixed(1)},${ty.toFixed(1)} ${(ex-16).toFixed(1)},${ty.toFixed(1)} ${ex.toFixed(1)},${spineY}"/>`);
       over.push(`<text class="rf-loop-t" x="${cx}" y="${(ty-4).toFixed(1)}" text-anchor="middle">↻ ${escp(st.loop)}</text>`);
+    }
+    if (st.attach) {
+      const ap = byRole[st.attach.role];
+      if (ap) {
+        const mi2 = modelInfo(ap.model);
+        const bandBottom = HDR - 4 + (maxSeats-1)*STEP + NH + 34;
+        const ax = cx - COLW/2 + 10, ay = bandBottom + 14, aw = COLW - 20, ah = 46;
+        under.push(`<path class="rf-attach-tick" d="M${cx},${bandBottom} L${cx},${ay}"/>`);
+        const atitle = RF_SEAT_NOTE[ap.role];
+        over.push(`<g class="rf-attach">
+          <rect class="rf-attach-band" x="${ax}" y="${ay}" width="${aw}" height="${ah}" rx="9"/>
+          <text class="rf-attach-t" x="${cx}" y="${ay+14}" text-anchor="middle">⚙ ${escp(st.attach.t)}</text>
+          <text class="rf-attach-role" x="${cx}" y="${ay+28}" text-anchor="middle" style="fill:var(${mi2.v})">${escp(rfShort(ap.role))} · ${escp(mi2.short)} · ${escp(ap.effort||'')}</text>
+          <text class="rf-attach-s" x="${cx}" y="${ay+40}" text-anchor="middle">${escp(st.attach.s)}</text>
+          ${atitle ? `<title>${escp(st.attach.t)} — ${escp(atitle)}</title>` : ''}
+        </g>`);
+      }
     }
   });
 
@@ -1172,7 +1213,8 @@ function buildLoom(phases) {
 
 function buildLoomMobile(phases) {
   const byRole = {}; (phases||[]).forEach(p => { byRole[String(p.role||'').replace(/^hultra\./,'')] = p; });
-  const seat = (p, badge) => { const mi=modelInfo(p.model); return `<div class="mseat" style="--nc:var(${mi.v})">
+  const seat = (p, badge) => { const mi=modelInfo(p.model), note=RF_SEAT_NOTE[p.role];
+    return `<div class="mseat" style="--nc:var(${mi.v})"${note?` title="${escp(note)}"`:''}>
     <span class="mseat-role">${badge?`<span class="mseat-no">${escp(badge)}</span>`:''}${escp(rfShort(p.role))}</span>
     <span class="mseat-model">${escp(mi.short)}${p.effort?` · ${escp(p.effort)}`:''}</span></div>`; };
   const leadP = byRole['lead'];
@@ -1184,11 +1226,19 @@ function buildLoomMobile(phases) {
     const spineHtml = info.spine ? `<div class="mseats spine">${seat(info.spine, 'LEAD')}</div>` : '';
     const fanHtml = info.fan.length ? `<div class="mseats ${info.par?'par':''}">${info.fan.map(p=>seat(p)).join('')}</div>` : '';
     const seqHtml = info.seq.length ? `<div class="mseats seq">${info.seq.map((p,i)=>seat(p,'#'+(i+1))).join('')}</div>` : '';
+    const attachHtml = st.attach ? (() => {
+      const ap = byRole[st.attach.role]; if (!ap) return '';
+      const mi = modelInfo(ap.model), note = RF_SEAT_NOTE[ap.role];
+      return `<div class="mstage-attach"${note?` title="${escp(note)}"`:''}>
+        <div class="mattach-h">⚙ ${escp(st.attach.t)}</div>
+        <div class="mattach-role" style="--nc:var(${mi.v})">${escp(rfShort(ap.role))} <span class="mattach-model">${escp(mi.short)} · ${escp(ap.effort||'')}</span></div>
+        <div class="mattach-s">${escp(st.attach.s)}</div></div>`;
+    })() : '';
     return `<div class="mconn"></div><div class="mstage">
       <div class="mstage-h"><span class="mstage-t">${escp(st.t)}</span>
         ${st.loop?`<span class="mtag loop">↻ ${escp(st.loop)}</span>`:''}
         ${info.tag?`<span class="mtag ${info.par?'par':'seq'}">${escp(info.tag)}</span>`:''}</div>
-      <div class="mstage-s">${escp(st.s)}</div>${spineHtml}${fanHtml}${seqHtml}</div>`;
+      <div class="mstage-s">${escp(st.s)}</div>${spineHtml}${fanHtml}${seqHtml}${attachHtml}</div>`;
   }).join('');
   const sup = RF_SUPPORT.roles.map(r=>byRole[r]).filter(Boolean);
   const supHtml = sup.length ? `<div class="mconn dash"></div><div class="mstage support">
