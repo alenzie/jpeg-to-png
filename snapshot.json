@@ -10,7 +10,7 @@
       "spark": [
         [
           1786910400,
-          152
+          153
         ],
         [
           1786914000,
@@ -905,7 +905,7 @@
         "spark": [
           [
             1786910400,
-            338
+            334
           ],
           [
             1786914000,
@@ -2023,8 +2023,8 @@
           81.0
         ],
         [
-          1786911124,
-          81.0
+          1786912942,
+          82.0
         ],
         [
           1786914813,
@@ -3244,7 +3244,7 @@
             78.0
           ],
           [
-            1786911124,
+            1786912942,
             81.0
           ],
           [
@@ -3879,14 +3879,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "W3-EMP",
-            "kind": "needs-owner",
-            "raised_at": null
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5085,7 +5079,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 16,
+          "ctx_pct": 17,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5100,7 +5094,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "W3A",
@@ -5456,25 +5450,19 @@
           ]
         }
       },
-      "snapshot_id": "fd03c845c781cd02"
+      "snapshot_id": "39a1ebeb950a755d"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "W3-EMP",
-            "kind": "needs-owner",
-            "raised_at": 1787502929
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1787514092
+        "last_pass_at": 1787515893
       },
       "runstate": {
         "auto": true,
@@ -5499,9 +5487,9 @@
         {
           "id": "W3-EMP",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 16,
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 17,
           "last_commit_at": 1787502594,
           "head": "0950ebe1",
           "subfence": {
@@ -5537,7 +5525,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -5802,19 +5790,13 @@
           ]
         }
       },
-      "snapshot_id": "91a9757f1edf0f22"
+      "snapshot_id": "40e1118475658751"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "W3-EMP",
-            "kind": "needs-owner",
-            "raised_at": null
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -7013,7 +6995,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 16,
+          "ctx_pct": 17,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7028,7 +7010,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "W3A",
@@ -7370,7 +7352,7 @@
           ]
         }
       },
-      "snapshot_id": "12a94615b85b6be4"
+      "snapshot_id": "8a0b3ecfd29499a8"
     }
   },
   "pm": {
@@ -7391,22 +7373,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 30
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 583
+        "monitor_last_pass_min": 588
       }
     ]
   },
-  "snapshot_id": "1401e49ccbfa6329",
-  "published_at": "2026-08-23T20:11:32Z"
+  "snapshot_id": "b1e0e49dfb74a595",
+  "published_at": "2026-08-23T20:16:45Z"
 }
