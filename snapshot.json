@@ -94,6 +94,27 @@
             65.0
           ]
         ]
+      },
+      {
+        "target": 100,
+        "label": "B",
+        "tier": "Pro",
+        "projected": 86,
+        "used": 46,
+        "at": 1787523611,
+        "reset": "22:00 on 26 Aug",
+        "spark": [
+          [
+            1787522400,
+            84
+          ]
+        ],
+        "trail": [
+          [
+            54.0,
+            45.0
+          ]
+        ]
       }
     ],
     "claude": [
@@ -578,10 +599,10 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 152,
-        "used": 38,
-        "at": 1787522681,
-        "reset": "Aug 28, 10pm (America/Los_Angeles)",
+        "projected": 155,
+        "used": 39,
+        "at": 1787523611,
+        "reset": "Aug 28, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1786921200,
@@ -748,7 +769,7 @@
       "target": 100,
       "projected": 66,
       "used": 27,
-      "at": 1787522681,
+      "at": 1787523611,
       "reset": "Aug 27, 19:39",
       "level": "pro",
       "spark": [
@@ -3635,14 +3656,20 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-RT-RETENTION-SWEEP",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1787525275
+        "last_pass_at": 1787527075
       },
       "runstate": {
         "auto": true,
@@ -4219,7 +4246,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 22,
+          "ctx_pct": 26,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4234,7 +4261,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-RT-SHEETS",
@@ -4857,7 +4884,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 31,
+          "ctx_pct": 34,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5245,19 +5272,25 @@
           ]
         }
       },
-      "snapshot_id": "f3d6f9a4f5f04739"
+      "snapshot_id": "7f37746ded3e2e55"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-RT-RETENTION-SWEEP",
+            "kind": "needs-owner",
+            "raised_at": 1787527274
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1787525274
+        "last_pass_at": 1787527075
       },
       "runstate": {
         "auto": true,
@@ -5282,9 +5315,9 @@
         {
           "id": "INT7-RT-RETENTION-SWEEP",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 22,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 26,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5299,22 +5332,26 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W3-EMP",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 31,
-          "last_commit_at": 1787525210,
-          "head": "73e0d2d6",
+          "ctx_pct": 34,
+          "last_commit_at": 1787526754,
+          "head": "9da31c3f",
           "subfence": {
             "done": 10,
             "total": 12
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "9da31c3f",
+              "at": 1787526754
+            },
             {
               "sha": "73e0d2d6",
               "at": 1787525210
@@ -5330,10 +5367,6 @@
             {
               "sha": "1cafb36d",
               "at": 1787523751
-            },
-            {
-              "sha": "893e91e3",
-              "at": 1787522993
             }
           ],
           "fences": {
@@ -5606,13 +5639,19 @@
           ]
         }
       },
-      "snapshot_id": "ea92c7fe0772c66d"
+      "snapshot_id": "30aabb88555b00a5"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-RT-RETENTION-SWEEP",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6195,7 +6234,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 22,
+          "ctx_pct": 26,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6210,7 +6249,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-RT-SHEETS",
@@ -6833,7 +6872,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 31,
+          "ctx_pct": 34,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7190,7 +7229,7 @@
           ]
         }
       },
-      "snapshot_id": "f76acfd4862876bd"
+      "snapshot_id": "4c88639e32243a81"
     }
   },
   "pm": {
@@ -7211,22 +7250,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 761
+        "monitor_last_pass_min": 774
       }
     ]
   },
-  "snapshot_id": "748ea2b71da9f258",
-  "published_at": "2026-08-23T23:09:35Z"
+  "snapshot_id": "dce0ed281dc5c6dd",
+  "published_at": "2026-08-23T23:22:44Z"
 }
