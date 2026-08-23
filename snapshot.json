@@ -3851,8 +3851,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "W3-EMP",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5051,7 +5057,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 12,
+          "ctx_pct": 16,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5066,7 +5072,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W3A",
@@ -5422,13 +5428,19 @@
           ]
         }
       },
-      "snapshot_id": "4ac2fa78385e3979"
+      "snapshot_id": "a89ab803824c2e36"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "W3-EMP",
+            "kind": "needs-owner",
+            "raised_at": 1787502929
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5459,9 +5471,9 @@
         {
           "id": "W3-EMP",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 12,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 16,
           "last_commit_at": 1787502594,
           "head": "0950ebe1",
           "subfence": {
@@ -5497,7 +5509,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -5762,13 +5774,19 @@
           ]
         }
       },
-      "snapshot_id": "06705b30edf8c74c"
+      "snapshot_id": "84c8f96962f361c2"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "W3-EMP",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6967,7 +6985,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 12,
+          "ctx_pct": 16,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6982,7 +7000,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W3A",
@@ -7324,7 +7342,7 @@
           ]
         }
       },
-      "snapshot_id": "c0fe8d304e9e60c0"
+      "snapshot_id": "fd3047b45a12292b"
     }
   },
   "pm": {
@@ -7345,22 +7363,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 364
+        "monitor_last_pass_min": 369
       }
     ]
   },
-  "snapshot_id": "addfe50d3c2af99c",
-  "published_at": "2026-08-23T16:32:30Z"
+  "snapshot_id": "99a2ac6aef5f19e3",
+  "published_at": "2026-08-23T16:37:42Z"
 }
