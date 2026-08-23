@@ -44,6 +44,7 @@
   --sonnet: #8AA6E6;   /* sonnet weft    — lighter than opus periwinkle   */
   --sol:    #E7A24A;   /* codex sol gold — deep, vs terra's copper        */
   --glm:    #9B8CFF;   /* glm violet     — distinct from codex/claude/sol  */
+  --deepseek: #4FA8E0;  /* deepseek blue  — 4th pool, spend-down balance   */
 
   --mono: ui-monospace, "SF Mono", "Cascadia Code", "Fira Code", Menlo, Consolas, monospace;
   --disp: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -91,6 +92,7 @@
     --sonnet: #4E6DBE;
     --sol:    #C07A22;
     --glm:    #6E5AE0;
+    --deepseek: #2C7FB8;
 
     --sh: 0 10px 26px -22px rgba(24,34,64,.55), 0 1px 0 rgba(255,255,255,.7) inset;
     --sh-lift: 0 16px 30px -20px rgba(24,34,64,.5), 0 0 0 1px color-mix(in srgb, var(--copper) 34%, transparent);
@@ -448,6 +450,7 @@ footer {
 .mcard.codex  { --tc: var(--copper); }
 .mcard.claude { --tc: var(--info); }
 .mcard.glm    { --tc: var(--glm); }
+.mcard.deepseek { --tc: var(--deepseek); }
 .mcard::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--tc); }
 .mcard-h { display: flex; justify-content: space-between; align-items: center; gap: .5rem; margin-bottom: .35rem; }
 .mname { font-family: var(--mono); font-weight: 700; font-size: var(--fs-lead); text-transform: uppercase; letter-spacing: .03em; }
@@ -466,9 +469,10 @@ footer {
 .fam.codex  { color: var(--copper); border-color: color-mix(in srgb, var(--copper) 45%, var(--line)); background: color-mix(in srgb, var(--copper) 13%, transparent); }
 .fam.claude { color: var(--info);   border-color: color-mix(in srgb, var(--info) 45%, var(--line));   background: color-mix(in srgb, var(--info) 13%, transparent); }
 .fam.glm    { color: var(--glm);    border-color: color-mix(in srgb, var(--glm) 45%, var(--line));    background: color-mix(in srgb, var(--glm) 13%, transparent); }
+.fam.deepseek { color: var(--deepseek); border-color: color-mix(in srgb, var(--deepseek) 45%, var(--line)); background: color-mix(in srgb, var(--deepseek) 13%, transparent); }
 .fdot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: .55ch; vertical-align: middle; flex: none; }
-.fdot.codex { background: var(--copper); } .fdot.claude { background: var(--info); } .fdot.glm { background: var(--glm); } .fdot.other { background: var(--dim); }
-.fam-t.codex { color: var(--copper); } .fam-t.claude { color: var(--info); } .fam-t.glm { color: var(--glm); } .fam-t.other { color: var(--fg); }
+.fdot.codex { background: var(--copper); } .fdot.claude { background: var(--info); } .fdot.glm { background: var(--glm); } .fdot.deepseek { background: var(--deepseek); } .fdot.other { background: var(--dim); }
+.fam-t.codex { color: var(--copper); } .fam-t.claude { color: var(--info); } .fam-t.glm { color: var(--glm); } .fam-t.deepseek { color: var(--deepseek); } .fam-t.other { color: var(--fg); }
 .mono { font-family: var(--mono); }
 .tscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .tscroll table { min-width: max-content; }
@@ -814,6 +818,24 @@ function gaugeCard(g) {
     ${resetLine(g)}
   </div>`;
 }
+// DeepSeek is a spend-down USD BALANCE, not a %used-vs-target weekly pool (no reset, no target) —
+// a %-used gauge would be meaningless here, so this renders balance / burn-per-day / days-to-empty
+// instead. Shares the .tgauge shell so it sits naturally beside gaugeCard's rows.
+function dsGauge(g) {
+  const bal = g.balance != null ? g.balance.toFixed(2) : '—';
+  const cur = g.currency || 'USD';
+  const burn = g.burn_per_day != null ? `${g.currency || 'USD'} ${g.burn_per_day.toFixed(2)}/d` : '—';
+  const days = g.days_to_empty != null ? `${g.days_to_empty.toFixed(1)}d` : '—';
+  const dcls = g.days_to_empty == null ? '' : g.days_to_empty < 3 ? 'bad' : g.days_to_empty < 10 ? 'hot' : 'ok-c';
+  const availHtml = g.available === false ? ' <span class="bad">UNAVAILABLE</span>' : '';
+  return `<div class="tgauge">
+    <div class="tg-lbl"><span>deepseek <span class="dim">(balance)</span></span>
+    <span class="tg-num ${dcls}">${escp(cur)} ${bal}${availHtml}</span></div>
+    <div class="mstats"><span>burn <b>${escp(burn)}</b></span><span>days left <b class="${dcls}">${escp(days)}</b></span></div>
+    ${spark(g.spark, null)}
+    ${resetLine(g)}
+  </div>`;
+}
 function renderPM() {
   if (!SNAP) { view.innerHTML = emptyState('waiting for snapshot…'); return; }
   const s = SNAP;
@@ -850,8 +872,13 @@ function renderPM() {
     if (th.codex) gauges.push({ name: 'codex', ...th.codex });
     (th.claude || []).forEach(c => gauges.push({ name: 'claude ' + (c.label || ''), ...c }));
     if (th.glm) gauges.push({ name: 'glm', ...th.glm });
-    throttlingHtml = gauges.length ? gauges.map(gaugeCard).join('') : '<div class="empty-inline">no throttling readings in this snapshot</div>';
+    throttlingHtml = gauges.length ? gauges.map(gaugeCard).join('') : '';
   }
+  // deepseek is balance-shaped (no target/used%/elapsed%, so it never enters throttlingChart's
+  // trail plot or gaugeCard's %-used gauge) — always rendered separately with dsGauge and appended
+  // after whichever of the two branches above ran.
+  if (th.deepseek) throttlingHtml += dsGauge(th.deepseek);
+  if (!throttlingHtml) throttlingHtml = '<div class="empty-inline">no throttling readings in this snapshot</div>';
 
   const eligibleHtml = (s.eligible || []).length
     ? `<div class="chips">${s.eligible.map(u => `<span class="chip">${escp(u)}</span>`).join('')}</div>`
@@ -1088,6 +1115,7 @@ function modelInfo(model) {
   if (m.includes('terra'))  return { fam:'codex',  v:'--copper', short:'terra' };
   if (m.includes('gpt'))    return { fam:'codex',  v:'--copper', short:m.replace('gpt-','') };
   if (m.includes('glm'))    return { fam:'glm',    v:'--glm',    short:m || 'glm-5.3' };
+  if (m.includes('deepseek')) return { fam:'deepseek', v:'--deepseek', short:m || 'deepseek-chat' };
   return { fam:'other', v:'--dim', short:m || '—' };
 }
 const rfShort = (role) => { const r = String(role||'').replace(/^hultra\./,''); const d = r.indexOf('.'); return d < 0 ? r : r.slice(d+1); };
@@ -1312,6 +1340,26 @@ function burnCard(g) {
     ${resetLine(g)}
   </div>`;
 }
+// DeepSeek variant of burnCard: a spend-down USD balance has no "% used vs target @ reset" — the
+// big number is the balance itself, and headroom is expressed as burn-per-day / days-to-empty.
+function dsBurnCard(g) {
+  const bal = g.balance != null ? g.balance.toFixed(2) : '—';
+  const cur = g.currency || 'USD';
+  const days = g.days_to_empty;
+  const cls = days == null ? '' : days < 3 ? 'bad' : days < 10 ? 'hot' : 'ok-c';
+  const fill = days != null ? Math.max(0, Math.min(100, 100 - days / 30 * 100)) : 0;
+  const burnHtml = g.burn_per_day != null ? `<span>burn <b>${escp(cur)} ${g.burn_per_day.toFixed(2)}/d</b></span>` : '<span>burn <b>—</b></span>';
+  const daysHtml = days != null ? `<span class="${cls}">days left ${days.toFixed(1)}</span>` : '<span class="dim">days left —</span>';
+  const availHtml = g.available === false ? '<span class="bad">UNAVAILABLE</span>' : '';
+  return `<div class="mcard deepseek">
+    <div class="mcard-h"><span class="mname">deepseek</span><span class="fam deepseek">deepseek</span></div>
+    <div class="mbig ${cls}">${escp(cur)} ${bal}<span class="munit">balance</span></div>
+    <div class="bar" title="depletion (days-to-empty vs a 30-day horizon)"><i style="width:${fill}%"></i></div>
+    <div class="mstats">${burnHtml}${daysHtml}${availHtml}</div>
+    ${spark(g.spark, null)}
+    ${resetLine(g)}
+  </div>`;
+}
 function renderModels() {
   if (!SNAP) { view.innerHTML = emptyState('waiting for snapshot…'); return; }
   const th = SNAP.throttling || {};
@@ -1319,9 +1367,12 @@ function renderModels() {
   if (th.codex) accts.push({ name: 'codex', fam: 'codex', ...th.codex });
   (th.claude || []).forEach(c => accts.push({ name: 'claude ' + (c.label || ''), fam: 'claude', ...c }));
   if (th.glm) accts.push({ name: 'glm', fam: 'glm', ...th.glm });
+  // th.codex / th.claude are per-account ARRAYS; th.glm / th.deepseek are single scalar objects.
+  // deepseek is balance-shaped (no %used/target/reset) so it renders via dsBurnCard, not burnCard.
+  if (th.deepseek) accts.push({ name: 'deepseek', fam: 'deepseek', ...th.deepseek });
   const burnHtml = accts.length
-    ? `<div class="mcards">${accts.map(burnCard).join('')}</div>
-       <div class="note">Headroom is target minus projected-at-reset — more headroom means more room before the weekly limit resets. Each card reads its own target from the snapshot.</div>`
+    ? `<div class="mcards">${accts.map(a => a.fam === 'deepseek' ? dsBurnCard(a) : burnCard(a)).join('')}</div>
+       <div class="note">Headroom is target minus projected-at-reset — more headroom means more room before the weekly limit resets. Each card reads its own target from the snapshot. DeepSeek is pay-per-use (no weekly reset), so its card shows balance + burn-per-day + days-to-empty instead.</div>`
     : '<div class="empty-inline">no throttling readings in this snapshot</div>';
 
   const rt = SNAP.routing;
