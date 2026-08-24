@@ -643,10 +643,10 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 187,
-        "used": 59,
-        "at": 1787562123,
-        "reset": "Aug 28, 10pm (America/Los_Angeles)",
+        "projected": 188,
+        "used": 60,
+        "at": 1787564255,
+        "reset": "Aug 28, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1787022000,
@@ -873,7 +873,7 @@
       "target": 100,
       "projected": 57,
       "used": 27,
-      "at": 1787562123,
+      "at": 1787564255,
       "reset": "Aug 27, 19:39",
       "level": "pro",
       "spark": [
@@ -1525,9 +1525,9 @@
       "balance": 9.7,
       "currency": "USD",
       "available": true,
-      "burn_per_day": null,
+      "burn_per_day": 0.0,
       "days_to_empty": null,
-      "at": 1787562123,
+      "at": 1787564255,
       "spark": [
         [
           1787428800,
@@ -4434,7 +4434,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 60,
+          "ctx_pct": 61,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4588,7 +4588,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 48,
+          "ctx_pct": 0,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5599,7 +5599,7 @@
           ]
         }
       },
-      "snapshot_id": "5e601a9296eb8abb"
+      "snapshot_id": "c5fd6d10b944d4aa"
     },
     "outbound": {
       "schema": 1,
@@ -5638,7 +5638,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 60,
+          "ctx_pct": 61,
           "last_commit_at": 1787567118,
           "head": "6772d195",
           "subfence": {
@@ -5679,17 +5679,25 @@
         {
           "id": "INT7-RT-RETENTION-SWEEP",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 48,
-          "last_commit_at": 1787566552,
-          "head": "03eb3442",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 0,
+          "last_commit_at": 1787567754,
+          "head": "3c3f32b7",
           "subfence": {
             "done": 8,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "3c3f32b7",
+              "at": 1787567754
+            },
+            {
+              "sha": "9d2db654",
+              "at": 1787567685
+            },
             {
               "sha": "03eb3442",
               "at": 1787566552
@@ -5701,20 +5709,12 @@
             {
               "sha": "7782e4e5",
               "at": 1787565596
-            },
-            {
-              "sha": "9d94a230",
-              "at": 1787565099
-            },
-            {
-              "sha": "7a8a8f26",
-              "at": 1787565056
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
-            "build": false,
+            "build": true,
             "review": false
           },
           "gate_open": false
@@ -5981,7 +5981,7 @@
           ]
         }
       },
-      "snapshot_id": "5a0d1e54595a2d48"
+      "snapshot_id": "d2bde30e2f7dc570"
     },
     "scriptgen": {
       "schema": 1,
@@ -6438,7 +6438,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 60,
+          "ctx_pct": 61,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6592,7 +6592,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 48,
+          "ctx_pct": 0,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7603,7 +7603,7 @@
           ]
         }
       },
-      "snapshot_id": "b9e3e67ab09df692"
+      "snapshot_id": "b5cd24eb95098caf"
     }
   },
   "pm": {
@@ -7624,22 +7624,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 26
       }
     ]
   },
-  "snapshot_id": "c9e1b0a265d90f85",
-  "published_at": "2026-08-24T10:32:52Z"
+  "snapshot_id": "ad198fecb26caba7",
+  "published_at": "2026-08-24T10:38:06Z"
 }
