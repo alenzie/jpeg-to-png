@@ -3877,11 +3877,6 @@
         "active": true,
         "units": [
           {
-            "id": "INT7-RT-RETENTION-SWEEP",
-            "kind": "escalate",
-            "raised_at": null
-          },
-          {
             "id": "W3-EMP",
             "kind": "escalate",
             "raised_at": null
@@ -4469,7 +4464,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 67,
+          "ctx_pct": 70,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4484,7 +4479,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "INT7-RT-SHEETS",
@@ -5107,7 +5102,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 12,
+          "ctx_pct": 13,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5480,18 +5475,13 @@
           ]
         }
       },
-      "snapshot_id": "10c7d4a338e3f927"
+      "snapshot_id": "f23cb0fea5f657c2"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
-          {
-            "id": "INT7-RT-RETENTION-SWEEP",
-            "kind": "escalate",
-            "raised_at": 1787545163
-          },
           {
             "id": "W3-EMP",
             "kind": "escalate",
@@ -5528,17 +5518,21 @@
         {
           "id": "INT7-RT-RETENTION-SWEEP",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 67,
-          "last_commit_at": 1787545132,
-          "head": "b575ce01",
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 70,
+          "last_commit_at": 1787557787,
+          "head": "2ca3b4ba",
           "subfence": {
             "done": 5,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "2ca3b4ba",
+              "at": 1787557787
+            },
             {
               "sha": "b575ce01",
               "at": 1787545132
@@ -5554,10 +5548,6 @@
             {
               "sha": "41565683",
               "at": 1787543544
-            },
-            {
-              "sha": "007079b8",
-              "at": 1787542729
             }
           ],
           "fences": {
@@ -5566,14 +5556,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "W3-EMP",
           "status": "building",
           "stage": "interviewing",
           "stage_i": 2,
-          "ctx_pct": 12,
+          "ctx_pct": 13,
           "last_commit_at": 1787556399,
           "head": "7d45c716",
           "subfence": {
@@ -5873,18 +5863,13 @@
           ]
         }
       },
-      "snapshot_id": "418961986774d6a3"
+      "snapshot_id": "964b306e19fe440a"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
-          {
-            "id": "INT7-RT-RETENTION-SWEEP",
-            "kind": "escalate",
-            "raised_at": null
-          },
           {
             "id": "W3-EMP",
             "kind": "escalate",
@@ -6473,7 +6458,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 67,
+          "ctx_pct": 70,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6488,7 +6473,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "INT7-RT-SHEETS",
@@ -7111,7 +7096,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 12,
+          "ctx_pct": 13,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7259,11 +7244,27 @@
             "review": false
           },
           "gate_open": false
+        },
+        {
+          "id": "SYNC-ALIGN-FU",
+          "status": "building",
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": null,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {},
+          "gate_open": false
         }
       ],
       "eligible": [
-        "CAL-SCHEMA",
-        "SYNC-ALIGN-FU"
+        "CAL-SCHEMA"
       ],
       "merge_feed": [
         {
@@ -7468,7 +7469,7 @@
           ]
         }
       },
-      "snapshot_id": "7e35953374e2df79"
+      "snapshot_id": "e478271d30b616ef"
     }
   },
   "pm": {
@@ -7489,22 +7490,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 7
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 9
       }
     ]
   },
-  "snapshot_id": "1996c20e821327b9",
-  "published_at": "2026-08-24T07:46:11Z"
+  "snapshot_id": "6af757e83a6fc532",
+  "published_at": "2026-08-24T07:51:23Z"
 }
