@@ -3828,6 +3828,11 @@
             "id": "INT7-RT-RETENTION-SWEEP",
             "kind": "escalate",
             "raised_at": null
+          },
+          {
+            "id": "W3-EMP",
+            "kind": "escalate",
+            "raised_at": null
           }
         ]
       },
@@ -5050,7 +5055,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 44,
+          "ctx_pct": 47,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5065,7 +5070,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W3A",
@@ -5423,7 +5428,7 @@
           ]
         }
       },
-      "snapshot_id": "7311f3f922a1fcdf"
+      "snapshot_id": "e01bd6cdf6dc51e5"
     },
     "outbound": {
       "schema": 1,
@@ -5434,6 +5439,11 @@
             "id": "INT7-RT-RETENTION-SWEEP",
             "kind": "escalate",
             "raised_at": 1787545163
+          },
+          {
+            "id": "W3-EMP",
+            "kind": "escalate",
+            "raised_at": 1787550044
           }
         ]
       },
@@ -5509,81 +5519,16 @@
         {
           "id": "W3-EMP",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 44,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 47,
           "last_commit_at": 1787548787,
           "head": "d03312c1",
           "subfence": {
             "done": 11,
             "total": 12
           },
-          "review_rounds": [
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terraxhigh",
-              "must": 8,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.6-terraxhigh",
-              "must": 5,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.5deepxhigh",
-              "must": 2,
-              "should": 3,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "gpt-5.6-terraxhigh",
-              "must": 3,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 7,
-              "seats": "gpt-5.5deepxhigh",
-              "must": 1,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 8,
-              "seats": "gpt-5.5deepxhigh",
-              "must": 3,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 9,
-              "seats": "gpt-5.5deepxhigh",
-              "must": 4,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 10,
-              "seats": "gpt-5.5deepxhigh",
-              "must": 4,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "d03312c1",
@@ -5612,7 +5557,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -5876,7 +5821,7 @@
           ]
         }
       },
-      "snapshot_id": "2bc2113aba817fdd"
+      "snapshot_id": "d1eb449b06e208a2"
     },
     "scriptgen": {
       "schema": 1,
@@ -5885,6 +5830,11 @@
         "units": [
           {
             "id": "INT7-RT-RETENTION-SWEEP",
+            "kind": "escalate",
+            "raised_at": null
+          },
+          {
+            "id": "W3-EMP",
             "kind": "escalate",
             "raised_at": null
           }
@@ -7109,7 +7059,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 44,
+          "ctx_pct": 47,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7124,7 +7074,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W3A",
@@ -7466,7 +7416,7 @@
           ]
         }
       },
-      "snapshot_id": "f3705c0a686ece19"
+      "snapshot_id": "e80542d63b629926"
     }
   },
   "pm": {
@@ -7487,22 +7437,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 1148
+        "monitor_last_pass_min": 1153
       }
     ]
   },
-  "snapshot_id": "ef0935fc13c6d408",
-  "published_at": "2026-08-24T05:36:08Z"
+  "snapshot_id": "3c0962705afc2ab6",
+  "published_at": "2026-08-24T05:41:19Z"
 }
