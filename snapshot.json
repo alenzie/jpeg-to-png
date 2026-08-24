@@ -3910,8 +3910,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-PUBLIC-API-SDK-PY",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4362,7 +4368,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 31,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4377,7 +4383,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-PUBLIC-API-SDK",
@@ -5527,13 +5533,19 @@
           ]
         }
       },
-      "snapshot_id": "9c90aaa301341a05"
+      "snapshot_id": "ce4fe5cedcdc6f58"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-PUBLIC-API-SDK-PY",
+            "kind": "needs-owner",
+            "raised_at": 1787561335
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5564,9 +5576,9 @@
         {
           "id": "INT7-PUBLIC-API-SDK-PY",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 31,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5581,7 +5593,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-RT-RETENTION-SWEEP",
@@ -5888,13 +5900,19 @@
           ]
         }
       },
-      "snapshot_id": "6c3dd653f18dd25a"
+      "snapshot_id": "928a9c0a1837349b"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-PUBLIC-API-SDK-PY",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6345,7 +6363,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 31,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6360,7 +6378,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-PUBLIC-API-SDK",
@@ -7510,7 +7528,7 @@
           ]
         }
       },
-      "snapshot_id": "dd191f2f977dabfe"
+      "snapshot_id": "129a40c167c54a58"
     }
   },
   "pm": {
@@ -7531,22 +7549,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 9
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 9
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6
+        "monitor_last_pass_min": 12
       }
     ]
   },
-  "snapshot_id": "bb3d072a2447f16e",
-  "published_at": "2026-08-24T08:48:41Z"
+  "snapshot_id": "2b850899be3eda9b",
+  "published_at": "2026-08-24T08:53:57Z"
 }
