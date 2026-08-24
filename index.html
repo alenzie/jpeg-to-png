@@ -1353,10 +1353,7 @@ function dsBurnCard(g) {
   return `<div class="mcard deepseek">
     <div class="mcard-h"><span class="mname">deepseek</span><span class="fam deepseek">deepseek</span></div>
     <div class="mbig ${cls}">${escp(cur)} ${bal}<span class="munit">balance</span></div>
-    <div class="bar" title="depletion (days-to-empty vs a 30-day horizon)"><i style="width:${fill}%"></i></div>
     <div class="mstats">${burnHtml}${daysHtml}${availHtml}</div>
-    ${spark(g.spark, null)}
-    ${resetLine(g)}
   </div>`;
 }
 function renderModels() {
