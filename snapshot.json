@@ -629,10 +629,6 @@
         "reset": "Aug 28, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
-            1786946400,
-            314
-          ],
-          [
             1787022000,
             222
           ],
@@ -1922,10 +1918,6 @@
           89.0
         ],
         [
-          1786947321,
-          89.0
-        ],
-        [
           1786991334,
           89.0
         ],
@@ -3155,10 +3147,6 @@
             94.0
           ],
           [
-            1786947321,
-            94.0
-          ],
-          [
             1787024756,
             95.0
           ],
@@ -3373,10 +3361,6 @@
         ],
         [
           1786947081,
-          40.0
-        ],
-        [
-          1786947321,
           40.0
         ],
         [
@@ -3824,11 +3808,6 @@
             "id": "INT7-RT-RETENTION-SWEEP",
             "kind": "escalate",
             "raised_at": null
-          },
-          {
-            "id": "W3-EMP",
-            "kind": "escalate",
-            "raised_at": null
           }
         ]
       },
@@ -3836,7 +3815,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1787550262
+        "last_pass_at": 1787552062
       },
       "runstate": {
         "auto": true,
@@ -5051,7 +5030,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 47,
+          "ctx_pct": 48,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5066,7 +5045,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "W3A",
@@ -5424,7 +5403,7 @@
           ]
         }
       },
-      "snapshot_id": "4ffb221fb1438398"
+      "snapshot_id": "5c4e66150363cc24"
     },
     "outbound": {
       "schema": 1,
@@ -5435,11 +5414,6 @@
             "id": "INT7-RT-RETENTION-SWEEP",
             "kind": "escalate",
             "raised_at": 1787545163
-          },
-          {
-            "id": "W3-EMP",
-            "kind": "escalate",
-            "raised_at": 1787550044
           }
         ]
       },
@@ -5447,7 +5421,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1787550269
+        "last_pass_at": 1787552070
       },
       "runstate": {
         "auto": true,
@@ -5515,16 +5489,81 @@
         {
           "id": "W3-EMP",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 47,
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 48,
           "last_commit_at": 1787548787,
           "head": "d03312c1",
           "subfence": {
             "done": 11,
             "total": 12
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terraxhigh",
+              "must": 8,
+              "should": 2,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "gpt-5.6-terraxhigh",
+              "must": 5,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "gpt-5.5deepxhigh",
+              "must": 2,
+              "should": 3,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 6,
+              "seats": "gpt-5.6-terraxhigh",
+              "must": 3,
+              "should": 2,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 7,
+              "seats": "gpt-5.5deepxhigh",
+              "must": 1,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 8,
+              "seats": "gpt-5.5deepxhigh",
+              "must": 3,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 9,
+              "seats": "gpt-5.5deepxhigh",
+              "must": 4,
+              "should": 2,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 10,
+              "seats": "gpt-5.5deepxhigh",
+              "must": 4,
+              "should": 2,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
             {
               "sha": "d03312c1",
@@ -5553,7 +5592,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -5817,7 +5856,7 @@
           ]
         }
       },
-      "snapshot_id": "03be32becedb1cfc"
+      "snapshot_id": "0d3bf7745b708d5d"
     },
     "scriptgen": {
       "schema": 1,
@@ -5826,11 +5865,6 @@
         "units": [
           {
             "id": "INT7-RT-RETENTION-SWEEP",
-            "kind": "escalate",
-            "raised_at": null
-          },
-          {
-            "id": "W3-EMP",
             "kind": "escalate",
             "raised_at": null
           }
@@ -7055,7 +7089,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 47,
+          "ctx_pct": 48,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7070,7 +7104,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "W3A",
@@ -7412,7 +7446,7 @@
           ]
         }
       },
-      "snapshot_id": "d8218e21450de61a"
+      "snapshot_id": "9eff0fa59f16ca3d"
     }
   },
   "pm": {
@@ -7424,7 +7458,7 @@
       "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode."
     },
     "pm_session": {
-      "lock": "1580081 2026-08-24T05:08:20Z",
+      "lock": "1730630 2026-08-24T06:16:56Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -7433,22 +7467,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 1184
+        "monitor_last_pass_min": 1189
       }
     ]
   },
-  "snapshot_id": "f219640d216ba5ae",
-  "published_at": "2026-08-24T06:12:32Z"
+  "snapshot_id": "d2880c5d0adcf3a3",
+  "published_at": "2026-08-24T06:17:44Z"
 }
