@@ -631,9 +631,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 165,
+        "projected": 163,
         "used": 49,
-        "at": 1787551248,
+        "at": 1787552990,
         "reset": "Aug 28, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
@@ -837,7 +837,7 @@
       "target": 100,
       "projected": 59,
       "used": 27,
-      "at": 1787551248,
+      "at": 1787552990,
       "reset": "Aug 27, 19:39",
       "level": "pro",
       "spark": [
@@ -1465,9 +1465,9 @@
       "balance": 9.7,
       "currency": "USD",
       "available": true,
-      "burn_per_day": 0.0,
+      "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1787551248,
+      "at": 1787552990,
       "spark": [
         [
           1787428800,
@@ -3880,11 +3880,6 @@
             "id": "INT7-RT-RETENTION-SWEEP",
             "kind": "escalate",
             "raised_at": null
-          },
-          {
-            "id": "W3-EMP",
-            "kind": "escalate",
-            "raised_at": null
           }
         ]
       },
@@ -5107,7 +5102,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 56,
+          "ctx_pct": 9,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5122,7 +5117,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "W3A",
@@ -5480,7 +5475,7 @@
           ]
         }
       },
-      "snapshot_id": "c097f445ba5cc073"
+      "snapshot_id": "129b72bb74f3109a"
     },
     "outbound": {
       "schema": 1,
@@ -5491,11 +5486,6 @@
             "id": "INT7-RT-RETENTION-SWEEP",
             "kind": "escalate",
             "raised_at": 1787545163
-          },
-          {
-            "id": "W3-EMP",
-            "kind": "escalate",
-            "raised_at": 1787553467
           }
         ]
       },
@@ -5571,17 +5561,21 @@
         {
           "id": "W3-EMP",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 56,
-          "last_commit_at": 1787553431,
-          "head": "493e06f9",
+          "stage": "merge+cleanup",
+          "stage_i": 6,
+          "ctx_pct": 9,
+          "last_commit_at": 1787556399,
+          "head": "7d45c716",
           "subfence": {
             "done": 11,
             "total": 12
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "7d45c716",
+              "at": 1787556399
+            },
             {
               "sha": "493e06f9",
               "at": 1787553431
@@ -5597,19 +5591,15 @@
             {
               "sha": "d03312c1",
               "at": 1787548787
-            },
-            {
-              "sha": "2999577d",
-              "at": 1787547677
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -5873,7 +5863,7 @@
           ]
         }
       },
-      "snapshot_id": "2c32ba3aeb6889e8"
+      "snapshot_id": "36b2d4c3b27e3c5b"
     },
     "scriptgen": {
       "schema": 1,
@@ -7106,7 +7096,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 56,
+          "ctx_pct": 9,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7463,7 +7453,7 @@
           ]
         }
       },
-      "snapshot_id": "92104690ab4f06d3"
+      "snapshot_id": "d60b0e69c40482df"
     }
   },
   "pm": {
@@ -7484,22 +7474,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 1257
+        "monitor_last_pass_min": 1262
       }
     ]
   },
-  "snapshot_id": "034f302b37c2c0b8",
-  "published_at": "2026-08-24T07:25:21Z"
+  "snapshot_id": "1b96d8316cb6abe4",
+  "published_at": "2026-08-24T07:30:34Z"
 }
