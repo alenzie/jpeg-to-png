@@ -3982,8 +3982,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-PUBLIC-API-SDK-PY",
+            "kind": "escalate",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4434,7 +4440,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 63,
+          "ctx_pct": 66,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4449,7 +4455,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-PUBLIC-API-SDK",
@@ -4588,7 +4594,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 24,
+          "ctx_pct": 27,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5616,13 +5622,19 @@
           ]
         }
       },
-      "snapshot_id": "b30656c0498f725e"
+      "snapshot_id": "284ecc69705e8d87"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-PUBLIC-API-SDK-PY",
+            "kind": "escalate",
+            "raised_at": 1787569310
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5653,17 +5665,21 @@
         {
           "id": "INT7-PUBLIC-API-SDK-PY",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 63,
-          "last_commit_at": 1787568454,
-          "head": "aec33f68",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 66,
+          "last_commit_at": 1787569318,
+          "head": "34ad0192",
           "subfence": {
             "done": 0,
             "total": 15
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "34ad0192",
+              "at": 1787569318
+            },
             {
               "sha": "aec33f68",
               "at": 1787568454
@@ -5679,10 +5695,6 @@
             {
               "sha": "adad923e",
               "at": 1787566514
-            },
-            {
-              "sha": "916ccbb4",
-              "at": 1787565813
             }
           ],
           "fences": {
@@ -5691,22 +5703,30 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-RT-RETENTION-SWEEP",
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 24,
-          "last_commit_at": 1787567754,
-          "head": "3c3f32b7",
+          "ctx_pct": 27,
+          "last_commit_at": 1787569386,
+          "head": "ad1c8766",
           "subfence": {
             "done": 8,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "ad1c8766",
+              "at": 1787569386
+            },
+            {
+              "sha": "c260c97b",
+              "at": 1787569344
+            },
             {
               "sha": "3c3f32b7",
               "at": 1787567754
@@ -5718,14 +5738,6 @@
             {
               "sha": "03eb3442",
               "at": 1787566552
-            },
-            {
-              "sha": "ee205f29",
-              "at": 1787565697
-            },
-            {
-              "sha": "7782e4e5",
-              "at": 1787565596
             }
           ],
           "fences": {
@@ -5998,13 +6010,19 @@
           ]
         }
       },
-      "snapshot_id": "293a0eb29f0378b8"
+      "snapshot_id": "8e1ea1501d9353b9"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-PUBLIC-API-SDK-PY",
+            "kind": "escalate",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6455,7 +6473,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 63,
+          "ctx_pct": 66,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6470,7 +6488,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-PUBLIC-API-SDK",
@@ -6609,7 +6627,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 24,
+          "ctx_pct": 27,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7603,7 +7621,7 @@
           ]
         }
       },
-      "snapshot_id": "f9e443b086ae2bc4"
+      "snapshot_id": "bced6403856ef0a5"
     }
   },
   "pm": {
@@ -7624,22 +7642,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 19
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 19
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 17
+        "monitor_last_pass_min": 22
       }
     ]
   },
-  "snapshot_id": "e61d6e584429bcbf",
-  "published_at": "2026-08-24T10:59:03Z"
+  "snapshot_id": "11ae282ab1a5754b",
+  "published_at": "2026-08-24T11:04:17Z"
 }
