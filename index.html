@@ -762,7 +762,8 @@ function shortReset(r) { return (r || '').split('(')[0].replace(':00', '').trim(
 function throttlingChart(th) {
   th = th || {};
   const series = [];
-  if (th.codex) series.push(Object.assign({ name: 'codex', color: '#3FB8C4' }, th.codex));
+  (th.codex || []).forEach((c, i) => series.push(Object.assign(
+    { name: 'codex ' + (c.label || ''), color: ['#3FB8C4', '#7FD6DE', '#2A8A94'][i] || '#3FB8C4' }, c)));
   (th.claude || []).forEach((c, i) => series.push(Object.assign(
     { name: 'claude ' + (c.label || ''), color: ['#EA8B57', '#F0B07E', '#B85C22'][i] || '#EA8B57' }, c)));
   if (th.glm) series.push(Object.assign({ name: 'glm', color: '#A78BFA' }, th.glm));
@@ -832,8 +833,6 @@ function dsGauge(g) {
     <div class="tg-lbl"><span>deepseek <span class="dim">(balance)</span></span>
     <span class="tg-num ${dcls}">${escp(cur)} ${bal}${availHtml}</span></div>
     <div class="mstats"><span>burn <b>${escp(burn)}</b></span><span>days left <b class="${dcls}">${escp(days)}</b></span></div>
-    ${spark(g.spark, null)}
-    ${resetLine(g)}
   </div>`;
 }
 function renderPM() {
@@ -869,7 +868,7 @@ function renderPM() {
   let throttlingHtml = throttlingChart(th);
   if (!throttlingHtml) {
     const gauges = [];
-    if (th.codex) gauges.push({ name: 'codex', ...th.codex });
+    (th.codex || []).forEach(c => gauges.push({ name: 'codex ' + (c.label || ''), ...c }));
     (th.claude || []).forEach(c => gauges.push({ name: 'claude ' + (c.label || ''), ...c }));
     if (th.glm) gauges.push({ name: 'glm', ...th.glm });
     throttlingHtml = gauges.length ? gauges.map(gaugeCard).join('') : '';
@@ -1364,7 +1363,7 @@ function renderModels() {
   if (!SNAP) { view.innerHTML = emptyState('waiting for snapshot…'); return; }
   const th = SNAP.throttling || {};
   const accts = [];
-  if (th.codex) accts.push({ name: 'codex', fam: 'codex', ...th.codex });
+  (th.codex || []).forEach(c => accts.push({ name: 'codex ' + (c.label || ''), fam: 'codex', ...c }));
   (th.claude || []).forEach(c => accts.push({ name: 'claude ' + (c.label || ''), fam: 'claude', ...c }));
   if (th.glm) accts.push({ name: 'glm', fam: 'glm', ...th.glm });
   // th.codex / th.claude are per-account ARRAYS; th.glm / th.deepseek are single scalar objects.
