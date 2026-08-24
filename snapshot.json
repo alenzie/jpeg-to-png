@@ -647,9 +647,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 191,
+        "projected": 190,
         "used": 63,
-        "at": 1787571169,
+        "at": 1787571572,
         "reset": "Aug 28, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -885,7 +885,7 @@
       "target": 100,
       "projected": 57,
       "used": 28,
-      "at": 1787571169,
+      "at": 1787571572,
       "reset": "Aug 27, 19:39",
       "level": "pro",
       "spark": [
@@ -1545,9 +1545,9 @@
       "balance": 9.7,
       "currency": "USD",
       "available": true,
-      "burn_per_day": 0.0,
+      "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1787571169,
+      "at": 1787571572,
       "spark": [
         [
           1787428800,
@@ -5658,7 +5658,7 @@
           ]
         }
       },
-      "snapshot_id": "858b78dbdd83877c"
+      "snapshot_id": "6c4231374399f198"
     },
     "outbound": {
       "schema": 1,
@@ -5743,9 +5743,9 @@
         },
         {
           "id": "INT7-RT-RETENTION-SWEEP",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
           "ctx_pct": 11,
           "last_commit_at": 1787575042,
           "head": "6ee52c7b",
@@ -5780,7 +5780,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -5807,6 +5807,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 279,
+          "unit": "INT7-RT-RETENTION-SWEEP",
+          "merged_at": 1787575062,
+          "sha": "5d49f1b4"
+        },
+        {
           "pr": 277,
           "unit": "INT7-RT-NOTION",
           "merged_at": 1787425890,
@@ -5829,12 +5835,6 @@
           "unit": "W4C",
           "merged_at": 1786774381,
           "sha": "93f36873"
-        },
-        {
-          "pr": 273,
-          "unit": "INT7-RT-PAT-REAUTH-RACE",
-          "merged_at": 1786740552,
-          "sha": "43d22009"
         }
       ],
       "decisions": [
@@ -6046,7 +6046,7 @@
           ]
         }
       },
-      "snapshot_id": "7ed1ba96af1cd064"
+      "snapshot_id": "519fc4a52c6877b1"
     },
     "scriptgen": {
       "schema": 1,
@@ -6064,7 +6064,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1787573506
+        "last_pass_at": 1787575306
       },
       "runstate": {
         "auto": true,
@@ -7657,7 +7657,7 @@
           ]
         }
       },
-      "snapshot_id": "e76fad451251408a"
+      "snapshot_id": "ee11feb190e2b2e0"
     }
   },
   "pm": {
@@ -7678,22 +7678,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 28
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 28
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 1
       }
     ]
   },
-  "snapshot_id": "cd8c4204d1c1d86f",
-  "published_at": "2026-08-24T12:38:08Z"
+  "snapshot_id": "c25bd47246c27b78",
+  "published_at": "2026-08-24T12:43:20Z"
 }
