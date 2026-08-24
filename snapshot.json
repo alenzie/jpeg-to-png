@@ -661,8 +661,8 @@
         "mult": "20x",
         "projected": 178,
         "used": 68,
-        "at": 1787602099,
-        "reset": "Aug 28, 10pm (America/Los_Angeles)",
+        "at": 1787602600,
+        "reset": "Aug 28, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1787022000,
@@ -913,7 +913,7 @@
       "target": 100,
       "projected": 52,
       "used": 28,
-      "at": 1787602099,
+      "at": 1787602600,
       "reset": "Aug 27, 19:39",
       "level": "pro",
       "spark": [
@@ -1595,7 +1595,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1787602099,
+      "at": 1787602600,
       "spark": [
         [
           1787428800,
@@ -4554,7 +4554,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 31,
+          "ctx_pct": 34,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5736,7 +5736,7 @@
           ]
         }
       },
-      "snapshot_id": "802e7330c6a8b329"
+      "snapshot_id": "a89ac687bc27e1de"
     },
     "outbound": {
       "schema": 1,
@@ -5775,15 +5775,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 31,
-          "last_commit_at": 1787605670,
-          "head": "deef4a6f",
+          "ctx_pct": 34,
+          "last_commit_at": 1787606337,
+          "head": "0a70c6be",
           "subfence": {
             "done": 5,
             "total": 15
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "0a70c6be",
+              "at": 1787606337
+            },
             {
               "sha": "deef4a6f",
               "at": 1787605670
@@ -5799,10 +5803,6 @@
             {
               "sha": "e478fe32",
               "at": 1787604619
-            },
-            {
-              "sha": "6a305cd5",
-              "at": 1787604121
             }
           ],
           "fences": {
@@ -6075,7 +6075,7 @@
           ]
         }
       },
-      "snapshot_id": "0a8bd2dfb86d36dc"
+      "snapshot_id": "d4381e0236f28c11"
     },
     "scriptgen": {
       "schema": 1,
@@ -6086,7 +6086,7 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": true,
+        "monitor_alive": false,
         "last_pass_at": 1787604107
       },
       "runstate": {
@@ -6105,7 +6105,7 @@
           "up": true
         },
         "monitor": {
-          "up": true
+          "up": false
         }
       },
       "units": [
@@ -6532,7 +6532,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 31,
+          "ctx_pct": 34,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7680,7 +7680,7 @@
           ]
         }
       },
-      "snapshot_id": "dd2360b03b6d0a79"
+      "snapshot_id": "29fa0d70280dc00c"
     }
   },
   "pm": {
@@ -7692,8 +7692,8 @@
       "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode."
     },
     "pm_session": {
-      "lock": "182137 2026-08-24T21:01:56Z",
-      "fresh": true
+      "lock": "",
+      "fresh": false
     },
     "sterling_up": true,
     "fleets": [
@@ -7701,22 +7701,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 29
+        "monitor_last_pass_min": 34
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 29
+        "monitor_last_pass_min": 34
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 32
+        "monitor_last_pass_min": 37
       }
     ]
   },
-  "snapshot_id": "6bf66100da8b028c",
-  "published_at": "2026-08-24T21:14:09Z"
+  "snapshot_id": "3cb02121b857d799",
+  "published_at": "2026-08-24T21:19:22Z"
 }
