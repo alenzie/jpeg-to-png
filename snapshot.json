@@ -509,10 +509,6 @@
         "reset": "Aug 28, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
-            1787025600,
-            224
-          ],
-          [
             1787029200,
             222
           ],
@@ -889,10 +885,6 @@
       "reset": "Aug 27, 19:39",
       "level": "pro",
       "spark": [
-        [
-          1787025600,
-          218
-        ],
         [
           1787029200,
           215
@@ -2711,10 +2703,6 @@
             95.0
           ],
           [
-            1787028543,
-            97.0
-          ],
-          [
             1787030373,
             97.0
           ],
@@ -2969,10 +2957,6 @@
         ],
         [
           1787024756,
-          40.0
-        ],
-        [
-          1787028543,
           40.0
         ],
         [
@@ -3914,7 +3898,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 30,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5081,22 +5065,18 @@
               "tier": "med",
               "codex_model": "gpt-5.6-terra",
               "profile": "broad",
-              "round_cap": 3,
-              "claude_lens": "claude-sonnet-4-6",
-              "lens_effort": "high"
+              "round_cap": 3
             },
             {
               "tier": "high",
               "codex_model": "gpt-5.6-terra",
               "profile": "deep",
-              "round_cap": 6,
-              "claude_lens": "claude-opus-4-8",
-              "lens_effort": "xhigh"
+              "round_cap": 6
             }
           ]
         }
       },
-      "snapshot_id": "a9d116abc33ab8c0"
+      "snapshot_id": "13d770184e25502c"
     },
     "outbound": {
       "schema": 1,
@@ -5135,9 +5115,9 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 30,
-          "last_commit_at": 1787631399,
-          "head": "e96939a1",
+          "ctx_pct": 32,
+          "last_commit_at": 1787633504,
+          "head": "05016a3d",
           "subfence": {
             "done": 14,
             "total": 15
@@ -5182,9 +5162,33 @@
               "should": 2,
               "could": 0,
               "nit": 1
+            },
+            {
+              "round": 1,
+              "seats": "Sonnet-high swarm ×4",
+              "must": 2,
+              "should": 4,
+              "could": 1,
+              "nit": 3
+            },
+            {
+              "round": 1,
+              "seats": "codex gpt-5.6-solxhigh breadth ×2",
+              "must": 6,
+              "should": 13,
+              "could": 0,
+              "nit": 0
             }
           ],
           "commits": [
+            {
+              "sha": "05016a3d",
+              "at": 1787633504
+            },
+            {
+              "sha": "d29fa19f",
+              "at": 1787633401
+            },
             {
               "sha": "e96939a1",
               "at": 1787631399
@@ -5196,14 +5200,6 @@
             {
               "sha": "3bd25e59",
               "at": 1787631138
-            },
-            {
-              "sha": "d630f0e9",
-              "at": 1787630812
-            },
-            {
-              "sha": "a38f9f2e",
-              "at": 1787629414
             }
           ],
           "fences": {
@@ -5461,22 +5457,18 @@
               "tier": "med",
               "codex_model": "gpt-5.6-terra",
               "profile": "broad",
-              "round_cap": 3,
-              "claude_lens": "claude-sonnet-4-6",
-              "lens_effort": "high"
+              "round_cap": 3
             },
             {
               "tier": "high",
               "codex_model": "gpt-5.6-terra",
               "profile": "deep",
-              "round_cap": 6,
-              "claude_lens": "claude-opus-4-8",
-              "lens_effort": "xhigh"
+              "round_cap": 6
             }
           ]
         }
       },
-      "snapshot_id": "505856eb9863014d"
+      "snapshot_id": "990c58b6d1caad06"
     },
     "scriptgen": {
       "schema": 1,
@@ -5933,7 +5925,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 30,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7066,22 +7058,18 @@
               "tier": "med",
               "codex_model": "gpt-5.6-terra",
               "profile": "broad",
-              "round_cap": 3,
-              "claude_lens": "claude-sonnet-4-6",
-              "lens_effort": "high"
+              "round_cap": 3
             },
             {
               "tier": "high",
               "codex_model": "gpt-5.6-terra",
               "profile": "deep",
-              "round_cap": 6,
-              "claude_lens": "claude-opus-4-8",
-              "lens_effort": "xhigh"
+              "round_cap": 6
             }
           ]
         }
       },
-      "snapshot_id": "7873916e6faa2ca7"
+      "snapshot_id": "7fd334ed9d4824e8"
     }
   },
   "pm": {
@@ -7102,22 +7090,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 17
+        "monitor_last_pass_min": 22
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 17
+        "monitor_last_pass_min": 22
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 7
       }
     ]
   },
-  "snapshot_id": "0ddebdd649d8db79",
-  "published_at": "2026-08-25T04:48:04Z"
+  "snapshot_id": "b6164d8dcff8246b",
+  "published_at": "2026-08-25T04:53:16Z"
 }
