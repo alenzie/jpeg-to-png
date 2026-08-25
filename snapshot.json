@@ -3510,8 +3510,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "SEQ-SETTLE",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4622,7 +4628,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 26,
+          "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4637,7 +4643,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "SMS-BROADCAST",
@@ -5162,13 +5168,19 @@
           ]
         }
       },
-      "snapshot_id": "a2bc33d78bbc76f5"
+      "snapshot_id": "8021b3cf08069294"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "SEQ-SETTLE",
+            "kind": "needs-owner",
+            "raised_at": 1787640417
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5199,9 +5211,9 @@
         {
           "id": "SEQ-SETTLE",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 26,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5216,7 +5228,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -5476,19 +5488,25 @@
           ]
         }
       },
-      "snapshot_id": "78e9d9d869eacc11"
+      "snapshot_id": "6eb697b12de09d0e"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "SEQ-SETTLE",
+            "kind": "needs-owner",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1787639453
+        "last_pass_at": 1787640374
       },
       "runstate": {
         "auto": false,
@@ -6593,7 +6611,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 26,
+          "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6608,7 +6626,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "SMS-BROADCAST",
@@ -7099,7 +7117,7 @@
           ]
         }
       },
-      "snapshot_id": "dcda8e8e7bdd710e"
+      "snapshot_id": "7f48c82549792fca"
     }
   },
   "pm": {
@@ -7120,22 +7138,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 17
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 17
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 2
       }
     ]
   },
-  "snapshot_id": "d06065c069991a8e",
-  "published_at": "2026-08-25T06:43:06Z"
+  "snapshot_id": "e9fd66bda31ea953",
+  "published_at": "2026-08-25T06:48:19Z"
 }
