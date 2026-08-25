@@ -4226,8 +4226,14 @@
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "SEQ-SETTLE",
+            "kind": "needs-owner",
+            "raised_at": 1787696329
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4258,82 +4264,25 @@
         {
           "id": "SEQ-SETTLE",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 21,
-          "last_commit_at": 1787695177,
-          "head": "ca353ab4",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 24,
+          "last_commit_at": 1787696285,
+          "head": "c048f54e",
           "subfence": {
             "done": 10,
             "total": 11
           },
-          "review_rounds": [
-            {
-              "round": 3,
-              "seats": "codex gpt-5.6-terra iterate",
-              "must": 5,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "codex gpt-5.6-terra DECLARER + invariant",
-              "must": 4,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "codex gpt-5.6-terra confirming DECLARER",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 1,
-              "seats": "Sonnet-high swarm ×4 store  convert  api",
-              "must": 1,
-              "should": 4,
-              "could": 2,
-              "nit": 2
-            },
-            {
-              "round": 1,
-              "seats": "codex gpt-5.6-solxhigh breadth ×3 S1-3  ",
-              "must": 9,
-              "should": 10,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "codex gpt-5.5xhigh iterate R1-fix diff",
-              "must": 1,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "codex gpt-5.6-terraxhigh iterate R2-fix ",
-              "must": 0,
-              "should": 2,
-              "could": 0,
-              "nit": 1
-            },
-            {
-              "round": 4,
-              "seats": "codex terra + gpt-5.5 DUAL-DECLARE cumul",
-              "must": 3,
-              "should": 3,
-              "could": 2,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "c048f54e",
+              "at": 1787696285
+            },
+            {
+              "sha": "b341a4d7",
+              "at": 1787696205
+            },
             {
               "sha": "ca353ab4",
               "at": 1787695177
@@ -4345,14 +4294,6 @@
             {
               "sha": "c12ec7f3",
               "at": 1787694331
-            },
-            {
-              "sha": "5f45d797",
-              "at": 1787694073
-            },
-            {
-              "sha": "722de432",
-              "at": 1787694043
             }
           ],
           "fences": {
@@ -4361,7 +4302,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4691,7 +4632,7 @@
           ]
         }
       },
-      "snapshot_id": "06cf422b2360e9fe"
+      "snapshot_id": "24c282c2a95e0170"
     },
     "scriptgen": {
       "schema": 1,
@@ -4730,7 +4671,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 35,
+          "ctx_pct": 37,
           "last_commit_at": 1787693838,
           "head": "b5ec22d",
           "subfence": {
@@ -5039,7 +4980,7 @@
           ]
         }
       },
-      "snapshot_id": "dfc59fea2fdf29ab"
+      "snapshot_id": "b63fce6d2d8ea384"
     }
   },
   "pm": {
@@ -5060,22 +5001,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 150
+        "monitor_last_pass_min": 155
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 150
+        "monitor_last_pass_min": 155
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 150
+        "monitor_last_pass_min": 155
       }
     ]
   },
-  "snapshot_id": "ccf8bb337b272715",
-  "published_at": "2026-08-25T22:15:47Z"
+  "snapshot_id": "7a4b9f741bec341a",
+  "published_at": "2026-08-25T22:20:59Z"
 }
