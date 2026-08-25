@@ -624,6 +624,39 @@ footer {
 .mattach-model  { color: var(--dim); font-weight: 500; }
 .mattach-s      { font-size: 9.5px; color: var(--dim); margin-top: .15rem; }
 
+/* glm-default pill on a mobile seat row + wider accent on a non-degradable seat */
+.mseat-glm { display: inline-block; margin-left: .4ch; padding: 0 .35em; border-radius: 999px; font-size: 8px; font-weight: 800;
+  color: var(--glm); border: 1px solid color-mix(in srgb, var(--glm) 45%, var(--line)); background: color-mix(in srgb, var(--glm) 14%, transparent); vertical-align: middle; }
+.mseat.nondeg { border-left-width: 5px; }
+
+/* throttle ribbon (desktop, SVG) — a full-width strip under the LEAD band showing the
+   responsive-deployment evaluator's read on each pool. Nothing renders when absent. */
+.rf-thr-band { fill: color-mix(in srgb, var(--fg) 3%, var(--panel2)); stroke: var(--line); }
+.rf-thr-band.on  { stroke: color-mix(in srgb, var(--copper) 40%, var(--line)); }
+.rf-thr-band.off { stroke-dasharray: 2 5; opacity: .78; }
+.rf-thr-t { font-size: 10px; font-weight: 700; fill: var(--dim); font-family: var(--disp); letter-spacing: .02em; }
+.rf-thr-chip { stroke-width: 1; }
+.rf-thr-chip.cool { fill: color-mix(in srgb, var(--info) 16%, var(--panel)); stroke: color-mix(in srgb, var(--info) 55%, var(--line)); }
+.rf-thr-chip.hot  { fill: color-mix(in srgb, var(--copper) 18%, var(--panel)); stroke: color-mix(in srgb, var(--copper) 55%, var(--line)); }
+.rf-thr-chip.okc  { fill: color-mix(in srgb, var(--ok) 16%, var(--panel)); stroke: color-mix(in srgb, var(--ok) 50%, var(--line)); }
+.rf-thr-chip.dimc { fill: color-mix(in srgb, var(--dim) 14%, var(--panel)); stroke: var(--line); }
+.rf-thr-chip-t { font-size: 9px; font-family: var(--mono); font-weight: 700; }
+.rf-thr-chip-t.cool { fill: var(--info); }
+.rf-thr-chip-t.hot  { fill: var(--copper); }
+.rf-thr-chip-t.okc  { fill: var(--ok); }
+.rf-thr-chip-t.dimc { fill: var(--dim); }
+
+/* throttle card (mobile) — same data as the desktop ribbon, compact-card form */
+.mthrottle { border: 1px solid var(--line); border-radius: var(--r); padding: .5rem .7rem; margin-bottom: .5rem;
+  background: color-mix(in srgb, var(--fg) 2.5%, var(--panel2)); }
+.mthrottle-t { font-size: 10.5px; font-weight: 700; color: var(--dim); letter-spacing: .02em; margin-bottom: .35rem; }
+.mthrottle-chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+.mthr-chip { font-size: 9.5px; font-family: var(--mono); font-weight: 700; padding: .2rem .55rem; border-radius: 999px; border: 1px solid var(--line); white-space: nowrap; }
+.mthr-chip.cool { color: var(--info); border-color: color-mix(in srgb, var(--info) 55%, var(--line)); background: color-mix(in srgb, var(--info) 12%, transparent); }
+.mthr-chip.hot  { color: var(--copper); border-color: color-mix(in srgb, var(--copper) 55%, var(--line)); background: color-mix(in srgb, var(--copper) 12%, transparent); }
+.mthr-chip.okc  { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 50%, var(--line)); background: color-mix(in srgb, var(--ok) 12%, transparent); }
+.mthr-chip.dimc { color: var(--dim); border-color: var(--line); background: color-mix(in srgb, var(--dim) 10%, transparent); }
+
 /* ---- narrow phones (~360px) ------------------------------------------------ */
 @media (max-width: 380px) {
   main { padding: .7rem; }
@@ -1089,12 +1122,13 @@ function renderHistory() {
 // ---- Routing loom : the pipeline as a threaded flowchart -----------------------------------
 const RF_STAGES = [
   { id:'lead',      t:'Orchestrate',    s:'the lead spins the run',           roles:['lead'] },
-  { id:'discovery', t:'Discovery',      s:'parallel fleet maps the ground', flow:'parallel', roles:['discovery.worker','discovery.breadth','discovery.breadth_sonnet','invariant_map','discovery.web_claude','discovery.web_codex'] },
+  { id:'discovery', t:'Discovery',      s:'2 opus deep seams + GLM lattice + 3 web seats', flow:'parallel', roles:['discovery.worker','invariant_map','discovery.lattice','discovery.web_glm','discovery.web_claude','discovery.web_codex','discovery.breadth','discovery.breadth_sonnet'] },
   { id:'draft',     t:'Plan · draft',   s:'lead spine + 2 blind co-drafters', flow:'coplan', spine:'plan', roles:['plan','coplan.fable','coplan.codex'] },
   { id:'scrutiny',  t:'Plan · scrutiny',s:'convergence loop', flow:'sequence', loop:'re-scrutinise', roles:['plan_scrutiny.sol_seed','plan_scrutiny.opener','plan_scrutiny.iterate','plan_scrutiny.confirm'] },
   { id:'prebuild',  t:'Pre-build',      s:'plan + skeleton check', flow:'single', roles:['prebuild_review.codex'] },
   { id:'build',     t:'Build',          s:'per-step roles', flow:'roles', roles:['build.hard','build.rote'],
-    attach:{ role:'build.checkpoint_confirm', t:'per-step checkpoint', s:'find → glm-5.3 (default, every rung) · declare → codex, rung-scaled' } },
+    attach:{ role:'build.checkpoint_confirm', findRole:'build.checkpoint_find', t:'per-step checkpoint',
+      s:'light: GLM finds+declares · standard: GLM find → terra declares · heavy: Sonnet → GLM ∥ terra → terra declares · A1 = no GLM' } },
   { id:'review',    t:'Phase-4 review', s:'whole-unit convergent review · budget-gated', flow:'sequence', loop:'another round · until 0 core must/should', roles:['p4.r1_swarm','p4.iterate','p4.confirm'] },
   { id:'finish',    t:'Gate · merge',   s:'clippy floor → PR', flow:'single', roles:['clippy_fix.worker'] },
 ];
@@ -1107,7 +1141,7 @@ function stageInfo(st, seats) {
   if (st.flow === 'parallel') return { tag: seats.length>1 ? `∥ ${seats.length} parallel` : '', spine:null, fan:seats, seq:[], par:true };
   return { tag:'', spine:null, fan:seats, seq:[], par:false };
 }
-const RF_SUPPORT = { id:'support', t:'On-demand', s:'auto-mode proxies · consult', roles:['auto_proxy','auto_questionnaire_proxy','consult.codex'] };
+const RF_SUPPORT = { id:'support', t:'On-demand', s:'auto-mode proxies · consults', roles:['auto_proxy','auto_questionnaire_proxy','consult.codex','consult.sol'] };
 let RFLOW = { k:1, x:0, y:0 };
 
 function modelInfo(model) {
@@ -1127,42 +1161,76 @@ const rfShort = (role) => { const r = String(role||'').replace(/^hultra\./,''); 
 // story (checkpoint_fence + burn_balance.glm) — DISPLAY ONLY, doesn't change what the value shown is.
 const RF_SEAT_NOTE = {
   'p4.r1_swarm':              '≤10 reviewers, 1 per code commit — NEVER opus',
-  'p4.iterate':                'GLM-default (glm-5.3 holds loop-iterate); shown value is the codex fallback',
+  'p4.iterate':                'glm-5.3 holds loop-iterate by default; codex fallback alternates terra ⇄ 5.5 by round',
   'build.checkpoint_confirm': 'standard-rung DECLARE only; glm-5.3 holds the FIND round at every rung; A1 (consent/money/pg) skips GLM entirely',
 };
 const rfCurve = (x1,y1,x2,y2) => { const mx=((x1+x2)/2).toFixed(1); return `M${x1.toFixed(1)},${y1.toFixed(1)} C${mx},${y1.toFixed(1)} ${mx},${y2.toFixed(1)} ${x2.toFixed(1)},${y2.toFixed(1)}`; };
+// derive rfNode's opts {altShort, alternation, glm, nonDegradable} from a raw phase-row `p` —
+// shared by the desktop node builder, the mobile seat() renderer, and the support-row loop.
+function rfNodeOpts(p) {
+  const alt = p && p.alternate ? modelInfo(p.alternate) : null;
+  return { altShort: alt ? alt.short : undefined, alternation: p && p.alternation, glm: !!(p && p.glm_default), nonDegradable: !!(p && p.non_degradable) };
+}
+// verdict/pool -> {txt, cls} for one throttle chip (shared by the desktop ribbon + mobile card).
+function thrChip(pool, g) {
+  const verdict = g.verdict || 'UNKNOWN';
+  const proj = g.proj ?? '–', target = g.target ?? '–';
+  let txt = `${pool} ${verdict} ${proj}→${target}`;
+  if (g.active) txt += ` · ${g.active}`;
+  if (g.wall) txt += ' · WALL';
+  if (pool === 'claude') txt += ' (PM-only)';
+  const cls = /UNDERBURN/.test(verdict) ? 'cool' : (/OVERBURN/.test(verdict) || g.wall) ? 'hot' : /IN_BAND/.test(verdict) ? 'okc' : 'dimc';
+  return { txt, cls };
+}
 
-function rfNode(x, y, role, mi, effort, badge, extraTitle) {
+function rfNode(x, y, role, mi, effort, badge, extraTitle, opts) {
+  opts = opts || {};
   const W=170, H=48;
+  const stripW = opts.nonDegradable ? 6 : 4;
+  const modelLabel = opts.altShort ? `${mi.short} ⇄ ${opts.altShort}` : mi.short;
   let bdg='';
   if (badge==='lead') bdg=`<rect x="${x+W-48}" y="${y+7}" width="42" height="15" rx="7" style="fill:color-mix(in srgb,var(--copper) 18%,var(--panel));stroke:var(--copper);stroke-width:.8"/><text x="${x+W-27}" y="${y+17.5}" text-anchor="middle" style="font-size:8px;fill:var(--copper);font-weight:800;letter-spacing:.06em">LEAD</text>`;
   else if (badge) bdg=`<circle cx="${x+W-15}" cy="${y+15}" r="8" style="fill:color-mix(in srgb,var(--copper) 15%,var(--panel));stroke:color-mix(in srgb,var(--copper) 45%,var(--line));stroke-width:.8"/><text x="${x+W-15}" y="${y+18}" text-anchor="middle" style="font-size:8.5px;fill:var(--copper);font-weight:700">${escp(badge)}</text>`;
+  // glm-default pill lives at the TOP-LEFT (not top-right, to avoid colliding with the LEAD/round
+  // badge above, which already owns the top-right corner on the same seats — e.g. p4.iterate).
+  const glmPill = opts.glm
+    ? `<rect x="${x+6}" y="${y+5}" width="26" height="11" rx="5.5" style="fill:color-mix(in srgb,var(--glm) 20%,var(--panel));stroke:var(--glm);stroke-width:.8"/><text x="${x+19}" y="${y+13.2}" text-anchor="middle" style="font-size:7px;fill:var(--glm);font-weight:800;letter-spacing:.03em">GLM</text>`
+    : '';
+  let title = `${role} · ${modelLabel}${effort?` · ${effort}`:''}`;
+  const extras = [];
+  if (extraTitle) extras.push(extraTitle);
+  if (opts.alternation) extras.push(opts.alternation);
+  if (opts.nonDegradable) extras.push('non-degradable');
+  if (extras.length) title += ` — ${extras.join(' · ')}`;
+  if (opts.glm) title = `glm-5.3 holds this seat by default · shown codex model is the fallback — ${title}`;
   return `<g class="rf-node" style="--nc:var(${mi.v})">
     <rect class="rf-card" x="${x}" y="${y}" width="${W}" height="${H}" rx="9"/>
-    <rect class="rf-strip" x="${x}" y="${y}" width="4" height="${H}" rx="2"/>
+    <rect class="rf-strip" x="${x}" y="${y}" width="${stripW}" height="${H}" rx="2"/>
     <circle class="rf-dot" cx="${x+15}" cy="${y+24}" r="3"/>
     <text class="rf-role"  x="${x+26}" y="${y+19}">${escp(role)}</text>
-    <text class="rf-model" x="${x+26}" y="${y+34}">${escp(mi.short)}</text>
+    <text class="rf-model" x="${x+26}" y="${y+34}">${escp(modelLabel)}</text>
     <text class="rf-eff"   x="${x+W-10}" y="${y+42}" text-anchor="end">${escp(effort||'')}</text>
-    ${bdg}
-    <title>${escp(role)} · ${escp(mi.short)}${effort?` · ${escp(effort)}`:''}${extraTitle?` — ${escp(extraTitle)}`:''}</title>
+    ${bdg}${glmPill}
+    <title>${escp(title)}</title>
   </g>`;
 }
 
 // DESKTOP loom: SVG in NATURAL px (no viewBox fit) so nodes are readable at 1:1;
 // the rf-cam transform (RFLOW) pans/zooms in those same px. Lead = a distinct top
 // track; parallel stages get a brace + "∥ N parallel" tag.
-function buildLoom(phases) {
+function buildLoom(phases, throttle) {
   const byRole = {}; (phases||[]).forEach(p => { byRole[String(p.role||'').replace(/^hultra\./,'')] = p; });
   const leadP = byRole['lead'];
   const COLW=216, NW=170, NH=48, STEP=64, X0=40, LEADY=12, LEADH=44;
+  const thr = throttle && throttle.mode ? throttle : null;
+  const THR_H = 34, THRY = LEADY + LEADH + 10;
   const stages = RF_STAGES.filter(st => st.id!=='lead')
     .map(st => ({...st, seats: st.roles.map(r=>byRole[r]).filter(Boolean)})).filter(st => st.seats.length);
   if (!stages.length) return null;
   const support = { ...RF_SUPPORT, seats: RF_SUPPORT.roles.map(r=>byRole[r]).filter(Boolean) };
   const maxSeats = Math.max(1, ...stages.map(s=>s.seats.length));
   const halfH = (maxSeats-1)*STEP/2;
-  const HDR = LEADY + LEADH + 24;
+  const HDR = thr ? (THRY + THR_H + 20) : (LEADY + LEADH + 24);
   const spineY = HDR + 34 + halfH + NH/2;
   const supY = spineY + halfH + 96;
   stages.forEach((st,i) => { st.cx = X0 + NW/2 + i*COLW; });
@@ -1177,6 +1245,26 @@ function buildLoom(phases) {
     over.push(`<text class="rf-lead-t" x="${lx+32}" y="${ly+LEADH/2-1}">LEAD — orchestrates every stage</text>`);
     over.push(`<text class="rf-lead-s" x="${lx+32}" y="${ly+LEADH/2+14}">${escp(mi.short)} · ${escp(leadP.effort||'')}</text>`);
     stages.forEach(st => under.push(`<path class="rf-lead-tick" d="M${st.cx},${ly+LEADH} L${st.cx},${HDR+2}"/>`));
+  }
+
+  if (thr) {
+    const lx = X0-14, lw = worldW-lx-24, ty = THRY;
+    const modeOn = thr.mode === 'on';
+    const parts = [`<rect class="rf-thr-band ${modeOn?'on':'off'}" x="${lx}" y="${ty}" width="${lw}" height="${THR_H}" rx="9"/>`];
+    const label = `⚖ RESPONSIVE DEPLOYMENT · mode ${modeOn ? 'ON' : 'OFF (shadow)'}`;
+    let cxp = lx + 14;
+    parts.push(`<text class="rf-thr-t" x="${cxp}" y="${(ty+THR_H/2+4).toFixed(1)}">${escp(label)}</text>`);
+    cxp += label.length * 6.1 + 20;
+    ['codex','glm','claude'].forEach(pool => {
+      const g = (thr.pools||{})[pool]; if (!g) return;
+      const { txt, cls } = thrChip(pool, g);
+      const w = txt.length * 5.7 + 20;
+      parts.push(`<rect class="rf-thr-chip ${cls}" x="${cxp.toFixed(1)}" y="${(ty+7).toFixed(1)}" width="${w.toFixed(1)}" height="${THR_H-14}" rx="${(THR_H-14)/2}"/>`);
+      parts.push(`<text class="rf-thr-chip-t ${cls}" x="${(cxp+w/2).toFixed(1)}" y="${(ty+THR_H/2+3.5).toFixed(1)}" text-anchor="middle">${escp(txt)}</text>`);
+      cxp += w + 8;
+    });
+    const catalogTitle = 'the evaluator (`throttling.sh evaluate`) may modulate seats per event: ' + ((thr.catalog||[]).join(' · '));
+    over.push(`<g class="rf-thr-group">${parts.join('')}<title>${escp(catalogTitle)}</title></g>`);
   }
 
   for (let i=0;i<stages.length-1;i++)
@@ -1205,7 +1293,7 @@ function buildLoom(phases) {
       under.push(`<path class="rf-branch" style="stroke:var(${mi.v})" stroke-opacity=".34" stroke-width="1.5" d="${rfCurve(ex, spineY, cx-NW/2, y)}"/>`);
       under.push(`<path class="rf-branch" style="stroke:var(${mi.v})" stroke-opacity=".34" stroke-width="1.5" d="${rfCurve(cx+NW/2, y, xx, spineY)}"/>`);
       const badge = info.spine===p ? 'lead' : (seqNo[j] ? ('#'+seqNo[j]) : null);
-      nodes.push(rfNode(cx-NW/2, y-NH/2, rfShort(p.role), mi, p.effort, badge, RF_SEAT_NOTE[p.role]));
+      nodes.push(rfNode(cx-NW/2, y-NH/2, rfShort(p.role), mi, p.effort, badge, p.note || RF_SEAT_NOTE[p.role], rfNodeOpts(p)));
     });
     if (st.loop) {
       const ty = top - NH/2 - 22;
@@ -1216,15 +1304,23 @@ function buildLoom(phases) {
       const ap = byRole[st.attach.role];
       if (ap) {
         const mi2 = modelInfo(ap.model);
+        const fp = st.attach.findRole ? byRole[st.attach.findRole] : null;
         const bandBottom = HDR - 4 + (maxSeats-1)*STEP + NH + 34;
-        const ax = cx - COLW/2 + 10, ay = bandBottom + 14, aw = COLW - 20, ah = 46;
+        const ax = cx - COLW/2 + 10, ay = bandBottom + 14, aw = COLW - 20, ah = fp ? 60 : 46;
         under.push(`<path class="rf-attach-tick" d="M${cx},${bandBottom} L${cx},${ay}"/>`);
-        const atitle = RF_SEAT_NOTE[ap.role];
+        const atitle = ap.note || RF_SEAT_NOTE[ap.role];
+        const roleLines = fp
+          ? (() => { const mif = modelInfo(fp.model); return `
+          <text class="rf-attach-role" x="${cx}" y="${ay+26}" text-anchor="middle" style="fill:var(${mif.v})">FIND · ${escp(rfShort(fp.role))} · ${escp(mif.short)} · ${escp(fp.effort||'')}</text>
+          <text class="rf-attach-role" x="${cx}" y="${ay+38}" text-anchor="middle" style="fill:var(${mi2.v})">DECLARE · ${escp(rfShort(ap.role))} · ${escp(mi2.short)} · ${escp(ap.effort||'')}</text>
+          <text class="rf-attach-s" x="${cx}" y="${ay+52}" text-anchor="middle">${escp(st.attach.s)}</text>`; })()
+          : `
+          <text class="rf-attach-role" x="${cx}" y="${ay+28}" text-anchor="middle" style="fill:var(${mi2.v})">${escp(rfShort(ap.role))} · ${escp(mi2.short)} · ${escp(ap.effort||'')}</text>
+          <text class="rf-attach-s" x="${cx}" y="${ay+40}" text-anchor="middle">${escp(st.attach.s)}</text>`;
         over.push(`<g class="rf-attach">
           <rect class="rf-attach-band" x="${ax}" y="${ay}" width="${aw}" height="${ah}" rx="9"/>
           <text class="rf-attach-t" x="${cx}" y="${ay+14}" text-anchor="middle">⚙ ${escp(st.attach.t)}</text>
-          <text class="rf-attach-role" x="${cx}" y="${ay+28}" text-anchor="middle" style="fill:var(${mi2.v})">${escp(rfShort(ap.role))} · ${escp(mi2.short)} · ${escp(ap.effort||'')}</text>
-          <text class="rf-attach-s" x="${cx}" y="${ay+40}" text-anchor="middle">${escp(st.attach.s)}</text>
+          ${roleLines}
           ${atitle ? `<title>${escp(st.attach.t)} — ${escp(atitle)}</title>` : ''}
         </g>`);
       }
@@ -1236,22 +1332,43 @@ function buildLoom(phases) {
     under.push(`<path class="rf-loop" stroke-opacity=".4" stroke-width="1.6" d="${rfCurve(cx, spineY+halfH+NH/2, cx, supY-46)}"/>`);
     over.push(`<text class="rf-stage-t" x="${cx}" y="${(supY-52).toFixed(1)}" text-anchor="middle">${escp(support.t)}</text>`);
     over.push(`<text class="rf-stage-s" x="${cx}" y="${(supY-38).toFixed(1)}" text-anchor="middle">${escp(support.s)}</text>`);
-    support.seats.forEach((p,j) => { const x=X0+j*(NW+18); nodes.push(rfNode(x, supY-NH/2, rfShort(p.role), modelInfo(p.model), p.effort)); });
+    support.seats.forEach((p,j) => { const x=X0+j*(NW+18); nodes.push(rfNode(x, supY-NH/2, rfShort(p.role), modelInfo(p.model), p.effort, null, p.note || RF_SEAT_NOTE[p.role], rfNodeOpts(p))); });
   }
 
   return `<svg class="rflow-svg" data-w="${worldW.toFixed(0)}" data-h="${worldH.toFixed(0)}" preserveAspectRatio="xMinYMin meet">
     <g class="rf-cam">${under.join('')}${over.join('')}${nodes.join('')}</g></svg>`;
 }
 
-function buildLoomMobile(phases) {
+function buildLoomMobile(phases, throttle) {
   const byRole = {}; (phases||[]).forEach(p => { byRole[String(p.role||'').replace(/^hultra\./,'')] = p; });
-  const seat = (p, badge) => { const mi=modelInfo(p.model), note=RF_SEAT_NOTE[p.role];
-    return `<div class="mseat" style="--nc:var(${mi.v})"${note?` title="${escp(note)}"`:''}>
-    <span class="mseat-role">${badge?`<span class="mseat-no">${escp(badge)}</span>`:''}${escp(rfShort(p.role))}</span>
-    <span class="mseat-model">${escp(mi.short)}${p.effort?` · ${escp(p.effort)}`:''}</span></div>`; };
+  const seat = (p, badge) => { const mi=modelInfo(p.model), note=p.note || RF_SEAT_NOTE[p.role];
+    const opts = rfNodeOpts(p);
+    const modelLabel = opts.altShort ? `${mi.short} ⇄ ${opts.altShort}` : mi.short;
+    const titleParts = [];
+    if (opts.glm) titleParts.push('glm-5.3 holds this seat by default · shown codex model is the fallback');
+    if (note) titleParts.push(note);
+    if (opts.alternation) titleParts.push(opts.alternation);
+    if (opts.nonDegradable) titleParts.push('non-degradable');
+    const titleAttr = titleParts.length ? ` title="${escp(titleParts.join(' · '))}"` : '';
+    return `<div class="mseat${opts.nonDegradable?' nondeg':''}" style="--nc:var(${mi.v})"${titleAttr}>
+    <span class="mseat-role">${badge?`<span class="mseat-no">${escp(badge)}</span>`:''}${escp(rfShort(p.role))}${opts.glm?'<span class="mseat-glm">GLM</span>':''}</span>
+    <span class="mseat-model">${escp(modelLabel)}${p.effort?` · ${escp(p.effort)}`:''}</span></div>`; };
   const leadP = byRole['lead'];
   const lead = leadP ? `<div class="mlead"><div class="mlead-t">LEAD — orchestrates every stage</div>
     <div class="mlead-s">${escp(modelInfo(leadP.model).short)} · ${escp(leadP.effort||'')}</div></div>` : '';
+  const thr = throttle && throttle.mode ? throttle : null;
+  const thrHtml = thr ? (() => {
+    const modeOn = thr.mode === 'on';
+    const chips = ['codex','glm','claude'].map(pool => {
+      const g = (thr.pools||{})[pool]; if (!g) return '';
+      const { txt, cls } = thrChip(pool, g);
+      return `<span class="mthr-chip ${cls}">${escp(txt)}</span>`;
+    }).join('');
+    const title = 'the evaluator (`throttling.sh evaluate`) may modulate seats per event: ' + ((thr.catalog||[]).join(' · '));
+    return `<div class="mthrottle" title="${escp(title)}">
+      <div class="mthrottle-t">⚖ RESPONSIVE DEPLOYMENT · mode ${modeOn ? 'ON' : 'OFF (shadow)'}</div>
+      <div class="mthrottle-chips">${chips}</div></div>`;
+  })() : '';
   const body = RF_STAGES.filter(st=>st.id!=='lead').map(st => {
     const seats = st.roles.map(r=>byRole[r]).filter(Boolean); if (!seats.length) return '';
     const info = stageInfo(st, seats);
@@ -1260,10 +1377,14 @@ function buildLoomMobile(phases) {
     const seqHtml = info.seq.length ? `<div class="mseats seq">${info.seq.map((p,i)=>seat(p,'#'+(i+1))).join('')}</div>` : '';
     const attachHtml = st.attach ? (() => {
       const ap = byRole[st.attach.role]; if (!ap) return '';
-      const mi = modelInfo(ap.model), note = RF_SEAT_NOTE[ap.role];
+      const mi = modelInfo(ap.model), note = ap.note || RF_SEAT_NOTE[ap.role];
+      const fp = st.attach.findRole ? byRole[st.attach.findRole] : null;
+      const findLine = fp ? (() => { const mif = modelInfo(fp.model);
+        return `<div class="mattach-role" style="--nc:var(${mif.v})">FIND · ${escp(rfShort(fp.role))} <span class="mattach-model">${escp(mif.short)} · ${escp(fp.effort||'')}</span></div>`; })() : '';
       return `<div class="mstage-attach"${note?` title="${escp(note)}"`:''}>
         <div class="mattach-h">⚙ ${escp(st.attach.t)}</div>
-        <div class="mattach-role" style="--nc:var(${mi.v})">${escp(rfShort(ap.role))} <span class="mattach-model">${escp(mi.short)} · ${escp(ap.effort||'')}</span></div>
+        ${findLine}
+        <div class="mattach-role" style="--nc:var(${mi.v})">${fp?'DECLARE · ':''}${escp(rfShort(ap.role))} <span class="mattach-model">${escp(mi.short)} · ${escp(ap.effort||'')}</span></div>
         <div class="mattach-s">${escp(st.attach.s)}</div></div>`;
     })() : '';
     return `<div class="mconn"></div><div class="mstage">
@@ -1276,7 +1397,7 @@ function buildLoomMobile(phases) {
   const supHtml = sup.length ? `<div class="mconn dash"></div><div class="mstage support">
     <div class="mstage-h"><span class="mstage-t">${escp(RF_SUPPORT.t)}</span><span class="mtag">on-demand</span></div>
     <div class="mstage-s">${escp(RF_SUPPORT.s)}</div><div class="mseats">${sup.map(p=>seat(p)).join('')}</div></div>` : '';
-  return `<div class="mloom">${lead}<div class="mcap start">unit ▸</div>${body}<div class="mconn"></div><div class="mcap end">merged ✓</div>${supHtml}</div>`;
+  return `<div class="mloom">${lead}${thrHtml}<div class="mcap start">unit ▸</div>${body}<div class="mconn"></div><div class="mcap end">merged ✓</div>${supHtml}</div>`;
 }
 
 function rfSvgPt(svg, cx, cy) {
@@ -1381,14 +1502,14 @@ function renderModels() {
   if (!rt || !(rt.phases || []).length) {
     routingHtml = `<div class="panel"><h3>Routing map</h3><div class="empty-inline">no routing published in this snapshot — the switchboard appears once the routing resolver reports in.</div></div>`;
   } else {
-    const legendInner = `<span><i style="background:var(--info)"></i>opus</span><span><i style="background:var(--sonnet)"></i>sonnet</span><span><i style="background:var(--fable)"></i>fable</span><span><i style="background:var(--copper)"></i>terra · 5.5</span><span><i style="background:var(--sol)"></i>sol</span>`;
+    const legendInner = `<span><i style="background:var(--info)"></i>opus</span><span><i style="background:var(--sonnet)"></i>sonnet</span><span><i style="background:var(--fable)"></i>fable</span><span><i style="background:var(--copper)"></i>terra · 5.5</span><span><i style="background:var(--sol)"></i>sol</span><span><i style="background:var(--glm)"></i>glm</span><span>⇄ alternates by round</span>`;
     const legend = `<div class="rflow-legend">${legendInner}</div>`;
     const isNarrow = window.matchMedia('(max-width: 720px)').matches;
     let loomHtml;
     if (isNarrow) {
-      loomHtml = buildLoomMobile(rt.phases) + `<div class="rflow-legend static">${legendInner}</div>`;
+      loomHtml = buildLoomMobile(rt.phases, rt.throttle) + `<div class="rflow-legend static">${legendInner}</div>`;
     } else {
-      const loomSvg = buildLoom(rt.phases);
+      const loomSvg = buildLoom(rt.phases, rt.throttle);
       loomHtml = loomSvg
         ? `<div class="rflow-wrap">${loomSvg}
             <div class="rflow-ctl"><button data-z="in" title="zoom in" aria-label="zoom in">+</button><button data-z="out" title="zoom out" aria-label="zoom out">−</button><button data-z="fit" title="reset view" aria-label="reset view">⤢</button></div>
