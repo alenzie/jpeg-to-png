@@ -101,7 +101,7 @@
         "tier": "Pro",
         "projected": null,
         "used": 5,
-        "at": 1787685824,
+        "at": 1787686314,
         "reset": "07:34 on 1 Sep",
         "spark": [
           [
@@ -218,10 +218,10 @@
         "target": 100,
         "label": "A",
         "mult": "20x",
-        "projected": 318,
+        "projected": 316,
         "used": 50,
-        "at": 1787685824,
-        "reset": "Aug 31, 11am (America/Los_Angeles)",
+        "at": 1787686314,
+        "reset": "Aug 31, 10:59am (America/Los_Angeles)",
         "spark": [
           [
             1787086800,
@@ -931,9 +931,9 @@
     ],
     "glm": {
       "target": 100,
-      "projected": 56,
-      "used": 38,
-      "at": 1787685824,
+      "projected": 58,
+      "used": 39,
+      "at": 1787686314,
       "reset": "Aug 27, 19:39",
       "level": "pro",
       "spark": [
@@ -1771,7 +1771,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1787685824,
+      "at": 1787686314,
       "spark": [
         [
           1787428800,
@@ -4147,17 +4147,17 @@
               "wall": false
             },
             "glm": {
-              "verdict": "UNDERBURN",
-              "proj": 56,
+              "verdict": "UNAVAILABLE",
+              "proj": 58,
               "target": 100,
-              "used": 38,
+              "used": 39,
               "day": 5,
-              "active": "G1",
+              "active": null,
               "wall": false
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 318,
+              "proj": 316,
               "target": 200,
               "used": 50,
               "day": 2,
@@ -4165,7 +4165,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-25T20:23:47Z",
+          "updated": "2026-08-25T20:35:10Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4181,7 +4181,7 @@
           ]
         }
       },
-      "snapshot_id": "f8f28112818017b8"
+      "snapshot_id": "254f6de210c35829"
     },
     "outbound": {
       "schema": 1,
@@ -4218,17 +4218,70 @@
         {
           "id": "SEQ-SETTLE",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 18,
-          "last_commit_at": 1787689835,
-          "head": "52469a6c",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 15,
+          "last_commit_at": 1787689879,
+          "head": "3b7a1816",
           "subfence": {
             "done": 10,
             "total": 11
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "codex gpt-5.6-soldeep SEED",
+              "must": 16,
+              "should": 6,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 1,
+              "seats": "Sonnet-high ×2 designinvariant  anchorsc",
+              "must": 1,
+              "should": 4,
+              "could": 1,
+              "nit": 3
+            },
+            {
+              "round": 2,
+              "seats": "glm-5.3 iterate",
+              "must": 4,
+              "should": 5,
+              "could": 0,
+              "nit": 3
+            },
+            {
+              "round": 3,
+              "seats": "codex gpt-5.6-terra iterate",
+              "must": 5,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "codex gpt-5.6-terra DECLARER + invariant",
+              "must": 4,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "codex gpt-5.6-terra confirming DECLARER",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "3b7a1816",
+              "at": 1787689879
+            },
             {
               "sha": "52469a6c",
               "at": 1787689835
@@ -4244,16 +4297,12 @@
             {
               "sha": "940254f6",
               "at": 1787688934
-            },
-            {
-              "sha": "e4d1e503",
-              "at": 1787688831
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
-            "build": false,
+            "build": true,
             "review": false
           },
           "gate_open": false
@@ -4552,17 +4601,17 @@
               "wall": false
             },
             "glm": {
-              "verdict": "UNDERBURN",
-              "proj": 56,
+              "verdict": "UNAVAILABLE",
+              "proj": 58,
               "target": 100,
-              "used": 38,
+              "used": 39,
               "day": 5,
-              "active": "G1",
+              "active": null,
               "wall": false
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 318,
+              "proj": 316,
               "target": 200,
               "used": 50,
               "day": 2,
@@ -4570,7 +4619,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-25T20:23:47Z",
+          "updated": "2026-08-25T20:35:10Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4586,7 +4635,7 @@
           ]
         }
       },
-      "snapshot_id": "3f04a0c69dd3bdc1"
+      "snapshot_id": "dd76185f08d5ffb6"
     },
     "scriptgen": {
       "schema": 1,
@@ -4625,7 +4674,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 19,
+          "ctx_pct": 23,
           "last_commit_at": 1787689389,
           "head": "7ca5ca6",
           "subfence": {
@@ -4900,17 +4949,17 @@
               "wall": false
             },
             "glm": {
-              "verdict": "UNDERBURN",
-              "proj": 56,
+              "verdict": "UNAVAILABLE",
+              "proj": 58,
               "target": 100,
-              "used": 38,
+              "used": 39,
               "day": 5,
-              "active": "G1",
+              "active": null,
               "wall": false
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 318,
+              "proj": 316,
               "target": 200,
               "used": 50,
               "day": 2,
@@ -4918,7 +4967,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-25T20:23:47Z",
+          "updated": "2026-08-25T20:35:10Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4934,7 +4983,7 @@
           ]
         }
       },
-      "snapshot_id": "0eb59a58a36dfeb5"
+      "snapshot_id": "af71f4f822e96678"
     }
   },
   "pm": {
@@ -4955,22 +5004,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 45
+        "monitor_last_pass_min": 50
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 45
+        "monitor_last_pass_min": 50
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 45
+        "monitor_last_pass_min": 50
       }
     ]
   },
-  "snapshot_id": "d4ad7553de6651a5",
-  "published_at": "2026-08-25T20:31:10Z"
+  "snapshot_id": "8100ae594c48a6aa",
+  "published_at": "2026-08-25T20:36:23Z"
 }
