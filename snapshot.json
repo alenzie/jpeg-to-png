@@ -99,9 +99,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 164,
+        "projected": 163,
         "used": 24,
-        "at": 1787617201,
+        "at": 1787617916,
         "reset": "17:48 on 30 Aug",
         "spark": [
           [
@@ -961,7 +961,7 @@
       "target": 100,
       "projected": 51,
       "used": 29,
-      "at": 1787617201,
+      "at": 1787617916,
       "reset": "Aug 27, 19:39",
       "level": "pro",
       "spark": [
@@ -1675,7 +1675,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1787617201,
+      "at": 1787617916,
       "spark": [
         [
           1787428800,
@@ -4253,7 +4253,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1787621019
+        "last_pass_at": 1787621451
       },
       "runstate": {
         "auto": false,
@@ -4698,7 +4698,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 26,
+          "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5880,7 +5880,7 @@
           ]
         }
       },
-      "snapshot_id": "4f2c0328ad4790f7"
+      "snapshot_id": "4596453d3c1690f8"
     },
     "outbound": {
       "schema": 1,
@@ -5892,7 +5892,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1787621019
+        "last_pass_at": 1787621450
       },
       "runstate": {
         "auto": false,
@@ -5919,15 +5919,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 26,
-          "last_commit_at": 1787620382,
-          "head": "d5e9b32c",
+          "ctx_pct": 28,
+          "last_commit_at": 1787621494,
+          "head": "99e030de",
           "subfence": {
             "done": 10,
             "total": 15
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "99e030de",
+              "at": 1787621494
+            },
             {
               "sha": "d5e9b32c",
               "at": 1787620382
@@ -5943,10 +5947,6 @@
             {
               "sha": "5ff55d9b",
               "at": 1787618764
-            },
-            {
-              "sha": "c0e7b493",
-              "at": 1787618187
             }
           ],
           "fences": {
@@ -6219,7 +6219,7 @@
           ]
         }
       },
-      "snapshot_id": "4e8a572a4dd4ae3d"
+      "snapshot_id": "60dcf1840df99a2f"
     },
     "scriptgen": {
       "schema": 1,
@@ -6231,7 +6231,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1787621023
+        "last_pass_at": 1787621452
       },
       "runstate": {
         "auto": false,
@@ -6676,7 +6676,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 26,
+          "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7824,7 +7824,7 @@
           ]
         }
       },
-      "snapshot_id": "25bb1cf1b54c8a01"
+      "snapshot_id": "c947303eb0883a46"
     }
   },
   "pm": {
@@ -7836,7 +7836,7 @@
       "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode."
     },
     "pm_session": {
-      "lock": "1012363 2026-08-25T00:22:46Z",
+      "lock": "1302419 2026-08-25T01:31:40Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -7845,22 +7845,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 6
+        "monitor_last_pass_min": 4
       }
     ]
   },
-  "snapshot_id": "a07fddee150851c4",
-  "published_at": "2026-08-25T01:29:46Z"
+  "snapshot_id": "69761f5bfcc01d34",
+  "published_at": "2026-08-25T01:34:59Z"
 }
