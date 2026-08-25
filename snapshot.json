@@ -100,8 +100,8 @@
         "label": "B",
         "tier": "Pro",
         "projected": 152,
-        "used": 25,
-        "at": 1787628451,
+        "used": 26,
+        "at": 1787632121,
         "reset": "17:48 on 30 Aug",
         "spark": [
           [
@@ -139,6 +139,10 @@
           [
             1787626800,
             148
+          ],
+          [
+            1787630400,
+            153
           ]
         ],
         "trail": [
@@ -229,6 +233,10 @@
           [
             16.0,
             24.0
+          ],
+          [
+            17.0,
+            26.0
           ]
         ]
       }
@@ -239,8 +247,8 @@
         "label": "A",
         "mult": "20x",
         "projected": null,
-        "used": 8,
-        "at": 1787628451,
+        "used": 10,
+        "at": 1787632121,
         "reset": "Aug 31, 11am (America/Los_Angeles)",
         "spark": [
           [
@@ -496,6 +504,10 @@
           [
             6.0,
             8.0
+          ],
+          [
+            7.0,
+            10.0
           ]
         ]
       },
@@ -881,7 +893,7 @@
       "target": 100,
       "projected": 53,
       "used": 31,
-      "at": 1787628451,
+      "at": 1787632121,
       "reset": "Aug 27, 19:39",
       "level": "pro",
       "spark": [
@@ -1288,6 +1300,10 @@
         [
           1787626800,
           52
+        ],
+        [
+          1787630400,
+          53
         ]
       ],
       "trail": [
@@ -1602,6 +1618,10 @@
         [
           58.0,
           30.0
+        ],
+        [
+          59.0,
+          31.0
         ]
       ]
     },
@@ -1611,7 +1631,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1787628451,
+      "at": 1787632121,
       "spark": [
         [
           1787428800,
@@ -1707,6 +1727,10 @@
         ],
         [
           1787626800,
+          9.7
+        ],
+        [
+          1787630400,
           9.7
         ]
       ]
@@ -1879,6 +1903,10 @@
           [
             1787626885,
             24.0
+          ],
+          [
+            1787631970,
+            26.0
           ]
         ]
       },
@@ -2387,6 +2415,10 @@
           [
             1787626885,
             8.0
+          ],
+          [
+            1787631970,
+            10.0
           ]
         ],
         "B": [
@@ -3438,6 +3470,10 @@
         [
           1787626885,
           30.0
+        ],
+        [
+          1787631970,
+          31.0
         ]
       ]
     }
@@ -3446,14 +3482,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "INT7-PUBLIC-API-SDK-PY",
-            "kind": "escalate",
-            "raised_at": null
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3904,7 +3934,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 41,
+          "ctx_pct": 43,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3919,7 +3949,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "INT7-PUBLIC-API-SDK",
@@ -5082,19 +5112,13 @@
           ]
         }
       },
-      "snapshot_id": "a25d3bdd212cfd7d"
+      "snapshot_id": "456fd51d1ffe1d53"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "INT7-PUBLIC-API-SDK-PY",
-            "kind": "escalate",
-            "raised_at": 1787635280
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5125,17 +5149,86 @@
         {
           "id": "INT7-PUBLIC-API-SDK-PY",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 41,
-          "last_commit_at": 1787635279,
-          "head": "2c2368da",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 43,
+          "last_commit_at": 1787635614,
+          "head": "3569c342",
           "subfence": {
             "done": 14,
             "total": 15
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "codex gpt-5.5deepxhigh fresh-eyes opener",
+              "must": 3,
+              "should": 1,
+              "could": 0,
+              "nit": 1
+            },
+            {
+              "round": 2,
+              "seats": "codex gpt-5.6-terraxhigh iterating",
+              "must": 2,
+              "should": 2,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "codex gpt-5.5deepxhigh confirm attempt",
+              "must": 1,
+              "should": 1,
+              "could": 1,
+              "nit": 1
+            },
+            {
+              "round": 4,
+              "seats": "codex gpt-5.5deepxhigh confirm attempt",
+              "must": 1,
+              "should": 1,
+              "could": 0,
+              "nit": 1
+            },
+            {
+              "round": 5,
+              "seats": "codex gpt-5.5deepxhigh confirm attempt",
+              "must": 3,
+              "should": 2,
+              "could": 0,
+              "nit": 1
+            },
+            {
+              "round": 1,
+              "seats": "Sonnet-high swarm ×4",
+              "must": 2,
+              "should": 4,
+              "could": 1,
+              "nit": 3
+            },
+            {
+              "round": 1,
+              "seats": "codex gpt-5.6-solxhigh breadth ×2",
+              "must": 6,
+              "should": 13,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "codex glm-5.3 iterate loopiterate GLM-de",
+              "must": 1,
+              "should": 2,
+              "could": 0,
+              "nit": 1
+            }
+          ],
           "commits": [
+            {
+              "sha": "3569c342",
+              "at": 1787635614
+            },
             {
               "sha": "2c2368da",
               "at": 1787635279
@@ -5151,10 +5244,6 @@
             {
               "sha": "05016a3d",
               "at": 1787633504
-            },
-            {
-              "sha": "d29fa19f",
-              "at": 1787633401
             }
           ],
           "fences": {
@@ -5163,7 +5252,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -5423,19 +5512,13 @@
           ]
         }
       },
-      "snapshot_id": "c26c5a89ad361a72"
+      "snapshot_id": "b908c54c4748a3e1"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "INT7-PUBLIC-API-SDK-PY",
-            "kind": "escalate",
-            "raised_at": null
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5886,7 +5969,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 41,
+          "ctx_pct": 43,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5901,7 +5984,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "INT7-PUBLIC-API-SDK",
@@ -7030,7 +7113,7 @@
           ]
         }
       },
-      "snapshot_id": "3feab3d62121a120"
+      "snapshot_id": "261b40b74e94c468"
     }
   },
   "pm": {
@@ -7042,7 +7125,7 @@
       "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode."
     },
     "pm_session": {
-      "lock": "1880077 2026-08-25T04:25:49Z",
+      "lock": "2085881 2026-08-25T05:25:53Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -7051,22 +7134,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       }
     ]
   },
-  "snapshot_id": "da8e9050a2057ab6",
-  "published_at": "2026-08-25T05:24:40Z"
+  "snapshot_id": "ef6d68ff87343c8a",
+  "published_at": "2026-08-25T05:30:04Z"
 }
