@@ -99,9 +99,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 151,
+        "projected": 147,
         "used": 26,
-        "at": 1787633121,
+        "at": 1787635635,
         "reset": "17:48 on 30 Aug",
         "spark": [
           [
@@ -143,6 +143,10 @@
           [
             1787630400,
             153
+          ],
+          [
+            1787634000,
+            148
           ]
         ],
         "trail": [
@@ -237,6 +241,10 @@
           [
             17.0,
             26.0
+          ],
+          [
+            18.0,
+            26.0
           ]
         ]
       }
@@ -248,8 +256,8 @@
         "mult": "20x",
         "projected": null,
         "used": 11,
-        "at": 1787633121,
-        "reset": "Aug 31, 11am (America/Los_Angeles)",
+        "at": 1787635635,
+        "reset": "Aug 31, 10:59am (America/Los_Angeles)",
         "spark": [
           [
             1787086800,
@@ -508,6 +516,10 @@
           [
             7.0,
             10.0
+          ],
+          [
+            7.0,
+            11.0
           ]
         ]
       },
@@ -887,9 +899,9 @@
     ],
     "glm": {
       "target": 100,
-      "projected": 53,
+      "projected": 52,
       "used": 31,
-      "at": 1787633121,
+      "at": 1787635635,
       "reset": "Aug 27, 19:39",
       "level": "pro",
       "spark": [
@@ -1296,6 +1308,10 @@
         [
           1787630400,
           53
+        ],
+        [
+          1787634000,
+          52
         ]
       ],
       "trail": [
@@ -1614,6 +1630,10 @@
         [
           59.0,
           31.0
+        ],
+        [
+          59.0,
+          31.0
         ]
       ]
     },
@@ -1623,7 +1643,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1787633121,
+      "at": 1787635635,
       "spark": [
         [
           1787428800,
@@ -1723,6 +1743,10 @@
         ],
         [
           1787630400,
+          9.7
+        ],
+        [
+          1787634000,
           9.7
         ]
       ]
@@ -1898,6 +1922,10 @@
           ],
           [
             1787631970,
+            26.0
+          ],
+          [
+            1787635341,
             26.0
           ]
         ]
@@ -2411,6 +2439,10 @@
           [
             1787631970,
             10.0
+          ],
+          [
+            1787635341,
+            11.0
           ]
         ],
         "B": [
@@ -3465,6 +3497,10 @@
         ],
         [
           1787631970,
+          31.0
+        ],
+        [
+          1787635341,
           31.0
         ]
       ]
@@ -4582,6 +4618,28 @@
           "gate_open": false
         },
         {
+          "id": "SEQ-SETTLE",
+          "status": "building",
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": 14,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
           "id": "SMS-BROADCAST",
           "status": "building",
           "stage": "building",
@@ -5104,7 +5162,7 @@
           ]
         }
       },
-      "snapshot_id": "7ac889c2445e4fd2"
+      "snapshot_id": "854f6ba88a398078"
     },
     "outbound": {
       "schema": 1,
@@ -5137,7 +5195,30 @@
           "up": true
         }
       },
-      "units": [],
+      "units": [
+        {
+          "id": "SEQ-SETTLE",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 14,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        }
+      ],
       "eligible": [
         "WARM-REPLY",
         "MAP1b",
@@ -5395,7 +5476,7 @@
           ]
         }
       },
-      "snapshot_id": "43971ad5d22f466b"
+      "snapshot_id": "c50004d1f98962a0"
     },
     "scriptgen": {
       "schema": 1,
@@ -6508,6 +6589,28 @@
           "gate_open": false
         },
         {
+          "id": "SEQ-SETTLE",
+          "status": "building",
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": 14,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
           "id": "SMS-BROADCAST",
           "status": "building",
           "stage": "building",
@@ -6996,7 +7099,7 @@
           ]
         }
       },
-      "snapshot_id": "221edd48743ffabd"
+      "snapshot_id": "ef9a4f747eb1ab48"
     }
   },
   "pm": {
@@ -7008,7 +7111,7 @@
       "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode."
     },
     "pm_session": {
-      "lock": "2085881 2026-08-25T05:25:53Z",
+      "lock": "2261286 2026-08-25T06:25:51Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -7017,22 +7120,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 5
+        "monitor_last_pass_min": 11
       }
     ]
   },
-  "snapshot_id": "50f537ca081bf93f",
-  "published_at": "2026-08-25T06:22:11Z"
+  "snapshot_id": "fa1065c33d83132c",
+  "published_at": "2026-08-25T06:27:24Z"
 }
