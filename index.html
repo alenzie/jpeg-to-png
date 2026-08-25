@@ -1039,7 +1039,12 @@ function renderUsage() {
   if (!SNAP) { view.innerHTML = emptyState('waiting for snapshot…'); return; }
   const H = (SNAP.throttling || {}).history || {};
   const series = [];
-  if (H.codex) series.push({ name: 'codex', color: '#3FB8C4', pts: H.codex });
+  // codex is a per-account dict {label: pts} (owner 2026-08-25 - show every codex account, not one
+  // aggregate line); tolerate the old flat-array shape during the snapshot-format transition.
+  if (H.codex) {
+    if (Array.isArray(H.codex)) series.push({ name: 'codex', color: '#3FB8C4', pts: H.codex });
+    else Object.keys(H.codex).sort().forEach((k, i) => series.push({ name: 'codex ' + k, color: ['#3FB8C4', '#7FD4DC', '#2C8A94'][i] || '#3FB8C4', pts: H.codex[k] }));
+  }
   if (H.claude) Object.keys(H.claude).sort().forEach((k, i) => series.push({ name: 'claude ' + k, color: ['#EA8B57', '#F0B07E', '#B85C22'][i] || '#EA8B57', pts: H.claude[k] }));
   if (H.glm) series.push({ name: 'glm', color: '#A78BFA', pts: H.glm });
   const hasData = series.some(s => (s.pts || []).length);
