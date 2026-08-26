@@ -3944,7 +3944,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 24,
+          "ctx_pct": 28,
           "last_commit_at": 1787701644,
           "head": "81da680",
           "subfence": {
@@ -4296,13 +4296,19 @@
           ]
         }
       },
-      "snapshot_id": "93a26bb4724ebf0d"
+      "snapshot_id": "dac17f9775c63477"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "SEQ-SETTLE",
+            "kind": "escalate",
+            "raised_at": 1787705684
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4335,7 +4341,7 @@
           "status": "done",
           "stage": "done",
           "stage_i": 7,
-          "ctx_pct": 48,
+          "ctx_pct": 56,
           "last_commit_at": 1787704482,
           "head": "7d5fedcd",
           "subfence": {
@@ -4371,7 +4377,7 @@
             "build": true,
             "review": true
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4701,7 +4707,7 @@
           ]
         }
       },
-      "snapshot_id": "4d96fcaa2959d6b6"
+      "snapshot_id": "0755e3c1dba15df2"
     },
     "scriptgen": {
       "schema": 1,
@@ -5111,22 +5117,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       }
     ]
   },
-  "snapshot_id": "72b1904c430e2b42",
-  "published_at": "2026-08-26T00:52:23Z"
+  "snapshot_id": "63ac33bbf68d6a87",
+  "published_at": "2026-08-26T00:57:35Z"
 }
