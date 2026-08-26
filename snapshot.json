@@ -101,7 +101,7 @@
         "tier": "Pro",
         "projected": null,
         "used": 16,
-        "at": 1787701086,
+        "at": 1787701547,
         "reset": "07:34 on 1 Sep",
         "spark": [
           [
@@ -234,15 +234,11 @@
         "target": 100,
         "label": "A",
         "mult": "20x",
-        "projected": 329,
+        "projected": 328,
         "used": 60,
-        "at": 1787701086,
+        "at": 1787701547,
         "reset": "Aug 31, 11am (America/Los_Angeles)",
         "spark": [
-          [
-            1787097600,
-            58
-          ],
           [
             1787101200,
             58
@@ -969,14 +965,10 @@
       "target": 100,
       "projected": 58,
       "used": 41,
-      "at": 1787701086,
+      "at": 1787701547,
       "reset": "Aug 27, 19:39",
       "level": "pro",
       "spark": [
-        [
-          1787097600,
-          152
-        ],
         [
           1787101200,
           155
@@ -1823,7 +1815,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1787701086,
+      "at": 1787701547,
       "spark": [
         [
           1787428800,
@@ -2511,10 +2503,6 @@
           [
             1787098835,
             10.0
-          ],
-          [
-            1787100239,
-            11.0
           ],
           [
             1787101215,
@@ -3396,10 +3384,6 @@
           46.0
         ],
         [
-          1787100239,
-          46.0
-        ],
-        [
           1787101215,
           47.0
         ],
@@ -3932,8 +3916,8 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1787687146
+        "monitor_alive": true,
+        "last_pass_at": 1787705021
       },
       "runstate": {
         "auto": false,
@@ -3951,7 +3935,7 @@
           "up": true
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [
@@ -4003,7 +3987,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 60,
+          "ctx_pct": 63,
           "last_commit_at": 1787704501,
           "head": "225ed85",
           "subfence": {
@@ -4288,7 +4272,7 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 329,
+              "proj": 328,
               "target": 200,
               "used": 60,
               "day": 2,
@@ -4296,7 +4280,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-26T00:38:09Z",
+          "updated": "2026-08-26T00:45:48Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4312,7 +4296,7 @@
           ]
         }
       },
-      "snapshot_id": "bba3d51be80dc3f9"
+      "snapshot_id": "93a26bb4724ebf0d"
     },
     "outbound": {
       "schema": 1,
@@ -4323,8 +4307,8 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1787687146
+        "monitor_alive": true,
+        "last_pass_at": 1787705020
       },
       "runstate": {
         "auto": false,
@@ -4342,88 +4326,23 @@
           "up": true
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [
         {
           "id": "SEQ-SETTLE",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 40,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 22,
           "last_commit_at": 1787704482,
           "head": "7d5fedcd",
           "subfence": {
             "done": 10,
             "total": 11
           },
-          "review_rounds": [
-            {
-              "round": 3,
-              "seats": "codex gpt-5.6-terra iterate",
-              "must": 5,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "codex gpt-5.6-terra DECLARER + invariant",
-              "must": 4,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "codex gpt-5.6-terra confirming DECLARER",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 1,
-              "seats": "Sonnet-high swarm ×4 store  convert  api",
-              "must": 1,
-              "should": 4,
-              "could": 2,
-              "nit": 2
-            },
-            {
-              "round": 1,
-              "seats": "codex gpt-5.6-solxhigh breadth ×3 S1-3  ",
-              "must": 9,
-              "should": 10,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "codex gpt-5.5xhigh iterate R1-fix diff",
-              "must": 1,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "codex gpt-5.6-terraxhigh iterate R2-fix ",
-              "must": 0,
-              "should": 2,
-              "could": 0,
-              "nit": 1
-            },
-            {
-              "round": 4,
-              "seats": "codex terra + gpt-5.5 DUAL-DECLARE cumul",
-              "must": 3,
-              "should": 3,
-              "could": 2,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "7d5fedcd",
@@ -4450,7 +4369,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -4758,7 +4677,7 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 329,
+              "proj": 328,
               "target": 200,
               "used": 60,
               "day": 2,
@@ -4766,7 +4685,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-26T00:38:09Z",
+          "updated": "2026-08-26T00:45:48Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4782,7 +4701,7 @@
           ]
         }
       },
-      "snapshot_id": "57549680fe286371"
+      "snapshot_id": "2dc417dd8cf80ae2"
     },
     "scriptgen": {
       "schema": 1,
@@ -4793,8 +4712,8 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1787687147
+        "monitor_alive": true,
+        "last_pass_at": 1787705022
       },
       "runstate": {
         "auto": false,
@@ -4812,7 +4731,7 @@
           "up": true
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [
@@ -4821,9 +4740,9 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 42,
-          "last_commit_at": 1787704672,
-          "head": "23e96d6",
+          "ctx_pct": 44,
+          "last_commit_at": 1787705218,
+          "head": "377a70b",
           "subfence": {
             "done": 6,
             "total": 6
@@ -4839,7 +4758,7 @@
             },
             {
               "round": 1,
-              "seats": "codex gpt-5.6-solxhigh ×6",
+              "seats": "codex gpt-5.6-solxhigh ×6 breadth",
               "must": 8,
               "should": 8,
               "could": 3,
@@ -4847,14 +4766,38 @@
             },
             {
               "round": 2,
-              "seats": "codex gpt-5.5xhigh ×6 + GLM-5.3",
+              "seats": "codex gpt-5.5xhigh ×6 + GLM-5.3 SQL",
               "must": 4,
               "should": 15,
               "could": 3,
               "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "codex gpt-5.6-terraxhigh ×5 DECLARER",
+              "must": 2,
+              "should": 3,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "GLM-5.3 Rust derivation",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 0
             }
           ],
           "commits": [
+            {
+              "sha": "377a70b",
+              "at": 1787705218
+            },
+            {
+              "sha": "8d971a1",
+              "at": 1787705157
+            },
             {
               "sha": "23e96d6",
               "at": 1787704672
@@ -4866,14 +4809,6 @@
             {
               "sha": "41f122e",
               "at": 1787703879
-            },
-            {
-              "sha": "0bea591",
-              "at": 1787703734
-            },
-            {
-              "sha": "b8d45b5",
-              "at": 1787701916
             }
           ],
           "fences": {
@@ -5131,7 +5066,7 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 329,
+              "proj": 328,
               "target": 200,
               "used": 60,
               "day": 2,
@@ -5139,7 +5074,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-26T00:38:09Z",
+          "updated": "2026-08-26T00:45:48Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5155,7 +5090,7 @@
           ]
         }
       },
-      "snapshot_id": "a1fb7f51952472ce"
+      "snapshot_id": "efc6973bacdcabb9"
     }
   },
   "pm": {
@@ -5176,22 +5111,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 296
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 296
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 296
+        "monitor_last_pass_min": 3
       }
     ]
   },
-  "snapshot_id": "1953eb5398055f36",
-  "published_at": "2026-08-26T00:41:56Z"
+  "snapshot_id": "6fc6e3a14d3d1a5c",
+  "published_at": "2026-08-26T00:47:10Z"
 }
