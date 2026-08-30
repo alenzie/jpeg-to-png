@@ -85,8 +85,8 @@
         "tier": "Pro",
         "projected": null,
         "used": 0,
-        "at": 1788056004,
-        "reset": "20:12 on 5 Sep",
+        "at": 1788056765,
+        "reset": "20:24 on 5 Sep",
         "spark": [
           [
             1787522400,
@@ -562,7 +562,7 @@
             75.0
           ],
           [
-            77.0,
+            77.1,
             76.0
           ]
         ]
@@ -742,9 +742,9 @@
     ],
     "glm": {
       "target": 100,
-      "projected": 0,
-      "used": 0,
-      "at": 1788056004,
+      "projected": 3,
+      "used": 1,
+      "at": 1788056765,
       "reset": "Sep 03, 19:39",
       "level": "pro",
       "spark": [
@@ -1195,7 +1195,7 @@
           0.0
         ],
         [
-          29.0,
+          29.1,
           0.0
         ]
       ]
@@ -1204,9 +1204,9 @@
       "balance": 9.7,
       "currency": "USD",
       "available": true,
-      "burn_per_day": 0.0,
+      "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788056004,
+      "at": 1788056765,
       "spark": [
         [
           1787522400,
@@ -3832,9 +3832,9 @@
             },
             "glm": {
               "verdict": "UNAVAILABLE",
-              "proj": 0,
+              "proj": 3,
               "target": 100,
-              "used": 0,
+              "used": 1,
               "day": 3,
               "active": null,
               "wall": false
@@ -3849,7 +3849,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-30T03:13:58Z",
+          "updated": "2026-08-30T03:29:44Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3865,13 +3865,19 @@
           ]
         }
       },
-      "snapshot_id": "f1939db5a150ac58"
+      "snapshot_id": "5e7cb734261c0aae"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CONSENT-ARTIFACT-UPLOAD-UI",
+            "kind": "needs-owner",
+            "raised_at": 1788060363
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3902,9 +3908,9 @@
         {
           "id": "CONSENT-ARTIFACT-UPLOAD-UI",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 27,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 29,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3919,14 +3925,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "D15-REVISED",
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 18,
+          "ctx_pct": 21,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3948,7 +3954,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 18,
+          "ctx_pct": 23,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3970,7 +3976,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 30,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4296,9 +4302,9 @@
             },
             "glm": {
               "verdict": "UNAVAILABLE",
-              "proj": 0,
+              "proj": 3,
               "target": 100,
-              "used": 0,
+              "used": 1,
               "day": 3,
               "active": null,
               "wall": false
@@ -4313,7 +4319,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-30T03:13:58Z",
+          "updated": "2026-08-30T03:29:44Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4329,7 +4335,7 @@
           ]
         }
       },
-      "snapshot_id": "f4a66a6d088932b9"
+      "snapshot_id": "2e9e258435903a88"
     },
     "scriptgen": {
       "schema": 1,
@@ -4362,7 +4368,30 @@
           "up": true
         }
       },
-      "units": [],
+      "units": [
+        {
+          "id": "CAL-ENGINE",
+          "status": "not-started",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 12,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        }
+      ],
       "eligible": [],
       "merge_feed": [
         {
@@ -4600,9 +4629,9 @@
             },
             "glm": {
               "verdict": "UNAVAILABLE",
-              "proj": 0,
+              "proj": 3,
               "target": 100,
-              "used": 0,
+              "used": 1,
               "day": 3,
               "active": null,
               "wall": false
@@ -4617,7 +4646,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-30T03:13:58Z",
+          "updated": "2026-08-30T03:29:44Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4633,7 +4662,7 @@
           ]
         }
       },
-      "snapshot_id": "3f2750a880d40dd3"
+      "snapshot_id": "668d2f7982780834"
     }
   },
   "pm": {
@@ -4645,7 +4674,7 @@
       "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode."
     },
     "pm_session": {
-      "lock": "3679934 2026-08-30T02:29:09Z",
+      "lock": "4163316 2026-08-30T03:29:06Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -4654,22 +4683,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 28
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 28
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 28
       }
     ]
   },
-  "snapshot_id": "901707a3ce42f05d",
-  "published_at": "2026-08-30T03:24:40Z"
+  "snapshot_id": "431a2f606ee04e49",
+  "published_at": "2026-08-30T03:29:52Z"
 }
