@@ -255,7 +255,7 @@
         ],
         "trail": [
           [
-            0.0,
+            0.1,
             0.0
           ]
         ]
@@ -562,7 +562,7 @@
             75.0
           ],
           [
-            77.3,
+            77.4,
             76.0
           ]
         ]
@@ -1195,7 +1195,7 @@
           0.0
         ],
         [
-          29.3,
+          29.4,
           0.0
         ]
       ]
@@ -3556,7 +3556,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 43,
+          "ctx_pct": 45,
           "last_commit_at": 1788062044,
           "head": "acce259",
           "subfence": {
@@ -3865,7 +3865,7 @@
           ]
         }
       },
-      "snapshot_id": "c1063dcd1ddd1d58"
+      "snapshot_id": "cb4d02d3f9e263b9"
     },
     "outbound": {
       "schema": 1,
@@ -3986,15 +3986,19 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 40,
-          "last_commit_at": 1788060911,
-          "head": "dde221cc",
+          "ctx_pct": 45,
+          "last_commit_at": 1788062451,
+          "head": "4c4e4996",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "4c4e4996",
+              "at": 1788062451
+            },
             {
               "sha": "dde221cc",
               "at": 1788060911
@@ -4010,10 +4014,6 @@
             {
               "sha": "fa6f04d7",
               "at": 1788058455
-            },
-            {
-              "sha": "eece1e6a",
-              "at": 1788057578
             }
           ],
           "fences": {
@@ -4366,13 +4366,18 @@
           ]
         }
       },
-      "snapshot_id": "d63d00f25d51ffbe"
+      "snapshot_id": "31e9d947b0dd1084"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
+          {
+            "id": "CAL-ENGINE",
+            "kind": "needs-owner",
+            "raised_at": 1788062158
+          },
           {
             "id": "CAPTION-ACCESS",
             "kind": "needs-owner",
@@ -4409,9 +4414,9 @@
         {
           "id": "CAL-ENGINE",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 31,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 33,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4426,7 +4431,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "CAPTION-ACCESS",
@@ -4721,7 +4726,7 @@
           ]
         }
       },
-      "snapshot_id": "bb161521cca51f4e"
+      "snapshot_id": "38aaccdd9ef6490d"
     }
   },
   "pm": {
@@ -4742,22 +4747,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 24
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 24
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 24
+        "monitor_last_pass_min": 29
       }
     ]
   },
-  "snapshot_id": "cf00126c0e323002",
-  "published_at": "2026-08-30T03:55:51Z"
+  "snapshot_id": "18133555733ed36b",
+  "published_at": "2026-08-30T04:01:05Z"
 }
