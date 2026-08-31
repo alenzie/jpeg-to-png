@@ -17,7 +17,7 @@
             0.0
           ],
           [
-            8.1,
+            8.2,
             18.0
           ]
         ]
@@ -198,7 +198,7 @@
         ],
         "trail": [
           [
-            6.5,
+            6.6,
             0.0
           ]
         ]
@@ -505,7 +505,7 @@
             75.0
           ],
           [
-            97.3,
+            97.4,
             76.0
           ]
         ]
@@ -782,7 +782,7 @@
             66.0
           ],
           [
-            33.6,
+            33.7,
             67.0
           ]
         ]
@@ -4070,7 +4070,7 @@
           ]
         }
       },
-      "snapshot_id": "77292d2ad9b1cc48"
+      "snapshot_id": "958b17b56994c3aa"
     },
     "outbound": {
       "schema": 1,
@@ -4536,13 +4536,19 @@
           ]
         }
       },
-      "snapshot_id": "4f45a282139e531a"
+      "snapshot_id": "b53dbb78fd03ce06"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CAL-DERIVE",
+            "kind": "escalate",
+            "raised_at": 1788183077
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4573,9 +4579,9 @@
         {
           "id": "CAL-DERIVE",
           "status": "building",
-          "stage": "building",
-          "stage_i": 3,
-          "ctx_pct": 41,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 43,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4590,14 +4596,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "CAL-ENGINE",
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 21,
+          "ctx_pct": 28,
           "last_commit_at": 1788179360,
           "head": "9f4ddab",
           "subfence": {
@@ -4907,7 +4913,7 @@
           ]
         }
       },
-      "snapshot_id": "1371c80fab0363b7"
+      "snapshot_id": "fc57e317de42d75f"
     }
   },
   "pm": {
@@ -4928,22 +4934,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       }
     ]
   },
-  "snapshot_id": "a690cd75261a45ee",
-  "published_at": "2026-08-31T13:27:29Z"
+  "snapshot_id": "402e8320db6bb86c",
+  "published_at": "2026-08-31T13:32:39Z"
 }
