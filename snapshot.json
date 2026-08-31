@@ -28,7 +28,7 @@
         "tier": "Pro",
         "projected": null,
         "used": 69,
-        "at": 1788204452,
+        "at": 1788204808,
         "reset": "19:30 on 6 Sep",
         "spark": [
           [
@@ -198,7 +198,7 @@
         ],
         "trail": [
           [
-            10.7,
+            10.8,
             0.0
           ]
         ]
@@ -516,12 +516,12 @@
         "mult": "20x",
         "projected": 193,
         "used": 73,
-        "at": 1788204452,
-        "reset": "Sep 4, 9:59pm (America/Los_Angeles)",
+        "at": 1788204808,
+        "reset": "Sep 4, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1787601600,
-            179
+            182
           ],
           [
             1787605200,
@@ -830,7 +830,7 @@
             72.0
           ],
           [
-            37.8,
+            37.9,
             72.0
           ]
         ]
@@ -840,7 +840,7 @@
       "target": 100,
       "projected": 36,
       "used": 19,
-      "at": 1788204452,
+      "at": 1788204808,
       "reset": "Sep 03, 19:39",
       "level": "pro",
       "spark": [
@@ -1335,7 +1335,7 @@
           0.0
         ],
         [
-          53.5,
+          53.6,
           0.0
         ]
       ]
@@ -1346,7 +1346,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788204452,
+      "at": 1788204808,
       "spark": [
         [
           1787601600,
@@ -1860,7 +1860,7 @@
             15.0
           ],
           [
-            1787603858,
+            1787603979,
             18.0
           ],
           [
@@ -3114,8 +3114,8 @@
             64.0
           ],
           [
-            1787603858,
-            69.0
+            1787603979,
+            70.0
           ],
           [
             1787605568,
@@ -3409,7 +3409,7 @@
           28.0
         ],
         [
-          1787603858,
+          1787603979,
           28.0
         ],
         [
@@ -4226,13 +4226,19 @@
           ]
         }
       },
-      "snapshot_id": "23cee2ef4f653649"
+      "snapshot_id": "6936df6714746e2e"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "ONB1",
+            "kind": "needs-owner",
+            "raised_at": 1788208704
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4265,7 +4271,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 73,
+          "ctx_pct": 74,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4307,9 +4313,9 @@
         {
           "id": "ONB1",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 13,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 22,
           "last_commit_at": 1788208101,
           "head": "0731e70d",
           "subfence": {
@@ -4345,7 +4351,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W7",
@@ -4692,7 +4698,7 @@
           ]
         }
       },
-      "snapshot_id": "088d79702ac234dd"
+      "snapshot_id": "bbbfd615e678615f"
     },
     "scriptgen": {
       "schema": 1,
@@ -4999,7 +5005,7 @@
           ]
         }
       },
-      "snapshot_id": "907fd07de05335ff"
+      "snapshot_id": "9b4c6e25860c8183"
     }
   },
   "pm": {
@@ -5020,22 +5026,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13
+        "monitor_last_pass_min": 18
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 19
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 19
       }
     ]
   },
-  "snapshot_id": "5adc7097101b907a",
-  "published_at": "2026-08-31T20:33:23Z"
+  "snapshot_id": "8a066e45bb592e1c",
+  "published_at": "2026-08-31T20:38:35Z"
 }
