@@ -198,7 +198,7 @@
         ],
         "trail": [
           [
-            10.0,
+            10.1,
             0.0
           ]
         ]
@@ -818,7 +818,7 @@
             70.0
           ],
           [
-            37.1,
+            37.2,
             71.0
           ]
         ]
@@ -4194,7 +4194,7 @@
           ]
         }
       },
-      "snapshot_id": "5ecb828cafc6a88d"
+      "snapshot_id": "28f55720a8acc1dc"
     },
     "outbound": {
       "schema": 1,
@@ -4277,7 +4277,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 53,
+          "ctx_pct": 54,
           "last_commit_at": 1788202651,
           "head": "bfa1ab3c",
           "subfence": {
@@ -4660,7 +4660,7 @@
           ]
         }
       },
-      "snapshot_id": "8df9b473e6ee22ef"
+      "snapshot_id": "c4fa183f448a8790"
     },
     "scriptgen": {
       "schema": 1,
@@ -4696,18 +4696,26 @@
       "units": [
         {
           "id": "CAL-ENGINE",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 47,
-          "last_commit_at": 1788204021,
-          "head": "9469bed",
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 51,
+          "last_commit_at": 1788204288,
+          "head": "e4192c4",
           "subfence": {
             "done": 14,
             "total": 14
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "e4192c4",
+              "at": 1788204288
+            },
+            {
+              "sha": "513020a",
+              "at": 1788204213
+            },
             {
               "sha": "9469bed",
               "at": 1788204021
@@ -4719,21 +4727,13 @@
             {
               "sha": "55041fc",
               "at": 1788203349
-            },
-            {
-              "sha": "fe21189",
-              "at": 1788203289
-            },
-            {
-              "sha": "e3cb186",
-              "at": 1788203126
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -4742,6 +4742,12 @@
         "CAL-RULINGS-API"
       ],
       "merge_feed": [
+        {
+          "pr": 13,
+          "unit": "CAL-ENGINE",
+          "merged_at": 1788204213,
+          "sha": "513020a"
+        },
         {
           "pr": 14,
           "unit": "CAL-DERIVE",
@@ -4765,12 +4771,6 @@
           "unit": "SYNC-ALIGN-FU",
           "merged_at": 1787568628,
           "sha": "4112b87"
-        },
-        {
-          "pr": 9,
-          "unit": "TRIAL-TOOLING",
-          "merged_at": 1787385781,
-          "sha": "fa9c947"
         }
       ],
       "decisions": [],
@@ -5011,7 +5011,7 @@
           ]
         }
       },
-      "snapshot_id": "e2ff06c5544c7a95"
+      "snapshot_id": "d3addb252e1fe7cb"
     }
   },
   "pm": {
@@ -5032,22 +5032,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 6
       }
     ]
   },
-  "snapshot_id": "735a5f5a9d86acfd",
-  "published_at": "2026-08-31T19:20:37Z"
+  "snapshot_id": "01bd1c1d57e2d268",
+  "published_at": "2026-08-31T19:25:49Z"
 }
