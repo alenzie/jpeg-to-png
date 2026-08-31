@@ -198,7 +198,7 @@
         ],
         "trail": [
           [
-            0.0,
+            0.1,
             0.0
           ]
         ]
@@ -505,7 +505,7 @@
             75.0
           ],
           [
-            90.8,
+            90.9,
             76.0
           ]
         ]
@@ -730,7 +730,7 @@
             42.0
           ],
           [
-            27.1,
+            27.2,
             42.0
           ]
         ]
@@ -1207,7 +1207,7 @@
           0.0
         ],
         [
-          42.8,
+          42.9,
           0.0
         ]
       ]
@@ -3661,7 +3661,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 14,
+          "ctx_pct": 16,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3683,7 +3683,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 13,
+          "ctx_pct": 20,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3974,13 +3974,18 @@
           ]
         }
       },
-      "snapshot_id": "03fe6f5b768c5d58"
+      "snapshot_id": "2f2f2f2353667341"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
+          {
+            "id": "D15-REVISED",
+            "kind": "escalate",
+            "raised_at": 1788143783
+          },
           {
             "id": "INT7-MCP-REMOTE",
             "kind": "needs-owner",
@@ -4017,81 +4022,16 @@
         {
           "id": "D15-REVISED",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 13,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 15,
           "last_commit_at": 1788136095,
           "head": "e16fd97a",
           "subfence": {
             "done": 12,
             "total": 12
           },
-          "review_rounds": [
-            {
-              "round": 6,
-              "seats": "gpt-5.5",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 7,
-              "seats": "2 × gpt-5.6-terra C1 extra lens",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 8,
-              "seats": "gpt-5.5 + gpt-5.6-terra C1 lens",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 9,
-              "seats": "2 × gpt-5.6-terra C1 extra lens",
-              "must": 1,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 10,
-              "seats": "gpt-5.5 + gpt-5.6-terra C1 lens",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 11,
-              "seats": "2 × gpt-5.6-terra C1 extra lens",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 12,
-              "seats": "gpt-5.5 + gpt-5.6-terra C1 lens",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 13,
-              "seats": "gpt-5.6-terra cumulative pass",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "e16fd97a",
@@ -4120,7 +4060,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "INT7-MCP-REMOTE",
@@ -4149,7 +4089,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 13,
+          "ctx_pct": 17,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4491,7 +4431,7 @@
           ]
         }
       },
-      "snapshot_id": "fc6e688f1a8f152f"
+      "snapshot_id": "d4e043336e0e2d4c"
     },
     "scriptgen": {
       "schema": 1,
@@ -4558,7 +4498,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 13,
+          "ctx_pct": 18,
           "last_commit_at": 1788135999,
           "head": "6927b7c",
           "subfence": {
@@ -4868,7 +4808,7 @@
           ]
         }
       },
-      "snapshot_id": "d9fd7789f589bf76"
+      "snapshot_id": "694009bbf98a70e9"
     }
   },
   "pm": {
@@ -4889,22 +4829,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 20
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 20
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 20
       }
     ]
   },
-  "snapshot_id": "0ae3e897f40ef231",
-  "published_at": "2026-08-31T02:33:55Z"
+  "snapshot_id": "c6adf0d262c59ffd",
+  "published_at": "2026-08-31T02:39:06Z"
 }
