@@ -17,7 +17,7 @@
             0.0
           ],
           [
-            7.6,
+            7.7,
             18.0
           ]
         ]
@@ -198,7 +198,7 @@
         ],
         "trail": [
           [
-            6.0,
+            6.1,
             0.0
           ]
         ]
@@ -774,7 +774,7 @@
             64.0
           ],
           [
-            33.1,
+            33.2,
             66.0
           ]
         ]
@@ -3695,8 +3695,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "DETECTOR-CORE",
+            "kind": "escalate",
+            "raised_at": 1788179999
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3749,8 +3755,8 @@
         {
           "id": "DETECTOR-CORE",
           "status": "building",
-          "stage": "building",
-          "stage_i": 3,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 42,
           "last_commit_at": null,
           "head": null,
@@ -3766,7 +3772,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4042,7 +4048,7 @@
           ]
         }
       },
-      "snapshot_id": "b5ae0b44492b48ad"
+      "snapshot_id": "2f71aa3980985900"
     },
     "outbound": {
       "schema": 1,
@@ -4125,7 +4131,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 23,
+          "ctx_pct": 26,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4147,7 +4153,7 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 41,
+          "ctx_pct": 43,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4169,7 +4175,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 23,
+          "ctx_pct": 26,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4508,7 +4514,7 @@
           ]
         }
       },
-      "snapshot_id": "f117d9ce42cb6212"
+      "snapshot_id": "0fc6bf43c5ea8998"
     },
     "scriptgen": {
       "schema": 1,
@@ -4547,7 +4553,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 34,
+          "ctx_pct": 36,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4879,7 +4885,7 @@
           ]
         }
       },
-      "snapshot_id": "6bc1602ce922ef31"
+      "snapshot_id": "3b9396f3187fbc22"
     }
   },
   "pm": {
@@ -4900,22 +4906,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 16
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 16
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 16
+        "monitor_last_pass_min": 21
       }
     ]
   },
-  "snapshot_id": "f6680d71a171490c",
-  "published_at": "2026-08-31T12:35:37Z"
+  "snapshot_id": "deda8785a557af63",
+  "published_at": "2026-08-31T12:40:47Z"
 }
