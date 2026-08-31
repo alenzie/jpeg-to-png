@@ -28,7 +28,7 @@
         "tier": "Pro",
         "projected": null,
         "used": 52,
-        "at": 1788186716,
+        "at": 1788186795,
         "reset": "19:30 on 6 Sep",
         "spark": [
           [
@@ -505,7 +505,7 @@
             75.0
           ],
           [
-            98.5,
+            98.6,
             76.0
           ]
         ]
@@ -516,8 +516,8 @@
         "mult": "20x",
         "projected": 198,
         "used": 69,
-        "at": 1788186716,
-        "reset": "Sep 4, 10pm (America/Los_Angeles)",
+        "at": 1788186795,
+        "reset": "Sep 4, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1787594400,
@@ -798,7 +798,7 @@
             68.0
           ],
           [
-            34.8,
+            34.9,
             69.0
           ]
         ]
@@ -808,7 +808,7 @@
       "target": 100,
       "projected": 38,
       "used": 19,
-      "at": 1788186716,
+      "at": 1788186795,
       "reset": "Sep 03, 19:39",
       "level": "pro",
       "spark": [
@@ -1291,7 +1291,7 @@
           0.0
         ],
         [
-          50.5,
+          50.6,
           0.0
         ]
       ]
@@ -1302,7 +1302,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788186716,
+      "at": 1788186795,
       "spark": [
         [
           1787594400,
@@ -4110,7 +4110,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-31T15:31:57Z",
+          "updated": "2026-08-31T15:35:44Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4126,7 +4126,7 @@
           ]
         }
       },
-      "snapshot_id": "11d479dd936a5ffe"
+      "snapshot_id": "744eada12219c508"
     },
     "outbound": {
       "schema": 1,
@@ -4165,7 +4165,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 48,
+          "ctx_pct": 51,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4187,7 +4187,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 39,
+          "ctx_pct": 41,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4253,7 +4253,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 79,
+          "ctx_pct": 48,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4576,7 +4576,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-31T15:31:57Z",
+          "updated": "2026-08-31T15:35:44Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4592,7 +4592,7 @@
           ]
         }
       },
-      "snapshot_id": "a9a45cfd3bf67052"
+      "snapshot_id": "d05e73c46e349233"
     },
     "scriptgen": {
       "schema": 1,
@@ -4631,7 +4631,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 16,
+          "ctx_pct": 20,
           "last_commit_at": 1788190008,
           "head": "80504c0",
           "subfence": {
@@ -4674,15 +4674,19 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 23,
-          "last_commit_at": 1788189581,
-          "head": "798f0dd",
+          "ctx_pct": 26,
+          "last_commit_at": 1788190613,
+          "head": "228ad02",
           "subfence": {
             "done": 14,
             "total": 14
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "228ad02",
+              "at": 1788190613
+            },
             {
               "sha": "798f0dd",
               "at": 1788189581
@@ -4698,10 +4702,6 @@
             {
               "sha": "504c707",
               "at": 1788187848
-            },
-            {
-              "sha": "c86b483",
-              "at": 1788187809
             }
           ],
           "fences": {
@@ -4968,7 +4968,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-31T15:31:57Z",
+          "updated": "2026-08-31T15:35:44Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4984,7 +4984,7 @@
           ]
         }
       },
-      "snapshot_id": "077a01875aa52968"
+      "snapshot_id": "a5b2eb555da2e57b"
     }
   },
   "pm": {
@@ -4996,7 +4996,7 @@
       "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode."
     },
     "pm_session": {
-      "lock": "564725 2026-08-31T14:32:55Z",
+      "lock": "1164163 2026-08-31T15:32:55Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -5005,22 +5005,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 17
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13
+        "monitor_last_pass_min": 18
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13
+        "monitor_last_pass_min": 18
       }
     ]
   },
-  "snapshot_id": "1384741244c3802a",
-  "published_at": "2026-08-31T15:32:10Z"
+  "snapshot_id": "3db8336987a887dd",
+  "published_at": "2026-08-31T15:37:23Z"
 }
