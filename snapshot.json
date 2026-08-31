@@ -28,7 +28,7 @@
         "tier": "Pro",
         "projected": null,
         "used": 16,
-        "at": 1788163250,
+        "at": 1788163876,
         "reset": "19:30 on 6 Sep",
         "spark": [
           [
@@ -505,7 +505,7 @@
             75.0
           ],
           [
-            94.7,
+            94.8,
             76.0
           ]
         ]
@@ -516,8 +516,8 @@
         "mult": "20x",
         "projected": 184,
         "used": 57,
-        "at": 1788163250,
-        "reset": "Sep 4, 9:59pm (America/Los_Angeles)",
+        "at": 1788163876,
+        "reset": "Sep 4, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1787562000,
@@ -758,7 +758,7 @@
             49.0
           ],
           [
-            31.0,
+            31.1,
             57.0
           ]
         ]
@@ -768,7 +768,7 @@
       "target": 100,
       "projected": 39,
       "used": 18,
-      "at": 1788163250,
+      "at": 1788163876,
       "reset": "Sep 03, 19:39",
       "level": "pro",
       "spark": [
@@ -1235,7 +1235,7 @@
           0.0
         ],
         [
-          46.7,
+          46.8,
           0.0
         ]
       ]
@@ -1246,7 +1246,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788163250,
+      "at": 1788163876,
       "spark": [
         [
           1787562000,
@@ -3990,7 +3990,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-31T09:04:45Z",
+          "updated": "2026-08-31T09:11:18Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4006,13 +4006,18 @@
           ]
         }
       },
-      "snapshot_id": "089b85ba0e35e57e"
+      "snapshot_id": "139b4b675c622cbb"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
+          {
+            "id": "MSG-MIGRATION-OPS",
+            "kind": "needs-owner",
+            "raised_at": 1788167416
+          },
           {
             "id": "ONB1",
             "kind": "needs-owner",
@@ -4076,9 +4081,9 @@
         {
           "id": "MSG-MIGRATION-OPS",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 31,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 33,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4093,7 +4098,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "ONB1",
@@ -4467,7 +4472,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-31T09:04:45Z",
+          "updated": "2026-08-31T09:11:18Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4483,7 +4488,7 @@
           ]
         }
       },
-      "snapshot_id": "0faa755e5014664a"
+      "snapshot_id": "c3daf8b25cf55099"
     },
     "scriptgen": {
       "schema": 1,
@@ -4550,15 +4555,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 27,
-          "last_commit_at": 1788158568,
-          "head": "e5477d9",
+          "ctx_pct": 29,
+          "last_commit_at": 1788167445,
+          "head": "d20920b",
           "subfence": {
             "done": 11,
             "total": 14
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "d20920b",
+              "at": 1788167445
+            },
             {
               "sha": "e5477d9",
               "at": 1788158568
@@ -4574,10 +4583,6 @@
             {
               "sha": "1846952",
               "at": 1788158189
-            },
-            {
-              "sha": "b794f4b",
-              "at": 1788158067
             }
           ],
           "fences": {
@@ -4844,7 +4849,7 @@
               "wall": false
             }
           },
-          "updated": "2026-08-31T09:04:45Z",
+          "updated": "2026-08-31T09:11:18Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4860,7 +4865,7 @@
           ]
         }
       },
-      "snapshot_id": "6f2f7e30384a2b2e"
+      "snapshot_id": "a8f2569b06bcb3f2"
     }
   },
   "pm": {
@@ -4881,22 +4886,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 24
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 19
+        "monitor_last_pass_min": 24
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 19
+        "monitor_last_pass_min": 24
       }
     ]
   },
-  "snapshot_id": "5354aa3e8c573b25",
-  "published_at": "2026-08-31T09:08:16Z"
+  "snapshot_id": "0671d98bb93935f1",
+  "published_at": "2026-08-31T09:13:26Z"
 }
