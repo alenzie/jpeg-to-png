@@ -25,7 +25,7 @@
             38.0
           ],
           [
-            2.1,
+            2.2,
             52.0
           ]
         ]
@@ -41,7 +41,7 @@
         "spark": [
           [
             1787637600,
-            145
+            144
           ],
           [
             1787641200,
@@ -182,7 +182,7 @@
         ],
         "trail": [
           [
-            16.3,
+            16.4,
             0.0
           ]
         ]
@@ -329,7 +329,7 @@
             3.0
           ],
           [
-            7.1,
+            7.2,
             4.0
           ]
         ]
@@ -682,7 +682,7 @@
             75.0
           ],
           [
-            43.4,
+            43.5,
             75.0
           ]
         ]
@@ -698,7 +698,7 @@
       "spark": [
         [
           1787637600,
-          52
+          54
         ],
         [
           1787641200,
@@ -1183,7 +1183,7 @@
           0.0
         ],
         [
-          59.1,
+          59.2,
           0.0
         ]
       ]
@@ -1725,6 +1725,10 @@
           ],
           [
             1787637688,
+            26.0
+          ],
+          [
+            1787638142,
             26.0
           ],
           [
@@ -2454,6 +2458,10 @@
           [
             1787637688,
             13.0
+          ],
+          [
+            1787638142,
+            14.0
           ],
           [
             1787642012,
@@ -3255,6 +3263,10 @@
         [
           1787637688,
           31.0
+        ],
+        [
+          1787638142,
+          32.0
         ],
         [
           1787642012,
@@ -4074,13 +4086,19 @@
           ]
         }
       },
-      "snapshot_id": "18cf3988f94f3c3e"
+      "snapshot_id": "a56741f79d4a9312"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-MCP-REMOTE",
+            "kind": "escalate",
+            "raised_at": 1788242319
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4111,17 +4129,25 @@
         {
           "id": "INT7-MCP-REMOTE",
           "status": "built",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 30,
-          "last_commit_at": 1788241160,
-          "head": "31b88273",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 31,
+          "last_commit_at": 1788242273,
+          "head": "a660c884",
           "subfence": {
             "done": 12,
             "total": 13
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "a660c884",
+              "at": 1788242273
+            },
+            {
+              "sha": "68d92542",
+              "at": 1788242228
+            },
             {
               "sha": "31b88273",
               "at": 1788241160
@@ -4133,14 +4159,6 @@
             {
               "sha": "d5a92523",
               "at": 1788240039
-            },
-            {
-              "sha": "2a2d3125",
-              "at": 1788239954
-            },
-            {
-              "sha": "a5309eed",
-              "at": 1788234519
             }
           ],
           "fences": {
@@ -4149,22 +4167,26 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "ONB1",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 56,
-          "last_commit_at": 1788241831,
-          "head": "0b6468ed",
+          "ctx_pct": 58,
+          "last_commit_at": 1788242515,
+          "head": "244a1989",
           "subfence": {
             "done": 13,
             "total": 18
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "244a1989",
+              "at": 1788242515
+            },
             {
               "sha": "0b6468ed",
               "at": 1788241831
@@ -4180,10 +4202,6 @@
             {
               "sha": "6a99d6a4",
               "at": 1788240502
-            },
-            {
-              "sha": "87627467",
-              "at": 1788239087
             }
           ],
           "fences": {
@@ -4517,7 +4535,7 @@
           ]
         }
       },
-      "snapshot_id": "77628aba4f5cdc62"
+      "snapshot_id": "4432c3b0d33b5561"
     },
     "scriptgen": {
       "schema": 1,
@@ -4824,7 +4842,7 @@
           ]
         }
       },
-      "snapshot_id": "0d50531dfe5512d4"
+      "snapshot_id": "3f9a7e7ba1cb69a2"
     }
   },
   "pm": {
@@ -4845,22 +4863,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 17
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 17
+        "monitor_last_pass_min": 22
       }
     ]
   },
-  "snapshot_id": "067df447c7990898",
-  "published_at": "2026-09-01T05:56:56Z"
+  "snapshot_id": "f4463d5d3311e16e",
+  "published_at": "2026-09-01T06:02:07Z"
 }
