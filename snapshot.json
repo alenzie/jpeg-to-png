@@ -8,7 +8,7 @@
         "tier": "Pro Lite",
         "projected": null,
         "used": 73,
-        "at": 1788270148,
+        "at": 1788270943,
         "reset": "19:22 on 7 Sep",
         "spark": [],
         "trail": [
@@ -190,9 +190,9 @@
         "label": "A",
         "mult": "20x",
         "projected": null,
-        "used": 15,
-        "at": 1788270148,
-        "reset": "Sep 7, 10:59am (America/Los_Angeles)",
+        "used": 16,
+        "at": 1788270943,
+        "reset": "Sep 7, 11am (America/Los_Angeles)",
         "spark": [
           [
             1787670000,
@@ -712,7 +712,7 @@
       "target": 100,
       "projected": 31,
       "used": 20,
-      "at": 1788270148,
+      "at": 1788270943,
       "reset": "Sep 03, 19:39",
       "level": "pro",
       "spark": [
@@ -1195,7 +1195,7 @@
           0.0
         ],
         [
-          64.4,
+          64.5,
           0.0
         ]
       ]
@@ -1206,7 +1206,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788270148,
+      "at": 1788270943,
       "spark": [
         [
           1787670000,
@@ -3997,13 +3997,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 200,
-              "used": 15,
+              "used": 16,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-01T14:42:30Z",
+          "updated": "2026-09-01T14:55:56Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4019,7 +4019,7 @@
           ]
         }
       },
-      "snapshot_id": "662cae3d614d1bc6"
+      "snapshot_id": "94126867b8f3541f"
     },
     "outbound": {
       "schema": 1,
@@ -4055,26 +4055,17 @@
       "units": [
         {
           "id": "ONB1",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 33,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 12,
           "last_commit_at": 1788274110,
           "head": "8386baf8",
           "subfence": {
             "done": 18,
             "total": 18
           },
-          "review_rounds": [
-            {
-              "round": 3,
-              "seats": "Claude ×4 invariant-conformance + cumula",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "8386baf8",
@@ -4101,7 +4092,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -4118,9 +4109,16 @@
         "OUT",
         "MSG7-DNC-MANUAL-CONSENT",
         "MSG11",
+        "ONB1-DSAR-LOCATOR-ATOMICITY",
         "MAP-COVERAGE-SCOPE"
       ],
       "merge_feed": [
+        {
+          "pr": 294,
+          "unit": "ONB1",
+          "merged_at": 1788274401,
+          "sha": "832699ae"
+        },
         {
           "pr": 293,
           "unit": "INT7-MCP-REMOTE",
@@ -4144,12 +4142,6 @@
           "unit": "D15-REVISED",
           "merged_at": 1788150854,
           "sha": "c73e0d49"
-        },
-        {
-          "pr": 290,
-          "unit": "DEFER1",
-          "merged_at": 1788135417,
-          "sha": "4ecddae5"
         }
       ],
       "decisions": [
@@ -4406,13 +4398,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 200,
-              "used": 15,
+              "used": 16,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-01T14:42:30Z",
+          "updated": "2026-09-01T14:55:56Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4428,7 +4420,7 @@
           ]
         }
       },
-      "snapshot_id": "78388c111ba9ed07"
+      "snapshot_id": "e322c4e1e204fef1"
     },
     "scriptgen": {
       "schema": 1,
@@ -4713,13 +4705,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 200,
-              "used": 15,
+              "used": 16,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-01T14:42:30Z",
+          "updated": "2026-09-01T14:55:56Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4735,7 +4727,7 @@
           ]
         }
       },
-      "snapshot_id": "5ddd7d651220baad"
+      "snapshot_id": "ebc666ee4fac9589"
     }
   },
   "pm": {
@@ -4748,7 +4740,7 @@
       "note": "owner asleep; PM L3-drives INT7+ONB1+DETECTOR-CORE to merge; NO new picks; codex ceiling 77%"
     },
     "pm_session": {
-      "lock": "960807 2026-09-01T13:55:32Z",
+      "lock": "1149539 2026-09-01T14:55:29Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -4757,22 +4749,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 494
+        "monitor_last_pass_min": 499
       }
     ]
   },
-  "snapshot_id": "d6d87b4f2b0b62a5",
-  "published_at": "2026-09-01T14:54:14Z"
+  "snapshot_id": "f7eb5834987297e3",
+  "published_at": "2026-09-01T14:59:21Z"
 }
