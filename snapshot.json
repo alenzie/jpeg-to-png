@@ -8,7 +8,7 @@
         "tier": "Pro Lite",
         "projected": null,
         "used": 65,
-        "at": 1788251551,
+        "at": 1788252213,
         "reset": "19:22 on 7 Sep",
         "spark": [],
         "trail": [
@@ -191,7 +191,7 @@
         "mult": "20x",
         "projected": null,
         "used": 8,
-        "at": 1788251551,
+        "at": 1788252213,
         "reset": "Sep 7, 11am (America/Los_Angeles)",
         "spark": [
           [
@@ -333,7 +333,7 @@
             6.0
           ],
           [
-            9.3,
+            9.4,
             8.0
           ]
         ]
@@ -696,7 +696,7 @@
       "target": 100,
       "projected": 33,
       "used": 20,
-      "at": 1788251551,
+      "at": 1788252213,
       "reset": "Sep 03, 19:39",
       "level": "pro",
       "spark": [
@@ -1183,7 +1183,7 @@
           0.0
         ],
         [
-          61.3,
+          61.4,
           0.0
         ]
       ]
@@ -1192,9 +1192,9 @@
       "balance": 9.5,
       "currency": "USD",
       "available": true,
-      "burn_per_day": 0.0,
+      "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788251551,
+      "at": 1788252213,
       "spark": [
         [
           1787648400,
@@ -4047,7 +4047,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-01T09:35:15Z",
+          "updated": "2026-09-01T09:43:35Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4063,13 +4063,19 @@
           ]
         }
       },
-      "snapshot_id": "52167a49af10d4fe"
+      "snapshot_id": "96feeedaa849b320"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-MCP-REMOTE",
+            "kind": "escalate",
+            "raised_at": 1788255740
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4102,7 +4108,7 @@
           "status": "done",
           "stage": "done",
           "stage_i": 7,
-          "ctx_pct": 14,
+          "ctx_pct": 15,
           "last_commit_at": 1788244351,
           "head": "413cb980",
           "subfence": {
@@ -4138,14 +4144,14 @@
             "build": true,
             "review": true
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "ONB1",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 20,
+          "ctx_pct": 22,
           "last_commit_at": 1788255677,
           "head": "66d5b33b",
           "subfence": {
@@ -4490,7 +4496,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-01T09:35:15Z",
+          "updated": "2026-09-01T09:43:35Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4506,7 +4512,7 @@
           ]
         }
       },
-      "snapshot_id": "dfb09aad51b8c9a4"
+      "snapshot_id": "5d14408caeeedae7"
     },
     "scriptgen": {
       "schema": 1,
@@ -4797,7 +4803,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-01T09:35:15Z",
+          "updated": "2026-09-01T09:43:35Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4813,7 +4819,7 @@
           ]
         }
       },
-      "snapshot_id": "a0bca91bdcb81b4a"
+      "snapshot_id": "fdc6f621224fbf37"
     }
   },
   "pm": {
@@ -4834,22 +4840,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 182
+        "monitor_last_pass_min": 187
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 182
+        "monitor_last_pass_min": 187
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 182
+        "monitor_last_pass_min": 187
       }
     ]
   },
-  "snapshot_id": "03f045024341160e",
-  "published_at": "2026-09-01T09:41:29Z"
+  "snapshot_id": "0f44595a5f74af2b",
+  "published_at": "2026-09-01T09:46:46Z"
 }
