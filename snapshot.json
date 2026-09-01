@@ -1339,7 +1339,7 @@
           0.0
         ],
         [
-          56.9,
+          57.0,
           0.0
         ]
       ]
@@ -2774,7 +2774,7 @@
         ],
         "B": [
           [
-            1784341223,
+            1784341735,
             42.0
           ],
           [
@@ -4268,19 +4268,13 @@
           ]
         }
       },
-      "snapshot_id": "574857bd86547f37"
+      "snapshot_id": "2c36213c08b8349a"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "INT7-MCP-REMOTE",
-            "kind": "escalate",
-            "raised_at": 1788224705
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4311,9 +4305,9 @@
         {
           "id": "INT7-MCP-REMOTE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 36,
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": null,
           "last_commit_at": 1788227636,
           "head": "cd9a4231",
           "subfence": {
@@ -4349,7 +4343,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "MSG-MIGRATION-OPS",
@@ -4803,7 +4797,7 @@
           ]
         }
       },
-      "snapshot_id": "7ef34178eaad14be"
+      "snapshot_id": "5afe70d08c70dc4f"
     },
     "scriptgen": {
       "schema": 1,
@@ -5067,17 +5061,17 @@
           "since": "2026-08-25T20:03:59Z",
           "pools": {
             "codex": {
-              "verdict": "OVERBURN",
-              "proj": 611,
-              "target": 100,
-              "used": 85,
+              "verdict": "UNKNOWN",
+              "proj": null,
+              "target": 200,
+              "used": 0,
               "day": 1,
-              "active": "C2",
+              "active": null,
               "wall": false
             },
             "glm": {
               "verdict": "UNAVAILABLE",
-              "proj": 34,
+              "proj": 33,
               "target": 100,
               "used": 19,
               "day": 4,
@@ -5085,11 +5079,11 @@
               "wall": false
             },
             "claude": {
-              "verdict": "OVERBURN",
-              "proj": 188,
-              "target": 100,
-              "used": 77,
-              "day": 3,
+              "verdict": "UNKNOWN",
+              "proj": null,
+              "target": 200,
+              "used": 0,
+              "day": 1,
               "active": null,
               "wall": false
             }
@@ -5110,7 +5104,7 @@
           ]
         }
       },
-      "snapshot_id": "dca3f2a70d3a3bf9"
+      "snapshot_id": "00c8dd185d182eb5"
     }
   },
   "pm": {
@@ -5131,22 +5125,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       }
     ]
   },
-  "snapshot_id": "5a77e7115de0d315",
-  "published_at": "2026-09-01T02:17:27Z"
+  "snapshot_id": "df2a2d3ce8078bfa",
+  "published_at": "2026-09-01T02:22:40Z"
 }
