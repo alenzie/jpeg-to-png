@@ -41,7 +41,7 @@
         "spark": [
           [
             1787634000,
-            148
+            147
           ],
           [
             1787637600,
@@ -1191,7 +1191,7 @@
           0.0
         ],
         [
-          58.7,
+          58.8,
           0.0
         ]
       ]
@@ -1736,7 +1736,7 @@
             24.0
           ],
           [
-            1787635341,
+            1787635569,
             26.0
           ],
           [
@@ -2468,7 +2468,7 @@
             3.0
           ],
           [
-            1787635341,
+            1787635569,
             11.0
           ],
           [
@@ -3277,7 +3277,7 @@
           29.0
         ],
         [
-          1787635341,
+          1787635569,
           31.0
         ],
         [
@@ -3781,7 +3781,7 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 31,
+          "ctx_pct": 35,
           "last_commit_at": 1788236646,
           "head": "0123d82",
           "subfence": {
@@ -4053,7 +4053,7 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 200,
-              "used": 52,
+              "used": 53,
               "day": 1,
               "active": null,
               "wall": false
@@ -4071,13 +4071,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 200,
-              "used": 4,
+              "used": 5,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-01T05:05:28Z",
+          "updated": "2026-09-01T05:20:52Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4093,19 +4093,13 @@
           ]
         }
       },
-      "snapshot_id": "6af20c550ea71462"
+      "snapshot_id": "fd1c31bee37b0107"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "INT7-MCP-REMOTE",
-            "kind": "escalate",
-            "raised_at": 1788240008
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4136,17 +4130,21 @@
         {
           "id": "INT7-MCP-REMOTE",
           "status": "built",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 23,
-          "last_commit_at": 1788239954,
-          "head": "2a2d3125",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 25,
+          "last_commit_at": 1788240039,
+          "head": "d5a92523",
           "subfence": {
             "done": 12,
             "total": 13
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "d5a92523",
+              "at": 1788240039
+            },
             {
               "sha": "2a2d3125",
               "at": 1788239954
@@ -4162,10 +4160,6 @@
             {
               "sha": "73129052",
               "at": 1788232546
-            },
-            {
-              "sha": "a285cadc",
-              "at": 1788232432
             }
           ],
           "fences": {
@@ -4174,14 +4168,14 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "ONB1",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 38,
+          "ctx_pct": 43,
           "last_commit_at": 1788239087,
           "head": "87627467",
           "subfence": {
@@ -4502,7 +4496,7 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 200,
-              "used": 52,
+              "used": 53,
               "day": 1,
               "active": null,
               "wall": false
@@ -4520,13 +4514,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 200,
-              "used": 4,
+              "used": 5,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-01T05:05:28Z",
+          "updated": "2026-09-01T05:20:52Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4542,7 +4536,7 @@
           ]
         }
       },
-      "snapshot_id": "defc0e6bc03bdb34"
+      "snapshot_id": "f49af8e12cd1852a"
     },
     "scriptgen": {
       "schema": 1,
@@ -4809,7 +4803,7 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 200,
-              "used": 52,
+              "used": 53,
               "day": 1,
               "active": null,
               "wall": false
@@ -4827,13 +4821,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 200,
-              "used": 4,
+              "used": 5,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-01T05:05:28Z",
+          "updated": "2026-09-01T05:20:52Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4849,7 +4843,7 @@
           ]
         }
       },
-      "snapshot_id": "940c671226cb850f"
+      "snapshot_id": "836238097eb31bde"
     }
   },
   "pm": {
@@ -4870,22 +4864,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       }
     ]
   },
-  "snapshot_id": "05682c789ed036f6",
-  "published_at": "2026-09-01T05:20:27Z"
+  "snapshot_id": "8a964bae2fa77750",
+  "published_at": "2026-09-01T05:25:40Z"
 }
