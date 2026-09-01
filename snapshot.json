@@ -29,7 +29,7 @@
             52.0
           ],
           [
-            2.6,
+            2.7,
             62.0
           ]
         ]
@@ -333,7 +333,7 @@
             4.0
           ],
           [
-            7.6,
+            7.7,
             6.0
           ]
         ]
@@ -686,7 +686,7 @@
             75.0
           ],
           [
-            43.9,
+            44.0,
             75.0
           ]
         ]
@@ -1187,7 +1187,7 @@
           0.0
         ],
         [
-          59.6,
+          59.7,
           0.0
         ]
       ]
@@ -2630,7 +2630,7 @@
         ],
         "B": [
           [
-            1784357490,
+            1784357702,
             6.0
           ],
           [
@@ -3735,8 +3735,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "DETECTOR-CORE",
+            "kind": "escalate",
+            "raised_at": 1788245437
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3767,34 +3773,21 @@
         {
           "id": "DETECTOR-CORE",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 21,
-          "last_commit_at": 1788245204,
-          "head": "3ce55de",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 23,
+          "last_commit_at": 1788245335,
+          "head": "3fbe46b",
           "subfence": {
             "done": 15,
             "total": 15
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "codex-solxhigh x5 breadth",
-              "must": 7,
-              "should": 6,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "codex gpt-5.5xhigh x5 iterate",
-              "must": 5,
-              "should": 5,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "3fbe46b",
+              "at": 1788245335
+            },
             {
               "sha": "3ce55de",
               "at": 1788245204
@@ -3810,10 +3803,6 @@
             {
               "sha": "2faa592",
               "at": 1788241400
-            },
-            {
-              "sha": "07ac1e3",
-              "at": 1788241302
             }
           ],
           "fences": {
@@ -3822,7 +3811,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4098,7 +4087,7 @@
           ]
         }
       },
-      "snapshot_id": "41ba5920a4ea464e"
+      "snapshot_id": "b186bee2da88d7af"
     },
     "outbound": {
       "schema": 1,
@@ -4186,7 +4175,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 34,
+          "ctx_pct": 37,
           "last_commit_at": 1788245014,
           "head": "026cf0d8",
           "subfence": {
@@ -4547,7 +4536,7 @@
           ]
         }
       },
-      "snapshot_id": "334dee7166fec7f5"
+      "snapshot_id": "edf8726859c6eee5"
     },
     "scriptgen": {
       "schema": 1,
@@ -4854,7 +4843,7 @@
           ]
         }
       },
-      "snapshot_id": "dbcf90915e53ee45"
+      "snapshot_id": "a8341718e4d959ba"
     }
   },
   "pm": {
@@ -4875,22 +4864,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 15
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 9
+        "monitor_last_pass_min": 15
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 9
+        "monitor_last_pass_min": 14
       }
     ]
   },
-  "snapshot_id": "e7dea2f4d6db7ee5",
-  "published_at": "2026-09-01T06:48:58Z"
+  "snapshot_id": "8f63de408ee9d3ec",
+  "published_at": "2026-09-01T06:54:11Z"
 }
