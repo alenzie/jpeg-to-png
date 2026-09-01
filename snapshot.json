@@ -182,7 +182,7 @@
         ],
         "trail": [
           [
-            16.8,
+            16.9,
             0.0
           ]
         ]
@@ -2630,7 +2630,7 @@
         ],
         "B": [
           [
-            1784357189,
+            1784357490,
             6.0
           ],
           [
@@ -3769,9 +3769,9 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 17,
-          "last_commit_at": 1788243627,
-          "head": "6b552f1",
+          "ctx_pct": 21,
+          "last_commit_at": 1788245204,
+          "head": "3ce55de",
           "subfence": {
             "done": 15,
             "total": 15
@@ -3796,6 +3796,10 @@
           ],
           "commits": [
             {
+              "sha": "3ce55de",
+              "at": 1788245204
+            },
+            {
               "sha": "6b552f1",
               "at": 1788243627
             },
@@ -3810,10 +3814,6 @@
             {
               "sha": "07ac1e3",
               "at": 1788241302
-            },
-            {
-              "sha": "0123d82",
-              "at": 1788236646
             }
           ],
           "fences": {
@@ -4098,13 +4098,19 @@
           ]
         }
       },
-      "snapshot_id": "05babc3815ceb205"
+      "snapshot_id": "41ba5920a4ea464e"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-MCP-REMOTE",
+            "kind": "escalate",
+            "raised_at": 1788245215
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4137,7 +4143,7 @@
           "status": "done",
           "stage": "done",
           "stage_i": 7,
-          "ctx_pct": 4,
+          "ctx_pct": 11,
           "last_commit_at": 1788244351,
           "head": "413cb980",
           "subfence": {
@@ -4173,14 +4179,14 @@
             "build": true,
             "review": true
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "ONB1",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 30,
+          "ctx_pct": 34,
           "last_commit_at": 1788245014,
           "head": "026cf0d8",
           "subfence": {
@@ -4541,7 +4547,7 @@
           ]
         }
       },
-      "snapshot_id": "c50ada33e405b349"
+      "snapshot_id": "334dee7166fec7f5"
     },
     "scriptgen": {
       "schema": 1,
@@ -4848,7 +4854,7 @@
           ]
         }
       },
-      "snapshot_id": "a2463fd65c3773ab"
+      "snapshot_id": "dbcf90915e53ee45"
     }
   },
   "pm": {
@@ -4869,22 +4875,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 10
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 9
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 9
       }
     ]
   },
-  "snapshot_id": "2badffb00a4d4c46",
-  "published_at": "2026-09-01T06:43:47Z"
+  "snapshot_id": "e7dea2f4d6db7ee5",
+  "published_at": "2026-09-01T06:48:58Z"
 }
