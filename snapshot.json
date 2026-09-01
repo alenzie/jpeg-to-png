@@ -41,7 +41,7 @@
             66.0
           ],
           [
-            5.4,
+            5.5,
             67.0
           ]
         ]
@@ -341,7 +341,7 @@
             9.0
           ],
           [
-            10.4,
+            10.5,
             10.0
           ]
         ]
@@ -694,7 +694,7 @@
             75.0
           ],
           [
-            46.7,
+            46.8,
             75.0
           ]
         ]
@@ -1191,7 +1191,7 @@
           0.0
         ],
         [
-          62.4,
+          62.5,
           0.0
         ]
       ]
@@ -3719,14 +3719,20 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "DETECTOR-CORE",
+            "kind": "escalate",
+            "raised_at": 1788262302
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788260735
+        "last_pass_at": 1788262536
       },
       "runstate": {
         "auto": false,
@@ -3789,7 +3795,7 @@
             "build": true,
             "review": true
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4067,7 +4073,7 @@
           ]
         }
       },
-      "snapshot_id": "0cd94d909cab90f9"
+      "snapshot_id": "3dda02a292392a9b"
     },
     "outbound": {
       "schema": 1,
@@ -4079,7 +4085,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788260736
+        "last_pass_at": 1788262536
       },
       "runstate": {
         "auto": false,
@@ -4106,7 +4112,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 51,
+          "ctx_pct": 52,
           "last_commit_at": 1788261658,
           "head": "834c05b3",
           "subfence": {
@@ -4467,7 +4473,7 @@
           ]
         }
       },
-      "snapshot_id": "49e9f513ca80b342"
+      "snapshot_id": "657ab694b4053eda"
     },
     "scriptgen": {
       "schema": 1,
@@ -4774,7 +4780,7 @@
           ]
         }
       },
-      "snapshot_id": "3ccd097cc569df20"
+      "snapshot_id": "84e70d430e8e22a7"
     }
   },
   "pm": {
@@ -4796,22 +4802,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 291
+        "monitor_last_pass_min": 296
       }
     ]
   },
-  "snapshot_id": "3f65111b067c5a01",
-  "published_at": "2026-09-01T11:31:14Z"
+  "snapshot_id": "925be03782ece75b",
+  "published_at": "2026-09-01T11:36:26Z"
 }
