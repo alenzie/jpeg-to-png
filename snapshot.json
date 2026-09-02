@@ -89,7 +89,7 @@
         "tier": "Pro",
         "projected": 256,
         "used": 96,
-        "at": 1788366365,
+        "at": 1788366649,
         "reset": "19:30 on 6 Sep",
         "spark": [
           [
@@ -252,7 +252,7 @@
         "mult": "20x",
         "projected": 71,
         "used": 20,
-        "at": 1788366365,
+        "at": 1788366649,
         "reset": "Sep 7, 10:59am (America/Los_Angeles)",
         "spark": [
           [
@@ -725,7 +725,7 @@
       "target": 100,
       "projected": 54,
       "used": 43,
-      "at": 1788366365,
+      "at": 1788366649,
       "reset": "Sep 03, 19:39",
       "level": "pro",
       "spark": [
@@ -1156,7 +1156,7 @@
           0.0
         ],
         [
-          80.2,
+          80.3,
           0.0
         ]
       ]
@@ -1167,7 +1167,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788366365,
+      "at": 1788366649,
       "spark": [
         [
           1787763600,
@@ -3546,8 +3546,8 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1788303632
+        "monitor_alive": true,
+        "last_pass_at": 1788370284
       },
       "runstate": {
         "auto": false,
@@ -3565,7 +3565,7 @@
           "up": true
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [],
@@ -3844,25 +3844,19 @@
           ]
         }
       },
-      "snapshot_id": "8978d77bae34f1c8"
+      "snapshot_id": "96acb870f71b5151"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "W7",
-            "kind": "escalate",
-            "raised_at": 1788360739
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1788303646
+        "monitor_alive": true,
+        "last_pass_at": 1788370283
       },
       "runstate": {
         "auto": false,
@@ -3880,7 +3874,7 @@
           "up": true
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [
@@ -3889,7 +3883,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 47,
+          "ctx_pct": 49,
           "last_commit_at": 1788369934,
           "head": "4de0c3b3",
           "subfence": {
@@ -3930,16 +3924,49 @@
         {
           "id": "W7",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 36,
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 37,
           "last_commit_at": 1788360754,
           "head": "547f6b48",
           "subfence": {
             "done": 13,
             "total": 13
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "gpt-5.6-sol solo breadth",
+              "must": 8,
+              "should": 6,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "gpt-5.5 solo iteration",
+              "must": 0,
+              "should": 4,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terra solo iteration",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "gpt-5.6-terra + gpt-5.5 dual cumulative ",
+              "must": 4,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
             {
               "sha": "547f6b48",
@@ -3968,7 +3995,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -4294,7 +4321,7 @@
           ]
         }
       },
-      "snapshot_id": "f582bcd3e9ee02fd"
+      "snapshot_id": "59d70a39d81fd7b7"
     },
     "scriptgen": {
       "schema": 1,
@@ -4305,8 +4332,8 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1788244767
+        "monitor_alive": true,
+        "last_pass_at": 1788370286
       },
       "runstate": {
         "auto": false,
@@ -4324,7 +4351,7 @@
           "up": true
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [],
@@ -4601,7 +4628,7 @@
           ]
         }
       },
-      "snapshot_id": "43e5e20ac7f414d7"
+      "snapshot_id": "def56291db4d93a2"
     }
   },
   "pm": {
@@ -4623,22 +4650,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1107
+        "monitor_last_pass_min": 1
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1107
+        "monitor_last_pass_min": 1
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2088
+        "monitor_last_pass_min": 1
       }
     ]
   },
-  "snapshot_id": "f051af8fb799e38a",
-  "published_at": "2026-09-02T17:28:07Z"
+  "snapshot_id": "813d7555f3f08a7c",
+  "published_at": "2026-09-02T17:33:19Z"
 }
