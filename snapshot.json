@@ -89,7 +89,7 @@
         "tier": "Pro",
         "projected": 256,
         "used": 97,
-        "at": 1788368632,
+        "at": 1788369149,
         "reset": "19:30 on 6 Sep",
         "spark": [
           [
@@ -256,7 +256,7 @@
         "mult": "20x",
         "projected": 70,
         "used": 20,
-        "at": 1788368632,
+        "at": 1788369149,
         "reset": "Sep 7, 11am (America/Los_Angeles)",
         "spark": [
           [
@@ -733,7 +733,7 @@
       "target": 100,
       "projected": 53,
       "used": 43,
-      "at": 1788368632,
+      "at": 1788369149,
       "reset": "Sep 03, 19:39",
       "level": "pro",
       "spark": [
@@ -1171,7 +1171,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788368632,
+      "at": 1788369149,
       "spark": [
         [
           1787767200,
@@ -3844,19 +3844,13 @@
           ]
         }
       },
-      "snapshot_id": "81940e42030b71c8"
+      "snapshot_id": "d10562276e731e70"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "W7",
-            "kind": "escalate",
-            "raised_at": 1788372171
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3889,7 +3883,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 14,
+          "ctx_pct": 22,
           "last_commit_at": 1788372427,
           "head": "5d682bc9",
           "subfence": {
@@ -3930,17 +3924,86 @@
         {
           "id": "W7",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 46,
-          "last_commit_at": 1788372182,
-          "head": "6d719f54",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 48,
+          "last_commit_at": 1788372791,
+          "head": "70788254",
           "subfence": {
             "done": 13,
             "total": 13
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "gpt-5.6-sol solo breadth",
+              "must": 8,
+              "should": 6,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "gpt-5.5 solo iteration",
+              "must": 0,
+              "should": 4,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terra solo iteration",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "gpt-5.6-terra + gpt-5.5 dual cumulative ",
+              "must": 4,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "gpt-5.6-terra + gpt-5.5 dual confirmatio",
+              "must": 2,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 6,
+              "seats": "gpt-5.6-terra + gpt-5.5 dual confirmatio",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 7,
+              "seats": "gpt-5.6-terra + gpt-5.5 dual confirmatio",
+              "must": 1,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 8,
+              "seats": "gpt-5.6-terra + gpt-5.5 dual confirmatio",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "70788254",
+              "at": 1788372791
+            },
             {
               "sha": "6d719f54",
               "at": 1788372182
@@ -3956,10 +4019,6 @@
             {
               "sha": "d74a6f2e",
               "at": 1788371362
-            },
-            {
-              "sha": "6b0bfa1e",
-              "at": 1788370677
             }
           ],
           "fences": {
@@ -3968,7 +4027,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -4294,7 +4353,7 @@
           ]
         }
       },
-      "snapshot_id": "b3ef8bea57004db3"
+      "snapshot_id": "cd08bbe0ee71a3f7"
     },
     "scriptgen": {
       "schema": 1,
@@ -4601,7 +4660,7 @@
           ]
         }
       },
-      "snapshot_id": "d717c0b949bd99d2"
+      "snapshot_id": "1e1d6e0bf88403ce"
     }
   },
   "pm": {
@@ -4614,7 +4673,7 @@
       "note": "owner asleep; PM L3-drives INT7+ONB1+DETECTOR-CORE to merge; NO new picks; codex ceiling 77%"
     },
     "pm_session": {
-      "lock": "1212575 2026-09-02T17:22:07Z",
+      "lock": "1453866 2026-09-02T18:11:56Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -4623,22 +4682,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       }
     ]
   },
-  "snapshot_id": "781dd0554be233d3",
-  "published_at": "2026-09-02T18:09:44Z"
+  "snapshot_id": "b5e391f59e404f32",
+  "published_at": "2026-09-02T18:14:56Z"
 }
