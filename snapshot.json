@@ -78,7 +78,7 @@
             74.0
           ],
           [
-            26.5,
+            26.6,
             76.0
           ]
         ]
@@ -203,7 +203,7 @@
         ],
         "trail": [
           [
-            0.7,
+            0.8,
             0.0
           ]
         ]
@@ -350,7 +350,7 @@
             23.0
           ],
           [
-            31.5,
+            31.6,
             23.0
           ]
         ]
@@ -691,7 +691,7 @@
             75.0
           ],
           [
-            67.8,
+            67.9,
             75.0
           ]
         ]
@@ -1108,7 +1108,7 @@
           0.0
         ],
         [
-          83.5,
+          83.6,
           0.0
         ]
       ]
@@ -3784,7 +3784,7 @@
           ]
         }
       },
-      "snapshot_id": "3719b1521709dac6"
+      "snapshot_id": "32a14b9b4ccf2b67"
     },
     "outbound": {
       "schema": 1,
@@ -3795,11 +3795,6 @@
             "id": "MAP-COVERAGE-SCOPE",
             "kind": "needs-owner",
             "raised_at": 1788375437
-          },
-          {
-            "id": "W7",
-            "kind": "escalate",
-            "raised_at": 1788386622
           }
         ]
       },
@@ -3856,7 +3851,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 48,
+          "ctx_pct": 49,
           "last_commit_at": 1788389153,
           "head": "1945375d",
           "subfence": {
@@ -3897,17 +3892,86 @@
         {
           "id": "W7",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 23,
-          "last_commit_at": 1788386603,
-          "head": "3f800fd2",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 27,
+          "last_commit_at": 1788389962,
+          "head": "07b77ca4",
           "subfence": {
             "done": 13,
             "total": 13
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terra solo iteration",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "gpt-5.6-terra + gpt-5.5 dual cumulative ",
+              "must": 4,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "gpt-5.6-terra + gpt-5.5 dual confirmatio",
+              "must": 2,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 6,
+              "seats": "gpt-5.6-terra + gpt-5.5 dual confirmatio",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 7,
+              "seats": "gpt-5.6-terra + gpt-5.5 dual confirmatio",
+              "must": 1,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 8,
+              "seats": "gpt-5.6-terra + gpt-5.5 dual confirmatio",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 9,
+              "seats": "gpt-5.6-terra + gpt-5.5 owner-authorized",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 10,
+              "seats": "gpt-5.6-terra + gpt-5.5 owner-authorized",
+              "must": 2,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "07b77ca4",
+              "at": 1788389962
+            },
             {
               "sha": "3f800fd2",
               "at": 1788386603
@@ -3923,10 +3987,6 @@
             {
               "sha": "ae69ae76",
               "at": 1788375197
-            },
-            {
-              "sha": "ee03a289",
-              "at": 1788375137
             }
           ],
           "fences": {
@@ -3935,7 +3995,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -4260,7 +4320,7 @@
           ]
         }
       },
-      "snapshot_id": "115e30fe6400aed8"
+      "snapshot_id": "7eae3974cc5acc42"
     },
     "scriptgen": {
       "schema": 1,
@@ -4567,7 +4627,7 @@
           ]
         }
       },
-      "snapshot_id": "e92369b078b0e7dc"
+      "snapshot_id": "3a2d0407bcc738e6"
     }
   },
   "pm": {
@@ -4589,22 +4649,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 24
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 24
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 24
+        "monitor_last_pass_min": 29
       }
     ]
   },
-  "snapshot_id": "7590a5315f604493",
-  "published_at": "2026-09-02T22:55:52Z"
+  "snapshot_id": "98ad9b0ec05e5a13",
+  "published_at": "2026-09-02T23:01:08Z"
 }
