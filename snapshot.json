@@ -203,7 +203,7 @@
         ],
         "trail": [
           [
-            1.7,
+            1.8,
             0.0
           ]
         ]
@@ -366,7 +366,7 @@
             23.0
           ],
           [
-            32.5,
+            32.6,
             25.0
           ]
         ]
@@ -1132,7 +1132,7 @@
           0.0
         ],
         [
-          84.5,
+          84.6,
           0.0
         ]
       ]
@@ -3824,7 +3824,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-03T00:37:30Z",
+          "updated": "2026-09-03T00:40:47Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3840,19 +3840,13 @@
           ]
         }
       },
-      "snapshot_id": "83b68f806e4bf87b"
+      "snapshot_id": "476acc444945458e"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "W7",
-            "kind": "escalate",
-            "raised_at": 1788395924
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3862,7 +3856,7 @@
       },
       "runstate": {
         "auto": false,
-        "parallel": 3,
+        "parallel": 5,
         "pickconfirm": true
       },
       "daemons": {
@@ -3885,7 +3879,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 20,
+          "ctx_pct": 21,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3950,7 +3944,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 45,
+          "ctx_pct": 47,
           "last_commit_at": 1788395342,
           "head": "55e5d10f",
           "subfence": {
@@ -3987,28 +3981,6 @@
             "review": false
           },
           "gate_open": false
-        },
-        {
-          "id": "W7",
-          "status": "done",
-          "stage": "done",
-          "stage_i": 7,
-          "ctx_pct": 18,
-          "last_commit_at": null,
-          "head": null,
-          "subfence": {
-            "done": 13,
-            "total": null
-          },
-          "review_rounds": [],
-          "commits": [],
-          "fences": {
-            "plan": true,
-            "synth": true,
-            "build": true,
-            "review": true
-          },
-          "gate_open": true
         }
       ],
       "eligible": [
@@ -4316,7 +4288,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-03T00:37:30Z",
+          "updated": "2026-09-03T00:40:47Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4332,7 +4304,7 @@
           ]
         }
       },
-      "snapshot_id": "703dfddc80edad92"
+      "snapshot_id": "dd7602028e2cb67c"
     },
     "scriptgen": {
       "schema": 1,
@@ -4623,7 +4595,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-03T00:37:30Z",
+          "updated": "2026-09-03T00:40:47Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4639,7 +4611,7 @@
           ]
         }
       },
-      "snapshot_id": "4aa536da6a1aaa89"
+      "snapshot_id": "bbc5ff27dbd0f1f8"
     }
   },
   "pm": {
@@ -4661,22 +4633,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       }
     ]
   },
-  "snapshot_id": "deefbfb54c13f046",
-  "published_at": "2026-09-03T00:40:10Z"
+  "snapshot_id": "e3f0a177943f66a4",
+  "published_at": "2026-09-03T00:45:23Z"
 }
