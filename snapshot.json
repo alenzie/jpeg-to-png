@@ -78,7 +78,7 @@
             74.0
           ],
           [
-            36.0,
+            36.1,
             76.0
           ]
         ]
@@ -187,7 +187,7 @@
         ],
         "trail": [
           [
-            10.2,
+            10.3,
             0.0
           ]
         ]
@@ -462,7 +462,7 @@
             58.0
           ],
           [
-            41.0,
+            41.1,
             59.0
           ]
         ]
@@ -787,7 +787,7 @@
             75.0
           ],
           [
-            77.3,
+            77.4,
             75.0
           ]
         ]
@@ -3850,7 +3850,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 36,
+          "ctx_pct": 37,
           "last_commit_at": 1788447005,
           "head": "2e8cb54",
           "subfence": {
@@ -4146,7 +4146,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-03T14:51:39Z",
+          "updated": "2026-09-03T14:54:32Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4162,13 +4162,18 @@
           ]
         }
       },
-      "snapshot_id": "b92c1761ffaeffcb"
+      "snapshot_id": "2b2f925d13ddab6c"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
+          {
+            "id": "CONTACT-SEND",
+            "kind": "escalate",
+            "raised_at": 1788447447
+          },
           {
             "id": "MERGE-ERASURE",
             "kind": "needs-owner",
@@ -4212,15 +4217,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 19,
-          "last_commit_at": 1788445699,
-          "head": "de9e59c6",
+          "ctx_pct": 23,
+          "last_commit_at": 1788447261,
+          "head": "df5e0f51",
           "subfence": {
             "done": 3,
             "total": 18
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "df5e0f51",
+              "at": 1788447261
+            },
             {
               "sha": "de9e59c6",
               "at": 1788445699
@@ -4236,10 +4245,6 @@
             {
               "sha": "3b91e398",
               "at": 1788445519
-            },
-            {
-              "sha": "df6ee20a",
-              "at": 1788444996
             }
           ],
           "fences": {
@@ -4253,9 +4258,9 @@
         {
           "id": "CONTACT-SEND",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 38,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 41,
           "last_commit_at": 1788447024,
           "head": "8da76265",
           "subfence": {
@@ -4291,7 +4296,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "MERGE-ERASURE",
@@ -4663,7 +4668,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-03T14:51:39Z",
+          "updated": "2026-09-03T14:54:32Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4679,7 +4684,7 @@
           ]
         }
       },
-      "snapshot_id": "7e496b45020ef0a7"
+      "snapshot_id": "e75ac7aec3395962"
     },
     "scriptgen": {
       "schema": 1,
@@ -4991,7 +4996,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-03T14:51:39Z",
+          "updated": "2026-09-03T14:54:32Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5007,7 +5012,7 @@
           ]
         }
       },
-      "snapshot_id": "dde7510e86317346"
+      "snapshot_id": "975293f51e40d4c2"
     }
   },
   "pm": {
@@ -5029,22 +5034,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 20
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 20
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 20
       }
     ]
   },
-  "snapshot_id": "f87a544cc5ff9a1b",
-  "published_at": "2026-09-03T14:52:40Z"
+  "snapshot_id": "7b04d3a8d1f0228d",
+  "published_at": "2026-09-03T14:57:52Z"
 }
