@@ -195,7 +195,7 @@
         ],
         "trail": [
           [
-            6.0,
+            6.1,
             0.0
           ]
         ]
@@ -414,7 +414,7 @@
             37.0
           ],
           [
-            36.8,
+            36.9,
             38.0
           ]
         ]
@@ -1184,7 +1184,7 @@
           0.0
         ],
         [
-          88.8,
+          88.9,
           0.0
         ]
       ]
@@ -3694,7 +3694,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788420450
+        "last_pass_at": 1788422250
       },
       "runstate": {
         "auto": false,
@@ -4034,7 +4034,7 @@
           ]
         }
       },
-      "snapshot_id": "77ef664ab3ebc548"
+      "snapshot_id": "ce1e2d6a1be716c5"
     },
     "outbound": {
       "schema": 1,
@@ -4045,6 +4045,11 @@
             "id": "CAL-HARDENING-2",
             "kind": "needs-owner",
             "raised_at": 1788410977
+          },
+          {
+            "id": "PAY3",
+            "kind": "needs-owner",
+            "raised_at": 1788422148
           }
         ]
       },
@@ -4052,7 +4057,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788420458
+        "last_pass_at": 1788422259
       },
       "runstate": {
         "auto": false,
@@ -4144,9 +4149,9 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 10,
-          "last_commit_at": 1788421785,
-          "head": "9f120163",
+          "ctx_pct": 18,
+          "last_commit_at": 1788422271,
+          "head": "c5d75089",
           "subfence": {
             "done": 16,
             "total": 16
@@ -4219,6 +4224,10 @@
           ],
           "commits": [
             {
+              "sha": "c5d75089",
+              "at": 1788422271
+            },
+            {
               "sha": "9f120163",
               "at": 1788421785
             },
@@ -4233,10 +4242,6 @@
             {
               "sha": "2c121e1c",
               "at": 1788419142
-            },
-            {
-              "sha": "d3ec0836",
-              "at": 1788418230
             }
           ],
           "fences": {
@@ -4250,9 +4255,9 @@
         {
           "id": "PAY3",
           "status": "not-started",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 26,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4267,7 +4272,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4591,7 +4596,7 @@
           ]
         }
       },
-      "snapshot_id": "d43df613cb7e710b"
+      "snapshot_id": "c39bf32290ce1882"
     },
     "scriptgen": {
       "schema": 1,
@@ -4603,7 +4608,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788420450
+        "last_pass_at": 1788422250
       },
       "runstate": {
         "auto": false,
@@ -4919,7 +4924,7 @@
           ]
         }
       },
-      "snapshot_id": "8a16674b644a9693"
+      "snapshot_id": "2c927c9ec45acfbd"
     }
   },
   "pm": {
@@ -4941,22 +4946,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 1
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 1
       }
     ]
   },
-  "snapshot_id": "1ab1a4226dc62670",
-  "published_at": "2026-09-03T07:53:19Z"
+  "snapshot_id": "152894a993f1a4b9",
+  "published_at": "2026-09-03T07:58:32Z"
 }
