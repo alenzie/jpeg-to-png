@@ -3937,14 +3937,8 @@
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "MSG-MIGRATION-OPS",
-            "kind": "needs-owner",
-            "raised_at": 1788407764
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3999,15 +3993,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 16,
-          "last_commit_at": 1788408148,
-          "head": "58885dca",
+          "ctx_pct": 22,
+          "last_commit_at": 1788409129,
+          "head": "5ee1c09b",
           "subfence": {
             "done": 8,
             "total": 10
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "5ee1c09b",
+              "at": 1788409129
+            },
             {
               "sha": "58885dca",
               "at": 1788408148
@@ -4023,10 +4021,6 @@
             {
               "sha": "c5356207",
               "at": 1788407534
-            },
-            {
-              "sha": "16a38b9c",
-              "at": 1788407352
             }
           ],
           "fences": {
@@ -4040,8 +4034,8 @@
         {
           "id": "MSG-MIGRATION-OPS",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "subfencing",
+          "stage_i": 4,
           "ctx_pct": 50,
           "last_commit_at": 1788403248,
           "head": "0baa9c79",
@@ -4078,7 +4072,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -4402,7 +4396,7 @@
           ]
         }
       },
-      "snapshot_id": "b99718662e8cbf4c"
+      "snapshot_id": "81c11baae7a6ce5a"
     },
     "scriptgen": {
       "schema": 1,
@@ -4731,22 +4725,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 16
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 16
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 16
+        "monitor_last_pass_min": 21
       }
     ]
   },
-  "snapshot_id": "7b19b48f29e3394b",
-  "published_at": "2026-09-03T04:13:58Z"
+  "snapshot_id": "0b1221bfaca5454b",
+  "published_at": "2026-09-03T04:19:10Z"
 }
