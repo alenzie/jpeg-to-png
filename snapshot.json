@@ -203,7 +203,7 @@
         ],
         "trail": [
           [
-            1.6,
+            1.7,
             0.0
           ]
         ]
@@ -366,7 +366,7 @@
             23.0
           ],
           [
-            32.4,
+            32.5,
             25.0
           ]
         ]
@@ -1132,7 +1132,7 @@
           0.0
         ],
         [
-          84.4,
+          84.5,
           0.0
         ]
       ]
@@ -2467,8 +2467,8 @@
         ],
         "B": [
           [
-            1784507399,
-            11.0
+            1784511390,
+            12.0
           ],
           [
             1784527631,
@@ -3543,7 +3543,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788393685
+        "last_pass_at": 1788395485
       },
       "runstate": {
         "auto": false,
@@ -3840,25 +3840,19 @@
           ]
         }
       },
-      "snapshot_id": "7ba983c54c6a6fcd"
+      "snapshot_id": "0f1d774ac2b7b898"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "W7",
-            "kind": "escalate",
-            "raised_at": 1788395334
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788393697
+        "last_pass_at": 1788395498
       },
       "runstate": {
         "auto": false,
@@ -3882,10 +3876,10 @@
       "units": [
         {
           "id": "CONTACT-SEND",
-          "status": "proposed",
+          "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 15,
+          "ctx_pct": 16,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3907,7 +3901,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 48,
+          "ctx_pct": 49,
           "last_commit_at": 1788395079,
           "head": "312949da",
           "subfence": {
@@ -3950,7 +3944,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 44,
+          "ctx_pct": 45,
           "last_commit_at": 1788395342,
           "head": "55e5d10f",
           "subfence": {
@@ -3993,43 +3987,22 @@
           "status": "done",
           "stage": "done",
           "stage_i": 7,
-          "ctx_pct": 14,
-          "last_commit_at": 1788394753,
-          "head": "13f83e34",
+          "ctx_pct": 16,
+          "last_commit_at": null,
+          "head": null,
           "subfence": {
             "done": 13,
-            "total": 13
+            "total": null
           },
           "review_rounds": [],
-          "commits": [
-            {
-              "sha": "13f83e34",
-              "at": 1788394753
-            },
-            {
-              "sha": "4844dafe",
-              "at": 1788394688
-            },
-            {
-              "sha": "03f10448",
-              "at": 1788393958
-            },
-            {
-              "sha": "a08cbf8c",
-              "at": 1788392233
-            },
-            {
-              "sha": "e5b39992",
-              "at": 1788391992
-            }
-          ],
+          "commits": [],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
             "review": true
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -4040,7 +4013,6 @@
         "INT7-RT-CRM-CUSTODY-HARDENING",
         "W5",
         "MERGE-ERASURE",
-        "CONTACT-SEND",
         "OUT",
         "MSG7-DNC-MANUAL-CONSENT",
         "MSG11",
@@ -4354,7 +4326,7 @@
           ]
         }
       },
-      "snapshot_id": "7e96283d1e5ce853"
+      "snapshot_id": "ce23f1ad78b70fe7"
     },
     "scriptgen": {
       "schema": 1,
@@ -4366,7 +4338,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788393687
+        "last_pass_at": 1788395487
       },
       "runstate": {
         "auto": false,
@@ -4661,7 +4633,7 @@
           ]
         }
       },
-      "snapshot_id": "4d36ddc86c23d26c"
+      "snapshot_id": "0c171d2921ea7468"
     }
   },
   "pm": {
@@ -4683,22 +4655,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 3
       }
     ]
   },
-  "snapshot_id": "fd99bc872ccad4d7",
-  "published_at": "2026-09-03T00:29:44Z"
+  "snapshot_id": "c03b0fac19cbb6cf",
+  "published_at": "2026-09-03T00:34:56Z"
 }
