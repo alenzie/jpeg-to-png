@@ -78,7 +78,7 @@
             74.0
           ],
           [
-            40.5,
+            40.6,
             76.0
           ]
         ]
@@ -3867,7 +3867,7 @@
       },
       "runstate": {
         "auto": false,
-        "parallel": 1,
+        "parallel": 2,
         "pickconfirm": true
       },
       "daemons": {
@@ -3884,7 +3884,73 @@
           "up": true
         }
       },
-      "units": [],
+      "units": [
+        {
+          "id": "BM-GRID",
+          "status": "building",
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 7,
+          "last_commit_at": 1788233640,
+          "head": "adae389",
+          "subfence": {
+            "done": 2,
+            "total": 13
+          },
+          "review_rounds": [],
+          "commits": [
+            {
+              "sha": "adae389",
+              "at": 1788233640
+            },
+            {
+              "sha": "3095f0c",
+              "at": 1788233259
+            },
+            {
+              "sha": "83edeeb",
+              "at": 1788233229
+            },
+            {
+              "sha": "ba7ac61",
+              "at": 1788232900
+            },
+            {
+              "sha": "1eec044",
+              "at": 1788232801
+            }
+          ],
+          "fences": {
+            "plan": true,
+            "synth": true,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "SCAN-ENGINE",
+          "status": "proposed",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 12,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        }
+      ],
       "eligible": [
         "DETECTOR-SOUND-ONLY",
         "SCAN-ENGINE"
@@ -4117,7 +4183,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 608,
+              "proj": 607,
               "target": 100,
               "used": 89,
               "day": 2,
@@ -4143,7 +4209,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-03T22:21:34Z",
+          "updated": "2026-09-03T22:27:27Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4159,7 +4225,7 @@
           ]
         }
       },
-      "snapshot_id": "efcc5aba7b56ace0"
+      "snapshot_id": "8806cdbdc48c1555"
     },
     "outbound": {
       "schema": 1,
@@ -4198,7 +4264,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 9,
+          "ctx_pct": 15,
           "last_commit_at": 1788470744,
           "head": "edca3917",
           "subfence": {
@@ -4241,15 +4307,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 15,
-          "last_commit_at": 1788470794,
-          "head": "f547b60c",
+          "ctx_pct": 24,
+          "last_commit_at": 1788474301,
+          "head": "c0001690",
           "subfence": {
             "done": 12,
             "total": 20
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "c0001690",
+              "at": 1788474301
+            },
             {
               "sha": "f547b60c",
               "at": 1788470794
@@ -4265,10 +4335,6 @@
             {
               "sha": "0d885fcd",
               "at": 1788464652
-            },
-            {
-              "sha": "4d53903c",
-              "at": 1788462599
             }
           ],
           "fences": {
@@ -4284,7 +4350,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 17,
+          "ctx_pct": 19,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4306,7 +4372,7 @@
           "status": "done",
           "stage": "done",
           "stage_i": 7,
-          "ctx_pct": 10,
+          "ctx_pct": 19,
           "last_commit_at": 1788471625,
           "head": "4becee92",
           "subfence": {
@@ -4623,7 +4689,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 608,
+              "proj": 607,
               "target": 100,
               "used": 89,
               "day": 2,
@@ -4649,7 +4715,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-03T22:21:34Z",
+          "updated": "2026-09-03T22:27:27Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4665,7 +4731,7 @@
           ]
         }
       },
-      "snapshot_id": "8a31933d5fb50da7"
+      "snapshot_id": "126ad76f10bb36d3"
     },
     "scriptgen": {
       "schema": 1,
@@ -4702,17 +4768,21 @@
         {
           "id": "CAL-RULINGS-API",
           "status": "building",
-          "stage": "building",
-          "stage_i": 3,
-          "ctx_pct": 9,
-          "last_commit_at": 1788471868,
-          "head": "4aeae6e",
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 18,
+          "last_commit_at": 1788474332,
+          "head": "5a626a7",
           "subfence": {
-            "done": 0,
+            "done": 1,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "5a626a7",
+              "at": 1788474332
+            },
             {
               "sha": "4aeae6e",
               "at": 1788471868
@@ -4728,10 +4798,6 @@
             {
               "sha": "a54af94",
               "at": 1788437517
-            },
-            {
-              "sha": "be39175",
-              "at": 1788437328
             }
           ],
           "fences": {
@@ -4972,7 +5038,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 608,
+              "proj": 607,
               "target": 100,
               "used": 89,
               "day": 2,
@@ -4998,7 +5064,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-03T22:21:34Z",
+          "updated": "2026-09-03T22:27:27Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5014,7 +5080,7 @@
           ]
         }
       },
-      "snapshot_id": "fbe97c3af894c57c"
+      "snapshot_id": "79d1c54b598b05f8"
     }
   },
   "pm": {
@@ -5036,22 +5102,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 6
       }
     ]
   },
-  "snapshot_id": "35a28611a5242675",
-  "published_at": "2026-09-03T22:24:39Z"
+  "snapshot_id": "533ebc8586a861c1",
+  "published_at": "2026-09-03T22:30:06Z"
 }
