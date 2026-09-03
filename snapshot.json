@@ -78,7 +78,7 @@
             74.0
           ],
           [
-            27.7,
+            27.8,
             76.0
           ]
         ]
@@ -203,7 +203,7 @@
         ],
         "trail": [
           [
-            1.9,
+            2.0,
             0.0
           ]
         ]
@@ -707,7 +707,7 @@
             75.0
           ],
           [
-            69.0,
+            69.1,
             75.0
           ]
         ]
@@ -3840,13 +3840,19 @@
           ]
         }
       },
-      "snapshot_id": "6647d083e6201ae7"
+      "snapshot_id": "7d2464815ef2b4cf"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CONTACT-SEND",
+            "kind": "needs-owner",
+            "raised_at": 1788397000
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3877,9 +3883,9 @@
         {
           "id": "CONTACT-SEND",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 27,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3894,22 +3900,26 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "MAP-COVERAGE-SCOPE",
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 54,
-          "last_commit_at": 1788396532,
-          "head": "7783b946",
+          "ctx_pct": 56,
+          "last_commit_at": 1788397225,
+          "head": "02de5fa0",
           "subfence": {
             "done": 0,
             "total": 10
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "02de5fa0",
+              "at": 1788397225
+            },
             {
               "sha": "7783b946",
               "at": 1788396532
@@ -3925,10 +3935,6 @@
             {
               "sha": "fc3d721c",
               "at": 1788395784
-            },
-            {
-              "sha": "312949da",
-              "at": 1788395079
             }
           ],
           "fences": {
@@ -3944,7 +3950,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 52,
+          "ctx_pct": 53,
           "last_commit_at": 1788396874,
           "head": "14084d7a",
           "subfence": {
@@ -4304,7 +4310,7 @@
           ]
         }
       },
-      "snapshot_id": "ceabac41905d2fdc"
+      "snapshot_id": "eefe8d187f996f3e"
     },
     "scriptgen": {
       "schema": 1,
@@ -4611,7 +4617,7 @@
           ]
         }
       },
-      "snapshot_id": "4840aad610b95908"
+      "snapshot_id": "a5a1e872b562b5a0"
     }
   },
   "pm": {
@@ -4633,22 +4639,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 24
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 24
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 24
+        "monitor_last_pass_min": 29
       }
     ]
   },
-  "snapshot_id": "c1dd2ecdd6d7b6f5",
-  "published_at": "2026-09-03T00:55:49Z"
+  "snapshot_id": "d3455c2ec49ace17",
+  "published_at": "2026-09-03T01:01:02Z"
 }
