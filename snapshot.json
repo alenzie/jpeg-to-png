@@ -1236,7 +1236,7 @@
           0.0
         ],
         [
-          93.0,
+          93.1,
           0.0
         ]
       ]
@@ -4162,13 +4162,18 @@
           ]
         }
       },
-      "snapshot_id": "2b2f925d13ddab6c"
+      "snapshot_id": "d3b468f23b8358c8"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
+          {
+            "id": "CAL-HARDENING-2",
+            "kind": "escalate",
+            "raised_at": 1788447590
+          },
           {
             "id": "CONTACT-SEND",
             "kind": "escalate",
@@ -4215,9 +4220,9 @@
         {
           "id": "CAL-HARDENING-2",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 23,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 24,
           "last_commit_at": 1788447261,
           "head": "df5e0f51",
           "subfence": {
@@ -4253,7 +4258,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "CONTACT-SEND",
@@ -4684,7 +4689,7 @@
           ]
         }
       },
-      "snapshot_id": "e75ac7aec3395962"
+      "snapshot_id": "5a44b684dfbda215"
     },
     "scriptgen": {
       "schema": 1,
@@ -5012,7 +5017,7 @@
           ]
         }
       },
-      "snapshot_id": "975293f51e40d4c2"
+      "snapshot_id": "80d4a5c68c36090c"
     }
   },
   "pm": {
@@ -5034,22 +5039,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 25
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 25
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 25
       }
     ]
   },
-  "snapshot_id": "7b04d3a8d1f0228d",
-  "published_at": "2026-09-03T14:57:52Z"
+  "snapshot_id": "41a8feae88c1c07d",
+  "published_at": "2026-09-03T15:03:05Z"
 }
