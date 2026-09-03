@@ -88,8 +88,8 @@
         "label": "B",
         "tier": "Pro",
         "projected": null,
-        "used": 41,
-        "at": 1788434699,
+        "used": 42,
+        "at": 1788435015,
         "reset": "14:44 on 9 Sep",
         "spark": [
           [
@@ -187,7 +187,7 @@
         ],
         "trail": [
           [
-            8.7,
+            8.8,
             0.0
           ]
         ]
@@ -198,10 +198,10 @@
         "target": 100,
         "label": "A",
         "mult": "20x",
-        "projected": 142,
-        "used": 56,
-        "at": 1788434699,
-        "reset": "Sep 7, 10:59am (America/Los_Angeles)",
+        "projected": 144,
+        "used": 57,
+        "at": 1788435015,
+        "reset": "Sep 7, 11am (America/Los_Angeles)",
         "spark": [
           [
             1788271200,
@@ -446,7 +446,7 @@
             54.0
           ],
           [
-            39.5,
+            39.6,
             55.0
           ]
         ]
@@ -781,7 +781,7 @@
       "target": 100,
       "projected": 55,
       "used": 50,
-      "at": 1788434699,
+      "at": 1788435015,
       "reset": "Sep 03, 19:39",
       "level": "pro",
       "spark": [
@@ -1212,7 +1212,7 @@
           0.0
         ],
         [
-          91.5,
+          91.6,
           0.0
         ]
       ]
@@ -1223,7 +1223,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788434699,
+      "at": 1788435015,
       "spark": [
         [
           1787857200,
@@ -3794,9 +3794,9 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 25,
-          "last_commit_at": 1788437948,
-          "head": "29e4af4",
+          "ctx_pct": 27,
+          "last_commit_at": 1788438609,
+          "head": "7769dde",
           "subfence": {
             "done": 6,
             "total": 6
@@ -3837,6 +3837,10 @@
           ],
           "commits": [
             {
+              "sha": "7769dde",
+              "at": 1788438609
+            },
+            {
               "sha": "29e4af4",
               "at": 1788437948
             },
@@ -3851,10 +3855,6 @@
             {
               "sha": "f2cadee",
               "at": 1788436175
-            },
-            {
-              "sha": "7a98e50",
-              "at": 1788435830
             }
           ],
           "fences": {
@@ -3870,15 +3870,23 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 48,
-          "last_commit_at": 1788438206,
-          "head": "fc8ac4b",
+          "ctx_pct": 50,
+          "last_commit_at": 1788438634,
+          "head": "124a3fb",
           "subfence": {
             "done": 1,
             "total": 12
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "124a3fb",
+              "at": 1788438634
+            },
+            {
+              "sha": "a333179",
+              "at": 1788438593
+            },
             {
               "sha": "fc8ac4b",
               "at": 1788438206
@@ -3890,14 +3898,6 @@
             {
               "sha": "f9ba768",
               "at": 1788437062
-            },
-            {
-              "sha": "ed2b262",
-              "at": 1788435010
-            },
-            {
-              "sha": "fee841b",
-              "at": 1788434763
             }
           ],
           "fences": {
@@ -4142,7 +4142,7 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 200,
-              "used": 41,
+              "used": 42,
               "day": 1,
               "active": null,
               "wall": false
@@ -4158,15 +4158,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 142,
+              "proj": 144,
               "target": 200,
-              "used": 56,
+              "used": 57,
               "day": 3,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-03T12:25:02Z",
+          "updated": "2026-09-03T12:30:17Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4182,7 +4182,7 @@
           ]
         }
       },
-      "snapshot_id": "9ba21a1a8f1426bf"
+      "snapshot_id": "df501852ed6446a6"
     },
     "outbound": {
       "schema": 1,
@@ -4217,19 +4217,66 @@
       },
       "units": [
         {
+          "id": "CAL-HARDENING-2",
+          "status": "scoped",
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": 6,
+          "last_commit_at": 1788431470,
+          "head": "5a54c64e",
+          "subfence": {
+            "done": 0,
+            "total": 18
+          },
+          "review_rounds": [],
+          "commits": [
+            {
+              "sha": "5a54c64e",
+              "at": 1788431470
+            },
+            {
+              "sha": "8cf67b8e",
+              "at": 1788431422
+            },
+            {
+              "sha": "7632ef80",
+              "at": 1788431229
+            },
+            {
+              "sha": "c42f0972",
+              "at": 1788431093
+            },
+            {
+              "sha": "7fc903d7",
+              "at": 1788431038
+            }
+          ],
+          "fences": {
+            "plan": true,
+            "synth": true,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
           "id": "CONTACT-SEND",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 36,
-          "last_commit_at": 1788437050,
-          "head": "fa978df0",
+          "ctx_pct": 40,
+          "last_commit_at": 1788438553,
+          "head": "7d766e9f",
           "subfence": {
             "done": 9,
             "total": 20
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "7d766e9f",
+              "at": 1788438553
+            },
             {
               "sha": "fa978df0",
               "at": 1788437050
@@ -4245,10 +4292,6 @@
             {
               "sha": "76e3caa0",
               "at": 1788436934
-            },
-            {
-              "sha": "fed2d027",
-              "at": 1788436501
             }
           ],
           "fences": {
@@ -4260,13 +4303,35 @@
           "gate_open": false
         },
         {
+          "id": "MERGE-ERASURE",
+          "status": "not-started",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 0,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
           "id": "PAY3",
           "status": "not-started",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 41,
-          "last_commit_at": 1788437497,
-          "head": "cac4a0fe",
+          "ctx_pct": 44,
+          "last_commit_at": 1788438615,
+          "head": "b0cac6a6",
           "subfence": {
             "done": 8,
             "total": 10
@@ -4283,6 +4348,10 @@
           ],
           "commits": [
             {
+              "sha": "b0cac6a6",
+              "at": 1788438615
+            },
+            {
               "sha": "cac4a0fe",
               "at": 1788437497
             },
@@ -4297,10 +4366,6 @@
             {
               "sha": "210bce75",
               "at": 1788435676
-            },
-            {
-              "sha": "3a2d8a55",
-              "at": 1788435538
             }
           ],
           "fences": {
@@ -4593,7 +4658,7 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 200,
-              "used": 41,
+              "used": 42,
               "day": 1,
               "active": null,
               "wall": false
@@ -4609,15 +4674,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 142,
+              "proj": 144,
               "target": 200,
-              "used": 56,
+              "used": 57,
               "day": 3,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-03T12:25:02Z",
+          "updated": "2026-09-03T12:30:17Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4633,7 +4698,7 @@
           ]
         }
       },
-      "snapshot_id": "f603b7f7a00b440a"
+      "snapshot_id": "98cb05ed55386a16"
     },
     "scriptgen": {
       "schema": 1,
@@ -4921,7 +4986,7 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 200,
-              "used": 41,
+              "used": 42,
               "day": 1,
               "active": null,
               "wall": false
@@ -4937,15 +5002,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 142,
+              "proj": 144,
               "target": 200,
-              "used": 56,
+              "used": 57,
               "day": 3,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-03T12:25:02Z",
+          "updated": "2026-09-03T12:30:17Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4961,7 +5026,7 @@
           ]
         }
       },
-      "snapshot_id": "87f641e1746d1217"
+      "snapshot_id": "d414bad1fb86cf95"
     }
   },
   "pm": {
@@ -4983,22 +5048,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       }
     ]
   },
-  "snapshot_id": "98f37db0c9d58fa4",
-  "published_at": "2026-09-03T12:25:31Z"
+  "snapshot_id": "81f7f5c003a13d11",
+  "published_at": "2026-09-03T12:30:44Z"
 }
