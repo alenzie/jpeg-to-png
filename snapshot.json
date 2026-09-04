@@ -88,8 +88,8 @@
         "label": "B",
         "tier": "Pro",
         "projected": null,
-        "used": 30,
-        "at": 1788553461,
+        "used": 31,
+        "at": 1788553738,
         "reset": "02:03 on 11 Sep",
         "spark": [
           [
@@ -553,7 +553,7 @@
         "mult": "20x",
         "projected": 8,
         "used": 8,
-        "at": 1788553461,
+        "at": 1788553738,
         "reset": "Sep 4, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1234,7 +1234,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788553461,
+      "at": 1788553738,
       "spark": [
         [
           1787950800,
@@ -4035,16 +4035,65 @@
         {
           "id": "SCAN-ENGINE",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 22,
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 14,
           "last_commit_at": 1788556604,
           "head": "771b47f",
           "subfence": {
             "done": 12,
             "total": 12
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "codex gpt-5.6-solxhigh SEED never conver",
+              "must": 18,
+              "should": 3,
+              "could": 1,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "glm-5.3 iterate find",
+              "must": 2,
+              "should": 5,
+              "could": 1,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "codex gpt-5.6-terraxhigh DECLARER",
+              "must": 2,
+              "should": 0,
+              "could": 1,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "codex gpt-5.6-terraxhigh DECLARER re-con",
+              "must": 2,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "codex gpt-5.6-terraxhigh DECLARER fresh ",
+              "must": 3,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 6,
+              "seats": "codex gpt-5.6-terraxhigh DECLARER fresh ",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
             {
               "sha": "771b47f",
@@ -4070,7 +4119,7 @@
           "fences": {
             "plan": true,
             "synth": true,
-            "build": false,
+            "build": true,
             "review": false
           },
           "gate_open": false
@@ -4309,7 +4358,7 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 30,
+              "used": 31,
               "day": 1,
               "active": null,
               "wall": false
@@ -4318,7 +4367,7 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 2,
+              "used": 3,
               "day": 1,
               "active": null,
               "wall": false
@@ -4333,7 +4382,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-04T21:24:23Z",
+          "updated": "2026-09-04T21:29:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4349,7 +4398,7 @@
           ]
         }
       },
-      "snapshot_id": "98ada65733b2efc9"
+      "snapshot_id": "131ce1a96a5b3f8a"
     },
     "outbound": {
       "schema": 1,
@@ -4488,9 +4537,9 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 46,
-          "last_commit_at": 1788556825,
-          "head": "42618be5",
+          "ctx_pct": 49,
+          "last_commit_at": 1788557223,
+          "head": "6524bf41",
           "subfence": {
             "done": 19,
             "total": 20
@@ -4555,6 +4604,10 @@
           ],
           "commits": [
             {
+              "sha": "6524bf41",
+              "at": 1788557223
+            },
+            {
               "sha": "42618be5",
               "at": 1788556825
             },
@@ -4569,10 +4622,6 @@
             {
               "sha": "2e075adf",
               "at": 1788556014
-            },
-            {
-              "sha": "427a2aa4",
-              "at": 1788552400
             }
           ],
           "fences": {
@@ -4631,15 +4680,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 21,
-          "last_commit_at": 1788556145,
-          "head": "fd71ec1e",
+          "ctx_pct": 24,
+          "last_commit_at": 1788557345,
+          "head": "53088c66",
           "subfence": {
-            "done": 5,
+            "done": 6,
             "total": 12
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "53088c66",
+              "at": 1788557345
+            },
             {
               "sha": "fd71ec1e",
               "at": 1788556145
@@ -4655,10 +4708,6 @@
             {
               "sha": "d304344c",
               "at": 1788555067
-            },
-            {
-              "sha": "a96f2d95",
-              "at": 1788554976
             }
           ],
           "fences": {
@@ -4994,7 +5043,7 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 30,
+              "used": 31,
               "day": 1,
               "active": null,
               "wall": false
@@ -5003,7 +5052,7 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 2,
+              "used": 3,
               "day": 1,
               "active": null,
               "wall": false
@@ -5018,7 +5067,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-04T21:24:23Z",
+          "updated": "2026-09-04T21:29:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5034,7 +5083,7 @@
           ]
         }
       },
-      "snapshot_id": "74036abbe0c6ce0f"
+      "snapshot_id": "3693e4b84319f5d8"
     },
     "scriptgen": {
       "schema": 1,
@@ -5073,9 +5122,9 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 51,
-          "last_commit_at": 1788557036,
-          "head": "0b988bc",
+          "ctx_pct": 53,
+          "last_commit_at": 1788557342,
+          "head": "b10daf4",
           "subfence": {
             "done": 7,
             "total": 9
@@ -5132,6 +5181,10 @@
           ],
           "commits": [
             {
+              "sha": "b10daf4",
+              "at": 1788557342
+            },
+            {
               "sha": "0b988bc",
               "at": 1788557036
             },
@@ -5146,10 +5199,6 @@
             {
               "sha": "b8265eb",
               "at": 1788555647
-            },
-            {
-              "sha": "9f4ee9f",
-              "at": 1788552523
             }
           ],
           "fences": {
@@ -5392,7 +5441,7 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 30,
+              "used": 31,
               "day": 1,
               "active": null,
               "wall": false
@@ -5401,7 +5450,7 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 2,
+              "used": 3,
               "day": 1,
               "active": null,
               "wall": false
@@ -5416,7 +5465,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-04T21:24:23Z",
+          "updated": "2026-09-04T21:29:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5432,7 +5481,7 @@
           ]
         }
       },
-      "snapshot_id": "cfe2c136d0a74100"
+      "snapshot_id": "933764e7ed7ca15f"
     }
   },
   "pm": {
@@ -5445,7 +5494,7 @@
       "note": "owner asleep 2026-09-04 ~07:00 PDT until ~01:00 PDT Sep 5: /pm auto L3 on ALL fleets; PM approves picks after ledger verify + disjointness; interviews proxied w/ recommended defaults; sol consult then combined steer on consult-flagged units; keep >=7 in flight"
     },
     "pm_session": {
-      "lock": "1576252 2026-09-04T21:01:49Z",
+      "lock": "2075308 2026-09-04T21:27:57Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -5454,22 +5503,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 6
       }
     ]
   },
-  "snapshot_id": "4f7bda213bdb1bf1",
-  "published_at": "2026-09-04T21:24:43Z"
+  "snapshot_id": "027df07022a79fe7",
+  "published_at": "2026-09-04T21:30:02Z"
 }
