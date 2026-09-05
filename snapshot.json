@@ -78,7 +78,7 @@
             74.0
           ],
           [
-            64.9,
+            65.0,
             76.0
           ]
         ]
@@ -570,7 +570,7 @@
             61.0
           ],
           [
-            69.9,
+            70.0,
             63.0
           ]
         ]
@@ -875,7 +875,7 @@
             9.0
           ],
           [
-            6.2,
+            6.3,
             9.0
           ]
         ]
@@ -1500,7 +1500,7 @@
           8.0
         ],
         [
-          21.9,
+          22.0,
           8.0
         ]
       ]
@@ -4559,75 +4559,22 @@
       "units": [
         {
           "id": "SCAN-ENGINE",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 18,
-          "last_commit_at": 1788621215,
-          "head": "91289b6",
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 21,
+          "last_commit_at": 1788622103,
+          "head": "fe47875",
           "subfence": {
             "done": 12,
             "total": 12
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "codex gpt-5.6-solxhigh SEED never conver",
-              "must": 18,
-              "should": 3,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "glm-5.3 iterate find",
-              "must": 2,
-              "should": 5,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "codex gpt-5.6-terraxhigh DECLARER",
-              "must": 2,
-              "should": 0,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "codex gpt-5.6-terraxhigh DECLARER re-con",
-              "must": 2,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "codex gpt-5.6-terraxhigh DECLARER fresh ",
-              "must": 3,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "codex gpt-5.6-terraxhigh DECLARER fresh ",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 1,
-              "seats": "claude-sonnet-5 swarm-4 breadth never co",
-              "must": 0,
-              "should": 8,
-              "could": 4,
-              "nit": 4
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "fe47875",
+              "at": 1788622103
+            },
             {
               "sha": "91289b6",
               "at": 1788621215
@@ -4643,10 +4590,6 @@
             {
               "sha": "7bf15e8",
               "at": 1788619987
-            },
-            {
-              "sha": "cd1ef9a",
-              "at": 1788618136
             }
           ],
           "fences": {
@@ -4659,9 +4602,17 @@
         }
       ],
       "eligible": [
-        "DETECTOR-SOUND-ONLY"
+        "DETECTOR-SOUND-ONLY",
+        "EVENTS-UI",
+        "CORPUS-INDEX"
       ],
       "merge_feed": [
+        {
+          "pr": 15,
+          "unit": "SCAN-ENGINE",
+          "merged_at": 1788622196,
+          "sha": "a211ce9"
+        },
         {
           "pr": 14,
           "unit": "BM-GRID",
@@ -4685,12 +4636,6 @@
           "unit": "DETECTOR-CORE",
           "merged_at": 1788261887,
           "sha": "7527a39"
-        },
-        {
-          "pr": 10,
-          "unit": "BM-P0",
-          "merged_at": 1788127528,
-          "sha": "5767db5"
         }
       ],
       "decisions": [],
@@ -4931,7 +4876,7 @@
           ]
         }
       },
-      "snapshot_id": "87a70161fd46fcc3"
+      "snapshot_id": "dd95b31233e51b3b"
     },
     "outbound": {
       "schema": 1,
@@ -5517,7 +5462,7 @@
           ]
         }
       },
-      "snapshot_id": "cd84d31cf3a6efce"
+      "snapshot_id": "9e155a93b8ca9943"
     },
     "scriptgen": {
       "schema": 1,
@@ -5824,7 +5769,7 @@
           ]
         }
       },
-      "snapshot_id": "03a41868399bdf8e"
+      "snapshot_id": "b6051b7c4821a0ff"
     }
   },
   "pm": {
@@ -5846,22 +5791,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2
+        "monitor_last_pass_min": 7
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 933
+        "monitor_last_pass_min": 938
       }
     ]
   },
-  "snapshot_id": "378fa61b7bde98c7",
-  "published_at": "2026-09-05T15:26:57Z"
+  "snapshot_id": "b18d90daa2160453",
+  "published_at": "2026-09-05T15:32:15Z"
 }
