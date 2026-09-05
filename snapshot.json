@@ -87,9 +87,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 283,
+        "projected": 277,
         "used": 48,
-        "at": 1788611631,
+        "at": 1788613663,
         "reset": "02:03 on 11 Sep",
         "spark": [
           [
@@ -227,6 +227,10 @@
           [
             1788609600,
             286
+          ],
+          [
+            1788613200,
+            277
           ]
         ],
         "trail": [
@@ -572,8 +576,8 @@
         "label": "B",
         "mult": "20x",
         "projected": null,
-        "used": 8,
-        "at": 1788611631,
+        "used": 9,
+        "at": 1788613663,
         "reset": "Sep 11, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -859,17 +863,21 @@
             7.0
           ],
           [
-            5.4,
+            5.0,
             7.0
+          ],
+          [
+            5.4,
+            9.0
           ]
         ]
       }
     ],
     "glm": {
       "target": 100,
-      "projected": 39,
+      "projected": 38,
       "used": 8,
-      "at": 1788611631,
+      "at": 1788613663,
       "reset": "Sep 10, 19:39",
       "level": "pro",
       "spark": [
@@ -1348,6 +1356,10 @@
         [
           1788609600,
           39
+        ],
+        [
+          1788613200,
+          38
         ]
       ],
       "trail": [
@@ -1468,6 +1480,10 @@
           8.0
         ],
         [
+          21.0,
+          8.0
+        ],
+        [
           21.1,
           8.0
         ]
@@ -1477,9 +1493,9 @@
       "balance": 9.5,
       "currency": "USD",
       "available": true,
-      "burn_per_day": null,
+      "burn_per_day": 0.0,
       "days_to_empty": null,
-      "at": 1788611631,
+      "at": 1788613663,
       "spark": [
         [
           1788044400,
@@ -2019,6 +2035,10 @@
         ],
         [
           1788609600,
+          9.5
+        ],
+        [
+          1788613200,
           9.5
         ]
       ]
@@ -2650,6 +2670,10 @@
           ],
           [
             1788610436,
+            48.0
+          ],
+          [
+            1788613663,
             48.0
           ]
         ]
@@ -3741,6 +3765,10 @@
           [
             1788610436,
             7.0
+          ],
+          [
+            1788613663,
+            9.0
           ]
         ]
       },
@@ -4456,6 +4484,10 @@
         [
           1788610436,
           8.0
+        ],
+        [
+          1788613663,
+          8.0
         ]
       ]
     }
@@ -4464,14 +4496,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "SCAN-ENGINE",
-            "kind": "escalate",
-            "raised_at": 1788616974
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4502,17 +4528,78 @@
         {
           "id": "SCAN-ENGINE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 33,
-          "last_commit_at": 1788616802,
-          "head": "5d052b1",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 36,
+          "last_commit_at": 1788617128,
+          "head": "d374495",
           "subfence": {
             "done": 12,
             "total": 12
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "codex gpt-5.6-solxhigh SEED never conver",
+              "must": 18,
+              "should": 3,
+              "could": 1,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "glm-5.3 iterate find",
+              "must": 2,
+              "should": 5,
+              "could": 1,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "codex gpt-5.6-terraxhigh DECLARER",
+              "must": 2,
+              "should": 0,
+              "could": 1,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "codex gpt-5.6-terraxhigh DECLARER re-con",
+              "must": 2,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "codex gpt-5.6-terraxhigh DECLARER fresh ",
+              "must": 3,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 6,
+              "seats": "codex gpt-5.6-terraxhigh DECLARER fresh ",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 1,
+              "seats": "claude-sonnet-5 swarm-4 breadth never co",
+              "must": 0,
+              "should": 8,
+              "could": 4,
+              "nit": 4
+            }
+          ],
           "commits": [
+            {
+              "sha": "d374495",
+              "at": 1788617128
+            },
             {
               "sha": "5d052b1",
               "at": 1788616802
@@ -4528,10 +4615,6 @@
             {
               "sha": "1c9972c",
               "at": 1788561156
-            },
-            {
-              "sha": "25608d3",
-              "at": 1788559606
             }
           ],
           "fences": {
@@ -4540,7 +4623,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -4774,7 +4857,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 283,
+              "proj": 277,
               "target": 100,
               "used": 48,
               "day": 2,
@@ -4783,7 +4866,7 @@
             },
             "glm": {
               "verdict": "UNDERBURN",
-              "proj": 39,
+              "proj": 38,
               "target": 100,
               "used": 8,
               "day": 2,
@@ -4794,13 +4877,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 8,
+              "used": 9,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-05T13:33:53Z",
+          "updated": "2026-09-05T14:07:57Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4816,7 +4899,7 @@
           ]
         }
       },
-      "snapshot_id": "3b58112bcf428292"
+      "snapshot_id": "0e575fb13742818a"
     },
     "outbound": {
       "schema": 1,
@@ -5360,7 +5443,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 283,
+              "proj": 277,
               "target": 100,
               "used": 48,
               "day": 2,
@@ -5369,7 +5452,7 @@
             },
             "glm": {
               "verdict": "UNDERBURN",
-              "proj": 39,
+              "proj": 38,
               "target": 100,
               "used": 8,
               "day": 2,
@@ -5380,13 +5463,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 8,
+              "used": 9,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-05T13:33:53Z",
+          "updated": "2026-09-05T14:07:57Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5402,7 +5485,7 @@
           ]
         }
       },
-      "snapshot_id": "8bdfff92cb601a51"
+      "snapshot_id": "57e8e0ccbf1328f7"
     },
     "scriptgen": {
       "schema": 1,
@@ -5667,7 +5750,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 283,
+              "proj": 277,
               "target": 100,
               "used": 48,
               "day": 2,
@@ -5676,7 +5759,7 @@
             },
             "glm": {
               "verdict": "UNDERBURN",
-              "proj": 39,
+              "proj": 38,
               "target": 100,
               "used": 8,
               "day": 2,
@@ -5687,13 +5770,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 8,
+              "used": 9,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-05T13:33:53Z",
+          "updated": "2026-09-05T14:07:57Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5709,7 +5792,7 @@
           ]
         }
       },
-      "snapshot_id": "2b6e3f50b71b998a"
+      "snapshot_id": "d75169bf4c50ff7d"
     }
   },
   "pm": {
@@ -5722,7 +5805,7 @@
       "note": "owner asleep from 2026-09-05 ~06:10 PDT: OUTBOUND parallel 1 (MERGE-ERASURE resumed, fresh spawn = first live test of read-bound hook + KNOWN/EARLY/BLIND brake). NO auto (L2.5): interviews TRANSLATE+PARK, picks stay parked, gates hold+ring ladder. fm/sg fully parked. Do NOT raise parallel — heavy-A1 unit ≈41-73 codex pts/wk (CODEX_BURN_PER_UNIT.md). 5 brake-fix owner rulings still open."
     },
     "pm_session": {
-      "lock": "1470782 2026-09-05T12:55:36Z",
+      "lock": "1701095 2026-09-05T14:07:10Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -5731,22 +5814,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 17
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 849
+        "monitor_last_pass_min": 854
       }
     ]
   },
-  "snapshot_id": "dd614f83c6ee257e",
-  "published_at": "2026-09-05T14:03:02Z"
+  "snapshot_id": "59056f08ab3af501",
+  "published_at": "2026-09-05T14:08:16Z"
 }
