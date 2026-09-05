@@ -78,7 +78,7 @@
             74.0
           ],
           [
-            68.7,
+            68.8,
             76.0
           ]
         ]
@@ -87,9 +87,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 228,
+        "projected": 224,
         "used": 49,
-        "at": 1788639212,
+        "at": 1788641455,
         "reset": "02:03 on 11 Sep",
         "spark": [
           [
@@ -602,7 +602,7 @@
             61.0
           ],
           [
-            73.7,
+            73.8,
             63.0
           ]
         ]
@@ -613,8 +613,8 @@
         "mult": "20x",
         "projected": null,
         "used": 10,
-        "at": 1788639212,
-        "reset": "Sep 11, 9:59pm (America/Los_Angeles)",
+        "at": 1788641455,
+        "reset": "Sep 11, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1788080400,
@@ -931,7 +931,7 @@
             10.0
           ],
           [
-            10.0,
+            10.1,
             10.0
           ]
         ]
@@ -939,9 +939,9 @@
     ],
     "glm": {
       "target": 100,
-      "projected": 32,
+      "projected": 31,
       "used": 8,
-      "at": 1788639212,
+      "at": 1788641455,
       "reset": "Sep 10, 19:39",
       "level": "pro",
       "spark": [
@@ -1604,7 +1604,7 @@
           8.0
         ],
         [
-          25.7,
+          25.8,
           8.0
         ]
       ]
@@ -1615,7 +1615,7 @@
       "available": true,
       "burn_per_day": 0.0,
       "days_to_empty": null,
-      "at": 1788639212,
+      "at": 1788641455,
       "spark": [
         [
           1788044400,
@@ -4731,7 +4731,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788643492
+        "last_pass_at": 1788645292
       },
       "runstate": {
         "auto": false,
@@ -4986,7 +4986,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 268,
+              "proj": 224,
               "target": 100,
               "used": 49,
               "day": 2,
@@ -4995,7 +4995,7 @@
             },
             "glm": {
               "verdict": "UNDERBURN",
-              "proj": 36,
+              "proj": 31,
               "target": 100,
               "used": 8,
               "day": 2,
@@ -5012,7 +5012,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-05T15:47:53Z",
+          "updated": "2026-09-05T21:50:58Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5028,7 +5028,7 @@
           ]
         }
       },
-      "snapshot_id": "3611f06c31910a6d"
+      "snapshot_id": "27c53190519c57ce"
     },
     "outbound": {
       "schema": 1,
@@ -5572,7 +5572,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 268,
+              "proj": 224,
               "target": 100,
               "used": 49,
               "day": 2,
@@ -5581,7 +5581,7 @@
             },
             "glm": {
               "verdict": "UNDERBURN",
-              "proj": 36,
+              "proj": 31,
               "target": 100,
               "used": 8,
               "day": 2,
@@ -5598,7 +5598,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-05T15:47:53Z",
+          "updated": "2026-09-05T21:50:58Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5614,7 +5614,7 @@
           ]
         }
       },
-      "snapshot_id": "bd536f441df6075d"
+      "snapshot_id": "43dc43eda7ba77f3"
     },
     "scriptgen": {
       "schema": 1,
@@ -5879,7 +5879,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 268,
+              "proj": 224,
               "target": 100,
               "used": 49,
               "day": 2,
@@ -5888,7 +5888,7 @@
             },
             "glm": {
               "verdict": "UNDERBURN",
-              "proj": 36,
+              "proj": 31,
               "target": 100,
               "used": 8,
               "day": 2,
@@ -5905,7 +5905,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-05T15:47:53Z",
+          "updated": "2026-09-05T21:50:58Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5921,17 +5921,17 @@
           ]
         }
       },
-      "snapshot_id": "e2c59fe0ebb2c1a4"
+      "snapshot_id": "9054e8dfa3fdfc86"
     }
   },
   "pm": {
     "attendance": {
-      "mode": "unattended",
+      "mode": "attended",
       "fleets": {},
-      "updated": "2026-09-05T13:11:17Z",
-      "by": "pm-owner-sleep-resume-p1",
+      "updated": "2026-09-05T21:50:20Z",
+      "by": "pm-signon-owner-awake",
       "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode.",
-      "note": "owner asleep from 2026-09-05 ~06:10 PDT: OUTBOUND parallel 1 (MERGE-ERASURE resumed, fresh spawn = first live test of read-bound hook + KNOWN/EARLY/BLIND brake). NO auto (L2.5): interviews TRANSLATE+PARK, picks stay parked, gates hold+ring ladder. fm/sg fully parked. Do NOT raise parallel — heavy-A1 unit ≈41-73 codex pts/wk (CODEX_BURN_PER_UNIT.md). 5 brake-fix owner rulings still open."
+      "note": "owner awake 2026-09-05 14:45 PDT. outbound MERGE-ERASURE resumed at parallel 1 (owner order). L2.5, no auto. fm/sg parked. Codex conservation still in force (49% used, resets Sep 11)."
     },
     "pm_session": {
       "lock": "2908701 2026-09-05T21:41:34Z",
@@ -5943,22 +5943,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 9
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1316
+        "monitor_last_pass_min": 1322
       }
     ]
   },
-  "snapshot_id": "7b6d89eeb3aeb172",
-  "published_at": "2026-09-05T21:50:11Z"
+  "snapshot_id": "992940d4fd829180",
+  "published_at": "2026-09-05T21:55:26Z"
 }
