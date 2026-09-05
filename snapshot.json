@@ -235,7 +235,7 @@
         ],
         "trail": [
           [
-            17.7,
+            17.8,
             0.0
           ]
         ]
@@ -1484,7 +1484,7 @@
           8.0
         ],
         [
-          21.5,
+          21.6,
           8.0
         ]
       ]
@@ -4496,14 +4496,20 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "SCAN-ENGINE",
+            "kind": "escalate",
+            "raised_at": 1788620066
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788618290
+        "last_pass_at": 1788620090
       },
       "runstate": {
         "auto": false,
@@ -4528,74 +4534,21 @@
         {
           "id": "SCAN-ENGINE",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 43,
-          "last_commit_at": 1788618136,
-          "head": "cd1ef9a",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 47,
+          "last_commit_at": 1788619987,
+          "head": "7bf15e8",
           "subfence": {
             "done": 12,
             "total": 12
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "codex gpt-5.6-solxhigh SEED never conver",
-              "must": 18,
-              "should": 3,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "glm-5.3 iterate find",
-              "must": 2,
-              "should": 5,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "codex gpt-5.6-terraxhigh DECLARER",
-              "must": 2,
-              "should": 0,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "codex gpt-5.6-terraxhigh DECLARER re-con",
-              "must": 2,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "codex gpt-5.6-terraxhigh DECLARER fresh ",
-              "must": 3,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "codex gpt-5.6-terraxhigh DECLARER fresh ",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 1,
-              "seats": "claude-sonnet-5 swarm-4 breadth never co",
-              "must": 0,
-              "should": 8,
-              "could": 4,
-              "nit": 4
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "7bf15e8",
+              "at": 1788619987
+            },
             {
               "sha": "cd1ef9a",
               "at": 1788618136
@@ -4611,10 +4564,6 @@
             {
               "sha": "5d052b1",
               "at": 1788616802
-            },
-            {
-              "sha": "9f888b1",
-              "at": 1788565456
             }
           ],
           "fences": {
@@ -4623,7 +4572,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4899,7 +4848,7 @@
           ]
         }
       },
-      "snapshot_id": "f7950b2332500eaf"
+      "snapshot_id": "37f4b3c496671605"
     },
     "outbound": {
       "schema": 1,
@@ -5485,7 +5434,7 @@
           ]
         }
       },
-      "snapshot_id": "45d6ae4b29937be7"
+      "snapshot_id": "374a7f86d67a4d2b"
     },
     "scriptgen": {
       "schema": 1,
@@ -5792,7 +5741,7 @@
           ]
         }
       },
-      "snapshot_id": "62a6b3df3a9b5eaf"
+      "snapshot_id": "e53b38920236919c"
     }
   },
   "pm": {
@@ -5814,22 +5763,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 5
+        "monitor_last_pass_min": 10
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 896
+        "monitor_last_pass_min": 902
       }
     ]
   },
-  "snapshot_id": "c27a51803b487e8c",
-  "published_at": "2026-09-05T14:50:16Z"
+  "snapshot_id": "b62676d4bc4c6795",
+  "published_at": "2026-09-05T14:55:34Z"
 }
