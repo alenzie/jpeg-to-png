@@ -323,7 +323,7 @@
             58.0
           ],
           [
-            25.9,
+            26.0,
             59.0
           ]
         ]
@@ -654,7 +654,7 @@
             61.0
           ],
           [
-            77.7,
+            77.8,
             63.0
           ]
         ]
@@ -1732,7 +1732,7 @@
           12.0
         ],
         [
-          29.7,
+          29.8,
           12.0
         ]
       ]
@@ -2505,7 +2505,7 @@
             0.0
           ],
           [
-            1788064804,
+            1788065200,
             0.0
           ],
           [
@@ -4330,7 +4330,7 @@
           0.0
         ],
         [
-          1788064804,
+          1788065200,
           2.0
         ],
         [
@@ -5220,7 +5220,7 @@
           ]
         }
       },
-      "snapshot_id": "34077a4a241591cd"
+      "snapshot_id": "0caf745da3320414"
     },
     "outbound": {
       "schema": 1,
@@ -5814,13 +5814,19 @@
           ]
         }
       },
-      "snapshot_id": "900fcf0bc5c6b432"
+      "snapshot_id": "2bb0d7005af8a7e8"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CAL-SHELL",
+            "kind": "needs-owner",
+            "raised_at": 1788669557
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5851,17 +5857,21 @@
         {
           "id": "CAL-SHELL",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 30,
-          "last_commit_at": 1788669237,
-          "head": "785c1d2",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 32,
+          "last_commit_at": 1788669510,
+          "head": "1083625",
           "subfence": {
             "done": 3,
             "total": 12
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "1083625",
+              "at": 1788669510
+            },
             {
               "sha": "785c1d2",
               "at": 1788669237
@@ -5877,10 +5887,6 @@
             {
               "sha": "553696f",
               "at": 1788666008
-            },
-            {
-              "sha": "3c19c41",
-              "at": 1788665839
             }
           ],
           "fences": {
@@ -5889,7 +5895,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [],
@@ -6163,7 +6169,7 @@
           ]
         }
       },
-      "snapshot_id": "56b53e01da1393db"
+      "snapshot_id": "4842a89a1d13bb05"
     }
   },
   "pm": {
@@ -6185,22 +6191,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 19
+        "monitor_last_pass_min": 24
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 15
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3
+        "monitor_last_pass_min": 9
       }
     ]
   },
-  "snapshot_id": "4ea66ce1cfecaf07",
-  "published_at": "2026-09-06T04:35:32Z"
+  "snapshot_id": "dd8dfbf9c8eb32bf",
+  "published_at": "2026-09-06T04:40:47Z"
 }
