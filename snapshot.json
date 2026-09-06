@@ -78,7 +78,7 @@
             74.0
           ],
           [
-            82.4,
+            82.5,
             76.0
           ]
         ]
@@ -1059,7 +1059,7 @@
             35.0
           ],
           [
-            23.7,
+            23.8,
             37.0
           ]
         ]
@@ -2609,7 +2609,7 @@
             0.0
           ],
           [
-            1788123167,
+            1788123513,
             0.0
           ],
           [
@@ -3113,8 +3113,8 @@
       "claude": {
         "A": [
           [
-            1784839791,
-            67.0
+            1784840147,
+            68.0
           ],
           [
             1784851656,
@@ -3935,7 +3935,7 @@
             29.0
           ],
           [
-            1788123167,
+            1788123513,
             37.0
           ],
           [
@@ -4462,7 +4462,7 @@
           10.0
         ],
         [
-          1788123167,
+          1788123513,
           12.0
         ],
         [
@@ -5247,7 +5247,7 @@
           },
           {
             "role": "plan_scrutiny.confirm",
-            "model": "gpt-5.6-terra",
+            "model": "claude-fable-5-1",
             "effort": "xhigh"
           },
           {
@@ -5268,7 +5268,7 @@
           },
           {
             "role": "build.checkpoint_confirm",
-            "model": "gpt-5.6-terra",
+            "model": "claude-fable-5-1",
             "effort": "xhigh"
           },
           {
@@ -5293,7 +5293,7 @@
           },
           {
             "role": "p4.confirm",
-            "model": "gpt-5.6-terra",
+            "model": "claude-fable-5-1",
             "effort": "xhigh"
           },
           {
@@ -5396,7 +5396,7 @@
           ]
         }
       },
-      "snapshot_id": "98b22e3a0f51d735"
+      "snapshot_id": "cefbc98f0c1ed317"
     },
     "outbound": {
       "schema": 1,
@@ -5792,7 +5792,7 @@
           },
           {
             "role": "plan_scrutiny.confirm",
-            "model": "gpt-5.6-terra",
+            "model": "claude-fable-5-1",
             "effort": "xhigh"
           },
           {
@@ -5813,7 +5813,7 @@
           },
           {
             "role": "build.checkpoint_confirm",
-            "model": "gpt-5.6-terra",
+            "model": "claude-fable-5-1",
             "effort": "xhigh"
           },
           {
@@ -5838,7 +5838,7 @@
           },
           {
             "role": "p4.confirm",
-            "model": "gpt-5.6-terra",
+            "model": "claude-fable-5-1",
             "effort": "xhigh"
           },
           {
@@ -5941,19 +5941,13 @@
           ]
         }
       },
-      "snapshot_id": "17cad1b61166bbdd"
+      "snapshot_id": "a351f305ea80b3ca"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CAL-SHELL",
-            "kind": "escalate",
-            "raised_at": 1788727680
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5984,16 +5978,25 @@
         {
           "id": "CAL-SHELL",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 39,
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 41,
           "last_commit_at": 1788727701,
           "head": "bf97e79",
           "subfence": {
             "done": 12,
             "total": 12
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "glm-5.3 swarm-4 breadth",
+              "must": 0,
+              "should": 2,
+              "could": 14,
+              "nit": 0
+            }
+          ],
           "commits": [
             {
               "sha": "bf97e79",
@@ -6022,7 +6025,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [],
@@ -6147,7 +6150,7 @@
           },
           {
             "role": "plan_scrutiny.confirm",
-            "model": "gpt-5.6-terra",
+            "model": "claude-fable-5-1",
             "effort": "xhigh"
           },
           {
@@ -6168,7 +6171,7 @@
           },
           {
             "role": "build.checkpoint_confirm",
-            "model": "gpt-5.6-terra",
+            "model": "claude-fable-5-1",
             "effort": "xhigh"
           },
           {
@@ -6193,7 +6196,7 @@
           },
           {
             "role": "p4.confirm",
-            "model": "gpt-5.6-terra",
+            "model": "claude-fable-5-1",
             "effort": "xhigh"
           },
           {
@@ -6296,7 +6299,7 @@
           ]
         }
       },
-      "snapshot_id": "502c4c620cb7fe28"
+      "snapshot_id": "b37e96f367b8272f"
     }
   },
   "pm": {
@@ -6318,22 +6321,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6
+        "monitor_last_pass_min": 11
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6
+        "monitor_last_pass_min": 11
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6
+        "monitor_last_pass_min": 11
       }
     ]
   },
-  "snapshot_id": "617d218e6069c959",
-  "published_at": "2026-09-06T20:49:43Z"
+  "snapshot_id": "c92a7a3901d551bb",
+  "published_at": "2026-09-06T20:54:58Z"
 }
