@@ -89,7 +89,7 @@
         "tier": "Pro",
         "projected": 190,
         "used": 68,
-        "at": 1788725065,
+        "at": 1788725350,
         "reset": "02:03 on 11 Sep",
         "spark": [
           [
@@ -439,7 +439,7 @@
             67.0
           ],
           [
-            35.7,
+            35.8,
             68.0
           ]
         ]
@@ -452,7 +452,7 @@
         "mult": "20x",
         "projected": 49,
         "used": 43,
-        "at": 1788725065,
+        "at": 1788725350,
         "reset": "Sep 7, 10:59am (America/Los_Angeles)",
         "spark": [
           [
@@ -1077,7 +1077,7 @@
       "target": 100,
       "projected": 43,
       "used": 17,
-      "at": 1788725065,
+      "at": 1788725350,
       "reset": "Sep 10, 19:39",
       "level": "pro",
       "spark": [
@@ -1836,7 +1836,7 @@
           17.0
         ],
         [
-          39.5,
+          39.6,
           17.0
         ]
       ]
@@ -1847,7 +1847,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788725065,
+      "at": 1788725350,
       "spark": [
         [
           1788123600,
@@ -2621,7 +2621,7 @@
             0.0
           ],
           [
-            1788124090,
+            1788124638,
             0.0
           ],
           [
@@ -3125,8 +3125,8 @@
       "claude": {
         "A": [
           [
-            1784840862,
-            70.0
+            1784842159,
+            74.0
           ],
           [
             1784851656,
@@ -3951,7 +3951,7 @@
             29.0
           ],
           [
-            1788124090,
+            1788124638,
             38.0
           ],
           [
@@ -4474,7 +4474,7 @@
           10.0
         ],
         [
-          1788124090,
+          1788124638,
           13.0
         ],
         [
@@ -5094,15 +5094,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 37,
-          "last_commit_at": 1788728634,
-          "head": "9da6d09",
+          "ctx_pct": 10,
+          "last_commit_at": 1788728802,
+          "head": "eac1730",
           "subfence": {
             "done": 8,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "eac1730",
+              "at": 1788728802
+            },
             {
               "sha": "9da6d09",
               "at": 1788728634
@@ -5118,10 +5122,6 @@
             {
               "sha": "38659f5",
               "at": 1788726378
-            },
-            {
-              "sha": "ca9c5e0",
-              "at": 1788726179
             }
           ],
           "fences": {
@@ -5392,7 +5392,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-06T21:04:26Z",
+          "updated": "2026-09-06T21:07:27Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5408,7 +5408,7 @@
           ]
         }
       },
-      "snapshot_id": "ae113d07dc95b903"
+      "snapshot_id": "ccb3f103e9f2c2e5"
     },
     "outbound": {
       "schema": 1,
@@ -5937,7 +5937,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-06T21:04:26Z",
+          "updated": "2026-09-06T21:07:27Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5953,13 +5953,19 @@
           ]
         }
       },
-      "snapshot_id": "ed982ee8dbf3734a"
+      "snapshot_id": "b18062e3419779a0"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CAL-SHELL",
+            "kind": "escalate",
+            "raised_at": 1788728947
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5990,26 +5996,21 @@
         {
           "id": "CAL-SHELL",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 45,
-          "last_commit_at": 1788728112,
-          "head": "637b8e8",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 47,
+          "last_commit_at": 1788729020,
+          "head": "3faabf2",
           "subfence": {
             "done": 12,
             "total": 12
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "glm-5.3 swarm-4 breadth",
-              "must": 0,
-              "should": 2,
-              "could": 14,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "3faabf2",
+              "at": 1788729020
+            },
             {
               "sha": "637b8e8",
               "at": 1788728112
@@ -6025,10 +6026,6 @@
             {
               "sha": "0e6046a",
               "at": 1788727283
-            },
-            {
-              "sha": "b16b901",
-              "at": 1788727162
             }
           ],
           "fences": {
@@ -6037,7 +6034,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [],
@@ -6295,7 +6292,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-06T21:04:26Z",
+          "updated": "2026-09-06T21:07:27Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6311,7 +6308,7 @@
           ]
         }
       },
-      "snapshot_id": "ad8f299f4194c7bc"
+      "snapshot_id": "1d98013d76d1d08f"
     }
   },
   "pm": {
@@ -6324,7 +6321,7 @@
       "note": "owner awake 2026-09-05 14:45 PDT. outbound MERGE-ERASURE resumed at parallel 1 (owner order). L2.5, no auto. fm/sg parked. Codex conservation still in force (49% used, resets Sep 11)."
     },
     "pm_session": {
-      "lock": "142518 2026-09-06T20:08:50Z",
+      "lock": "402742 2026-09-06T21:08:51Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -6333,22 +6330,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 27
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 27
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 27
       }
     ]
   },
-  "snapshot_id": "978d8e767a4979ac",
-  "published_at": "2026-09-06T21:05:29Z"
+  "snapshot_id": "4641d93fc391a6ad",
+  "published_at": "2026-09-06T21:10:45Z"
 }
