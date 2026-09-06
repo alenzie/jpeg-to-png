@@ -78,7 +78,7 @@
             74.0
           ],
           [
-            74.4,
+            74.5,
             76.0
           ]
         ]
@@ -670,7 +670,7 @@
             61.0
           ],
           [
-            79.4,
+            79.5,
             63.0
           ]
         ]
@@ -1055,7 +1055,7 @@
             31.0
           ],
           [
-            15.7,
+            15.8,
             31.0
           ]
         ]
@@ -2541,7 +2541,7 @@
             0.0
           ],
           [
-            1788074841,
+            1788075254,
             0.0
           ],
           [
@@ -4366,7 +4366,7 @@
           2.0
         ],
         [
-          1788074841,
+          1788075254,
           3.0
         ],
         [
@@ -4955,7 +4955,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788677695
+        "last_pass_at": 1788679495
       },
       "runstate": {
         "auto": false,
@@ -5252,7 +5252,7 @@
           ]
         }
       },
-      "snapshot_id": "b9c790205bc1fe28"
+      "snapshot_id": "d253d018a3c272c5"
     },
     "outbound": {
       "schema": 1,
@@ -5846,19 +5846,13 @@
           ]
         }
       },
-      "snapshot_id": "0ed9c6cc5e57075c"
+      "snapshot_id": "4064c2aa95927d50"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CAL-SHELL",
-            "kind": "needs-owner",
-            "raised_at": 1788669557
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5889,17 +5883,21 @@
         {
           "id": "CAL-SHELL",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "subfencing",
+          "stage_i": 4,
           "ctx_pct": 32,
-          "last_commit_at": 1788669510,
-          "head": "1083625",
+          "last_commit_at": 1788679732,
+          "head": "36bad08",
           "subfence": {
             "done": 3,
             "total": 12
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "36bad08",
+              "at": 1788679732
+            },
             {
               "sha": "1083625",
               "at": 1788669510
@@ -5915,10 +5913,6 @@
             {
               "sha": "b78c409",
               "at": 1788667014
-            },
-            {
-              "sha": "553696f",
-              "at": 1788666008
             }
           ],
           "fences": {
@@ -5927,7 +5921,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [],
@@ -6201,7 +6195,7 @@
           ]
         }
       },
-      "snapshot_id": "7987caf373d1fe06"
+      "snapshot_id": "82e3ae94d0d1578d"
     }
   },
   "pm": {
@@ -6223,22 +6217,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 27
       }
     ]
   },
-  "snapshot_id": "bcf83bbf0b645f4a",
-  "published_at": "2026-09-06T07:23:54Z"
+  "snapshot_id": "a8b6a806700150c2",
+  "published_at": "2026-09-06T07:29:09Z"
 }
