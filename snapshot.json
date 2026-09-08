@@ -16,52 +16,7 @@
             598
           ]
         ],
-        "trail": [
-          [
-            4.0,
-            65.0
-          ],
-          [
-            5.0,
-            66.0
-          ],
-          [
-            5.0,
-            67.0
-          ],
-          [
-            6.0,
-            72.0
-          ],
-          [
-            6.0,
-            73.0
-          ],
-          [
-            7.0,
-            73.0
-          ],
-          [
-            8.0,
-            74.0
-          ],
-          [
-            9.0,
-            74.0
-          ],
-          [
-            9.0,
-            74.0
-          ],
-          [
-            12.0,
-            74.0
-          ],
-          [
-            100.0,
-            76.0
-          ]
-        ]
+        "trail": []
       },
       {
         "target": 100,
@@ -439,7 +394,7 @@
             6.0
           ],
           [
-            3.3,
+            3.4,
             7.0
           ]
         ]
@@ -786,7 +741,7 @@
             11.0
           ],
           [
-            7.7,
+            7.8,
             11.0
           ]
         ]
@@ -1051,7 +1006,7 @@
             35.0
           ],
           [
-            44.0,
+            44.1,
             37.0
           ]
         ]
@@ -1952,7 +1907,7 @@
           26.0
         ],
         [
-          59.7,
+          59.8,
           28.0
         ]
       ]
@@ -5236,8 +5191,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "BM-ELASTIC-GRID",
+            "kind": "escalate",
+            "raised_at": 1788850747
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5268,9 +5229,9 @@
         {
           "id": "BM-ELASTIC-GRID",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 25,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 26,
           "last_commit_at": 1788849259,
           "head": "56662a2",
           "subfence": {
@@ -5306,7 +5267,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -5584,7 +5545,7 @@
           ]
         }
       },
-      "snapshot_id": "58996caedcda2f19"
+      "snapshot_id": "e11d792226b97ab3"
     },
     "outbound": {
       "schema": 1,
@@ -6087,7 +6048,7 @@
           ]
         }
       },
-      "snapshot_id": "19d6c3285076c957"
+      "snapshot_id": "05c6bee40fba5f39"
     },
     "scriptgen": {
       "schema": 1,
@@ -6423,7 +6384,7 @@
           ]
         }
       },
-      "snapshot_id": "2bbd64ccaa9f87f5"
+      "snapshot_id": "50174c658c8bb247"
     }
   },
   "pm": {
@@ -6445,22 +6406,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 15
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       }
     ]
   },
-  "snapshot_id": "e0c010d153c96007",
-  "published_at": "2026-09-08T06:58:00Z"
+  "snapshot_id": "855f8636203fa01a",
+  "published_at": "2026-09-08T07:03:17Z"
 }
