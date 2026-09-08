@@ -24,7 +24,7 @@
         "tier": "Pro",
         "projected": null,
         "used": 10,
-        "at": 1788852967,
+        "at": 1788855532,
         "reset": "18:24 on 14 Sep",
         "spark": [
           [
@@ -402,6 +402,10 @@
             10.0
           ],
           [
+            4.0,
+            10.0
+          ],
+          [
             4.7,
             10.0
           ]
@@ -414,8 +418,8 @@
         "label": "A",
         "mult": "20x",
         "projected": null,
-        "used": 12,
-        "at": 1788852967,
+        "used": 13,
+        "at": 1788855532,
         "reset": "Sep 14, 11am (America/Los_Angeles)",
         "spark": [
           [
@@ -757,8 +761,12 @@
             12.0
           ],
           [
-            9.1,
+            9.0,
             12.0
+          ],
+          [
+            9.1,
+            13.0
           ]
         ]
       },
@@ -1022,7 +1030,7 @@
             35.0
           ],
           [
-            45.4,
+            45.5,
             37.0
           ]
         ]
@@ -1032,7 +1040,7 @@
       "target": 100,
       "projected": 51,
       "used": 31,
-      "at": 1788852967,
+      "at": 1788855532,
       "reset": "Sep 10, 19:39",
       "level": "pro",
       "spark": [
@@ -1555,6 +1563,10 @@
         [
           1788850800,
           51
+        ],
+        [
+          1788854400,
+          51
         ]
       ],
       "trail": [
@@ -1935,6 +1947,10 @@
           31.0
         ],
         [
+          61.0,
+          31.0
+        ],
+        [
           61.1,
           31.0
         ]
@@ -1944,9 +1960,9 @@
       "balance": 9.5,
       "currency": "USD",
       "available": true,
-      "burn_per_day": 0.0,
+      "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788852967,
+      "at": 1788855532,
       "spark": [
         [
           1788253200,
@@ -2530,6 +2546,10 @@
         ],
         [
           1788850800,
+          9.5
+        ],
+        [
+          1788854400,
           9.5
         ]
       ]
@@ -3258,6 +3278,10 @@
           [
             1788852967,
             10.0
+          ],
+          [
+            1788855483,
+            10.0
           ]
         ]
       },
@@ -3910,12 +3934,16 @@
           [
             1788852967,
             12.0
+          ],
+          [
+            1788855483,
+            13.0
           ]
         ],
         "B": [
           [
-            1784970969,
-            6.0
+            1784976368,
+            7.0
           ],
           [
             1784997119,
@@ -5239,6 +5267,10 @@
         [
           1788852967,
           31.0
+        ],
+        [
+          1788855483,
+          31.0
         ]
       ]
     }
@@ -5247,20 +5279,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "BM-ELASTIC-GRID",
-            "kind": "escalate",
-            "raised_at": 1788850747
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788857208
+        "last_pass_at": 1788859008
       },
       "runstate": {
         "auto": false,
@@ -5285,9 +5311,9 @@
         {
           "id": "BM-ELASTIC-GRID",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 27,
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 31,
           "last_commit_at": 1788849259,
           "head": "56662a2",
           "subfence": {
@@ -5323,7 +5349,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -5579,13 +5605,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 12,
+              "used": 13,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-08T08:36:10Z",
+          "updated": "2026-09-08T09:18:05Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5601,7 +5627,7 @@
           ]
         }
       },
-      "snapshot_id": "a6061543e164f16c"
+      "snapshot_id": "d5eeea998ae9147a"
     },
     "outbound": {
       "schema": 1,
@@ -5613,7 +5639,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788857245
+        "last_pass_at": 1788859046
       },
       "runstate": {
         "auto": false,
@@ -6082,13 +6108,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 12,
+              "used": 13,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-08T08:36:10Z",
+          "updated": "2026-09-08T09:18:05Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6104,25 +6130,19 @@
           ]
         }
       },
-      "snapshot_id": "3b7c87eb777effd0"
+      "snapshot_id": "160dfd0c8360ef8a"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CAL-SHELL",
-            "kind": "escalate",
-            "raised_at": 1788847757
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788857208
+        "last_pass_at": 1788859008
       },
       "runstate": {
         "auto": false,
@@ -6143,30 +6163,7 @@
           "up": true
         }
       },
-      "units": [
-        {
-          "id": "CAL-SHELL",
-          "status": "done",
-          "stage": "done",
-          "stage_i": 7,
-          "ctx_pct": 15,
-          "last_commit_at": null,
-          "head": null,
-          "subfence": {
-            "done": 12,
-            "total": 12
-          },
-          "review_rounds": [],
-          "commits": [],
-          "fences": {
-            "plan": true,
-            "synth": true,
-            "build": true,
-            "review": true
-          },
-          "gate_open": true
-        }
-      ],
+      "units": [],
       "eligible": [
         "CAL-INTERVIEW-UI"
       ],
@@ -6418,13 +6415,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 12,
+              "used": 13,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-08T08:36:10Z",
+          "updated": "2026-09-08T09:18:05Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6440,7 +6437,7 @@
           ]
         }
       },
-      "snapshot_id": "3637f17738f941ca"
+      "snapshot_id": "f318fc9c260e2d6a"
     }
   },
   "pm": {
@@ -6453,8 +6450,8 @@
       "note": "owner awake 2026-09-05 14:45 PDT. outbound MERGE-ERASURE resumed at parallel 1 (owner order). L2.5, no auto. fm/sg parked. Codex conservation still in force (49% used, resets Sep 11)."
     },
     "pm_session": {
-      "lock": "3930859 2026-09-08T06:00:26Z",
-      "fresh": false
+      "lock": "507068 2026-09-08T09:18:35Z",
+      "fresh": true
     },
     "sterling_up": true,
     "fleets": [
@@ -6462,22 +6459,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 3
       }
     ]
   },
-  "snapshot_id": "df124a2d9e961151",
-  "published_at": "2026-09-08T09:15:24Z"
+  "snapshot_id": "327097f716cb7739",
+  "published_at": "2026-09-08T09:20:43Z"
 }
