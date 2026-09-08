@@ -77,7 +77,7 @@
         "tier": "Pro",
         "projected": null,
         "used": 4,
-        "at": 1788835821,
+        "at": 1788836453,
         "reset": "18:24 on 14 Sep",
         "spark": [
           [
@@ -435,8 +435,12 @@
             1.0
           ],
           [
-            1.5,
+            1.0,
             2.0
+          ],
+          [
+            1.6,
+            4.0
           ]
         ]
       }
@@ -448,7 +452,7 @@
         "mult": "20x",
         "projected": null,
         "used": 10,
-        "at": 1788835821,
+        "at": 1788836453,
         "reset": "Sep 14, 11am (America/Los_Angeles)",
         "spark": [
           [
@@ -770,7 +774,11 @@
             9.0
           ],
           [
-            5.9,
+            5.0,
+            10.0
+          ],
+          [
+            6.0,
             10.0
           ]
         ]
@@ -1045,7 +1053,7 @@
       "target": 100,
       "projected": 43,
       "used": 25,
-      "at": 1788835821,
+      "at": 1788836453,
       "reset": "Sep 10, 19:39",
       "level": "pro",
       "spark": [
@@ -1560,6 +1568,10 @@
         [
           1788832800,
           42
+        ],
+        [
+          1788836400,
+          43
         ]
       ],
       "trail": [
@@ -1920,8 +1932,12 @@
           23.0
         ],
         [
-          57.9,
+          57.0,
           24.0
+        ],
+        [
+          58.0,
+          25.0
         ]
       ]
     },
@@ -1931,7 +1947,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788835821,
+      "at": 1788836453,
       "spark": [
         [
           1788235200,
@@ -2507,6 +2523,10 @@
         ],
         [
           1788832800,
+          9.5
+        ],
+        [
+          1788836400,
           9.5
         ]
       ]
@@ -3223,6 +3243,10 @@
           [
             1788832847,
             2.0
+          ],
+          [
+            1788836453,
+            4.0
           ]
         ]
       },
@@ -3862,6 +3886,10 @@
           ],
           [
             1788832847,
+            10.0
+          ],
+          [
+            1788836453,
             10.0
           ]
         ],
@@ -5184,6 +5212,10 @@
         [
           1788832847,
           24.0
+        ],
+        [
+          1788836453,
+          25.0
         ]
       ]
     }
@@ -5226,7 +5258,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 15,
+          "ctx_pct": 18,
           "last_commit_at": 1788839385,
           "head": "78ac0f9",
           "subfence": {
@@ -5524,7 +5556,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-08T03:50:22Z",
+          "updated": "2026-09-08T03:59:10Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5540,7 +5572,7 @@
           ]
         }
       },
-      "snapshot_id": "f2ec28aeff6a46b4"
+      "snapshot_id": "0fe16c886bca477b"
     },
     "outbound": {
       "schema": 1,
@@ -5679,15 +5711,19 @@
           "status": "not-started",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 19,
-          "last_commit_at": 1788839189,
-          "head": "95838c2e",
+          "ctx_pct": 23,
+          "last_commit_at": 1788839901,
+          "head": "fef376af",
           "subfence": {
             "done": 10,
             "total": 12
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "fef376af",
+              "at": 1788839901
+            },
             {
               "sha": "95838c2e",
               "at": 1788839189
@@ -5703,10 +5739,6 @@
             {
               "sha": "a0db8bbb",
               "at": 1788839043
-            },
-            {
-              "sha": "2e4ea520",
-              "at": 1788838324
             }
           ],
           "fences": {
@@ -6027,7 +6059,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-08T03:50:22Z",
+          "updated": "2026-09-08T03:59:10Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6043,7 +6075,7 @@
           ]
         }
       },
-      "snapshot_id": "0e92b1866e9d8173"
+      "snapshot_id": "c1e4308672e02d83"
     },
     "scriptgen": {
       "schema": 1,
@@ -6382,7 +6414,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-08T03:50:22Z",
+          "updated": "2026-09-08T03:59:10Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6398,7 +6430,7 @@
           ]
         }
       },
-      "snapshot_id": "29af0b1797342e8c"
+      "snapshot_id": "bbad18260a77afe4"
     }
   },
   "pm": {
@@ -6411,7 +6443,7 @@
       "note": "owner awake 2026-09-05 14:45 PDT. outbound MERGE-ERASURE resumed at parallel 1 (owner order). L2.5, no auto. fm/sg parked. Codex conservation still in force (49% used, resets Sep 11)."
     },
     "pm_session": {
-      "lock": "2974397 2026-09-08T03:00:31Z",
+      "lock": "3287565 2026-09-08T04:00:34Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -6420,22 +6452,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       }
     ]
   },
-  "snapshot_id": "467d8618d216bc33",
-  "published_at": "2026-09-08T03:58:03Z"
+  "snapshot_id": "e60b5ed3b7d3937b",
+  "published_at": "2026-09-08T04:03:22Z"
 }
