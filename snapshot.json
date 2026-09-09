@@ -985,7 +985,7 @@
             51.0
           ],
           [
-            25.0,
+            25.1,
             53.0
           ]
         ]
@@ -1250,7 +1250,7 @@
             35.0
           ],
           [
-            61.3,
+            61.4,
             37.0
           ]
         ]
@@ -5661,20 +5661,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "AUTH-MINING",
-            "kind": "escalate",
-            "raised_at": 1788955103
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788953456
+        "last_pass_at": 1788955256
       },
       "runstate": {
         "auto": false,
@@ -5699,24 +5693,110 @@
         {
           "id": "AUTH-MINING",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "phase-4 review",
+          "stage_i": 5,
           "ctx_pct": 41,
-          "last_commit_at": null,
-          "head": null,
+          "last_commit_at": 1788955038,
+          "head": "7ac0257",
           "subfence": {
-            "done": 0,
-            "total": null
+            "done": 14,
+            "total": 14
           },
-          "review_rounds": [],
-          "commits": [],
+          "review_rounds": [
+            {
+              "round": 5,
+              "seats": "codex gpt-5.6-terraxhigh declarercumulat",
+              "must": 2,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 6,
+              "seats": "codex gpt-5.6-terraxhigh declarercumulat",
+              "must": 3,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 1,
+              "seats": "glm-5.3 swarm-4 find-only",
+              "must": 2,
+              "should": 2,
+              "could": 1,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "glm-5.3 C2-routed iterate",
+              "must": 0,
+              "should": 3,
+              "could": 2,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "glm-5.3 C2-routed iterate",
+              "must": 0,
+              "should": 1,
+              "could": 2,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "glm-5.3 C2-routed iterate",
+              "must": 0,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "gpt-5.6-terra cumulative declarer",
+              "must": 2,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 6,
+              "seats": "gpt-5.6-terra cumulative declarer",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            }
+          ],
+          "commits": [
+            {
+              "sha": "7ac0257",
+              "at": 1788955038
+            },
+            {
+              "sha": "c5ddbbc",
+              "at": 1788955007
+            },
+            {
+              "sha": "f026dc6",
+              "at": 1788954628
+            },
+            {
+              "sha": "164fc6e",
+              "at": 1788954584
+            },
+            {
+              "sha": "317d1df",
+              "at": 1788954051
+            }
+          ],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "BM-ELASTIC-GRID-AUDIT",
@@ -6037,7 +6117,7 @@
           ]
         }
       },
-      "snapshot_id": "fc64e97f7cf56556"
+      "snapshot_id": "6345d25047390168"
     },
     "outbound": {
       "schema": 1,
@@ -6055,7 +6135,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788953461
+        "last_pass_at": 1788955262
       },
       "runstate": {
         "auto": false,
@@ -6424,7 +6504,7 @@
           ]
         }
       },
-      "snapshot_id": "d5fedfe153ef0bbf"
+      "snapshot_id": "b872f85841bb0fba"
     },
     "scriptgen": {
       "schema": 1,
@@ -6436,7 +6516,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788953452
+        "last_pass_at": 1788955252
       },
       "runstate": {
         "auto": false,
@@ -6731,7 +6811,7 @@
           ]
         }
       },
-      "snapshot_id": "0e9c9489891d00e0"
+      "snapshot_id": "9c3558636b617d53"
     }
   },
   "pm": {
@@ -6753,22 +6833,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 4
       }
     ]
   },
-  "snapshot_id": "d6aeb2cc1e28e4a2",
-  "published_at": "2026-09-09T11:59:37Z"
+  "snapshot_id": "7f51ca93676926fd",
+  "published_at": "2026-09-09T12:04:58Z"
 }
