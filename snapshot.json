@@ -13,7 +13,7 @@
         "spark": [
           [
             1788350400,
-            256
+            255
           ],
           [
             1788354000,
@@ -518,7 +518,7 @@
             34.0
           ],
           [
-            20.9,
+            21.0,
             35.0
           ]
         ]
@@ -1001,7 +1001,7 @@
             53.0
           ],
           [
-            25.3,
+            25.4,
             55.0
           ]
         ]
@@ -1266,7 +1266,7 @@
             35.0
           ],
           [
-            61.6,
+            61.7,
             37.0
           ]
         ]
@@ -2291,7 +2291,7 @@
           59.0
         ],
         [
-          77.3,
+          77.4,
           60.0
         ]
       ]
@@ -3050,7 +3050,7 @@
             88.0
           ],
           [
-            1788352373,
+            1788353400,
             90.0
           ],
           [
@@ -3962,7 +3962,7 @@
             18.0
           ],
           [
-            1788352373,
+            1788353400,
             18.0
           ],
           [
@@ -5099,7 +5099,7 @@
           43.0
         ],
         [
-          1788352373,
+          1788353400,
           43.0
         ],
         [
@@ -5713,14 +5713,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "AUTH-MINING",
-            "kind": "escalate",
-            "raised_at": 1788956794
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5753,9 +5747,9 @@
           "status": "done",
           "stage": "done",
           "stage_i": 7,
-          "ctx_pct": 10,
-          "last_commit_at": 1788956285,
-          "head": "ec6c89b",
+          "ctx_pct": 13,
+          "last_commit_at": 1788957378,
+          "head": "2a4da49",
           "subfence": {
             "done": 14,
             "total": 14
@@ -5763,24 +5757,24 @@
           "review_rounds": [],
           "commits": [
             {
+              "sha": "2a4da49",
+              "at": 1788957378
+            },
+            {
+              "sha": "4a59e60",
+              "at": 1788956540
+            },
+            {
+              "sha": "276bc56",
+              "at": 1788956475
+            },
+            {
               "sha": "ec6c89b",
               "at": 1788956285
             },
             {
               "sha": "8b09f1a",
               "at": 1788955966
-            },
-            {
-              "sha": "def62aa",
-              "at": 1788955751
-            },
-            {
-              "sha": "7ee55c3",
-              "at": 1788955707
-            },
-            {
-              "sha": "7ac0257",
-              "at": 1788955038
             }
           ],
           "fences": {
@@ -5789,7 +5783,7 @@
             "build": true,
             "review": true
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "BM-ELASTIC-GRID-AUDIT",
@@ -6110,7 +6104,7 @@
           ]
         }
       },
-      "snapshot_id": "2df0d019eb8b7309"
+      "snapshot_id": "df5f9e96dc43799c"
     },
     "outbound": {
       "schema": 1,
@@ -6497,7 +6491,7 @@
           ]
         }
       },
-      "snapshot_id": "3c5e94002610083c"
+      "snapshot_id": "79e6bc464c50cc2b"
     },
     "scriptgen": {
       "schema": 1,
@@ -6804,7 +6798,7 @@
           ]
         }
       },
-      "snapshot_id": "0a7fa5db1cb402d1"
+      "snapshot_id": "1948e5584666f88f"
     }
   },
   "pm": {
@@ -6826,22 +6820,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 6
       }
     ]
   },
-  "snapshot_id": "7761227049300504",
-  "published_at": "2026-09-09T12:31:38Z"
+  "snapshot_id": "870bce7d2d2e29d6",
+  "published_at": "2026-09-09T12:36:58Z"
 }
