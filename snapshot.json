@@ -5713,14 +5713,20 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "AUTH-MINING",
+            "kind": "escalate",
+            "raised_at": 1788956794
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788955256
+        "last_pass_at": 1788957057
       },
       "runstate": {
         "auto": false,
@@ -5747,7 +5753,7 @@
           "status": "done",
           "stage": "done",
           "stage_i": 7,
-          "ctx_pct": 9,
+          "ctx_pct": 10,
           "last_commit_at": 1788956285,
           "head": "ec6c89b",
           "subfence": {
@@ -5783,7 +5789,7 @@
             "build": true,
             "review": true
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "BM-ELASTIC-GRID-AUDIT",
@@ -6104,7 +6110,7 @@
           ]
         }
       },
-      "snapshot_id": "39027485506587ad"
+      "snapshot_id": "2df0d019eb8b7309"
     },
     "outbound": {
       "schema": 1,
@@ -6122,7 +6128,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788955262
+        "last_pass_at": 1788957063
       },
       "runstate": {
         "auto": false,
@@ -6491,7 +6497,7 @@
           ]
         }
       },
-      "snapshot_id": "92165627a7295cd4"
+      "snapshot_id": "3c5e94002610083c"
     },
     "scriptgen": {
       "schema": 1,
@@ -6503,7 +6509,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788955252
+        "last_pass_at": 1788957052
       },
       "runstate": {
         "auto": false,
@@ -6798,7 +6804,7 @@
           ]
         }
       },
-      "snapshot_id": "d80f8e301f349b9b"
+      "snapshot_id": "0a7fa5db1cb402d1"
     }
   },
   "pm": {
@@ -6820,22 +6826,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       }
     ]
   },
-  "snapshot_id": "477803cd62cb0bb0",
-  "published_at": "2026-09-09T12:26:19Z"
+  "snapshot_id": "7761227049300504",
+  "published_at": "2026-09-09T12:31:38Z"
 }
