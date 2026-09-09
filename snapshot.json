@@ -442,7 +442,7 @@
             22.0
           ],
           [
-            14.6,
+            14.7,
             23.0
           ]
         ]
@@ -849,7 +849,7 @@
             24.0
           ],
           [
-            19.0,
+            19.1,
             26.0
           ]
         ]
@@ -1114,7 +1114,7 @@
             35.0
           ],
           [
-            55.3,
+            55.4,
             37.0
           ]
         ]
@@ -2063,7 +2063,7 @@
           43.0
         ],
         [
-          71.0,
+          71.1,
           44.0
         ]
       ]
@@ -5705,7 +5705,7 @@
           ]
         }
       },
-      "snapshot_id": "590cc9f53cd43e8c"
+      "snapshot_id": "42d2a36988e0e3f7"
     },
     "outbound": {
       "schema": 1,
@@ -6172,13 +6172,19 @@
           ]
         }
       },
-      "snapshot_id": "ed12f415b89512ea"
+      "snapshot_id": "1481a36cddd887f9"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CAL-INTERVIEW-UI",
+            "kind": "escalate",
+            "raised_at": 1788919277
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6209,11 +6215,11 @@
         {
           "id": "CAL-INTERVIEW-UI",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 36,
-          "last_commit_at": 1788917808,
-          "head": "7fa336d",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 40,
+          "last_commit_at": 1788919242,
+          "head": "d5e42b2",
           "subfence": {
             "done": 11,
             "total": 12
@@ -6221,24 +6227,24 @@
           "review_rounds": [],
           "commits": [
             {
+              "sha": "d5e42b2",
+              "at": 1788919242
+            },
+            {
+              "sha": "3c68e2c",
+              "at": 1788919089
+            },
+            {
+              "sha": "f5416fd",
+              "at": 1788919051
+            },
+            {
               "sha": "7fa336d",
               "at": 1788917808
             },
             {
               "sha": "c7e494c",
               "at": 1788917781
-            },
-            {
-              "sha": "fb607e3",
-              "at": 1788917385
-            },
-            {
-              "sha": "f8234e2",
-              "at": 1788917350
-            },
-            {
-              "sha": "4f6303d",
-              "at": 1788916840
             }
           ],
           "fences": {
@@ -6247,7 +6253,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [],
@@ -6521,7 +6527,7 @@
           ]
         }
       },
-      "snapshot_id": "a873388c495d063d"
+      "snapshot_id": "cab00dba5bc055f7"
     }
   },
   "pm": {
@@ -6543,22 +6549,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 9
+        "monitor_last_pass_min": 14
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 9
+        "monitor_last_pass_min": 14
       }
     ]
   },
-  "snapshot_id": "b59ce74d5d278b1b",
-  "published_at": "2026-09-09T01:56:25Z"
+  "snapshot_id": "bc1809befde5f0cd",
+  "published_at": "2026-09-09T02:01:41Z"
 }
