@@ -13,7 +13,7 @@
         "spark": [
           [
             1788350400,
-            252
+            255
           ],
           [
             1788354000,
@@ -510,7 +510,7 @@
             34.0
           ],
           [
-            20.6,
+            20.7,
             34.0
           ]
         ]
@@ -2267,7 +2267,7 @@
           57.0
         ],
         [
-          77.0,
+          77.1,
           59.0
         ]
       ]
@@ -3020,6 +3020,10 @@
           [
             1788350792,
             88.0
+          ],
+          [
+            1788351266,
+            89.0
           ],
           [
             1788354537,
@@ -3923,6 +3927,10 @@
           ],
           [
             1788350792,
+            18.0
+          ],
+          [
+            1788351266,
             18.0
           ],
           [
@@ -5055,6 +5063,10 @@
           43.0
         ],
         [
+          1788351266,
+          43.0
+        ],
+        [
           1788354537,
           43.0
         ],
@@ -5661,8 +5673,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "AUTH-MINING",
+            "kind": "escalate",
+            "raised_at": 1788955753
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5693,82 +5711,25 @@
         {
           "id": "AUTH-MINING",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 41,
-          "last_commit_at": 1788955038,
-          "head": "7ac0257",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 42,
+          "last_commit_at": 1788955751,
+          "head": "def62aa",
           "subfence": {
             "done": 14,
             "total": 14
           },
-          "review_rounds": [
-            {
-              "round": 5,
-              "seats": "codex gpt-5.6-terraxhigh declarercumulat",
-              "must": 2,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "codex gpt-5.6-terraxhigh declarercumulat",
-              "must": 3,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 1,
-              "seats": "glm-5.3 swarm-4 find-only",
-              "must": 2,
-              "should": 2,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "glm-5.3 C2-routed iterate",
-              "must": 0,
-              "should": 3,
-              "could": 2,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "glm-5.3 C2-routed iterate",
-              "must": 0,
-              "should": 1,
-              "could": 2,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "glm-5.3 C2-routed iterate",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.6-terra cumulative declarer",
-              "must": 2,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "gpt-5.6-terra cumulative declarer",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "def62aa",
+              "at": 1788955751
+            },
+            {
+              "sha": "7ee55c3",
+              "at": 1788955707
+            },
             {
               "sha": "7ac0257",
               "at": 1788955038
@@ -5780,14 +5741,6 @@
             {
               "sha": "f026dc6",
               "at": 1788954628
-            },
-            {
-              "sha": "164fc6e",
-              "at": 1788954584
-            },
-            {
-              "sha": "317d1df",
-              "at": 1788954051
             }
           ],
           "fences": {
@@ -5796,7 +5749,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "BM-ELASTIC-GRID-AUDIT",
@@ -6117,7 +6070,7 @@
           ]
         }
       },
-      "snapshot_id": "6345d25047390168"
+      "snapshot_id": "ed9021880a60aab0"
     },
     "outbound": {
       "schema": 1,
@@ -6504,7 +6457,7 @@
           ]
         }
       },
-      "snapshot_id": "b872f85841bb0fba"
+      "snapshot_id": "f01294ff9bd2d637"
     },
     "scriptgen": {
       "schema": 1,
@@ -6811,7 +6764,7 @@
           ]
         }
       },
-      "snapshot_id": "9c3558636b617d53"
+      "snapshot_id": "0d843c121260d6aa"
     }
   },
   "pm": {
@@ -6833,22 +6786,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3
+        "monitor_last_pass_min": 9
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 9
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 9
       }
     ]
   },
-  "snapshot_id": "7f51ca93676926fd",
-  "published_at": "2026-09-09T12:04:58Z"
+  "snapshot_id": "4a01057e22149cad",
+  "published_at": "2026-09-09T12:10:18Z"
 }
