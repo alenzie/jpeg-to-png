@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 167,
-        "used": 24,
-        "at": 1788914109,
+        "projected": 173,
+        "used": 25,
+        "at": 1788914563,
         "reset": "18:24 on 14 Sep",
         "spark": [
           [
@@ -442,7 +442,7 @@
             22.0
           ],
           [
-            14.4,
+            14.5,
             23.0
           ]
         ]
@@ -455,7 +455,7 @@
         "mult": "20x",
         "projected": 154,
         "used": 29,
-        "at": 1788914109,
+        "at": 1788914563,
         "reset": "Sep 14, 11am (America/Los_Angeles)",
         "spark": [
           [
@@ -1124,7 +1124,7 @@
       "target": 100,
       "projected": 66,
       "used": 47,
-      "at": 1788914109,
+      "at": 1788914563,
       "reset": "Sep 10, 19:39",
       "level": "pro",
       "spark": [
@@ -2063,7 +2063,7 @@
           43.0
         ],
         [
-          70.8,
+          70.9,
           44.0
         ]
       ]
@@ -2074,7 +2074,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1788914109,
+      "at": 1788914563,
       "spark": [
         [
           1788325200,
@@ -5329,8 +5329,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "BM-ELASTIC-GRID-AUDIT",
+            "kind": "needs-owner",
+            "raised_at": 1788918038
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5363,15 +5369,27 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 37,
-          "last_commit_at": 1788917611,
-          "head": "c7276c6",
+          "ctx_pct": 7,
+          "last_commit_at": 1788918230,
+          "head": "6988f09",
           "subfence": {
-            "done": 2,
+            "done": 3,
             "total": 14
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "6988f09",
+              "at": 1788918230
+            },
+            {
+              "sha": "d1311ff",
+              "at": 1788918128
+            },
+            {
+              "sha": "7b95653",
+              "at": 1788918079
+            },
             {
               "sha": "c7276c6",
               "at": 1788917611
@@ -5379,18 +5397,6 @@
             {
               "sha": "ea2ab2e",
               "at": 1788917574
-            },
-            {
-              "sha": "1d8cbf1",
-              "at": 1788917302
-            },
-            {
-              "sha": "412b867",
-              "at": 1788916951
-            },
-            {
-              "sha": "f6b2c7b",
-              "at": 1788916758
             }
           ],
           "fences": {
@@ -5404,9 +5410,9 @@
         {
           "id": "BM-ELASTIC-GRID-AUDIT",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 28,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 30,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5421,7 +5427,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -5657,9 +5663,9 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 167,
+              "proj": 173,
               "target": 100,
-              "used": 24,
+              "used": 25,
               "day": 1,
               "active": "C2",
               "wall": false
@@ -5683,7 +5689,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-09T01:36:57Z",
+          "updated": "2026-09-09T01:43:57Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5699,7 +5705,7 @@
           ]
         }
       },
-      "snapshot_id": "dd2327021ae3f2a4"
+      "snapshot_id": "f0acdf33f58d6794"
     },
     "outbound": {
       "schema": 1,
@@ -6124,9 +6130,9 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 167,
+              "proj": 173,
               "target": 100,
-              "used": 24,
+              "used": 25,
               "day": 1,
               "active": "C2",
               "wall": false
@@ -6150,7 +6156,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-09T01:36:57Z",
+          "updated": "2026-09-09T01:43:57Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6166,7 +6172,7 @@
           ]
         }
       },
-      "snapshot_id": "d20b7bd0f0c6ea1b"
+      "snapshot_id": "6caeeecf436375f5"
     },
     "scriptgen": {
       "schema": 1,
@@ -6205,7 +6211,7 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 34,
+          "ctx_pct": 35,
           "last_commit_at": 1788917808,
           "head": "7fa336d",
           "subfence": {
@@ -6473,9 +6479,9 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 167,
+              "proj": 173,
               "target": 100,
-              "used": 24,
+              "used": 25,
               "day": 1,
               "active": "C2",
               "wall": false
@@ -6499,7 +6505,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-09T01:36:57Z",
+          "updated": "2026-09-09T01:43:57Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6515,7 +6521,7 @@
           ]
         }
       },
-      "snapshot_id": "c4bdedc9e5e22595"
+      "snapshot_id": "a5264bf10f03f6a8"
     }
   },
   "pm": {
@@ -6537,22 +6543,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 27
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 28
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 28
       }
     ]
   },
-  "snapshot_id": "37403ea62866c05b",
-  "published_at": "2026-09-09T01:40:34Z"
+  "snapshot_id": "2b8567556edaa606",
+  "published_at": "2026-09-09T01:45:50Z"
 }
