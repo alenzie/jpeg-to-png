@@ -458,7 +458,7 @@
             25.0
           ],
           [
-            15.3,
+            15.4,
             27.0
           ]
         ]
@@ -881,7 +881,7 @@
             29.0
           ],
           [
-            19.7,
+            19.8,
             32.0
           ]
         ]
@@ -2111,7 +2111,7 @@
           47.0
         ],
         [
-          71.7,
+          71.8,
           47.0
         ]
       ]
@@ -4080,7 +4080,7 @@
         ],
         "B": [
           [
-            1785035509,
+            1785040014,
             34.0
           ],
           [
@@ -5422,7 +5422,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788922018
+        "last_pass_at": 1788923449
       },
       "runstate": {
         "auto": false,
@@ -5785,7 +5785,7 @@
           ]
         }
       },
-      "snapshot_id": "b7e97587425a854d"
+      "snapshot_id": "bc964503606075a9"
     },
     "outbound": {
       "schema": 1,
@@ -5797,7 +5797,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788922084
+        "last_pass_at": 1788923448
       },
       "runstate": {
         "auto": false,
@@ -5923,7 +5923,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -6252,19 +6252,25 @@
           ]
         }
       },
-      "snapshot_id": "762893560b1fa137"
+      "snapshot_id": "7d19cb04cb116e56"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CAL-INTERVIEW-UI",
+            "kind": "escalate",
+            "raised_at": 1788923546
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1788922017
+        "last_pass_at": 1788923450
       },
       "runstate": {
         "auto": false,
@@ -6289,9 +6295,9 @@
         {
           "id": "CAL-INTERVIEW-UI",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 46,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 47,
           "last_commit_at": 1788923351,
           "head": "e68b76f",
           "subfence": {
@@ -6327,7 +6333,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [],
@@ -6601,7 +6607,7 @@
           ]
         }
       },
-      "snapshot_id": "007fcd4ea45eed12"
+      "snapshot_id": "49ceffc403c15dd6"
     }
   },
   "pm": {
@@ -6623,22 +6629,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 5
       }
     ]
   },
-  "snapshot_id": "0341ab593769625c",
-  "published_at": "2026-09-09T03:10:38Z"
+  "snapshot_id": "99fb626bf1966aa2",
+  "published_at": "2026-09-09T03:15:55Z"
 }
