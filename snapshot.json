@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 166,
+        "projected": null,
         "used": 60,
-        "at": 1789046108,
+        "at": 1789046566,
         "reset": "18:24 on 14 Sep",
         "spark": [
           [
@@ -1037,7 +1037,7 @@
             63.0
           ],
           [
-            40.7,
+            40.8,
             64.0
           ]
         ]
@@ -1046,9 +1046,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 108,
-        "used": 83,
-        "at": 1789046108,
+        "projected": 109,
+        "used": 84,
+        "at": 1789046566,
         "reset": "Sep 11, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1406,7 +1406,7 @@
             82.0
           ],
           [
-            77.0,
+            77.1,
             83.0
           ]
         ]
@@ -1414,9 +1414,9 @@
     ],
     "glm": {
       "target": 100,
-      "projected": 75,
+      "projected": 74,
       "used": 69,
-      "at": 1789046108,
+      "at": 1789046566,
       "reset": "Sep 10, 19:39",
       "level": "pro",
       "spark": [
@@ -2478,7 +2478,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1789046108,
+      "at": 1789046566,
       "spark": [
         [
           1788444000,
@@ -4416,8 +4416,8 @@
         ],
         "B": [
           [
-            1785162465,
-            81.0
+            1785166067,
+            82.0
           ],
           [
             1785322625,
@@ -6056,16 +6056,16 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 166,
+              "proj": null,
               "target": 100,
               "used": 60,
-              "day": 3,
+              "day": 1,
               "active": "C2",
-              "wall": false
+              "wall": true
             },
             "glm": {
               "verdict": "UNDERBURN",
-              "proj": 75,
+              "proj": 74,
               "target": 100,
               "used": 69,
               "day": 7,
@@ -6074,15 +6074,15 @@
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 108,
+              "proj": 109,
               "target": 100,
-              "used": 83,
+              "used": 84,
               "day": 6,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-10T14:15:11Z",
+          "updated": "2026-09-10T14:23:06Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6098,7 +6098,7 @@
           ]
         }
       },
-      "snapshot_id": "cc04911712e39dd3"
+      "snapshot_id": "c0977a0a1aeefd44"
     },
     "outbound": {
       "schema": 1,
@@ -6165,15 +6165,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 43,
-          "last_commit_at": 1789048590,
-          "head": "41cd1866",
+          "ctx_pct": 44,
+          "last_commit_at": 1789050173,
+          "head": "184b6559",
           "subfence": {
             "done": 2,
             "total": 10
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "184b6559",
+              "at": 1789050173
+            },
             {
               "sha": "41cd1866",
               "at": 1789048590
@@ -6189,10 +6193,6 @@
             {
               "sha": "3a9da0d7",
               "at": 1789047452
-            },
-            {
-              "sha": "a72e81da",
-              "at": 1789046822
             }
           ],
           "fences": {
@@ -6571,16 +6571,16 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 166,
+              "proj": null,
               "target": 100,
               "used": 60,
-              "day": 3,
+              "day": 1,
               "active": "C2",
-              "wall": false
+              "wall": true
             },
             "glm": {
               "verdict": "UNDERBURN",
-              "proj": 75,
+              "proj": 74,
               "target": 100,
               "used": 69,
               "day": 7,
@@ -6589,15 +6589,15 @@
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 108,
+              "proj": 109,
               "target": 100,
-              "used": 83,
+              "used": 84,
               "day": 6,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-10T14:15:11Z",
+          "updated": "2026-09-10T14:23:06Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6613,7 +6613,7 @@
           ]
         }
       },
-      "snapshot_id": "6ceeb5a4b47b3b21"
+      "snapshot_id": "cd92343deefe67c3"
     },
     "scriptgen": {
       "schema": 1,
@@ -6904,7 +6904,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-10T14:22:49Z",
+          "updated": "2026-09-10T14:23:06Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6920,7 +6920,7 @@
           ]
         }
       },
-      "snapshot_id": "4748c9f8bb5b4215"
+      "snapshot_id": "3837c6fd8361ac33"
     }
   },
   "pm": {
@@ -6944,22 +6944,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 17
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 13
+        "monitor_last_pass_min": 18
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 13
+        "monitor_last_pass_min": 18
       }
     ]
   },
-  "snapshot_id": "d5e70e3ec0fcefd9",
-  "published_at": "2026-09-10T14:22:54Z"
+  "snapshot_id": "616b89faafcc6d58",
+  "published_at": "2026-09-10T14:28:11Z"
 }
