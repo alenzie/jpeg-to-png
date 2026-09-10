@@ -3142,7 +3142,7 @@
             19.0
           ],
           [
-            1788429704,
+            1788430028,
             35.0
           ],
           [
@@ -4034,7 +4034,7 @@
             38.0
           ],
           [
-            1788429704,
+            1788430028,
             54.0
           ],
           [
@@ -5139,7 +5139,7 @@
           46.0
         ],
         [
-          1788429704,
+          1788430028,
           50.0
         ],
         [
@@ -5758,18 +5758,26 @@
       "units": [
         {
           "id": "BM-ELASTIC-GRID-AUDIT",
-          "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
           "ctx_pct": 32,
-          "last_commit_at": 1789034212,
-          "head": "46ab7c6",
+          "last_commit_at": 1789034365,
+          "head": "790d3d6",
           "subfence": {
             "done": 9,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "790d3d6",
+              "at": 1789034365
+            },
+            {
+              "sha": "1fae6aa",
+              "at": 1789034326
+            },
             {
               "sha": "46ab7c6",
               "at": 1789034212
@@ -5781,21 +5789,13 @@
             {
               "sha": "81d0954",
               "at": 1789033256
-            },
-            {
-              "sha": "4abd0dd",
-              "at": 1789033238
-            },
-            {
-              "sha": "a64de32",
-              "at": 1789033152
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": true
         }
@@ -5803,9 +5803,16 @@
       "eligible": [
         "DETECTOR-SOUND-ONLY",
         "EVENTS-UI",
-        "CORPUS-INDEX"
+        "CORPUS-INDEX",
+        "BM-ELASTIC-GRID-TRACKER-HALF-TEMPO"
       ],
       "merge_feed": [
+        {
+          "pr": 19,
+          "unit": "BM-ELASTIC-GRID-AUDIT",
+          "merged_at": 1789034326,
+          "sha": "1fae6aa"
+        },
         {
           "pr": 17,
           "unit": "BM-ELASTIC-GRID",
@@ -5829,12 +5836,6 @@
           "unit": "FMDT-IMPORT",
           "merged_at": 1788469862,
           "sha": "b8be0ee"
-        },
-        {
-          "pr": 12,
-          "unit": "DETECTOR-CORE-HARDENING",
-          "merged_at": 1788439820,
-          "sha": "7556e92"
         }
       ],
       "decisions": [],
@@ -6075,7 +6076,7 @@
           ]
         }
       },
-      "snapshot_id": "b4fc826dc59d4c2f"
+      "snapshot_id": "6014e7c4c9f37bff"
     },
     "outbound": {
       "schema": 1,
@@ -6569,7 +6570,7 @@
           ]
         }
       },
-      "snapshot_id": "471c3358eaf268bc"
+      "snapshot_id": "2a012ffeebe35c4d"
     },
     "scriptgen": {
       "schema": 1,
@@ -6876,7 +6877,7 @@
           ]
         }
       },
-      "snapshot_id": "6d53a7a2f4f8712a"
+      "snapshot_id": "17198236e959b68f"
     }
   },
   "pm": {
@@ -6900,22 +6901,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 16
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 16
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 16
+        "monitor_last_pass_min": 21
       }
     ]
   },
-  "snapshot_id": "48866f40efce9e4c",
-  "published_at": "2026-09-10T09:58:30Z"
+  "snapshot_id": "a3ef3d1bc33f2785",
+  "published_at": "2026-09-10T10:03:46Z"
 }
