@@ -622,7 +622,7 @@
             56.0
           ],
           [
-            36.2,
+            36.3,
             60.0
           ]
         ]
@@ -1037,7 +1037,7 @@
             63.0
           ],
           [
-            40.6,
+            40.7,
             64.0
           ]
         ]
@@ -2467,7 +2467,7 @@
           69.0
         ],
         [
-          92.6,
+          92.7,
           69.0
         ]
       ]
@@ -6098,7 +6098,7 @@
           ]
         }
       },
-      "snapshot_id": "8988a0266d39081b"
+      "snapshot_id": "cc04911712e39dd3"
     },
     "outbound": {
       "schema": 1,
@@ -6165,7 +6165,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 40,
+          "ctx_pct": 43,
           "last_commit_at": 1789048590,
           "head": "41cd1866",
           "subfence": {
@@ -6208,15 +6208,23 @@
           "status": "not-started",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 25,
-          "last_commit_at": 1789049487,
-          "head": "a9f76e98",
+          "ctx_pct": 27,
+          "last_commit_at": 1789050135,
+          "head": "197c9757",
           "subfence": {
-            "done": 2,
+            "done": 3,
             "total": 21
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "197c9757",
+              "at": 1789050135
+            },
+            {
+              "sha": "51825aa2",
+              "at": 1789050020
+            },
             {
               "sha": "a9f76e98",
               "at": 1789049487
@@ -6228,14 +6236,6 @@
             {
               "sha": "7862c443",
               "at": 1789048194
-            },
-            {
-              "sha": "8f529c24",
-              "at": 1789047411
-            },
-            {
-              "sha": "ad6efaa2",
-              "at": 1789047280
             }
           ],
           "fences": {
@@ -6613,7 +6613,7 @@
           ]
         }
       },
-      "snapshot_id": "044b031e22bc5fd1"
+      "snapshot_id": "6ceeb5a4b47b3b21"
     },
     "scriptgen": {
       "schema": 1,
@@ -6878,16 +6878,16 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 166,
+              "proj": null,
               "target": 100,
               "used": 60,
-              "day": 3,
+              "day": 1,
               "active": "C2",
-              "wall": false
+              "wall": true
             },
             "glm": {
               "verdict": "UNDERBURN",
-              "proj": 75,
+              "proj": 74,
               "target": 100,
               "used": 69,
               "day": 7,
@@ -6896,15 +6896,15 @@
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 108,
+              "proj": 109,
               "target": 100,
-              "used": 83,
+              "used": 84,
               "day": 6,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-10T14:15:11Z",
+          "updated": "2026-09-10T14:22:49Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6920,7 +6920,7 @@
           ]
         }
       },
-      "snapshot_id": "a0500dc87c03e0ff"
+      "snapshot_id": "4748c9f8bb5b4215"
     }
   },
   "pm": {
@@ -6944,22 +6944,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 12
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 13
       }
     ]
   },
-  "snapshot_id": "141c0df9a2ed2bfc",
-  "published_at": "2026-09-10T14:17:31Z"
+  "snapshot_id": "d5e70e3ec0fcefd9",
+  "published_at": "2026-09-10T14:22:54Z"
 }
