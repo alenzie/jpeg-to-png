@@ -582,7 +582,7 @@
             45.0
           ],
           [
-            33.3,
+            33.4,
             46.0
           ]
         ]
@@ -1017,7 +1017,7 @@
             63.0
           ],
           [
-            37.7,
+            37.8,
             64.0
           ]
         ]
@@ -1354,7 +1354,7 @@
             72.0
           ],
           [
-            74.0,
+            74.1,
             78.0
           ]
         ]
@@ -2403,7 +2403,7 @@
           66.0
         ],
         [
-          89.7,
+          89.8,
           67.0
         ]
       ]
@@ -5737,8 +5737,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "BM-ELASTIC-GRID-AUDIT",
+            "kind": "escalate",
+            "raised_at": 1789032083
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5769,8 +5775,8 @@
         {
           "id": "BM-ELASTIC-GRID-AUDIT",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 23,
           "last_commit_at": 1789030919,
           "head": "9adae73",
@@ -5807,7 +5813,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6085,7 +6091,7 @@
           ]
         }
       },
-      "snapshot_id": "78a515e71616a495"
+      "snapshot_id": "40537e6794f9fcb9"
     },
     "outbound": {
       "schema": 1,
@@ -6579,7 +6585,7 @@
           ]
         }
       },
-      "snapshot_id": "aeec30b049d36894"
+      "snapshot_id": "246822ff0d404416"
     },
     "scriptgen": {
       "schema": 1,
@@ -6886,7 +6892,7 @@
           ]
         }
       },
-      "snapshot_id": "6937fb67c32a3c92"
+      "snapshot_id": "7b0d4f1e95a26937"
     }
   },
   "pm": {
@@ -6910,22 +6916,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 14
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 14
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 14
       }
     ]
   },
-  "snapshot_id": "2f56aa8b7fa7aac2",
-  "published_at": "2026-09-10T09:21:02Z"
+  "snapshot_id": "87a0e850354437db",
+  "published_at": "2026-09-10T09:26:25Z"
 }
