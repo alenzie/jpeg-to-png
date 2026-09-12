@@ -949,7 +949,7 @@
             80.0
           ],
           [
-            66.1,
+            66.2,
             80.0
           ]
         ]
@@ -1686,7 +1686,7 @@
           9.0
         ],
         [
-          18.1,
+          18.2,
           9.0
         ]
       ]
@@ -5217,7 +5217,7 @@
           ]
         }
       },
-      "snapshot_id": "8ae98fcf1652cc1b"
+      "snapshot_id": "d60c077175420835"
     },
     "outbound": {
       "schema": 1,
@@ -5243,6 +5243,11 @@
             "id": "W5",
             "kind": "needs-owner",
             "raised_at": 1789190296
+          },
+          {
+            "id": "WARM-REPLY",
+            "kind": "escalate",
+            "raised_at": 1789204131
           }
         ]
       },
@@ -5405,58 +5410,21 @@
         {
           "id": "WARM-REPLY",
           "status": "not-started",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 46,
-          "last_commit_at": 1789202595,
-          "head": "3fff6bc3",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 50,
+          "last_commit_at": 1789204087,
+          "head": "90a1356a",
           "subfence": {
             "done": 14,
             "total": 14
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-5.6-sol breadth-1",
-              "must": 4,
-              "should": 4,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.5 solo ×4 contiguous live-range cl",
-              "must": 2,
-              "should": 3,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra solo",
-              "must": 2,
-              "should": 1,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.5 solo",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 8,
-              "seats": "gpt-5.5 solo",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "90a1356a",
+              "at": 1789204087
+            },
             {
               "sha": "3fff6bc3",
               "at": 1789202595
@@ -5472,10 +5440,6 @@
             {
               "sha": "f143722b",
               "at": 1789201715
-            },
-            {
-              "sha": "5754dbd9",
-              "at": 1789200849
             }
           ],
           "fences": {
@@ -5484,7 +5448,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -5809,7 +5773,7 @@
           ]
         }
       },
-      "snapshot_id": "3a669be0b8c1dab9"
+      "snapshot_id": "515065d1c0f37978"
     },
     "scriptgen": {
       "schema": 1,
@@ -6143,7 +6107,7 @@
           ]
         }
       },
-      "snapshot_id": "ad5595dbce0829a5"
+      "snapshot_id": "e53712dcd4ef7054"
     }
   },
   "pm": {
@@ -6167,22 +6131,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 27
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 27
       }
     ]
   },
-  "snapshot_id": "55ff3e1cfd38a5ad",
-  "published_at": "2026-09-12T09:04:57Z"
+  "snapshot_id": "4e240baf1a22b380",
+  "published_at": "2026-09-12T09:10:13Z"
 }
