@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": null,
         "used": 22,
-        "at": 1789178848,
+        "at": 1789179201,
         "reset": "00:30 on 18 Sep",
         "spark": [
           [
@@ -495,7 +495,7 @@
         "mult": "20x",
         "projected": 125,
         "used": 78,
-        "at": 1789178848,
+        "at": 1789179201,
         "reset": "Sep 14, 11am (America/Los_Angeles)",
         "spark": [
           [
@@ -1306,7 +1306,7 @@
             97.0
           ],
           [
-            98.9,
+            99.0,
             98.0
           ]
         ]
@@ -1316,7 +1316,7 @@
       "target": 100,
       "projected": 41,
       "used": 6,
-      "at": 1789178848,
+      "at": 1789179201,
       "reset": "Sep 17, 19:39",
       "level": "pro",
       "spark": [
@@ -1886,7 +1886,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1789178848,
+      "at": 1789179201,
       "spark": [
         [
           1788577200,
@@ -3138,7 +3138,7 @@
       "claude": {
         "A": [
           [
-            1785294594,
+            1785294883,
             54.0
           ],
           [
@@ -5081,14 +5081,20 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "EVENTS-UI",
+            "kind": "needs-owner",
+            "raised_at": 1789182544
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1789180970
+        "last_pass_at": 1789182770
       },
       "runstate": {
         "auto": false,
@@ -5113,9 +5119,9 @@
         {
           "id": "EVENTS-UI",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 29,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 31,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5130,7 +5136,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -5408,7 +5414,7 @@
           ]
         }
       },
-      "snapshot_id": "37bee54434225f3c"
+      "snapshot_id": "ca0675633ece67e3"
     },
     "outbound": {
       "schema": 1,
@@ -5431,7 +5437,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1789180970
+        "last_pass_at": 1789182772
       },
       "runstate": {
         "auto": false,
@@ -5545,15 +5551,19 @@
           "status": "not-started",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 43,
-          "last_commit_at": 1789181785,
-          "head": "7df44aec",
+          "ctx_pct": 45,
+          "last_commit_at": 1789182673,
+          "head": "f42785e8",
           "subfence": {
             "done": 16,
             "total": 21
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "f42785e8",
+              "at": 1789182673
+            },
             {
               "sha": "7df44aec",
               "at": 1789181785
@@ -5569,10 +5579,6 @@
             {
               "sha": "cefc0d62",
               "at": 1789176842
-            },
-            {
-              "sha": "05b4df18",
-              "at": 1789175998
             }
           ],
           "fences": {
@@ -5949,7 +5955,7 @@
           ]
         }
       },
-      "snapshot_id": "6494a527ba921295"
+      "snapshot_id": "a2bea52eee33767e"
     },
     "scriptgen": {
       "schema": 1,
@@ -5967,7 +5973,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1789180972
+        "last_pass_at": 1789182772
       },
       "runstate": {
         "auto": false,
@@ -6267,7 +6273,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-12T03:07:30Z",
+          "updated": "2026-09-12T03:13:48Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6283,7 +6289,7 @@
           ]
         }
       },
-      "snapshot_id": "a511bca5aeb1ed30"
+      "snapshot_id": "2cde4f08c9691f90"
     }
   },
   "pm": {
@@ -6307,22 +6313,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       }
     ]
   },
-  "snapshot_id": "628e413ba1e20fc9",
-  "published_at": "2026-09-12T03:08:31Z"
+  "snapshot_id": "6fc869f4a6b66f51",
+  "published_at": "2026-09-12T03:13:49Z"
 }
