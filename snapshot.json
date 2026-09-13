@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 96,
+        "projected": 91,
         "used": 12,
-        "at": 1789272821,
+        "at": 1789276440,
         "reset": "01:09 on 19 Sep",
         "spark": [
           [
@@ -382,6 +382,10 @@
           [
             1789272000,
             96
+          ],
+          [
+            1789275600,
+            91
           ]
         ],
         "trail": [
@@ -462,7 +466,11 @@
             10.0
           ],
           [
-            13.1,
+            13.0,
+            12.0
+          ],
+          [
+            13.2,
             12.0
           ]
         ]
@@ -473,9 +481,9 @@
         "target": 100,
         "label": "A",
         "mult": "20x",
-        "projected": 105,
+        "projected": 104,
         "used": 82,
-        "at": 1789272821,
+        "at": 1789276440,
         "reset": "Sep 14, 11am (America/Los_Angeles)",
         "spark": [
           [
@@ -817,6 +825,10 @@
           [
             1789272000,
             105
+          ],
+          [
+            1789275600,
+            104
           ]
         ],
         "trail": [
@@ -1113,7 +1125,11 @@
             82.0
           ],
           [
-            78.7,
+            78.0,
+            82.0
+          ],
+          [
+            78.8,
             82.0
           ]
         ]
@@ -1253,9 +1269,9 @@
     ],
     "glm": {
       "target": 100,
-      "projected": 30,
+      "projected": 29,
       "used": 9,
-      "at": 1789272821,
+      "at": 1789276440,
       "reset": "Sep 17, 19:39",
       "level": "pro",
       "spark": [
@@ -1778,6 +1794,10 @@
         [
           1789272000,
           30
+        ],
+        [
+          1789275600,
+          29
         ]
       ],
       "trail": [
@@ -1914,7 +1934,11 @@
           9.0
         ],
         [
-          30.7,
+          30.0,
+          9.0
+        ],
+        [
+          30.8,
           9.0
         ]
       ]
@@ -1923,9 +1947,9 @@
       "balance": 9.5,
       "currency": "USD",
       "available": true,
-      "burn_per_day": null,
+      "burn_per_day": 0.0,
       "days_to_empty": null,
-      "at": 1789272821,
+      "at": 1789276440,
       "spark": [
         [
           1788674400,
@@ -2457,6 +2481,10 @@
         ],
         [
           1789272000,
+          9.5
+        ],
+        [
+          1789275600,
           9.5
         ]
       ]
@@ -3179,6 +3207,10 @@
           [
             1789272617,
             12.0
+          ],
+          [
+            1789276440,
+            12.0
           ]
         ]
       },
@@ -3886,6 +3918,10 @@
           ],
           [
             1789272617,
+            82.0
+          ],
+          [
+            1789276440,
             82.0
           ]
         ],
@@ -5120,6 +5156,10 @@
         [
           1789272617,
           9.0
+        ],
+        [
+          1789276440,
+          9.0
         ]
       ]
     }
@@ -5461,7 +5501,7 @@
           ]
         }
       },
-      "snapshot_id": "6ca7eec5b2ac1274"
+      "snapshot_id": "47572c1cb41beabb"
     },
     "outbound": {
       "schema": 1,
@@ -5494,7 +5534,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1789278261
+        "last_pass_at": 1789280063
       },
       "runstate": {
         "auto": false,
@@ -5968,19 +6008,13 @@
           ]
         }
       },
-      "snapshot_id": "48b2aea32ee4efd0"
+      "snapshot_id": "db56b6fd3f9db924"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CAL-GATE",
-            "kind": "needs-owner",
-            "raised_at": 1789182475
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6011,8 +6045,8 @@
         {
           "id": "CAL-GATE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "planning",
+          "stage_i": 1,
           "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
@@ -6028,7 +6062,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [],
@@ -6302,7 +6336,7 @@
           ]
         }
       },
-      "snapshot_id": "9e0fd7204a1c8c20"
+      "snapshot_id": "1334f7c86b88dc9a"
     }
   },
   "pm": {
@@ -6326,22 +6360,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 29
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       }
     ]
   },
-  "snapshot_id": "7da8e7bc23243aaf",
-  "published_at": "2026-09-13T06:13:44Z"
+  "snapshot_id": "9b32941635b5657d",
+  "published_at": "2026-09-13T06:19:03Z"
 }
