@@ -8,12 +8,12 @@
         "tier": "Pro",
         "projected": 90,
         "used": 18,
-        "at": 1789317625,
+        "at": 1789318010,
         "reset": "01:09 on 19 Sep",
         "spark": [
           [
             1788714000,
-            178
+            177
           ],
           [
             1788717600,
@@ -490,7 +490,7 @@
             17.0
           ],
           [
-            20.0,
+            20.1,
             17.0
           ]
         ]
@@ -508,7 +508,7 @@
         "spark": [
           [
             1788714000,
-            39
+            41
           ],
           [
             1788717600,
@@ -1154,9 +1154,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 60,
+        "projected": 59,
         "used": 13,
-        "at": 1789317625,
+        "at": 1789318010,
         "reset": "Sep 18, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1320,7 +1320,7 @@
       "target": 100,
       "projected": 35,
       "used": 13,
-      "at": 1789317625,
+      "at": 1789318010,
       "reset": "Sep 17, 19:39",
       "level": "pro",
       "spark": [
@@ -2018,7 +2018,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1789317625,
+      "at": 1789318010,
       "spark": [
         [
           1788714000,
@@ -2746,7 +2746,7 @@
             59.0
           ],
           [
-            1788716823,
+            1788717458,
             61.0
           ],
           [
@@ -3570,8 +3570,8 @@
             20.0
           ],
           [
-            1788716823,
-            34.0
+            1788717458,
+            35.0
           ],
           [
             1788718163,
@@ -4691,7 +4691,7 @@
           13.0
         ],
         [
-          1788716823,
+          1788717458,
           15.0
         ],
         [
@@ -5259,15 +5259,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 25,
-          "last_commit_at": 1789321250,
-          "head": "b82ea6d",
+          "ctx_pct": 28,
+          "last_commit_at": 1789321862,
+          "head": "eb21108",
           "subfence": {
             "done": 5,
             "total": 14
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "eb21108",
+              "at": 1789321862
+            },
             {
               "sha": "b82ea6d",
               "at": 1789321250
@@ -5283,10 +5287,6 @@
             {
               "sha": "3af03e9",
               "at": 1789302113
-            },
-            {
-              "sha": "91be5cb",
-              "at": 1789302088
             }
           ],
           "fences": {
@@ -5549,7 +5549,7 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 60,
+              "proj": 59,
               "target": 200,
               "used": 13,
               "day": 2,
@@ -5557,7 +5557,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-13T17:41:12Z",
+          "updated": "2026-09-13T17:51:14Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5573,7 +5573,7 @@
           ]
         }
       },
-      "snapshot_id": "83554300b344e1be"
+      "snapshot_id": "c0564dfd2717b61e"
     },
     "outbound": {
       "schema": 1,
@@ -5621,9 +5621,9 @@
         {
           "id": "CR3",
           "status": "not-started",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 27,
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": 12,
           "last_commit_at": 1789321523,
           "head": "cd1608b3",
           "subfence": {
@@ -5654,7 +5654,7 @@
             }
           ],
           "fences": {
-            "plan": false,
+            "plan": true,
             "synth": true,
             "build": false,
             "review": false
@@ -6024,7 +6024,7 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 60,
+              "proj": 59,
               "target": 200,
               "used": 13,
               "day": 2,
@@ -6032,7 +6032,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-13T17:41:12Z",
+          "updated": "2026-09-13T17:46:55Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6048,19 +6048,13 @@
           ]
         }
       },
-      "snapshot_id": "3d89db5e65b7dd2e"
+      "snapshot_id": "9ae8756de9a5840a"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CAL-GATE",
-            "kind": "escalate",
-            "raised_at": 1789321520
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6091,17 +6085,21 @@
         {
           "id": "CAL-GATE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 26,
-          "last_commit_at": 1789321467,
-          "head": "9784725",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 28,
+          "last_commit_at": 1789321876,
+          "head": "937d2d9",
           "subfence": {
             "done": 0,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "937d2d9",
+              "at": 1789321876
+            },
             {
               "sha": "9784725",
               "at": 1789321467
@@ -6117,10 +6115,6 @@
             {
               "sha": "b8dc6a5",
               "at": 1789295450
-            },
-            {
-              "sha": "39540f4",
-              "at": 1789295030
             }
           ],
           "fences": {
@@ -6129,7 +6123,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [],
@@ -6379,7 +6373,7 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 60,
+              "proj": 59,
               "target": 200,
               "used": 13,
               "day": 2,
@@ -6387,7 +6381,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-13T17:41:12Z",
+          "updated": "2026-09-13T17:51:14Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6403,7 +6397,7 @@
           ]
         }
       },
-      "snapshot_id": "181e2b601915d2bc"
+      "snapshot_id": "51a7e94f4a89fd31"
     }
   },
   "pm": {
@@ -6427,22 +6421,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 28
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 28
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 28
       }
     ]
   },
-  "snapshot_id": "0bf7217573355323",
-  "published_at": "2026-09-13T17:46:10Z"
+  "snapshot_id": "f6bb865eecb01df3",
+  "published_at": "2026-09-13T17:51:23Z"
 }
