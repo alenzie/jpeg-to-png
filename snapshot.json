@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": null,
-        "used": 13,
-        "at": 1789283648,
+        "projected": 97,
+        "used": 14,
+        "at": 1789284636,
         "reset": "01:09 on 19 Sep",
         "spark": [
           [
@@ -382,6 +382,10 @@
           [
             1789279200,
             95
+          ],
+          [
+            1789282800,
+            97
           ]
         ],
         "trail": [
@@ -470,8 +474,12 @@
             12.0
           ],
           [
-            14.5,
+            14.0,
             13.0
+          ],
+          [
+            14.5,
+            14.0
           ]
         ]
       }
@@ -1145,7 +1153,7 @@
             83.0
           ],
           [
-            80.0,
+            80.1,
             83.0
           ]
         ]
@@ -1154,10 +1162,10 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 116,
-        "used": 98,
-        "at": 1789093256,
-        "reset": "Sep 11, 9:59pm (America/Los_Angeles)",
+        "projected": 0,
+        "used": 0,
+        "at": 1789284636,
+        "reset": "Sep 18, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1788681600,
@@ -1270,16 +1278,25 @@
           [
             1789092000,
             116
+          ],
+          [
+            1789282800,
+            0
           ]
         ],
-        "trail": []
+        "trail": [
+          [
+            16.4,
+            0.0
+          ]
+        ]
       }
     ],
     "glm": {
       "target": 100,
       "projected": 28,
       "used": 9,
-      "at": 1789283648,
+      "at": 1789284636,
       "reset": "Sep 17, 19:39",
       "level": "pro",
       "spark": [
@@ -1954,7 +1971,7 @@
           9.0
         ],
         [
-          32.0,
+          32.1,
           9.0
         ]
       ]
@@ -1963,9 +1980,9 @@
       "balance": 9.5,
       "currency": "USD",
       "available": true,
-      "burn_per_day": 0.0,
+      "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1789283648,
+      "at": 1789284636,
       "spark": [
         [
           1788681600,
@@ -4357,6 +4374,10 @@
           [
             1789092109,
             98.0
+          ],
+          [
+            1789284636,
+            0.0
           ]
         ]
       },
@@ -5196,14 +5217,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "EVENTS-UI",
-            "kind": "needs-owner",
-            "raised_at": 1789276523
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5234,8 +5249,8 @@
         {
           "id": "EVENTS-UI",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "planning",
+          "stage_i": 1,
           "ctx_pct": 36,
           "last_commit_at": null,
           "head": null,
@@ -5251,7 +5266,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -5529,18 +5544,13 @@
           ]
         }
       },
-      "snapshot_id": "985c476d9fa1cc05"
+      "snapshot_id": "e2a9891f7eccd2d6"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
-          {
-            "id": "CR3",
-            "kind": "needs-owner",
-            "raised_at": 1789181225
-          },
           {
             "id": "OUT",
             "kind": "needs-owner",
@@ -5577,8 +5587,8 @@
         {
           "id": "CR3",
           "status": "not-started",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "planning",
+          "stage_i": 1,
           "ctx_pct": 17,
           "last_commit_at": null,
           "head": null,
@@ -5594,7 +5604,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "OUT",
@@ -5623,7 +5633,7 @@
           "status": "not-started",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 24,
+          "ctx_pct": 28,
           "last_commit_at": 1789189853,
           "head": "0f4092f3",
           "subfence": {
@@ -5983,19 +5993,13 @@
           ]
         }
       },
-      "snapshot_id": "39267a80ae2dbc6a"
+      "snapshot_id": "8ab97e366cd8fb32"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CAL-GATE",
-            "kind": "needs-owner",
-            "raised_at": 1789280722
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6026,8 +6030,8 @@
         {
           "id": "CAL-GATE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "planning",
+          "stage_i": 1,
           "ctx_pct": 33,
           "last_commit_at": null,
           "head": null,
@@ -6043,7 +6047,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [],
@@ -6317,7 +6321,7 @@
           ]
         }
       },
-      "snapshot_id": "a5c44b6d4fbc252b"
+      "snapshot_id": "bd85058bcf0013e6"
     }
   },
   "pm": {
@@ -6332,7 +6336,7 @@
       "available_note": ""
     },
     "pm_session": {
-      "lock": "1138754 2026-09-13T08:13:22Z",
+      "lock": "1215720 2026-09-13T08:31:08Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -6341,22 +6345,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 17
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13
+        "monitor_last_pass_min": 19
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13
+        "monitor_last_pass_min": 19
       }
     ]
   },
-  "snapshot_id": "74c9f2a1b19ed576",
-  "published_at": "2026-09-13T08:27:02Z"
+  "snapshot_id": "af76dfcf21315fb7",
+  "published_at": "2026-09-13T08:32:24Z"
 }
