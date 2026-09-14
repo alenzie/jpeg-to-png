@@ -13,7 +13,7 @@
         "spark": [
           [
             1788771600,
-            165
+            164
           ],
           [
             1788775200,
@@ -572,7 +572,7 @@
         "spark": [
           [
             1788771600,
-            75
+            77
           ],
           [
             1788775200,
@@ -1145,7 +1145,7 @@
             83.0
           ],
           [
-            94.9,
+            95.0,
             83.0
           ]
         ]
@@ -1438,7 +1438,7 @@
             50.0
           ],
           [
-            31.2,
+            31.3,
             51.0
           ]
         ]
@@ -2199,7 +2199,7 @@
           38.0
         ],
         [
-          46.9,
+          47.0,
           38.0
         ]
       ]
@@ -2950,7 +2950,7 @@
             71.0
           ],
           [
-            1788773570,
+            1788774625,
             72.0
           ],
           [
@@ -3778,8 +3778,8 @@
             63.0
           ],
           [
-            1788773570,
-            72.0
+            1788774625,
+            74.0
           ],
           [
             1788775218,
@@ -4911,7 +4911,7 @@
           19.0
         ],
         [
-          1788773570,
+          1788774625,
           19.0
         ],
         [
@@ -5767,7 +5767,7 @@
           ]
         }
       },
-      "snapshot_id": "e235f7b8bac99443"
+      "snapshot_id": "8f6c5dfcbaa1fc84"
     },
     "outbound": {
       "schema": 1,
@@ -5806,15 +5806,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 32,
-          "last_commit_at": 1789377532,
-          "head": "0440b407",
+          "ctx_pct": 34,
+          "last_commit_at": 1789378392,
+          "head": "d11ef5fd",
           "subfence": {
             "done": 11,
             "total": 24
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "d11ef5fd",
+              "at": 1789378392
+            },
             {
               "sha": "0440b407",
               "at": 1789377532
@@ -5830,10 +5834,6 @@
             {
               "sha": "d4e064e2",
               "at": 1789374434
-            },
-            {
-              "sha": "507b2316",
-              "at": 1789373239
             }
           ],
           "fences": {
@@ -6169,13 +6169,19 @@
           ]
         }
       },
-      "snapshot_id": "42b54dfb3d97b0ff"
+      "snapshot_id": "be49db875d69f5c0"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CAL-GATE",
+            "kind": "escalate",
+            "raised_at": 1789378392
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6208,7 +6214,7 @@
           "status": "done",
           "stage": "done",
           "stage_i": 7,
-          "ctx_pct": 6,
+          "ctx_pct": 11,
           "last_commit_at": 1789377711,
           "head": "29ca7ce",
           "subfence": {
@@ -6244,7 +6250,7 @@
             "build": true,
             "review": true
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6521,7 +6527,7 @@
           ]
         }
       },
-      "snapshot_id": "11189249204459c4"
+      "snapshot_id": "71182871b5f8cbb9"
     }
   },
   "pm": {
@@ -6545,22 +6551,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 16
       }
     ]
   },
-  "snapshot_id": "6400941f74c5eb93",
-  "published_at": "2026-09-14T09:28:16Z"
+  "snapshot_id": "403f55a40455f098",
+  "published_at": "2026-09-14T09:33:42Z"
 }
