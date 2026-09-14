@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 229,
+        "projected": 228,
         "used": 67,
-        "at": 1789374010,
+        "at": 1789374357,
         "reset": "01:09 on 19 Sep",
         "spark": [
           [
@@ -554,7 +554,7 @@
             65.0
           ],
           [
-            29.3,
+            29.4,
             66.0
           ]
         ]
@@ -1156,7 +1156,7 @@
         "mult": "20x",
         "projected": 167,
         "used": 52,
-        "at": 1789374010,
+        "at": 1789374357,
         "reset": "Sep 18, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1448,7 +1448,7 @@
       "target": 100,
       "projected": 81,
       "used": 38,
-      "at": 1789374010,
+      "at": 1789374357,
       "reset": "Sep 17, 19:39",
       "level": "pro",
       "spark": [
@@ -2210,7 +2210,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1789374010,
+      "at": 1789374357,
       "spark": [
         [
           1788771600,
@@ -5725,7 +5725,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 229,
+              "proj": 228,
               "target": 100,
               "used": 67,
               "day": 3,
@@ -5751,7 +5751,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-14T09:20:12Z",
+          "updated": "2026-09-14T09:26:00Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5767,7 +5767,7 @@
           ]
         }
       },
-      "snapshot_id": "295a02c48daf2f42"
+      "snapshot_id": "e235f7b8bac99443"
     },
     "outbound": {
       "schema": 1,
@@ -6127,7 +6127,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 229,
+              "proj": 228,
               "target": 100,
               "used": 67,
               "day": 3,
@@ -6153,7 +6153,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-14T09:20:12Z",
+          "updated": "2026-09-14T09:26:00Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6169,7 +6169,7 @@
           ]
         }
       },
-      "snapshot_id": "dd6f44865d33c81d"
+      "snapshot_id": "42b54dfb3d97b0ff"
     },
     "scriptgen": {
       "schema": 1,
@@ -6205,50 +6205,17 @@
       "units": [
         {
           "id": "CAL-GATE",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 26,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 6,
           "last_commit_at": 1789377711,
           "head": "29ca7ce",
           "subfence": {
             "done": 8,
             "total": 9
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "glm-5.3 swarm-4 R1 breadth",
-              "must": 0,
-              "should": 7,
-              "could": 3,
-              "nit": 1
-            },
-            {
-              "round": 2,
-              "seats": "glm-5.3 swarm-4 iterate C2 codex-OVERBUR",
-              "must": 0,
-              "should": 4,
-              "could": 5,
-              "nit": 1
-            },
-            {
-              "round": 4,
-              "seats": "codex gpt-5.6-terraxhigh confirm",
-              "must": 3,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "codex gpt-5.6-terraxhigh DECLARER confir",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "29ca7ce",
@@ -6275,13 +6242,22 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
       ],
-      "eligible": [],
+      "eligible": [
+        "STYLE-MIX",
+        "WATCH-ALONGS"
+      ],
       "merge_feed": [
+        {
+          "pr": 18,
+          "unit": "CAL-GATE",
+          "merged_at": 1789377762,
+          "sha": "dec22e5"
+        },
         {
           "pr": 17,
           "unit": "CAL-INTERVIEW-UI",
@@ -6305,12 +6281,6 @@
           "unit": "CAL-ENGINE",
           "merged_at": 1788204213,
           "sha": "513020a"
-        },
-        {
-          "pr": 14,
-          "unit": "CAL-DERIVE",
-          "merged_at": 1788200198,
-          "sha": "6b8d687"
         }
       ],
       "decisions": [],
@@ -6509,7 +6479,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 229,
+              "proj": 228,
               "target": 100,
               "used": 67,
               "day": 3,
@@ -6535,7 +6505,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-14T09:20:12Z",
+          "updated": "2026-09-14T09:26:00Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6551,7 +6521,7 @@
           ]
         }
       },
-      "snapshot_id": "ed54c3c279ebcf2e"
+      "snapshot_id": "11189249204459c4"
     }
   },
   "pm": {
@@ -6575,22 +6545,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 5
+        "monitor_last_pass_min": 11
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 5
+        "monitor_last_pass_min": 11
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 5
+        "monitor_last_pass_min": 11
       }
     ]
   },
-  "snapshot_id": "d6c1444484ee31c3",
-  "published_at": "2026-09-14T09:22:41Z"
+  "snapshot_id": "6400941f74c5eb93",
+  "published_at": "2026-09-14T09:28:16Z"
 }
