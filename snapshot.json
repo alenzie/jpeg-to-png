@@ -790,7 +790,7 @@
             96.0
           ],
           [
-            55.9,
+            56.0,
             96.0
           ]
         ]
@@ -1618,7 +1618,7 @@
             80.0
           ],
           [
-            57.8,
+            57.9,
             80.0
           ]
         ]
@@ -4392,8 +4392,8 @@
         ],
         "B": [
           [
-            1785650984,
-            41.0
+            1785652169,
+            42.0
           ],
           [
             1785693827,
@@ -5901,8 +5901,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "FLOW-QUERY",
+            "kind": "needs-owner",
+            "raised_at": 1789539055
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5935,7 +5941,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 12,
+          "ctx_pct": 17,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5957,7 +5963,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 14,
+          "ctx_pct": 20,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5977,9 +5983,9 @@
         {
           "id": "FLOW-QUERY",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 12,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 16,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5994,7 +6000,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6270,7 +6276,7 @@
           ]
         }
       },
-      "snapshot_id": "4a15a437a87001e4"
+      "snapshot_id": "fb1a3cf43c5f2ce2"
     },
     "outbound": {
       "schema": 1,
@@ -6309,7 +6315,7 @@
           "status": "proposed",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 14,
+          "ctx_pct": 18,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6746,7 +6752,7 @@
           ]
         }
       },
-      "snapshot_id": "257fbcbeef98dfb4"
+      "snapshot_id": "17626ec7c025785e"
     },
     "scriptgen": {
       "schema": 1,
@@ -6791,7 +6797,7 @@
           "status": "building",
           "stage": "interviewing",
           "stage_i": 2,
-          "ctx_pct": 12,
+          "ctx_pct": 13,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7082,7 +7088,7 @@
           ]
         }
       },
-      "snapshot_id": "5b7f4e4b764fca3b"
+      "snapshot_id": "31876322620e902f"
     }
   },
   "pm": {
@@ -7106,22 +7112,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3
+        "monitor_last_pass_min": 8
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3
+        "monitor_last_pass_min": 8
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3
+        "monitor_last_pass_min": 8
       }
     ]
   },
-  "snapshot_id": "c4c2f4ac171f5307",
-  "published_at": "2026-09-16T06:06:59Z"
+  "snapshot_id": "cde0e4aeb96ce3d3",
+  "published_at": "2026-09-16T06:12:16Z"
 }
