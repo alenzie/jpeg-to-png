@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 145,
+        "projected": 144,
         "used": 100,
-        "at": 1789615320,
+        "at": 1789615754,
         "reset": "01:09 on 19 Sep",
         "spark": [
           [
@@ -830,7 +830,7 @@
             100.0
           ],
           [
-            69.2,
+            69.3,
             100.0
           ]
         ]
@@ -843,7 +843,7 @@
         "mult": "20x",
         "projected": 121,
         "used": 42,
-        "at": 1789615320,
+        "at": 1789615754,
         "reset": "Sep 21, 11am (America/Los_Angeles)",
         "spark": [
           [
@@ -1093,7 +1093,7 @@
             34.0
           ],
           [
-            34.8,
+            34.9,
             40.0
           ]
         ]
@@ -1698,7 +1698,7 @@
             80.0
           ],
           [
-            71.1,
+            71.2,
             80.0
           ]
         ]
@@ -1708,7 +1708,7 @@
       "target": 100,
       "projected": 45,
       "used": 39,
-      "at": 1789615320,
+      "at": 1789615754,
       "reset": "Sep 17, 19:39",
       "level": "pro",
       "spark": [
@@ -2690,7 +2690,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1789615320,
+      "at": 1789615754,
       "spark": [
         [
           1789012800,
@@ -6029,8 +6029,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "FLOW-QUERY",
+            "kind": "escalate",
+            "raised_at": 1789619579
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6106,7 +6112,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 13,
+          "ctx_pct": 16,
           "last_commit_at": 1789618817,
           "head": "3ffae36a",
           "subfence": {
@@ -6147,17 +6153,21 @@
         {
           "id": "FLOW-QUERY",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 31,
-          "last_commit_at": 1789618805,
-          "head": "88aa464f",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 12,
+          "last_commit_at": 1789619323,
+          "head": "51bd646a",
           "subfence": {
             "done": 8,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "51bd646a",
+              "at": 1789619323
+            },
             {
               "sha": "88aa464f",
               "at": 1789618805
@@ -6173,19 +6183,15 @@
             {
               "sha": "8681265e",
               "at": 1789617562
-            },
-            {
-              "sha": "b95d173e",
-              "at": 1789617560
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
-            "build": false,
+            "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6419,7 +6425,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 145,
+              "proj": 144,
               "target": 100,
               "used": 100,
               "day": 5,
@@ -6437,15 +6443,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 118,
+              "proj": 121,
               "target": 200,
-              "used": 41,
+              "used": 42,
               "day": 3,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-17T04:20:34Z",
+          "updated": "2026-09-17T04:29:16Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6461,7 +6467,7 @@
           ]
         }
       },
-      "snapshot_id": "5552a752e665afbd"
+      "snapshot_id": "6fbccbfc3dea3d45"
     },
     "outbound": {
       "schema": 1,
@@ -6873,7 +6879,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 145,
+              "proj": 144,
               "target": 100,
               "used": 100,
               "day": 5,
@@ -6891,15 +6897,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 118,
+              "proj": 121,
               "target": 200,
-              "used": 41,
+              "used": 42,
               "day": 3,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-17T04:20:34Z",
+          "updated": "2026-09-17T04:29:16Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6915,7 +6921,7 @@
           ]
         }
       },
-      "snapshot_id": "341ba636f5185ee7"
+      "snapshot_id": "a12b3873d97f9633"
     },
     "scriptgen": {
       "schema": 1,
@@ -7225,7 +7231,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 145,
+              "proj": 144,
               "target": 100,
               "used": 100,
               "day": 5,
@@ -7243,15 +7249,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 118,
+              "proj": 121,
               "target": 200,
-              "used": 41,
+              "used": 42,
               "day": 3,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-17T04:20:34Z",
+          "updated": "2026-09-17T04:29:16Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7267,7 +7273,7 @@
           ]
         }
       },
-      "snapshot_id": "5b34ed5463d2b104"
+      "snapshot_id": "9896e8e4857b15c5"
     }
   },
   "pm": {
@@ -7291,22 +7297,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 14
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 14
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8
+        "monitor_last_pass_min": 13
       }
     ]
   },
-  "snapshot_id": "b05b9cf71cf7e868",
-  "published_at": "2026-09-17T04:28:10Z"
+  "snapshot_id": "0465c8554ce4f12d",
+  "published_at": "2026-09-17T04:33:34Z"
 }
