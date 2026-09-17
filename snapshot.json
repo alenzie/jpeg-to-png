@@ -1285,7 +1285,7 @@
             66.0
           ],
           [
-            44.5,
+            44.6,
             73.0
           ]
         ]
@@ -1826,7 +1826,7 @@
             80.0
           ],
           [
-            80.8,
+            80.9,
             80.0
           ]
         ]
@@ -2871,7 +2871,7 @@
           39.0
         ],
         [
-          96.5,
+          96.6,
           40.0
         ]
       ]
@@ -4800,8 +4800,8 @@
         ],
         "B": [
           [
-            1785790219,
-            78.0
+            1785795485,
+            2.0
           ],
           [
             1785956357,
@@ -6245,8 +6245,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "ED-OCR",
+            "kind": "escalate",
+            "raised_at": 1789678324
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6363,9 +6369,9 @@
         {
           "id": "ED-OCR",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 30,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 31,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6380,7 +6386,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "FLOW-QUERY",
@@ -6430,7 +6436,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 29,
+          "ctx_pct": 32,
           "last_commit_at": 1789676867,
           "head": "d409a281",
           "subfence": {
@@ -6742,13 +6748,19 @@
           ]
         }
       },
-      "snapshot_id": "8e7064bebf47b549"
+      "snapshot_id": "cf37f99014a522f3"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "INT7-PUBLIC-API-CLI",
+            "kind": "needs-owner",
+            "raised_at": 1789678299
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6822,9 +6834,9 @@
         {
           "id": "INT7-PUBLIC-API-CLI",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 29,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6839,7 +6851,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "OUT",
@@ -7218,7 +7230,7 @@
           ]
         }
       },
-      "snapshot_id": "5d6eb0ccc47702d7"
+      "snapshot_id": "1c0ab9ab9972c406"
     },
     "scriptgen": {
       "schema": 1,
@@ -7570,7 +7582,7 @@
           ]
         }
       },
-      "snapshot_id": "0c3ae6614479b74c"
+      "snapshot_id": "3c4964cee0758dcc"
     }
   },
   "pm": {
@@ -7594,22 +7606,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 24
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 28
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       }
     ]
   },
-  "snapshot_id": "5cf44cb5d6133568",
-  "published_at": "2026-09-17T20:48:25Z"
+  "snapshot_id": "4e372c7d168361a2",
+  "published_at": "2026-09-17T20:53:43Z"
 }
