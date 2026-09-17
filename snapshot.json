@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": 138,
         "used": 100,
-        "at": 1789634272,
+        "at": 1789635525,
         "reset": "01:09 on 19 Sep",
         "spark": [
           [
@@ -850,7 +850,7 @@
             100.0
           ],
           [
-            72.5,
+            72.6,
             100.0
           ]
         ]
@@ -861,9 +861,9 @@
         "target": 100,
         "label": "A",
         "mult": "20x",
-        "projected": 153,
-        "used": 58,
-        "at": 1789634272,
+        "projected": 158,
+        "used": 60,
+        "at": 1789635525,
         "reset": "Sep 21, 11am (America/Los_Angeles)",
         "spark": [
           [
@@ -1748,7 +1748,7 @@
       "target": 100,
       "projected": 43,
       "used": 39,
-      "at": 1789634272,
+      "at": 1789635525,
       "reset": "Sep 17, 19:39",
       "level": "pro",
       "spark": [
@@ -2750,7 +2750,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1789634272,
+      "at": 1789635525,
       "spark": [
         [
           1789034400,
@@ -4616,8 +4616,8 @@
         ],
         "B": [
           [
-            1785751131,
-            68.0
+            1785752472,
+            69.0
           ],
           [
             1785760702,
@@ -6097,8 +6097,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "PLAYER-MEDIA-ADAPTER",
+            "kind": "needs-owner",
+            "raised_at": 1789639188
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6258,9 +6264,9 @@
         {
           "id": "PLAYER-MEDIA-ADAPTER",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 25,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 26,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6275,7 +6281,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6551,7 +6557,7 @@
           ]
         }
       },
-      "snapshot_id": "0e709bfeb5eaa6c5"
+      "snapshot_id": "10b014172134f1fb"
     },
     "outbound": {
       "schema": 1,
@@ -7005,7 +7011,7 @@
           ]
         }
       },
-      "snapshot_id": "53744729e56d1659"
+      "snapshot_id": "c9aa00316e06d27a"
     },
     "scriptgen": {
       "schema": 1,
@@ -7017,7 +7023,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1789637395
+        "last_pass_at": 1789639148
       },
       "runstate": {
         "auto": false,
@@ -7044,7 +7050,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 17,
+          "ctx_pct": 20,
           "last_commit_at": 1789638189,
           "head": "a901f9c",
           "subfence": {
@@ -7357,7 +7363,7 @@
           ]
         }
       },
-      "snapshot_id": "1bcf2a7031a97d14"
+      "snapshot_id": "976d6dfecb222308"
     }
   },
   "pm": {
@@ -7372,7 +7378,7 @@
       "available_note": ""
     },
     "pm_session": {
-      "lock": "2418554 2026-09-17T08:58:13Z",
+      "lock": "2655650 2026-09-17T09:58:13Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -7381,22 +7387,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3
+        "monitor_last_pass_min": 9
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 7
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 4
       }
     ]
   },
-  "snapshot_id": "48a0847716837dd8",
-  "published_at": "2026-09-17T09:58:09Z"
+  "snapshot_id": "9cdd0282fc55351d",
+  "published_at": "2026-09-17T10:03:24Z"
 }
