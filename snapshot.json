@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": 109,
         "used": 100,
-        "at": 1789751139,
+        "at": 1789753515,
         "reset": "01:09 on 19 Sep",
         "spark": [
           [
@@ -1453,7 +1453,7 @@
             87.0
           ],
           [
-            57.5,
+            57.6,
             90.0
           ]
         ]
@@ -1462,10 +1462,10 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 96,
-        "used": 90,
-        "at": 1789751139,
-        "reset": "Sep 18, 9:59pm (America/Los_Angeles)",
+        "projected": 97,
+        "used": 91,
+        "at": 1789753515,
+        "reset": "Sep 18, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1789282800,
@@ -2645,7 +2645,7 @@
       "available": true,
       "burn_per_day": 0.0,
       "days_to_empty": null,
-      "at": 1789751139,
+      "at": 1789753515,
       "spark": [
         [
           1789160400,
@@ -6698,10 +6698,10 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 121,
+              "proj": 109,
               "target": 100,
               "used": 100,
-              "day": 6,
+              "day": 7,
               "active": "C2",
               "wall": true
             },
@@ -6716,15 +6716,15 @@
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 104,
+              "proj": 97,
               "target": 100,
-              "used": 88,
-              "day": 6,
+              "used": 91,
+              "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-18T03:14:40Z",
+          "updated": "2026-09-18T18:45:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6740,7 +6740,7 @@
           ]
         }
       },
-      "snapshot_id": "7ed0a156c0235cf3"
+      "snapshot_id": "6c0fcd65b2638f5e"
     },
     "outbound": {
       "schema": 1,
@@ -6773,7 +6773,7 @@
           "up": true
         },
         "repl": {
-          "up": false
+          "up": true
         },
         "monitor": {
           "up": false
@@ -6893,6 +6893,28 @@
             "plan": true,
             "synth": true,
             "build": true,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "W3-DP3",
+          "status": "scoped",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 0,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
             "review": false
           },
           "gate_open": false
@@ -7180,10 +7202,10 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 121,
+              "proj": 109,
               "target": 100,
               "used": 100,
-              "day": 6,
+              "day": 7,
               "active": "C2",
               "wall": true
             },
@@ -7198,15 +7220,15 @@
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 104,
+              "proj": 97,
               "target": 100,
-              "used": 88,
-              "day": 6,
+              "used": 91,
+              "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-18T03:14:40Z",
+          "updated": "2026-09-18T18:45:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7222,7 +7244,7 @@
           ]
         }
       },
-      "snapshot_id": "e94d291b95f2ea49"
+      "snapshot_id": "60bb85957e798aef"
     },
     "scriptgen": {
       "schema": 1,
@@ -7534,10 +7556,10 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 121,
+              "proj": 109,
               "target": 100,
               "used": 100,
-              "day": 6,
+              "day": 7,
               "active": "C2",
               "wall": true
             },
@@ -7552,15 +7574,15 @@
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 104,
+              "proj": 97,
               "target": 100,
-              "used": 88,
-              "day": 6,
+              "used": 91,
+              "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-18T03:14:40Z",
+          "updated": "2026-09-18T18:45:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7576,7 +7598,7 @@
           ]
         }
       },
-      "snapshot_id": "dc7d6b25a2d0a7a3"
+      "snapshot_id": "3a0fb3f5d73f2cd0"
     }
   },
   "pm": {
@@ -7598,24 +7620,24 @@
     "fleets": [
       {
         "fleet": "outbound",
-        "repl_up": false,
+        "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1115
+        "monitor_last_pass_min": 1121
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 928
+        "monitor_last_pass_min": 934
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 1115
+        "monitor_last_pass_min": 1121
       }
     ]
   },
-  "snapshot_id": "cf26ab947bdc9e0e",
-  "published_at": "2026-09-18T18:41:09Z"
+  "snapshot_id": "cb198cd2a50ead66",
+  "published_at": "2026-09-18T18:46:27Z"
 }
