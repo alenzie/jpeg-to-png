@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": 121,
         "used": 100,
-        "at": 1789697158,
+        "at": 1789697676,
         "reset": "01:09 on 19 Sep",
         "spark": [
           [
@@ -1341,7 +1341,7 @@
             87.0
           ],
           [
-            48.3,
+            48.4,
             90.0
           ]
         ]
@@ -1352,8 +1352,8 @@
         "mult": "20x",
         "projected": 104,
         "used": 88,
-        "at": 1789697158,
-        "reset": "Sep 18, 10pm (America/Los_Angeles)",
+        "at": 1789697676,
+        "reset": "Sep 18, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1789282800,
@@ -1874,7 +1874,7 @@
             87.0
           ],
           [
-            84.6,
+            84.7,
             88.0
           ]
         ]
@@ -2422,7 +2422,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1789697158,
+      "at": 1789697676,
       "spark": [
         [
           1789099200,
@@ -5802,7 +5802,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1789699330
+        "last_pass_at": 1789701139
       },
       "runstate": {
         "auto": false,
@@ -5978,17 +5978,30 @@
         {
           "id": "PLAYER-MEDIA-ADAPTER",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 26,
-          "last_commit_at": 1789700502,
-          "head": "48a17928",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 6,
+          "last_commit_at": 1789701221,
+          "head": "510ccf2d",
           "subfence": {
             "done": 11,
             "total": 12
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 2,
+              "seats": "5× Sonnet-5high same 5 lenses fresh",
+              "must": 2,
+              "should": 3,
+              "could": 3,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "510ccf2d",
+              "at": 1789701221
+            },
             {
               "sha": "48a17928",
               "at": 1789700502
@@ -6004,16 +6017,12 @@
             {
               "sha": "b1cec654",
               "at": 1789690894
-            },
-            {
-              "sha": "95df0d56",
-              "at": 1789690591
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
-            "build": false,
+            "build": true,
             "review": false
           },
           "gate_open": false
@@ -6268,15 +6277,15 @@
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 103,
+              "proj": 104,
               "target": 100,
-              "used": 87,
+              "used": 88,
               "day": 6,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-18T02:42:08Z",
+          "updated": "2026-09-18T03:14:40Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6292,7 +6301,7 @@
           ]
         }
       },
-      "snapshot_id": "6412e5de361c9daf"
+      "snapshot_id": "800f1c33780c981e"
     },
     "outbound": {
       "schema": 1,
@@ -6750,15 +6759,15 @@
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 103,
+              "proj": 104,
               "target": 100,
-              "used": 87,
+              "used": 88,
               "day": 6,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-18T02:42:08Z",
+          "updated": "2026-09-18T03:14:40Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6774,7 +6783,7 @@
           ]
         }
       },
-      "snapshot_id": "9e19f8b25b08e3e4"
+      "snapshot_id": "1eeee9660471cb3b"
     },
     "scriptgen": {
       "schema": 1,
@@ -7104,15 +7113,15 @@
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 103,
+              "proj": 104,
               "target": 100,
-              "used": 87,
+              "used": 88,
               "day": 6,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-18T02:42:08Z",
+          "updated": "2026-09-18T03:14:40Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7128,7 +7137,7 @@
           ]
         }
       },
-      "snapshot_id": "5f5ac0929ba27c5b"
+      "snapshot_id": "5c2036f7a945608a"
     }
   },
   "pm": {
@@ -7152,22 +7161,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 185
+        "monitor_last_pass_min": 190
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 185
+        "monitor_last_pass_min": 190
       }
     ]
   },
-  "snapshot_id": "f2c27491daa02484",
-  "published_at": "2026-09-18T03:10:46Z"
+  "snapshot_id": "18ec8ed90ef2e495",
+  "published_at": "2026-09-18T03:16:04Z"
 }
