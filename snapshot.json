@@ -534,7 +534,7 @@
         ],
         "trail": [
           [
-            1.8,
+            1.9,
             0.0
           ]
         ]
@@ -1294,7 +1294,7 @@
             6.0
           ],
           [
-            3.9,
+            4.0,
             10.0
           ]
         ]
@@ -5637,49 +5637,6 @@
       },
       "units": [
         {
-          "id": "AUTH-INTERVIEW",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 7,
-          "last_commit_at": 1789817477,
-          "head": "7e2272c0",
-          "subfence": {
-            "done": 13,
-            "total": 14
-          },
-          "review_rounds": [],
-          "commits": [
-            {
-              "sha": "7e2272c0",
-              "at": 1789817477
-            },
-            {
-              "sha": "3696de5a",
-              "at": 1789817032
-            },
-            {
-              "sha": "30311d41",
-              "at": 1789815851
-            },
-            {
-              "sha": "e7f009ca",
-              "at": 1789814793
-            },
-            {
-              "sha": "ce55df0d",
-              "at": 1789814687
-            }
-          ],
-          "fences": {
-            "plan": true,
-            "synth": true,
-            "build": true,
-            "review": false
-          },
-          "gate_open": false
-        },
-        {
           "id": "ED-OCR",
           "status": "building",
           "stage": "interviewing",
@@ -5703,9 +5660,16 @@
         }
       ],
       "eligible": [
+        "AUTH-INTERVIEW-CLIP-PICKER",
         "BM-POOL"
       ],
       "merge_feed": [
+        {
+          "pr": 23,
+          "unit": "AUTH-INTERVIEW",
+          "merged_at": 1789817756,
+          "sha": "5bbdf2b0"
+        },
         {
           "pr": 24,
           "unit": "PLAYER-MEDIA-ADAPTER",
@@ -5729,12 +5693,6 @@
           "unit": "EVENTS-UI",
           "merged_at": 1789358022,
           "sha": "9863db75"
-        },
-        {
-          "pr": 19,
-          "unit": "BM-ELASTIC-GRID-AUDIT",
-          "merged_at": 1789034326,
-          "sha": "1fae6aaf"
         }
       ],
       "decisions": [],
@@ -5975,7 +5933,7 @@
           ]
         }
       },
-      "snapshot_id": "32584969c52ae41e"
+      "snapshot_id": "b6fdc7bc32129122"
     },
     "outbound": {
       "schema": 1,
@@ -6021,14 +5979,18 @@
           "stage": "planning",
           "stage_i": 1,
           "ctx_pct": 7,
-          "last_commit_at": 1789817093,
-          "head": "9f4860eb",
+          "last_commit_at": 1789817734,
+          "head": "b3143918",
           "subfence": {
             "done": 13,
             "total": 14
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "b3143918",
+              "at": 1789817734
+            },
             {
               "sha": "9f4860eb",
               "at": 1789817093
@@ -6044,10 +6006,6 @@
             {
               "sha": "9b122ca1",
               "at": 1789816302
-            },
-            {
-              "sha": "9434bf7e",
-              "at": 1789816191
             }
           ],
           "fences": {
@@ -6466,7 +6424,7 @@
           ]
         }
       },
-      "snapshot_id": "7fd114c60819a67b"
+      "snapshot_id": "bed4eeed5fa6f7ed"
     },
     "scriptgen": {
       "schema": 1,
@@ -6820,7 +6778,7 @@
           ]
         }
       },
-      "snapshot_id": "b393daf4fb299963"
+      "snapshot_id": "8b24f09d76522165"
     }
   },
   "pm": {
@@ -6844,22 +6802,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2128
+        "monitor_last_pass_min": 2133
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1941
+        "monitor_last_pass_min": 1946
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 2128
+        "monitor_last_pass_min": 2133
       }
     ]
   },
-  "snapshot_id": "7491cc52eff1c81a",
-  "published_at": "2026-09-19T11:33:36Z"
+  "snapshot_id": "c3c599053e89df23",
+  "published_at": "2026-09-19T11:38:55Z"
 }
