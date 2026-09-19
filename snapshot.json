@@ -534,7 +534,7 @@
         ],
         "trail": [
           [
-            5.6,
+            5.7,
             0.0
           ]
         ]
@@ -869,7 +869,7 @@
             87.0
           ],
           [
-            71.4,
+            71.5,
             90.0
           ]
         ]
@@ -1294,7 +1294,7 @@
             18.0
           ],
           [
-            7.7,
+            7.8,
             20.0
           ]
         ]
@@ -5637,8 +5637,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "ED-OCR",
+            "kind": "escalate",
+            "raised_at": 1789840868
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5669,41 +5675,16 @@
         {
           "id": "ED-OCR",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 6,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 11,
           "last_commit_at": 1789840517,
           "head": "fbf717ba",
           "subfence": {
             "done": 9,
             "total": 10
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "Sonnethigh fresh breadth find",
-              "must": 0,
-              "should": 1,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "opusxhigh fresh confirm over the fixed p",
-              "must": 0,
-              "should": 1,
-              "could": 1,
-              "nit": 1
-            },
-            {
-              "round": 3,
-              "seats": "opusxhigh fresh confirm over the R2-fixe",
-              "must": 0,
-              "should": 0,
-              "could": 1,
-              "nit": 1
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "fbf717ba",
@@ -5732,7 +5713,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6009,7 +5990,7 @@
           ]
         }
       },
-      "snapshot_id": "0f6e42218b8b276c"
+      "snapshot_id": "cbac3c58a2670f27"
     },
     "outbound": {
       "schema": 1,
@@ -6418,7 +6399,7 @@
           ]
         }
       },
-      "snapshot_id": "c77f0125b84f13cc"
+      "snapshot_id": "6a61e632f7ca2a16"
     },
     "scriptgen": {
       "schema": 1,
@@ -6772,7 +6753,7 @@
           ]
         }
       },
-      "snapshot_id": "227be1cca01682b0"
+      "snapshot_id": "8102f5b9bd2e4b65"
     }
   },
   "pm": {
@@ -6796,22 +6777,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 25
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 19
+        "monitor_last_pass_min": 25
       }
     ]
   },
-  "snapshot_id": "35520c56e3bf5525",
-  "published_at": "2026-09-19T17:57:26Z"
+  "snapshot_id": "2426fc905d34aa22",
+  "published_at": "2026-09-19T18:02:46Z"
 }
