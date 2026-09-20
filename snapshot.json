@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": null,
         "used": 12,
-        "at": 1789865438,
+        "at": 1789866275,
         "reset": "01:32 on 26 Sep",
         "spark": [
           [
@@ -534,7 +534,7 @@
         ],
         "trail": [
           [
-            10.4,
+            10.5,
             0.0
           ]
         ]
@@ -837,7 +837,7 @@
             87.0
           ],
           [
-            76.2,
+            76.3,
             90.0
           ]
         ]
@@ -846,9 +846,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": null,
-        "used": 24,
-        "at": 1789865438,
+        "projected": 199,
+        "used": 25,
+        "at": 1789866275,
         "reset": "Sep 25, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1210,6 +1210,10 @@
           [
             1789786800,
             93
+          ],
+          [
+            1789866000,
+            199
           ]
         ],
         "trail": [
@@ -1294,8 +1298,12 @@
             21.0
           ],
           [
-            12.5,
+            12.0,
             22.0
+          ],
+          [
+            12.6,
+            25.0
           ]
         ]
       }
@@ -1304,7 +1312,7 @@
       "target": 100,
       "projected": 57,
       "used": 16,
-      "at": 1789865438,
+      "at": 1789866275,
       "reset": "Sep 24, 19:39",
       "level": "pro",
       "spark": [
@@ -1815,6 +1823,10 @@
         [
           1789862400,
           54
+        ],
+        [
+          1789866000,
+          57
         ]
       ],
       "trail": [
@@ -2007,8 +2019,12 @@
           13.0
         ],
         [
-          28.2,
+          28.0,
           15.0
+        ],
+        [
+          28.3,
+          16.0
         ]
       ]
     },
@@ -2018,7 +2034,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1789865438,
+      "at": 1789866275,
       "spark": [
         [
           1789264800,
@@ -2614,6 +2630,10 @@
         ],
         [
           1789862400,
+          9.5
+        ],
+        [
+          1789866000,
           9.5
         ]
       ]
@@ -3504,6 +3524,10 @@
           [
             1789862510,
             7.0
+          ],
+          [
+            1789866275,
+            12.0
           ]
         ]
       },
@@ -4686,6 +4710,10 @@
           [
             1789862510,
             22.0
+          ],
+          [
+            1789866275,
+            25.0
           ]
         ]
       },
@@ -5677,6 +5705,10 @@
         [
           1789862510,
           15.0
+        ],
+        [
+          1789866275,
+          16.0
         ]
       ]
     }
@@ -5685,8 +5717,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "ED-OCR",
+            "kind": "escalate",
+            "raised_at": 1789870012
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5717,49 +5755,16 @@
         {
           "id": "ED-OCR",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 49,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 52,
           "last_commit_at": 1789869703,
           "head": "bef70545",
           "subfence": {
             "done": 9,
             "total": 10
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "Sonnethigh fresh breadth find",
-              "must": 0,
-              "should": 1,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "opusxhigh fresh confirm over the fixed p",
-              "must": 0,
-              "should": 1,
-              "could": 1,
-              "nit": 1
-            },
-            {
-              "round": 3,
-              "seats": "opusxhigh fresh confirm over the R2-fixe",
-              "must": 0,
-              "should": 0,
-              "could": 1,
-              "nit": 1
-            },
-            {
-              "round": 1,
-              "seats": "glm-5.3 swarm-4 breadth FIND NEVER conve",
-              "must": 0,
-              "should": 3,
-              "could": 5,
-              "nit": 7
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "bef70545",
@@ -5788,7 +5793,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6040,16 +6045,16 @@
               "wall": false
             },
             "claude": {
-              "verdict": "UNKNOWN",
-              "proj": null,
+              "verdict": "IN_BAND",
+              "proj": 199,
               "target": 200,
-              "used": 24,
+              "used": 25,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-20T01:50:27Z",
+          "updated": "2026-09-20T02:04:38Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6065,7 +6070,7 @@
           ]
         }
       },
-      "snapshot_id": "c50596f6f2776422"
+      "snapshot_id": "ce2a6c21216a845a"
     },
     "outbound": {
       "schema": 1,
@@ -6104,9 +6109,9 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 31,
-          "last_commit_at": 1789868930,
-          "head": "4e5f9b26",
+          "ctx_pct": 32,
+          "last_commit_at": 1789869838,
+          "head": "adf25477",
           "subfence": {
             "done": 9,
             "total": 10
@@ -6119,9 +6124,25 @@
               "should": 5,
               "could": 7,
               "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "codex gpt-5.5xhigh whole-PR",
+              "must": 1,
+              "should": 1,
+              "could": 1,
+              "nit": 0
             }
           ],
           "commits": [
+            {
+              "sha": "adf25477",
+              "at": 1789869838
+            },
+            {
+              "sha": "7d6ec95c",
+              "at": 1789869784
+            },
             {
               "sha": "4e5f9b26",
               "at": 1789868930
@@ -6133,14 +6154,6 @@
             {
               "sha": "a6194bff",
               "at": 1789829186
-            },
-            {
-              "sha": "06734bc2",
-              "at": 1789829128
-            },
-            {
-              "sha": "eb3fd7fe",
-              "at": 1789828943
             }
           ],
           "fences": {
@@ -6452,16 +6465,16 @@
               "wall": false
             },
             "claude": {
-              "verdict": "UNKNOWN",
-              "proj": null,
+              "verdict": "IN_BAND",
+              "proj": 199,
               "target": 200,
-              "used": 24,
+              "used": 25,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-20T01:50:27Z",
+          "updated": "2026-09-20T02:04:38Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6477,7 +6490,7 @@
           ]
         }
       },
-      "snapshot_id": "3dabf2a2ecbb48a3"
+      "snapshot_id": "96e3959f0a075e9c"
     },
     "scriptgen": {
       "schema": 1,
@@ -6790,16 +6803,16 @@
               "wall": false
             },
             "claude": {
-              "verdict": "UNKNOWN",
-              "proj": null,
+              "verdict": "IN_BAND",
+              "proj": 199,
               "target": 200,
-              "used": 24,
+              "used": 25,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-20T01:50:27Z",
+          "updated": "2026-09-20T02:04:38Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6815,7 +6828,7 @@
           ]
         }
       },
-      "snapshot_id": "366547dc4d48b41c"
+      "snapshot_id": "f060198ce00bf403"
     }
   },
   "pm": {
@@ -6839,22 +6852,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 19
+        "monitor_last_pass_min": 24
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 19
+        "monitor_last_pass_min": 24
       }
     ]
   },
-  "snapshot_id": "fd9caf72a9cbc9f1",
-  "published_at": "2026-09-20T02:02:40Z"
+  "snapshot_id": "5d827edc3f7daf7c",
+  "published_at": "2026-09-20T02:07:58Z"
 }
