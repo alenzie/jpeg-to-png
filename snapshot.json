@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 102,
+        "projected": 101,
         "used": 16,
-        "at": 1789898336,
+        "at": 1789898818,
         "reset": "01:32 on 26 Sep",
         "spark": [
           [
@@ -526,11 +526,15 @@
           [
             1789894800,
             104
+          ],
+          [
+            1789898400,
+            101
           ]
         ],
         "trail": [
           [
-            15.8,
+            15.9,
             0.0
           ]
         ]
@@ -818,9 +822,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 213,
-        "used": 38,
-        "at": 1789898336,
+        "projected": 218,
+        "used": 39,
+        "at": 1789898818,
         "reset": "Sep 25, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1202,6 +1206,10 @@
           [
             1789894800,
             206
+          ],
+          [
+            1789898400,
+            218
           ]
         ],
         "trail": [
@@ -1322,8 +1330,12 @@
             34.0
           ],
           [
-            17.9,
+            18.0,
             36.0
+          ],
+          [
+            18.0,
+            39.0
           ]
         ]
       }
@@ -1332,7 +1344,7 @@
       "target": 100,
       "projected": 48,
       "used": 16,
-      "at": 1789898336,
+      "at": 1789898818,
       "reset": "Sep 24, 19:39",
       "level": "pro",
       "spark": [
@@ -1843,6 +1855,10 @@
         [
           1789894800,
           48
+        ],
+        [
+          1789898400,
+          48
         ]
       ],
       "trail": [
@@ -2071,6 +2087,10 @@
           16.0
         ],
         [
+          33.0,
+          16.0
+        ],
+        [
           33.6,
           16.0
         ]
@@ -2082,7 +2102,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1789898336,
+      "at": 1789898818,
       "spark": [
         [
           1789297200,
@@ -2678,6 +2698,10 @@
         ],
         [
           1789894800,
+          9.5
+        ],
+        [
+          1789898400,
           9.5
         ]
       ]
@@ -3571,6 +3595,10 @@
           ],
           [
             1789896258,
+            16.0
+          ],
+          [
+            1789898818,
             16.0
           ]
         ]
@@ -4754,6 +4782,10 @@
           [
             1789896258,
             36.0
+          ],
+          [
+            1789898818,
+            39.0
           ]
         ]
       },
@@ -5749,6 +5781,10 @@
         [
           1789896258,
           16.0
+        ],
+        [
+          1789898818,
+          16.0
         ]
       ]
     }
@@ -5757,14 +5793,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "ED-OCR",
-            "kind": "escalate",
-            "raised_at": 1789902205
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5833,7 +5863,7 @@
             "build": true,
             "review": true
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -6110,7 +6140,7 @@
           ]
         }
       },
-      "snapshot_id": "cd2eed8de199d9ad"
+      "snapshot_id": "1fef9f86aeb5c060"
     },
     "outbound": {
       "schema": 1,
@@ -6469,7 +6499,7 @@
           ]
         }
       },
-      "snapshot_id": "0cb4eb827ba93d93"
+      "snapshot_id": "511f5386202a001e"
     },
     "scriptgen": {
       "schema": 1,
@@ -6533,6 +6563,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 22,
+          "unit": "rustls-rustsec-2026-0285",
+          "merged_at": 1789902470,
+          "sha": "296e605"
+        },
+        {
           "pr": 18,
           "unit": "CAL-GATE",
           "merged_at": 1789377762,
@@ -6555,12 +6591,6 @@
           "unit": "CAL-RULINGS-API",
           "merged_at": 1788559537,
           "sha": "c6d68a8"
-        },
-        {
-          "pr": 13,
-          "unit": "CAL-ENGINE",
-          "merged_at": 1788204213,
-          "sha": "513020a"
         }
       ],
       "decisions": [],
@@ -6801,7 +6831,7 @@
           ]
         }
       },
-      "snapshot_id": "e89e096a34a27fd7"
+      "snapshot_id": "1b068c1c3ed956b2"
     }
   },
   "pm": {
@@ -6816,7 +6846,7 @@
       "available_note": ""
     },
     "pm_session": {
-      "lock": "2560232 2026-09-20T10:57:23Z",
+      "lock": "2683584 2026-09-20T11:06:37Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -6825,22 +6855,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 12
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 12
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 12
       }
     ]
   },
-  "snapshot_id": "18f7d17a97bcc302",
-  "published_at": "2026-09-20T11:04:47Z"
+  "snapshot_id": "ebcb18fb4fbb13e7",
+  "published_at": "2026-09-20T11:10:05Z"
 }
