@@ -12,10 +12,6 @@
         "reset": "01:32 on 26 Sep",
         "spark": [
           [
-            1789293600,
-            103
-          ],
-          [
             1789297200,
             102
           ],
@@ -534,7 +530,7 @@
         ],
         "trail": [
           [
-            15.7,
+            15.8,
             0.0
           ]
         ]
@@ -813,7 +809,7 @@
             87.0
           ],
           [
-            81.5,
+            81.6,
             90.0
           ]
         ]
@@ -827,10 +823,6 @@
         "at": 1789898336,
         "reset": "Sep 25, 10pm (America/Los_Angeles)",
         "spark": [
-          [
-            1789293600,
-            54
-          ],
           [
             1789297200,
             54
@@ -1330,7 +1322,7 @@
             34.0
           ],
           [
-            17.8,
+            17.9,
             36.0
           ]
         ]
@@ -1344,10 +1336,6 @@
       "reset": "Sep 24, 19:39",
       "level": "pro",
       "spark": [
-        [
-          1789293600,
-          38
-        ],
         [
           1789297200,
           38
@@ -2083,7 +2071,7 @@
           16.0
         ],
         [
-          33.5,
+          33.6,
           16.0
         ]
       ]
@@ -2096,10 +2084,6 @@
       "days_to_empty": null,
       "at": 1789898336,
       "spark": [
-        [
-          1789293600,
-          9.5
-        ],
         [
           1789297200,
           9.5
@@ -2992,10 +2976,6 @@
           [
             1789279522,
             13.0
-          ],
-          [
-            1789297182,
-            17.0
           ],
           [
             1789297864,
@@ -4312,10 +4292,6 @@
             0.0
           ],
           [
-            1789297182,
-            10.0
-          ],
-          [
             1789297864,
             10.0
           ],
@@ -5179,10 +5155,6 @@
           9.0
         ],
         [
-          1789297182,
-          13.0
-        ],
-        [
           1789297864,
           13.0
         ],
@@ -5785,8 +5757,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "ED-OCR",
+            "kind": "escalate",
+            "raised_at": 1789902205
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5819,7 +5797,7 @@
           "status": "done",
           "stage": "done",
           "stage_i": 7,
-          "ctx_pct": 10,
+          "ctx_pct": 9,
           "last_commit_at": 1789901878,
           "head": "32af3359",
           "subfence": {
@@ -5855,7 +5833,7 @@
             "build": true,
             "review": true
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6132,7 +6110,7 @@
           ]
         }
       },
-      "snapshot_id": "fca2601ceb4a89a1"
+      "snapshot_id": "cd2eed8de199d9ad"
     },
     "outbound": {
       "schema": 1,
@@ -6491,7 +6469,7 @@
           ]
         }
       },
-      "snapshot_id": "010b4946ff798bc6"
+      "snapshot_id": "0cb4eb827ba93d93"
     },
     "scriptgen": {
       "schema": 1,
@@ -6530,7 +6508,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 28,
+          "ctx_pct": 31,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6823,7 +6801,7 @@
           ]
         }
       },
-      "snapshot_id": "e19c66b710c55b7d"
+      "snapshot_id": "e89e096a34a27fd7"
     }
   },
   "pm": {
@@ -6847,22 +6825,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 7
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 7
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 7
       }
     ]
   },
-  "snapshot_id": "206f01dfb20c689f",
-  "published_at": "2026-09-20T10:59:23Z"
+  "snapshot_id": "18f7d17a97bcc302",
+  "published_at": "2026-09-20T11:04:47Z"
 }
