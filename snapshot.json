@@ -6143,14 +6143,8 @@
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "INT7-PUBLIC-API-CLI",
-            "kind": "escalate",
-            "raised_at": 1789876747
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6180,10 +6174,10 @@
       "units": [
         {
           "id": "INT7-PUBLIC-API-CLI",
-          "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 11,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 12,
           "last_commit_at": 1789875918,
           "head": "7da912a2",
           "subfence": {
@@ -6219,7 +6213,7 @@
             "build": true,
             "review": true
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -6240,6 +6234,12 @@
         "MERGE-EDIT-UNDO"
       ],
       "merge_feed": [
+        {
+          "pr": 313,
+          "unit": "INT7-PUBLIC-API-CLI",
+          "merged_at": 1789900384,
+          "sha": "cafc7fb1"
+        },
         {
           "pr": 311,
           "unit": "FREE-DATA-BACKFILL",
@@ -6263,12 +6263,6 @@
           "unit": "WARM-REPLY",
           "merged_at": 1789206429,
           "sha": "a6322bb3"
-        },
-        {
-          "pr": 301,
-          "unit": "CAL-HARDENING-2",
-          "merged_at": 1788923415,
-          "sha": "469cbc82"
         }
       ],
       "decisions": [
@@ -6547,7 +6541,7 @@
           ]
         }
       },
-      "snapshot_id": "8eb604cef3a8e3e2"
+      "snapshot_id": "189cfda207535234"
     },
     "scriptgen": {
       "schema": 1,
@@ -6909,22 +6903,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 12
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 12
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 12
       }
     ]
   },
-  "snapshot_id": "6c3b63ba776bbc98",
-  "published_at": "2026-09-20T10:32:47Z"
+  "snapshot_id": "687222f690a7d416",
+  "published_at": "2026-09-20T10:38:07Z"
 }
