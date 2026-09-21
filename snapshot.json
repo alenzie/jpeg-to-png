@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": 125,
         "used": 31,
-        "at": 1789952806,
+        "at": 1789953548,
         "reset": "01:32 on 26 Sep",
         "spark": [
           [
@@ -550,7 +550,7 @@
         ],
         "trail": [
           [
-            24.8,
+            24.9,
             0.0
           ]
         ]
@@ -829,7 +829,7 @@
             87.0
           ],
           [
-            90.6,
+            90.7,
             90.0
           ]
         ]
@@ -838,9 +838,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 197,
+        "projected": 196,
         "used": 53,
-        "at": 1789952806,
+        "at": 1789953548,
         "reset": "Sep 25, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1426,7 +1426,7 @@
             51.0
           ],
           [
-            26.9,
+            27.0,
             53.0
           ]
         ]
@@ -1436,7 +1436,7 @@
       "target": 100,
       "projected": 45,
       "used": 19,
-      "at": 1789952806,
+      "at": 1789953548,
       "reset": "Sep 24, 19:39",
       "level": "pro",
       "spark": [
@@ -2259,7 +2259,7 @@
           19.0
         ],
         [
-          42.6,
+          42.7,
           19.0
         ]
       ]
@@ -2270,7 +2270,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1789952806,
+      "at": 1789953548,
       "spark": [
         [
           1789351200,
@@ -6334,13 +6334,13 @@
               "proj": 45,
               "target": 100,
               "used": 19,
-              "day": 3,
+              "day": 4,
               "active": "G1",
               "wall": false
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 198,
+              "proj": 196,
               "target": 200,
               "used": 53,
               "day": 2,
@@ -6348,7 +6348,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-21T02:02:58Z",
+          "updated": "2026-09-21T02:20:14Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6364,7 +6364,7 @@
           ]
         }
       },
-      "snapshot_id": "f723fb85833f2193"
+      "snapshot_id": "1e3f406157740149"
     },
     "outbound": {
       "schema": 1,
@@ -6403,18 +6403,39 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 33,
-          "last_commit_at": null,
-          "head": null,
+          "ctx_pct": 38,
+          "last_commit_at": 1789957110,
+          "head": "c59be820",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
-          "commits": [],
+          "commits": [
+            {
+              "sha": "c59be820",
+              "at": 1789957110
+            },
+            {
+              "sha": "016a7654",
+              "at": 1789955582
+            },
+            {
+              "sha": "3a1353e6",
+              "at": 1789947351
+            },
+            {
+              "sha": "bb849b09",
+              "at": 1789946180
+            },
+            {
+              "sha": "07f853f4",
+              "at": 1789946158
+            }
+          ],
           "fences": {
             "plan": false,
-            "synth": false,
+            "synth": true,
             "build": false,
             "review": false
           },
@@ -6715,13 +6736,13 @@
               "proj": 45,
               "target": 100,
               "used": 19,
-              "day": 3,
+              "day": 4,
               "active": "G1",
               "wall": false
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 198,
+              "proj": 196,
               "target": 200,
               "used": 53,
               "day": 2,
@@ -6729,7 +6750,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-21T02:02:58Z",
+          "updated": "2026-09-21T02:20:14Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6745,13 +6766,19 @@
           ]
         }
       },
-      "snapshot_id": "ab6c5edc1379ccd2"
+      "snapshot_id": "c41580ad7413f2c1"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "ACCOUNTS",
+            "kind": "escalate",
+            "raised_at": 1789957216
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6782,66 +6809,21 @@
         {
           "id": "ACCOUNTS",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 38,
-          "last_commit_at": 1789956161,
-          "head": "3e1a17fa",
+          "last_commit_at": 1789957196,
+          "head": "cd9de430",
           "subfence": {
             "done": 16,
             "total": 16
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-5.6-sol  xhigh breadth",
-              "must": 2,
-              "should": 3,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.5  xhigh",
-              "must": 0,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra  xhigh cumulative pass",
-              "must": 1,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.5  xhigh",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.6-terra  xhigh declarer",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "gpt-5.6-terra  xhigh declarer",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "cd9de430",
+              "at": 1789957196
+            },
             {
               "sha": "3e1a17fa",
               "at": 1789956161
@@ -6857,10 +6839,6 @@
             {
               "sha": "3f95d760",
               "at": 1789953903
-            },
-            {
-              "sha": "7f3a5aa6",
-              "at": 1789953856
             }
           ],
           "fences": {
@@ -6869,7 +6847,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -7117,13 +7095,13 @@
               "proj": 45,
               "target": 100,
               "used": 19,
-              "day": 3,
+              "day": 4,
               "active": "G1",
               "wall": false
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 198,
+              "proj": 196,
               "target": 200,
               "used": 53,
               "day": 2,
@@ -7131,7 +7109,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-21T02:02:58Z",
+          "updated": "2026-09-21T02:20:14Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7147,7 +7125,7 @@
           ]
         }
       },
-      "snapshot_id": "b172cd3350a9cf56"
+      "snapshot_id": "2214b8802ee6597a"
     }
   },
   "pm": {
@@ -7171,22 +7149,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 9
+        "monitor_last_pass_min": 14
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 9
+        "monitor_last_pass_min": 14
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 9
+        "monitor_last_pass_min": 14
       }
     ]
   },
-  "snapshot_id": "62e898df9bd75e74",
-  "published_at": "2026-09-21T02:16:08Z"
+  "snapshot_id": "c8d9452ec9122db6",
+  "published_at": "2026-09-21T02:21:25Z"
 }
