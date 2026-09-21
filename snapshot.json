@@ -13,7 +13,7 @@
         "spark": [
           [
             1789351200,
-            206
+            205
           ],
           [
             1789354800,
@@ -845,7 +845,7 @@
         "spark": [
           [
             1789351200,
-            149
+            152
           ],
           [
             1789354800,
@@ -1426,7 +1426,7 @@
             51.0
           ],
           [
-            27.0,
+            27.1,
             53.0
           ]
         ]
@@ -3198,7 +3198,7 @@
             49.0
           ],
           [
-            1789352551,
+            1789353014,
             53.0
           ],
           [
@@ -4544,8 +4544,8 @@
             36.0
           ],
           [
-            1789352551,
-            41.0
+            1789353014,
+            42.0
           ],
           [
             1789355284,
@@ -5439,7 +5439,7 @@
           24.0
         ],
         [
-          1789352551,
+          1789353014,
           27.0
         ],
         [
@@ -6364,7 +6364,7 @@
           ]
         }
       },
-      "snapshot_id": "1e3f406157740149"
+      "snapshot_id": "067a11c317a219e0"
     },
     "outbound": {
       "schema": 1,
@@ -6403,7 +6403,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 38,
+          "ctx_pct": 39,
           "last_commit_at": 1789957110,
           "head": "c59be820",
           "subfence": {
@@ -6766,19 +6766,13 @@
           ]
         }
       },
-      "snapshot_id": "c41580ad7413f2c1"
+      "snapshot_id": "3a3e281501e69900"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "ACCOUNTS",
-            "kind": "escalate",
-            "raised_at": 1789957216
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6809,17 +6803,82 @@
         {
           "id": "ACCOUNTS",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 38,
-          "last_commit_at": 1789957196,
-          "head": "cd9de430",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 39,
+          "last_commit_at": 1789957566,
+          "head": "f9a773df",
           "subfence": {
             "done": 16,
             "total": 16
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "gpt-5.6-sol  xhigh breadth",
+              "must": 2,
+              "should": 3,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "gpt-5.5  xhigh",
+              "must": 0,
+              "should": 2,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terra  xhigh cumulative pass",
+              "must": 1,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "gpt-5.5  xhigh",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "gpt-5.6-terra  xhigh declarer",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 6,
+              "seats": "gpt-5.6-terra  xhigh declarer",
+              "must": 0,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 8,
+              "seats": "Owner-authorized gpt-5.6-terra confirmat",
+              "must": 0,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "f9a773df",
+              "at": 1789957566
+            },
+            {
+              "sha": "35514ae0",
+              "at": 1789957478
+            },
             {
               "sha": "cd9de430",
               "at": 1789957196
@@ -6831,14 +6890,6 @@
             {
               "sha": "689a589e",
               "at": 1789956099
-            },
-            {
-              "sha": "b83e0a9b",
-              "at": 1789955184
-            },
-            {
-              "sha": "3f95d760",
-              "at": 1789953903
             }
           ],
           "fences": {
@@ -6847,7 +6898,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -7125,7 +7176,7 @@
           ]
         }
       },
-      "snapshot_id": "2214b8802ee6597a"
+      "snapshot_id": "709ef9e4871c15d4"
     }
   },
   "pm": {
@@ -7149,22 +7200,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 19
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 19
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 19
       }
     ]
   },
-  "snapshot_id": "c8d9452ec9122db6",
-  "published_at": "2026-09-21T02:21:25Z"
+  "snapshot_id": "50a64f0cfaa9295f",
+  "published_at": "2026-09-21T02:26:44Z"
 }
