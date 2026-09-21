@@ -550,7 +550,7 @@
         ],
         "trail": [
           [
-            24.5,
+            24.6,
             0.0
           ]
         ]
@@ -829,7 +829,7 @@
             87.0
           ],
           [
-            90.3,
+            90.4,
             90.0
           ]
         ]
@@ -1422,7 +1422,7 @@
             49.0
           ],
           [
-            26.6,
+            26.7,
             51.0
           ]
         ]
@@ -2251,7 +2251,7 @@
           19.0
         ],
         [
-          42.3,
+          42.4,
           19.0
         ]
       ]
@@ -6356,7 +6356,7 @@
           ]
         }
       },
-      "snapshot_id": "7ae056d46d40ccaf"
+      "snapshot_id": "f4b9ab9685682f8f"
     },
     "outbound": {
       "schema": 1,
@@ -6743,13 +6743,19 @@
           ]
         }
       },
-      "snapshot_id": "78f840423771ca33"
+      "snapshot_id": "3fd1c112edb1e126"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "ACCOUNTS",
+            "kind": "escalate",
+            "raised_at": 1789955206
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6780,85 +6786,36 @@
         {
           "id": "ACCOUNTS",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 36,
-          "last_commit_at": 1789953903,
-          "head": "3f95d76",
+          "last_commit_at": 1789955184,
+          "head": "b83e0a9b",
           "subfence": {
             "done": 16,
             "total": 16
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-5.6-sol  xhigh breadth",
-              "must": 2,
-              "should": 3,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.5  xhigh",
-              "must": 0,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra  xhigh cumulative pass",
-              "must": 1,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.5  xhigh",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.6-terra  xhigh declarer",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "gpt-5.6-terra  xhigh declarer",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
-              "sha": "3f95d76",
+              "sha": "b83e0a9b",
+              "at": 1789955184
+            },
+            {
+              "sha": "3f95d760",
               "at": 1789953903
             },
             {
-              "sha": "7f3a5aa",
+              "sha": "7f3a5aa6",
               "at": 1789953856
             },
             {
-              "sha": "c9e3dfe",
+              "sha": "c9e3dfee",
               "at": 1789953376
             },
             {
-              "sha": "1d81b00",
+              "sha": "1d81b00c",
               "at": 1789953321
-            },
-            {
-              "sha": "0d2a227",
-              "at": 1789952846
             }
           ],
           "fences": {
@@ -6867,7 +6824,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6880,31 +6837,31 @@
           "pr": 22,
           "unit": "rustls-rustsec-2026-0285",
           "merged_at": 1789902470,
-          "sha": "296e605"
+          "sha": "296e6052"
         },
         {
           "pr": 18,
           "unit": "CAL-GATE",
           "merged_at": 1789377762,
-          "sha": "dec22e5"
+          "sha": "dec22e5f"
         },
         {
           "pr": 17,
           "unit": "CAL-INTERVIEW-UI",
           "merged_at": 1788925671,
-          "sha": "4e5fccd"
+          "sha": "4e5fccd1"
         },
         {
           "pr": 16,
           "unit": "CAL-SHELL",
           "merged_at": 1788847954,
-          "sha": "c53c8b1"
+          "sha": "c53c8b16"
         },
         {
           "pr": 15,
           "unit": "CAL-RULINGS-API",
           "merged_at": 1788559537,
-          "sha": "c6d68a8"
+          "sha": "c6d68a85"
         }
       ],
       "decisions": [],
@@ -7145,7 +7102,7 @@
           ]
         }
       },
-      "snapshot_id": "07b67d65c426161a"
+      "snapshot_id": "b4601e502cd3b8d1"
     }
   },
   "pm": {
@@ -7169,22 +7126,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13
+        "monitor_last_pass_min": 18
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 18
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 17
       }
     ]
   },
-  "snapshot_id": "6f08f117529b04fb",
-  "published_at": "2026-09-21T01:44:35Z"
+  "snapshot_id": "58ee7b120e954fff",
+  "published_at": "2026-09-21T01:49:50Z"
 }
