@@ -6716,232 +6716,11 @@
         ]
       },
       "routing": {
-        "source": "spindle-policy.json",
-        "phases": [
-          {
-            "role": "lead",
-            "model": "claude-opus-4-8",
-            "effort": "xhigh"
-          },
-          {
-            "role": "discovery.worker",
-            "model": "claude-opus-4-8",
-            "effort": "xhigh"
-          },
-          {
-            "role": "discovery.lattice",
-            "model": "glm-5.3",
-            "effort": "4-6 lanes",
-            "note": "GLM coverage lattice — enumerate + cite only (file:line); ADDENDUM-DELTA ≤25 lines; advisory, never gates"
-          },
-          {
-            "role": "discovery.web_glm",
-            "model": "glm-5.3",
-            "effort": "web"
-          },
-          {
-            "role": "discovery.web_claude",
-            "model": "claude-opus-4-8",
-            "effort": "xhigh"
-          },
-          {
-            "role": "discovery.web_codex",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh"
-          },
-          {
-            "role": "invariant_map",
-            "model": "claude-opus-4-8",
-            "effort": "xhigh"
-          },
-          {
-            "role": "plan",
-            "model": "claude-opus-4-8",
-            "effort": "xhigh"
-          },
-          {
-            "role": "coplan.fable",
-            "model": "claude-fable-5",
-            "effort": "max",
-            "non_degradable": true
-          },
-          {
-            "role": "coplan.codex",
-            "model": "gpt-6-astra",
-            "effort": "xhigh",
-            "non_degradable": true
-          },
-          {
-            "role": "plan_scrutiny.sol_seed",
-            "model": "gpt-5.6-sol",
-            "effort": "deep"
-          },
-          {
-            "role": "plan_scrutiny.opener",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh"
-          },
-          {
-            "role": "plan_scrutiny.iterate",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh",
-            "alternate": "gpt-5.5",
-            "alt_effort": "xhigh",
-            "alternation": "by round — odd terra · even 5.5",
-            "glm_default": "glm-5.3"
-          },
-          {
-            "role": "plan_scrutiny.confirm",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh"
-          },
-          {
-            "role": "prebuild_review.codex",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh"
-          },
-          {
-            "role": "build.hard",
-            "model": "claude-opus-4-8",
-            "effort": "xhigh"
-          },
-          {
-            "role": "build.checkpoint_find",
-            "model": "glm-5.3",
-            "effort": "every rung",
-            "note": "FIND round at every rung (light: GLM also declares); A1 consent|money|pg steps = no GLM"
-          },
-          {
-            "role": "build.checkpoint_confirm",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh"
-          },
-          {
-            "role": "build.rote",
-            "model": "claude-sonnet-5",
-            "effort": "high"
-          },
-          {
-            "role": "p4.r1_swarm",
-            "model": "gpt-5.6-sol",
-            "effort": "xhigh",
-            "note": "R1 breadth seat — Sonnet swarm REMOVED owner 2026-08-30 (claude-burn cut); 1 codex-sol pass, never a swarm (see review.codex_deep_r1_cap). Was claude-sonnet-4-6"
-          },
-          {
-            "role": "p4.iterate",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh",
-            "alternate": "gpt-5.5",
-            "alt_effort": "xhigh",
-            "alternation": "by round — odd terra · even 5.5",
-            "glm_default": "glm-5.3"
-          },
-          {
-            "role": "p4.confirm",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh"
-          },
-          {
-            "role": "clippy_fix.worker",
-            "model": "claude-sonnet-5",
-            "effort": "high"
-          },
-          {
-            "role": "auto_proxy",
-            "model": "claude-sonnet-5",
-            "effort": "xhigh"
-          },
-          {
-            "role": "auto_questionnaire_proxy",
-            "model": "claude-opus-4-8",
-            "effort": "xhigh"
-          },
-          {
-            "role": "consult.codex",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh"
-          },
-          {
-            "role": "consult.sol",
-            "model": "gpt-5.6-sol",
-            "effort": "xhigh",
-            "note": "SOL research consult at ENHANCE for consult-flagged units (sol-counsel · sol-security · sol-policy); SOL_CONSULT.md committed pre-plan-lock"
-          }
-        ],
-        "review": {
-          "spark": "gpt-5.3-codex-spark",
-          "concurrency_cap": 4,
-          "fill_model": "gpt-5.6-terra",
-          "tiers": [
-            {
-              "tier": "low",
-              "codex_model": "gpt-5.6-terra",
-              "profile": "broad",
-              "round_cap": 2
-            },
-            {
-              "tier": "med",
-              "codex_model": "gpt-5.6-terra",
-              "profile": "broad",
-              "round_cap": 3
-            },
-            {
-              "tier": "high",
-              "codex_model": "gpt-5.6-terra",
-              "profile": "deep",
-              "round_cap": 6
-            }
-          ]
-        },
-        "throttle": {
-          "mode": "off",
-          "since": "2026-09-15T20:14:38Z",
-          "pools": {
-            "codex": {
-              "verdict": "UNKNOWN",
-              "proj": null,
-              "target": 100,
-              "used": null,
-              "day": null,
-              "active": "C2",
-              "wall": true
-            },
-            "glm": {
-              "verdict": "UNAVAILABLE",
-              "proj": null,
-              "target": 100,
-              "used": null,
-              "day": null,
-              "active": null,
-              "wall": false
-            },
-            "claude": {
-              "verdict": "UNDERBURN",
-              "proj": 0,
-              "target": 200,
-              "used": null,
-              "day": null,
-              "active": null,
-              "wall": false
-            }
-          },
-          "updated": "2026-09-21T06:59:49Z",
-          "moments": [
-            "unit_dispatch",
-            "phase_start",
-            "checkpoint_fence",
-            "review_round"
-          ],
-          "catalog": [
-            "C1 codex under",
-            "C2 codex over/wall",
-            "G1 glm under",
-            "G2 glm over",
-            "CL-WARN claude (PM-only)"
-          ]
-        }
+        "source": null,
+        "phases": [],
+        "review": {}
       },
-      "snapshot_id": "a1d7f16806fd761b"
+      "snapshot_id": "2fdae059629ad8cf"
     }
   },
   "pm": {
@@ -6965,22 +6744,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 678
+        "monitor_last_pass_min": 684
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 678
+        "monitor_last_pass_min": 684
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 690
+        "monitor_last_pass_min": 697
       }
     ]
   },
-  "snapshot_id": "1ea6103cac143a0b",
-  "published_at": "2026-09-22T18:30:10Z"
+  "snapshot_id": "ec395915c67c22e9",
+  "published_at": "2026-09-22T18:36:18Z"
 }
