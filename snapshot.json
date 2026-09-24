@@ -474,7 +474,7 @@
         ],
         "trail": [
           [
-            66.5,
+            66.6,
             0.0
           ]
         ]
@@ -495,7 +495,7 @@
         ],
         "trail": [
           [
-            66.5,
+            66.6,
             37.0
           ]
         ]
@@ -1314,7 +1314,7 @@
             87.0
           ],
           [
-            68.6,
+            68.7,
             87.0
           ]
         ]
@@ -1335,7 +1335,7 @@
         ],
         "trail": [
           [
-            68.6,
+            68.7,
             56.0
           ]
         ]
@@ -2244,7 +2244,7 @@
           85.0
         ],
         [
-          84.3,
+          84.4,
           88.0
         ]
       ]
@@ -4119,8 +4119,8 @@
         ],
         "B": [
           [
-            1786321215,
-            59.0
+            1786323378,
+            60.0
           ],
           [
             1786342049,
@@ -5884,7 +5884,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 2,
+          "ctx_pct": 12,
           "last_commit_at": 1790209079,
           "head": "04e86ff3",
           "subfence": {
@@ -5927,7 +5927,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 30,
+          "ctx_pct": 31,
           "last_commit_at": 1790209016,
           "head": "6e9c1700",
           "subfence": {
@@ -6223,7 +6223,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-24T00:18:10Z",
+          "updated": "2026-09-24T00:20:04Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6239,19 +6239,13 @@
           ]
         }
       },
-      "snapshot_id": "025595a5ef421f18"
+      "snapshot_id": "f2ca88c4cfdb9fef"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "DSAR-AGENT-DECISIONS",
-            "kind": "needs-owner",
-            "raised_at": 1790165125
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6282,17 +6276,21 @@
         {
           "id": "DSAR-AGENT-DECISIONS",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 13,
-          "last_commit_at": 1790164382,
-          "head": "3c1aa266",
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 17,
+          "last_commit_at": 1790209283,
+          "head": "3a7a3846",
           "subfence": {
             "done": 1,
             "total": 4
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "3a7a3846",
+              "at": 1790209283
+            },
             {
               "sha": "3c1aa266",
               "at": 1790164382
@@ -6308,10 +6306,6 @@
             {
               "sha": "d37a79b4",
               "at": 1790162114
-            },
-            {
-              "sha": "e29e0a07",
-              "at": 1790161816
             }
           ],
           "fences": {
@@ -6320,7 +6314,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "W6b",
@@ -6648,7 +6642,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-24T00:18:10Z",
+          "updated": "2026-09-24T00:20:04Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6664,7 +6658,7 @@
           ]
         }
       },
-      "snapshot_id": "176818d020d286e8"
+      "snapshot_id": "1e9ae2cdd988a50b"
     },
     "scriptgen": {
       "schema": 1,
@@ -6958,7 +6952,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-24T00:18:10Z",
+          "updated": "2026-09-24T00:20:04Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6974,7 +6968,7 @@
           ]
         }
       },
-      "snapshot_id": "38e75ec38ed043a0"
+      "snapshot_id": "e7ed09c98d7d6f35"
     }
   },
   "pm": {
@@ -6998,22 +6992,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2
+        "monitor_last_pass_min": 7
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2
+        "monitor_last_pass_min": 7
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 2479
+        "monitor_last_pass_min": 2484
       }
     ]
   },
-  "snapshot_id": "fd32957945bc91fe",
-  "published_at": "2026-09-24T00:18:46Z"
+  "snapshot_id": "3d8d6935d344b5e3",
+  "published_at": "2026-09-24T00:24:02Z"
 }
