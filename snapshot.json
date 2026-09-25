@@ -6316,8 +6316,14 @@
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "STYLE-MIX-FIX",
+            "kind": "needs-owner",
+            "raised_at": 1790370961
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6348,9 +6354,9 @@
         {
           "id": "STYLE-MIX-FIX",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 30,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6365,7 +6371,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6644,7 +6650,7 @@
           ]
         }
       },
-      "snapshot_id": "96f8871140484b28"
+      "snapshot_id": "09218b1953aba45b"
     }
   },
   "pm": {
@@ -6668,22 +6674,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 2575
+        "monitor_last_pass_min": 2581
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 2244
+        "monitor_last_pass_min": 2250
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 13
       }
     ]
   },
-  "snapshot_id": "c4041c4b50155d74",
-  "published_at": "2026-09-25T21:12:38Z"
+  "snapshot_id": "655900c6c72dc700",
+  "published_at": "2026-09-25T21:17:54Z"
 }
