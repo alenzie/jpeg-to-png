@@ -478,7 +478,7 @@
         ],
         "trail": [
           [
-            2.2,
+            2.3,
             0.0
           ]
         ]
@@ -5572,7 +5572,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790459809
+        "last_pass_at": 1790461609
       },
       "runstate": {
         "auto": false,
@@ -5869,7 +5869,7 @@
           ]
         }
       },
-      "snapshot_id": "13b5ffe95fd909d2"
+      "snapshot_id": "5a9fe0753ed2b78e"
     },
     "outbound": {
       "schema": 1,
@@ -5881,7 +5881,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790459811
+        "last_pass_at": 1790461611
       },
       "runstate": {
         "auto": false,
@@ -6232,13 +6232,19 @@
           ]
         }
       },
-      "snapshot_id": "86c469bbde3f0a59"
+      "snapshot_id": "fa228f3d179c2fd9"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CAL-HARDEN",
+            "kind": "escalate",
+            "raised_at": 1790461912
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6269,17 +6275,21 @@
         {
           "id": "CAL-HARDEN",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 74,
-          "last_commit_at": 1790460552,
-          "head": "dad09a18",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 77,
+          "last_commit_at": 1790461894,
+          "head": "b85be765",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "b85be765",
+              "at": 1790461894
+            },
             {
               "sha": "dad09a18",
               "at": 1790460552
@@ -6295,10 +6305,6 @@
             {
               "sha": "12e2f85b",
               "at": 1790456199
-            },
-            {
-              "sha": "f0c46f8f",
-              "at": 1790455876
             }
           ],
           "fences": {
@@ -6307,7 +6313,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "S5-FOUNDATION",
@@ -6628,7 +6634,7 @@
           ]
         }
       },
-      "snapshot_id": "b5a8cbf147aa8cd5"
+      "snapshot_id": "f4877707bb19cdb6"
     }
   },
   "pm": {
@@ -6652,22 +6658,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       }
     ]
   },
-  "snapshot_id": "bddc66e7206c2527",
-  "published_at": "2026-09-26T22:26:55Z"
+  "snapshot_id": "7184e6934806f8b6",
+  "published_at": "2026-09-26T22:32:13Z"
 }
