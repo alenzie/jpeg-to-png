@@ -458,7 +458,7 @@
         ],
         "trail": [
           [
-            9.0,
+            9.1,
             0.0
           ]
         ]
@@ -1033,7 +1033,7 @@
             65.0
           ],
           [
-            80.8,
+            80.9,
             67.0
           ]
         ]
@@ -1049,7 +1049,7 @@
         "spark": [
           [
             1789894800,
-            214
+            213
           ],
           [
             1789898400,
@@ -1991,7 +1991,7 @@
           37.0
         ],
         [
-          32.8,
+          32.9,
           37.0
         ]
       ]
@@ -2942,7 +2942,7 @@
             15.0
           ],
           [
-            1789897955,
+            1789898336,
             16.0
           ],
           [
@@ -4346,7 +4346,7 @@
             33.0
           ],
           [
-            1789897955,
+            1789898336,
             38.0
           ],
           [
@@ -5123,7 +5123,7 @@
           16.0
         ],
         [
-          1789897955,
+          1789898336,
           16.0
         ],
         [
@@ -5691,15 +5691,19 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 29,
-          "last_commit_at": 1790502172,
-          "head": "d2f61839",
+          "ctx_pct": 35,
+          "last_commit_at": 1790502739,
+          "head": "aff1a763",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "aff1a763",
+              "at": 1790502739
+            },
             {
               "sha": "d2f61839",
               "at": 1790502172
@@ -5715,10 +5719,6 @@
             {
               "sha": "9aa329c5",
               "at": 1790500966
-            },
-            {
-              "sha": "59adeb1a",
-              "at": 1790500961
             }
           ],
           "fences": {
@@ -6004,13 +6004,19 @@
           ]
         }
       },
-      "snapshot_id": "792ab08e0a2f76b0"
+      "snapshot_id": "9f24bf3c92b31dbe"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "MSG11",
+            "kind": "needs-owner",
+            "raised_at": 1790502671
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6041,9 +6047,9 @@
         {
           "id": "MSG11",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 37,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 39,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6058,7 +6064,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6389,19 +6395,13 @@
           ]
         }
       },
-      "snapshot_id": "6c3e1c18dd9b4151"
+      "snapshot_id": "12ff70181da0cc6c"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "S5-FOUNDATION",
-            "kind": "escalate",
-            "raised_at": 1790501753
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6434,9 +6434,9 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 38,
-          "last_commit_at": 1790500699,
-          "head": "dcf1987e",
+          "ctx_pct": 40,
+          "last_commit_at": 1790502880,
+          "head": "61861acc",
           "subfence": {
             "done": 4,
             "total": 16
@@ -6444,24 +6444,24 @@
           "review_rounds": [],
           "commits": [
             {
-              "sha": "dcf1987e",
-              "at": 1790500699
+              "sha": "61861acc",
+              "at": 1790502880
             },
             {
-              "sha": "16570c1b",
-              "at": 1790500697
+              "sha": "3ccbfbbf",
+              "at": 1790502872
             },
             {
-              "sha": "627be182",
-              "at": 1790500438
+              "sha": "7cb67874",
+              "at": 1790502867
             },
             {
-              "sha": "959efe2b",
-              "at": 1790500387
+              "sha": "cb606fac",
+              "at": 1790502862
             },
             {
-              "sha": "4a9df08b",
-              "at": 1790499332
+              "sha": "329a2057",
+              "at": 1790502856
             }
           ],
           "fences": {
@@ -6475,16 +6475,41 @@
         {
           "id": "S5-FOUNDATION",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 45,
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 47,
           "last_commit_at": 1790501058,
           "head": "22855a29",
           "subfence": {
             "done": 12,
             "total": 12
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 2,
+              "seats": "gpt-5.5xhigh iterate even round",
+              "must": 0,
+              "should": 3,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terraxhigh iterate odd round",
+              "must": 1,
+              "should": 2,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 1,
+              "seats": "gpt-5.6-solxhigh bounded breadth union",
+              "must": 3,
+              "should": 16,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
             {
               "sha": "22855a29",
@@ -6513,7 +6538,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -6791,7 +6816,7 @@
           ]
         }
       },
-      "snapshot_id": "feb0d4ec4911e875"
+      "snapshot_id": "69e0b9bd066630b5"
     }
   },
   "pm": {
@@ -6815,22 +6840,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       }
     ]
   },
-  "snapshot_id": "adf2708d586fc373",
-  "published_at": "2026-09-27T09:49:08Z"
+  "snapshot_id": "b9af2cc51122c4ca",
+  "published_at": "2026-09-27T09:54:49Z"
 }
