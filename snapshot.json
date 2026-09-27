@@ -13,7 +13,7 @@
         "spark": [
           [
             1789934400,
-            115
+            114
           ],
           [
             1789938000,
@@ -438,7 +438,7 @@
         ],
         "trail": [
           [
-            15.1,
+            15.2,
             0.0
           ]
         ]
@@ -1029,7 +1029,7 @@
         "spark": [
           [
             1789934400,
-            188
+            191
           ],
           [
             1789938000,
@@ -3018,7 +3018,7 @@
             23.0
           ],
           [
-            1789934989,
+            1789935878,
             25.0
           ],
           [
@@ -4422,8 +4422,8 @@
             43.0
           ],
           [
-            1789934989,
-            45.0
+            1789935878,
+            46.0
           ],
           [
             1789938222,
@@ -5207,7 +5207,7 @@
           18.0
         ],
         [
-          1789934989,
+          1789935878,
           18.0
         ],
         [
@@ -6072,7 +6072,7 @@
           ]
         }
       },
-      "snapshot_id": "4e6868a9f33d2681"
+      "snapshot_id": "e6c580bb0a311be3"
     },
     "outbound": {
       "schema": 1,
@@ -6111,7 +6111,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 43,
+          "ctx_pct": 47,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6456,13 +6456,19 @@
           ]
         }
       },
-      "snapshot_id": "7735ee1e3c46550a"
+      "snapshot_id": "7289f6ba506e0482"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "WATCH-ALONGS-SHARE",
+            "kind": "needs-owner",
+            "raised_at": 1790539753
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6536,9 +6542,9 @@
         {
           "id": "WATCH-ALONGS-SHARE",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 13,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 25,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6553,7 +6559,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6831,7 +6837,7 @@
           ]
         }
       },
-      "snapshot_id": "478536adb72b0fbf"
+      "snapshot_id": "e5718341a468dbb5"
     }
   },
   "pm": {
@@ -6855,22 +6861,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 5
+        "monitor_last_pass_min": 11
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 5
+        "monitor_last_pass_min": 11
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 5
+        "monitor_last_pass_min": 11
       }
     ]
   },
-  "snapshot_id": "711577689cc76731",
-  "published_at": "2026-09-27T20:06:53Z"
+  "snapshot_id": "05322a2d13610a5d",
+  "published_at": "2026-09-27T20:12:32Z"
 }
