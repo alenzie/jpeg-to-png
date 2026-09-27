@@ -13,7 +13,7 @@
         "spark": [
           [
             1789938000,
-            119
+            118
           ],
           [
             1789941600,
@@ -438,7 +438,7 @@
         ],
         "trail": [
           [
-            16.0,
+            16.1,
             0.0
           ]
         ]
@@ -1013,7 +1013,7 @@
             65.0
           ],
           [
-            87.8,
+            87.9,
             67.0
           ]
         ]
@@ -1029,7 +1029,7 @@
         "spark": [
           [
             1789938000,
-            190
+            188
           ],
           [
             1789941600,
@@ -1342,7 +1342,7 @@
             23.0
           ],
           [
-            24.1,
+            24.2,
             30.0
           ]
         ]
@@ -2067,7 +2067,7 @@
           44.0
         ],
         [
-          39.8,
+          39.9,
           44.0
         ]
       ]
@@ -3026,7 +3026,7 @@
             23.0
           ],
           [
-            1789940140,
+            1789941431,
             27.0
           ],
           [
@@ -4430,7 +4430,7 @@
             43.0
           ],
           [
-            1789940140,
+            1789941431,
             47.0
           ],
           [
@@ -5215,7 +5215,7 @@
           18.0
         ],
         [
-          1789940140,
+          1789941431,
           19.0
         ],
         [
@@ -5749,8 +5749,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "AUTH-INTERVIEW-CLIP-PICKER",
+            "kind": "needs-owner",
+            "raised_at": 1790545020
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5781,9 +5787,9 @@
         {
           "id": "AUTH-INTERVIEW-CLIP-PICKER",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 23,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5798,7 +5804,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6074,7 +6080,7 @@
           ]
         }
       },
-      "snapshot_id": "be767f3cd2e8f679"
+      "snapshot_id": "83276c9419a88476"
     },
     "outbound": {
       "schema": 1,
@@ -6479,7 +6485,7 @@
           ]
         }
       },
-      "snapshot_id": "c61d9f398ca37a45"
+      "snapshot_id": "60c6befe8be51285"
     },
     "scriptgen": {
       "schema": 1,
@@ -6518,7 +6524,7 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 15,
+          "ctx_pct": 26,
           "last_commit_at": 1790542268,
           "head": "a3f8e4ac",
           "subfence": {
@@ -6875,7 +6881,7 @@
           ]
         }
       },
-      "snapshot_id": "2cfc948c82036236"
+      "snapshot_id": "ddc23b4fe682b9c7"
     }
   },
   "pm": {
@@ -6899,22 +6905,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2
+        "monitor_last_pass_min": 8
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2
+        "monitor_last_pass_min": 8
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2
+        "monitor_last_pass_min": 8
       }
     ]
   },
-  "snapshot_id": "222acf3b4a43de43",
-  "published_at": "2026-09-27T21:34:05Z"
+  "snapshot_id": "6c89dcc32a99e2ed",
+  "published_at": "2026-09-27T21:39:51Z"
 }
