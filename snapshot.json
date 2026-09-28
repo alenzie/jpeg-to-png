@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 237,
+        "projected": 236,
         "used": 48,
-        "at": 1790566748,
+        "at": 1790567305,
         "reset": "11:41 on 3 Oct",
         "spark": [
           [
@@ -1013,7 +1013,7 @@
             65.0
           ],
           [
-            92.1,
+            92.2,
             67.0
           ]
         ]
@@ -1022,9 +1022,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 176,
-        "used": 50,
-        "at": 1790566748,
+        "projected": 179,
+        "used": 51,
+        "at": 1790567305,
         "reset": "Oct 2, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1370,7 +1370,7 @@
             45.0
           ],
           [
-            28.4,
+            28.5,
             49.0
           ]
         ]
@@ -1394,9 +1394,9 @@
     ],
     "glm": {
       "target": 100,
-      "projected": 141,
+      "projected": 140,
       "used": 62,
-      "at": 1790566748,
+      "at": 1790567305,
       "reset": "Oct 01, 19:39",
       "level": "pro",
       "spark": [
@@ -2123,7 +2123,7 @@
           54.0
         ],
         [
-          44.1,
+          44.2,
           58.0
         ]
       ]
@@ -2134,7 +2134,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1790566748,
+      "at": 1790567305,
       "spark": [
         [
           1789963200,
@@ -3624,8 +3624,8 @@
       "claude": {
         "A": [
           [
-            1786682896,
-            79.0
+            1786683667,
+            80.0
           ],
           [
             1786687312,
@@ -5820,7 +5820,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790568962
+        "last_pass_at": 1790570766
       },
       "runstate": {
         "auto": false,
@@ -6073,7 +6073,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 237,
+              "proj": 236,
               "target": 100,
               "used": 48,
               "day": 2,
@@ -6082,7 +6082,7 @@
             },
             "glm": {
               "verdict": "OVERBURN",
-              "proj": 141,
+              "proj": 140,
               "target": 100,
               "used": 62,
               "day": 4,
@@ -6091,15 +6091,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 176,
+              "proj": 179,
               "target": 200,
-              "used": 50,
+              "used": 51,
               "day": 2,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-28T04:39:13Z",
+          "updated": "2026-09-28T04:49:34Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6115,19 +6115,25 @@
           ]
         }
       },
-      "snapshot_id": "a270ee64d8ef4252"
+      "snapshot_id": "837c4474d191f547"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "W5-FOLLOW",
+            "kind": "escalate",
+            "raised_at": 1790570819
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790568964
+        "last_pass_at": 1790570769
       },
       "runstate": {
         "auto": false,
@@ -6154,15 +6160,27 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 46,
-          "last_commit_at": 1790570301,
-          "head": "13dc5cb9",
+          "ctx_pct": 15,
+          "last_commit_at": 1790570954,
+          "head": "cd451654",
           "subfence": {
-            "done": 8,
+            "done": 9,
             "total": 11
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "cd451654",
+              "at": 1790570954
+            },
+            {
+              "sha": "9cdf7bcc",
+              "at": 1790570865
+            },
+            {
+              "sha": "36a29aaf",
+              "at": 1790570801
+            },
             {
               "sha": "13dc5cb9",
               "at": 1790570301
@@ -6170,18 +6188,6 @@
             {
               "sha": "85f321de",
               "at": 1790569476
-            },
-            {
-              "sha": "c1066239",
-              "at": 1790567588
-            },
-            {
-              "sha": "b04faeef",
-              "at": 1790567523
-            },
-            {
-              "sha": "a4c2ace4",
-              "at": 1790567490
             }
           ],
           "fences": {
@@ -6195,17 +6201,21 @@
         {
           "id": "W5-FOLLOW",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 48,
-          "last_commit_at": 1790570744,
-          "head": "3df6ed9d",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 49,
+          "last_commit_at": 1790570785,
+          "head": "62576a6a",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "62576a6a",
+              "at": 1790570785
+            },
             {
               "sha": "3df6ed9d",
               "at": 1790570744
@@ -6221,10 +6231,6 @@
             {
               "sha": "6c8c9bc8",
               "at": 1790569449
-            },
-            {
-              "sha": "2f296311",
-              "at": 1790569398
             }
           ],
           "fences": {
@@ -6233,7 +6239,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6520,7 +6526,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 237,
+              "proj": 236,
               "target": 100,
               "used": 48,
               "day": 2,
@@ -6529,7 +6535,7 @@
             },
             "glm": {
               "verdict": "OVERBURN",
-              "proj": 141,
+              "proj": 140,
               "target": 100,
               "used": 62,
               "day": 4,
@@ -6538,15 +6544,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 176,
+              "proj": 179,
               "target": 200,
-              "used": 50,
+              "used": 51,
               "day": 2,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-28T04:39:13Z",
+          "updated": "2026-09-28T04:49:34Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6562,7 +6568,7 @@
           ]
         }
       },
-      "snapshot_id": "6bd3885198a08410"
+      "snapshot_id": "6ca4f8ee7b09086f"
     },
     "scriptgen": {
       "schema": 1,
@@ -6629,7 +6635,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 75,
+          "ctx_pct": 78,
           "last_commit_at": 1790569599,
           "head": "9022dce2",
           "subfence": {
@@ -6905,7 +6911,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 237,
+              "proj": 236,
               "target": 100,
               "used": 48,
               "day": 2,
@@ -6914,7 +6920,7 @@
             },
             "glm": {
               "verdict": "OVERBURN",
-              "proj": 141,
+              "proj": 140,
               "target": 100,
               "used": 62,
               "day": 4,
@@ -6923,15 +6929,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 176,
+              "proj": 179,
               "target": 200,
-              "used": 50,
+              "used": 51,
               "day": 2,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-28T04:39:13Z",
+          "updated": "2026-09-28T04:49:34Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6947,7 +6953,7 @@
           ]
         }
       },
-      "snapshot_id": "e2870708f783afc4"
+      "snapshot_id": "3270949f656d9735"
     }
   },
   "pm": {
@@ -6971,22 +6977,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 6
       }
     ]
   },
-  "snapshot_id": "05c864fae20fa7bc",
-  "published_at": "2026-09-28T04:46:22Z"
+  "snapshot_id": "9eae20ad3763b122",
+  "published_at": "2026-09-28T04:52:18Z"
 }
