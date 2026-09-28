@@ -438,7 +438,7 @@
         ],
         "trail": [
           [
-            29.4,
+            29.5,
             0.0
           ]
         ]
@@ -6061,7 +6061,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-28T20:07:08Z",
+          "updated": "2026-09-28T20:08:54Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6077,7 +6077,7 @@
           ]
         }
       },
-      "snapshot_id": "80ebfe319fc3a8d8"
+      "snapshot_id": "c75fd02470aada16"
     },
     "outbound": {
       "schema": 1,
@@ -6116,7 +6116,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 33,
+          "ctx_pct": 34,
           "last_commit_at": 1790625121,
           "head": "4a5fcda4",
           "subfence": {
@@ -6159,15 +6159,23 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 24,
-          "last_commit_at": 1790625999,
-          "head": "f3797e96",
+          "ctx_pct": 29,
+          "last_commit_at": 1790626364,
+          "head": "9f444d0a",
           "subfence": {
             "done": 6,
             "total": 23
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "9f444d0a",
+              "at": 1790626364
+            },
+            {
+              "sha": "f9b6539c",
+              "at": 1790626157
+            },
             {
               "sha": "f3797e96",
               "at": 1790625999
@@ -6179,14 +6187,6 @@
             {
               "sha": "d9daf559",
               "at": 1790622574
-            },
-            {
-              "sha": "47337909",
-              "at": 1790619428
-            },
-            {
-              "sha": "e9e444d6",
-              "at": 1790619355
             }
           ],
           "fences": {
@@ -6500,7 +6500,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-28T20:07:08Z",
+          "updated": "2026-09-28T20:08:54Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6516,7 +6516,7 @@
           ]
         }
       },
-      "snapshot_id": "d1718010e33be0fa"
+      "snapshot_id": "f0b54fced9e09438"
     },
     "scriptgen": {
       "schema": 1,
@@ -6524,14 +6524,9 @@
         "active": true,
         "units": [
           {
-            "id": "S5-RESEARCH",
-            "kind": "escalate",
-            "raised_at": null
-          },
-          {
             "id": "SG-CODEX-LOCKDOWN",
             "kind": "needs-owner",
-            "raised_at": 1790626061
+            "raised_at": 1790626456
           }
         ]
       },
@@ -6566,7 +6561,7 @@
           "status": "done",
           "stage": "done",
           "stage_i": 7,
-          "ctx_pct": 7,
+          "ctx_pct": 10,
           "last_commit_at": 1790622944,
           "head": "84627f7b",
           "subfence": {
@@ -6609,9 +6604,9 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 50,
-          "last_commit_at": 1790626049,
-          "head": "e21287ed",
+          "ctx_pct": 8,
+          "last_commit_at": 1790626351,
+          "head": "3a619ffd",
           "subfence": {
             "done": 0,
             "total": 15
@@ -6619,24 +6614,24 @@
           "review_rounds": [],
           "commits": [
             {
+              "sha": "3a619ffd",
+              "at": 1790626351
+            },
+            {
               "sha": "e21287ed",
               "at": 1790626049
             },
             {
-              "sha": "9a1607dd",
-              "at": 1790619642
+              "sha": "cb124ef0",
+              "at": 1790623143
             },
             {
-              "sha": "ed477630",
-              "at": 1790618750
+              "sha": "c5c70942",
+              "at": 1790622999
             },
             {
-              "sha": "31104329",
-              "at": 1790597882
-            },
-            {
-              "sha": "2321e08f",
-              "at": 1790597103
+              "sha": "84627f7b",
+              "at": 1790622944
             }
           ],
           "fences": {
@@ -6645,14 +6640,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "SG-CODEX-LOCKDOWN",
           "status": "building",
           "stage": "interviewing",
           "stage_i": 2,
-          "ctx_pct": 11,
+          "ctx_pct": 13,
           "last_commit_at": 1790625622,
           "head": "c217e308",
           "subfence": {
@@ -6944,7 +6939,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-28T20:08:40Z",
+          "updated": "2026-09-28T20:08:54Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6960,7 +6955,7 @@
           ]
         }
       },
-      "snapshot_id": "78e637484b716e05"
+      "snapshot_id": "15b716a673d4986a"
     }
   },
   "pm": {
@@ -6984,22 +6979,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 27
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 27
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 27
       }
     ]
   },
-  "snapshot_id": "5c149ca049d2fd53",
-  "published_at": "2026-09-28T20:08:53Z"
+  "snapshot_id": "8d7fa387f39696de",
+  "published_at": "2026-09-28T20:15:09Z"
 }
