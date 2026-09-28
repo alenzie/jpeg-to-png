@@ -1298,7 +1298,7 @@
             8.0
           ],
           [
-            39.4,
+            39.5,
             8.0
           ]
         ]
@@ -2107,7 +2107,7 @@
           66.0
         ],
         [
-          55.1,
+          55.2,
           66.0
         ]
       ]
@@ -5816,7 +5816,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790635706
+        "last_pass_at": 1790637509
       },
       "runstate": {
         "auto": false,
@@ -6101,13 +6101,18 @@
           ]
         }
       },
-      "snapshot_id": "6db700b74e27977b"
+      "snapshot_id": "8f6c70a7da640c85"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
+          {
+            "id": "MSG7-DNC-MANUAL-CONSENT",
+            "kind": "escalate",
+            "raised_at": 1790637394
+          },
           {
             "id": "W5-FOLLOW",
             "kind": "escalate",
@@ -6119,7 +6124,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790635710
+        "last_pass_at": 1790637511
       },
       "runstate": {
         "auto": false,
@@ -6144,8 +6149,8 @@
         {
           "id": "MSG7-DNC-MANUAL-CONSENT",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 43,
           "last_commit_at": 1790636938,
           "head": "acec3721",
@@ -6182,7 +6187,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W5-FOLLOW",
@@ -6546,7 +6551,7 @@
           ]
         }
       },
-      "snapshot_id": "de015151e4505459"
+      "snapshot_id": "3381294d85f46533"
     },
     "scriptgen": {
       "schema": 1,
@@ -6569,7 +6574,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790635707
+        "last_pass_at": 1790637510
       },
       "runstate": {
         "auto": false,
@@ -6947,7 +6952,7 @@
           ]
         }
       },
-      "snapshot_id": "c12380b6f943b413"
+      "snapshot_id": "fcccb768dddeb903"
     }
   },
   "pm": {
@@ -6971,22 +6976,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 2
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 2
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 2
       }
     ]
   },
-  "snapshot_id": "2398f44d68d02b16",
-  "published_at": "2026-09-28T23:14:51Z"
+  "snapshot_id": "8ec3ef9c0f532303",
+  "published_at": "2026-09-28T23:20:40Z"
 }
