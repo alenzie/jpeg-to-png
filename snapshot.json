@@ -438,7 +438,7 @@
         ],
         "trail": [
           [
-            24.7,
+            24.8,
             0.0
           ]
         ]
@@ -5883,7 +5883,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 27,
+          "ctx_pct": 31,
           "last_commit_at": 1790597229,
           "head": "4fb874a8",
           "subfence": {
@@ -6185,7 +6185,7 @@
           ]
         }
       },
-      "snapshot_id": "dcfa9ee8a393002f"
+      "snapshot_id": "9d2456841261e027"
     },
     "outbound": {
       "schema": 1,
@@ -6308,7 +6308,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 42,
+          "ctx_pct": 43,
           "last_commit_at": 1790596122,
           "head": "b9603c94",
           "subfence": {
@@ -6707,13 +6707,19 @@
           ]
         }
       },
-      "snapshot_id": "13bc04a3f23c1fb3"
+      "snapshot_id": "12b58ea6a0c525e1"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "S5-RESEARCH",
+            "kind": "escalate",
+            "raised_at": 1790597902
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6830,17 +6836,21 @@
         {
           "id": "S5-RESEARCH",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 40,
-          "last_commit_at": 1790597103,
-          "head": "2321e08f",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 43,
+          "last_commit_at": 1790597882,
+          "head": "31104329",
           "subfence": {
             "done": 0,
             "total": 15
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "31104329",
+              "at": 1790597882
+            },
             {
               "sha": "2321e08f",
               "at": 1790597103
@@ -6856,10 +6866,6 @@
             {
               "sha": "cd7aeefc",
               "at": 1790593692
-            },
-            {
-              "sha": "2535b43b",
-              "at": 1790592480
             }
           ],
           "fences": {
@@ -6868,7 +6874,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "SG-CODEX-LOCKDOWN",
@@ -7183,7 +7189,7 @@
           ]
         }
       },
-      "snapshot_id": "ef60ecb277981d14"
+      "snapshot_id": "eeb3beda3ce40c1a"
     }
   },
   "pm": {
@@ -7207,22 +7213,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 20
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 20
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 20
       }
     ]
   },
-  "snapshot_id": "4a66737d25a2c897",
-  "published_at": "2026-09-28T12:15:17Z"
+  "snapshot_id": "af0c392dd2e64281",
+  "published_at": "2026-09-28T12:21:10Z"
 }
