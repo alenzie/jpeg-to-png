@@ -438,7 +438,7 @@
         ],
         "trail": [
           [
-            31.2,
+            31.3,
             0.0
           ]
         ]
@@ -6101,13 +6101,19 @@
           ]
         }
       },
-      "snapshot_id": "b401b53aecfcd1de"
+      "snapshot_id": "6db700b74e27977b"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "W5-FOLLOW",
+            "kind": "escalate",
+            "raised_at": 1790637123
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6140,15 +6146,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 41,
-          "last_commit_at": 1790636811,
-          "head": "23518648",
+          "ctx_pct": 43,
+          "last_commit_at": 1790636938,
+          "head": "acec3721",
           "subfence": {
             "done": 5,
             "total": 13
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "acec3721",
+              "at": 1790636938
+            },
             {
               "sha": "23518648",
               "at": 1790636811
@@ -6164,10 +6174,6 @@
             {
               "sha": "67a804a8",
               "at": 1790633475
-            },
-            {
-              "sha": "d8018be5",
-              "at": 1790632886
             }
           ],
           "fences": {
@@ -6181,8 +6187,8 @@
         {
           "id": "W5-FOLLOW",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 45,
           "last_commit_at": 1790636826,
           "head": "8f90bc47",
@@ -6219,7 +6225,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6540,13 +6546,18 @@
           ]
         }
       },
-      "snapshot_id": "b94cad4ce21cba87"
+      "snapshot_id": "de015151e4505459"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
+          {
+            "id": "S5-RESEARCH",
+            "kind": "escalate",
+            "raised_at": 1790637175
+          },
           {
             "id": "SG-CODEX-LOCKDOWN",
             "kind": "escalate",
@@ -6583,9 +6594,9 @@
         {
           "id": "S5-RESEARCH",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 40,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 41,
           "last_commit_at": 1790636653,
           "head": "f41a13f9",
           "subfence": {
@@ -6621,7 +6632,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "SG-CODEX-LOCKDOWN",
@@ -6936,7 +6947,7 @@
           ]
         }
       },
-      "snapshot_id": "f3bf7d8d069fb47d"
+      "snapshot_id": "c12380b6f943b413"
     }
   },
   "pm": {
@@ -6960,22 +6971,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       }
     ]
   },
-  "snapshot_id": "499e52e23a881719",
-  "published_at": "2026-09-28T23:08:57Z"
+  "snapshot_id": "2398f44d68d02b16",
+  "published_at": "2026-09-28T23:14:51Z"
 }
