@@ -993,7 +993,7 @@
             65.0
           ],
           [
-            95.9,
+            96.0,
             67.0
           ]
         ]
@@ -1004,7 +1004,7 @@
         "mult": "20x",
         "projected": 264,
         "used": 85,
-        "at": 1790590009,
+        "at": 1790590080,
         "reset": "Oct 2, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1378,7 +1378,7 @@
             80.0
           ],
           [
-            32.2,
+            32.3,
             85.0
           ]
         ]
@@ -1388,7 +1388,7 @@
       "target": 100,
       "projected": 136,
       "used": 65,
-      "at": 1790590009,
+      "at": 1790590080,
       "reset": "Oct 01, 19:39",
       "level": "pro",
       "spark": [
@@ -2143,7 +2143,7 @@
           65.0
         ],
         [
-          47.9,
+          48.0,
           65.0
         ]
       ]
@@ -2154,7 +2154,7 @@
       "available": true,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1790590009,
+      "at": 1790590080,
       "spark": [
         [
           1789992000,
@@ -5859,7 +5859,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 21,
+          "ctx_pct": 27,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6124,7 +6124,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-28T11:06:29Z",
+          "updated": "2026-09-28T11:08:26Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6140,13 +6140,24 @@
           ]
         }
       },
-      "snapshot_id": "f79097303707027f"
+      "snapshot_id": "6ea1396a7ac1beb7"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "MSG11",
+            "kind": "escalate",
+            "raised_at": 1790593877
+          },
+          {
+            "id": "W5-FOLLOW",
+            "kind": "escalate",
+            "raised_at": 1790593690
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6177,57 +6188,16 @@
         {
           "id": "MSG11",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 44,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 45,
           "last_commit_at": 1790592400,
           "head": "4fdd060c",
           "subfence": {
             "done": 11,
             "total": 11
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-5.6-sol × 6 serialized breadth range",
-              "must": 11,
-              "should": 17,
-              "could": 10,
-              "nit": 15
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.5  xhigh",
-              "must": 4,
-              "should": 3,
-              "could": 4,
-              "nit": 3
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra  xhigh",
-              "must": 1,
-              "should": 0,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.5  xhigh",
-              "must": 2,
-              "should": 0,
-              "could": 2,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.6-terra × 10 serialized cumulative",
-              "must": 3,
-              "should": 7,
-              "could": 3,
-              "nit": 7
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "4fdd060c",
@@ -6256,7 +6226,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "MSG7-DNC-MANUAL-CONSENT",
@@ -6304,17 +6274,21 @@
         {
           "id": "W5-FOLLOW",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 34,
-          "last_commit_at": 1790592251,
-          "head": "72b7b935",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 35,
+          "last_commit_at": 1790593681,
+          "head": "80f3d85a",
           "subfence": {
             "done": 3,
             "total": 23
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "80f3d85a",
+              "at": 1790593681
+            },
             {
               "sha": "72b7b935",
               "at": 1790592251
@@ -6330,10 +6304,6 @@
             {
               "sha": "47fa49e2",
               "at": 1790591078
-            },
-            {
-              "sha": "47cf78d6",
-              "at": 1790590130
             }
           ],
           "fences": {
@@ -6342,7 +6312,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6646,7 +6616,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-28T11:06:29Z",
+          "updated": "2026-09-28T11:08:26Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6662,7 +6632,7 @@
           ]
         }
       },
-      "snapshot_id": "921330f8681d0b6e"
+      "snapshot_id": "4155f3210844b69d"
     },
     "scriptgen": {
       "schema": 1,
@@ -6670,9 +6640,19 @@
         "active": true,
         "units": [
           {
+            "id": "CAL-CAUSAL-ATOMICITY",
+            "kind": "escalate",
+            "raised_at": 1790593661
+          },
+          {
             "id": "CAL-LAB",
             "kind": "escalate",
             "raised_at": 1790593580
+          },
+          {
+            "id": "S5-RESEARCH",
+            "kind": "escalate",
+            "raised_at": 1790593762
           }
         ]
       },
@@ -6743,7 +6723,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "CAL-LAB",
@@ -6791,17 +6771,21 @@
         {
           "id": "S5-RESEARCH",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 28,
-          "last_commit_at": 1790592480,
-          "head": "2535b43b",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 31,
+          "last_commit_at": 1790593692,
+          "head": "cd7aeefc",
           "subfence": {
             "done": 0,
             "total": 15
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "cd7aeefc",
+              "at": 1790593692
+            },
             {
               "sha": "2535b43b",
               "at": 1790592480
@@ -6817,10 +6801,6 @@
             {
               "sha": "7fe47983",
               "at": 1790589853
-            },
-            {
-              "sha": "b686916b",
-              "at": 1790586555
             }
           ],
           "fences": {
@@ -6829,14 +6809,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "SG-CODEX-LOCKDOWN",
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 33,
+          "ctx_pct": 34,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7107,7 +7087,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-28T11:07:44Z",
+          "updated": "2026-09-28T11:08:26Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7123,7 +7103,7 @@
           ]
         }
       },
-      "snapshot_id": "0858688b3648db0f"
+      "snapshot_id": "e4665e4f67b2b223"
     }
   },
   "pm": {
@@ -7147,22 +7127,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 13
       }
     ]
   },
-  "snapshot_id": "def77295fd4158dd",
-  "published_at": "2026-09-28T11:07:58Z"
+  "snapshot_id": "d02cbfce6e17f0b3",
+  "published_at": "2026-09-28T11:13:56Z"
 }
