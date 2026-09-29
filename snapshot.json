@@ -1053,7 +1053,7 @@
             23.0
           ],
           [
-            45.8,
+            45.9,
             31.0
           ]
         ]
@@ -1906,7 +1906,7 @@
           66.0
         ],
         [
-          61.5,
+          61.6,
           66.0
         ]
       ]
@@ -5703,7 +5703,7 @@
           "status": "building",
           "stage": "interviewing",
           "stage_i": 2,
-          "ctx_pct": 34,
+          "ctx_pct": 35,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5987,13 +5987,19 @@
           ]
         }
       },
-      "snapshot_id": "a2e79bb95036d7a1"
+      "snapshot_id": "e8eeaada5d0415fd"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "PAY-EDGE",
+            "kind": "escalate",
+            "raised_at": 1790676330
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6026,7 +6032,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 40,
+          "ctx_pct": 43,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6089,17 +6095,25 @@
         {
           "id": "PAY-EDGE",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 63,
-          "last_commit_at": 1790675714,
-          "head": "7c1e3009",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 64,
+          "last_commit_at": 1790676330,
+          "head": "6d2819dc",
           "subfence": {
             "done": 0,
             "total": 18
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "6d2819dc",
+              "at": 1790676330
+            },
+            {
+              "sha": "a78c68c0",
+              "at": 1790676326
+            },
             {
               "sha": "7c1e3009",
               "at": 1790675714
@@ -6111,14 +6125,6 @@
             {
               "sha": "9b5ecf2a",
               "at": 1790675691
-            },
-            {
-              "sha": "7b43a65a",
-              "at": 1790674984
-            },
-            {
-              "sha": "ca580fb3",
-              "at": 1790674964
             }
           ],
           "fences": {
@@ -6127,14 +6133,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W5-FOLLOW",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 41,
+          "ctx_pct": 48,
           "last_commit_at": 1790674934,
           "head": "a935b688",
           "subfence": {
@@ -6492,7 +6498,7 @@
           ]
         }
       },
-      "snapshot_id": "c02a994f2f6b4855"
+      "snapshot_id": "c09b17a98c2927ba"
     },
     "scriptgen": {
       "schema": 1,
@@ -6842,7 +6848,7 @@
           ]
         }
       },
-      "snapshot_id": "a68b69ccfdd5e26e"
+      "snapshot_id": "4798d16315414ac2"
     }
   },
   "pm": {
@@ -6866,22 +6872,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 21
       }
     ]
   },
-  "snapshot_id": "2fb8c98cb7a75ac9",
-  "published_at": "2026-09-29T10:00:45Z"
+  "snapshot_id": "5aa0f6b313e46cf5",
+  "published_at": "2026-09-29T10:06:25Z"
 }
