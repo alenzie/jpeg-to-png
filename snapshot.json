@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": null,
         "used": 23,
-        "at": 1790677271,
+        "at": 1790678144,
         "reset": "20:21 on 5 Oct",
         "spark": [
           [
@@ -422,7 +422,7 @@
         ],
         "trail": [
           [
-            4.9,
+            5.0,
             0.0
           ]
         ]
@@ -717,10 +717,10 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 92,
-        "used": 43,
-        "at": 1790677271,
-        "reset": "Oct 2, 9:59pm (America/Los_Angeles)",
+        "projected": 94,
+        "used": 44,
+        "at": 1790678144,
+        "reset": "Oct 2, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1790107200,
@@ -1077,9 +1077,9 @@
     ],
     "glm": {
       "target": 100,
-      "projected": 108,
+      "projected": 107,
       "used": 67,
-      "at": 1790677271,
+      "at": 1790678144,
       "reset": "Oct 01, 19:39",
       "level": "pro",
       "spark": [
@@ -1949,7 +1949,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1790677271,
+      "at": 1790678144,
       "spark": [
         [
           1790107200,
@@ -4023,8 +4023,8 @@
         ],
         "B": [
           [
-            1786793827,
-            21.0
+            1786794195,
+            22.0
           ],
           [
             1786796924,
@@ -6013,7 +6013,7 @@
             },
             "glm": {
               "verdict": "IN_BAND",
-              "proj": 108,
+              "proj": 107,
               "target": 100,
               "used": 67,
               "day": 5,
@@ -6022,15 +6022,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 92,
+              "proj": 94,
               "target": 150,
-              "used": 43,
+              "used": 44,
               "day": 4,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-29T11:24:58Z",
+          "updated": "2026-09-29T11:35:46Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6046,13 +6046,18 @@
           ]
         }
       },
-      "snapshot_id": "2bf919e5bbad9ddd"
+      "snapshot_id": "2dfeed73c996260a"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
+          {
+            "id": "INT7-RT-CRM-CUSTODY-HARDENING",
+            "kind": "escalate",
+            "raised_at": 1790681985
+          },
           {
             "id": "PAY-EDGE",
             "kind": "escalate",
@@ -6089,8 +6094,8 @@
         {
           "id": "INT7-RT-CRM-CUSTODY-HARDENING",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 57,
           "last_commit_at": 1790680133,
           "head": "86dcd8c0",
@@ -6127,7 +6132,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "MSG7-DNC-MANUAL-CONSENT",
@@ -6245,7 +6250,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 23,
+          "ctx_pct": 24,
           "last_commit_at": 1790681667,
           "head": "97fe6363",
           "subfence": {
@@ -6570,7 +6575,7 @@
             },
             "glm": {
               "verdict": "IN_BAND",
-              "proj": 108,
+              "proj": 107,
               "target": 100,
               "used": 67,
               "day": 5,
@@ -6579,15 +6584,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 92,
+              "proj": 94,
               "target": 150,
-              "used": 43,
+              "used": 44,
               "day": 4,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-29T11:24:58Z",
+          "updated": "2026-09-29T11:35:46Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6603,7 +6608,7 @@
           ]
         }
       },
-      "snapshot_id": "ea7777079f64cbef"
+      "snapshot_id": "7bd6bca831ce4d7d"
     },
     "scriptgen": {
       "schema": 1,
@@ -6926,7 +6931,7 @@
             },
             "glm": {
               "verdict": "IN_BAND",
-              "proj": 108,
+              "proj": 107,
               "target": 100,
               "used": 67,
               "day": 5,
@@ -6935,15 +6940,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 92,
+              "proj": 94,
               "target": 150,
-              "used": 43,
+              "used": 44,
               "day": 4,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-09-29T11:24:58Z",
+          "updated": "2026-09-29T11:35:46Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6959,7 +6964,7 @@
           ]
         }
       },
-      "snapshot_id": "79a54b55432ad791"
+      "snapshot_id": "c6b488e4637bb79c"
     }
   },
   "pm": {
@@ -6983,22 +6988,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       }
     ]
   },
-  "snapshot_id": "f6ad3128e279d349",
-  "published_at": "2026-09-29T11:35:39Z"
+  "snapshot_id": "e324e49e220d519b",
+  "published_at": "2026-09-29T11:41:11Z"
 }
