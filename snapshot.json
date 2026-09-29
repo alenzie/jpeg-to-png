@@ -1093,7 +1093,7 @@
             47.0
           ],
           [
-            48.6,
+            48.7,
             50.0
           ]
         ]
@@ -1986,7 +1986,7 @@
           67.0
         ],
         [
-          64.3,
+          64.4,
           68.0
         ]
       ]
@@ -4091,7 +4091,7 @@
         ],
         "B": [
           [
-            1786805124,
+            1786805709,
             28.0
           ],
           [
@@ -5848,40 +5848,40 @@
         {
           "id": "FLOW-ACT-CORE",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 69,
-          "last_commit_at": 1790692530,
-          "head": "f81ba161",
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": 18,
+          "last_commit_at": 1790693048,
+          "head": "13661d2e",
           "subfence": {
             "done": 0,
-            "total": null
+            "total": 13
           },
           "review_rounds": [],
           "commits": [
             {
+              "sha": "13661d2e",
+              "at": 1790693048
+            },
+            {
+              "sha": "5b151f3d",
+              "at": 1790693043
+            },
+            {
+              "sha": "d3ed2e36",
+              "at": 1790693031
+            },
+            {
+              "sha": "2bc6b557",
+              "at": 1790693028
+            },
+            {
               "sha": "f81ba161",
               "at": 1790692530
-            },
-            {
-              "sha": "348faaf9",
-              "at": 1790692503
-            },
-            {
-              "sha": "e710c55c",
-              "at": 1790692499
-            },
-            {
-              "sha": "6143537c",
-              "at": 1790692295
-            },
-            {
-              "sha": "c9dadf90",
-              "at": 1790691770
             }
           ],
           "fences": {
-            "plan": false,
+            "plan": true,
             "synth": true,
             "build": false,
             "review": false
@@ -6139,7 +6139,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-29T14:41:57Z",
+          "updated": "2026-09-29T14:44:30Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6155,7 +6155,7 @@
           ]
         }
       },
-      "snapshot_id": "1bc5006c90f63632"
+      "snapshot_id": "d894f3fbdc661a5c"
     },
     "outbound": {
       "schema": 1,
@@ -6200,15 +6200,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 22,
-          "last_commit_at": 1790692800,
-          "head": "3123f4f4",
+          "ctx_pct": 29,
+          "last_commit_at": 1790693052,
+          "head": "0edfad02",
           "subfence": {
-            "done": 2,
+            "done": 3,
             "total": 15
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "0edfad02",
+              "at": 1790693052
+            },
             {
               "sha": "3123f4f4",
               "at": 1790692800
@@ -6224,10 +6228,6 @@
             {
               "sha": "f52938a1",
               "at": 1790691994
-            },
-            {
-              "sha": "b4d331f4",
-              "at": 1790691586
             }
           ],
           "fences": {
@@ -6286,7 +6286,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 25,
+          "ctx_pct": 33,
           "last_commit_at": 1790692403,
           "head": "edcdd83b",
           "subfence": {
@@ -6628,7 +6628,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-29T14:41:57Z",
+          "updated": "2026-09-29T14:44:30Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6644,7 +6644,7 @@
           ]
         }
       },
-      "snapshot_id": "6656c282ca974dc1"
+      "snapshot_id": "ba378eee9955eda5"
     },
     "scriptgen": {
       "schema": 1,
@@ -6978,7 +6978,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-29T14:41:57Z",
+          "updated": "2026-09-29T14:44:30Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6994,7 +6994,7 @@
           ]
         }
       },
-      "snapshot_id": "eccce6be79763ff6"
+      "snapshot_id": "e3a03412a9093725"
     }
   },
   "pm": {
@@ -7009,7 +7009,7 @@
       "available_note": "owner asleep; overnight cap 4 total in flight (refill only when live falls to 3); release queue FLOW-ACT-CORE (resume) then AUTH-VALIDATE (held answer)"
     },
     "pm_session": {
-      "lock": "2525249 2026-09-29T14:18:27Z",
+      "lock": "2875382 2026-09-29T14:48:29Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -7018,22 +7018,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 24
+        "monitor_last_pass_min": 30
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 24
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 24
+        "monitor_last_pass_min": 0
       }
     ]
   },
-  "snapshot_id": "16e99f3493f5c5db",
-  "published_at": "2026-09-29T14:42:57Z"
+  "snapshot_id": "a6274e8fa9ad8b20",
+  "published_at": "2026-09-29T14:48:31Z"
 }
