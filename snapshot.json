@@ -422,7 +422,7 @@
         ],
         "trail": [
           [
-            3.8,
+            3.9,
             0.0
           ]
         ]
@@ -5643,7 +5643,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790673277
+        "last_pass_at": 1790675116
       },
       "runstate": {
         "auto": false,
@@ -5670,7 +5670,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 21,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5692,7 +5692,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 31,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5976,25 +5976,19 @@
           ]
         }
       },
-      "snapshot_id": "5c4891373cc03a03"
+      "snapshot_id": "c25ef670c441a02f"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "INT7-RT-CRM-CUSTODY-HARDENING",
-            "kind": "needs-owner",
-            "raised_at": 1790674522
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790673278
+        "last_pass_at": 1790675117
       },
       "runstate": {
         "auto": false,
@@ -6019,9 +6013,9 @@
         {
           "id": "INT7-RT-CRM-CUSTODY-HARDENING",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 36,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 38,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6036,22 +6030,30 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "MSG7-DNC-MANUAL-CONSENT",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 28,
-          "last_commit_at": 1790674683,
-          "head": "1ea89a48",
+          "ctx_pct": 30,
+          "last_commit_at": 1790675255,
+          "head": "353b9a7a",
           "subfence": {
             "done": 13,
             "total": 13
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "353b9a7a",
+              "at": 1790675255
+            },
+            {
+              "sha": "24834f7d",
+              "at": 1790675116
+            },
             {
               "sha": "1ea89a48",
               "at": 1790674683
@@ -6063,14 +6065,6 @@
             {
               "sha": "b6ccefcd",
               "at": 1790674653
-            },
-            {
-              "sha": "996ec19e",
-              "at": 1790674068
-            },
-            {
-              "sha": "88ef02af",
-              "at": 1790674013
             }
           ],
           "fences": {
@@ -6129,7 +6123,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 8,
+          "ctx_pct": 36,
           "last_commit_at": 1790674934,
           "head": "a935b688",
           "subfence": {
@@ -6471,7 +6465,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-29T09:42:45Z",
+          "updated": "2026-09-29T09:43:38Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6487,7 +6481,7 @@
           ]
         }
       },
-      "snapshot_id": "959692a24ca7919c"
+      "snapshot_id": "56986c6b03fc45a7"
     },
     "scriptgen": {
       "schema": 1,
@@ -6499,7 +6493,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790673277
+        "last_pass_at": 1790675116
       },
       "runstate": {
         "auto": false,
@@ -6526,7 +6520,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 31,
+          "ctx_pct": 34,
           "last_commit_at": 1790675003,
           "head": "48a35378",
           "subfence": {
@@ -6837,7 +6831,7 @@
           ]
         }
       },
-      "snapshot_id": "2168d45b65f54e7f"
+      "snapshot_id": "d694f11e8b20aa4e"
     }
   },
   "pm": {
@@ -6861,22 +6855,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 29
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 29
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 29
+        "monitor_last_pass_min": 4
       }
     ]
   },
-  "snapshot_id": "11f479f1285b73a9",
-  "published_at": "2026-09-29T09:43:50Z"
+  "snapshot_id": "0cc5ed54d761087a",
+  "published_at": "2026-09-29T09:49:27Z"
 }
