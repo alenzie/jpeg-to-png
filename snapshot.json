@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": null,
         "used": 33,
-        "at": 1790697698,
+        "at": 1790698384,
         "reset": "20:21 on 5 Oct",
         "spark": [
           [
@@ -422,7 +422,7 @@
         ],
         "trail": [
           [
-            8.2,
+            8.3,
             0.0
           ]
         ]
@@ -719,8 +719,8 @@
         "mult": "20x",
         "projected": 108,
         "used": 54,
-        "at": 1790697698,
-        "reset": "Oct 2, 9:59pm (America/Los_Angeles)",
+        "at": 1790698384,
+        "reset": "Oct 2, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1790107200,
@@ -1127,7 +1127,7 @@
       "target": 100,
       "projected": 105,
       "used": 69,
-      "at": 1790697698,
+      "at": 1790698384,
       "reset": "Oct 01, 19:39",
       "level": "pro",
       "spark": [
@@ -2045,7 +2045,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1790697698,
+      "at": 1790698384,
       "spark": [
         [
           1790107200,
@@ -5890,6 +5890,11 @@
             "id": "AUTH-VALIDATE",
             "kind": "needs-owner",
             "raised_at": 1790675936
+          },
+          {
+            "id": "FLOW-ACT-CORE",
+            "kind": "escalate",
+            "raised_at": 1790701927
           }
         ]
       },
@@ -5944,9 +5949,9 @@
         {
           "id": "FLOW-ACT-CORE",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 32,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 33,
           "last_commit_at": 1790700005,
           "head": "ad32b973",
           "subfence": {
@@ -5982,7 +5987,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [],
@@ -6235,7 +6240,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-29T17:01:41Z",
+          "updated": "2026-09-29T17:13:32Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6251,7 +6256,7 @@
           ]
         }
       },
-      "snapshot_id": "51ee8dae94603206"
+      "snapshot_id": "cc9c8df185ba744a"
     },
     "outbound": {
       "schema": 1,
@@ -6259,9 +6264,19 @@
         "active": true,
         "units": [
           {
+            "id": "INT7-RT-CRM-CUSTODY-HARDENING",
+            "kind": "escalate",
+            "raised_at": 1790701902
+          },
+          {
             "id": "PAY-EDGE",
             "kind": "escalate",
             "raised_at": 1790678479
+          },
+          {
+            "id": "W5-FOLLOW",
+            "kind": "escalate",
+            "raised_at": 1790701875
           }
         ]
       },
@@ -6294,8 +6309,8 @@
         {
           "id": "INT7-RT-CRM-CUSTODY-HARDENING",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 36,
           "last_commit_at": 1790699941,
           "head": "225a8adc",
@@ -6332,7 +6347,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "PAY-EDGE",
@@ -6380,8 +6395,8 @@
         {
           "id": "W5-FOLLOW",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 41,
           "last_commit_at": 1790700020,
           "head": "9e5b6b2d",
@@ -6418,7 +6433,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6724,7 +6739,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-29T17:01:41Z",
+          "updated": "2026-09-29T17:13:07Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6740,7 +6755,7 @@
           ]
         }
       },
-      "snapshot_id": "3868bf3f58f1c150"
+      "snapshot_id": "05cdd1a137a48924"
     },
     "scriptgen": {
       "schema": 1,
@@ -7074,7 +7089,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-29T17:01:41Z",
+          "updated": "2026-09-29T17:13:32Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7090,7 +7105,7 @@
           ]
         }
       },
-      "snapshot_id": "6ec5e8ce2541c4c0"
+      "snapshot_id": "2d536269cb160425"
     }
   },
   "pm": {
@@ -7114,22 +7129,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 19
+        "monitor_last_pass_min": 25
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 19
+        "monitor_last_pass_min": 25
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 19
+        "monitor_last_pass_min": 25
       }
     ]
   },
-  "snapshot_id": "314a6306d6582cb4",
-  "published_at": "2026-09-29T17:08:23Z"
+  "snapshot_id": "65d2212ddba53a90",
+  "published_at": "2026-09-29T17:13:42Z"
 }
