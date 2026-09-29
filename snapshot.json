@@ -2082,7 +2082,7 @@
           69.0
         ],
         [
-          67.7,
+          67.8,
           69.0
         ]
       ]
@@ -6039,14 +6039,18 @@
           "stage": "subfencing",
           "stage_i": 4,
           "ctx_pct": 36,
-          "last_commit_at": 1790709155,
-          "head": "3c91e8c7",
+          "last_commit_at": 1790713893,
+          "head": "9d750345",
           "subfence": {
             "done": 5,
             "total": 13
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "9d750345",
+              "at": 1790713893
+            },
             {
               "sha": "3c91e8c7",
               "at": 1790709155
@@ -6062,10 +6066,6 @@
             {
               "sha": "0ac575b5",
               "at": 1790704407
-            },
-            {
-              "sha": "ad32b973",
-              "at": 1790700005
             }
           ],
           "fences": {
@@ -6343,7 +6343,7 @@
           ]
         }
       },
-      "snapshot_id": "7d479938720713fc"
+      "snapshot_id": "49f2a1d5720b8e5e"
     },
     "outbound": {
       "schema": 1,
@@ -6393,15 +6393,23 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 42,
-          "last_commit_at": 1790709156,
-          "head": "98867b8e",
+          "ctx_pct": 47,
+          "last_commit_at": 1790713918,
+          "head": "47be3db3",
           "subfence": {
             "done": 6,
             "total": 15
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "47be3db3",
+              "at": 1790713918
+            },
+            {
+              "sha": "531abd37",
+              "at": 1790713874
+            },
             {
               "sha": "98867b8e",
               "at": 1790709156
@@ -6413,14 +6421,6 @@
             {
               "sha": "444dce87",
               "at": 1790704347
-            },
-            {
-              "sha": "225a8adc",
-              "at": 1790699941
-            },
-            {
-              "sha": "fc06b204",
-              "at": 1790698503
             }
           ],
           "fences": {
@@ -6837,7 +6837,7 @@
           ]
         }
       },
-      "snapshot_id": "d25fd2abcedd7efa"
+      "snapshot_id": "ff4118c8d7a8a820"
     },
     "scriptgen": {
       "schema": 1,
@@ -7193,19 +7193,19 @@
           ]
         }
       },
-      "snapshot_id": "baee2469ab57b35c"
+      "snapshot_id": "7f3ed88acb052e4d"
     }
   },
   "pm": {
     "attendance": {
       "mode": "unattended",
       "fleets": {},
-      "updated": "2026-09-29T19:12:45Z",
+      "updated": "2026-09-29T20:29:19Z",
       "by": "pm-unattended",
       "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode.",
       "note": "owner awake 2026-09-05 14:45 PDT. outbound MERGE-ERASURE resumed at parallel 1 (owner order). L2.5, no auto. fm/sg parked. Codex conservation still in force (49% used, resets Sep 11).",
       "available": false,
-      "available_note": "fleet cap 3 TOTAL (owner 19:15Z codex ease); release queue PAY-EDGE (on W5-FOLLOW merge) then AUTH-VALIDATE (held answer)"
+      "available_note": "fleet cap 2 TOTAL (owner ~20:25Z, codex budget ~10%/day); refill only when live < 2; queue PAY-EDGE build (on W5-FOLLOW merge) then AUTH-VALIDATE (held answer); re-check codex projection after ~24h, cap 1 if still walling before Oct 5"
     },
     "pm_session": {
       "lock": "1140404 2026-09-29T20:15:02Z",
@@ -7217,22 +7217,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 16
       }
     ]
   },
-  "snapshot_id": "53f5c3f27a1ae2cc",
-  "published_at": "2026-09-29T20:27:03Z"
+  "snapshot_id": "d9cfde1fa4a91325",
+  "published_at": "2026-09-29T20:32:14Z"
 }
