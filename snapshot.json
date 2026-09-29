@@ -1061,7 +1061,7 @@
             31.0
           ],
           [
-            46.2,
+            46.3,
             40.0
           ]
         ]
@@ -1922,7 +1922,7 @@
           66.0
         ],
         [
-          61.9,
+          62.0,
           67.0
         ]
       ]
@@ -3999,7 +3999,7 @@
         ],
         "B": [
           [
-            1786790597,
+            1786791313,
             20.0
           ],
           [
@@ -6014,13 +6014,19 @@
           ]
         }
       },
-      "snapshot_id": "03fcad13778cb027"
+      "snapshot_id": "7e475c7dcd294feb"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "PAY-EDGE",
+            "kind": "escalate",
+            "raised_at": 1790678479
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6146,17 +6152,21 @@
         {
           "id": "PAY-EDGE",
           "status": "building",
-          "stage": "building",
-          "stage_i": 3,
-          "ctx_pct": 0,
-          "last_commit_at": 1790678227,
-          "head": "2ab58692",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 16,
+          "last_commit_at": 1790678531,
+          "head": "1c08497e",
           "subfence": {
             "done": 0,
             "total": 18
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "1c08497e",
+              "at": 1790678531
+            },
             {
               "sha": "2ab58692",
               "at": 1790678227
@@ -6172,10 +6182,6 @@
             {
               "sha": "3e7f85d8",
               "at": 1790677899
-            },
-            {
-              "sha": "43add330",
-              "at": 1790676662
             }
           ],
           "fences": {
@@ -6184,7 +6190,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "W5-FOLLOW",
@@ -6549,13 +6555,19 @@
           ]
         }
       },
-      "snapshot_id": "7fd5a62ad93a33c8"
+      "snapshot_id": "16c706bbb146e1fa"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "S5-RESEARCH",
+            "kind": "escalate",
+            "raised_at": 1790678602
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6586,8 +6598,8 @@
         {
           "id": "S5-RESEARCH",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 43,
           "last_commit_at": 1790676424,
           "head": "c244344c",
@@ -6624,7 +6636,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6899,7 +6911,7 @@
           ]
         }
       },
-      "snapshot_id": "f232ecceb85e4b7e"
+      "snapshot_id": "aa619426c0ee148e"
     }
   },
   "pm": {
@@ -6923,22 +6935,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 29
       }
     ]
   },
-  "snapshot_id": "dcb911841b0763a2",
-  "published_at": "2026-09-29T10:39:55Z"
+  "snapshot_id": "11bc073e8cc906c5",
+  "published_at": "2026-09-29T10:45:28Z"
 }
