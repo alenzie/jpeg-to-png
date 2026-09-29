@@ -1954,7 +1954,7 @@
           67.0
         ],
         [
-          62.8,
+          62.9,
           67.0
         ]
       ]
@@ -5741,7 +5741,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790682461
+        "last_pass_at": 1790684264
       },
       "runstate": {
         "auto": false,
@@ -6074,7 +6074,7 @@
           ]
         }
       },
-      "snapshot_id": "dd88aa5d2b5939ef"
+      "snapshot_id": "d2621704c719329d"
     },
     "outbound": {
       "schema": 1,
@@ -6097,7 +6097,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790682463
+        "last_pass_at": 1790684265
       },
       "runstate": {
         "auto": false,
@@ -6164,83 +6164,26 @@
         },
         {
           "id": "MSG7-DNC-MANUAL-CONSENT",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 9,
-          "last_commit_at": 1790683418,
-          "head": "4776476a",
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 10,
+          "last_commit_at": 1790684301,
+          "head": "ea71b472",
           "subfence": {
             "done": 13,
             "total": 13
           },
-          "review_rounds": [
-            {
-              "round": 2,
-              "seats": "gpt-5.6-sol × 2 fix+blast radius  S5 len",
-              "must": 2,
-              "should": 6,
-              "could": 1,
-              "nit": 3
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra × 1 R2 fix + blast radius",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.6-terra × 2 fix verify  consent sw",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 1,
-              "seats": "gpt-6-astraxhigh breadth × 3 slices",
-              "must": 1,
-              "should": 12,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-solxhigh × 2 fix+blast  S5 lens",
-              "must": 1,
-              "should": 3,
-              "could": 4,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terraxhigh",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.6-terraxhigh DECLARER × 3 cumulati",
-              "must": 1,
-              "should": 0,
-              "could": 2,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.6-terraxhigh × 2 PM-scoped verify ",
-              "must": 0,
-              "should": 0,
-              "could": 1,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "ea71b472",
+              "at": 1790684301
+            },
+            {
+              "sha": "a57d1518",
+              "at": 1790684263
+            },
             {
               "sha": "4776476a",
               "at": 1790683418
@@ -6252,21 +6195,13 @@
             {
               "sha": "f2abd6ec",
               "at": 1790682477
-            },
-            {
-              "sha": "a8a01583",
-              "at": 1790682459
-            },
-            {
-              "sha": "7995142f",
-              "at": 1790680794
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         },
@@ -6318,7 +6253,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 30,
+          "ctx_pct": 32,
           "last_commit_at": 1790683749,
           "head": "1a33ad13",
           "subfence": {
@@ -6375,6 +6310,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 326,
+          "unit": "MSG7-DNC-MANUAL-CONSENT",
+          "merged_at": 1790684263,
+          "sha": "a57d1518"
+        },
+        {
           "pr": 325,
           "unit": "MSG11",
           "merged_at": 1790605983,
@@ -6397,12 +6338,6 @@
           "unit": "DSAR-AGENT-DECISIONS",
           "merged_at": 1790215353,
           "sha": "56b54f87"
-        },
-        {
-          "pr": 321,
-          "unit": "triage-rulings-0923",
-          "merged_at": 1790148370,
-          "sha": "22fa4adc"
         }
       ],
       "decisions": [
@@ -6676,7 +6611,7 @@
           ]
         }
       },
-      "snapshot_id": "08076e2204eb5fdf"
+      "snapshot_id": "a0d8a77415bd6b41"
     },
     "scriptgen": {
       "schema": 1,
@@ -6688,7 +6623,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790682461
+        "last_pass_at": 1790684264
       },
       "runstate": {
         "auto": false,
@@ -6715,7 +6650,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 43,
+          "ctx_pct": 44,
           "last_commit_at": 1790676424,
           "head": "c244344c",
           "subfence": {
@@ -7026,7 +6961,7 @@
           ]
         }
       },
-      "snapshot_id": "a55ac85fcd6bf542"
+      "snapshot_id": "4f686a7144faf1dd"
     }
   },
   "pm": {
@@ -7041,7 +6976,7 @@
       "available_note": "owner asleep; overnight cap 4 total in flight (refill only when live falls to 3); release queue FLOW-ACT-CORE (resume) then AUTH-VALIDATE (held answer)"
     },
     "pm_session": {
-      "lock": "865007 2026-09-29T11:17:19Z",
+      "lock": "1358192 2026-09-29T12:17:45Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -7050,22 +6985,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 2
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 2
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 2
       }
     ]
   },
-  "snapshot_id": "ac7f862a421679a7",
-  "published_at": "2026-09-29T12:14:26Z"
+  "snapshot_id": "366982b840805266",
+  "published_at": "2026-09-29T12:19:53Z"
 }
