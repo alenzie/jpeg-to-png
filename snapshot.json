@@ -422,7 +422,7 @@
         ],
         "trail": [
           [
-            9.4,
+            9.5,
             0.0
           ]
         ]
@@ -6007,14 +6007,18 @@
           "stage": "subfencing",
           "stage_i": 4,
           "ctx_pct": 36,
-          "last_commit_at": 1790705036,
-          "head": "8478cf1e",
+          "last_commit_at": 1790709155,
+          "head": "3c91e8c7",
           "subfence": {
             "done": 5,
             "total": 13
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "3c91e8c7",
+              "at": 1790709155
+            },
             {
               "sha": "8478cf1e",
               "at": 1790705036
@@ -6030,10 +6034,6 @@
             {
               "sha": "ad32b973",
               "at": 1790700005
-            },
-            {
-              "sha": "bf1c29c6",
-              "at": 1790698721
             }
           ],
           "fences": {
@@ -6311,7 +6311,7 @@
           ]
         }
       },
-      "snapshot_id": "e82f67fe3181c991"
+      "snapshot_id": "06feb6cbe4f07290"
     },
     "outbound": {
       "schema": 1,
@@ -6362,14 +6362,18 @@
           "stage": "subfencing",
           "stage_i": 4,
           "ctx_pct": 39,
-          "last_commit_at": 1790704865,
-          "head": "856eef55",
+          "last_commit_at": 1790709156,
+          "head": "98867b8e",
           "subfence": {
             "done": 6,
             "total": 15
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "98867b8e",
+              "at": 1790709156
+            },
             {
               "sha": "856eef55",
               "at": 1790704865
@@ -6385,10 +6389,6 @@
             {
               "sha": "fc06b204",
               "at": 1790698503
-            },
-            {
-              "sha": "7a667089",
-              "at": 1790697150
             }
           ],
           "fences": {
@@ -6805,7 +6805,7 @@
           ]
         }
       },
-      "snapshot_id": "dc5fca0ba91ddddb"
+      "snapshot_id": "ded9a49ad69dc0d4"
     },
     "scriptgen": {
       "schema": 1,
@@ -7161,19 +7161,19 @@
           ]
         }
       },
-      "snapshot_id": "74d1347852309f99"
+      "snapshot_id": "87207ec05106d848"
     }
   },
   "pm": {
     "attendance": {
       "mode": "unattended",
       "fleets": {},
-      "updated": "2026-09-29T10:36:58Z",
+      "updated": "2026-09-29T19:12:45Z",
       "by": "pm-unattended",
       "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode.",
       "note": "owner awake 2026-09-05 14:45 PDT. outbound MERGE-ERASURE resumed at parallel 1 (owner order). L2.5, no auto. fm/sg parked. Codex conservation still in force (49% used, resets Sep 11).",
       "available": false,
-      "available_note": "owner asleep; overnight cap 4 total in flight (refill only when live falls to 3); release queue FLOW-ACT-CORE (resume) then AUTH-VALIDATE (held answer)"
+      "available_note": "fleet cap 3 TOTAL (owner 19:15Z codex ease); release queue PAY-EDGE (on W5-FOLLOW merge) then AUTH-VALIDATE (held answer)"
     },
     "pm_session": {
       "lock": "689201 2026-09-29T18:47:39Z",
@@ -7185,22 +7185,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 26
       }
     ]
   },
-  "snapshot_id": "67cfa6d73bf99dd7",
-  "published_at": "2026-09-29T19:09:20Z"
+  "snapshot_id": "58940609665086d9",
+  "published_at": "2026-09-29T19:14:28Z"
 }
