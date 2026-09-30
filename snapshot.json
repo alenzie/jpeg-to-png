@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 341,
+        "projected": 338,
         "used": 44,
-        "at": 1790726603,
+        "at": 1790727361,
         "reset": "20:21 on 5 Oct",
         "spark": [
           [
@@ -422,7 +422,7 @@
         ],
         "trail": [
           [
-            13.0,
+            13.1,
             0.0
           ]
         ]
@@ -717,10 +717,10 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 110,
+        "projected": 109,
         "used": 60,
-        "at": 1790726603,
-        "reset": "Oct 2, 10pm (America/Los_Angeles)",
+        "at": 1790727361,
+        "reset": "Oct 2, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1790143200,
@@ -1183,7 +1183,7 @@
       "target": 100,
       "projected": 98,
       "used": 69,
-      "at": 1790726603,
+      "at": 1790727361,
       "reset": "Oct 01, 19:39",
       "level": "pro",
       "spark": [
@@ -2157,7 +2157,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1790726603,
+      "at": 1790727361,
       "spark": [
         [
           1790143200,
@@ -6109,7 +6109,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790729166
+        "last_pass_at": 1790730974
       },
       "runstate": {
         "auto": false,
@@ -6421,7 +6421,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 341,
+              "proj": 338,
               "target": 100,
               "used": 44,
               "day": 1,
@@ -6439,7 +6439,7 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 110,
+              "proj": 109,
               "target": 150,
               "used": 60,
               "day": 4,
@@ -6447,7 +6447,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-30T01:03:27Z",
+          "updated": "2026-09-30T01:16:15Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6463,7 +6463,7 @@
           ]
         }
       },
-      "snapshot_id": "5b308917ff79368d"
+      "snapshot_id": "e49179a691dd5799"
     },
     "outbound": {
       "schema": 1,
@@ -6481,7 +6481,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790729168
+        "last_pass_at": 1790730975
       },
       "runstate": {
         "auto": false,
@@ -6592,17 +6592,50 @@
         {
           "id": "W5-FOLLOW",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 37,
-          "last_commit_at": 1790730534,
-          "head": "d9ff5c9a",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 39,
+          "last_commit_at": 1790730954,
+          "head": "e9d787b4",
           "subfence": {
             "done": 23,
             "total": 23
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 3,
+              "seats": "glm-5.3 swarm-4 addendum cite-verified",
+              "must": 3,
+              "should": 6,
+              "could": 1,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "lead-verify while verifying R5-G3",
+              "must": 0,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 8,
+              "seats": "glm-5.3 swarm-4 addendum 8 candidates",
+              "must": 1,
+              "should": 5,
+              "could": 1,
+              "nit": 1
+            }
+          ],
           "commits": [
+            {
+              "sha": "e9d787b4",
+              "at": 1790730954
+            },
+            {
+              "sha": "4c47a086",
+              "at": 1790730938
+            },
             {
               "sha": "d9ff5c9a",
               "at": 1790730534
@@ -6614,20 +6647,12 @@
             {
               "sha": "655cf1fd",
               "at": 1790729652
-            },
-            {
-              "sha": "d9303380",
-              "at": 1790729648
-            },
-            {
-              "sha": "f5ff2d66",
-              "at": 1790728917
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
-            "build": false,
+            "build": true,
             "review": false
           },
           "gate_open": false
@@ -6910,7 +6935,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 341,
+              "proj": 338,
               "target": 100,
               "used": 44,
               "day": 1,
@@ -6928,7 +6953,7 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 110,
+              "proj": 109,
               "target": 150,
               "used": 60,
               "day": 4,
@@ -6936,7 +6961,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-30T01:03:27Z",
+          "updated": "2026-09-30T01:16:15Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6952,7 +6977,7 @@
           ]
         }
       },
-      "snapshot_id": "2a1e9a1779bcd34f"
+      "snapshot_id": "0c79dccbcdb651c1"
     },
     "scriptgen": {
       "schema": 1,
@@ -6964,7 +6989,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1790729166
+        "last_pass_at": 1790730973
       },
       "runstate": {
         "auto": false,
@@ -6991,15 +7016,23 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 37,
-          "last_commit_at": 1790730139,
-          "head": "5ffdde2d",
+          "ctx_pct": 38,
+          "last_commit_at": 1790730700,
+          "head": "b4c87863",
           "subfence": {
             "done": 15,
             "total": 15
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "b4c87863",
+              "at": 1790730700
+            },
+            {
+              "sha": "800752c8",
+              "at": 1790730695
+            },
             {
               "sha": "5ffdde2d",
               "at": 1790730139
@@ -7011,14 +7044,6 @@
             {
               "sha": "d32a3ec0",
               "at": 1790729423
-            },
-            {
-              "sha": "229a32cd",
-              "at": 1790729404
-            },
-            {
-              "sha": "30fb2c39",
-              "at": 1790728257
             }
           ],
           "fences": {
@@ -7260,7 +7285,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 341,
+              "proj": 338,
               "target": 100,
               "used": 44,
               "day": 1,
@@ -7278,7 +7303,7 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 110,
+              "proj": 109,
               "target": 150,
               "used": 60,
               "day": 4,
@@ -7286,7 +7311,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-30T01:03:27Z",
+          "updated": "2026-09-30T01:16:15Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7302,7 +7327,7 @@
           ]
         }
       },
-      "snapshot_id": "bbbf6b0511642478"
+      "snapshot_id": "72682d87eefabb6d"
     }
   },
   "pm": {
@@ -7317,7 +7342,7 @@
       "available_note": "fleet cap 2 TOTAL (live: W5-FOLLOW, S5-RESEARCH). Parked (resume via REPL resume <U>, in order): PAY-EDGE build after W5 merge, CRM-CUSTODY (S7 WIP), FLOW-ACT-CORE (before S6), AUTH-VALIDATE (held answer). Re-check codex projection Sep 30 ~20:25Z; cap 1 if still walling."
     },
     "pm_session": {
-      "lock": "2515551 2026-09-30T00:46:06Z",
+      "lock": "2753082 2026-09-30T01:16:13Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -7326,22 +7351,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 25
+        "monitor_last_pass_min": 0
       }
     ]
   },
-  "snapshot_id": "dd702da0a579edba",
-  "published_at": "2026-09-30T01:11:17Z"
+  "snapshot_id": "075fec0e3d6515c7",
+  "published_at": "2026-09-30T01:16:35Z"
 }
