@@ -1173,7 +1173,7 @@
             57.0
           ],
           [
-            54.9,
+            55.0,
             60.0
           ]
         ]
@@ -2146,7 +2146,7 @@
           69.0
         ],
         [
-          70.6,
+          70.7,
           69.0
         ]
       ]
@@ -6113,7 +6113,7 @@
       },
       "runstate": {
         "auto": false,
-        "parallel": 2,
+        "parallel": 1,
         "pickconfirm": true
       },
       "daemons": {
@@ -6447,7 +6447,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-30T01:16:15Z",
+          "updated": "2026-09-30T01:17:49Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6463,7 +6463,7 @@
           ]
         }
       },
-      "snapshot_id": "e49179a691dd5799"
+      "snapshot_id": "2e08902334e06174"
     },
     "outbound": {
       "schema": 1,
@@ -6485,7 +6485,7 @@
       },
       "runstate": {
         "auto": false,
-        "parallel": 2,
+        "parallel": 1,
         "pickconfirm": true
       },
       "daemons": {
@@ -6594,7 +6594,7 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 39,
+          "ctx_pct": 19,
           "last_commit_at": 1790730954,
           "head": "e9d787b4",
           "subfence": {
@@ -6961,7 +6961,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-30T01:16:15Z",
+          "updated": "2026-09-30T01:17:49Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6977,7 +6977,7 @@
           ]
         }
       },
-      "snapshot_id": "0c79dccbcdb651c1"
+      "snapshot_id": "3d8f98d8f6d6f1a2"
     },
     "scriptgen": {
       "schema": 1,
@@ -6993,7 +6993,7 @@
       },
       "runstate": {
         "auto": false,
-        "parallel": 2,
+        "parallel": 1,
         "pickconfirm": true
       },
       "daemons": {
@@ -7017,14 +7017,18 @@
           "stage": "phase-4 review",
           "stage_i": 5,
           "ctx_pct": 38,
-          "last_commit_at": 1790730700,
-          "head": "b4c87863",
+          "last_commit_at": 1790731080,
+          "head": "cbcdc722",
           "subfence": {
             "done": 15,
             "total": 15
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "cbcdc722",
+              "at": 1790731080
+            },
             {
               "sha": "b4c87863",
               "at": 1790730700
@@ -7040,10 +7044,6 @@
             {
               "sha": "62d5a0b4",
               "at": 1790730136
-            },
-            {
-              "sha": "d32a3ec0",
-              "at": 1790729423
             }
           ],
           "fences": {
@@ -7311,7 +7311,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-30T01:16:15Z",
+          "updated": "2026-09-30T01:17:49Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7327,19 +7327,19 @@
           ]
         }
       },
-      "snapshot_id": "72682d87eefabb6d"
+      "snapshot_id": "711ce7a277af8fee"
     }
   },
   "pm": {
     "attendance": {
       "mode": "unattended",
       "fleets": {},
-      "updated": "2026-09-29T20:32:44Z",
+      "updated": "2026-09-30T01:19:03Z",
       "by": "pm-unattended",
       "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode.",
       "note": "owner awake 2026-09-05 14:45 PDT. outbound MERGE-ERASURE resumed at parallel 1 (owner order). L2.5, no auto. fm/sg parked. Codex conservation still in force (49% used, resets Sep 11).",
       "available": false,
-      "available_note": "fleet cap 2 TOTAL (live: W5-FOLLOW, S5-RESEARCH). Parked (resume via REPL resume <U>, in order): PAY-EDGE build after W5 merge, CRM-CUSTODY (S7 WIP), FLOW-ACT-CORE (before S6), AUTH-VALIDATE (held answer). Re-check codex projection Sep 30 ~20:25Z; cap 1 if still walling."
+      "available_note": "fleet cap 1 TOTAL (live: W5-FOLLOW). Parked, resume in order via REPL resume <U>: PAY-EDGE build after W5 merge, CRM-CUSTODY (S7 WIP), FLOW-ACT-CORE (before S6), S5-RESEARCH (P4 R5), AUTH-VALIDATE (held answer). PM uses quiet pm-wake-once.sh + 2.5h heartbeats."
     },
     "pm_session": {
       "lock": "2753082 2026-09-30T01:16:13Z",
@@ -7351,22 +7351,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       }
     ]
   },
-  "snapshot_id": "075fec0e3d6515c7",
-  "published_at": "2026-09-30T01:16:35Z"
+  "snapshot_id": "0a85de1363502d43",
+  "published_at": "2026-09-30T01:21:51Z"
 }
