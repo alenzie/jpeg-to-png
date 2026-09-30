@@ -7,8 +7,8 @@
         "label": "B",
         "tier": "Pro",
         "projected": null,
-        "used": 16,
-        "at": 1790799347,
+        "used": 17,
+        "at": 1790799980,
         "reset": "12:29 on 7 Oct",
         "spark": [
           [
@@ -771,7 +771,7 @@
         "mult": "20x",
         "projected": 118,
         "used": 79,
-        "at": 1790799347,
+        "at": 1790799980,
         "reset": "Oct 2, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1353,7 +1353,7 @@
             79.0
           ],
           [
-            66.9,
+            67.0,
             79.0
           ]
         ]
@@ -1363,7 +1363,7 @@
       "target": 100,
       "projected": 87,
       "used": 72,
-      "at": 1790799347,
+      "at": 1790799980,
       "reset": "Oct 01, 19:39",
       "level": "pro",
       "spark": [
@@ -2454,7 +2454,7 @@
           72.0
         ],
         [
-          82.6,
+          82.7,
           72.0
         ]
       ]
@@ -2465,7 +2465,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1790799347,
+      "at": 1790799980,
       "spark": [
         [
           1790197200,
@@ -3561,7 +3561,7 @@
             70.0
           ],
           [
-            1790198970,
+            1790199321,
             72.0
           ],
           [
@@ -4743,7 +4743,7 @@
         ],
         "B": [
           [
-            1786915596,
+            1786916631,
             82.0
           ],
           [
@@ -5043,7 +5043,7 @@
             81.0
           ],
           [
-            1790198970,
+            1790199321,
             86.0
           ],
           [
@@ -5970,7 +5970,7 @@
           84.0
         ],
         [
-          1790198970,
+          1790199321,
           85.0
         ],
         [
@@ -6620,14 +6620,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "AUTH-VALIDATE",
-            "kind": "needs-owner",
-            "raised_at": 1790675936
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6658,9 +6652,9 @@
         {
           "id": "AUTH-VALIDATE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 35,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 38,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6675,14 +6669,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "FLOW-ACT-CORE",
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 37,
+          "ctx_pct": 39,
           "last_commit_at": 1790803509,
           "head": "941ea697",
           "subfence": {
@@ -6956,7 +6950,7 @@
               "verdict": "OVERBURN",
               "proj": null,
               "target": 400,
-              "used": 16,
+              "used": 17,
               "day": 1,
               "active": "C2",
               "wall": false
@@ -6980,7 +6974,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-30T21:15:52Z",
+          "updated": "2026-09-30T21:27:07Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6996,19 +6990,13 @@
           ]
         }
       },
-      "snapshot_id": "617edb64a481f518"
+      "snapshot_id": "b73b37cc51292d85"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "PAY-EDGE",
-            "kind": "escalate",
-            "raised_at": 1790803516
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -7035,51 +7023,7 @@
           "up": false
         }
       },
-      "units": [
-        {
-          "id": "PAY-EDGE",
-          "status": "done",
-          "stage": "done",
-          "stage_i": 7,
-          "ctx_pct": 16,
-          "last_commit_at": 1790801815,
-          "head": "7dbe1fb0",
-          "subfence": {
-            "done": 18,
-            "total": 18
-          },
-          "review_rounds": [],
-          "commits": [
-            {
-              "sha": "7dbe1fb0",
-              "at": 1790801815
-            },
-            {
-              "sha": "7e51a70f",
-              "at": 1790801654
-            },
-            {
-              "sha": "7c35d3aa",
-              "at": 1790801649
-            },
-            {
-              "sha": "21e12117",
-              "at": 1790801201
-            },
-            {
-              "sha": "481c5745",
-              "at": 1790801197
-            }
-          ],
-          "fences": {
-            "plan": true,
-            "synth": true,
-            "build": true,
-            "review": true
-          },
-          "gate_open": true
-        }
-      ],
+      "units": [],
       "eligible": [
         "REFUSAL-NEEDSYOU-ACK",
         "CUSTODY-VAULT",
@@ -7368,7 +7312,7 @@
               "verdict": "OVERBURN",
               "proj": null,
               "target": 400,
-              "used": 16,
+              "used": 17,
               "day": 1,
               "active": "C2",
               "wall": false
@@ -7392,7 +7336,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-30T21:15:52Z",
+          "updated": "2026-09-30T21:27:07Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7408,7 +7352,7 @@
           ]
         }
       },
-      "snapshot_id": "955e4a657ed067c1"
+      "snapshot_id": "de2945d817cc6301"
     },
     "scriptgen": {
       "schema": 1,
@@ -7724,7 +7668,7 @@
               "verdict": "OVERBURN",
               "proj": null,
               "target": 400,
-              "used": 16,
+              "used": 17,
               "day": 1,
               "active": "C2",
               "wall": false
@@ -7748,7 +7692,7 @@
               "wall": false
             }
           },
-          "updated": "2026-09-30T21:15:52Z",
+          "updated": "2026-09-30T21:27:07Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7764,7 +7708,7 @@
           ]
         }
       },
-      "snapshot_id": "f31a134b8d966a3f"
+      "snapshot_id": "5c1fa19271bd04f5"
     }
   },
   "pm": {
@@ -7792,22 +7736,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1209
+        "monitor_last_pass_min": 1215
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1209
+        "monitor_last_pass_min": 1215
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1209
+        "monitor_last_pass_min": 1215
       }
     ]
   },
-  "snapshot_id": "283995a6521fb412",
-  "published_at": "2026-09-30T21:26:04Z"
+  "snapshot_id": "2f1fbaae45e85056",
+  "published_at": "2026-09-30T21:31:22Z"
 }
