@@ -1185,7 +1185,7 @@
             60.0
           ],
           [
-            56.1,
+            56.2,
             63.0
           ]
         ]
@@ -2166,7 +2166,7 @@
           69.0
         ],
         [
-          71.8,
+          71.9,
           69.0
         ]
       ]
@@ -4355,8 +4355,8 @@
         ],
         "B": [
           [
-            1786850400,
-            60.0
+            1786852089,
+            61.0
           ],
           [
             1786861051,
@@ -6499,7 +6499,7 @@
           ]
         }
       },
-      "snapshot_id": "92b94abb536f0057"
+      "snapshot_id": "82112912b5cd7195"
     },
     "outbound": {
       "schema": 1,
@@ -6994,7 +6994,7 @@
           ]
         }
       },
-      "snapshot_id": "4c36ad9520973adc"
+      "snapshot_id": "d4b0a49195c850a8"
     },
     "scriptgen": {
       "schema": 1,
@@ -7344,19 +7344,23 @@
           ]
         }
       },
-      "snapshot_id": "7bc0bd74a8875225"
+      "snapshot_id": "7878ba1b6d3ef9da"
     }
   },
   "pm": {
     "attendance": {
       "mode": "attended",
-      "fleets": {},
-      "updated": "2026-09-30T03:11:31Z",
-      "by": "pm-back (owner online)",
+      "fleets": {
+        "outbound": "attended",
+        "flowmaster": "attended",
+        "scriptgen": "attended"
+      },
+      "updated": "2026-09-30T03:18:23Z",
+      "by": "pm (owner: attended everywhere)",
       "semantics": "unattended => picks STAY PARKED (page+wait), gates hold+ring ladder, governor unchanged, no auto-proxy expansion. Flip via /pm signoff | signon. Per-fleet override: fleets.<name>=attended|unattended wins over mode.",
       "note": "owner awake 2026-09-05 14:45 PDT. outbound MERGE-ERASURE resumed at parallel 1 (owner order). L2.5, no auto. fm/sg parked. Codex conservation still in force (49% used, resets Sep 11).",
       "available": true,
-      "available_note": "fleet cap 1 TOTAL (live: W5-FOLLOW). Parked, resume in order via REPL resume <U>: PAY-EDGE build after W5 merge, CRM-CUSTODY (S7 WIP), FLOW-ACT-CORE (before S6), S5-RESEARCH (P4 R5), AUTH-VALIDATE (held answer). PM uses quiet pm-wake-once.sh + 2.5h heartbeats."
+      "available_note": ""
     },
     "pm_session": {
       "lock": "2753082 2026-09-30T01:16:13Z",
@@ -7368,22 +7372,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 122
+        "monitor_last_pass_min": 127
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 122
+        "monitor_last_pass_min": 127
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 122
+        "monitor_last_pass_min": 127
       }
     ]
   },
-  "snapshot_id": "2edb23d871b560e0",
-  "published_at": "2026-09-30T03:18:16Z"
+  "snapshot_id": "44dc233c1d8da470",
+  "published_at": "2026-09-30T03:23:32Z"
 }
