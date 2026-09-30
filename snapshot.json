@@ -474,7 +474,7 @@
             9.0
           ],
           [
-            1.0,
+            1.1,
             15.0
           ]
         ]
@@ -4743,7 +4743,7 @@
         ],
         "B": [
           [
-            1786914813,
+            1786915596,
             82.0
           ],
           [
@@ -6682,7 +6682,7 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 24,
+          "ctx_pct": 26,
           "last_commit_at": 1790802023,
           "head": "ebf371d6",
           "subfence": {
@@ -6987,7 +6987,7 @@
           ]
         }
       },
-      "snapshot_id": "47e4158707b43359"
+      "snapshot_id": "25ddcfdb0640c02e"
     },
     "outbound": {
       "schema": 1,
@@ -7023,26 +7023,17 @@
       "units": [
         {
           "id": "PAY-EDGE",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 45,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 46,
           "last_commit_at": 1790801815,
           "head": "7dbe1fb0",
           "subfence": {
             "done": 18,
             "total": 18
           },
-          "review_rounds": [
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terraxhigh  6 live clusters",
-              "must": 1,
-              "should": 1,
-              "could": 1,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "7dbe1fb0",
@@ -7069,7 +7060,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -7082,6 +7073,7 @@
         "INT7-RT-HUBSPOT-PORTAL-SWITCH",
         "EXT2b",
         "MON7",
+        "PAY-EDGE-REFUND",
         "TREASURY-FLOAT",
         "W5-ACH",
         "W5-CLOSURE",
@@ -7099,6 +7091,12 @@
         "W6b"
       ],
       "merge_feed": [
+        {
+          "pr": 329,
+          "unit": "PAY-EDGE",
+          "merged_at": 1790802745,
+          "sha": "6dcd60cd"
+        },
         {
           "pr": 328,
           "unit": "INT7-RT-CRM-CUSTODY-HARD",
@@ -7122,12 +7120,6 @@
           "unit": "MSG11",
           "merged_at": 1790605983,
           "sha": "18d17b47"
-        },
-        {
-          "pr": 324,
-          "unit": "MERGE-EDIT-UNDO",
-          "merged_at": 1790527060,
-          "sha": "0be90de6"
         }
       ],
       "decisions": [
@@ -7401,7 +7393,7 @@
           ]
         }
       },
-      "snapshot_id": "6a4aec4bf7d38aee"
+      "snapshot_id": "1c3a6d01747abbcc"
     },
     "scriptgen": {
       "schema": 1,
@@ -7437,18 +7429,26 @@
       "units": [
         {
           "id": "S5-RESEARCH",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 51,
-          "last_commit_at": 1790802512,
-          "head": "01abbe25",
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 53,
+          "last_commit_at": 1790802834,
+          "head": "0b5ca275",
           "subfence": {
             "done": 15,
             "total": 15
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "0b5ca275",
+              "at": 1790802834
+            },
+            {
+              "sha": "496499f6",
+              "at": 1790802776
+            },
             {
               "sha": "01abbe25",
               "at": 1790802512
@@ -7460,21 +7460,13 @@
             {
               "sha": "8b9fee88",
               "at": 1790800514
-            },
-            {
-              "sha": "aa43ea7b",
-              "at": 1790800464
-            },
-            {
-              "sha": "dd746573",
-              "at": 1790800372
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -7483,10 +7475,22 @@
         "CAL-DRIVE",
         "CAL-REBILL-GUARD",
         "CAL-SHORT-VIDEO",
+        "DEFUSE-CF",
+        "SEAT-HARDEN-CAL",
+        "RESEARCH-E2E",
+        "RESEARCH-PDF",
+        "RESEARCH-RECLAIM",
+        "S5-COMPOSE",
         "DEP-SQLITE",
         "TEST-DEBT-THAW"
       ],
       "merge_feed": [
+        {
+          "pr": 35,
+          "unit": "S5-RESEARCH",
+          "merged_at": 1790802776,
+          "sha": "496499f6"
+        },
         {
           "pr": 34,
           "unit": "SG-CODEX-LOCKDOWN",
@@ -7510,12 +7514,6 @@
           "unit": "WATCH-ALONGS-SHARE",
           "merged_at": 1790577167,
           "sha": "7cf9ddc3"
-        },
-        {
-          "pr": 29,
-          "unit": "CAL-HARDEN",
-          "merged_at": 1790561817,
-          "sha": "2898a91a"
         }
       ],
       "decisions": [],
@@ -7751,7 +7749,7 @@
           ]
         }
       },
-      "snapshot_id": "4e12ec30ec24b04c"
+      "snapshot_id": "721e017839b83248"
     }
   },
   "pm": {
@@ -7779,22 +7777,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1193
+        "monitor_last_pass_min": 1199
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1193
+        "monitor_last_pass_min": 1199
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1193
+        "monitor_last_pass_min": 1199
       }
     ]
   },
-  "snapshot_id": "8dec65f720a8c77a",
-  "published_at": "2026-09-30T21:10:07Z"
+  "snapshot_id": "ec04f811bcdcb41c",
+  "published_at": "2026-09-30T21:15:24Z"
 }
