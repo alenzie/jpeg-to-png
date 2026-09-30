@@ -2166,7 +2166,7 @@
           69.0
         ],
         [
-          71.4,
+          71.5,
           69.0
         ]
       ]
@@ -6499,7 +6499,7 @@
           ]
         }
       },
-      "snapshot_id": "245de835a36da10a"
+      "snapshot_id": "b3a0fad6b680a6bd"
     },
     "outbound": {
       "schema": 1,
@@ -6627,42 +6627,17 @@
         },
         {
           "id": "W5-FOLLOW",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 31,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 32,
           "last_commit_at": 1790735377,
           "head": "18071a47",
           "subfence": {
             "done": 23,
             "total": 23
           },
-          "review_rounds": [
-            {
-              "round": 3,
-              "seats": "glm-5.3 swarm-4 addendum cite-verified",
-              "must": 3,
-              "should": 6,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "lead-verify while verifying R5-G3",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 8,
-              "seats": "glm-5.3 swarm-4 addendum 8 candidates",
-              "must": 1,
-              "should": 5,
-              "could": 1,
-              "nit": 1
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "18071a47",
@@ -6689,7 +6664,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -6699,8 +6674,14 @@
         "INT7-MARKETPLACE",
         "INT7-PUBLIC-API-OAUTH-PKJWT",
         "EXT2b",
+        "MON7",
+        "TREASURY-FLOAT",
+        "W5-ACH",
+        "W5-CLOSURE",
         "W6a",
         "AUDIT-CHAIN-RETENTION",
+        "COMP-ABUSE-SUSPEND",
+        "COMP-BILLING-DSAR",
         "DECISION-LOG-EXPORT-HYGIENE",
         "MERGE-ERASURE-HARDPURGE",
         "REFUSAL-CHAIN-PARITY",
@@ -6711,6 +6692,12 @@
         "W6b"
       ],
       "merge_feed": [
+        {
+          "pr": 327,
+          "unit": "W5-FOLLOW",
+          "merged_at": 1790736209,
+          "sha": "0ab6c82d"
+        },
         {
           "pr": 326,
           "unit": "MSG7-DNC-MANUAL-CONSENT",
@@ -6734,12 +6721,6 @@
           "unit": "REFUSAL-AUDIT-CHAIN",
           "merged_at": 1790449829,
           "sha": "32dc7443"
-        },
-        {
-          "pr": 322,
-          "unit": "DSAR-AGENT-DECISIONS",
-          "merged_at": 1790215353,
-          "sha": "56b54f87"
         }
       ],
       "decisions": [
@@ -7013,7 +6994,7 @@
           ]
         }
       },
-      "snapshot_id": "961d12e384c32301"
+      "snapshot_id": "84d01d0b1b81db4b"
     },
     "scriptgen": {
       "schema": 1,
@@ -7363,7 +7344,7 @@
           ]
         }
       },
-      "snapshot_id": "0e9594452f5e85cc"
+      "snapshot_id": "a1338aabee1c1d50"
     }
   },
   "pm": {
@@ -7387,22 +7368,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 84
+        "monitor_last_pass_min": 90
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 84
+        "monitor_last_pass_min": 90
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 84
+        "monitor_last_pass_min": 90
       }
     ]
   },
-  "snapshot_id": "2d52af6cb84a4aac",
-  "published_at": "2026-09-30T02:41:06Z"
+  "snapshot_id": "3d2bcd12d5d93558",
+  "published_at": "2026-09-30T02:46:21Z"
 }
