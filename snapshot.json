@@ -7,8 +7,8 @@
         "label": "B",
         "tier": "Pro",
         "projected": null,
-        "used": 9,
-        "at": 1790795388,
+        "used": 10,
+        "at": 1790795773,
         "reset": "12:29 on 7 Oct",
         "spark": [
           [
@@ -474,7 +474,7 @@
             2.0
           ],
           [
-            0.4,
+            0.5,
             9.0
           ]
         ]
@@ -771,12 +771,12 @@
         "mult": "20x",
         "projected": 119,
         "used": 79,
-        "at": 1790795388,
+        "at": 1790795773,
         "reset": "Oct 2, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1790193600,
-            126
+            127
           ],
           [
             1790197200,
@@ -1349,7 +1349,7 @@
             78.0
           ],
           [
-            66.2,
+            66.3,
             79.0
           ]
         ]
@@ -1359,7 +1359,7 @@
       "target": 100,
       "projected": 88,
       "used": 72,
-      "at": 1790795388,
+      "at": 1790795773,
       "reset": "Oct 01, 19:39",
       "level": "pro",
       "spark": [
@@ -2457,7 +2457,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1790795388,
+      "at": 1790795773,
       "spark": [
         [
           1790193600,
@@ -3553,7 +3553,7 @@
             70.0
           ],
           [
-            1790194322,
+            1790194695,
             71.0
           ],
           [
@@ -4735,7 +4735,7 @@
         ],
         "B": [
           [
-            1786911124,
+            1786912942,
             81.0
           ],
           [
@@ -5035,8 +5035,8 @@
             81.0
           ],
           [
-            1790194322,
-            84.0
+            1790194695,
+            85.0
           ],
           [
             1790197270,
@@ -5962,7 +5962,7 @@
           84.0
         ],
         [
-          1790194322,
+          1790194695,
           84.0
         ],
         [
@@ -6674,7 +6674,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 36,
+          "ctx_pct": 42,
           "last_commit_at": 1790798903,
           "head": "7c939d0e",
           "subfence": {
@@ -6979,19 +6979,13 @@
           ]
         }
       },
-      "snapshot_id": "c199bbef248ba01f"
+      "snapshot_id": "e609ae07897d5458"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "PAY-EDGE",
-            "kind": "escalate",
-            "raised_at": 1790793430
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -7022,8 +7016,8 @@
         {
           "id": "PAY-EDGE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "phase-4 review",
+          "stage_i": 5,
           "ctx_pct": 36,
           "last_commit_at": 1790793424,
           "head": "1dd8a59a",
@@ -7060,7 +7054,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -7390,7 +7384,7 @@
           ]
         }
       },
-      "snapshot_id": "267427dfa355558f"
+      "snapshot_id": "7c6c785e8f7430bb"
     },
     "scriptgen": {
       "schema": 1,
@@ -7429,15 +7423,23 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 28,
-          "last_commit_at": 1790797418,
-          "head": "d615b8f2",
+          "ctx_pct": 34,
+          "last_commit_at": 1790799399,
+          "head": "da506d57",
           "subfence": {
             "done": 15,
             "total": 15
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "da506d57",
+              "at": 1790799399
+            },
+            {
+              "sha": "b8474541",
+              "at": 1790799335
+            },
             {
               "sha": "d615b8f2",
               "at": 1790797418
@@ -7449,14 +7451,6 @@
             {
               "sha": "cbcdc722",
               "at": 1790731080
-            },
-            {
-              "sha": "b4c87863",
-              "at": 1790730700
-            },
-            {
-              "sha": "800752c8",
-              "at": 1790730695
             }
           ],
           "fences": {
@@ -7740,7 +7734,7 @@
           ]
         }
       },
-      "snapshot_id": "5b9d3dd26b6f6121"
+      "snapshot_id": "a59cbe663a7dcfdd"
     }
   },
   "pm": {
@@ -7759,8 +7753,8 @@
       "available_note": ""
     },
     "pm_session": {
-      "lock": "1458074 2026-09-30T17:47:10Z",
-      "fresh": false
+      "lock": "2412806 2026-09-30T20:15:11Z",
+      "fresh": true
     },
     "sterling_up": true,
     "fleets": [
@@ -7768,22 +7762,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1135
+        "monitor_last_pass_min": 1140
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1135
+        "monitor_last_pass_min": 1140
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1135
+        "monitor_last_pass_min": 1140
       }
     ]
   },
-  "snapshot_id": "66c8a28ff0a87506",
-  "published_at": "2026-09-30T20:11:45Z"
+  "snapshot_id": "34405a5d3726b03d",
+  "published_at": "2026-09-30T20:17:06Z"
 }
