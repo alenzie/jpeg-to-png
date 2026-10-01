@@ -474,7 +474,7 @@
             78.0
           ],
           [
-            10.5,
+            10.6,
             79.0
           ]
         ]
@@ -490,7 +490,7 @@
         "spark": [],
         "trail": [
           [
-            10.5,
+            10.6,
             44.0
           ]
         ]
@@ -6829,6 +6829,11 @@
         "active": true,
         "units": [
           {
+            "id": "AUTH-VALIDATE",
+            "kind": "escalate",
+            "raised_at": 1790860351
+          },
+          {
             "id": "FLOW-ASSIST-PACK",
             "kind": "escalate",
             "raised_at": 1790848005
@@ -6864,74 +6869,21 @@
         {
           "id": "AUTH-VALIDATE",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 46,
-          "last_commit_at": 1790859984,
-          "head": "04a6eaa8",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 47,
+          "last_commit_at": 1790860341,
+          "head": "57c8dd95",
           "subfence": {
             "done": 17,
             "total": 17
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-6-astra xhigh 5 input-safe partition",
-              "must": 20,
-              "should": 12,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-sol xhigh",
-              "must": 9,
-              "should": 4,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra xhigh",
-              "must": 1,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.6-sol xhigh",
-              "must": 0,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.6-terra xhigh",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "gpt-5.6-sol xhigh",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 7,
-              "seats": "gpt-5.6-terra xhigh",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "57c8dd95",
+              "at": 1790860341
+            },
             {
               "sha": "04a6eaa8",
               "at": 1790859984
@@ -6947,10 +6899,6 @@
             {
               "sha": "fdee7d58",
               "at": 1790859669
-            },
-            {
-              "sha": "edfca459",
-              "at": 1790859226
             }
           ],
           "fences": {
@@ -6959,7 +6907,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "FLOW-ASSIST-PACK",
@@ -7280,7 +7228,7 @@
           ]
         }
       },
-      "snapshot_id": "f27ef374a5279856"
+      "snapshot_id": "ca304b008c265b6e"
     },
     "outbound": {
       "schema": 1,
@@ -7642,7 +7590,7 @@
           ]
         }
       },
-      "snapshot_id": "88651264d43a9174"
+      "snapshot_id": "e8354662d564a37b"
     },
     "scriptgen": {
       "schema": 1,
@@ -8008,7 +7956,7 @@
           ]
         }
       },
-      "snapshot_id": "ecf180b50b8efc27"
+      "snapshot_id": "c1febe5689600f82"
     }
   },
   "pm": {
@@ -8036,22 +7984,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2151
+        "monitor_last_pass_min": 2156
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2151
+        "monitor_last_pass_min": 2156
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2151
+        "monitor_last_pass_min": 2156
       }
     ]
   },
-  "snapshot_id": "1b9d031b8b31a28e",
-  "published_at": "2026-10-01T13:07:49Z"
+  "snapshot_id": "5a47b3edb917728b",
+  "published_at": "2026-10-01T13:13:06Z"
 }
