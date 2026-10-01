@@ -7,8 +7,8 @@
         "label": "B",
         "tier": "Pro",
         "projected": null,
-        "used": 56,
-        "at": 1790831024,
+        "used": 57,
+        "at": 1790831430,
         "reset": "12:29 on 7 Oct",
         "spark": [
           [
@@ -474,7 +474,7 @@
             54.0
           ],
           [
-            6.3,
+            6.4,
             55.0
           ]
         ]
@@ -490,7 +490,7 @@
         "spark": [],
         "trail": [
           [
-            6.3,
+            6.4,
             44.0
           ]
         ]
@@ -796,7 +796,7 @@
         "mult": "20x",
         "projected": 118,
         "used": 85,
-        "at": 1790831024,
+        "at": 1790831430,
         "reset": "Oct 2, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1445,7 +1445,7 @@
       "target": 100,
       "projected": 85,
       "used": 75,
-      "at": 1790831024,
+      "at": 1790831430,
       "reset": "Oct 01, 19:39",
       "level": "pro",
       "spark": [
@@ -2583,7 +2583,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1790831024,
+      "at": 1790831430,
       "spark": [
         [
           1790229600,
@@ -6804,7 +6804,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 42,
+          "ctx_pct": 45,
           "last_commit_at": 1790834370,
           "head": "f8014dc7",
           "subfence": {
@@ -6838,6 +6838,49 @@
             "plan": true,
             "synth": true,
             "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "BM-P2",
+          "status": "pr-open",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 12,
+          "last_commit_at": 1790812733,
+          "head": "913ed3bd",
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [
+            {
+              "sha": "913ed3bd",
+              "at": 1790812733
+            },
+            {
+              "sha": "b15d5e28",
+              "at": 1790812669
+            },
+            {
+              "sha": "4f8f46d3",
+              "at": 1790812655
+            },
+            {
+              "sha": "ec2266b1",
+              "at": 1790812593
+            },
+            {
+              "sha": "63642292",
+              "at": 1790812290
+            }
+          ],
+          "fences": {
+            "plan": true,
+            "synth": false,
+            "build": true,
             "review": false
           },
           "gate_open": false
@@ -7077,14 +7120,14 @@
               "verdict": "OVERBURN",
               "proj": null,
               "target": 400,
-              "used": 55,
+              "used": 57,
               "day": 1,
               "active": "C2",
               "wall": false
             },
             "glm": {
               "verdict": "IN_BAND",
-              "proj": 86,
+              "proj": 85,
               "target": 100,
               "used": 75,
               "day": 7,
@@ -7101,7 +7144,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-01T06:00:39Z",
+          "updated": "2026-10-01T06:10:31Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7117,7 +7160,7 @@
           ]
         }
       },
-      "snapshot_id": "126810424150ecd1"
+      "snapshot_id": "7a78b0ecc53cd850"
     },
     "outbound": {
       "schema": 1,
@@ -7439,14 +7482,14 @@
               "verdict": "OVERBURN",
               "proj": null,
               "target": 400,
-              "used": 55,
+              "used": 57,
               "day": 1,
               "active": "C2",
               "wall": false
             },
             "glm": {
               "verdict": "IN_BAND",
-              "proj": 86,
+              "proj": 85,
               "target": 100,
               "used": 75,
               "day": 7,
@@ -7463,7 +7506,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-01T06:00:39Z",
+          "updated": "2026-10-01T06:10:31Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7479,7 +7522,7 @@
           ]
         }
       },
-      "snapshot_id": "9a33adcd3fe067e6"
+      "snapshot_id": "5194628131832dc4"
     },
     "scriptgen": {
       "schema": 1,
@@ -7751,14 +7794,14 @@
               "verdict": "OVERBURN",
               "proj": null,
               "target": 400,
-              "used": 55,
+              "used": 57,
               "day": 1,
               "active": "C2",
               "wall": false
             },
             "glm": {
               "verdict": "IN_BAND",
-              "proj": 86,
+              "proj": 85,
               "target": 100,
               "used": 75,
               "day": 7,
@@ -7775,7 +7818,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-01T06:00:39Z",
+          "updated": "2026-10-01T06:10:31Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7791,7 +7834,7 @@
           ]
         }
       },
-      "snapshot_id": "61086e4e6a4d78a5"
+      "snapshot_id": "892b69c6e7e1ee6a"
     }
   },
   "pm": {
@@ -7819,22 +7862,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1729
+        "monitor_last_pass_min": 1735
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1729
+        "monitor_last_pass_min": 1735
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1729
+        "monitor_last_pass_min": 1735
       }
     ]
   },
-  "snapshot_id": "134db202ada49e02",
-  "published_at": "2026-10-01T06:05:55Z"
+  "snapshot_id": "db636d3151f8b035",
+  "published_at": "2026-10-01T06:11:20Z"
 }
