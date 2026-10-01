@@ -12,10 +12,6 @@
         "reset": "12:29 on 7 Oct",
         "spark": [
           [
-            1790280000,
-            119
-          ],
-          [
             1790283600,
             118
           ],
@@ -499,10 +495,6 @@
         "reset": "Oct 5, 11am (America/Los_Angeles)",
         "spark": [
           [
-            1790280000,
-            22
-          ],
-          [
             1790283600,
             22
           ],
@@ -725,7 +717,7 @@
         ],
         "trail": [
           [
-            44.2,
+            44.3,
             4.0
           ]
         ]
@@ -1426,7 +1418,7 @@
             87.0
           ],
           [
-            80.5,
+            80.6,
             88.0
           ]
         ]
@@ -1461,10 +1453,6 @@
       "reset": "Oct 01, 19:39",
       "level": "pro",
       "spark": [
-        [
-          1790280000,
-          103
-        ],
         [
           1790283600,
           103
@@ -2608,7 +2596,7 @@
           83.0
         ],
         [
-          96.2,
+          96.3,
           83.0
         ]
       ]
@@ -2621,10 +2609,6 @@
       "days_to_empty": null,
       "at": 1790881672,
       "spark": [
-        [
-          1790280000,
-          9.4
-        ],
         [
           1790283600,
           9.4
@@ -3715,10 +3699,6 @@
             94.0
           ],
           [
-            1790281378,
-            94.0
-          ],
-          [
             1790284962,
             94.0
           ],
@@ -4622,10 +4602,6 @@
           ],
           [
             1790273508,
-            10.0
-          ],
-          [
-            1790281378,
             10.0
           ],
           [
@@ -6116,10 +6092,6 @@
           100.0
         ],
         [
-          1790281378,
-          100.0
-        ],
-        [
           1790284962,
           100.0
         ],
@@ -6753,11 +6725,6 @@
         "active": true,
         "units": [
           {
-            "id": "AUTH-VALIDATE",
-            "kind": "escalate",
-            "raised_at": 1790862293
-          },
-          {
             "id": "FLOW-ASSIST-PACK",
             "kind": "escalate",
             "raised_at": 1790848005
@@ -6793,8 +6760,8 @@
         {
           "id": "AUTH-VALIDATE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "phase-4 review",
+          "stage_i": 5,
           "ctx_pct": 56,
           "last_commit_at": 1790862283,
           "head": "f9e9004d",
@@ -6802,7 +6769,72 @@
             "done": 17,
             "total": 17
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 4,
+              "seats": "gpt-5.6-sol xhigh",
+              "must": 0,
+              "should": 2,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "gpt-5.6-terra xhigh",
+              "must": 0,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 6,
+              "seats": "gpt-5.6-sol xhigh",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 7,
+              "seats": "gpt-5.6-terra xhigh",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 8,
+              "seats": "gpt-5.6-terra declarer xhigh",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 9,
+              "seats": "gpt-5.6-terra declarer xhigh",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 10,
+              "seats": "gpt-5.6-terra declarer xhigh",
+              "must": 1,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 11,
+              "seats": "gpt-5.6-terra declarer xhigh",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
             {
               "sha": "f9e9004d",
@@ -6831,7 +6863,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "FLOW-ASSIST-PACK",
@@ -7152,7 +7184,7 @@
           ]
         }
       },
-      "snapshot_id": "58f7da6619b0d0b7"
+      "snapshot_id": "fbb24471eabe379b"
     },
     "outbound": {
       "schema": 1,
@@ -7514,7 +7546,7 @@
           ]
         }
       },
-      "snapshot_id": "c2b31c23ce295186"
+      "snapshot_id": "33fd212438affeff"
     },
     "scriptgen": {
       "schema": 1,
@@ -7880,7 +7912,7 @@
           ]
         }
       },
-      "snapshot_id": "ac49ee78ae5194ab"
+      "snapshot_id": "34db581fa4481ccc"
     }
   },
   "pm": {
@@ -7908,22 +7940,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2582
+        "monitor_last_pass_min": 2587
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2582
+        "monitor_last_pass_min": 2587
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2582
+        "monitor_last_pass_min": 2587
       }
     ]
   },
-  "snapshot_id": "5a4e7b4dc6a723d1",
-  "published_at": "2026-10-01T20:18:25Z"
+  "snapshot_id": "4bfdcc3e53e6f011",
+  "published_at": "2026-10-01T20:23:43Z"
 }
