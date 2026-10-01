@@ -13,7 +13,7 @@
         "spark": [
           [
             1790233200,
-            122
+            121
           ],
           [
             1790236800,
@@ -474,7 +474,7 @@
             55.0
           ],
           [
-            7.3,
+            7.4,
             64.0
           ]
         ]
@@ -490,7 +490,7 @@
         "spark": [],
         "trail": [
           [
-            7.3,
+            7.4,
             44.0
           ]
         ]
@@ -785,7 +785,7 @@
         ],
         "trail": [
           [
-            36.8,
+            36.9,
             4.0
           ]
         ]
@@ -1414,7 +1414,7 @@
             85.0
           ],
           [
-            73.1,
+            73.2,
             86.0
           ]
         ]
@@ -1435,7 +1435,7 @@
         ],
         "trail": [
           [
-            98.7,
+            98.8,
             31.0
           ]
         ]
@@ -3691,7 +3691,7 @@
             85.0
           ],
           [
-            1790236206,
+            1790236536,
             87.0
           ],
           [
@@ -4606,6 +4606,10 @@
           ],
           [
             1790236206,
+            2.0
+          ],
+          [
+            1790236536,
             2.0
           ],
           [
@@ -6112,7 +6116,7 @@
           97.0
         ],
         [
-          1790236206,
+          1790236536,
           100.0
         ],
         [
@@ -6762,8 +6766,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "BM-P2",
+            "kind": "escalate",
+            "raised_at": 1790841192
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6796,7 +6806,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 6,
+          "ctx_pct": 23,
           "last_commit_at": 1790840725,
           "head": "2ba4d8ef",
           "subfence": {
@@ -6837,58 +6847,21 @@
         {
           "id": "BM-P2",
           "status": "pr-open",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 42,
-          "last_commit_at": 1790838928,
-          "head": "7248c522",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 9,
+          "last_commit_at": 1790840972,
+          "head": "477e4701",
           "subfence": {
             "done": 0,
             "total": null
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-6-astraxhigh breadth never converges",
-              "must": 2,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-solxhigh fresh post-fix iterate",
-              "must": 0,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terraxhigh fresh post-fix iterat",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.6-solxhigh wider reset pass",
-              "must": 0,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.6-terraxhigh PM-directed declarer",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "477e4701",
+              "at": 1790840972
+            },
             {
               "sha": "7248c522",
               "at": 1790838928
@@ -6904,26 +6877,22 @@
             {
               "sha": "cc3b227c",
               "at": 1790837950
-            },
-            {
-              "sha": "16062cfd",
-              "at": 1790837881
             }
           ],
           "fences": {
             "plan": true,
             "synth": false,
             "build": true,
-            "review": false
+            "review": true
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "FLOW-ASSIST-PACK",
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 25,
+          "ctx_pct": 27,
           "last_commit_at": 1790838936,
           "head": "181bad86",
           "subfence": {
@@ -7196,18 +7165,18 @@
               "verdict": "OVERBURN",
               "proj": null,
               "target": 400,
-              "used": 66,
+              "used": 67,
               "day": 1,
               "active": "C2",
               "wall": false
             },
             "glm": {
-              "verdict": "IN_BAND",
-              "proj": 85,
+              "verdict": "UNDERBURN",
+              "proj": 84,
               "target": 100,
               "used": 75,
               "day": 7,
-              "active": null,
+              "active": "G1",
               "wall": false
             },
             "claude": {
@@ -7220,7 +7189,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-01T07:46:38Z",
+          "updated": "2026-10-01T07:50:24Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7236,7 +7205,7 @@
           ]
         }
       },
-      "snapshot_id": "0bcae3b0ff9cfc9d"
+      "snapshot_id": "d56c5bb6cdedd78d"
     },
     "outbound": {
       "schema": 1,
@@ -7558,18 +7527,18 @@
               "verdict": "OVERBURN",
               "proj": null,
               "target": 400,
-              "used": 66,
+              "used": 67,
               "day": 1,
               "active": "C2",
               "wall": false
             },
             "glm": {
-              "verdict": "IN_BAND",
-              "proj": 85,
+              "verdict": "UNDERBURN",
+              "proj": 84,
               "target": 100,
               "used": 75,
               "day": 7,
-              "active": null,
+              "active": "G1",
               "wall": false
             },
             "claude": {
@@ -7582,7 +7551,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-01T07:46:38Z",
+          "updated": "2026-10-01T07:50:24Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7598,7 +7567,7 @@
           ]
         }
       },
-      "snapshot_id": "366a8c0cc39fb89b"
+      "snapshot_id": "93c944fa05764069"
     },
     "scriptgen": {
       "schema": 1,
@@ -7637,7 +7606,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 21,
+          "ctx_pct": 24,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7892,18 +7861,18 @@
               "verdict": "OVERBURN",
               "proj": null,
               "target": 400,
-              "used": 66,
+              "used": 67,
               "day": 1,
               "active": "C2",
               "wall": false
             },
             "glm": {
-              "verdict": "IN_BAND",
-              "proj": 85,
+              "verdict": "UNDERBURN",
+              "proj": 84,
               "target": 100,
               "used": 75,
               "day": 7,
-              "active": null,
+              "active": "G1",
               "wall": false
             },
             "claude": {
@@ -7916,7 +7885,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-01T07:46:38Z",
+          "updated": "2026-10-01T07:50:24Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7932,7 +7901,7 @@
           ]
         }
       },
-      "snapshot_id": "75301dc9a943a082"
+      "snapshot_id": "796df26244525a30"
     }
   },
   "pm": {
@@ -7960,22 +7929,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1832
+        "monitor_last_pass_min": 1838
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1832
+        "monitor_last_pass_min": 1838
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1832
+        "monitor_last_pass_min": 1838
       }
     ]
   },
-  "snapshot_id": "2fbfeaf47536c8ba",
-  "published_at": "2026-10-01T07:48:42Z"
+  "snapshot_id": "d7c9c4650f13fd35",
+  "published_at": "2026-10-01T07:54:46Z"
 }
