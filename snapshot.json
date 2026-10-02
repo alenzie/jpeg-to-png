@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 344,
+        "projected": 343,
         "used": 100,
-        "at": 1790968691,
+        "at": 1790969312,
         "reset": "12:29 on 7 Oct",
         "spark": [
           [
@@ -542,7 +542,7 @@
             100.0
           ],
           [
-            29.1,
+            29.2,
             100.0
           ]
         ]
@@ -558,7 +558,7 @@
         "spark": [],
         "trail": [
           [
-            29.1,
+            29.2,
             44.0
           ]
         ]
@@ -712,8 +712,8 @@
         "mult": "20x",
         "projected": 104,
         "used": 99,
-        "at": 1790968691,
-        "reset": "Oct 2, 10pm (America/Los_Angeles)",
+        "at": 1790969312,
+        "reset": "Oct 2, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1790492400,
@@ -2159,9 +2159,9 @@
       "balance": -0.0,
       "currency": "USD",
       "available": false,
-      "burn_per_day": 0.0,
+      "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1790968691,
+      "at": 1790969312,
       "spark": [
         [
           1790370000,
@@ -6326,6 +6326,82 @@
             "review": false
           },
           "gate_open": false
+        },
+        {
+          "id": "FLOW-QUERY-ROW-GRAIN",
+          "status": "building",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 6,
+          "last_commit_at": 1790936390,
+          "head": "8cee9b43",
+          "subfence": {
+            "done": 7,
+            "total": 7
+          },
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "opus-5.5xhigh whole diff 51e3723a...76fe",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 2
+            },
+            {
+              "round": 1,
+              "seats": "glm-5.3 swarm-4 r1 44 answered",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "opus-5.5xhigh fresh whole diff 51e3723a.",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 2
+            },
+            {
+              "round": 2,
+              "seats": "glm-5.3 swarm-4 r2 44 answered",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            }
+          ],
+          "commits": [
+            {
+              "sha": "8cee9b43",
+              "at": 1790936390
+            },
+            {
+              "sha": "697c98dc",
+              "at": 1790936388
+            },
+            {
+              "sha": "5ae61fd3",
+              "at": 1790936234
+            },
+            {
+              "sha": "e4d80179",
+              "at": 1790936232
+            },
+            {
+              "sha": "144a9849",
+              "at": 1790935216
+            }
+          ],
+          "fences": {
+            "plan": true,
+            "synth": true,
+            "build": true,
+            "review": false
+          },
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -6337,6 +6413,12 @@
         "LLM-PROXY-CONFIG-FAILCLOSED"
       ],
       "merge_feed": [
+        {
+          "pr": 38,
+          "unit": "JOB-RESOURCE-BOUNDS",
+          "merged_at": 1790972769,
+          "sha": "f02edc1f"
+        },
         {
           "pr": 36,
           "unit": "FLOW-ACT-BEAT",
@@ -6360,12 +6442,6 @@
           "unit": "BM-P2",
           "merged_at": 1790845567,
           "sha": "4fad1c89"
-        },
-        {
-          "pr": 32,
-          "unit": "FLOW-ACT-CORE",
-          "merged_at": 1790810195,
-          "sha": "eee4ddaa"
         }
       ],
       "decisions": [],
@@ -6559,7 +6635,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 344,
+              "proj": 343,
               "target": 400,
               "used": 100,
               "day": 3,
@@ -6585,7 +6661,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-02T20:20:14Z",
+          "updated": "2026-10-02T20:28:34Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6601,7 +6677,7 @@
           ]
         }
       },
-      "snapshot_id": "8782cd71994019a0"
+      "snapshot_id": "cb9bf1b1e47e2785"
     },
     "outbound": {
       "schema": 1,
@@ -6921,7 +6997,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 344,
+              "proj": 343,
               "target": 400,
               "used": 100,
               "day": 3,
@@ -6947,7 +7023,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-02T20:20:14Z",
+          "updated": "2026-10-02T20:28:34Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6963,7 +7039,7 @@
           ]
         }
       },
-      "snapshot_id": "e007eb3a5c311d8b"
+      "snapshot_id": "46bf0531ba949bd4"
     },
     "scriptgen": {
       "schema": 1,
@@ -7234,7 +7310,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 344,
+              "proj": 343,
               "target": 400,
               "used": 100,
               "day": 3,
@@ -7260,7 +7336,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-02T20:20:14Z",
+          "updated": "2026-10-02T20:28:34Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7276,7 +7352,7 @@
           ]
         }
       },
-      "snapshot_id": "1cf513339346bab2"
+      "snapshot_id": "bd7b93773c452429"
     }
   },
   "pm": {
@@ -7304,22 +7380,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4028
+        "monitor_last_pass_min": 4033
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4028
+        "monitor_last_pass_min": 4033
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4028
+        "monitor_last_pass_min": 4033
       }
     ]
   },
-  "snapshot_id": "92aa2b05ebadc83c",
-  "published_at": "2026-10-02T20:24:22Z"
+  "snapshot_id": "4917c28ffd8154bf",
+  "published_at": "2026-10-02T20:29:41Z"
 }
