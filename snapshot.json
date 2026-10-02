@@ -12,10 +12,6 @@
         "reset": "12:29 on 7 Oct",
         "spark": [
           [
-            1790330400,
-            108
-          ],
-          [
             1790334000,
             107
           ],
@@ -522,7 +518,7 @@
             100.0
           ],
           [
-            23.1,
+            23.2,
             100.0
           ]
         ]
@@ -538,7 +534,7 @@
         "spark": [],
         "trail": [
           [
-            23.1,
+            23.2,
             44.0
           ]
         ]
@@ -554,10 +550,6 @@
         "at": 1790815133,
         "reset": "Oct 5, 11am (America/Los_Angeles)",
         "spark": [
-          [
-            1790330400,
-            19
-          ],
           [
             1790334000,
             19
@@ -1538,7 +1530,7 @@
             97.0
           ],
           [
-            88.9,
+            89.0,
             97.0
           ]
         ]
@@ -2123,10 +2115,6 @@
       "days_to_empty": null,
       "at": 1790932661,
       "spark": [
-        [
-          1790330400,
-          9.4
-        ],
         [
           1790334000,
           9.4
@@ -3225,10 +3213,6 @@
             94.0
           ],
           [
-            1790331762,
-            94.0
-          ],
-          [
             1790335378,
             94.0
           ],
@@ -4140,10 +4124,6 @@
           ],
           [
             1790317366,
-            10.0
-          ],
-          [
-            1790331762,
             10.0
           ],
           [
@@ -5626,10 +5606,6 @@
           0.0
         ],
         [
-          1790331762,
-          0.0
-        ],
-        [
           1790335378,
           0.0
         ],
@@ -6260,8 +6236,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "FLOW-ACT-EXPORT",
+            "kind": "needs-owner",
+            "raised_at": 1790936650
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6292,9 +6274,9 @@
         {
           "id": "FLOW-ACT-EXPORT",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 37,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 39,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6309,83 +6291,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
-        },
-        {
-          "id": "FLOW-QUERY-ROW-GRAIN",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 14,
-          "last_commit_at": 1790936388,
-          "head": "697c98dc",
-          "subfence": {
-            "done": 7,
-            "total": 7
-          },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "opus-5.5xhigh whole diff 51e3723a...76fe",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 2
-            },
-            {
-              "round": 1,
-              "seats": "glm-5.3 swarm-4 r1 44 answered",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "opus-5.5xhigh fresh whole diff 51e3723a.",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 2
-            },
-            {
-              "round": 2,
-              "seats": "glm-5.3 swarm-4 r2 44 answered",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
-          "commits": [
-            {
-              "sha": "697c98dc",
-              "at": 1790936388
-            },
-            {
-              "sha": "5ae61fd3",
-              "at": 1790936234
-            },
-            {
-              "sha": "e4d80179",
-              "at": 1790936232
-            },
-            {
-              "sha": "144a9849",
-              "at": 1790935216
-            },
-            {
-              "sha": "c24e5afe",
-              "at": 1790935193
-            }
-          ],
-          "fences": {
-            "plan": true,
-            "synth": true,
-            "build": true,
-            "review": false
-          },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "JOB-RESOURCE-BOUNDS",
@@ -6688,7 +6594,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-02T10:17:43Z",
+          "updated": "2026-10-02T10:20:18Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6704,7 +6610,7 @@
           ]
         }
       },
-      "snapshot_id": "7de4009ebb998288"
+      "snapshot_id": "0d081c4496ae9a46"
     },
     "outbound": {
       "schema": 1,
@@ -7050,7 +6956,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-02T10:17:43Z",
+          "updated": "2026-10-02T10:20:18Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7066,7 +6972,7 @@
           ]
         }
       },
-      "snapshot_id": "d401032d166265c5"
+      "snapshot_id": "8da5934489b04aa3"
     },
     "scriptgen": {
       "schema": 1,
@@ -7105,7 +7011,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 29,
+          "ctx_pct": 35,
           "last_commit_at": 1790935702,
           "head": "1373babd",
           "subfence": {
@@ -7405,7 +7311,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-02T10:17:43Z",
+          "updated": "2026-10-02T10:20:18Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7421,7 +7327,7 @@
           ]
         }
       },
-      "snapshot_id": "5833dbd43d0947ae"
+      "snapshot_id": "687514795de56801"
     }
   },
   "pm": {
@@ -7449,22 +7355,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3423
+        "monitor_last_pass_min": 3429
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3423
+        "monitor_last_pass_min": 3429
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3423
+        "monitor_last_pass_min": 3429
       }
     ]
   },
-  "snapshot_id": "e601c66dff8b9513",
-  "published_at": "2026-10-02T10:19:59Z"
+  "snapshot_id": "2ec0fd9b3bd54bd6",
+  "published_at": "2026-10-02T10:25:17Z"
 }
