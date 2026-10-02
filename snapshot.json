@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 343,
+        "projected": 338,
         "used": 100,
-        "at": 1790969312,
+        "at": 1790971849,
         "reset": "12:29 on 7 Oct",
         "spark": [
           [
@@ -366,6 +366,10 @@
           [
             1790967600,
             344
+          ],
+          [
+            1790971200,
+            338
           ]
         ],
         "trail": [
@@ -542,7 +546,11 @@
             100.0
           ],
           [
-            29.5,
+            29.0,
+            100.0
+          ],
+          [
+            29.6,
             100.0
           ]
         ]
@@ -558,7 +566,7 @@
         "spark": [],
         "trail": [
           [
-            29.5,
+            29.6,
             44.0
           ]
         ]
@@ -712,7 +720,7 @@
         "mult": "20x",
         "projected": 104,
         "used": 99,
-        "at": 1790969312,
+        "at": 1790971849,
         "reset": "Oct 2, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1210,6 +1218,10 @@
           [
             1790967600,
             104
+          ],
+          [
+            1790971200,
+            104
           ]
         ],
         "trail": [
@@ -1578,7 +1590,11 @@
             99.0
           ],
           [
-            95.3,
+            95.0,
+            99.0
+          ],
+          [
+            95.4,
             99.0
           ]
         ]
@@ -2159,9 +2175,9 @@
       "balance": -0.0,
       "currency": "USD",
       "available": false,
-      "burn_per_day": null,
+      "burn_per_day": 0.0,
       "days_to_empty": null,
-      "at": 1790969312,
+      "at": 1790971849,
       "spark": [
         [
           1790370000,
@@ -2777,6 +2793,10 @@
         ],
         [
           1790967600,
+          -0.0
+        ],
+        [
+          1790971200,
           -0.0
         ]
       ]
@@ -3874,6 +3894,10 @@
           ],
           [
             1790968691,
+            100.0
+          ],
+          [
+            1790971849,
             100.0
           ]
         ],
@@ -5083,6 +5107,10 @@
           [
             1790968691,
             99.0
+          ],
+          [
+            1790971849,
+            99.0
           ]
         ],
         "C": [
@@ -6268,6 +6296,10 @@
         [
           1790968691,
           49.0
+        ],
+        [
+          1790971849,
+          49.0
         ]
       ]
     }
@@ -6310,95 +6342,40 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 58,
-          "last_commit_at": null,
-          "head": null,
+          "ctx_pct": 66,
+          "last_commit_at": 1790975511,
+          "head": "453bf263",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
-          "commits": [],
-          "fences": {
-            "plan": false,
-            "synth": false,
-            "build": false,
-            "review": false
-          },
-          "gate_open": false
-        },
-        {
-          "id": "FLOW-QUERY-ROW-GRAIN",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 10,
-          "last_commit_at": 1790973521,
-          "head": "6cb245fa",
-          "subfence": {
-            "done": 7,
-            "total": 7
-          },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "opus-5.5xhigh whole diff 51e3723a...76fe",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 2
-            },
-            {
-              "round": 1,
-              "seats": "glm-5.3 swarm-4 r1 44 answered",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "opus-5.5xhigh fresh whole diff 51e3723a.",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 2
-            },
-            {
-              "round": 2,
-              "seats": "glm-5.3 swarm-4 r2 44 answered",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
           "commits": [
             {
-              "sha": "6cb245fa",
-              "at": 1790973521
+              "sha": "453bf263",
+              "at": 1790975511
             },
             {
-              "sha": "79b8dc3d",
-              "at": 1790973466
+              "sha": "9d567464",
+              "at": 1790975408
             },
             {
-              "sha": "4b7c2397",
-              "at": 1790973036
+              "sha": "c6990db6",
+              "at": 1790974886
             },
             {
-              "sha": "14addbc1",
-              "at": 1790972808
+              "sha": "1c9d1ecd",
+              "at": 1790972544
             },
             {
-              "sha": "f02edc1f",
-              "at": 1790972769
+              "sha": "a813026c",
+              "at": 1790972416
             }
           ],
           "fences": {
-            "plan": true,
+            "plan": false,
             "synth": true,
-            "build": true,
+            "build": false,
             "review": false
           },
           "gate_open": false
@@ -6635,7 +6612,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 343,
+              "proj": 338,
               "target": 400,
               "used": 100,
               "day": 3,
@@ -6661,7 +6638,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-02T20:31:24Z",
+          "updated": "2026-10-02T21:11:44Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6677,7 +6654,7 @@
           ]
         }
       },
-      "snapshot_id": "8dcbe21940fe6725"
+      "snapshot_id": "41e98e27acbd0a6b"
     },
     "outbound": {
       "schema": 1,
@@ -6997,7 +6974,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 343,
+              "proj": 338,
               "target": 400,
               "used": 100,
               "day": 3,
@@ -7023,7 +7000,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-02T20:31:24Z",
+          "updated": "2026-10-02T21:11:44Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7039,7 +7016,7 @@
           ]
         }
       },
-      "snapshot_id": "e97da4ad4ceac263"
+      "snapshot_id": "88485eca607edae1"
     },
     "scriptgen": {
       "schema": 1,
@@ -7310,7 +7287,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 343,
+              "proj": 338,
               "target": 400,
               "used": 100,
               "day": 3,
@@ -7336,7 +7313,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-02T20:31:24Z",
+          "updated": "2026-10-02T21:11:44Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7352,7 +7329,7 @@
           ]
         }
       },
-      "snapshot_id": "dd6339fc88cef3b4"
+      "snapshot_id": "7ff76a5fe27fad89"
     }
   },
   "pm": {
@@ -7380,22 +7357,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4070
+        "monitor_last_pass_min": 4076
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4070
+        "monitor_last_pass_min": 4076
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4070
+        "monitor_last_pass_min": 4076
       }
     ]
   },
-  "snapshot_id": "1587c6674e377e25",
-  "published_at": "2026-10-02T21:06:54Z"
+  "snapshot_id": "2bdb1d9e405130b5",
+  "published_at": "2026-10-02T21:12:13Z"
 }
