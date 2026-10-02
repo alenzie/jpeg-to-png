@@ -502,7 +502,7 @@
             99.0
           ],
           [
-            20.9,
+            21.0,
             100.0
           ]
         ]
@@ -518,7 +518,7 @@
         "spark": [],
         "trail": [
           [
-            20.9,
+            21.0,
             44.0
           ]
         ]
@@ -6315,7 +6315,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 36,
+          "ctx_pct": 38,
           "last_commit_at": 1790922924,
           "head": "520e55c7",
           "subfence": {
@@ -6356,9 +6356,9 @@
         {
           "id": "JOB-RESOURCE-BOUNDS",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 27,
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": 18,
           "last_commit_at": 1790922997,
           "head": "5f0758f4",
           "subfence": {
@@ -6389,7 +6389,7 @@
             }
           ],
           "fences": {
-            "plan": false,
+            "plan": true,
             "synth": true,
             "build": false,
             "review": false
@@ -6654,7 +6654,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-02T06:36:42Z",
+          "updated": "2026-10-02T06:40:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6670,7 +6670,7 @@
           ]
         }
       },
-      "snapshot_id": "1b38b54b64bf4e6d"
+      "snapshot_id": "379caaa3ca23e269"
     },
     "outbound": {
       "schema": 1,
@@ -6731,6 +6731,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 335,
+          "unit": "spindle-system-map-20261",
+          "merged_at": 1790923064,
+          "sha": "0c45f1bb"
+        },
+        {
           "pr": 334,
           "unit": "spindle-sender-selection",
           "merged_at": 1790922767,
@@ -6753,12 +6759,6 @@
           "unit": "spindle-install-20261001",
           "merged_at": 1790909088,
           "sha": "2582de1d"
-        },
-        {
-          "pr": 330,
-          "unit": "pilot-to-main-20261001",
-          "merged_at": 1790843583,
-          "sha": "c502da60"
         }
       ],
       "decisions": [
@@ -7016,7 +7016,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-02T06:36:42Z",
+          "updated": "2026-10-02T06:40:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7032,7 +7032,7 @@
           ]
         }
       },
-      "snapshot_id": "872b43deb5e947ea"
+      "snapshot_id": "9280f02af7838146"
     },
     "scriptgen": {
       "schema": 1,
@@ -7114,15 +7114,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 29,
-          "last_commit_at": 1790922008,
-          "head": "b50c81d5",
+          "ctx_pct": 31,
+          "last_commit_at": 1790923259,
+          "head": "c90ed0e3",
           "subfence": {
             "done": 6,
             "total": 17
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "c90ed0e3",
+              "at": 1790923259
+            },
             {
               "sha": "b50c81d5",
               "at": 1790922008
@@ -7138,10 +7142,6 @@
             {
               "sha": "511e19f7",
               "at": 1790921199
-            },
-            {
-              "sha": "dd9f67c9",
-              "at": 1790919770
             }
           ],
           "fences": {
@@ -7413,7 +7413,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-02T06:36:42Z",
+          "updated": "2026-10-02T06:40:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7429,7 +7429,7 @@
           ]
         }
       },
-      "snapshot_id": "4e9ca2b35cea498a"
+      "snapshot_id": "0f06e19c4f2466d6"
     }
   },
   "pm": {
@@ -7457,22 +7457,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3201
+        "monitor_last_pass_min": 3206
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3201
+        "monitor_last_pass_min": 3206
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3201
+        "monitor_last_pass_min": 3206
       }
     ]
   },
-  "snapshot_id": "3b97efe86978defc",
-  "published_at": "2026-10-02T06:37:17Z"
+  "snapshot_id": "352f40558fa60f1f",
+  "published_at": "2026-10-02T06:42:32Z"
 }
