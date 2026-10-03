@@ -497,7 +497,7 @@
         ],
         "trail": [
           [
-            64.5,
+            64.6,
             4.0
           ]
         ]
@@ -1046,7 +1046,7 @@
             0.0
           ],
           [
-            0.8,
+            0.9,
             0.0
           ]
         ]
@@ -1731,7 +1731,7 @@
           51.0
         ],
         [
-          16.5,
+          16.6,
           51.0
         ]
       ]
@@ -2854,7 +2854,7 @@
             99.0
           ],
           [
-            1790404117,
+            1790404694,
             99.0
           ],
           [
@@ -3772,7 +3772,7 @@
             39.0
           ],
           [
-            1790404117,
+            1790404694,
             40.0
           ],
           [
@@ -5255,7 +5255,7 @@
           8.0
         ],
         [
-          1790404117,
+          1790404694,
           9.0
         ],
         [
@@ -5915,7 +5915,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 24,
+          "ctx_pct": 28,
           "last_commit_at": 1791008594,
           "head": "cd69be06",
           "subfence": {
@@ -5952,6 +5952,28 @@
             "review": false
           },
           "gate_open": false
+        },
+        {
+          "id": "LLM-PROXY-CONFIG-FAILCLOSED",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 20,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -5960,7 +5982,6 @@
         "FLOW-READ-DIAGNOSTICS",
         "DESKTOP-SECURITY-MAINTENANCE",
         "LICENSING-HARDENING",
-        "LLM-PROXY-CONFIG-FAILCLOSED",
         "RELEASE-LICENSE-NOTICES"
       ],
       "merge_feed": [
@@ -6212,7 +6233,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-03T06:24:24Z",
+          "updated": "2026-10-03T06:25:54Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6228,7 +6249,7 @@
           ]
         }
       },
-      "snapshot_id": "8b08a3fad19d5c7f"
+      "snapshot_id": "7ebe3dcbae426c1b"
     },
     "outbound": {
       "schema": 1,
@@ -6574,7 +6595,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-03T06:24:24Z",
+          "updated": "2026-10-03T06:25:54Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6590,7 +6611,7 @@
           ]
         }
       },
-      "snapshot_id": "2783201180ca8046"
+      "snapshot_id": "ea1a6307ba609836"
     },
     "scriptgen": {
       "schema": 1,
@@ -6623,7 +6644,30 @@
           "up": false
         }
       },
-      "units": [],
+      "units": [
+        {
+          "id": "S5-SOURCES",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 17,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        }
+      ],
       "eligible": [
         "CAL-LAB-RES",
         "CAL-REBILL-GUARD",
@@ -6633,7 +6677,6 @@
         "RESEARCH-E2E",
         "RESEARCH-PDF",
         "RESEARCH-RECLAIM",
-        "S5-SOURCES",
         "DEP-SQLITE",
         "TEST-DEBT-THAW",
         "HOOK-VARIANTS"
@@ -6887,7 +6930,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-03T06:24:24Z",
+          "updated": "2026-10-03T06:25:54Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6903,7 +6946,7 @@
           ]
         }
       },
-      "snapshot_id": "c92f5f992d422353"
+      "snapshot_id": "230d9f7caa1f57ca"
     }
   },
   "pm": {
@@ -6931,22 +6974,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4628
+        "monitor_last_pass_min": 4634
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4628
+        "monitor_last_pass_min": 4634
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4628
+        "monitor_last_pass_min": 4634
       }
     ]
   },
-  "snapshot_id": "50522c490028eab6",
-  "published_at": "2026-10-03T06:24:54Z"
+  "snapshot_id": "c803cdbe02ad592e",
+  "published_at": "2026-10-03T06:30:18Z"
 }
