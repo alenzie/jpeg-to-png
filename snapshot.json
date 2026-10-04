@@ -12,10 +12,6 @@
         "reset": "14:13 on 9 Oct",
         "spark": [
           [
-            1790532000,
-            187
-          ],
-          [
             1790535600,
             186
           ],
@@ -617,7 +613,7 @@
         ],
         "trail": [
           [
-            86.2,
+            86.3,
             4.0
           ]
         ]
@@ -631,10 +627,6 @@
         "at": 1791132910,
         "reset": "Oct 9, 10pm (America/Los_Angeles)",
         "spark": [
-          [
-            1790532000,
-            99
-          ],
           [
             1790535600,
             99
@@ -1322,7 +1314,7 @@
             46.0
           ],
           [
-            22.5,
+            22.6,
             48.0
           ]
         ]
@@ -1352,10 +1344,6 @@
       "reset": "Oct 08, 19:39",
       "level": "pro",
       "spark": [
-        [
-          1790532000,
-          113
-        ],
         [
           1790535600,
           113
@@ -2151,7 +2139,7 @@
           54.0
         ],
         [
-          38.2,
+          38.3,
           54.0
         ]
       ]
@@ -2164,10 +2152,6 @@
       "days_to_empty": null,
       "at": 1791132910,
       "spark": [
-        [
-          1790532000,
-          7.6
-        ],
         [
           1790535600,
           7.6
@@ -3303,10 +3287,6 @@
           ],
           [
             1790532207,
-            28.0
-          ],
-          [
-            1790535149,
             28.0
           ],
           [
@@ -4530,10 +4510,6 @@
             22.0
           ],
           [
-            1790535149,
-            23.0
-          ],
-          [
             1790535612,
             23.0
           ],
@@ -5727,10 +5703,6 @@
           44.0
         ],
         [
-          1790535149,
-          44.0
-        ],
-        [
           1790535612,
           44.0
         ],
@@ -6361,19 +6333,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CORPUS-USAGE-LEDGER",
-            "kind": "needs-owner",
-            "raised_at": 1791113932
-          },
-          {
-            "id": "LLM-PROXY-INGRESS-HARDENING",
-            "kind": "needs-owner",
-            "raised_at": 1791133068
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6404,8 +6365,8 @@
         {
           "id": "CORPUS-USAGE-LEDGER",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "planning",
+          "stage_i": 1,
           "ctx_pct": 36,
           "last_commit_at": null,
           "head": null,
@@ -6421,14 +6382,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "LLM-PROXY-INGRESS-HARDENING",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 37,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 38,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6443,7 +6404,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -6719,7 +6680,7 @@
           ]
         }
       },
-      "snapshot_id": "753e0ecdab692064"
+      "snapshot_id": "6b75e23381b19c13"
     },
     "outbound": {
       "schema": 1,
@@ -7081,19 +7042,13 @@
           ]
         }
       },
-      "snapshot_id": "1cdea8e215aa4410"
+      "snapshot_id": "20cdf922a86a5fe8"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "S5-POLISH",
-            "kind": "needs-owner",
-            "raised_at": 1791137787
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -7124,9 +7079,9 @@
         {
           "id": "S5-POLISH",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 36,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 37,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7141,7 +7096,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -7422,7 +7377,7 @@
           ]
         }
       },
-      "snapshot_id": "4f48b61458bd437f"
+      "snapshot_id": "a73ab30761f25de8"
     }
   },
   "pm": {
@@ -7450,22 +7405,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 6815
+        "monitor_last_pass_min": 6821
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6815
+        "monitor_last_pass_min": 6821
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6815
+        "monitor_last_pass_min": 6821
       }
     ]
   },
-  "snapshot_id": "e26d9818e91176f9",
-  "published_at": "2026-10-04T18:52:00Z"
+  "snapshot_id": "68fd595d8f4c4b92",
+  "published_at": "2026-10-04T18:57:14Z"
 }
