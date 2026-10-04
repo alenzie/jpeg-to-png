@@ -585,7 +585,7 @@
         ],
         "trail": [
           [
-            81.9,
+            82.0,
             4.0
           ]
         ]
@@ -1270,7 +1270,7 @@
             42.0
           ],
           [
-            18.2,
+            18.3,
             43.0
           ]
         ]
@@ -2079,7 +2079,7 @@
           54.0
         ],
         [
-          33.9,
+          34.0,
           54.0
         ]
       ]
@@ -6281,8 +6281,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CORPUS-USAGE-LEDGER",
+            "kind": "needs-owner",
+            "raised_at": 1791113932
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6313,9 +6319,9 @@
         {
           "id": "CORPUS-USAGE-LEDGER",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 35,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 36,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6330,14 +6336,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "DESKTOP-SECURITY-MAINTENANCE",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 41,
+          "ctx_pct": 43,
           "last_commit_at": 1791112593,
           "head": "82cb1340",
           "subfence": {
@@ -6646,7 +6652,7 @@
           ]
         }
       },
-      "snapshot_id": "6c87b5dc3d379188"
+      "snapshot_id": "d909addfc9832836"
     },
     "outbound": {
       "schema": 1,
@@ -7008,7 +7014,7 @@
           ]
         }
       },
-      "snapshot_id": "60130cb64607f47a"
+      "snapshot_id": "965ef52b10ae5ed9"
     },
     "scriptgen": {
       "schema": 1,
@@ -7415,7 +7421,7 @@
           ]
         }
       },
-      "snapshot_id": "ddf049e2cb42078c"
+      "snapshot_id": "758afe2187d42136"
     }
   },
   "pm": {
@@ -7443,22 +7449,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 6381
+        "monitor_last_pass_min": 6386
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6381
+        "monitor_last_pass_min": 6386
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6381
+        "monitor_last_pass_min": 6386
       }
     ]
   },
-  "snapshot_id": "100875c8c9227457",
-  "published_at": "2026-10-04T11:37:17Z"
+  "snapshot_id": "7136d5a10620abae",
+  "published_at": "2026-10-04T11:42:35Z"
 }
