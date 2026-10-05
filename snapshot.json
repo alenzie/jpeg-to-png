@@ -8,12 +8,12 @@
         "tier": "Pro",
         "projected": 287,
         "used": 100,
-        "at": 1791182662,
+        "at": 1791183120,
         "reset": "14:13 on 9 Oct",
         "spark": [
           [
             1790578800,
-            251
+            255
           ],
           [
             1790582400,
@@ -653,7 +653,7 @@
         ],
         "trail": [
           [
-            93.9,
+            94.0,
             4.0
           ]
         ]
@@ -664,12 +664,12 @@
         "mult": "20x",
         "projected": 228,
         "used": 69,
-        "at": 1791182662,
+        "at": 1791183120,
         "reset": "Oct 9, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1790578800,
-            240
+            243
           ],
           [
             1790582400,
@@ -1394,7 +1394,7 @@
             67.0
           ],
           [
-            30.2,
+            30.3,
             67.0
           ]
         ]
@@ -1420,7 +1420,7 @@
       "target": 100,
       "projected": 120,
       "used": 55,
-      "at": 1791182662,
+      "at": 1791183120,
       "reset": "Oct 08, 19:39",
       "level": "pro",
       "spark": [
@@ -2259,7 +2259,7 @@
           55.0
         ],
         [
-          45.9,
+          46.0,
           55.0
         ]
       ]
@@ -2270,7 +2270,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1791182662,
+      "at": 1791183120,
       "spark": [
         [
           1790578800,
@@ -3414,8 +3414,8 @@
             51.0
           ],
           [
-            1790581679,
-            57.0
+            1790582003,
+            58.0
           ],
           [
             1790582666,
@@ -4630,8 +4630,8 @@
             60.0
           ],
           [
-            1790581679,
-            74.0
+            1790582003,
+            75.0
           ],
           [
             1790582666,
@@ -5819,7 +5819,7 @@
           65.0
         ],
         [
-          1790581679,
+          1790582003,
           65.0
         ],
         [
@@ -6485,7 +6485,7 @@
           "status": "building",
           "stage": "interviewing",
           "stage_i": 2,
-          "ctx_pct": 26,
+          "ctx_pct": 5,
           "last_commit_at": 1791174784,
           "head": "1b3db36d",
           "subfence": {
@@ -6806,7 +6806,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-05T07:46:36Z",
+          "updated": "2026-10-05T07:52:14Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6822,7 +6822,7 @@
           ]
         }
       },
-      "snapshot_id": "fc3b2dad64176bd6"
+      "snapshot_id": "d753f76cf8db1f1c"
     },
     "outbound": {
       "schema": 1,
@@ -7168,7 +7168,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-05T07:46:36Z",
+          "updated": "2026-10-05T07:52:14Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7184,13 +7184,19 @@
           ]
         }
       },
-      "snapshot_id": "8b13d90a00c41987"
+      "snapshot_id": "cf81caa6d07838a7"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "TIMED-OUTPUT",
+            "kind": "escalate",
+            "raised_at": 1791186765
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -7223,7 +7229,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 44,
+          "ctx_pct": 6,
           "last_commit_at": 1791181082,
           "head": "c443fd92",
           "subfence": {
@@ -7264,17 +7270,21 @@
         {
           "id": "TIMED-OUTPUT",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 31,
-          "last_commit_at": 1791186395,
-          "head": "d7e61690",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 32,
+          "last_commit_at": 1791186716,
+          "head": "236fc2bd",
           "subfence": {
-            "done": 8,
+            "done": 9,
             "total": 18
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "236fc2bd",
+              "at": 1791186716
+            },
             {
               "sha": "d7e61690",
               "at": 1791186395
@@ -7290,10 +7300,6 @@
             {
               "sha": "39fb9f40",
               "at": 1791185798
-            },
-            {
-              "sha": "617580a1",
-              "at": 1791185256
             }
           ],
           "fences": {
@@ -7302,7 +7308,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -7566,7 +7572,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-05T07:46:36Z",
+          "updated": "2026-10-05T07:52:14Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7582,7 +7588,7 @@
           ]
         }
       },
-      "snapshot_id": "d9a7999ff46a2dc8"
+      "snapshot_id": "d2e5fe4ebacef8c8"
     }
   },
   "pm": {
@@ -7610,22 +7616,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 7591
+        "monitor_last_pass_min": 7596
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7591
+        "monitor_last_pass_min": 7596
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7591
+        "monitor_last_pass_min": 7596
       }
     ]
   },
-  "snapshot_id": "f5dacac5053b7a9d",
-  "published_at": "2026-10-05T07:47:37Z"
+  "snapshot_id": "88eb2319679eb1ed",
+  "published_at": "2026-10-05T07:52:59Z"
 }
