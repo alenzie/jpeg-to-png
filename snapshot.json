@@ -641,7 +641,7 @@
         ],
         "trail": [
           [
-            92.1,
+            92.2,
             4.0
           ]
         ]
@@ -1370,7 +1370,7 @@
             63.0
           ],
           [
-            28.4,
+            28.5,
             66.0
           ]
         ]
@@ -2223,7 +2223,7 @@
           55.0
         ],
         [
-          44.1,
+          44.2,
           55.0
         ]
       ]
@@ -6408,6 +6408,11 @@
         "active": true,
         "units": [
           {
+            "id": "CORPUS-USAGE-LEDGER",
+            "kind": "needs-owner",
+            "raised_at": 1791175528
+          },
+          {
             "id": "RELEASE-SUPPLY-CHAIN-HARDENING",
             "kind": "needs-owner",
             "raised_at": 1791174326
@@ -6443,8 +6448,8 @@
         {
           "id": "CORPUS-USAGE-LEDGER",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 26,
           "last_commit_at": 1791174784,
           "head": "1b3db36d",
@@ -6481,7 +6486,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "RELEASE-SUPPLY-CHAIN-HARDENING",
@@ -6766,7 +6771,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-05T04:41:05Z",
+          "updated": "2026-10-05T04:45:59Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6782,7 +6787,7 @@
           ]
         }
       },
-      "snapshot_id": "a92cb65abbf12002"
+      "snapshot_id": "4d3aa788ffc61c16"
     },
     "outbound": {
       "schema": 1,
@@ -7128,7 +7133,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-05T04:41:05Z",
+          "updated": "2026-10-05T04:45:59Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7144,7 +7149,7 @@
           ]
         }
       },
-      "snapshot_id": "37252dc08c50a713"
+      "snapshot_id": "edbb6f059f3d0082"
     },
     "scriptgen": {
       "schema": 1,
@@ -7183,7 +7188,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 18,
+          "ctx_pct": 20,
           "last_commit_at": 1791174788,
           "head": "692b565e",
           "subfence": {
@@ -7224,17 +7229,21 @@
         {
           "id": "TIMED-OUTPUT",
           "status": "building",
-          "stage": "building",
-          "stage_i": 3,
-          "ctx_pct": 24,
-          "last_commit_at": 1791175205,
-          "head": "26b7f437",
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 26,
+          "last_commit_at": 1791175547,
+          "head": "b88d436d",
           "subfence": {
-            "done": 0,
+            "done": 1,
             "total": 18
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "b88d436d",
+              "at": 1791175547
+            },
             {
               "sha": "26b7f437",
               "at": 1791175205
@@ -7250,10 +7259,6 @@
             {
               "sha": "81ca86df",
               "at": 1791173888
-            },
-            {
-              "sha": "e8e95b63",
-              "at": 1791173869
             }
           ],
           "fences": {
@@ -7526,7 +7531,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-05T04:41:05Z",
+          "updated": "2026-10-05T04:45:59Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7542,7 +7547,7 @@
           ]
         }
       },
-      "snapshot_id": "d7739d08e983ce84"
+      "snapshot_id": "dc8ceea7ed2ca9da"
     }
   },
   "pm": {
@@ -7570,22 +7575,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 7409
+        "monitor_last_pass_min": 7414
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7409
+        "monitor_last_pass_min": 7414
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7409
+        "monitor_last_pass_min": 7414
       }
     ]
   },
-  "snapshot_id": "3b6ad484333875c9",
-  "published_at": "2026-10-05T04:45:29Z"
+  "snapshot_id": "4bd0e94af262c49c",
+  "published_at": "2026-10-05T04:50:43Z"
 }
