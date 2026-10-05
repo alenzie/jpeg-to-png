@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 327,
+        "projected": 326,
         "used": 100,
-        "at": 1791157202,
+        "at": 1791157783,
         "reset": "14:13 on 9 Oct",
         "spark": [
           [
@@ -590,7 +590,7 @@
             100.0
           ],
           [
-            30.7,
+            30.8,
             100.0
           ]
         ]
@@ -606,7 +606,7 @@
         "spark": [],
         "trail": [
           [
-            60.3,
+            60.4,
             44.0
           ]
         ]
@@ -638,9 +638,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 231,
+        "projected": 230,
         "used": 60,
-        "at": 1791157202,
+        "at": 1791157783,
         "reset": "Oct 9, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1372,7 +1372,7 @@
       "target": 100,
       "projected": 132,
       "used": 55,
-      "at": 1791157202,
+      "at": 1791157783,
       "reset": "Oct 08, 19:39",
       "level": "pro",
       "spark": [
@@ -2198,7 +2198,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1791157202,
+      "at": 1791157783,
       "spark": [
         [
           1790557200,
@@ -6403,7 +6403,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 14,
+          "ctx_pct": 19,
           "last_commit_at": 1791161022,
           "head": "0b9c0429",
           "subfence": {
@@ -6443,58 +6443,17 @@
         },
         {
           "id": "LLM-PROXY-INGRESS-HARDENING",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 36,
+          "status": "built",
+          "stage": "merge+cleanup",
+          "stage_i": 6,
+          "ctx_pct": 11,
           "last_commit_at": 1791161301,
           "head": "db3ec18e",
           "subfence": {
             "done": 8,
             "total": 8
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "lead-family breadth reviewer",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 1,
-              "seats": "cross-family reviewer",
-              "must": 0,
-              "should": 0,
-              "could": 1,
-              "nit": 2
-            },
-            {
-              "round": 2,
-              "seats": "lead-family iterative reviewer",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "lead-family iterative reviewer",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "lead-family declarer",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "db3ec18e",
@@ -6521,7 +6480,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -6535,6 +6494,12 @@
         "RELEASE-SUPPLY-CHAIN-HARDENING"
       ],
       "merge_feed": [
+        {
+          "pr": 45,
+          "unit": "LLM-PROXY-INGRESS-HARDEN",
+          "merged_at": 1791161535,
+          "sha": "4b82359b"
+        },
         {
           "pr": 44,
           "unit": "DESKTOP-SECURITY-MAINTEN",
@@ -6558,12 +6523,6 @@
           "unit": "LLM-PROXY-CONFIG-FAILCLO",
           "merged_at": 1791028289,
           "sha": "3edb32fc"
-        },
-        {
-          "pr": 40,
-          "unit": "LLM-PROXY-CONFIG-FAILCLO",
-          "merged_at": 1791027027,
-          "sha": "045d8182"
         }
       ],
       "decisions": [],
@@ -6757,7 +6716,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 327,
+              "proj": 326,
               "target": 400,
               "used": 100,
               "day": 3,
@@ -6775,7 +6734,7 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 231,
+              "proj": 230,
               "target": 250,
               "used": 60,
               "day": 2,
@@ -6783,7 +6742,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-05T00:43:58Z",
+          "updated": "2026-10-05T00:52:56Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6799,7 +6758,7 @@
           ]
         }
       },
-      "snapshot_id": "2f4bbe426d89d678"
+      "snapshot_id": "cf0fe78cac27b51c"
     },
     "outbound": {
       "schema": 1,
@@ -7119,7 +7078,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 327,
+              "proj": 326,
               "target": 400,
               "used": 100,
               "day": 3,
@@ -7137,7 +7096,7 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 231,
+              "proj": 230,
               "target": 250,
               "used": 60,
               "day": 2,
@@ -7145,7 +7104,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-05T00:43:58Z",
+          "updated": "2026-10-05T00:52:56Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7161,7 +7120,7 @@
           ]
         }
       },
-      "snapshot_id": "bae59a94f7b4f733"
+      "snapshot_id": "f60d5586880d996d"
     },
     "scriptgen": {
       "schema": 1,
@@ -7201,14 +7160,22 @@
           "stage": "subfencing",
           "stage_i": 4,
           "ctx_pct": 38,
-          "last_commit_at": 1791161188,
-          "head": "cf91990e",
+          "last_commit_at": 1791161562,
+          "head": "cc4c4961",
           "subfence": {
             "done": 3,
             "total": 23
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "cc4c4961",
+              "at": 1791161562
+            },
+            {
+              "sha": "b6b58b02",
+              "at": 1791161326
+            },
             {
               "sha": "cf91990e",
               "at": 1791161188
@@ -7220,14 +7187,6 @@
             {
               "sha": "681134a7",
               "at": 1791160270
-            },
-            {
-              "sha": "1213426a",
-              "at": 1791160244
-            },
-            {
-              "sha": "45070184",
-              "at": 1791160222
             }
           ],
           "fences": {
@@ -7475,7 +7434,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 327,
+              "proj": 326,
               "target": 400,
               "used": 100,
               "day": 3,
@@ -7493,7 +7452,7 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 231,
+              "proj": 230,
               "target": 250,
               "used": 60,
               "day": 2,
@@ -7501,7 +7460,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-05T00:43:58Z",
+          "updated": "2026-10-05T00:52:56Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7517,7 +7476,7 @@
           ]
         }
       },
-      "snapshot_id": "78dfafbf9c457518"
+      "snapshot_id": "c1f928cd719b8ab9"
     }
   },
   "pm": {
@@ -7545,22 +7504,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 7172
+        "monitor_last_pass_min": 7177
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7172
+        "monitor_last_pass_min": 7177
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7172
+        "monitor_last_pass_min": 7177
       }
     ]
   },
-  "snapshot_id": "e59fc84360fffc8d",
-  "published_at": "2026-10-05T00:48:36Z"
+  "snapshot_id": "e79edff5decfb389",
+  "published_at": "2026-10-05T00:53:52Z"
 }
