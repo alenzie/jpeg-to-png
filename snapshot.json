@@ -598,7 +598,7 @@
             100.0
           ],
           [
-            31.2,
+            31.3,
             100.0
           ]
         ]
@@ -614,7 +614,7 @@
         "spark": [],
         "trail": [
           [
-            60.8,
+            60.9,
             44.0
           ]
         ]
@@ -1362,7 +1362,7 @@
             60.0
           ],
           [
-            26.6,
+            26.7,
             60.0
           ]
         ]
@@ -6443,7 +6443,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 40,
+          "ctx_pct": 42,
           "last_commit_at": 1791164099,
           "head": "4d63ac6a",
           "subfence": {
@@ -6759,7 +6759,7 @@
           ]
         }
       },
-      "snapshot_id": "b508e2678b458461"
+      "snapshot_id": "6ec700b0dcd4a53c"
     },
     "outbound": {
       "schema": 1,
@@ -7121,13 +7121,19 @@
           ]
         }
       },
-      "snapshot_id": "ec9f83cb4090de56"
+      "snapshot_id": "7ef7077ad2fca593"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "TIMED-OUTPUT",
+            "kind": "needs-owner",
+            "raised_at": 1791164505
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -7161,14 +7167,18 @@
           "stage": "subfencing",
           "stage_i": 4,
           "ctx_pct": 47,
-          "last_commit_at": 1791164184,
-          "head": "c5731052",
+          "last_commit_at": 1791164570,
+          "head": "e5cb7d3c",
           "subfence": {
             "done": 3,
             "total": 23
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "e5cb7d3c",
+              "at": 1791164570
+            },
             {
               "sha": "c5731052",
               "at": 1791164184
@@ -7184,10 +7194,6 @@
             {
               "sha": "c114b90b",
               "at": 1791163360
-            },
-            {
-              "sha": "e023fac3",
-              "at": 1791163180
             }
           ],
           "fences": {
@@ -7201,9 +7207,9 @@
         {
           "id": "TIMED-OUTPUT",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 36,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 38,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -7218,7 +7224,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -7498,7 +7504,7 @@
           ]
         }
       },
-      "snapshot_id": "af4680e6f252700c"
+      "snapshot_id": "a6261acb486d5d4b"
     }
   },
   "pm": {
@@ -7526,22 +7532,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 7224
+        "monitor_last_pass_min": 7230
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7224
+        "monitor_last_pass_min": 7230
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7224
+        "monitor_last_pass_min": 7230
       }
     ]
   },
-  "snapshot_id": "0eb844af9f63ceaf",
-  "published_at": "2026-10-05T01:41:03Z"
+  "snapshot_id": "df1d79332c56f1be",
+  "published_at": "2026-10-05T01:46:26Z"
 }
