@@ -438,7 +438,7 @@
         ],
         "trail": [
           [
-            1.7,
+            1.8,
             3.0
           ]
         ]
@@ -454,7 +454,7 @@
         "spark": [],
         "trail": [
           [
-            92.2,
+            92.3,
             44.0
           ]
         ]
@@ -6332,8 +6332,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "FLOW-MEMORY",
+            "kind": "needs-owner",
+            "raised_at": 1791354425
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6364,9 +6370,9 @@
         {
           "id": "FLOW-MEMORY",
           "status": "scoped",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 0,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 15,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6381,7 +6387,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6645,7 +6651,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-07T06:23:25Z",
+          "updated": "2026-10-07T06:26:13Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6661,7 +6667,7 @@
           ]
         }
       },
-      "snapshot_id": "81d36e4cae0f7f8f"
+      "snapshot_id": "8e667217f9fbc227"
     },
     "outbound": {
       "schema": 1,
@@ -7007,7 +7013,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-07T06:23:25Z",
+          "updated": "2026-10-07T06:26:13Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7023,7 +7029,7 @@
           ]
         }
       },
-      "snapshot_id": "8b4e1da315271a26"
+      "snapshot_id": "1121db94defb5d22"
     },
     "scriptgen": {
       "schema": 1,
@@ -7057,6 +7063,28 @@
         }
       },
       "units": [
+        {
+          "id": "HOOK-VARIANTS",
+          "status": "proposed",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 8,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
         {
           "id": "RESEARCH-PDF",
           "status": "building",
@@ -7096,28 +7124,6 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
-          },
-          "gate_open": false
-        },
-        {
-          "id": "STUDY-PLAYER-VITEST-FIX",
-          "status": "proposed",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 0,
-          "last_commit_at": null,
-          "head": null,
-          "subfence": {
-            "done": 0,
-            "total": null
-          },
-          "review_rounds": [],
-          "commits": [],
-          "fences": {
-            "plan": false,
-            "synth": false,
-            "build": false,
             "review": false
           },
           "gate_open": false
@@ -7388,7 +7394,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-07T06:23:25Z",
+          "updated": "2026-10-07T06:26:13Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7404,7 +7410,7 @@
           ]
         }
       },
-      "snapshot_id": "810e3d50a4459911"
+      "snapshot_id": "5d89cc97278f0dd0"
     }
   },
   "pm": {
@@ -7432,22 +7438,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 10387
+        "monitor_last_pass_min": 10392
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10387
+        "monitor_last_pass_min": 10392
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10387
+        "monitor_last_pass_min": 10392
       }
     ]
   },
-  "snapshot_id": "ba4cf40b6d16ba76",
-  "published_at": "2026-10-07T06:23:51Z"
+  "snapshot_id": "32e3536186622d9c",
+  "published_at": "2026-10-07T06:29:10Z"
 }
