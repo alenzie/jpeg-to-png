@@ -6464,7 +6464,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-08T20:22:01Z",
+          "updated": "2026-10-08T20:25:15Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6480,7 +6480,7 @@
           ]
         }
       },
-      "snapshot_id": "9c1fbb8fcbaabfa9"
+      "snapshot_id": "691b6caf0e26d896"
     },
     "outbound": {
       "schema": 1,
@@ -6826,7 +6826,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-08T20:22:01Z",
+          "updated": "2026-10-08T20:25:15Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6842,7 +6842,7 @@
           ]
         }
       },
-      "snapshot_id": "962dee87114e53dd"
+      "snapshot_id": "f7317c173e53fe06"
     },
     "scriptgen": {
       "schema": 1,
@@ -6875,7 +6875,30 @@
           "up": true
         }
       },
-      "units": [],
+      "units": [
+        {
+          "id": "AUTHZ-SWEEP",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 18,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        }
+      ],
       "eligible": [
         "CAL-GROUNDING-QUARANTINE",
         "DEFUSE-CF",
@@ -6883,7 +6906,6 @@
         "EVIDENCE-PDF",
         "RESEARCH-E2E",
         "RESEARCH-RECLAIM",
-        "AUTHZ-SWEEP",
         "DEP-FRONTEND",
         "DEP-SQLITE",
         "S6-CLEANUP",
@@ -7140,7 +7162,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-08T20:22:01Z",
+          "updated": "2026-10-08T20:25:15Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7156,7 +7178,7 @@
           ]
         }
       },
-      "snapshot_id": "3da7caa52db1c666"
+      "snapshot_id": "7704e2cdb91ee511"
     }
   },
   "pm": {
@@ -7184,22 +7206,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       }
     ]
   },
-  "snapshot_id": "757fb5de46e5509a",
-  "published_at": "2026-10-08T20:24:03Z"
+  "snapshot_id": "f8b351e89fcb7d6f",
+  "published_at": "2026-10-08T20:29:37Z"
 }
