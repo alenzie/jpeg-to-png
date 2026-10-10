@@ -833,7 +833,7 @@
             6.0
           ],
           [
-            9.1,
+            9.2,
             6.0
           ]
         ]
@@ -4653,7 +4653,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1791661722
+        "last_pass_at": 1791663526
       },
       "runstate": {
         "auto": false,
@@ -4680,7 +4680,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 20,
+          "ctx_pct": 24,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4957,7 +4957,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-10T20:16:44Z",
+          "updated": "2026-10-10T20:17:29Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4973,7 +4973,7 @@
           ]
         }
       },
-      "snapshot_id": "42dc673d057988d7"
+      "snapshot_id": "65833ba9365ebec2"
     },
     "outbound": {
       "schema": 1,
@@ -4985,7 +4985,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1791661723
+        "last_pass_at": 1791663526
       },
       "runstate": {
         "auto": false,
@@ -5034,6 +5034,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 350,
+          "unit": "company-email-notes",
+          "merged_at": 1791663498,
+          "sha": "0c3c0893"
+        },
+        {
           "pr": 347,
           "unit": "auth-branding-preview-20",
           "merged_at": 1791663240,
@@ -5056,12 +5062,6 @@
           "unit": "recover-codex-notes",
           "merged_at": 1791662266,
           "sha": "3ac84f2d"
-        },
-        {
-          "pr": 346,
-          "unit": "desktop-signin-recovery-",
-          "merged_at": 1791660990,
-          "sha": "dc1b2795"
         }
       ],
       "decisions": [
@@ -5319,7 +5319,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-10T20:16:44Z",
+          "updated": "2026-10-10T20:17:29Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5335,7 +5335,7 @@
           ]
         }
       },
-      "snapshot_id": "c3667736cc78e261"
+      "snapshot_id": "1171bdd91b2f4739"
     },
     "scriptgen": {
       "schema": 1,
@@ -5347,7 +5347,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1791661722
+        "last_pass_at": 1791663526
       },
       "runstate": {
         "auto": false,
@@ -5370,11 +5370,33 @@
       },
       "units": [
         {
+          "id": "CONFORMANCE",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 17,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
           "id": "RELEASE-PACKET",
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 19,
+          "ctx_pct": 21,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5401,8 +5423,7 @@
         "DEP-FRONTEND",
         "DEP-SQLITE",
         "S6-CLEANUP",
-        "TEST-DEBT-THAW",
-        "CONFORMANCE"
+        "TEST-DEBT-THAW"
       ],
       "merge_feed": [
         {
@@ -5653,7 +5674,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-10T20:16:44Z",
+          "updated": "2026-10-10T20:17:29Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5669,7 +5690,7 @@
           ]
         }
       },
-      "snapshot_id": "ec92b55f01edd6b1"
+      "snapshot_id": "6b68a37710c79733"
     }
   },
   "pm": {
@@ -5697,22 +5718,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 3
       }
     ]
   },
-  "snapshot_id": "8885250e304af17e",
-  "published_at": "2026-10-10T20:17:02Z"
+  "snapshot_id": "d791037abe4dcc66",
+  "published_at": "2026-10-10T20:22:25Z"
 }
