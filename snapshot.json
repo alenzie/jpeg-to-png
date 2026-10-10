@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": 211,
         "used": 92,
-        "at": 1791603934,
+        "at": 1791604156,
         "reset": "20:28 on 13 Oct",
         "spark": [
           [
@@ -394,7 +394,7 @@
             8.0
           ],
           [
-            43.6,
+            43.7,
             8.0
           ]
         ]
@@ -407,7 +407,7 @@
         "mult": "20x",
         "projected": 94,
         "used": 94,
-        "at": 1791603934,
+        "at": 1791604156,
         "reset": "Oct 9, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
@@ -785,7 +785,7 @@
         ],
         "trail": [
           [
-            0.0,
+            1.0,
             0.0
           ],
           [
@@ -1243,13 +1243,13 @@
       "target": 100,
       "projected": 0,
       "used": 0,
-      "at": 1791603934,
+      "at": 1791604156,
       "reset": "Oct 15, 19:39",
       "level": "pro",
       "spark": [
         [
           1791000000,
-          316
+          315
         ],
         [
           1791003600,
@@ -1710,7 +1710,7 @@
           0.0
         ],
         [
-          15.5,
+          15.6,
           0.0
         ]
       ]
@@ -1721,7 +1721,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1791603934,
+      "at": 1791604156,
       "spark": [
         [
           1791000000,
@@ -2181,8 +2181,8 @@
       "codex": {
         "B": [
           [
-            1787719804,
-            19.0
+            1787723000,
+            21.0
           ],
           [
             1787726576,
@@ -2741,8 +2741,8 @@
             1.0
           ],
           [
-            1791002872,
-            13.0
+            1791003259,
+            14.0
           ],
           [
             1791003781,
@@ -3537,7 +3537,7 @@
             99.0
           ],
           [
-            1791002872,
+            1791003259,
             0.0
           ],
           [
@@ -3992,7 +3992,7 @@
       },
       "glm": [
         [
-          1787719804,
+          1787723000,
           44.0
         ],
         [
@@ -4560,7 +4560,7 @@
           50.0
         ],
         [
-          1791002872,
+          1791003259,
           51.0
         ],
         [
@@ -5018,14 +5018,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "LLM-SESSION-LIFECYCLE",
-            "kind": "needs-owner",
-            "raised_at": 1791606047
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5056,9 +5050,9 @@
         {
           "id": "LLM-SESSION-LIFECYCLE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 40,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 42,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5073,7 +5067,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -5352,7 +5346,7 @@
           ]
         }
       },
-      "snapshot_id": "9cfd97a8a46a06a2"
+      "snapshot_id": "6c138078c5ed309c"
     },
     "outbound": {
       "schema": 1,
@@ -5714,7 +5708,7 @@
           ]
         }
       },
-      "snapshot_id": "8afc4e21da8c3d21"
+      "snapshot_id": "371e77534452cb52"
     },
     "scriptgen": {
       "schema": 1,
@@ -5796,15 +5790,19 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 25,
-          "last_commit_at": 1791607182,
-          "head": "f9d713ae",
+          "ctx_pct": 27,
+          "last_commit_at": 1791607900,
+          "head": "e39b9481",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "e39b9481",
+              "at": 1791607900
+            },
             {
               "sha": "f9d713ae",
               "at": 1791607182
@@ -5820,10 +5818,6 @@
             {
               "sha": "c1291e2b",
               "at": 1791491263
-            },
-            {
-              "sha": "6eba7a80",
-              "at": 1791490830
             }
           ],
           "fences": {
@@ -6113,7 +6107,7 @@
           ]
         }
       },
-      "snapshot_id": "18f7075c2a4ecdcd"
+      "snapshot_id": "fcea28e12cbcdda7"
     }
   },
   "pm": {
@@ -6132,7 +6126,7 @@
       "available_note": "owner asleep 10-05 ~10:20Z — keep it moving; park interviews in plain text"
     },
     "pm_session": {
-      "lock": "4187696 2026-10-10T04:17:43Z",
+      "lock": "218128 2026-10-10T04:48:15Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -6141,22 +6135,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 9
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 9
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 9
       }
     ]
   },
-  "snapshot_id": "2657a704e7431321",
-  "published_at": "2026-10-10T04:46:26Z"
+  "snapshot_id": "1efb430bc5e75357",
+  "published_at": "2026-10-10T04:51:56Z"
 }
