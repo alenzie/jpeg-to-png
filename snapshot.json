@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": 212,
         "used": 91,
-        "at": 1791599891,
+        "at": 1791600170,
         "reset": "20:28 on 13 Oct",
         "spark": [
           [
@@ -403,7 +403,7 @@
         "mult": "20x",
         "projected": 90,
         "used": 89,
-        "at": 1791599891,
+        "at": 1791600170,
         "reset": "Oct 9, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1225,7 +1225,7 @@
             88.0
           ],
           [
-            99.2,
+            99.3,
             89.0
           ]
         ]
@@ -1235,13 +1235,13 @@
       "target": 100,
       "projected": 0,
       "used": 0,
-      "at": 1791599891,
+      "at": 1791600170,
       "reset": "Oct 15, 19:39",
       "level": "pro",
       "spark": [
         [
           1790996400,
-          328
+          326
         ],
         [
           1791000000,
@@ -1698,7 +1698,7 @@
           0.0
         ],
         [
-          14.9,
+          15.0,
           0.0
         ]
       ]
@@ -1707,9 +1707,9 @@
       "balance": -0.0,
       "currency": "USD",
       "available": false,
-      "burn_per_day": 0.0,
+      "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1791599891,
+      "at": 1791600170,
       "spark": [
         [
           1790996400,
@@ -2729,7 +2729,7 @@
             1.0
           ],
           [
-            1790999157,
+            1790999926,
             11.0
           ],
           [
@@ -3525,7 +3525,7 @@
             99.0
           ],
           [
-            1790999157,
+            1790999926,
             99.0
           ],
           [
@@ -4548,7 +4548,7 @@
           50.0
         ],
         [
-          1790999157,
+          1790999926,
           51.0
         ],
         [
@@ -5012,8 +5012,8 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1791493688
+        "monitor_alive": true,
+        "last_pass_at": 1791603716
       },
       "runstate": {
         "auto": false,
@@ -5031,7 +5031,7 @@
           "up": true
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [
@@ -5040,7 +5040,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 14,
+          "ctx_pct": 25,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5334,7 +5334,7 @@
           ]
         }
       },
-      "snapshot_id": "34d3ccf1c9952892"
+      "snapshot_id": "8a71da0d85d95eb2"
     },
     "outbound": {
       "schema": 1,
@@ -5345,8 +5345,8 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1791493688
+        "monitor_alive": true,
+        "last_pass_at": 1791603716
       },
       "runstate": {
         "auto": false,
@@ -5364,7 +5364,7 @@
           "up": false
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [],
@@ -5696,19 +5696,25 @@
           ]
         }
       },
-      "snapshot_id": "807ba6608a704393"
+      "snapshot_id": "f9df60a094fd543a"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "AUTHZ-SWEEP",
+            "kind": "needs-owner",
+            "raised_at": 1791603779
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1791493688
+        "monitor_alive": true,
+        "last_pass_at": 1791603716
       },
       "runstate": {
         "auto": false,
@@ -5726,16 +5732,16 @@
           "up": true
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [
         {
           "id": "AUTHZ-SWEEP",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 15,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 17,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5750,7 +5756,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6032,7 +6038,7 @@
           ]
         }
       },
-      "snapshot_id": "b5a15cdbdb5f6343"
+      "snapshot_id": "9334278e4165299b"
     }
   },
   "pm": {
@@ -6060,22 +6066,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 1833
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1833
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1833
+        "monitor_last_pass_min": 4
       }
     ]
   },
-  "snapshot_id": "9512e973a2600ce7",
-  "published_at": "2026-10-10T03:41:19Z"
+  "snapshot_id": "4e523a6c92564815",
+  "published_at": "2026-10-10T03:46:44Z"
 }
