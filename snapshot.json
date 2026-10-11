@@ -362,7 +362,7 @@
             4.0
           ],
           [
-            3.6,
+            3.7,
             8.0
           ]
         ]
@@ -853,7 +853,7 @@
             25.0
           ],
           [
-            17.3,
+            17.4,
             30.0
           ]
         ]
@@ -4706,8 +4706,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "UPDATER-ROLLBACK-INTEGRITY",
+            "kind": "escalate",
+            "raised_at": 1791713299
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4738,17 +4744,25 @@
         {
           "id": "UPDATER-ROLLBACK-INTEGRITY",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 71,
-          "last_commit_at": 1791712628,
-          "head": "9fed4ae6",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 74,
+          "last_commit_at": 1791713278,
+          "head": "be3c9d10",
           "subfence": {
             "done": 0,
             "total": 13
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "be3c9d10",
+              "at": 1791713278
+            },
+            {
+              "sha": "d0b3bb7a",
+              "at": 1791713276
+            },
             {
               "sha": "9fed4ae6",
               "at": 1791712628
@@ -4760,14 +4774,6 @@
             {
               "sha": "81195d72",
               "at": 1791712546
-            },
-            {
-              "sha": "5351b2a8",
-              "at": 1791711651
-            },
-            {
-              "sha": "4c8e0876",
-              "at": 1791711566
             }
           ],
           "fences": {
@@ -4776,7 +4782,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -5054,7 +5060,7 @@
           ]
         }
       },
-      "snapshot_id": "63183b40b6edc611"
+      "snapshot_id": "cf191e2ab0bd8275"
     },
     "outbound": {
       "schema": 1,
@@ -5416,7 +5422,7 @@
           ]
         }
       },
-      "snapshot_id": "1090fe329f9f227c"
+      "snapshot_id": "0353c10445c8ad4b"
     },
     "scriptgen": {
       "schema": 1,
@@ -5813,7 +5819,7 @@
           ]
         }
       },
-      "snapshot_id": "cd00bd3dfc6513de"
+      "snapshot_id": "4346e8ba183e9cc9"
     }
   },
   "pm": {
@@ -5841,22 +5847,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 27
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 27
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 21
+        "monitor_last_pass_min": 27
       }
     ]
   },
-  "snapshot_id": "802809b804016a68",
-  "published_at": "2026-10-11T10:03:59Z"
+  "snapshot_id": "5a8b4f33cfca324a",
+  "published_at": "2026-10-11T10:09:17Z"
 }
