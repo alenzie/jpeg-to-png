@@ -362,7 +362,7 @@
             4.0
           ],
           [
-            3.8,
+            3.9,
             8.0
           ]
         ]
@@ -861,7 +861,7 @@
             30.0
           ],
           [
-            17.5,
+            17.6,
             31.0
           ]
         ]
@@ -1446,7 +1446,7 @@
           30.0
         ],
         [
-          33.2,
+          33.3,
           31.0
         ]
       ]
@@ -4772,15 +4772,19 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 79,
-          "last_commit_at": 1791714283,
-          "head": "c5e4f403",
+          "ctx_pct": 80,
+          "last_commit_at": 1791714568,
+          "head": "ff27857c",
           "subfence": {
             "done": 0,
-            "total": 13
+            "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "ff27857c",
+              "at": 1791714568
+            },
             {
               "sha": "c5e4f403",
               "at": 1791714283
@@ -4796,10 +4800,6 @@
             {
               "sha": "0e379cff",
               "at": 1791713605
-            },
-            {
-              "sha": "38d9089b",
-              "at": 1791713530
             }
           ],
           "fences": {
@@ -5086,7 +5086,7 @@
           ]
         }
       },
-      "snapshot_id": "5d702214fef38d40"
+      "snapshot_id": "9c46d4dcdde8ca4c"
     },
     "outbound": {
       "schema": 1,
@@ -5127,6 +5127,7 @@
         "INT7-PUBLIC-API-OAUTH-PKJWT",
         "INT7-RT-HUBSPOT-PORTAL-SWITCH",
         "EXT2b",
+        "EMAIL-WIRING-BILLING",
         "MON7",
         "PAY-EDGE-REFUND",
         "TREASURY-FLOAT",
@@ -5141,11 +5142,17 @@
         "REFUSAL-CHAIN-PARITY",
         "REFUSAL-EXPORTS",
         "CONTACT-EMAIL",
+        "EMAIL-WIRING-2",
         "MSG12",
-        "ONB1-DSAR-LOCATOR-ATOMICITY",
-        "W6b"
+        "ONB1-DSAR-LOCATOR-ATOMICITY"
       ],
       "merge_feed": [
+        {
+          "pr": 365,
+          "unit": "ledger-email-wiring-done",
+          "merged_at": 1791714352,
+          "sha": "dab6e55c"
+        },
         {
           "pr": 364,
           "unit": "email-wiring-p1-20261011",
@@ -5169,12 +5176,6 @@
           "unit": "runtime-checkpoint-20261",
           "merged_at": 1791684930,
           "sha": "20dfde64"
-        },
-        {
-          "pr": 357,
-          "unit": "sidebar-button-path",
-          "merged_at": 1791679512,
-          "sha": "4e2be7b6"
         }
       ],
       "decisions": [
@@ -5448,7 +5449,7 @@
           ]
         }
       },
-      "snapshot_id": "149de01bb92dea8b"
+      "snapshot_id": "b615d6cee28e466a"
     },
     "scriptgen": {
       "schema": 1,
@@ -5845,7 +5846,7 @@
           ]
         }
       },
-      "snapshot_id": "39a9444d459c601b"
+      "snapshot_id": "6b8ebe37bf8fd58c"
     }
   },
   "pm": {
@@ -5873,22 +5874,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 13
+        "monitor_last_pass_min": 18
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13
+        "monitor_last_pass_min": 18
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13
+        "monitor_last_pass_min": 18
       }
     ]
   },
-  "snapshot_id": "7eda28713afc7253",
-  "published_at": "2026-10-11T10:25:21Z"
+  "snapshot_id": "1e51019f5d2a847b",
+  "published_at": "2026-10-11T10:30:44Z"
 }
