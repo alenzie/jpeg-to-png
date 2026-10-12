@@ -12,10 +12,6 @@
         "reset": "20:58 on 17 Oct",
         "spark": [
           [
-            1791234000,
-            228
-          ],
-          [
             1791237600,
             228
           ],
@@ -314,10 +310,6 @@
         "at": 1791838218,
         "reset": "Oct 16, 10pm (America/Los_Angeles)",
         "spark": [
-          [
-            1791234000,
-            209
-          ],
           [
             1791237600,
             208
@@ -741,7 +733,7 @@
             40.0
           ],
           [
-            38.6,
+            38.7,
             40.0
           ]
         ]
@@ -755,10 +747,6 @@
       "reset": "Oct 15, 19:39",
       "level": "pro",
       "spark": [
-        [
-          1791234000,
-          107
-        ],
         [
           1791237600,
           107
@@ -1270,7 +1258,7 @@
           32.0
         ],
         [
-          54.3,
+          54.4,
           32.0
         ]
       ]
@@ -1283,10 +1271,6 @@
       "days_to_empty": null,
       "at": 1791838218,
       "spark": [
-        [
-          1791234000,
-          -0.0
-        ],
         [
           1791237600,
           -0.0
@@ -1645,7 +1629,7 @@
       "codex": {
         "B": [
           [
-            1787954184,
+            1787958974,
             23.0
           ],
           [
@@ -2210,10 +2194,6 @@
           ],
           [
             1791223489,
-            100.0
-          ],
-          [
-            1791237303,
             100.0
           ],
           [
@@ -2941,10 +2921,6 @@
             82.0
           ],
           [
-            1791237303,
-            82.0
-          ],
-          [
             1791237895,
             82.0
           ],
@@ -3300,7 +3276,7 @@
       },
       "glm": [
         [
-          1787954184,
+          1787958974,
           0.0
         ],
         [
@@ -3876,10 +3852,6 @@
           55.0
         ],
         [
-          1791237303,
-          59.0
-        ],
-        [
           1791237895,
           59.0
         ],
@@ -4249,7 +4221,7 @@
       },
       "runstate": {
         "auto": false,
-        "parallel": 1,
+        "parallel": 2,
         "pickconfirm": true
       },
       "daemons": {
@@ -4267,6 +4239,49 @@
         }
       },
       "units": [
+        {
+          "id": "LLM-SESSION-LIFECYCLE",
+          "status": "built",
+          "stage": "merge+cleanup",
+          "stage_i": 6,
+          "ctx_pct": 9,
+          "last_commit_at": 1791634975,
+          "head": "eacbae15",
+          "subfence": {
+            "done": 9,
+            "total": 9
+          },
+          "review_rounds": [],
+          "commits": [
+            {
+              "sha": "eacbae15",
+              "at": 1791634975
+            },
+            {
+              "sha": "e30026ef",
+              "at": 1791634352
+            },
+            {
+              "sha": "f38c0ca2",
+              "at": 1791634349
+            },
+            {
+              "sha": "2d285ba1",
+              "at": 1791633042
+            },
+            {
+              "sha": "e5fe00bf",
+              "at": 1791632910
+            }
+          ],
+          "fences": {
+            "plan": true,
+            "synth": true,
+            "build": true,
+            "review": true
+          },
+          "gate_open": false
+        },
         {
           "id": "UPDATER-ROLLBACK-INTEGRITY",
           "status": "building",
@@ -4570,7 +4585,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-12T21:50:21Z",
+          "updated": "2026-10-12T21:53:50Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4586,7 +4601,7 @@
           ]
         }
       },
-      "snapshot_id": "e48a9e12a3deac8e"
+      "snapshot_id": "d6b74a2272cf7110"
     },
     "outbound": {
       "schema": 1,
@@ -4933,7 +4948,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-12T21:50:21Z",
+          "updated": "2026-10-12T21:53:50Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4949,7 +4964,7 @@
           ]
         }
       },
-      "snapshot_id": "3ac7b29d62ac61b7"
+      "snapshot_id": "b11bf0a4ff9dbaf9"
     },
     "scriptgen": {
       "schema": 1,
@@ -5372,7 +5387,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-12T21:50:21Z",
+          "updated": "2026-10-12T21:53:50Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5388,7 +5403,7 @@
           ]
         }
       },
-      "snapshot_id": "b89d217e0c9b1bd3"
+      "snapshot_id": "e69914836f7916aa"
     }
   },
   "pm": {
@@ -5408,7 +5423,7 @@
     },
     "pm_session": {
       "lock": "668734 2026-10-12T19:58:13Z",
-      "fresh": true
+      "fresh": false
     },
     "sterling_up": true,
     "fleets": [
@@ -5416,22 +5431,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 2
+        "monitor_last_pass_min": 8
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2
+        "monitor_last_pass_min": 8
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2
+        "monitor_last_pass_min": 8
       }
     ]
   },
-  "snapshot_id": "6c9577520563612a",
-  "published_at": "2026-10-12T21:53:04Z"
+  "snapshot_id": "cdc5bbd86e863aba",
+  "published_at": "2026-10-12T21:58:25Z"
 }
