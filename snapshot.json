@@ -306,7 +306,7 @@
             66.0
           ],
           [
-            26.0,
+            26.1,
             72.0
           ]
         ]
@@ -4306,62 +4306,23 @@
           "gate_open": false
         },
         {
-          "id": "LLM-SESSION-LIFECYCLE",
-          "status": "built",
-          "stage": "merge+cleanup",
-          "stage_i": 6,
-          "ctx_pct": 15,
-          "last_commit_at": 1791842336,
-          "head": "1c6ccb59",
-          "subfence": {
-            "done": 9,
-            "total": 9
-          },
-          "review_rounds": [],
-          "commits": [
-            {
-              "sha": "1c6ccb59",
-              "at": 1791842336
-            },
-            {
-              "sha": "e7358cff",
-              "at": 1791703047
-            },
-            {
-              "sha": "4a833093",
-              "at": 1791701225
-            },
-            {
-              "sha": "ca0ee119",
-              "at": 1791700997
-            },
-            {
-              "sha": "ceb71eec",
-              "at": 1791700921
-            }
-          ],
-          "fences": {
-            "plan": true,
-            "synth": true,
-            "build": true,
-            "review": true
-          },
-          "gate_open": false
-        },
-        {
           "id": "UPDATER-ROLLBACK-INTEGRITY",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
           "ctx_pct": 40,
-          "last_commit_at": 1791845516,
-          "head": "434d1465",
+          "last_commit_at": 1791848573,
+          "head": "550dc866",
           "subfence": {
             "done": 3,
             "total": 13
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "550dc866",
+              "at": 1791848573
+            },
             {
               "sha": "434d1465",
               "at": 1791845516
@@ -4377,10 +4338,6 @@
             {
               "sha": "08c70193",
               "at": 1791840380
-            },
-            {
-              "sha": "02c0439c",
-              "at": 1791839100
             }
           ],
           "fences": {
@@ -4402,6 +4359,12 @@
         "DESKTOP-CONFIRM-MODALS"
       ],
       "merge_feed": [
+        {
+          "pr": 56,
+          "unit": "LLM-SESSION-LIFECYCLE",
+          "merged_at": 1791848489,
+          "sha": "a0e0b505"
+        },
         {
           "pr": 57,
           "unit": "UPDATER-FEED-POLICY",
@@ -4425,12 +4388,6 @@
           "unit": "LLM-SESSION-INGRESS-HARD",
           "merged_at": 1791437865,
           "sha": "c32e6349"
-        },
-        {
-          "pr": 52,
-          "unit": "release-planner-phases-2",
-          "merged_at": 1791425872,
-          "sha": "9fb4e840"
         }
       ],
       "decisions": [],
@@ -4650,7 +4607,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-12T23:39:49Z",
+          "updated": "2026-10-12T23:43:09Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4666,7 +4623,7 @@
           ]
         }
       },
-      "snapshot_id": "fac4ad8d188f76e7"
+      "snapshot_id": "0a7e1da0590585bb"
     },
     "outbound": {
       "schema": 1,
@@ -5013,7 +4970,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-12T23:39:49Z",
+          "updated": "2026-10-12T23:43:09Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5029,7 +4986,7 @@
           ]
         }
       },
-      "snapshot_id": "f16a47698c79c123"
+      "snapshot_id": "aa68083dcfeef378"
     },
     "scriptgen": {
       "schema": 1,
@@ -5068,7 +5025,7 @@
           "status": "building",
           "stage": "merge+cleanup",
           "stage_i": 6,
-          "ctx_pct": 6,
+          "ctx_pct": 8,
           "last_commit_at": 1791844846,
           "head": "7151c913",
           "subfence": {
@@ -5410,7 +5367,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-12T23:39:49Z",
+          "updated": "2026-10-12T23:43:09Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5426,7 +5383,7 @@
           ]
         }
       },
-      "snapshot_id": "142a81da925f4872"
+      "snapshot_id": "bdc2dd87d16f2d81"
     }
   },
   "pm": {
@@ -5454,22 +5411,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       }
     ]
   },
-  "snapshot_id": "b1abd6ce2e8bea40",
-  "published_at": "2026-10-12T23:40:48Z"
+  "snapshot_id": "52b1a50bde4b75f8",
+  "published_at": "2026-10-12T23:46:14Z"
 }
