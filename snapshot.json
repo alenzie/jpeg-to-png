@@ -1549,7 +1549,7 @@
       "codex": {
         "B": [
           [
-            1788080819,
+            1788081657,
             0.0
           ],
           [
@@ -3148,7 +3148,7 @@
       },
       "glm": [
         [
-          1788080819,
+          1788081657,
           4.0
         ],
         [
@@ -4078,61 +4078,25 @@
           "up": true
         }
       },
-      "units": [
-        {
-          "id": "UPDATER-ROLLBACK-INTEGRITY",
-          "status": "building",
-          "stage": "merge+cleanup",
-          "stage_i": 6,
-          "ctx_pct": 38,
-          "last_commit_at": 1791968664,
-          "head": "dae3c104",
-          "subfence": {
-            "done": 13,
-            "total": 13
-          },
-          "review_rounds": [],
-          "commits": [
-            {
-              "sha": "dae3c104",
-              "at": 1791968664
-            },
-            {
-              "sha": "982f9891",
-              "at": 1791968397
-            },
-            {
-              "sha": "ac5e959b",
-              "at": 1791968379
-            },
-            {
-              "sha": "b146dc28",
-              "at": 1791968356
-            },
-            {
-              "sha": "7b2f6032",
-              "at": 1791966775
-            }
-          ],
-          "fences": {
-            "plan": true,
-            "synth": true,
-            "build": true,
-            "review": true
-          },
-          "gate_open": false
-        }
-      ],
+      "units": [],
       "eligible": [
+        "CONFIG-DOWNGRADE-SAFETY",
         "DESKTOP-HANDLE-IO-CONTAINMENT",
         "DESKTOP-TELEMETRY-MINIMIZATION",
         "LICENSING-HARDENING",
         "LLM-PROXY-CANCEL-SETTLEMENT",
         "LLM-PROXY-PREAUTH-ABUSE",
         "MEDIA-DECODE-CONTAINMENT",
+        "UPDATER-RECOVERY-GUARDS",
         "DESKTOP-CONFIRM-MODALS"
       ],
       "merge_feed": [
+        {
+          "pr": 58,
+          "unit": "UPDATER-ROLLBACK-INTEGRI",
+          "merged_at": 1791968871,
+          "sha": "ee8c8465"
+        },
         {
           "pr": 56,
           "unit": "LLM-SESSION-LIFECYCLE",
@@ -4156,12 +4120,6 @@
           "unit": "DESKTOP-LOCAL-IO-BOUNDAR",
           "merged_at": 1791445073,
           "sha": "87cd41b4"
-        },
-        {
-          "pr": 53,
-          "unit": "LLM-SESSION-INGRESS-HARD",
-          "merged_at": 1791437865,
-          "sha": "c32e6349"
         }
       ],
       "decisions": [],
@@ -4381,7 +4339,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-14T09:06:41Z",
+          "updated": "2026-10-14T09:11:05Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4397,7 +4355,7 @@
           ]
         }
       },
-      "snapshot_id": "b38fd88dd309976d"
+      "snapshot_id": "bde65eba598a92e9"
     },
     "outbound": {
       "schema": 1,
@@ -4744,7 +4702,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-14T09:06:40Z",
+          "updated": "2026-10-14T09:11:05Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4760,7 +4718,7 @@
           ]
         }
       },
-      "snapshot_id": "57171286c9c5fa14"
+      "snapshot_id": "81715dad936ccda6"
     },
     "scriptgen": {
       "schema": 1,
@@ -5054,7 +5012,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-14T09:06:41Z",
+          "updated": "2026-10-14T09:11:05Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5070,7 +5028,7 @@
           ]
         }
       },
-      "snapshot_id": "95b1b0ea0e802033"
+      "snapshot_id": "3e7d4967e2c1c3b0"
     }
   },
   "pm": {
@@ -5098,22 +5056,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 17
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 17
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11
+        "monitor_last_pass_min": 17
       }
     ]
   },
-  "snapshot_id": "81f06da07cbd3eb9",
-  "published_at": "2026-10-14T09:06:50Z"
+  "snapshot_id": "1331bf45d17a7d71",
+  "published_at": "2026-10-14T09:12:08Z"
 }
