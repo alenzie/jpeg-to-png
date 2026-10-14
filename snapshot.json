@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 137,
-        "used": 22,
-        "at": 1791963237,
+        "projected": 142,
+        "used": 23,
+        "at": 1791964477,
         "reset": "22:37 on 19 Oct",
         "spark": [
           [
@@ -214,7 +214,7 @@
         ],
         "trail": [
           [
-            16.2,
+            16.3,
             4.0
           ]
         ]
@@ -227,7 +227,7 @@
         "mult": "20x",
         "projected": 94,
         "used": 56,
-        "at": 1791963237,
+        "at": 1791964477,
         "reset": "Oct 16, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
@@ -661,7 +661,7 @@
             55.0
           ],
           [
-            59.4,
+            59.5,
             55.0
           ]
         ]
@@ -671,7 +671,7 @@
       "target": 100,
       "projected": 73,
       "used": 55,
-      "at": 1791963237,
+      "at": 1791964477,
       "reset": "Oct 15, 19:39",
       "level": "pro",
       "spark": [
@@ -1194,7 +1194,7 @@
           46.0
         ],
         [
-          75.1,
+          75.2,
           55.0
         ]
       ]
@@ -1205,7 +1205,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1791963237,
+      "at": 1791964477,
       "spark": [
         [
           1791392400,
@@ -1525,7 +1525,7 @@
       "codex": {
         "B": [
           [
-            1788080007,
+            1788080492,
             0.0
           ],
           [
@@ -3116,7 +3116,7 @@
       },
       "glm": [
         [
-          1788080007,
+          1788080492,
           4.0
         ],
         [
@@ -4014,20 +4014,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "UPDATER-ROLLBACK-INTEGRITY",
-            "kind": "escalate",
-            "raised_at": 1791961869
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1791955408
+        "monitor_alive": true,
+        "last_pass_at": 1791968106
       },
       "runstate": {
         "auto": false,
@@ -4045,15 +4039,15 @@
           "up": true
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [
         {
           "id": "UPDATER-ROLLBACK-INTEGRITY",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "phase-4 review",
+          "stage_i": 5,
           "ctx_pct": 36,
           "last_commit_at": 1791966775,
           "head": "7b2f6032",
@@ -4090,7 +4084,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -4367,7 +4361,7 @@
           ]
         }
       },
-      "snapshot_id": "9c2884f02f669646"
+      "snapshot_id": "c571484ffa644957"
     },
     "outbound": {
       "schema": 1,
@@ -4378,8 +4372,8 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1791955408
+        "monitor_alive": true,
+        "last_pass_at": 1791968106
       },
       "runstate": {
         "auto": false,
@@ -4397,7 +4391,7 @@
           "up": false
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [],
@@ -4730,7 +4724,7 @@
           ]
         }
       },
-      "snapshot_id": "5178ac08826bae23"
+      "snapshot_id": "93bf7b9ad8a731db"
     },
     "scriptgen": {
       "schema": 1,
@@ -4741,8 +4735,8 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1791955408
+        "monitor_alive": true,
+        "last_pass_at": 1791968106
       },
       "runstate": {
         "auto": false,
@@ -4760,7 +4754,7 @@
           "up": true
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [],
@@ -5040,7 +5034,7 @@
           ]
         }
       },
-      "snapshot_id": "69438961d61ac368"
+      "snapshot_id": "5acc11e515ed4e24"
     }
   },
   "pm": {
@@ -5059,8 +5053,8 @@
       "available_note": "owner asleep 10-05 ~10:20Z — keep it moving; park interviews in plain text"
     },
     "pm_session": {
-      "lock": "2001230 2026-10-14T03:19:18Z",
-      "fresh": false
+      "lock": "4002253 2026-10-14T08:53:07Z",
+      "fresh": true
     },
     "sterling_up": true,
     "fleets": [
@@ -5068,22 +5062,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 207
+        "monitor_last_pass_min": 1
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 207
+        "monitor_last_pass_min": 1
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 207
+        "monitor_last_pass_min": 1
       }
     ]
   },
-  "snapshot_id": "4970f04e071aeb67",
-  "published_at": "2026-10-14T08:50:46Z"
+  "snapshot_id": "4b38eed8bb54fcd5",
+  "published_at": "2026-10-14T08:56:07Z"
 }
