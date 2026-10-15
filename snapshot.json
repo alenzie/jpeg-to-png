@@ -3830,8 +3830,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CONFIG-DOWNGRADE-SAFETY",
+            "kind": "needs-owner",
+            "raised_at": 1792103723
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3862,9 +3868,9 @@
         {
           "id": "CONFIG-DOWNGRADE-SAFETY",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 33,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 35,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3879,14 +3885,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "DESKTOP-CONFIRM-MODALS",
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 35,
+          "ctx_pct": 37,
           "last_commit_at": 1792102902,
           "head": "7611e0db",
           "subfence": {
@@ -4224,7 +4230,7 @@
           ]
         }
       },
-      "snapshot_id": "81a4efd368a48df4"
+      "snapshot_id": "787558859fb5032e"
     },
     "outbound": {
       "schema": 1,
@@ -4587,7 +4593,7 @@
           ]
         }
       },
-      "snapshot_id": "1720f8b331cc3f22"
+      "snapshot_id": "6d2d391d3fd0969b"
     },
     "scriptgen": {
       "schema": 1,
@@ -4626,7 +4632,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 33,
+          "ctx_pct": 35,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4648,7 +4654,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 38,
+          "ctx_pct": 39,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4940,7 +4946,7 @@
           ]
         }
       },
-      "snapshot_id": "b7f316bb6c0e914c"
+      "snapshot_id": "3887108dd1941fd2"
     }
   },
   "pm": {
@@ -4968,22 +4974,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 16
       }
     ]
   },
-  "snapshot_id": "9794c647c4dc55a5",
-  "published_at": "2026-10-15T22:32:13Z"
+  "snapshot_id": "6d36677955a83c9d",
+  "published_at": "2026-10-15T22:37:39Z"
 }
