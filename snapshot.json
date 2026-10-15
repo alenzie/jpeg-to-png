@@ -12,10 +12,6 @@
         "reset": "23:18 on 21 Oct",
         "spark": [
           [
-            1791446400,
-            293
-          ],
-          [
             1791450000,
             307
           ],
@@ -234,10 +230,6 @@
         "at": 1792048715,
         "reset": "Oct 16, 10pm (America/Los_Angeles)",
         "spark": [
-          [
-            1791446400,
-            117
-          ],
           [
             1791450000,
             117
@@ -699,10 +691,6 @@
       "reset": "Oct 15, 19:39",
       "level": "pro",
       "spark": [
-        [
-          1791446400,
-          103
-        ],
         [
           1791450000,
           103
@@ -1251,10 +1239,6 @@
       "days_to_empty": null,
       "at": 1792048715,
       "spark": [
-        [
-          1791446400,
-          -0.0
-        ],
         [
           1791450000,
           -0.0
@@ -2121,10 +2105,6 @@
             40.0
           ],
           [
-            1791449403,
-            53.0
-          ],
-          [
             1791450496,
             56.0
           ],
@@ -2802,10 +2782,6 @@
           ],
           [
             1791439368,
-            87.0
-          ],
-          [
-            1791449403,
             87.0
           ],
           [
@@ -3680,10 +3656,6 @@
           89.0
         ],
         [
-          1791449403,
-          93.0
-        ],
-        [
           1791450496,
           93.0
         ],
@@ -3978,13 +3950,19 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "DESKTOP-CONFIRM-MODALS",
+            "kind": "needs-owner",
+            "raised_at": 1792054365
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": true,
+        "monitor_alive": false,
         "last_pass_at": 1792052275
       },
       "runstate": {
@@ -4003,15 +3981,15 @@
           "up": true
         },
         "monitor": {
-          "up": true
+          "up": false
         }
       },
       "units": [
         {
           "id": "DESKTOP-CONFIRM-MODALS",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 30,
           "last_commit_at": null,
           "head": null,
@@ -4027,7 +4005,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4309,7 +4287,7 @@
           ]
         }
       },
-      "snapshot_id": "4e0124e89cf9a711"
+      "snapshot_id": "d75bd299ccf9be7c"
     },
     "outbound": {
       "schema": 1,
@@ -4320,7 +4298,7 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": true,
+        "monitor_alive": false,
         "last_pass_at": 1792052275
       },
       "runstate": {
@@ -4339,7 +4317,7 @@
           "up": false
         },
         "monitor": {
-          "up": true
+          "up": false
         }
       },
       "units": [],
@@ -4672,7 +4650,7 @@
           ]
         }
       },
-      "snapshot_id": "7288d100cb8c9ddd"
+      "snapshot_id": "0becfe5a789f382f"
     },
     "scriptgen": {
       "schema": 1,
@@ -4683,7 +4661,7 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": true,
+        "monitor_alive": false,
         "last_pass_at": 1792052275
       },
       "runstate": {
@@ -4702,7 +4680,7 @@
           "up": false
         },
         "monitor": {
-          "up": true
+          "up": false
         }
       },
       "units": [],
@@ -4982,7 +4960,7 @@
           ]
         }
       },
-      "snapshot_id": "c801557e51e0f617"
+      "snapshot_id": "efa949584fcd24c3"
     }
   },
   "pm": {
@@ -5001,8 +4979,8 @@
       "available_note": "owner asleep 10-05 ~10:20Z — keep it moving; park interviews in plain text"
     },
     "pm_session": {
-      "lock": "1087903 2026-10-15T04:53:12Z",
-      "fresh": false
+      "lock": "1926890 2026-10-15T08:53:06Z",
+      "fresh": true
     },
     "sterling_up": true,
     "fleets": [
@@ -5010,22 +4988,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 30
+        "monitor_last_pass_min": 35
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 30
+        "monitor_last_pass_min": 35
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 30
+        "monitor_last_pass_min": 35
       }
     ]
   },
-  "snapshot_id": "aaa3566f53313211",
-  "published_at": "2026-10-15T08:48:08Z"
+  "snapshot_id": "4ed900293821a660",
+  "published_at": "2026-10-15T08:53:26Z"
 }
