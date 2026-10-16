@@ -174,7 +174,7 @@
         ],
         "trail": [
           [
-            10.9,
+            11.0,
             2.0
           ]
         ]
@@ -653,7 +653,7 @@
             70.0
           ],
           [
-            83.1,
+            83.2,
             70.0
           ]
         ]
@@ -1218,7 +1218,7 @@
           68.0
         ],
         [
-          98.8,
+          98.9,
           69.0
         ]
       ]
@@ -3882,19 +3882,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CONFIG-DOWNGRADE-SAFETY",
-            "kind": "needs-owner",
-            "raised_at": 1792103723
-          },
-          {
-            "id": "MEDIA-DECODE-CONTAINMENT",
-            "kind": "needs-owner",
-            "raised_at": 1792104131
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3925,9 +3914,9 @@
         {
           "id": "CONFIG-DOWNGRADE-SAFETY",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 35,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 10,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3942,22 +3931,26 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "DESKTOP-CONFIRM-MODALS",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 24,
-          "last_commit_at": 1792111125,
-          "head": "08292983",
+          "ctx_pct": 26,
+          "last_commit_at": 1792111298,
+          "head": "98985fa7",
           "subfence": {
             "done": 8,
             "total": 10
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "98985fa7",
+              "at": 1792111298
+            },
             {
               "sha": "08292983",
               "at": 1792111125
@@ -3973,10 +3966,6 @@
             {
               "sha": "9158365e",
               "at": 1792110492
-            },
-            {
-              "sha": "3ac31935",
-              "at": 1792110069
             }
           ],
           "fences": {
@@ -3990,9 +3979,9 @@
         {
           "id": "MEDIA-DECODE-CONTAINMENT",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 43,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 9,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4007,7 +3996,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -4271,7 +4260,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-16T00:38:59Z",
+          "updated": "2026-10-16T00:41:43Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4287,7 +4276,7 @@
           ]
         }
       },
-      "snapshot_id": "7dea3dae7cee6f05"
+      "snapshot_id": "ee918de5dc84baaf"
     },
     "outbound": {
       "schema": 1,
@@ -4634,7 +4623,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-16T00:38:59Z",
+          "updated": "2026-10-16T00:41:43Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4650,24 +4639,13 @@
           ]
         }
       },
-      "snapshot_id": "bcc47b4d6d1a7ed0"
+      "snapshot_id": "f8485887b2cc8377"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "DEP-SQLITE",
-            "kind": "needs-owner",
-            "raised_at": 1792104566
-          },
-          {
-            "id": "SEAT-HARDEN-CAL",
-            "kind": "needs-owner",
-            "raised_at": 1792104079
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4698,9 +4676,9 @@
         {
           "id": "DEP-SQLITE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 37,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 9,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4715,14 +4693,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "SEAT-HARDEN-CAL",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 41,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 11,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4737,7 +4715,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -4998,7 +4976,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-16T00:38:59Z",
+          "updated": "2026-10-16T00:41:43Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5014,7 +4992,7 @@
           ]
         }
       },
-      "snapshot_id": "65cec9cb5ad96684"
+      "snapshot_id": "f337319f08a26801"
     }
   },
   "pm": {
@@ -5033,8 +5011,8 @@
       "available_note": "owner asleep 10-05 ~10:20Z — keep it moving; park interviews in plain text"
     },
     "pm_session": {
-      "lock": "109657 2026-10-15T20:53:13Z",
-      "fresh": false
+      "lock": "1621368 2026-10-16T00:44:18Z",
+      "fresh": true
     },
     "sterling_up": true,
     "fleets": [
@@ -5042,22 +5020,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 21
       }
     ]
   },
-  "snapshot_id": "f5562bb1560ebca9",
-  "published_at": "2026-10-16T00:39:57Z"
+  "snapshot_id": "095b6d5feb7a6ed0",
+  "published_at": "2026-10-16T00:45:14Z"
 }
