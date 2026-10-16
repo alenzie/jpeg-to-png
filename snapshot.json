@@ -4201,20 +4201,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "AGENT-BRIDGE",
-            "kind": "escalate",
-            "raised_at": 1792188794
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792187271
+        "last_pass_at": 1792189080
       },
       "runstate": {
         "auto": false,
@@ -4239,17 +4233,34 @@
         {
           "id": "AGENT-BRIDGE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 30,
-          "last_commit_at": 1792188760,
-          "head": "fe5e8dd2",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 32,
+          "last_commit_at": 1792189078,
+          "head": "2ae7b814",
           "subfence": {
             "done": 15,
             "total": 15
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "codex gpt-6-astraxhigh breadth ×2 leaves",
+              "must": 1,
+              "should": 8,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "2ae7b814",
+              "at": 1792189078
+            },
+            {
+              "sha": "63d25619",
+              "at": 1792189036
+            },
             {
               "sha": "fe5e8dd2",
               "at": 1792188760
@@ -4261,14 +4272,6 @@
             {
               "sha": "2132b939",
               "at": 1792187892
-            },
-            {
-              "sha": "1460e852",
-              "at": 1792187862
-            },
-            {
-              "sha": "f5114421",
-              "at": 1792186933
             }
           ],
           "fences": {
@@ -4277,7 +4280,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "DESKTOP-TELEMETRY-MINIMIZATION",
@@ -4599,7 +4602,7 @@
           ]
         }
       },
-      "snapshot_id": "c2674f2495c7b10e"
+      "snapshot_id": "2a84d3951133b552"
     },
     "outbound": {
       "schema": 1,
@@ -4611,7 +4614,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792187271
+        "last_pass_at": 1792189080
       },
       "runstate": {
         "auto": false,
@@ -4962,7 +4965,7 @@
           ]
         }
       },
-      "snapshot_id": "42fc6b61f5912c5c"
+      "snapshot_id": "a687ec617d91c3f0"
     },
     "scriptgen": {
       "schema": 1,
@@ -4980,7 +4983,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792187271
+        "last_pass_at": 1792189079
       },
       "runstate": {
         "auto": false,
@@ -5319,7 +5322,7 @@
           ]
         }
       },
-      "snapshot_id": "9c35ff482909aafd"
+      "snapshot_id": "ac92f807b18d9207"
     }
   },
   "pm": {
@@ -5347,22 +5350,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 1
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 1
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 1
       }
     ]
   },
-  "snapshot_id": "fb7ab24eccef6a1b",
-  "published_at": "2026-10-16T22:14:16Z"
+  "snapshot_id": "b23681e453858a2c",
+  "published_at": "2026-10-16T22:19:37Z"
 }
