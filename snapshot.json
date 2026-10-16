@@ -3789,14 +3789,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CONFIG-DOWNGRADE-SAFETY",
-            "kind": "escalate",
-            "raised_at": null
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3882,7 +3876,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "DESKTOP-CAPTURE-PERMISSIONS",
@@ -4247,7 +4241,7 @@
           ]
         }
       },
-      "snapshot_id": "0776053940b2db32"
+      "snapshot_id": "7667860e8a628de2"
     },
     "outbound": {
       "schema": 1,
@@ -4709,7 +4703,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 33,
+          "ctx_pct": 37,
           "last_commit_at": 1792136184,
           "head": "740a2aaf",
           "subfence": {
@@ -5022,7 +5016,7 @@
           ]
         }
       },
-      "snapshot_id": "324664cba38e7aec"
+      "snapshot_id": "349901584d2ed3f3"
     }
   },
   "pm": {
@@ -5050,22 +5044,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 6
       }
     ]
   },
-  "snapshot_id": "45261b94274ca243",
-  "published_at": "2026-10-16T07:49:04Z"
+  "snapshot_id": "52372a5543814381",
+  "published_at": "2026-10-16T07:54:21Z"
 }
