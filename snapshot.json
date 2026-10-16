@@ -789,7 +789,7 @@
             93.0
           ],
           [
-            89.9,
+            90.0,
             93.0
           ]
         ]
@@ -4043,42 +4043,21 @@
         {
           "id": "MEDIA-DECODE-CONTAINMENT",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 42,
-          "last_commit_at": 1792151930,
-          "head": "ad7d5170",
+          "stage": "merge+cleanup",
+          "stage_i": 6,
+          "ctx_pct": 10,
+          "last_commit_at": 1792152165,
+          "head": "63724319",
           "subfence": {
             "done": 12,
             "total": 12
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-6-astraxhigh ×4 slices R1 breadth",
-              "must": 2,
-              "should": 8,
-              "could": 2,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-solhigh ×4 slices iterate",
-              "must": 0,
-              "should": 3,
-              "could": 2,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terrahigh ×4 slices iterate",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "63724319",
+              "at": 1792152165
+            },
             {
               "sha": "ad7d5170",
               "at": 1792151930
@@ -4094,17 +4073,13 @@
             {
               "sha": "bac8cc86",
               "at": 1792150989
-            },
-            {
-              "sha": "d870f991",
-              "at": 1792150985
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -4121,6 +4096,12 @@
         "UPDATER-RECOVERY-GUARDS"
       ],
       "merge_feed": [
+        {
+          "pr": 62,
+          "unit": "MEDIA-DECODE-CONTAINMENT",
+          "merged_at": 1792152366,
+          "sha": "ddfa8da9"
+        },
         {
           "pr": 61,
           "unit": "CONFIG-DOWNGRADE-SAFETY",
@@ -4144,12 +4125,6 @@
           "unit": "UPDATER-ROLLBACK-INTEGRI",
           "merged_at": 1791968871,
           "sha": "ee8c8465"
-        },
-        {
-          "pr": 56,
-          "unit": "LLM-SESSION-LIFECYCLE",
-          "merged_at": 1791848489,
-          "sha": "a0e0b505"
         }
       ],
       "decisions": [],
@@ -4369,7 +4344,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-16T12:00:29Z",
+          "updated": "2026-10-16T12:04:20Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4385,7 +4360,7 @@
           ]
         }
       },
-      "snapshot_id": "50c292d6d3dd73af"
+      "snapshot_id": "71c10d1b36104a7e"
     },
     "outbound": {
       "schema": 1,
@@ -4732,7 +4707,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-16T12:00:29Z",
+          "updated": "2026-10-16T12:04:20Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4748,7 +4723,7 @@
           ]
         }
       },
-      "snapshot_id": "2ce551c826f61622"
+      "snapshot_id": "6bd7db15cd6741f0"
     },
     "scriptgen": {
       "schema": 1,
@@ -5126,7 +5101,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-16T12:00:29Z",
+          "updated": "2026-10-16T12:04:20Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5142,7 +5117,7 @@
           ]
         }
       },
-      "snapshot_id": "a7074a2da7f6d1e7"
+      "snapshot_id": "d597f074809283ca"
     }
   },
   "pm": {
@@ -5170,22 +5145,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 20
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 20
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 20
       }
     ]
   },
-  "snapshot_id": "7475b2180911bf4c",
-  "published_at": "2026-10-16T12:00:59Z"
+  "snapshot_id": "eef044df4dea80c9",
+  "published_at": "2026-10-16T12:06:23Z"
 }
