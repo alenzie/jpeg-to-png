@@ -298,7 +298,7 @@
         ],
         "trail": [
           [
-            0.1,
+            0.2,
             0.0
           ]
         ]
@@ -679,10 +679,6 @@
       "reset": "Oct 22, 19:39",
       "level": "pro",
       "spark": [
-        [
-          1791662400,
-          54
-        ],
         [
           1791666000,
           58
@@ -1130,7 +1126,7 @@
           25.0
         ],
         [
-          25.1,
+          25.2,
           25.0
         ]
       ]
@@ -1143,10 +1139,6 @@
       "days_to_empty": null,
       "at": 1792266176,
       "spark": [
-        [
-          1791662400,
-          -0.0
-        ],
         [
           1791666000,
           -0.0
@@ -1521,7 +1513,7 @@
       "codex": {
         "B": [
           [
-            1788382641,
+            1788383567,
             1.0
           ],
           [
@@ -2083,10 +2075,6 @@
           [
             1791656959,
             13.0
-          ],
-          [
-            1791665799,
-            15.0
           ],
           [
             1791666189,
@@ -2857,10 +2845,6 @@
             6.0
           ],
           [
-            1791665799,
-            7.0
-          ],
-          [
             1791666189,
             7.0
           ],
@@ -3232,7 +3216,7 @@
       },
       "glm": [
         [
-          1788382641,
+          1788383567,
           43.0
         ],
         [
@@ -3796,10 +3780,6 @@
           9.0
         ],
         [
-          1791665799,
-          14.0
-        ],
-        [
           1791666189,
           15.0
         ],
@@ -4174,14 +4154,20 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "AGENT-AUTHORING",
+            "kind": "escalate",
+            "raised_at": 1792270631
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792268994
+        "last_pass_at": 1792270450
       },
       "runstate": {
         "auto": false,
@@ -4206,42 +4192,25 @@
         {
           "id": "AGENT-AUTHORING",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 48,
-          "last_commit_at": 1792269695,
-          "head": "2af9dca6",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 50,
+          "last_commit_at": 1792270623,
+          "head": "0fbc6483",
           "subfence": {
             "done": 11,
             "total": 11
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "codex gpt-6-astraxhigh breadth 7 leaves",
-              "must": 4,
-              "should": 17,
-              "could": 6,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "codex gpt-5.6-solhigh 4 live slices AD",
-              "must": 0,
-              "should": 11,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "codex gpt-5.6-terrahigh 4 live slices af",
-              "must": 0,
-              "should": 2,
-              "could": 1,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "0fbc6483",
+              "at": 1792270623
+            },
+            {
+              "sha": "df7f86c6",
+              "at": 1792270619
+            },
             {
               "sha": "2af9dca6",
               "at": 1792269695
@@ -4253,14 +4222,6 @@
             {
               "sha": "60ed462c",
               "at": 1792260535
-            },
-            {
-              "sha": "d1c55d7c",
-              "at": 1792258364
-            },
-            {
-              "sha": "455a4cec",
-              "at": 1792258232
             }
           ],
           "fences": {
@@ -4269,7 +4230,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "CONFIG-TESTMODE-TRANSACTIONS",
@@ -4590,7 +4551,7 @@
           ]
         }
       },
-      "snapshot_id": "52bd4c28e37a467a"
+      "snapshot_id": "f227d59a5fbe4900"
     },
     "outbound": {
       "schema": 1,
@@ -4602,7 +4563,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792268986
+        "last_pass_at": 1792270449
       },
       "runstate": {
         "auto": false,
@@ -4953,7 +4914,7 @@
           ]
         }
       },
-      "snapshot_id": "ff74fad79f518b75"
+      "snapshot_id": "81b5b7c18dbfc2c4"
     },
     "scriptgen": {
       "schema": 1,
@@ -4965,7 +4926,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792268985
+        "last_pass_at": 1792270449
       },
       "runstate": {
         "auto": false,
@@ -5265,7 +5226,7 @@
           ]
         }
       },
-      "snapshot_id": "45d41de2c87bbff3"
+      "snapshot_id": "488a33ebd0e38345"
     }
   },
   "pm": {
@@ -5284,8 +5245,8 @@
       "available_note": "owner asleep 10-05 ~10:20Z — keep it moving; park interviews in plain text"
     },
     "pm_session": {
-      "lock": "2904201 2026-10-17T16:53:14Z",
-      "fresh": false
+      "lock": "3935973 2026-10-17T20:53:08Z",
+      "fresh": true
     },
     "sterling_up": true,
     "fleets": [
@@ -5293,22 +5254,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 4
       }
     ]
   },
-  "snapshot_id": "6f9bc5a7413f9c69",
-  "published_at": "2026-10-17T20:53:07Z"
+  "snapshot_id": "41461221878cd67a",
+  "published_at": "2026-10-17T20:58:37Z"
 }
