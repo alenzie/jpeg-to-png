@@ -270,7 +270,7 @@
             75.0
           ],
           [
-            29.9,
+            30.0,
             75.0
           ]
         ]
@@ -597,7 +597,7 @@
             15.0
           ],
           [
-            2.1,
+            2.2,
             20.0
           ]
         ]
@@ -1022,7 +1022,7 @@
           16.0
         ],
         [
-          17.8,
+          17.9,
           21.0
         ]
       ]
@@ -4090,17 +4090,25 @@
         {
           "id": "AGENT-AUTHORING",
           "status": "building",
-          "stage": "building",
-          "stage_i": 3,
+          "stage": "subfencing",
+          "stage_i": 4,
           "ctx_pct": 21,
-          "last_commit_at": 1792225681,
-          "head": "fc736a7b",
+          "last_commit_at": 1792226273,
+          "head": "598e96f7",
           "subfence": {
-            "done": 0,
+            "done": 1,
             "total": 11
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "598e96f7",
+              "at": 1792226273
+            },
+            {
+              "sha": "8082fb01",
+              "at": 1792226253
+            },
             {
               "sha": "fc736a7b",
               "at": 1792225681
@@ -4112,14 +4120,6 @@
             {
               "sha": "280a1609",
               "at": 1792225020
-            },
-            {
-              "sha": "36bf5a9d",
-              "at": 1792225000
-            },
-            {
-              "sha": "26bf443f",
-              "at": 1792224971
             }
           ],
           "fences": {
@@ -4135,15 +4135,19 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 62,
-          "last_commit_at": 1792225662,
-          "head": "e007a141",
+          "ctx_pct": 63,
+          "last_commit_at": 1792225991,
+          "head": "c84c92b2",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "c84c92b2",
+              "at": 1792225991
+            },
             {
               "sha": "e007a141",
               "at": 1792225662
@@ -4159,10 +4163,6 @@
             {
               "sha": "25da516f",
               "at": 1792223730
-            },
-            {
-              "sha": "882641a3",
-              "at": 1792223607
             }
           ],
           "fences": {
@@ -4176,17 +4176,21 @@
         {
           "id": "UPDATER-RECOVERY-GUARDS",
           "status": "building",
-          "stage": "building",
-          "stage_i": 3,
-          "ctx_pct": 14,
-          "last_commit_at": 1792225915,
-          "head": "e577db87",
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 24,
+          "last_commit_at": 1792226065,
+          "head": "b7f2b5ec",
           "subfence": {
-            "done": 0,
+            "done": 1,
             "total": 13
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "b7f2b5ec",
+              "at": 1792226065
+            },
             {
               "sha": "e577db87",
               "at": 1792225915
@@ -4202,10 +4206,6 @@
             {
               "sha": "011e3187",
               "at": 1792224914
-            },
-            {
-              "sha": "55e9f2a1",
-              "at": 1792224911
             }
           ],
           "fences": {
@@ -4476,7 +4476,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-17T08:32:56Z",
+          "updated": "2026-10-17T08:34:37Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4492,7 +4492,7 @@
           ]
         }
       },
-      "snapshot_id": "0f181e1eacc16da3"
+      "snapshot_id": "781dc893121a762a"
     },
     "outbound": {
       "schema": 1,
@@ -4839,7 +4839,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-17T08:32:56Z",
+          "updated": "2026-10-17T08:34:37Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4855,7 +4855,7 @@
           ]
         }
       },
-      "snapshot_id": "5ac0d7b6ecd25199"
+      "snapshot_id": "2ca75a71941acce6"
     },
     "scriptgen": {
       "schema": 1,
@@ -5192,7 +5192,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-17T08:32:56Z",
+          "updated": "2026-10-17T08:34:37Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5208,7 +5208,7 @@
           ]
         }
       },
-      "snapshot_id": "d2646d48a830278b"
+      "snapshot_id": "0ce39d932096bd9d"
     }
   },
   "pm": {
@@ -5236,22 +5236,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 25
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 25
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 25
       }
     ]
   },
-  "snapshot_id": "7204c8148950bedc",
-  "published_at": "2026-10-17T08:33:19Z"
+  "snapshot_id": "c6a3ab88546edd28",
+  "published_at": "2026-10-17T08:38:37Z"
 }
