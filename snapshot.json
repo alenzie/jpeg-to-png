@@ -2113,7 +2113,7 @@
             13.0
           ],
           [
-            1791664027,
+            1791664493,
             15.0
           ],
           [
@@ -2881,7 +2881,7 @@
             6.0
           ],
           [
-            1791664027,
+            1791664493,
             6.0
           ],
           [
@@ -3816,7 +3816,7 @@
           9.0
         ],
         [
-          1791664027,
+          1791664493,
           14.0
         ],
         [
@@ -4190,20 +4190,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "AGENT-AUTHORING",
-            "kind": "escalate",
-            "raised_at": 1792262407
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1792261543
+        "monitor_alive": true,
+        "last_pass_at": 1792268994
       },
       "runstate": {
         "auto": false,
@@ -4221,23 +4215,40 @@
           "up": true
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [
         {
           "id": "AGENT-AUTHORING",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 45,
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 46,
           "last_commit_at": 1792260535,
           "head": "60ed462c",
           "subfence": {
             "done": 11,
             "total": 11
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "codex gpt-6-astraxhigh breadth 7 leaves",
+              "must": 4,
+              "should": 17,
+              "could": 6,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "codex gpt-5.6-solhigh 4 live slices AD",
+              "must": 0,
+              "should": 11,
+              "could": 1,
+              "nit": 0
+            }
+          ],
           "commits": [
             {
               "sha": "60ed462c",
@@ -4266,7 +4277,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "CONFIG-TESTMODE-TRANSACTIONS",
@@ -4587,7 +4598,7 @@
           ]
         }
       },
-      "snapshot_id": "799066c0a7323ea9"
+      "snapshot_id": "8cc83b73aa100d8f"
     },
     "outbound": {
       "schema": 1,
@@ -4598,8 +4609,8 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1792261543
+        "monitor_alive": true,
+        "last_pass_at": 1792268986
       },
       "runstate": {
         "auto": false,
@@ -4617,7 +4628,7 @@
           "up": false
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [],
@@ -4950,7 +4961,7 @@
           ]
         }
       },
-      "snapshot_id": "088d62e922c8978b"
+      "snapshot_id": "b6b20b48a9689b7c"
     },
     "scriptgen": {
       "schema": 1,
@@ -4961,8 +4972,8 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1792263343
+        "monitor_alive": true,
+        "last_pass_at": 1792268985
       },
       "runstate": {
         "auto": false,
@@ -4980,7 +4991,7 @@
           "up": true
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [],
@@ -5262,7 +5273,7 @@
           ]
         }
       },
-      "snapshot_id": "69cb5c8f53d23291"
+      "snapshot_id": "5560bc16d106bfa0"
     }
   },
   "pm": {
@@ -5290,22 +5301,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 120
+        "monitor_last_pass_min": 1
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 120
+        "monitor_last_pass_min": 1
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 90
+        "monitor_last_pass_min": 1
       }
     ]
   },
-  "snapshot_id": "e501691fc3f41d28",
-  "published_at": "2026-10-17T20:26:00Z"
+  "snapshot_id": "86eb4ef9215a5a07",
+  "published_at": "2026-10-17T20:31:22Z"
 }
