@@ -13,7 +13,7 @@
         "spark": [
           [
             1791612000,
-            217
+            218
           ],
           [
             1791615600,
@@ -573,7 +573,7 @@
         ],
         "trail": [
           [
-            0.9,
+            1.0,
             0.0
           ]
         ]
@@ -1933,8 +1933,8 @@
             97.0
           ],
           [
-            1791613899,
-            98.0
+            1791614383,
+            99.0
           ],
           [
             1791617077,
@@ -2693,7 +2693,7 @@
             5.0
           ],
           [
-            1791613899,
+            1791614383,
             5.0
           ],
           [
@@ -3628,7 +3628,7 @@
           1.0
         ],
         [
-          1791613899,
+          1791614383,
           1.0
         ],
         [
@@ -4002,19 +4002,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "AGENT-AUTHORING",
-            "kind": "needs-owner",
-            "raised_at": 1792216524
-          },
-          {
-            "id": "UPDATER-RECOVERY-GUARDS",
-            "kind": "needs-owner",
-            "raised_at": 1792217442
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4045,30 +4034,8 @@
         {
           "id": "AGENT-AUTHORING",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 39,
-          "last_commit_at": null,
-          "head": null,
-          "subfence": {
-            "done": 0,
-            "total": null
-          },
-          "review_rounds": [],
-          "commits": [],
-          "fences": {
-            "plan": false,
-            "synth": false,
-            "build": false,
-            "review": false
-          },
-          "gate_open": true
-        },
-        {
-          "id": "UPDATER-RECOVERY-GUARDS",
-          "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "planning",
+          "stage_i": 1,
           "ctx_pct": 40,
           "last_commit_at": null,
           "head": null,
@@ -4084,7 +4051,29 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
+        },
+        {
+          "id": "UPDATER-RECOVERY-GUARDS",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 42,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -4363,7 +4352,7 @@
           ]
         }
       },
-      "snapshot_id": "10d056044f803660"
+      "snapshot_id": "b90333973788553f"
     },
     "outbound": {
       "schema": 1,
@@ -4726,7 +4715,7 @@
           ]
         }
       },
-      "snapshot_id": "f0dc9eee09355b32"
+      "snapshot_id": "e9c7e3b63d1d4786"
     },
     "scriptgen": {
       "schema": 1,
@@ -5077,7 +5066,7 @@
           ]
         }
       },
-      "snapshot_id": "1dd84b8b4876d19b"
+      "snapshot_id": "05ececd853a4c0a6"
     }
   },
   "pm": {
@@ -5105,22 +5094,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       }
     ]
   },
-  "snapshot_id": "a2d36943bd4324bb",
-  "published_at": "2026-10-17T06:30:03Z"
+  "snapshot_id": "85bbbb68543af34f",
+  "published_at": "2026-10-17T06:35:21Z"
 }
