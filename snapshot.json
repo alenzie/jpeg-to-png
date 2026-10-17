@@ -258,7 +258,7 @@
         ],
         "trail": [
           [
-            27.8,
+            27.9,
             2.0
           ]
         ]
@@ -1342,7 +1342,7 @@
           12.0
         ],
         [
-          15.7,
+          15.8,
           12.0
         ]
       ]
@@ -4665,7 +4665,7 @@
           ]
         }
       },
-      "snapshot_id": "a5daee155121be37"
+      "snapshot_id": "f5cb028ac343936a"
     },
     "outbound": {
       "schema": 1,
@@ -5028,19 +5028,13 @@
           ]
         }
       },
-      "snapshot_id": "afdd3a1bc730d6a0"
+      "snapshot_id": "41a6892ded8e2ec3"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "SEAT-HARDEN-CAL",
-            "kind": "escalate",
-            "raised_at": 1792186833
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5071,9 +5065,9 @@
         {
           "id": "SEAT-HARDEN-CAL",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 8,
+          "stage": "merge+cleanup",
+          "stage_i": 6,
+          "ctx_pct": 10,
           "last_commit_at": 1792183642,
           "head": "5b6ef2eb",
           "subfence": {
@@ -5109,7 +5103,7 @@
             "build": true,
             "review": true
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -5385,7 +5379,7 @@
           ]
         }
       },
-      "snapshot_id": "cc96bd4814ad8b73"
+      "snapshot_id": "5c7467250d070a78"
     }
   },
   "pm": {
@@ -5413,22 +5407,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 15
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 15
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 15
       }
     ]
   },
-  "snapshot_id": "16e3716b9ffc5374",
-  "published_at": "2026-10-17T05:04:08Z"
+  "snapshot_id": "1cfed60fa3f2a459",
+  "published_at": "2026-10-17T05:09:34Z"
 }
