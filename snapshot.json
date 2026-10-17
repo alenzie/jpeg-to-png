@@ -262,7 +262,7 @@
         ],
         "trail": [
           [
-            28.1,
+            28.2,
             2.0
           ]
         ]
@@ -577,7 +577,7 @@
         ],
         "trail": [
           [
-            0.3,
+            0.4,
             0.0
           ]
         ]
@@ -4048,7 +4048,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 26,
+          "ctx_pct": 30,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4364,7 +4364,7 @@
           ]
         }
       },
-      "snapshot_id": "f7368179de6a612a"
+      "snapshot_id": "db6ed03ae7eceac4"
     },
     "outbound": {
       "schema": 1,
@@ -4727,13 +4727,19 @@
           ]
         }
       },
-      "snapshot_id": "4d8c276ff11193dc"
+      "snapshot_id": "4f34b9261a64f482"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "SEAT-HARDEN-CAL",
+            "kind": "needs-owner",
+            "raised_at": 1792215400
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4764,17 +4770,21 @@
         {
           "id": "SEAT-HARDEN-CAL",
           "status": "building",
-          "stage": "merge+cleanup",
-          "stage_i": 6,
-          "ctx_pct": 22,
-          "last_commit_at": 1792214881,
-          "head": "fcd5b354",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 23,
+          "last_commit_at": 1792215359,
+          "head": "1cde04ee",
           "subfence": {
             "done": 14,
             "total": 14
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "1cde04ee",
+              "at": 1792215359
+            },
             {
               "sha": "fcd5b354",
               "at": 1792214881
@@ -4790,10 +4800,6 @@
             {
               "sha": "514b19c4",
               "at": 1792214150
-            },
-            {
-              "sha": "3bd8f0ab",
-              "at": 1792214105
             }
           ],
           "fences": {
@@ -4802,7 +4808,7 @@
             "build": true,
             "review": true
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -5078,7 +5084,7 @@
           ]
         }
       },
-      "snapshot_id": "3a75b6fb839f6033"
+      "snapshot_id": "d4a2ce083e6a2992"
     }
   },
   "pm": {
@@ -5106,22 +5112,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 25
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 25
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 25
       }
     ]
   },
-  "snapshot_id": "b0afb9ce63c51b5e",
-  "published_at": "2026-10-17T05:31:29Z"
+  "snapshot_id": "597bf3b5c4cf09ba",
+  "published_at": "2026-10-17T05:36:52Z"
 }
