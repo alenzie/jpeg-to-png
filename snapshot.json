@@ -342,7 +342,7 @@
             94.0
           ],
           [
-            35.9,
+            36.0,
             96.0
           ]
         ]
@@ -705,7 +705,7 @@
             29.0
           ],
           [
-            8.1,
+            8.2,
             30.0
           ]
         ]
@@ -1166,7 +1166,7 @@
           25.0
         ],
         [
-          23.8,
+          23.9,
           25.0
         ]
       ]
@@ -4210,8 +4210,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "AGENT-AUTHORING",
+            "kind": "escalate",
+            "raised_at": 1792262407
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4242,8 +4248,8 @@
         {
           "id": "AGENT-AUTHORING",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 45,
           "last_commit_at": 1792260535,
           "head": "60ed462c",
@@ -4251,24 +4257,7 @@
             "done": 11,
             "total": 11
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "codex gpt-6-astraxhigh breadth 7 leaves",
-              "must": 4,
-              "should": 17,
-              "could": 6,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "codex gpt-5.6-solhigh 4 live slices AD",
-              "must": 0,
-              "should": 11,
-              "could": 1,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "60ed462c",
@@ -4297,7 +4286,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "CONFIG-TESTMODE-TRANSACTIONS",
@@ -4618,7 +4607,7 @@
           ]
         }
       },
-      "snapshot_id": "954f54db0867fd08"
+      "snapshot_id": "6b34f6a9b8eebd56"
     },
     "outbound": {
       "schema": 1,
@@ -4981,7 +4970,7 @@
           ]
         }
       },
-      "snapshot_id": "b8e190f371a12b06"
+      "snapshot_id": "a7b1efe5b82bd913"
     },
     "scriptgen": {
       "schema": 1,
@@ -5293,7 +5282,7 @@
           ]
         }
       },
-      "snapshot_id": "98f34e35133bb9de"
+      "snapshot_id": "590f6145caca973e"
     }
   },
   "pm": {
@@ -5321,22 +5310,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 18
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 18
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 18
       }
     ]
   },
-  "snapshot_id": "49996f32102b10da",
-  "published_at": "2026-10-17T18:38:17Z"
+  "snapshot_id": "b8e7bc48c7cdc982",
+  "published_at": "2026-10-17T18:43:42Z"
 }
