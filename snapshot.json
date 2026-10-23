@@ -8,8 +8,8 @@
         "tier": "promax",
         "projected": 0,
         "used": 0,
-        "at": 1792790426,
-        "reset": "15:20 on 30 Oct",
+        "at": 1792790798,
+        "reset": "15:26 on 30 Oct",
         "spark": [
           [
             1792188000,
@@ -163,8 +163,8 @@
         "mult": "20x",
         "projected": 75,
         "used": 72,
-        "at": 1792790426,
-        "reset": "Oct 23, 9:59pm (America/Los_Angeles)",
+        "at": 1792790798,
+        "reset": "Oct 23, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1792188000,
@@ -592,7 +592,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1792790426,
+      "at": 1792790798,
       "spark": [
         [
           1792188000,
@@ -2853,17 +2853,29 @@
         {
           "id": "CONFIG-TESTMODE-TRANSACTIONS",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 32,
-          "last_commit_at": 1792793954,
-          "head": "86d0c4e7",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 5,
+          "last_commit_at": 1792794254,
+          "head": "63b198f7",
           "subfence": {
-            "done": 6,
+            "done": 7,
             "total": 7
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "63b198f7",
+              "at": 1792794254
+            },
+            {
+              "sha": "7c44f00d",
+              "at": 1792794187
+            },
+            {
+              "sha": "5dd42ec4",
+              "at": 1792794172
+            },
             {
               "sha": "86d0c4e7",
               "at": 1792793954
@@ -2871,24 +2883,12 @@
             {
               "sha": "96b5fa26",
               "at": 1792793933
-            },
-            {
-              "sha": "9f9182ac",
-              "at": 1792793270
-            },
-            {
-              "sha": "d9686854",
-              "at": 1792792999
-            },
-            {
-              "sha": "c99fe43e",
-              "at": 1792792967
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
-            "build": false,
+            "build": true,
             "review": false
           },
           "gate_open": false
@@ -3153,7 +3153,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-23T22:20:28Z",
+          "updated": "2026-10-23T22:26:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3169,7 +3169,7 @@
           ]
         }
       },
-      "snapshot_id": "e47a34a244a4daa7"
+      "snapshot_id": "80dd6e78f86ae14c"
     },
     "outbound": {
       "schema": 1,
@@ -3516,7 +3516,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-23T22:20:28Z",
+          "updated": "2026-10-23T22:26:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3532,7 +3532,7 @@
           ]
         }
       },
-      "snapshot_id": "bfff9c81cf5b8b88"
+      "snapshot_id": "0180b6eeea967178"
     },
     "scriptgen": {
       "schema": 1,
@@ -3856,7 +3856,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-23T22:20:28Z",
+          "updated": "2026-10-23T22:26:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3872,7 +3872,7 @@
           ]
         }
       },
-      "snapshot_id": "cd224547571eaa35"
+      "snapshot_id": "e1e57c1857754467"
     }
   },
   "pm": {
@@ -3900,22 +3900,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 12
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 12
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 12
       }
     ]
   },
-  "snapshot_id": "4d7bba89d3fd8876",
-  "published_at": "2026-10-23T22:22:21Z"
+  "snapshot_id": "93ee193af842a388",
+  "published_at": "2026-10-23T22:27:52Z"
 }
