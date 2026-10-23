@@ -8,12 +8,12 @@
         "tier": "promax",
         "projected": null,
         "used": 7,
-        "at": 1792746699,
+        "at": 1792747658,
         "reset": "11:18 on 29 Oct",
         "spark": [
           [
             1792144800,
-            248
+            253
           ],
           [
             1792148400,
@@ -206,7 +206,7 @@
             2.0
           ],
           [
-            9.6,
+            9.7,
             7.0
           ]
         ]
@@ -219,8 +219,8 @@
         "mult": "20x",
         "projected": 78,
         "used": 69,
-        "at": 1792746699,
-        "reset": "Oct 23, 10pm (America/Los_Angeles)",
+        "at": 1792747658,
+        "reset": "Oct 23, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1792144800,
@@ -664,7 +664,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1792746699,
+      "at": 1792747658,
       "spark": [
         [
           1792144800,
@@ -1420,8 +1420,8 @@
             34.0
           ],
           [
-            1792146529,
-            43.0
+            1792146928,
+            44.0
           ],
           [
             1792148428,
@@ -2048,7 +2048,7 @@
             88.0
           ],
           [
-            1792146529,
+            1792146928,
             93.0
           ],
           [
@@ -2799,7 +2799,7 @@
           0.0
         ],
         [
-          1792146529,
+          1792146928,
           9.0
         ],
         [
@@ -3020,7 +3020,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792749450
+        "last_pass_at": 1792751206
       },
       "runstate": {
         "auto": false,
@@ -3047,7 +3047,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 28,
+          "ctx_pct": 29,
           "last_commit_at": 1792751178,
           "head": "507edf3c",
           "subfence": {
@@ -3345,7 +3345,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-23T09:59:34Z",
+          "updated": "2026-10-23T10:27:40Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3361,7 +3361,7 @@
           ]
         }
       },
-      "snapshot_id": "960f22712abfa835"
+      "snapshot_id": "78b93f0ea0bdc0f7"
     },
     "outbound": {
       "schema": 1,
@@ -3373,7 +3373,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792749450
+        "last_pass_at": 1792751206
       },
       "runstate": {
         "auto": false,
@@ -3708,7 +3708,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-23T09:59:34Z",
+          "updated": "2026-10-23T10:27:40Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3724,19 +3724,25 @@
           ]
         }
       },
-      "snapshot_id": "dbaeab9f0e67cc58"
+      "snapshot_id": "54818d491a206eb0"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "E3-KIT-HARDEN",
+            "kind": "needs-owner",
+            "raised_at": 1792751432
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792749449
+        "last_pass_at": 1792751205
       },
       "runstate": {
         "auto": false,
@@ -3761,9 +3767,9 @@
         {
           "id": "E3-KIT-HARDEN",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 36,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 38,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3778,7 +3784,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4042,7 +4048,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-23T09:59:34Z",
+          "updated": "2026-10-23T10:27:40Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4058,7 +4064,7 @@
           ]
         }
       },
-      "snapshot_id": "c50714b3e143e5a0"
+      "snapshot_id": "1836a8fb92518b51"
     }
   },
   "pm": {
@@ -4077,7 +4083,7 @@
       "available_note": "owner back 2026-10-23T02:57:40Z"
     },
     "pm_session": {
-      "lock": "406347 2026-10-23T10:10:33Z",
+      "lock": "491660 2026-10-23T10:26:47Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -4086,22 +4092,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 29
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 29
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 29
+        "monitor_last_pass_min": 5
       }
     ]
   },
-  "snapshot_id": "fe8cc0be3562ebed",
-  "published_at": "2026-10-23T10:26:36Z"
+  "snapshot_id": "7636c11414529efc",
+  "published_at": "2026-10-23T10:31:50Z"
 }
