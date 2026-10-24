@@ -8,7 +8,7 @@
         "tier": "promax",
         "projected": null,
         "used": 19,
-        "at": 1792858727,
+        "at": 1792859414,
         "reset": "19:29 on 30 Oct",
         "spark": [
           [
@@ -94,7 +94,7 @@
             0.0
           ],
           [
-            8.9,
+            9.0,
             0.0
           ]
         ]
@@ -107,8 +107,8 @@
         "mult": "20x",
         "projected": null,
         "used": 24,
-        "at": 1792858727,
-        "reset": "Oct 30, 10pm (America/Los_Angeles)",
+        "at": 1792859414,
+        "reset": "Oct 30, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1792285200,
@@ -253,7 +253,7 @@
             23.0
           ],
           [
-            7.4,
+            7.5,
             24.0
           ]
         ]
@@ -261,9 +261,9 @@
     ],
     "glm": {
       "target": 100,
-      "projected": 109,
+      "projected": 108,
       "used": 25,
-      "at": 1792858727,
+      "at": 1792859414,
       "reset": "Oct 29, 19:39",
       "level": "pro",
       "spark": [
@@ -498,7 +498,7 @@
           25.0
         ],
         [
-          23.1,
+          23.2,
           25.0
         ]
       ]
@@ -509,7 +509,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1792858727,
+      "at": 1792859414,
       "spark": [
         [
           1792263600,
@@ -2744,7 +2744,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 37,
+          "ctx_pct": 39,
           "last_commit_at": 1792862253,
           "head": "10d10cc3",
           "subfence": {
@@ -2828,9 +2828,9 @@
         {
           "id": "LLM-PROXY-CANCEL-SETTLEMENT",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 18,
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 19,
           "last_commit_at": 1792862953,
           "head": "8a79cdeb",
           "subfence": {
@@ -2871,66 +2871,21 @@
         {
           "id": "TELEMETRY-RETENTION-MONITOR",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 65,
-          "last_commit_at": 1792862530,
-          "head": "ca0c802e",
+          "stage": "merge+cleanup",
+          "stage_i": 6,
+          "ctx_pct": 6,
+          "last_commit_at": 1792863045,
+          "head": "8ad4b4bb",
           "subfence": {
             "done": 6,
             "total": 6
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-6-astraxhigh breadth-1 13 bounded co",
-              "must": 0,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-solhigh 14 bounded live-range le",
-              "must": 1,
-              "should": 12,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terrahigh one live post-R2 fixbl",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.6-terraxhigh cumulative declarer c",
-              "must": 0,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.6-terrahigh live post-R4 fix range",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "gpt-5.6-terraxhigh terminal declarer",
-              "must": 0,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "8ad4b4bb",
+              "at": 1792863045
+            },
             {
               "sha": "ca0c802e",
               "at": 1792862530
@@ -2946,10 +2901,6 @@
             {
               "sha": "d911f9e2",
               "at": 1792861657
-            },
-            {
-              "sha": "6b1bd717",
-              "at": 1792861620
             }
           ],
           "fences": {
@@ -2968,6 +2919,12 @@
         "MEDIA-SANDBOX-TIERS"
       ],
       "merge_feed": [
+        {
+          "pr": 71,
+          "unit": "TELEMETRY-RETENTION-MONI",
+          "merged_at": 1792863306,
+          "sha": "a27a1589"
+        },
         {
           "pr": 69,
           "unit": "CONFIG-TESTMODE-TRANSACT",
@@ -2991,12 +2948,6 @@
           "unit": "AGENT-AUTHORING",
           "merged_at": 1792286558,
           "sha": "2324cfb9"
-        },
-        {
-          "pr": 66,
-          "unit": "UPDATER-RECOVERY-GUARDS",
-          "merged_at": 1792246897,
-          "sha": "fa19bdaa"
         }
       ],
       "decisions": [],
@@ -3199,7 +3150,7 @@
             },
             "glm": {
               "verdict": "IN_BAND",
-              "proj": 109,
+              "proj": 108,
               "target": 100,
               "used": 25,
               "day": 2,
@@ -3216,7 +3167,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T17:21:32Z",
+          "updated": "2026-10-24T17:34:56Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3232,7 +3183,7 @@
           ]
         }
       },
-      "snapshot_id": "a637046e7ac2470d"
+      "snapshot_id": "6166b627d633f201"
     },
     "outbound": {
       "schema": 1,
@@ -3562,7 +3513,7 @@
             },
             "glm": {
               "verdict": "IN_BAND",
-              "proj": 109,
+              "proj": 108,
               "target": 100,
               "used": 25,
               "day": 2,
@@ -3579,7 +3530,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T17:21:32Z",
+          "updated": "2026-10-24T17:34:56Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3595,7 +3546,7 @@
           ]
         }
       },
-      "snapshot_id": "9d8e2a8e3ef115f5"
+      "snapshot_id": "5310c1facdc1d27b"
     },
     "scriptgen": {
       "schema": 1,
@@ -3914,7 +3865,7 @@
             },
             "glm": {
               "verdict": "IN_BAND",
-              "proj": 109,
+              "proj": 108,
               "target": 100,
               "used": 25,
               "day": 2,
@@ -3931,7 +3882,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T17:21:32Z",
+          "updated": "2026-10-24T17:34:56Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3947,7 +3898,7 @@
           ]
         }
       },
-      "snapshot_id": "80e2068eed9784ff"
+      "snapshot_id": "97bf54935c129317"
     }
   },
   "pm": {
@@ -3975,22 +3926,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 19
+        "monitor_last_pass_min": 24
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 19
+        "monitor_last_pass_min": 24
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 19
+        "monitor_last_pass_min": 24
       }
     ]
   },
-  "snapshot_id": "9daf8f68b1a6699f",
-  "published_at": "2026-10-24T17:29:53Z"
+  "snapshot_id": "c72df792827a1230",
+  "published_at": "2026-10-24T17:35:18Z"
 }
