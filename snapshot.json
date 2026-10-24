@@ -614,7 +614,7 @@
           8.0
         ],
         [
-          14.6,
+          14.7,
           13.0
         ]
       ]
@@ -801,7 +801,7 @@
       "codex": {
         "B": [
           [
-            1788923905,
+            1788924304,
             29.0
           ],
           [
@@ -2112,7 +2112,7 @@
       },
       "glm": [
         [
-          1788923905,
+          1788924304,
           47.0
         ],
         [
@@ -2904,7 +2904,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 34,
+          "ctx_pct": 37,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2926,7 +2926,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 28,
+          "ctx_pct": 30,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3199,7 +3199,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T03:13:01Z",
+          "updated": "2026-10-24T03:17:40Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3215,7 +3215,7 @@
           ]
         }
       },
-      "snapshot_id": "49f4d71c6f6e84f0"
+      "snapshot_id": "d7a5555d720e7971"
     },
     "outbound": {
       "schema": 1,
@@ -3562,7 +3562,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T03:13:01Z",
+          "updated": "2026-10-24T03:17:40Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3578,13 +3578,19 @@
           ]
         }
       },
-      "snapshot_id": "d6fd55d1c7ca8241"
+      "snapshot_id": "4839c1404f9a388f"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "DEFUSE-CF",
+            "kind": "needs-owner",
+            "raised_at": 1792811764
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3617,7 +3623,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 28,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3637,9 +3643,9 @@
         {
           "id": "DEFUSE-CF",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 37,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 39,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3654,14 +3660,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "E3-KIT-HARDEN",
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 37,
+          "ctx_pct": 41,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3959,7 +3965,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T03:13:01Z",
+          "updated": "2026-10-24T03:17:40Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3975,7 +3981,7 @@
           ]
         }
       },
-      "snapshot_id": "a72f9743d8171fc6"
+      "snapshot_id": "fd5476c2f2813c8a"
     }
   },
   "pm": {
@@ -4003,22 +4009,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       }
     ]
   },
-  "snapshot_id": "5defe3e5aa3cec6f",
-  "published_at": "2026-10-24T03:15:41Z"
+  "snapshot_id": "14b322039a09986e",
+  "published_at": "2026-10-24T03:21:12Z"
 }
