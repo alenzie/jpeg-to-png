@@ -146,7 +146,7 @@
             0.0
           ],
           [
-            0.0,
+            0.1,
             0.0
           ]
         ]
@@ -413,7 +413,7 @@
             72.0
           ],
           [
-            98.5,
+            98.6,
             72.0
           ]
         ]
@@ -598,7 +598,7 @@
           8.0
         ],
         [
-          14.2,
+          14.3,
           8.0
         ]
       ]
@@ -781,7 +781,7 @@
       "codex": {
         "B": [
           [
-            1788921379,
+            1788921946,
             28.0
           ],
           [
@@ -2084,7 +2084,7 @@
       },
       "glm": [
         [
-          1788921379,
+          1788921946,
           47.0
         ],
         [
@@ -2794,8 +2794,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CONFIG-TESTMODE-TRANSACTIONS",
+            "kind": "escalate",
+            "raised_at": 1792809100
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2826,11 +2832,11 @@
         {
           "id": "CONFIG-TESTMODE-TRANSACTIONS",
           "status": "building",
-          "stage": "merge+cleanup",
-          "stage_i": 6,
-          "ctx_pct": 9,
-          "last_commit_at": 1792795972,
-          "head": "99ec5abc",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 12,
+          "last_commit_at": 1792809267,
+          "head": "f9040522",
           "subfence": {
             "done": 7,
             "total": 7
@@ -2838,24 +2844,24 @@
           "review_rounds": [],
           "commits": [
             {
-              "sha": "99ec5abc",
-              "at": 1792795972
+              "sha": "f9040522",
+              "at": 1792809267
             },
             {
-              "sha": "82b33131",
-              "at": 1792795197
+              "sha": "78dfb383",
+              "at": 1792808849
             },
             {
-              "sha": "4710aa77",
-              "at": 1792795161
+              "sha": "eb6b9e49",
+              "at": 1792808770
             },
             {
-              "sha": "63b198f7",
-              "at": 1792794254
+              "sha": "3683ebf2",
+              "at": 1792808665
             },
             {
-              "sha": "7c44f00d",
-              "at": 1792794187
+              "sha": "2aa8e553",
+              "at": 1792808542
             }
           ],
           "fences": {
@@ -2864,14 +2870,14 @@
             "build": true,
             "review": true
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "DESKTOP-HANDLE-IO-CONTAINMENT",
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 21,
+          "ctx_pct": 26,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2893,7 +2899,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 21,
+          "ctx_pct": 26,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3184,7 +3190,7 @@
           ]
         }
       },
-      "snapshot_id": "146ac93c460336cb"
+      "snapshot_id": "71a3c92585181686"
     },
     "outbound": {
       "schema": 1,
@@ -3547,7 +3553,7 @@
           ]
         }
       },
-      "snapshot_id": "3325bb6977ca471c"
+      "snapshot_id": "8bd8586876e7d20e"
     },
     "scriptgen": {
       "schema": 1,
@@ -3586,7 +3592,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 18,
+          "ctx_pct": 22,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3608,7 +3614,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 25,
+          "ctx_pct": 29,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3630,7 +3636,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 20,
+          "ctx_pct": 24,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3923,7 +3929,7 @@
           ]
         }
       },
-      "snapshot_id": "eb5b0d8392a595ee"
+      "snapshot_id": "31415df429e0b9dd"
     }
   },
   "pm": {
@@ -3951,22 +3957,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 12
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 12
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 12
       }
     ]
   },
-  "snapshot_id": "bf159119746be354",
-  "published_at": "2026-10-24T02:31:00Z"
+  "snapshot_id": "8629297d591d7179",
+  "published_at": "2026-10-24T02:36:31Z"
 }
