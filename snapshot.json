@@ -146,7 +146,7 @@
             0.0
           ],
           [
-            0.6,
+            0.7,
             0.0
           ]
         ]
@@ -421,7 +421,7 @@
             72.0
           ],
           [
-            99.1,
+            99.2,
             83.0
           ]
         ]
@@ -614,7 +614,7 @@
           8.0
         ],
         [
-          14.8,
+          14.9,
           13.0
         ]
       ]
@@ -2837,6 +2837,16 @@
             "id": "DESKTOP-RUNTIME-MAINTENANCE",
             "kind": "needs-owner",
             "raised_at": 1792812285
+          },
+          {
+            "id": "LLM-PROXY-CANCEL-SETTLEMENT",
+            "kind": "needs-owner",
+            "raised_at": 1792812803
+          },
+          {
+            "id": "TELEMETRY-RETENTION-MONITOR",
+            "kind": "needs-owner",
+            "raised_at": 1792812881
           }
         ]
       },
@@ -2913,9 +2923,9 @@
         {
           "id": "LLM-PROXY-CANCEL-SETTLEMENT",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 41,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 42,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2930,14 +2940,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "TELEMETRY-RETENTION-MONITOR",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 33,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 34,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2952,7 +2962,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -3226,7 +3236,7 @@
           ]
         }
       },
-      "snapshot_id": "29acf62ef655e132"
+      "snapshot_id": "6a0caff0964fdd42"
     },
     "outbound": {
       "schema": 1,
@@ -3589,13 +3599,18 @@
           ]
         }
       },
-      "snapshot_id": "17d77f1db8eb0875"
+      "snapshot_id": "7db263e33c01bdae"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
+          {
+            "id": "CAL-GROUNDING-QUARANTINE",
+            "kind": "needs-owner",
+            "raised_at": 1792813043
+          },
           {
             "id": "DEFUSE-CF",
             "kind": "needs-owner",
@@ -3632,9 +3647,9 @@
         {
           "id": "CAL-GROUNDING-QUARANTINE",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 34,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 36,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3649,7 +3664,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "DEFUSE-CF",
@@ -3678,15 +3693,19 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 52,
-          "last_commit_at": 1792812528,
-          "head": "bda71214",
+          "ctx_pct": 53,
+          "last_commit_at": 1792812802,
+          "head": "ecef4a49",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "ecef4a49",
+              "at": 1792812802
+            },
             {
               "sha": "bda71214",
               "at": 1792812528
@@ -3702,10 +3721,6 @@
             {
               "sha": "f896b9f2",
               "at": 1792809275
-            },
-            {
-              "sha": "736714d5",
-              "at": 1792809255
             }
           ],
           "fences": {
@@ -3721,7 +3736,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 44,
+          "ctx_pct": 50,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4013,7 +4028,7 @@
           ]
         }
       },
-      "snapshot_id": "b7df3c13ef6acf42"
+      "snapshot_id": "f12a6ce433398a57"
     }
   },
   "pm": {
@@ -4041,22 +4056,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 6
+        "monitor_last_pass_min": 12
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6
+        "monitor_last_pass_min": 12
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6
+        "monitor_last_pass_min": 12
       }
     ]
   },
-  "snapshot_id": "aab34e74830789b9",
-  "published_at": "2026-10-24T03:32:29Z"
+  "snapshot_id": "0778d3531171badb",
+  "published_at": "2026-10-24T03:38:11Z"
 }
