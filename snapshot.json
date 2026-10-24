@@ -118,7 +118,7 @@
             0.0
           ],
           [
-            5.4,
+            5.5,
             0.0
           ]
         ]
@@ -253,7 +253,7 @@
             7.0
           ],
           [
-            3.9,
+            4.0,
             8.0
           ]
         ]
@@ -474,7 +474,7 @@
           22.0
         ],
         [
-          19.6,
+          19.7,
           22.0
         ]
       ]
@@ -660,10 +660,6 @@
     "history": {
       "codex": {
         "B": [
-          [
-            1788953821,
-            36.0
-          ],
           [
             1788956037,
             36.0
@@ -1976,10 +1972,6 @@
       },
       "glm": [
         [
-          1788953821,
-          60.0
-        ],
-        [
           1788956037,
           60.0
         ],
@@ -2701,11 +2693,6 @@
             "id": "LLM-PROXY-CANCEL-SETTLEMENT",
             "kind": "needs-owner",
             "raised_at": 1792816685
-          },
-          {
-            "id": "TELEMETRY-RETENTION-MONITOR",
-            "kind": "needs-owner",
-            "raised_at": 1792816577
           }
         ]
       },
@@ -2713,7 +2700,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792840130
+        "last_pass_at": 1792841935
       },
       "runstate": {
         "auto": false,
@@ -2740,15 +2727,23 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 38,
-          "last_commit_at": 1792841349,
-          "head": "0ddbae51",
+          "ctx_pct": 15,
+          "last_commit_at": 1792841881,
+          "head": "b6d228d2",
           "subfence": {
-            "done": 2,
+            "done": 3,
             "total": 11
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "b6d228d2",
+              "at": 1792841881
+            },
+            {
+              "sha": "8f6da532",
+              "at": 1792841828
+            },
             {
               "sha": "0ddbae51",
               "at": 1792841349
@@ -2760,14 +2755,6 @@
             {
               "sha": "d0684824",
               "at": 1792836266
-            },
-            {
-              "sha": "701d168e",
-              "at": 1792833867
-            },
-            {
-              "sha": "bd6f22bc",
-              "at": 1792833379
             }
           ],
           "fences": {
@@ -2825,9 +2812,9 @@
         {
           "id": "TELEMETRY-RETENTION-MONITOR",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 40,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 12,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2842,7 +2829,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -3100,7 +3087,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T11:34:17Z",
+          "updated": "2026-10-24T11:38:29Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3116,7 +3103,7 @@
           ]
         }
       },
-      "snapshot_id": "f53a53a0bdb9c7a4"
+      "snapshot_id": "6f268b57d8e6b0b6"
     },
     "outbound": {
       "schema": 1,
@@ -3128,7 +3115,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792840129
+        "last_pass_at": 1792841934
       },
       "runstate": {
         "auto": false,
@@ -3463,7 +3450,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T11:34:17Z",
+          "updated": "2026-10-24T11:38:29Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3479,7 +3466,7 @@
           ]
         }
       },
-      "snapshot_id": "58e5e2aa066d6e7d"
+      "snapshot_id": "6d973aaa37b8f4fe"
     },
     "scriptgen": {
       "schema": 1,
@@ -3491,7 +3478,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792840130
+        "last_pass_at": 1792841935
       },
       "runstate": {
         "auto": false,
@@ -3918,7 +3905,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T11:34:17Z",
+          "updated": "2026-10-24T11:38:29Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3934,7 +3921,7 @@
           ]
         }
       },
-      "snapshot_id": "ef06d197752bef6d"
+      "snapshot_id": "c638388cf4f85a05"
     }
   },
   "pm": {
@@ -3962,22 +3949,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 2
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 2
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 2
       }
     ]
   },
-  "snapshot_id": "36be8c167b429257",
-  "published_at": "2026-10-24T11:35:26Z"
+  "snapshot_id": "d8980af48ebe5f6f",
+  "published_at": "2026-10-24T11:40:54Z"
 }
