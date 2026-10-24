@@ -8,7 +8,7 @@
         "tier": "promax",
         "projected": null,
         "used": 21,
-        "at": 1792862054,
+        "at": 1792862441,
         "reset": "19:29 on 30 Oct",
         "spark": [
           [
@@ -94,7 +94,7 @@
             0.0
           ],
           [
-            9.4,
+            9.5,
             0.0
           ]
         ]
@@ -107,8 +107,8 @@
         "mult": "20x",
         "projected": null,
         "used": 25,
-        "at": 1792862054,
-        "reset": "Oct 30, 10pm (America/Los_Angeles)",
+        "at": 1792862441,
+        "reset": "Oct 30, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1792285200,
@@ -257,7 +257,7 @@
             24.0
           ],
           [
-            7.9,
+            8.0,
             25.0
           ]
         ]
@@ -267,7 +267,7 @@
       "target": 100,
       "projected": 106,
       "used": 25,
-      "at": 1792862054,
+      "at": 1792862441,
       "reset": "Oct 29, 19:39",
       "level": "pro",
       "spark": [
@@ -510,7 +510,7 @@
           25.0
         ],
         [
-          23.6,
+          23.7,
           25.0
         ]
       ]
@@ -521,7 +521,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1792862054,
+      "at": 1792862441,
       "spark": [
         [
           1792263600,
@@ -2772,7 +2772,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 13,
+          "ctx_pct": 22,
           "last_commit_at": 1792865754,
           "head": "53d941df",
           "subfence": {
@@ -2815,15 +2815,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 18,
-          "last_commit_at": 1792865842,
-          "head": "54811320",
+          "ctx_pct": 22,
+          "last_commit_at": 1792866027,
+          "head": "3e763463",
           "subfence": {
-            "done": 9,
+            "done": 10,
             "total": 16
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "3e763463",
+              "at": 1792866027
+            },
             {
               "sha": "54811320",
               "at": 1792865842
@@ -2839,10 +2843,6 @@
             {
               "sha": "75ebad05",
               "at": 1792864950
-            },
-            {
-              "sha": "23607b86",
-              "at": 1792864903
             }
           ],
           "fences": {
@@ -2855,43 +2855,26 @@
         },
         {
           "id": "LLM-PROXY-CANCEL-SETTLEMENT",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 52,
-          "last_commit_at": 1792865524,
-          "head": "3c732593",
+          "status": "built",
+          "stage": "merge+cleanup",
+          "stage_i": 6,
+          "ctx_pct": 8,
+          "last_commit_at": 1792865983,
+          "head": "e74d26be",
           "subfence": {
             "done": 7,
             "total": 8
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-6-astra  xhigh",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-sol  xhigh",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra  xhigh",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "e74d26be",
+              "at": 1792865983
+            },
+            {
+              "sha": "57391faa",
+              "at": 1792865897
+            },
             {
               "sha": "3c732593",
               "at": 1792865524
@@ -2903,21 +2886,13 @@
             {
               "sha": "63750ab6",
               "at": 1792864711
-            },
-            {
-              "sha": "592f1dcb",
-              "at": 1792864675
-            },
-            {
-              "sha": "9ec791f3",
-              "at": 1792864275
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -2929,6 +2904,12 @@
         "MEDIA-SANDBOX-TIERS"
       ],
       "merge_feed": [
+        {
+          "pr": 72,
+          "unit": "LLM-PROXY-CANCEL-SETTLEM",
+          "merged_at": 1792866161,
+          "sha": "e171ae77"
+        },
         {
           "pr": 71,
           "unit": "TELEMETRY-RETENTION-MONI",
@@ -2952,12 +2933,6 @@
           "unit": "deny-advisories-2026-10-",
           "merged_at": 1792296228,
           "sha": "b28e68ee"
-        },
-        {
-          "pr": 67,
-          "unit": "AGENT-AUTHORING",
-          "merged_at": 1792286558,
-          "sha": "2324cfb9"
         }
       ],
       "decisions": [],
@@ -3177,7 +3152,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T18:17:07Z",
+          "updated": "2026-10-24T18:20:46Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3193,7 +3168,7 @@
           ]
         }
       },
-      "snapshot_id": "9220c883fff2772c"
+      "snapshot_id": "dfdde69e56351f74"
     },
     "outbound": {
       "schema": 1,
@@ -3540,7 +3515,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T18:17:07Z",
+          "updated": "2026-10-24T18:20:46Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3556,19 +3531,13 @@
           ]
         }
       },
-      "snapshot_id": "1812a1e1790bc8ec"
+      "snapshot_id": "b9a02e1fdad0cb99"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "E3-KIT-HARDEN",
-            "kind": "escalate",
-            "raised_at": 1792865822
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3599,9 +3568,9 @@
         {
           "id": "E3-KIT-HARDEN",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 33,
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": 22,
           "last_commit_at": 1792865796,
           "head": "b9ed6c8c",
           "subfence": {
@@ -3637,7 +3606,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -3898,7 +3867,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T18:17:07Z",
+          "updated": "2026-10-24T18:20:46Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3914,7 +3883,7 @@
           ]
         }
       },
-      "snapshot_id": "122b357c3c01328f"
+      "snapshot_id": "eae8295d5054d747"
     }
   },
   "pm": {
@@ -3942,22 +3911,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 13
       }
     ]
   },
-  "snapshot_id": "51b048a7b7612055",
-  "published_at": "2026-10-24T18:18:12Z"
+  "snapshot_id": "dd1168b130e6a8fc",
+  "published_at": "2026-10-24T18:23:33Z"
 }
