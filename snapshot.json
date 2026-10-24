@@ -6,10 +6,10 @@
         "target": 100,
         "label": "B",
         "tier": "promax",
-        "projected": 0,
-        "used": 0,
-        "at": 1792805341,
-        "reset": "19:28 on 30 Oct",
+        "projected": null,
+        "used": 1,
+        "at": 1792806224,
+        "reset": "19:29 on 30 Oct",
         "spark": [
           [
             1792209600,
@@ -146,7 +146,7 @@
             0.0
           ],
           [
-            0.1,
+            0.2,
             0.0
           ]
         ]
@@ -157,9 +157,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 74,
-        "used": 73,
-        "at": 1792805341,
+        "projected": 78,
+        "used": 77,
+        "at": 1792806224,
         "reset": "Oct 23, 10pm (America/Los_Angeles)",
         "spark": [
           [
@@ -413,7 +413,7 @@
             72.0
           ],
           [
-            98.6,
+            98.7,
             72.0
           ]
         ]
@@ -421,9 +421,9 @@
     ],
     "glm": {
       "target": 100,
-      "projected": 56,
-      "used": 8,
-      "at": 1792805341,
+      "projected": 63,
+      "used": 9,
+      "at": 1792806224,
       "reset": "Oct 29, 19:39",
       "level": "pro",
       "spark": [
@@ -598,7 +598,7 @@
           8.0
         ],
         [
-          14.3,
+          14.4,
           8.0
         ]
       ]
@@ -609,7 +609,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1792805341,
+      "at": 1792806224,
       "spark": [
         [
           1792209600,
@@ -781,8 +781,8 @@
       "codex": {
         "B": [
           [
-            1788921946,
-            28.0
+            1788922805,
+            29.0
           ],
           [
             1788934797,
@@ -2084,7 +2084,7 @@
       },
       "glm": [
         [
-          1788921946,
+          1788922805,
           47.0
         ],
         [
@@ -2805,7 +2805,7 @@
       },
       "runstate": {
         "auto": false,
-        "parallel": 3,
+        "parallel": 4,
         "pickconfirm": true
       },
       "daemons": {
@@ -2828,7 +2828,7 @@
           "status": "pr-open",
           "stage": "merge+cleanup",
           "stage_i": 6,
-          "ctx_pct": 14,
+          "ctx_pct": 16,
           "last_commit_at": 1792809267,
           "head": "f9040522",
           "subfence": {
@@ -3141,34 +3141,34 @@
           "since": "2026-10-10T08:24:49Z",
           "pools": {
             "codex": {
-              "verdict": "UNDERBURN",
-              "proj": 0,
+              "verdict": "IN_BAND",
+              "proj": null,
               "target": 100,
-              "used": 0,
-              "day": 2,
-              "active": "C1",
+              "used": 1,
+              "day": 1,
+              "active": null,
               "wall": false
             },
             "glm": {
               "verdict": "UNDERBURN",
-              "proj": 56,
+              "proj": 63,
               "target": 100,
-              "used": 8,
+              "used": 9,
               "day": 1,
               "active": "G1",
               "wall": false
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 74,
+              "proj": 78,
               "target": 100,
-              "used": 73,
+              "used": 77,
               "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-10-24T02:29:06Z",
+          "updated": "2026-10-24T02:47:16Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3184,7 +3184,7 @@
           ]
         }
       },
-      "snapshot_id": "2e05ae178d678779"
+      "snapshot_id": "b4087995831f0ed9"
     },
     "outbound": {
       "schema": 1,
@@ -3504,34 +3504,34 @@
           "since": "2026-10-10T08:24:49Z",
           "pools": {
             "codex": {
-              "verdict": "UNDERBURN",
-              "proj": 0,
+              "verdict": "IN_BAND",
+              "proj": null,
               "target": 100,
-              "used": 0,
-              "day": 2,
-              "active": "C1",
+              "used": 1,
+              "day": 1,
+              "active": null,
               "wall": false
             },
             "glm": {
               "verdict": "UNDERBURN",
-              "proj": 56,
+              "proj": 63,
               "target": 100,
-              "used": 8,
+              "used": 9,
               "day": 1,
               "active": "G1",
               "wall": false
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 74,
+              "proj": 78,
               "target": 100,
-              "used": 73,
+              "used": 77,
               "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-10-24T02:29:06Z",
+          "updated": "2026-10-24T02:47:16Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3547,7 +3547,7 @@
           ]
         }
       },
-      "snapshot_id": "8bd8586876e7d20e"
+      "snapshot_id": "c8324c838f817e92"
     },
     "scriptgen": {
       "schema": 1,
@@ -3563,7 +3563,7 @@
       },
       "runstate": {
         "auto": false,
-        "parallel": 3,
+        "parallel": 4,
         "pickconfirm": true
       },
       "daemons": {
@@ -3582,11 +3582,33 @@
       },
       "units": [
         {
+          "id": "CAL-GROUNDING-QUARANTINE",
+          "status": "proposed",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": null,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
           "id": "DEFUSE-CF",
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 23,
+          "ctx_pct": 25,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3630,7 +3652,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 26,
+          "ctx_pct": 27,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3880,34 +3902,34 @@
           "since": "2026-10-10T08:24:49Z",
           "pools": {
             "codex": {
-              "verdict": "UNDERBURN",
-              "proj": 0,
+              "verdict": "IN_BAND",
+              "proj": null,
               "target": 100,
-              "used": 0,
-              "day": 2,
-              "active": "C1",
+              "used": 1,
+              "day": 1,
+              "active": null,
               "wall": false
             },
             "glm": {
               "verdict": "UNDERBURN",
-              "proj": 56,
+              "proj": 63,
               "target": 100,
-              "used": 8,
+              "used": 9,
               "day": 1,
               "active": "G1",
               "wall": false
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 74,
+              "proj": 78,
               "target": 100,
-              "used": 73,
+              "used": 77,
               "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-10-24T02:29:06Z",
+          "updated": "2026-10-24T02:47:16Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3923,7 +3945,7 @@
           ]
         }
       },
-      "snapshot_id": "0ce7b57f1cebecb4"
+      "snapshot_id": "c3298e6c029febd0"
     }
   },
   "pm": {
@@ -3951,22 +3973,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18
+        "monitor_last_pass_min": 23
       }
     ]
   },
-  "snapshot_id": "d258733e09ad0d80",
-  "published_at": "2026-10-24T02:42:04Z"
+  "snapshot_id": "85b2d91af6e0e44f",
+  "published_at": "2026-10-24T02:47:49Z"
 }
