@@ -8,7 +8,7 @@
         "tier": "promax",
         "projected": null,
         "used": 26,
-        "at": 1792871580,
+        "at": 1792872459,
         "reset": "19:29 on 30 Oct",
         "spark": [
           [
@@ -107,8 +107,8 @@
         "mult": "20x",
         "projected": null,
         "used": 29,
-        "at": 1792871580,
-        "reset": "Oct 30, 9:59pm (America/Los_Angeles)",
+        "at": 1792872459,
+        "reset": "Oct 30, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1792285200,
@@ -265,7 +265,11 @@
             28.0
           ],
           [
-            9.6,
+            9.0,
+            29.0
+          ],
+          [
+            9.7,
             29.0
           ]
         ]
@@ -275,7 +279,7 @@
       "target": 100,
       "projected": 107,
       "used": 27,
-      "at": 1792871580,
+      "at": 1792872459,
       "reset": "Oct 29, 19:39",
       "level": "pro",
       "spark": [
@@ -422,6 +426,10 @@
         [
           1792868400,
           109
+        ],
+        [
+          1792872000,
+          107
         ]
       ],
       "trail": [
@@ -526,6 +534,10 @@
           26.0
         ],
         [
+          25.0,
+          27.0
+        ],
+        [
           25.3,
           27.0
         ]
@@ -537,7 +549,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1792871580,
+      "at": 1792872459,
       "spark": [
         [
           1792270800,
@@ -709,6 +721,10 @@
         ],
         [
           1792868400,
+          -0.0
+        ],
+        [
+          1792872000,
           -0.0
         ]
       ]
@@ -1423,6 +1439,10 @@
           [
             1792869493,
             25.0
+          ],
+          [
+            1792872459,
+            26.0
           ]
         ]
       },
@@ -2038,6 +2058,10 @@
           ],
           [
             1792869493,
+            29.0
+          ],
+          [
+            1792872459,
             29.0
           ]
         ]
@@ -2750,6 +2774,10 @@
         [
           1792869493,
           27.0
+        ],
+        [
+          1792872459,
+          27.0
         ]
       ]
     }
@@ -2758,20 +2786,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "DESKTOP-RUNTIME-MAINTENANCE",
-            "kind": "needs-owner",
-            "raised_at": 1792873058
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792874475
+        "last_pass_at": 1792876285
       },
       "runstate": {
         "auto": false,
@@ -2796,9 +2818,9 @@
         {
           "id": "DESKTOP-RUNTIME-MAINTENANCE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 36,
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 37,
           "last_commit_at": 1792871189,
           "head": "9468c3d0",
           "subfence": {
@@ -2834,7 +2856,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -3094,7 +3116,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T20:53:02Z",
+          "updated": "2026-10-24T21:08:38Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3110,7 +3132,7 @@
           ]
         }
       },
-      "snapshot_id": "2046d6716887522e"
+      "snapshot_id": "6d2823c01e75bbeb"
     },
     "outbound": {
       "schema": 1,
@@ -3122,7 +3144,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792874475
+        "last_pass_at": 1792876284
       },
       "runstate": {
         "auto": false,
@@ -3457,7 +3479,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T20:53:02Z",
+          "updated": "2026-10-24T21:08:38Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3473,7 +3495,7 @@
           ]
         }
       },
-      "snapshot_id": "fede6f008fd25fd7"
+      "snapshot_id": "48b72acbda0c2421"
     },
     "scriptgen": {
       "schema": 1,
@@ -3484,11 +3506,6 @@
             "id": "CLAIM-ENTAILMENT",
             "kind": "needs-owner",
             "raised_at": 1792870332
-          },
-          {
-            "id": "E3-KIT-HARDEN",
-            "kind": "escalate",
-            "raised_at": 1792871460
           }
         ]
       },
@@ -3496,7 +3513,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792874475
+        "last_pass_at": 1792876285
       },
       "runstate": {
         "auto": false,
@@ -3543,9 +3560,9 @@
         {
           "id": "E3-KIT-HARDEN",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 44,
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 45,
           "last_commit_at": 1792868811,
           "head": "501f8f46",
           "subfence": {
@@ -3581,7 +3598,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -3841,7 +3858,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T20:53:02Z",
+          "updated": "2026-10-24T21:08:38Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3857,7 +3874,7 @@
           ]
         }
       },
-      "snapshot_id": "90af0cb4ef1e0280"
+      "snapshot_id": "0c131fe084fecfbe"
     }
   },
   "pm": {
@@ -3885,22 +3902,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 1
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 1
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 26
+        "monitor_last_pass_min": 1
       }
     ]
   },
-  "snapshot_id": "08cca8e9580a220d",
-  "published_at": "2026-10-24T21:07:37Z"
+  "snapshot_id": "0284eddf9cf4d673",
+  "published_at": "2026-10-24T21:12:58Z"
 }
