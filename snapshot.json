@@ -558,7 +558,7 @@
           28.0
         ],
         [
-          26.8,
+          26.9,
           28.0
         ]
       ]
@@ -3158,7 +3158,7 @@
           ]
         }
       },
-      "snapshot_id": "1203333dc620d6c5"
+      "snapshot_id": "d1120bed469bcb10"
     },
     "outbound": {
       "schema": 1,
@@ -3521,13 +3521,19 @@
           ]
         }
       },
-      "snapshot_id": "a5f47a990da5ec7d"
+      "snapshot_id": "ca4bb014af3d1cc5"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "E3-KIT-HARDEN",
+            "kind": "needs-owner",
+            "raised_at": 1792885654
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3560,7 +3566,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 29,
+          "ctx_pct": 31,
           "last_commit_at": 1792885188,
           "head": "da13075f",
           "subfence": {
@@ -3601,17 +3607,25 @@
         {
           "id": "E3-KIT-HARDEN",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 26,
-          "last_commit_at": 1792885370,
-          "head": "47dd404d",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 28,
+          "last_commit_at": 1792885630,
+          "head": "83b58352",
           "subfence": {
             "done": 7,
             "total": 11
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "83b58352",
+              "at": 1792885630
+            },
+            {
+              "sha": "8fb54961",
+              "at": 1792885493
+            },
             {
               "sha": "47dd404d",
               "at": 1792885370
@@ -3623,14 +3637,6 @@
             {
               "sha": "f0bbdc07",
               "at": 1792884584
-            },
-            {
-              "sha": "5b5d3c2f",
-              "at": 1792884068
-            },
-            {
-              "sha": "fff364ff",
-              "at": 1792883630
             }
           ],
           "fences": {
@@ -3639,7 +3645,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -3915,7 +3921,7 @@
           ]
         }
       },
-      "snapshot_id": "73401a51149586fe"
+      "snapshot_id": "07313a429bd9f1d5"
     }
   },
   "pm": {
@@ -3943,22 +3949,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 59
+        "monitor_last_pass_min": 64
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 59
+        "monitor_last_pass_min": 64
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 59
+        "monitor_last_pass_min": 64
       }
     ]
   },
-  "snapshot_id": "e7f7a91cfcd4a9b9",
-  "published_at": "2026-10-24T23:44:27Z"
+  "snapshot_id": "e72a71df0097452e",
+  "published_at": "2026-10-24T23:50:03Z"
 }
