@@ -2794,14 +2794,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CONFIG-TESTMODE-TRANSACTIONS",
-            "kind": "escalate",
-            "raised_at": 1792809100
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2831,10 +2825,10 @@
       "units": [
         {
           "id": "CONFIG-TESTMODE-TRANSACTIONS",
-          "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 12,
+          "status": "pr-open",
+          "stage": "merge+cleanup",
+          "stage_i": 6,
+          "ctx_pct": 14,
           "last_commit_at": 1792809267,
           "head": "f9040522",
           "subfence": {
@@ -2870,14 +2864,14 @@
             "build": true,
             "review": true
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "DESKTOP-HANDLE-IO-CONTAINMENT",
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 26,
+          "ctx_pct": 27,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2899,7 +2893,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 26,
+          "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2927,6 +2921,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 69,
+          "unit": "CONFIG-TESTMODE-TRANSACT",
+          "merged_at": 1792809551,
+          "sha": "77c36186"
+        },
+        {
           "pr": 70,
           "unit": "deny-advisories-2026-10-",
           "merged_at": 1792808849,
@@ -2949,12 +2949,6 @@
           "unit": "UPDATER-RECOVERY-GUARDS",
           "merged_at": 1792246897,
           "sha": "fa19bdaa"
-        },
-        {
-          "pr": 65,
-          "unit": "DESKTOP-TELEMETRY-MINIMI",
-          "merged_at": 1792206036,
-          "sha": "dd36757e"
         }
       ],
       "decisions": [],
@@ -3190,7 +3184,7 @@
           ]
         }
       },
-      "snapshot_id": "71a3c92585181686"
+      "snapshot_id": "2e05ae178d678779"
     },
     "outbound": {
       "schema": 1,
@@ -3592,7 +3586,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 22,
+          "ctx_pct": 23,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3636,7 +3630,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 24,
+          "ctx_pct": 26,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3929,7 +3923,7 @@
           ]
         }
       },
-      "snapshot_id": "31415df429e0b9dd"
+      "snapshot_id": "0ce7b57f1cebecb4"
     }
   },
   "pm": {
@@ -3957,22 +3951,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 18
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 18
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 18
       }
     ]
   },
-  "snapshot_id": "8629297d591d7179",
-  "published_at": "2026-10-24T02:36:31Z"
+  "snapshot_id": "d258733e09ad0d80",
+  "published_at": "2026-10-24T02:42:04Z"
 }
