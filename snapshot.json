@@ -2825,12 +2825,12 @@
       "units": [
         {
           "id": "CONFIG-TESTMODE-TRANSACTIONS",
-          "status": "pr-open",
-          "stage": "merge+cleanup",
-          "stage_i": 6,
-          "ctx_pct": 16,
-          "last_commit_at": 1792809267,
-          "head": "f9040522",
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 17,
+          "last_commit_at": 1792810359,
+          "head": "a7485556",
           "subfence": {
             "done": 7,
             "total": 7
@@ -2838,24 +2838,24 @@
           "review_rounds": [],
           "commits": [
             {
+              "sha": "a7485556",
+              "at": 1792810359
+            },
+            {
+              "sha": "5d216acf",
+              "at": 1792810199
+            },
+            {
+              "sha": "77c36186",
+              "at": 1792809551
+            },
+            {
               "sha": "f9040522",
               "at": 1792809267
             },
             {
               "sha": "78dfb383",
               "at": 1792808849
-            },
-            {
-              "sha": "eb6b9e49",
-              "at": 1792808770
-            },
-            {
-              "sha": "3683ebf2",
-              "at": 1792808665
-            },
-            {
-              "sha": "2aa8e553",
-              "at": 1792808542
             }
           ],
           "fences": {
@@ -2871,7 +2871,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 27,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2893,7 +2893,29 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 28,
+          "ctx_pct": 32,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "LLM-PROXY-CANCEL-SETTLEMENT",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 22,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2914,7 +2936,6 @@
       "eligible": [
         "DESKTOP-TRUSTED-TYPES",
         "LICENSING-HARDENING",
-        "LLM-PROXY-CANCEL-SETTLEMENT",
         "LLM-PROXY-PREAUTH-ABUSE",
         "MEDIA-SANDBOX-TIERS",
         "TELEMETRY-RETENTION-MONITOR"
@@ -3168,7 +3189,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T02:47:16Z",
+          "updated": "2026-10-24T02:47:50Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3184,7 +3205,7 @@
           ]
         }
       },
-      "snapshot_id": "b4087995831f0ed9"
+      "snapshot_id": "360df9d41d93c13d"
     },
     "outbound": {
       "schema": 1,
@@ -3531,7 +3552,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T02:47:16Z",
+          "updated": "2026-10-24T02:47:50Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3547,7 +3568,7 @@
           ]
         }
       },
-      "snapshot_id": "c8324c838f817e92"
+      "snapshot_id": "49f1f47a2ab7efa1"
     },
     "scriptgen": {
       "schema": 1,
@@ -3583,10 +3604,10 @@
       "units": [
         {
           "id": "CAL-GROUNDING-QUARANTINE",
-          "status": "proposed",
+          "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": null,
+          "ctx_pct": 19,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3608,7 +3629,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 25,
+          "ctx_pct": 30,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3652,7 +3673,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 27,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3671,7 +3692,6 @@
         }
       ],
       "eligible": [
-        "CAL-GROUNDING-QUARANTINE",
         "WRAPPER-V9-HARDEN",
         "CLAIM-ENTAILMENT",
         "CLI-QUALIFY-GATE",
@@ -3929,7 +3949,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-24T02:47:16Z",
+          "updated": "2026-10-24T02:47:50Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3945,7 +3965,7 @@
           ]
         }
       },
-      "snapshot_id": "c3298e6c029febd0"
+      "snapshot_id": "dc4dd79d2a545a35"
     }
   },
   "pm": {
@@ -3973,22 +3993,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 29
       }
     ]
   },
-  "snapshot_id": "85b2d91af6e0e44f",
-  "published_at": "2026-10-24T02:47:49Z"
+  "snapshot_id": "4e840a27ac431ecd",
+  "published_at": "2026-10-24T02:53:19Z"
 }
