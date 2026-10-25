@@ -433,7 +433,7 @@
             37.0
           ],
           [
-            25.3,
+            25.4,
             41.0
           ]
         ]
@@ -814,7 +814,7 @@
           28.0
         ],
         [
-          41.0,
+          41.1,
           31.0
         ]
       ]
@@ -3236,15 +3236,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 36,
-          "last_commit_at": 1792881707,
-          "head": "845249ef",
+          "ctx_pct": 37,
+          "last_commit_at": 1792971314,
+          "head": "f0e7f631",
           "subfence": {
             "done": 15,
             "total": 16
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "f0e7f631",
+              "at": 1792971314
+            },
             {
               "sha": "845249ef",
               "at": 1792881707
@@ -3260,10 +3264,6 @@
             {
               "sha": "1290f837",
               "at": 1792880544
-            },
-            {
-              "sha": "955268c4",
-              "at": 1792880512
             }
           ],
           "fences": {
@@ -3279,7 +3279,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 49,
+          "ctx_pct": 51,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3569,7 +3569,7 @@
           ]
         }
       },
-      "snapshot_id": "adbaa0be6b6ee60d"
+      "snapshot_id": "9f73c476294f5c06"
     },
     "outbound": {
       "schema": 1,
@@ -3932,19 +3932,13 @@
           ]
         }
       },
-      "snapshot_id": "17304cb99d345701"
+      "snapshot_id": "1d7ab5594d295335"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CLAIM-ENTAILMENT",
-            "kind": "needs-owner",
-            "raised_at": 1792914971
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3975,17 +3969,25 @@
         {
           "id": "CLAIM-ENTAILMENT",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 26,
-          "last_commit_at": 1792914931,
-          "head": "28fc99ad",
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 31,
+          "last_commit_at": 1792971375,
+          "head": "529f53e3",
           "subfence": {
             "done": 11,
             "total": 13
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "529f53e3",
+              "at": 1792971375
+            },
+            {
+              "sha": "988dd3a8",
+              "at": 1792971306
+            },
             {
               "sha": "28fc99ad",
               "at": 1792914931
@@ -3997,14 +3999,6 @@
             {
               "sha": "09b24e5f",
               "at": 1792914343
-            },
-            {
-              "sha": "7482c6bf",
-              "at": 1792914273
-            },
-            {
-              "sha": "5cfb19bb",
-              "at": 1792914225
             }
           ],
           "fences": {
@@ -4013,14 +4007,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "CLI-QUALIFY-GATE",
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 44,
+          "ctx_pct": 45,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4042,7 +4036,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 39,
+          "ctx_pct": 40,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4332,7 +4326,7 @@
           ]
         }
       },
-      "snapshot_id": "eca846b10445ab88"
+      "snapshot_id": "631586d6e96c3a67"
     }
   },
   "pm": {
@@ -4360,22 +4354,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 1083
+        "monitor_last_pass_min": 1088
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1083
+        "monitor_last_pass_min": 1088
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1083
+        "monitor_last_pass_min": 1088
       }
     ]
   },
-  "snapshot_id": "971b1830f2c68673",
-  "published_at": "2026-10-25T23:33:54Z"
+  "snapshot_id": "18550630b83cc9d8",
+  "published_at": "2026-10-25T23:39:21Z"
 }
