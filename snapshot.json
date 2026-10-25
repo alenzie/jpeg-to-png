@@ -118,7 +118,7 @@
             0.0
           ],
           [
-            15.6,
+            15.7,
             0.0
           ]
         ]
@@ -325,7 +325,7 @@
             36.0
           ],
           [
-            14.1,
+            14.2,
             36.0
           ]
         ]
@@ -2915,7 +2915,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792901936
+        "last_pass_at": 1792903573
       },
       "runstate": {
         "auto": false,
@@ -3238,7 +3238,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-25T04:37:35Z",
+          "updated": "2026-10-25T04:41:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3254,7 +3254,7 @@
           ]
         }
       },
-      "snapshot_id": "990d9306c5d398d5"
+      "snapshot_id": "9ded6e35947318a5"
     },
     "outbound": {
       "schema": 1,
@@ -3266,7 +3266,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792901935
+        "last_pass_at": 1792903573
       },
       "runstate": {
         "auto": false,
@@ -3601,7 +3601,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-25T04:37:35Z",
+          "updated": "2026-10-25T04:41:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3617,19 +3617,25 @@
           ]
         }
       },
-      "snapshot_id": "a9838b814836e3b9"
+      "snapshot_id": "98d195fe2229f4da"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "E3-KIT-HARDEN",
+            "kind": "escalate",
+            "raised_at": 1792903618
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792901936
+        "last_pass_at": 1792903573
       },
       "runstate": {
         "auto": false,
@@ -3656,15 +3662,23 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 31,
-          "last_commit_at": 1792902948,
-          "head": "79d3ec6b",
+          "ctx_pct": 36,
+          "last_commit_at": 1792903622,
+          "head": "257d20fd",
           "subfence": {
-            "done": 6,
-            "total": 12
+            "done": 7,
+            "total": 13
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "257d20fd",
+              "at": 1792903622
+            },
+            {
+              "sha": "cde6ac30",
+              "at": 1792903515
+            },
             {
               "sha": "79d3ec6b",
               "at": 1792902948
@@ -3676,14 +3690,6 @@
             {
               "sha": "a1f2089c",
               "at": 1792902130
-            },
-            {
-              "sha": "62c82da7",
-              "at": 1792901734
-            },
-            {
-              "sha": "59924aae",
-              "at": 1792901051
             }
           ],
           "fences": {
@@ -3697,50 +3703,25 @@
         {
           "id": "E3-KIT-HARDEN",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 44,
-          "last_commit_at": 1792903280,
-          "head": "c7f62f76",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 45,
+          "last_commit_at": 1792903579,
+          "head": "f68b593a",
           "subfence": {
             "done": 10,
             "total": 11
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-6-astra xhigh 66 bounded slices",
-              "must": 3,
-              "should": 7,
-              "could": 2,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-sol high fix diff + callerscalle",
-              "must": 1,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra high cumulative repair sur",
-              "must": 2,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.6-terra xhigh declarer cumulative ",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "f68b593a",
+              "at": 1792903579
+            },
+            {
+              "sha": "48cc2992",
+              "at": 1792903539
+            },
             {
               "sha": "c7f62f76",
               "at": 1792903280
@@ -3752,14 +3733,6 @@
             {
               "sha": "dd804ce0",
               "at": 1792903035
-            },
-            {
-              "sha": "d0a961fd",
-              "at": 1792902999
-            },
-            {
-              "sha": "dfe19e5d",
-              "at": 1792902533
             }
           ],
           "fences": {
@@ -3768,7 +3741,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4028,7 +4001,7 @@
               "wall": false
             }
           },
-          "updated": "2026-10-25T04:37:35Z",
+          "updated": "2026-10-25T04:41:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4044,7 +4017,7 @@
           ]
         }
       },
-      "snapshot_id": "d188a2b253f11f76"
+      "snapshot_id": "24f5004eba665078"
     }
   },
   "pm": {
@@ -4072,22 +4045,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 0
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 0
       }
     ]
   },
-  "snapshot_id": "e095ba61b41ee791",
-  "published_at": "2026-10-25T04:41:38Z"
+  "snapshot_id": "1874ba6897db9b7a",
+  "published_at": "2026-10-25T04:47:07Z"
 }
