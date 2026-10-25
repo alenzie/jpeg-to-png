@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "promax",
-        "projected": 257,
+        "projected": 256,
         "used": 40,
-        "at": 1792899428,
+        "at": 1792900060,
         "reset": "19:29 on 30 Oct",
         "spark": [
           [
@@ -129,10 +129,10 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 256,
-        "used": 36,
-        "at": 1792899428,
-        "reset": "Oct 30, 10pm (America/Los_Angeles)",
+        "projected": 261,
+        "used": 37,
+        "at": 1792900060,
+        "reset": "Oct 30, 9:59pm (America/Los_Angeles)",
         "spark": [
           [
             1792627200,
@@ -335,7 +335,7 @@
       "target": 100,
       "projected": 94,
       "used": 28,
-      "at": 1792899428,
+      "at": 1792900060,
       "reset": "Oct 29, 19:39",
       "level": "pro",
       "spark": [
@@ -626,7 +626,7 @@
           28.0
         ],
         [
-          29.8,
+          29.9,
           28.0
         ]
       ]
@@ -637,7 +637,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1792899428,
+      "at": 1792900060,
       "spark": [
         [
           1792627200,
@@ -825,8 +825,8 @@
       "codex": {
         "B": [
           [
-            1789015931,
-            42.0
+            1789016513,
+            43.0
           ],
           [
             1789020107,
@@ -1549,7 +1549,7 @@
       "claude": {
         "B": [
           [
-            1789015931,
+            1789016513,
             60.0
           ],
           [
@@ -2176,7 +2176,7 @@
       },
       "glm": [
         [
-          1789015931,
+          1789016513,
           64.0
         ],
         [
@@ -2915,7 +2915,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792903573
+        "last_pass_at": 1792903651
       },
       "runstate": {
         "auto": false,
@@ -3212,7 +3212,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 257,
+              "proj": 256,
               "target": 100,
               "used": 40,
               "day": 2,
@@ -3230,15 +3230,15 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 256,
+              "proj": 261,
               "target": 100,
-              "used": 36,
+              "used": 37,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-10-25T04:41:42Z",
+          "updated": "2026-10-25T04:47:48Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3254,7 +3254,7 @@
           ]
         }
       },
-      "snapshot_id": "9ded6e35947318a5"
+      "snapshot_id": "a672774d4f7511ab"
     },
     "outbound": {
       "schema": 1,
@@ -3266,7 +3266,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792903573
+        "last_pass_at": 1792903651
       },
       "runstate": {
         "auto": false,
@@ -3575,7 +3575,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 257,
+              "proj": 256,
               "target": 100,
               "used": 40,
               "day": 2,
@@ -3593,15 +3593,15 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 256,
+              "proj": 261,
               "target": 100,
-              "used": 36,
+              "used": 37,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-10-25T04:41:42Z",
+          "updated": "2026-10-25T04:47:48Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3617,25 +3617,19 @@
           ]
         }
       },
-      "snapshot_id": "98d195fe2229f4da"
+      "snapshot_id": "0664cbccb3949a08"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "E3-KIT-HARDEN",
-            "kind": "escalate",
-            "raised_at": 1792903618
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1792903573
+        "last_pass_at": 1792903652
       },
       "runstate": {
         "auto": false,
@@ -3662,7 +3656,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 36,
+          "ctx_pct": 48,
           "last_commit_at": 1792903622,
           "head": "257d20fd",
           "subfence": {
@@ -3703,17 +3697,62 @@
         {
           "id": "E3-KIT-HARDEN",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 45,
-          "last_commit_at": 1792903579,
-          "head": "f68b593a",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 48,
+          "last_commit_at": 1792903875,
+          "head": "fc125e5f",
           "subfence": {
             "done": 10,
             "total": 11
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "gpt-6-astra xhigh 66 bounded slices",
+              "must": 3,
+              "should": 7,
+              "could": 2,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "gpt-5.6-sol high fix diff + callerscalle",
+              "must": 1,
+              "should": 2,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terra high cumulative repair sur",
+              "must": 2,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "gpt-5.6-terra xhigh declarer cumulative ",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "gpt-5.6-terra high cumulative repair sur",
+              "must": 1,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "fc125e5f",
+              "at": 1792903875
+            },
             {
               "sha": "f68b593a",
               "at": 1792903579
@@ -3729,10 +3768,6 @@
             {
               "sha": "c29f455e",
               "at": 1792903251
-            },
-            {
-              "sha": "dd804ce0",
-              "at": 1792903035
             }
           ],
           "fences": {
@@ -3741,7 +3776,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -3975,7 +4010,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 257,
+              "proj": 256,
               "target": 100,
               "used": 40,
               "day": 2,
@@ -3993,15 +4028,15 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 256,
+              "proj": 261,
               "target": 100,
-              "used": 36,
+              "used": 37,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-10-25T04:41:42Z",
+          "updated": "2026-10-25T04:47:48Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4017,7 +4052,7 @@
           ]
         }
       },
-      "snapshot_id": "24f5004eba665078"
+      "snapshot_id": "b7420d56bb6ccb2a"
     }
   },
   "pm": {
@@ -4045,22 +4080,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 5
       }
     ]
   },
-  "snapshot_id": "1874ba6897db9b7a",
-  "published_at": "2026-10-25T04:47:07Z"
+  "snapshot_id": "d26092799991f7b6",
+  "published_at": "2026-10-25T04:52:42Z"
 }
