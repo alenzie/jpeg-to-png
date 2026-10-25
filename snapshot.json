@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "promax",
-        "projected": 232,
-        "used": 31,
-        "at": 1792886332,
+        "projected": 236,
+        "used": 32,
+        "at": 1792887499,
         "reset": "19:29 on 30 Oct",
         "spark": [
           [
@@ -86,6 +86,10 @@
           [
             1792882800,
             241
+          ],
+          [
+            1792886400,
+            236
           ]
         ],
         "trail": [
@@ -115,8 +119,8 @@
         "mult": "20x",
         "projected": null,
         "used": 36,
-        "at": 1792886332,
-        "reset": "Oct 30, 9:59pm (America/Los_Angeles)",
+        "at": 1792887499,
+        "reset": "Oct 30, 10pm (America/Los_Angeles)",
         "spark": [
           [
             1792292400,
@@ -285,6 +289,10 @@
             36.0
           ],
           [
+            11.0,
+            36.0
+          ],
+          [
             12.1,
             36.0
           ]
@@ -293,9 +301,9 @@
     ],
     "glm": {
       "target": 100,
-      "projected": 102,
+      "projected": 101,
       "used": 28,
-      "at": 1792886332,
+      "at": 1792887499,
       "reset": "Oct 29, 19:39",
       "level": "pro",
       "spark": [
@@ -438,6 +446,10 @@
         [
           1792882800,
           104
+        ],
+        [
+          1792886400,
+          101
         ]
       ],
       "trail": [
@@ -558,6 +570,10 @@
           28.0
         ],
         [
+          27.0,
+          28.0
+        ],
+        [
           27.8,
           28.0
         ]
@@ -569,7 +585,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1792886332,
+      "at": 1792887499,
       "spark": [
         [
           1792292400,
@@ -737,6 +753,10 @@
         ],
         [
           1792882800,
+          -0.0
+        ],
+        [
+          1792886400,
           -0.0
         ]
       ]
@@ -1451,6 +1471,10 @@
           [
             1792883228,
             31.0
+          ],
+          [
+            1792887499,
+            32.0
           ]
         ]
       },
@@ -2066,6 +2090,10 @@
           ],
           [
             1792883228,
+            36.0
+          ],
+          [
+            1792887499,
             36.0
           ]
         ]
@@ -2778,6 +2806,10 @@
         [
           1792883228,
           28.0
+        ],
+        [
+          1792887499,
+          28.0
         ]
       ]
     }
@@ -2798,8 +2830,8 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1792881928
+        "monitor_alive": true,
+        "last_pass_at": 1792891125
       },
       "runstate": {
         "auto": false,
@@ -2817,7 +2849,7 @@
           "up": false
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [
@@ -3138,7 +3170,7 @@
           ]
         }
       },
-      "snapshot_id": "c5dc2b5305151316"
+      "snapshot_id": "8e4b28a362151602"
     },
     "outbound": {
       "schema": 1,
@@ -3149,8 +3181,8 @@
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1792881928
+        "monitor_alive": true,
+        "last_pass_at": 1792891125
       },
       "runstate": {
         "auto": false,
@@ -3168,7 +3200,7 @@
           "up": false
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [],
@@ -3501,25 +3533,19 @@
           ]
         }
       },
-      "snapshot_id": "18e201f6a26b8e5c"
+      "snapshot_id": "41070ccdbca6947e"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "E3-KIT-HARDEN",
-            "kind": "needs-owner",
-            "raised_at": 1792885654
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
-        "monitor_alive": false,
-        "last_pass_at": 1792881928
+        "monitor_alive": true,
+        "last_pass_at": 1792891125
       },
       "runstate": {
         "auto": false,
@@ -3537,7 +3563,7 @@
           "up": false
         },
         "monitor": {
-          "up": false
+          "up": true
         }
       },
       "units": [
@@ -3546,7 +3572,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 44,
+          "ctx_pct": 46,
           "last_commit_at": 1792889838,
           "head": "980621b6",
           "subfence": {
@@ -3587,17 +3613,25 @@
         {
           "id": "E3-KIT-HARDEN",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 28,
-          "last_commit_at": 1792885630,
-          "head": "83b58352",
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 31,
+          "last_commit_at": 1792891262,
+          "head": "9fdce8dd",
           "subfence": {
             "done": 7,
             "total": 11
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "9fdce8dd",
+              "at": 1792891262
+            },
+            {
+              "sha": "66b4979e",
+              "at": 1792891191
+            },
             {
               "sha": "83b58352",
               "at": 1792885630
@@ -3609,14 +3643,6 @@
             {
               "sha": "47dd404d",
               "at": 1792885370
-            },
-            {
-              "sha": "a5d521df",
-              "at": 1792884726
-            },
-            {
-              "sha": "f0bbdc07",
-              "at": 1792884584
             }
           ],
           "fences": {
@@ -3625,7 +3651,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -3901,7 +3927,7 @@
           ]
         }
       },
-      "snapshot_id": "449a9ae23c058471"
+      "snapshot_id": "20a272ac8c88ecb3"
     }
   },
   "pm": {
@@ -3920,8 +3946,8 @@
       "available_note": "owner back 2026-10-23T02:57:40Z"
     },
     "pm_session": {
-      "lock": "3332498 2026-10-24T22:47:07Z",
-      "fresh": false
+      "lock": "4173929 2026-10-25T01:17:17Z",
+      "fresh": true
     },
     "sterling_up": true,
     "fleets": [
@@ -3929,22 +3955,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 151
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "flowmaster",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 151
+        "monitor_last_pass_min": 3
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 151
+        "monitor_last_pass_min": 3
       }
     ]
   },
-  "snapshot_id": "0c1053bd59555953",
-  "published_at": "2026-10-25T01:16:27Z"
+  "snapshot_id": "98ceb1367826ed15",
+  "published_at": "2026-10-25T01:21:49Z"
 }
