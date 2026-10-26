@@ -162,7 +162,7 @@
             11.0
           ],
           [
-            12.5,
+            12.6,
             15.0
           ]
         ]
@@ -3342,8 +3342,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "DESKTOP-RUNTIME-MAINTENANCE",
+            "kind": "escalate",
+            "raised_at": 1792984238
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3374,8 +3380,8 @@
         {
           "id": "DESKTOP-RUNTIME-MAINTENANCE",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 43,
           "last_commit_at": 1792983739,
           "head": "00b626ab",
@@ -3412,14 +3418,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "LLM-PROXY-PREAUTH-ABUSE",
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 17,
+          "ctx_pct": 19,
           "last_commit_at": 1792983522,
           "head": "9a5efc9e",
           "subfence": {
@@ -3730,7 +3736,7 @@
           ]
         }
       },
-      "snapshot_id": "cf098aa280af1daf"
+      "snapshot_id": "fc9f30fe87a3a859"
     },
     "outbound": {
       "schema": 1,
@@ -4181,7 +4187,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 36,
+          "ctx_pct": 37,
           "last_commit_at": 1792983995,
           "head": "16f1026a",
           "subfence": {
@@ -4535,7 +4541,7 @@
           ]
         }
       },
-      "snapshot_id": "74110412f63b46e3"
+      "snapshot_id": "25fbb2e137f17e95"
     }
   },
   "pm": {
@@ -4563,22 +4569,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 1299
+        "monitor_last_pass_min": 1304
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1299
+        "monitor_last_pass_min": 1304
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1299
+        "monitor_last_pass_min": 1304
       }
     ]
   },
-  "snapshot_id": "181463731c052c02",
-  "published_at": "2026-10-26T03:09:43Z"
+  "snapshot_id": "abbb1804667226f4",
+  "published_at": "2026-10-26T03:15:16Z"
 }
