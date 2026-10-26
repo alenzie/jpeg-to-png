@@ -898,7 +898,7 @@
           35.0
         ],
         [
-          43.6,
+          43.7,
           37.0
         ]
       ]
@@ -3420,10 +3420,10 @@
         },
         {
           "id": "LLM-PROXY-PREAUTH-ABUSE",
-          "status": "building",
+          "status": "built",
           "stage": "merge+cleanup",
           "stage_i": 6,
-          "ctx_pct": 10,
+          "ctx_pct": 15,
           "last_commit_at": 1792986612,
           "head": "67157144",
           "subfence": {
@@ -3471,6 +3471,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 74,
+          "unit": "LLM-PROXY-PREAUTH-ABUSE",
+          "merged_at": 1792987195,
+          "sha": "515be5ea"
+        },
+        {
           "pr": 73,
           "unit": "DESKTOP-HANDLE-IO-CONTAI",
           "merged_at": 1792874342,
@@ -3493,12 +3499,6 @@
           "unit": "CONFIG-TESTMODE-TRANSACT",
           "merged_at": 1792809551,
           "sha": "77c36186"
-        },
-        {
-          "pr": 70,
-          "unit": "deny-advisories-2026-10-",
-          "merged_at": 1792808849,
-          "sha": "78dfb383"
         }
       ],
       "decisions": [],
@@ -3734,7 +3734,7 @@
           ]
         }
       },
-      "snapshot_id": "a6473b712f551738"
+      "snapshot_id": "570460c33fd42df9"
     },
     "outbound": {
       "schema": 1,
@@ -3771,6 +3771,7 @@
       "eligible": [
         "REFUSAL-NEEDSYOU-ACK",
         "CUSTODY-VAULT",
+        "FAX-LINE",
         "INT7-MARKETPLACE",
         "INT7-PUBLIC-API-OAUTH-PKJWT",
         "INT7-RT-HUBSPOT-PORTAL-SWITCH",
@@ -3791,10 +3792,15 @@
         "MERGE-ERASURE-HARDPURGE",
         "REFUSAL-CHAIN-PARITY",
         "REFUSAL-EXPORTS",
-        "CONTACT-EMAIL",
-        "EMAIL-WIRING-2"
+        "CONTACT-EMAIL"
       ],
       "merge_feed": [
+        {
+          "pr": 377,
+          "unit": "consolidate-telnyx-20261",
+          "merged_at": 1792987349,
+          "sha": "f935a1af"
+        },
         {
           "pr": 376,
           "unit": "consolidate-sms-simulato",
@@ -3818,12 +3824,6 @@
           "unit": "account-levels-proposal-",
           "merged_at": 1791747866,
           "sha": "3d859057"
-        },
-        {
-          "pr": 368,
-          "unit": "staff-audit-20261011",
-          "merged_at": 1791720053,
-          "sha": "3d1628e6"
         }
       ],
       "decisions": [
@@ -4097,7 +4097,7 @@
           ]
         }
       },
-      "snapshot_id": "ba673dac34323a6b"
+      "snapshot_id": "4547483e073eb563"
     },
     "scriptgen": {
       "schema": 1,
@@ -4142,7 +4142,7 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 27,
+          "ctx_pct": 31,
           "last_commit_at": 1792981788,
           "head": "986ac936",
           "subfence": {
@@ -4185,15 +4185,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 42,
-          "last_commit_at": 1792985988,
-          "head": "68215cbe",
+          "ctx_pct": 43,
+          "last_commit_at": 1792987320,
+          "head": "101cbedf",
           "subfence": {
             "done": 3,
             "total": 10
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "101cbedf",
+              "at": 1792987320
+            },
             {
               "sha": "68215cbe",
               "at": 1792985988
@@ -4209,10 +4213,6 @@
             {
               "sha": "1e686cd0",
               "at": 1792983504
-            },
-            {
-              "sha": "8d9ced66",
-              "at": 1792982392
             }
           ],
           "fences": {
@@ -4539,7 +4539,7 @@
           ]
         }
       },
-      "snapshot_id": "afac00a3f914b5b8"
+      "snapshot_id": "f359173529a17adc"
     }
   },
   "pm": {
@@ -4567,22 +4567,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 1348
+        "monitor_last_pass_min": 1353
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1348
+        "monitor_last_pass_min": 1353
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1348
+        "monitor_last_pass_min": 1353
       }
     ]
   },
-  "snapshot_id": "a6dde79e2052da94",
-  "published_at": "2026-10-26T03:58:55Z"
+  "snapshot_id": "660b4021cb200811",
+  "published_at": "2026-10-26T04:04:16Z"
 }
