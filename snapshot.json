@@ -589,7 +589,7 @@
             82.0
           ],
           [
-            36.1,
+            36.2,
             83.0
           ]
         ]
@@ -1106,7 +1106,7 @@
           45.0
         ],
         [
-          51.8,
+          51.9,
           45.0
         ]
       ]
@@ -4057,7 +4057,7 @@
           ]
         }
       },
-      "snapshot_id": "96f8d0ed34a094b3"
+      "snapshot_id": "de476e72de34a79b"
     },
     "outbound": {
       "schema": 1,
@@ -4420,19 +4420,13 @@
           ]
         }
       },
-      "snapshot_id": "e4be8e1580ad1442"
+      "snapshot_id": "256f1a65779e452a"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CLI-QUALIFY-GATE",
-            "kind": "escalate",
-            "raised_at": 1793030837
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4463,16 +4457,41 @@
         {
           "id": "CLI-QUALIFY-GATE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 43,
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 44,
           "last_commit_at": 1793029538,
           "head": "e7e5b2c0",
           "subfence": {
             "done": 10,
             "total": 10
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "routed breadth reviewer all live slices",
+              "must": 0,
+              "should": 2,
+              "could": 1,
+              "nit": 0
+            },
+            {
+              "round": 1,
+              "seats": "independent cross-family reviewer",
+              "must": 0,
+              "should": 4,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "routed iterative reviewer",
+              "must": 0,
+              "should": 0,
+              "could": 1,
+              "nit": 0
+            }
+          ],
           "commits": [
             {
               "sha": "e7e5b2c0",
@@ -4501,14 +4520,14 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "ORIGINALITY-JUDGE",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 41,
+          "ctx_pct": 42,
           "last_commit_at": 1793034690,
           "head": "5ad91256",
           "subfence": {
@@ -4819,7 +4838,7 @@
           ]
         }
       },
-      "snapshot_id": "6ae5d2bbb4575b73"
+      "snapshot_id": "89f5a39e2942264d"
     }
   },
   "pm": {
@@ -4847,22 +4866,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 2170
+        "monitor_last_pass_min": 2176
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2170
+        "monitor_last_pass_min": 2176
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 2170
+        "monitor_last_pass_min": 2176
       }
     ]
   },
-  "snapshot_id": "9c3a00727fab106b",
-  "published_at": "2026-10-26T17:41:34Z"
+  "snapshot_id": "6fab728c6572b68d",
+  "published_at": "2026-10-26T17:46:57Z"
 }
