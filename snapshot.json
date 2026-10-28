@@ -186,7 +186,7 @@
             2.0
           ],
           [
-            2.8,
+            2.9,
             9.0
           ]
         ]
@@ -785,7 +785,7 @@
             89.0
           ],
           [
-            61.0,
+            61.1,
             89.0
           ]
         ]
@@ -4430,14 +4430,20 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "DESKTOP-BUSY-CENSUS",
+            "kind": "needs-owner",
+            "raised_at": 1793187076
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1793185049
+        "last_pass_at": 1793186893
       },
       "runstate": {
         "auto": false,
@@ -4462,9 +4468,9 @@
         {
           "id": "DESKTOP-BUSY-CENSUS",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 39,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 41,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4479,7 +4485,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4755,7 +4761,7 @@
           ]
         }
       },
-      "snapshot_id": "24d0de167ec388fa"
+      "snapshot_id": "f6cb1d9bae74304c"
     },
     "outbound": {
       "schema": 1,
@@ -4767,7 +4773,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1793185050
+        "last_pass_at": 1793186893
       },
       "runstate": {
         "auto": false,
@@ -5118,7 +5124,7 @@
           ]
         }
       },
-      "snapshot_id": "b39455e482f436b9"
+      "snapshot_id": "7a48bd708c1927e7"
     },
     "scriptgen": {
       "schema": 1,
@@ -5130,7 +5136,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1793185049
+        "last_pass_at": 1793186893
       },
       "runstate": {
         "auto": false,
@@ -5425,7 +5431,7 @@
           ]
         }
       },
-      "snapshot_id": "c9b1f25c27a4039c"
+      "snapshot_id": "dd596f653f5e7e90"
     }
   },
   "pm": {
@@ -5444,7 +5450,7 @@
       "available_note": "owner back 2026-10-23T02:57:40Z"
     },
     "pm_session": {
-      "lock": "3004045 2026-10-28T10:56:11Z",
+      "lock": "3169206 2026-10-28T11:27:37Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -5453,22 +5459,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 30
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 30
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 30
+        "monitor_last_pass_min": 5
       }
     ]
   },
-  "snapshot_id": "8867941df67e56c6",
-  "published_at": "2026-10-28T11:27:36Z"
+  "snapshot_id": "a18e6dc39c06474a",
+  "published_at": "2026-10-28T11:33:14Z"
 }
