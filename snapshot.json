@@ -46,7 +46,7 @@
         ],
         "trail": [
           [
-            24.9,
+            25.0,
             14.0
           ]
         ]
@@ -121,7 +121,7 @@
             26.0
           ],
           [
-            77.4,
+            77.5,
             30.0
           ]
         ]
@@ -194,7 +194,7 @@
           9.0
         ],
         [
-          93.1,
+          93.2,
           12.0
         ]
       ]
@@ -1757,7 +1757,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1793889550
+        "last_pass_at": 1793891355
       },
       "runstate": {
         "auto": false,
@@ -1784,7 +1784,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 22,
+          "ctx_pct": 24,
           "last_commit_at": 1793890668,
           "head": "8f5b2985",
           "subfence": {
@@ -2116,7 +2116,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-05T15:06:04Z",
+          "updated": "2026-11-05T15:07:03Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -2132,7 +2132,7 @@
           ]
         }
       },
-      "snapshot_id": "58899a0832b959b3"
+      "snapshot_id": "1293fac938bd5147"
     },
     "outbound": {
       "schema": 1,
@@ -2143,6 +2143,16 @@
             "id": "ACCT-LEVELS-1",
             "kind": "needs-owner",
             "raised_at": 1793882682
+          },
+          {
+            "id": "ONB1-DSAR-LOCATOR-ATOMICITY",
+            "kind": "needs-owner",
+            "raised_at": 1793891407
+          },
+          {
+            "id": "UC-1",
+            "kind": "needs-owner",
+            "raised_at": 1793891479
           }
         ]
       },
@@ -2150,7 +2160,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1793889554
+        "last_pass_at": 1793891359
       },
       "runstate": {
         "auto": false,
@@ -2218,11 +2228,11 @@
         {
           "id": "ONB1-DSAR-LOCATOR-ATOMICITY",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 44,
-          "last_commit_at": 1793890527,
-          "head": "1828f590",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 46,
+          "last_commit_at": 1793891395,
+          "head": "5eb02918",
           "subfence": {
             "done": 0,
             "total": 7
@@ -2230,24 +2240,24 @@
           "review_rounds": [],
           "commits": [
             {
+              "sha": "5eb02918",
+              "at": 1793891395
+            },
+            {
+              "sha": "7e4d922d",
+              "at": 1793891316
+            },
+            {
+              "sha": "d06eec2e",
+              "at": 1793891296
+            },
+            {
               "sha": "1828f590",
               "at": 1793890527
             },
             {
               "sha": "5affd332",
               "at": 1793890510
-            },
-            {
-              "sha": "59034117",
-              "at": 1793889587
-            },
-            {
-              "sha": "f0772563",
-              "at": 1793889574
-            },
-            {
-              "sha": "f420d862",
-              "at": 1793888833
             }
           ],
           "fences": {
@@ -2256,14 +2266,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "UC-1",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 42,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 46,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2278,7 +2288,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -2575,7 +2585,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-05T15:06:04Z",
+          "updated": "2026-11-05T15:07:03Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -2591,7 +2601,7 @@
           ]
         }
       },
-      "snapshot_id": "3bed41e90d2f310f"
+      "snapshot_id": "bad70b974530ee2a"
     },
     "scriptgen": {
       "schema": 1,
@@ -2603,7 +2613,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1793889549
+        "last_pass_at": 1793891353
       },
       "runstate": {
         "auto": false,
@@ -2630,12 +2640,12 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 43,
+          "ctx_pct": 47,
           "last_commit_at": 1793891052,
           "head": "e190eb95",
           "subfence": {
             "done": 0,
-            "total": null
+            "total": 9
           },
           "review_rounds": [],
           "commits": [
@@ -2937,7 +2947,7 @@
           ]
         }
       },
-      "snapshot_id": "b5c3ce6cc1df4fba"
+      "snapshot_id": "ffa0d43ef2e02d4c"
     }
   },
   "pm": {
@@ -2965,22 +2975,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 4
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 28
+        "monitor_last_pass_min": 4
       }
     ]
   },
-  "snapshot_id": "aaabc8016a1ec03f",
-  "published_at": "2026-11-05T15:07:19Z"
+  "snapshot_id": "0fd6d4badaeb14c3",
+  "published_at": "2026-11-05T15:13:42Z"
 }
