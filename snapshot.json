@@ -61,7 +61,7 @@
             12.0
           ],
           [
-            74.7,
+            74.8,
             13.0
           ]
         ]
@@ -1582,8 +1582,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "DESKTOP-BUSY-CENSUS",
+            "kind": "needs-owner",
+            "raised_at": 1793874788
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -1614,17 +1620,25 @@
         {
           "id": "DESKTOP-BUSY-CENSUS",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 26,
-          "last_commit_at": 1793261395,
-          "head": "9a9a5ebb",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 28,
+          "last_commit_at": 1793874676,
+          "head": "af9b4922",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "af9b4922",
+              "at": 1793874676
+            },
+            {
+              "sha": "20a5e76f",
+              "at": 1793874594
+            },
             {
               "sha": "9a9a5ebb",
               "at": 1793261395
@@ -1636,14 +1650,6 @@
             {
               "sha": "9c4c1fa8",
               "at": 1793256068
-            },
-            {
-              "sha": "39b998f9",
-              "at": 1793187019
-            },
-            {
-              "sha": "0c5d448b",
-              "at": 1793186382
             }
           ],
           "fences": {
@@ -1652,12 +1658,32 @@
             "build": false,
             "review": false
           },
+          "gate_open": true
+        },
+        {
+          "id": "LICENSING-HARDENING",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 17,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
           "gate_open": false
         }
       ],
-      "eligible": [
-        "LICENSING-HARDENING"
-      ],
+      "eligible": [],
       "merge_feed": [
         {
           "pr": 75,
@@ -1907,7 +1933,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-05T10:28:17Z",
+          "updated": "2026-11-05T10:30:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -1923,7 +1949,7 @@
           ]
         }
       },
-      "snapshot_id": "748fc6c8c68a448d"
+      "snapshot_id": "3f4278266c4ec3b0"
     },
     "outbound": {
       "schema": 1,
@@ -1962,7 +1988,29 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 30,
+          "ctx_pct": 32,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "ONB1-DSAR-LOCATOR-ATOMICITY",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 16,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1985,8 +2033,7 @@
         "REFUSAL-RECORD-COMPLETION",
         "CONTACT-EMAIL",
         "EMAIL-WIRING-2",
-        "MSG12",
-        "ONB1-DSAR-LOCATOR-ATOMICITY"
+        "MSG12"
       ],
       "merge_feed": [
         {
@@ -2258,24 +2305,24 @@
             },
             "glm": {
               "verdict": "UNDERBURN",
-              "proj": 0,
+              "proj": 3,
               "target": 100,
-              "used": 0,
+              "used": 3,
               "day": 7,
               "active": "G1",
               "wall": false
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 17,
+              "proj": 19,
               "target": 100,
-              "used": 13,
+              "used": 14,
               "day": 6,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-05T10:07:48Z",
+          "updated": "2026-11-05T10:30:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -2291,7 +2338,7 @@
           ]
         }
       },
-      "snapshot_id": "53e187d433f881c9"
+      "snapshot_id": "fbae95f823d07ea1"
     },
     "scriptgen": {
       "schema": 1,
@@ -2324,10 +2371,32 @@
           "up": true
         }
       },
-      "units": [],
+      "units": [
+        {
+          "id": "S6-CLEANUP-A",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 19,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        }
+      ],
       "eligible": [
-        "WRAPPER-V9-HARDEN",
-        "S6-CLEANUP-A"
+        "WRAPPER-V9-HARDEN"
       ],
       "merge_feed": [
         {
@@ -2578,7 +2647,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-05T10:28:17Z",
+          "updated": "2026-11-05T10:30:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -2594,7 +2663,7 @@
           ]
         }
       },
-      "snapshot_id": "7f5b6e9510f44c4c"
+      "snapshot_id": "ec58cf2de95f8e04"
     }
   },
   "pm": {
@@ -2622,22 +2691,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       }
     ]
   },
-  "snapshot_id": "5b6cd8bad3e78af9",
-  "published_at": "2026-11-05T10:28:33Z"
+  "snapshot_id": "ca8647fa5a5374a0",
+  "published_at": "2026-11-05T10:34:34Z"
 }
