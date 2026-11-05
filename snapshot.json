@@ -8,7 +8,7 @@
         "tier": "promax",
         "projected": 73,
         "used": 17,
-        "at": 1793880990,
+        "at": 1793881354,
         "reset": "13:14 on 10 Nov",
         "spark": [
           [
@@ -47,8 +47,8 @@
         "mult": "20x",
         "projected": 28,
         "used": 21,
-        "at": 1793880990,
-        "reset": "Nov 6, 8:59pm (America/Los_Angeles)",
+        "at": 1793881354,
+        "reset": "Nov 6, 9pm (America/Los_Angeles)",
         "spark": [
           [
             1793307600,
@@ -95,7 +95,7 @@
       "target": 100,
       "projected": 9,
       "used": 8,
-      "at": 1793880990,
+      "at": 1793881354,
       "reset": "Nov 05, 18:39",
       "level": "pro",
       "spark": [
@@ -145,7 +145,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1793880990,
+      "at": 1793881354,
       "spark": [
         [
           1793307600,
@@ -1642,14 +1642,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "LICENSING-HARDENING",
-            "kind": "needs-owner",
-            "raised_at": 1793880631
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -1682,15 +1676,19 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 47,
-          "last_commit_at": 1793880213,
-          "head": "ac32f08f",
+          "ctx_pct": 49,
+          "last_commit_at": 1793881219,
+          "head": "d599aa13",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "d599aa13",
+              "at": 1793881219
+            },
             {
               "sha": "ac32f08f",
               "at": 1793880213
@@ -1706,10 +1704,6 @@
             {
               "sha": "39e1e402",
               "at": 1793878567
-            },
-            {
-              "sha": "be230adb",
-              "at": 1793877523
             }
           ],
           "fences": {
@@ -1723,9 +1717,9 @@
         {
           "id": "LICENSING-HARDENING",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 45,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 48,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -1740,7 +1734,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [],
@@ -1993,7 +1987,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-05T12:16:32Z",
+          "updated": "2026-11-05T12:22:36Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -2009,19 +2003,13 @@
           ]
         }
       },
-      "snapshot_id": "59c8dfa4d8a0c26b"
+      "snapshot_id": "dbb4d000ee66c6e0"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "ONB1-DSAR-LOCATOR-ATOMICITY",
-            "kind": "needs-owner",
-            "raised_at": 1793878838
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2095,9 +2083,9 @@
         {
           "id": "ONB1-DSAR-LOCATOR-ATOMICITY",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 36,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 38,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2112,10 +2100,11 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
+        "UC-1",
         "VOICE-LEG-METER",
         "REFUSAL-RECORD-COMPLETION",
         "CONTACT-EMAIL",
@@ -2409,7 +2398,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-05T12:16:32Z",
+          "updated": "2026-11-05T12:22:36Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -2425,19 +2414,13 @@
           ]
         }
       },
-      "snapshot_id": "383b4a61b68eb382"
+      "snapshot_id": "e6d156493be2cffc"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "S6-CLEANUP-A",
-            "kind": "needs-owner",
-            "raised_at": 1793878784
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2468,9 +2451,9 @@
         {
           "id": "S6-CLEANUP-A",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 35,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 38,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2485,7 +2468,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -2740,7 +2723,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-05T12:16:32Z",
+          "updated": "2026-11-05T12:25:02Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -2756,7 +2739,7 @@
           ]
         }
       },
-      "snapshot_id": "850aaeb59ad91493"
+      "snapshot_id": "8c9f0bf6cf5d73b8"
     }
   },
   "pm": {
@@ -2784,22 +2767,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 16
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10
+        "monitor_last_pass_min": 16
       }
     ]
   },
-  "snapshot_id": "2a2a9da847165f0e",
-  "published_at": "2026-11-05T12:18:46Z"
+  "snapshot_id": "c2c293c59f016b92",
+  "published_at": "2026-11-05T12:25:22Z"
 }
