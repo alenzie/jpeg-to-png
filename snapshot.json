@@ -461,7 +461,7 @@
             76.0
           ],
           [
-            95.0,
+            95.1,
             76.0
           ]
         ]
@@ -2532,7 +2532,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1793995585
+        "last_pass_at": 1793997386
       },
       "runstate": {
         "auto": false,
@@ -2822,7 +2822,7 @@
           ]
         }
       },
-      "snapshot_id": "dfecb823102a018d"
+      "snapshot_id": "d0d2788c1a5675ac"
     },
     "outbound": {
       "schema": 1,
@@ -2834,7 +2834,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1793995589
+        "last_pass_at": 1793997390
       },
       "runstate": {
         "auto": false,
@@ -2858,9 +2858,9 @@
       "units": [
         {
           "id": "CONTACT-EMAIL",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
           "ctx_pct": 31,
           "last_commit_at": 1793996358,
           "head": "e5ddf446",
@@ -2895,7 +2895,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -2910,6 +2910,12 @@
         "MSG12"
       ],
       "merge_feed": [
+        {
+          "pr": 384,
+          "unit": "CONTACT-EMAIL",
+          "merged_at": 1793997454,
+          "sha": "249decdb"
+        },
         {
           "pr": 383,
           "unit": "VOICE-LEG-METER",
@@ -2933,12 +2939,6 @@
           "unit": "ONB1-DSAR-LOCATOR-ATOMIC",
           "merged_at": 1793935081,
           "sha": "ac6d273a"
-        },
-        {
-          "pr": 379,
-          "unit": "small-backlog-20261025",
-          "merged_at": 1792989792,
-          "sha": "5e0e313e"
         }
       ],
       "decisions": [
@@ -3212,7 +3212,7 @@
           ]
         }
       },
-      "snapshot_id": "c060ff7519edbd0f"
+      "snapshot_id": "7c1536ffb8cde5d4"
     },
     "scriptgen": {
       "schema": 1,
@@ -3224,7 +3224,7 @@
         "ctx_proxy_pct": null,
         "ctx_proxy_basis": "unavailable",
         "monitor_alive": true,
-        "last_pass_at": 1793995586
+        "last_pass_at": 1793997387
       },
       "runstate": {
         "auto": false,
@@ -3645,7 +3645,7 @@
           ]
         }
       },
-      "snapshot_id": "6739172b039b1be2"
+      "snapshot_id": "72a585ed2b1c98dd"
     }
   },
   "pm": {
@@ -3673,22 +3673,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 29
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 29
+        "monitor_last_pass_min": 5
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 29
+        "monitor_last_pass_min": 5
       }
     ]
   },
-  "snapshot_id": "885b3829952a4d78",
-  "published_at": "2026-11-06T20:36:15Z"
+  "snapshot_id": "0b023abf6e1aca7e",
+  "published_at": "2026-11-06T20:42:07Z"
 }
