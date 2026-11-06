@@ -8,7 +8,7 @@
         "tier": "promax",
         "projected": 95,
         "used": 39,
-        "at": 1793987603,
+        "at": 1793988037,
         "reset": "13:14 on 10 Nov",
         "spark": [
           [
@@ -142,11 +142,15 @@
           [
             1793984400,
             97
+          ],
+          [
+            1793988000,
+            95
           ]
         ],
         "trail": [
           [
-            40.9,
+            41.0,
             14.0
           ]
         ]
@@ -159,8 +163,8 @@
         "mult": "20x",
         "projected": 80,
         "used": 75,
-        "at": 1793987603,
-        "reset": "Nov 6, 9pm (America/Los_Angeles)",
+        "at": 1793988037,
+        "reset": "Nov 6, 8:59pm (America/Los_Angeles)",
         "spark": [
           [
             1793869200,
@@ -293,6 +297,10 @@
           [
             1793984400,
             81
+          ],
+          [
+            1793988000,
+            80
           ]
         ],
         "trail": [
@@ -425,7 +433,11 @@
             74.0
           ],
           [
-            93.4,
+            93.0,
+            75.0
+          ],
+          [
+            93.5,
             75.0
           ]
         ]
@@ -520,7 +532,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1793987603,
+      "at": 1793988037,
       "spark": [
         [
           1793869200,
@@ -652,6 +664,10 @@
         ],
         [
           1793984400,
+          -0.0
+        ],
+        [
+          1793988000,
           -0.0
         ]
       ]
@@ -1262,6 +1278,10 @@
           [
             1793984764,
             39.0
+          ],
+          [
+            1793988037,
+            39.0
           ]
         ]
       },
@@ -1825,6 +1845,10 @@
           ],
           [
             1793984764,
+            75.0
+          ],
+          [
+            1793988037,
             75.0
           ]
         ]
@@ -2433,6 +2457,10 @@
         [
           1793984764,
           25.0
+        ],
+        [
+          1793988037,
+          25.0
         ]
       ]
     }
@@ -2722,7 +2750,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-06T17:53:32Z",
+          "updated": "2026-11-06T18:01:12Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -2738,7 +2766,7 @@
           ]
         }
       },
-      "snapshot_id": "2038cb72a681432b"
+      "snapshot_id": "d74be910a785adf7"
     },
     "outbound": {
       "schema": 1,
@@ -2777,15 +2805,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 36,
-          "last_commit_at": 1793987828,
-          "head": "5f53a131",
+          "ctx_pct": 18,
+          "last_commit_at": 1793987940,
+          "head": "51f32c16",
           "subfence": {
-            "done": 6,
+            "done": 7,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "51f32c16",
+              "at": 1793987940
+            },
             {
               "sha": "5f53a131",
               "at": 1793987828
@@ -2801,10 +2833,6 @@
             {
               "sha": "914738fc",
               "at": 1793987137
-            },
-            {
-              "sha": "65ad578e",
-              "at": 1793986778
             }
           ],
           "fences": {
@@ -2817,58 +2845,17 @@
         },
         {
           "id": "VOICE-LEG-METER",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 28,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 29,
           "last_commit_at": 1793986718,
           "head": "daf6c50b",
           "subfence": {
             "done": 8,
             "total": 8
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-5.6-terra xhigh",
-              "must": 1,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-terra xhigh + glm-5.3 addendum f",
-              "must": 0,
-              "should": 3,
-              "could": 5,
-              "nit": 1
-            },
-            {
-              "round": 1,
-              "seats": "gpt-6-astra xhigh breadth",
-              "must": 0,
-              "should": 4,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-sol high",
-              "must": 0,
-              "should": 4,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra high",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "daf6c50b",
@@ -2895,7 +2882,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -3196,7 +3183,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-06T17:53:32Z",
+          "updated": "2026-11-06T18:01:12Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3212,7 +3199,7 @@
           ]
         }
       },
-      "snapshot_id": "39627e54374eef76"
+      "snapshot_id": "0943f7eea21f00df"
     },
     "scriptgen": {
       "schema": 1,
@@ -3587,7 +3574,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-06T17:57:47Z",
+          "updated": "2026-11-06T18:01:12Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3603,7 +3590,7 @@
           ]
         }
       },
-      "snapshot_id": "ab1d00074648479b"
+      "snapshot_id": "80d2bfd51f419bc4"
     }
   },
   "pm": {
@@ -3631,22 +3618,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 28
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 28
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 28
       }
     ]
   },
-  "snapshot_id": "d04f3d4a2ed5e3f1",
-  "published_at": "2026-11-06T17:58:16Z"
+  "snapshot_id": "f2050d213f68e7ea",
+  "published_at": "2026-11-06T18:04:31Z"
 }
