@@ -8,7 +8,7 @@
         "tier": "promax",
         "projected": 94,
         "used": 32,
-        "at": 1793946156,
+        "at": 1793946763,
         "reset": "13:14 on 10 Nov",
         "spark": [
           [
@@ -102,7 +102,7 @@
         ],
         "trail": [
           [
-            34.1,
+            34.2,
             14.0
           ]
         ]
@@ -115,7 +115,7 @@
         "mult": "20x",
         "projected": 57,
         "used": 49,
-        "at": 1793946156,
+        "at": 1793946763,
         "reset": "Nov 6, 9pm (America/Los_Angeles)",
         "spark": [
           [
@@ -293,7 +293,7 @@
             44.0
           ],
           [
-            86.6,
+            86.7,
             47.0
           ]
         ]
@@ -409,7 +409,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1793946156,
+      "at": 1793946763,
       "spark": [
         [
           1793869200,
@@ -2462,7 +2462,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-06T06:24:54Z",
+          "updated": "2026-11-06T06:32:46Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -2478,13 +2478,19 @@
           ]
         }
       },
-      "snapshot_id": "503cc5cabb27f20b"
+      "snapshot_id": "3ce631fd029a657f"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "VOICE-LEG-METER",
+            "kind": "needs-owner",
+            "raised_at": 1793946928
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2557,32 +2563,10 @@
         },
         {
           "id": "CONTACT-EMAIL",
-          "status": "proposed",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 18,
-          "last_commit_at": null,
-          "head": null,
-          "subfence": {
-            "done": 0,
-            "total": null
-          },
-          "review_rounds": [],
-          "commits": [],
-          "fences": {
-            "plan": false,
-            "synth": false,
-            "build": false,
-            "review": false
-          },
-          "gate_open": false
-        },
-        {
-          "id": "VOICE-LEG-METER",
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 33,
+          "ctx_pct": 22,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2602,9 +2586,52 @@
         {
           "id": "UC-1",
           "status": "building",
-          "stage": "building",
-          "stage_i": 3,
-          "ctx_pct": null,
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 28,
+          "last_commit_at": 1793944843,
+          "head": "8890579e",
+          "subfence": {
+            "done": 3,
+            "total": 9
+          },
+          "review_rounds": [],
+          "commits": [
+            {
+              "sha": "8890579e",
+              "at": 1793944843
+            },
+            {
+              "sha": "283c0f86",
+              "at": 1793944690
+            },
+            {
+              "sha": "032bf5de",
+              "at": 1793944643
+            },
+            {
+              "sha": "eb1d25d1",
+              "at": 1793942446
+            },
+            {
+              "sha": "4398d744",
+              "at": 1793940891
+            }
+          ],
+          "fences": {
+            "plan": true,
+            "synth": true,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "VOICE-LEG-METER",
+          "status": "building",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 34,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2613,13 +2640,17 @@
           },
           "review_rounds": [],
           "commits": [],
-          "fences": {},
-          "gate_open": false
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": true
         }
       ],
       "eligible": [
         "REFUSAL-RECORD-COMPLETION",
-        "CONTACT-EMAIL",
         "EMAIL-WIRING-2",
         "MSG12"
       ],
@@ -2706,227 +2737,11 @@
         ]
       },
       "routing": {
-        "source": "spindle-policy.json",
-        "phases": [
-          {
-            "role": "lead",
-            "model": "claude-opus-5-5[1m]",
-            "effort": "high"
-          },
-          {
-            "role": "discovery.worker",
-            "model": "claude-opus-5-5",
-            "effort": "xhigh"
-          },
-          {
-            "role": "discovery.lattice",
-            "model": "glm-5.3",
-            "effort": "4-6 lanes",
-            "note": "GLM coverage lattice — enumerate + cite only (file:line); ADDENDUM-DELTA ≤25 lines; advisory, never gates"
-          },
-          {
-            "role": "discovery.web_glm",
-            "model": "glm-5.3",
-            "effort": "web"
-          },
-          {
-            "role": "discovery.web_claude",
-            "model": "claude-opus-5-5",
-            "effort": "xhigh"
-          },
-          {
-            "role": "discovery.web_codex",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh"
-          },
-          {
-            "role": "invariant_map",
-            "model": "claude-opus-5-5",
-            "effort": "xhigh"
-          },
-          {
-            "role": "plan",
-            "model": "claude-opus-5-5",
-            "effort": "xhigh"
-          },
-          {
-            "role": "coplan.fable",
-            "model": "claude-fable-5",
-            "effort": "max",
-            "non_degradable": true
-          },
-          {
-            "role": "coplan.codex",
-            "model": "gpt-6-astra",
-            "effort": "xhigh",
-            "non_degradable": true
-          },
-          {
-            "role": "plan_scrutiny.sol_seed",
-            "model": "gpt-5.6-sol",
-            "effort": "deep"
-          },
-          {
-            "role": "plan_scrutiny.opener",
-            "model": "gpt-5.6-terra",
-            "effort": "high"
-          },
-          {
-            "role": "plan_scrutiny.iterate",
-            "model": "gpt-5.6-terra",
-            "effort": "high"
-          },
-          {
-            "role": "plan_scrutiny.confirm",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh"
-          },
-          {
-            "role": "prebuild_review.codex",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh"
-          },
-          {
-            "role": "build.hard",
-            "model": "claude-opus-5-5",
-            "effort": "xhigh"
-          },
-          {
-            "role": "build.checkpoint_find",
-            "model": "glm-5.3",
-            "effort": "every rung",
-            "note": "FIND round at every rung (light: GLM also declares); A1 consent|money|pg steps = no GLM"
-          },
-          {
-            "role": "build.checkpoint_confirm",
-            "model": "gpt-5.6-terra",
-            "effort": "high"
-          },
-          {
-            "role": "build.rote",
-            "model": "claude-sonnet-5",
-            "effort": "high"
-          },
-          {
-            "role": "p4.r1_swarm",
-            "model": "gpt-6-astra",
-            "effort": "xhigh",
-            "note": "R1 breadth seat — Sonnet swarm REMOVED owner 2026-08-30 (claude-burn cut); 1 codex-sol pass, never a swarm (see review.codex_deep_r1_cap). Was claude-sonnet-4-6"
-          },
-          {
-            "role": "p4.iterate",
-            "model": "gpt-5.6-terra",
-            "effort": "high",
-            "alternate": "gpt-5.6-sol",
-            "alt_effort": "high",
-            "alternation": "by round — odd terra · even 5.6-sol"
-          },
-          {
-            "role": "p4.confirm",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh"
-          },
-          {
-            "role": "clippy_fix.worker",
-            "model": "claude-sonnet-5",
-            "effort": "high"
-          },
-          {
-            "role": "auto_proxy",
-            "model": "claude-sonnet-5",
-            "effort": "xhigh"
-          },
-          {
-            "role": "auto_questionnaire_proxy",
-            "model": "claude-opus-5-5",
-            "effort": "xhigh"
-          },
-          {
-            "role": "consult.codex",
-            "model": "gpt-5.6-terra",
-            "effort": "xhigh"
-          },
-          {
-            "role": "consult.sol",
-            "model": "gpt-6-astra",
-            "effort": "xhigh",
-            "note": "SOL research consult at ENHANCE for consult-flagged units (sol-counsel · sol-security · sol-policy); SOL_CONSULT.md committed pre-plan-lock"
-          }
-        ],
-        "review": {
-          "spark": "gpt-5.3-codex-spark",
-          "concurrency_cap": 4,
-          "fill_model": "gpt-5.6-terra",
-          "tiers": [
-            {
-              "tier": "low",
-              "codex_model": "gpt-5.6-terra",
-              "profile": "broad",
-              "round_cap": 2
-            },
-            {
-              "tier": "med",
-              "codex_model": "gpt-5.6-terra",
-              "profile": "broad",
-              "round_cap": 3
-            },
-            {
-              "tier": "high",
-              "codex_model": "gpt-5.6-terra",
-              "profile": "deep",
-              "round_cap": 6
-            }
-          ]
-        },
-        "throttle": {
-          "mode": "on",
-          "since": "2026-11-05T10:50:26Z",
-          "pools": {
-            "codex": {
-              "verdict": "IN_BAND",
-              "proj": 94,
-              "target": 100,
-              "used": 32,
-              "day": 3,
-              "active": null,
-              "wall": false
-            },
-            "glm": {
-              "verdict": "UNKNOWN",
-              "proj": null,
-              "target": 100,
-              "used": 0,
-              "day": 1,
-              "active": null,
-              "wall": false
-            },
-            "claude": {
-              "verdict": "UNDERBURN",
-              "proj": 57,
-              "target": 100,
-              "used": 49,
-              "day": 7,
-              "active": null,
-              "wall": false
-            }
-          },
-          "updated": "2026-11-06T06:24:54Z",
-          "moments": [
-            "unit_dispatch",
-            "phase_start",
-            "checkpoint_fence",
-            "review_round"
-          ],
-          "catalog": [
-            "C1 codex under",
-            "C2 codex over/wall",
-            "G1 glm under",
-            "G2 glm over",
-            "CL-WARN claude (PM-only)"
-          ]
-        }
+        "source": null,
+        "phases": [],
+        "review": {}
       },
-      "snapshot_id": "6e26beed9f195bc2"
+      "snapshot_id": "500f2f149499475a"
     },
     "scriptgen": {
       "schema": 1,
@@ -2965,7 +2780,7 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 24,
+          "ctx_pct": 25,
           "last_commit_at": 1793942803,
           "head": "67976bee",
           "subfence": {
@@ -3033,7 +2848,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 15,
+          "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3301,7 +3116,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-06T06:24:54Z",
+          "updated": "2026-11-06T06:32:46Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3317,7 +3132,7 @@
           ]
         }
       },
-      "snapshot_id": "5039386cc0d90d84"
+      "snapshot_id": "507fbf236ed03bd3"
     }
   },
   "pm": {
@@ -3345,22 +3160,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 24
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 24
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 24
       }
     ]
   },
-  "snapshot_id": "c5626dc623c73c8f",
-  "published_at": "2026-11-06T06:30:02Z"
+  "snapshot_id": "bef4b8453243de38",
+  "published_at": "2026-11-06T06:39:14Z"
 }
