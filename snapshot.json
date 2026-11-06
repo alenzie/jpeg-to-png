@@ -257,7 +257,7 @@
             38.0
           ],
           [
-            84.7,
+            84.8,
             39.0
           ]
         ]
@@ -2104,15 +2104,48 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 23,
-          "last_commit_at": 1793934836,
-          "head": "c50a32ff",
+          "ctx_pct": 25,
+          "last_commit_at": 1793935228,
+          "head": "b9e3ab1e",
           "subfence": {
             "done": 6,
             "total": 6
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "gpt-6-astra xhigh breadth",
+              "must": 0,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "gpt-5.6-sol xhigh policy said high",
+              "must": 0,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terra xhigh declarer",
+              "must": 0,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "b9e3ab1e",
+              "at": 1793935228
+            },
+            {
+              "sha": "ecb4c853",
+              "at": 1793935215
+            },
             {
               "sha": "c50a32ff",
               "at": 1793934836
@@ -2124,14 +2157,6 @@
             {
               "sha": "305a1dd8",
               "at": 1793933923
-            },
-            {
-              "sha": "e2c0f039",
-              "at": 1793933765
-            },
-            {
-              "sha": "9e02ab72",
-              "at": 1793932944
             }
           ],
           "fences": {
@@ -2409,7 +2434,7 @@
           ]
         }
       },
-      "snapshot_id": "e1bc9d0f4d9008da"
+      "snapshot_id": "5b9a2b1f347c5ff4"
     },
     "outbound": {
       "schema": 1,
@@ -2448,7 +2473,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 9,
+          "ctx_pct": 23,
           "last_commit_at": 1793933772,
           "head": "3ab1276e",
           "subfence": {
@@ -2488,43 +2513,26 @@
         },
         {
           "id": "ONB1-DSAR-LOCATOR-ATOMICITY",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 36,
-          "last_commit_at": 1793933816,
-          "head": "1842c462",
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 38,
+          "last_commit_at": 1793935249,
+          "head": "4a0450d3",
           "subfence": {
             "done": 7,
             "total": 7
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-6-astra  xhigh  breadth-1",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-sol  high  iterate",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra  xhigh  declarer",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "4a0450d3",
+              "at": 1793935249
+            },
+            {
+              "sha": "ac6d273a",
+              "at": 1793935081
+            },
             {
               "sha": "1842c462",
               "at": 1793933816
@@ -2536,14 +2544,6 @@
             {
               "sha": "f48aa439",
               "at": 1793932687
-            },
-            {
-              "sha": "2b27e9ad",
-              "at": 1793931720
-            },
-            {
-              "sha": "3934eb09",
-              "at": 1793930378
             }
           ],
           "fences": {
@@ -2559,7 +2559,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 9,
+          "ctx_pct": 22,
           "last_commit_at": 1793933391,
           "head": "3319f959",
           "subfence": {
@@ -2607,6 +2607,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 380,
+          "unit": "ONB1-DSAR-LOCATOR-ATOMIC",
+          "merged_at": 1793935081,
+          "sha": "ac6d273a"
+        },
+        {
           "pr": 379,
           "unit": "small-backlog-20261025",
           "merged_at": 1792989792,
@@ -2629,12 +2635,6 @@
           "unit": "consolidate-sms-simulato",
           "merged_at": 1792986933,
           "sha": "be5bac40"
-        },
-        {
-          "pr": 375,
-          "unit": "consolidate-voice-leg-20",
-          "merged_at": 1792985121,
-          "sha": "1d91e665"
         }
       ],
       "decisions": [
@@ -2908,7 +2908,7 @@
           ]
         }
       },
-      "snapshot_id": "a7d3dc729a1b52f9"
+      "snapshot_id": "c6985aea5e977612"
     },
     "scriptgen": {
       "schema": 1,
@@ -2947,15 +2947,23 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 19,
-          "last_commit_at": 1793934626,
-          "head": "89d24489",
+          "ctx_pct": 20,
+          "last_commit_at": 1793935049,
+          "head": "71073d10",
           "subfence": {
             "done": 9,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "71073d10",
+              "at": 1793935049
+            },
+            {
+              "sha": "19e487e6",
+              "at": 1793934946
+            },
             {
               "sha": "89d24489",
               "at": 1793934626
@@ -2967,20 +2975,12 @@
             {
               "sha": "c166e237",
               "at": 1793934299
-            },
-            {
-              "sha": "55fd233a",
-              "at": 1793934237
-            },
-            {
-              "sha": "0a9a596d",
-              "at": 1793933055
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
-            "build": false,
+            "build": true,
             "review": false
           },
           "gate_open": false
@@ -3254,7 +3254,7 @@
           ]
         }
       },
-      "snapshot_id": "9135423b661339aa"
+      "snapshot_id": "3a08e18d72684f8c"
     }
   },
   "pm": {
@@ -3282,22 +3282,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 11
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 11
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4
+        "monitor_last_pass_min": 11
       }
     ]
   },
-  "snapshot_id": "9261c6129e1a0828",
-  "published_at": "2026-11-06T03:15:40Z"
+  "snapshot_id": "d8dc1f59f0b80248",
+  "published_at": "2026-11-06T03:22:32Z"
 }
