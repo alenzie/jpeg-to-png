@@ -114,7 +114,7 @@
         ],
         "trail": [
           [
-            36.0,
+            36.1,
             14.0
           ]
         ]
@@ -2251,7 +2251,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 21,
+          "ctx_pct": 22,
           "last_commit_at": 1793957811,
           "head": "46e82943",
           "subfence": {
@@ -2556,24 +2556,13 @@
           ]
         }
       },
-      "snapshot_id": "8e8370a94510ff30"
+      "snapshot_id": "09757e6d837e6782"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CONTACT-EMAIL",
-            "kind": "needs-owner",
-            "raised_at": 1793950413
-          },
-          {
-            "id": "UC-1",
-            "kind": "escalate",
-            "raised_at": 1793957536
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -2640,16 +2629,16 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         },
         {
           "id": "CONTACT-EMAIL",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 44,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 15,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2664,13 +2653,13 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "UC-1",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "subfencing",
+          "stage_i": 4,
           "ctx_pct": 36,
           "last_commit_at": 1793957516,
           "head": "9c8a7572",
@@ -2707,7 +2696,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "VOICE-LEG-METER",
@@ -3062,19 +3051,13 @@
           ]
         }
       },
-      "snapshot_id": "c652a6914a86667f"
+      "snapshot_id": "48955d2fbc5fb321"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "WRAPPER-V9-HARDEN",
-            "kind": "needs-owner",
-            "raised_at": 1793950420
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3105,9 +3088,9 @@
         {
           "id": "WRAPPER-V9-HARDEN",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 51,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 17,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3122,7 +3105,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -3394,7 +3377,7 @@
           ]
         }
       },
-      "snapshot_id": "d4b69d50bb9babfc"
+      "snapshot_id": "de4a7ec09ee6bc93"
     }
   },
   "pm": {
@@ -3422,22 +3405,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 20
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 20
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 20
       }
     ]
   },
-  "snapshot_id": "a42e9041ec9b0861",
-  "published_at": "2026-11-06T09:47:39Z"
+  "snapshot_id": "840af9c817a1d933",
+  "published_at": "2026-11-06T09:53:56Z"
 }
