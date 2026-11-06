@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "promax",
-        "projected": 93,
+        "projected": 91,
         "used": 40,
-        "at": 1794001618,
+        "at": 1794006210,
         "reset": "13:14 on 10 Nov",
         "spark": [
           [
@@ -158,11 +158,15 @@
           [
             1793998800,
             93
+          ],
+          [
+            1794006000,
+            91
           ]
         ],
         "trail": [
           [
-            43.9,
+            44.0,
             14.0
           ]
         ]
@@ -175,8 +179,8 @@
         "mult": "20x",
         "projected": 80,
         "used": 77,
-        "at": 1794001618,
-        "reset": "Nov 6, 8:59pm (America/Los_Angeles)",
+        "at": 1794006210,
+        "reset": "Nov 6, 9pm (America/Los_Angeles)",
         "spark": [
           [
             1793869200,
@@ -325,6 +329,10 @@
           [
             1793998800,
             81
+          ],
+          [
+            1794006000,
+            80
           ]
         ],
         "trail": [
@@ -473,7 +481,11 @@
             76.0
           ],
           [
-            96.4,
+            95.0,
+            77.0
+          ],
+          [
+            96.5,
             77.0
           ]
         ]
@@ -566,9 +578,9 @@
       "balance": -0.0,
       "currency": "USD",
       "available": false,
-      "burn_per_day": null,
+      "burn_per_day": 0.0,
       "days_to_empty": null,
-      "at": 1794001618,
+      "at": 1794006210,
       "spark": [
         [
           1793869200,
@@ -716,6 +728,10 @@
         ],
         [
           1793998800,
+          -0.0
+        ],
+        [
+          1794006000,
           -0.0
         ]
       ]
@@ -1338,6 +1354,10 @@
           [
             1793999920,
             40.0
+          ],
+          [
+            1794006210,
+            40.0
           ]
         ]
       },
@@ -1913,6 +1933,10 @@
           ],
           [
             1793999920,
+            77.0
+          ],
+          [
+            1794006210,
             77.0
           ]
         ]
@@ -2533,6 +2557,10 @@
         [
           1793999920,
           25.0
+        ],
+        [
+          1794006210,
+          25.0
         ]
       ]
     }
@@ -2796,7 +2824,7 @@
           "pools": {
             "codex": {
               "verdict": "IN_BAND",
-              "proj": 93,
+              "proj": 91,
               "target": 100,
               "used": 40,
               "day": 4,
@@ -2822,7 +2850,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-06T21:47:01Z",
+          "updated": "2026-11-06T23:03:38Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -2838,7 +2866,7 @@
           ]
         }
       },
-      "snapshot_id": "7c2979390c26bd5b"
+      "snapshot_id": "520e5f085f4817c3"
     },
     "outbound": {
       "schema": 1,
@@ -3142,7 +3170,7 @@
           "pools": {
             "codex": {
               "verdict": "IN_BAND",
-              "proj": 93,
+              "proj": 91,
               "target": 100,
               "used": 40,
               "day": 4,
@@ -3168,7 +3196,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-06T21:47:01Z",
+          "updated": "2026-11-06T23:03:38Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3184,7 +3212,7 @@
           ]
         }
       },
-      "snapshot_id": "35014927c3817997"
+      "snapshot_id": "58fef7977c27ca4a"
     },
     "scriptgen": {
       "schema": 1,
@@ -3281,41 +3309,16 @@
         {
           "id": "WRAPPER-V9-HARDEN",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 27,
+          "stage": "merge+cleanup",
+          "stage_i": 6,
+          "ctx_pct": 12,
           "last_commit_at": 1794000343,
           "head": "8fe3d0e3",
           "subfence": {
             "done": 9,
             "total": 9
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-6-astra xhigh",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-sol high",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra xhigh declarer",
-              "must": 0,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "8fe3d0e3",
@@ -3354,6 +3357,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 67,
+          "unit": "WRAPPER-V9-HARDEN",
+          "merged_at": 1794006292,
+          "sha": "da0a814d"
+        },
+        {
           "pr": 65,
           "unit": "master-key-no-delete",
           "merged_at": 1793970758,
@@ -3376,12 +3385,6 @@
           "unit": "CLI-QUALIFY-GATE",
           "merged_at": 1793050143,
           "sha": "30538d7e"
-        },
-        {
-          "pr": 61,
-          "unit": "CLAIM-ENTAILMENT",
-          "merged_at": 1793004563,
-          "sha": "cace41ba"
         }
       ],
       "decisions": [],
@@ -3575,7 +3578,7 @@
           "pools": {
             "codex": {
               "verdict": "IN_BAND",
-              "proj": 93,
+              "proj": 91,
               "target": 100,
               "used": 40,
               "day": 4,
@@ -3601,7 +3604,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-06T21:47:01Z",
+          "updated": "2026-11-06T23:03:38Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -3617,7 +3620,7 @@
           ]
         }
       },
-      "snapshot_id": "bf9fda5354d7a8a3"
+      "snapshot_id": "9feed23984d5445e"
     }
   },
   "pm": {
@@ -3645,22 +3648,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 29
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 23
+        "monitor_last_pass_min": 29
       }
     ]
   },
-  "snapshot_id": "9abb09b703b585bf",
-  "published_at": "2026-11-06T22:59:44Z"
+  "snapshot_id": "f9b0361d1c3d565b",
+  "published_at": "2026-11-06T23:05:40Z"
 }
