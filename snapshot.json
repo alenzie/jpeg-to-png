@@ -305,7 +305,7 @@
             47.0
           ],
           [
-            87.2,
+            87.3,
             51.0
           ]
         ]
@@ -2510,13 +2510,18 @@
           ]
         }
       },
-      "snapshot_id": "c8f27ca975d0f165"
+      "snapshot_id": "fad3ea9c95589a4d"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
+          {
+            "id": "CONTACT-EMAIL",
+            "kind": "needs-owner",
+            "raised_at": 1793950413
+          },
           {
             "id": "VOICE-LEG-METER",
             "kind": "needs-owner",
@@ -2596,9 +2601,9 @@
         {
           "id": "CONTACT-EMAIL",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 40,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 43,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -2613,14 +2618,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "UC-1",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 37,
+          "ctx_pct": 39,
           "last_commit_at": 1793949605,
           "head": "ec1f740e",
           "subfence": {
@@ -2989,13 +2994,19 @@
           ]
         }
       },
-      "snapshot_id": "8789011c157cda87"
+      "snapshot_id": "eb20975f2fd2e046"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "WRAPPER-V9-HARDEN",
+            "kind": "needs-owner",
+            "raised_at": 1793950420
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3094,9 +3105,9 @@
         {
           "id": "WRAPPER-V9-HARDEN",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 47,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 51,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3111,7 +3122,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [],
@@ -3380,7 +3391,7 @@
           ]
         }
       },
-      "snapshot_id": "5fa21c1ebe8253b1"
+      "snapshot_id": "daf4d5301265f739"
     }
   },
   "pm": {
@@ -3408,22 +3419,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14
+        "monitor_last_pass_min": 21
       }
     ]
   },
-  "snapshot_id": "290e5656673cafeb",
-  "published_at": "2026-11-06T07:29:02Z"
+  "snapshot_id": "07e552370d5ce044",
+  "published_at": "2026-11-06T07:35:49Z"
 }
