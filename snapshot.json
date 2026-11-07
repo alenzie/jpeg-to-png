@@ -250,7 +250,7 @@
         ],
         "trail": [
           [
-            58.2,
+            58.3,
             14.0
           ]
         ]
@@ -842,7 +842,7 @@
           54.0
         ],
         [
-          26.4,
+          26.5,
           55.0
         ]
       ]
@@ -3463,7 +3463,7 @@
           ]
         }
       },
-      "snapshot_id": "3b9d20f1750e2d0d"
+      "snapshot_id": "f9476ede8465f721"
     },
     "outbound": {
       "schema": 1,
@@ -3559,18 +3559,22 @@
         },
         {
           "id": "EMAIL-WIRING-2",
-          "status": "done",
-          "stage": "done",
-          "stage_i": 7,
-          "ctx_pct": 39,
-          "last_commit_at": 1794092079,
-          "head": "f0f4a6a8",
+          "status": "building",
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 41,
+          "last_commit_at": 1794092969,
+          "head": "ae7f77b5",
           "subfence": {
             "done": 4,
             "total": 10
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "ae7f77b5",
+              "at": 1794092969
+            },
             {
               "sha": "f0f4a6a8",
               "at": 1794092079
@@ -3586,10 +3590,6 @@
             {
               "sha": "06404bb8",
               "at": 1794089774
-            },
-            {
-              "sha": "9005a343",
-              "at": 1794089143
             }
           ],
           "fences": {
@@ -3602,10 +3602,10 @@
         },
         {
           "id": "REFUSAL-RECORD-COMPLETION",
-          "status": "building",
-          "stage": "merge+cleanup",
-          "stage_i": 6,
-          "ctx_pct": 11,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 13,
           "last_commit_at": 1794091834,
           "head": "3d0fec97",
           "subfence": {
@@ -3647,6 +3647,8 @@
       "eligible": [
         "UC-1B",
         "ACCT-LEVELS-2",
+        "REFUSAL-EXPORT-MACHINE",
+        "REFUSAL-RECORD-COMPLETION-2",
         "MSG12"
       ],
       "merge_feed": [
@@ -3952,7 +3954,7 @@
           ]
         }
       },
-      "snapshot_id": "827ef16265816bd9"
+      "snapshot_id": "0bcf0ca58c81ace7"
     },
     "scriptgen": {
       "schema": 1,
@@ -4216,18 +4218,18 @@
           "pools": {
             "codex": {
               "verdict": "IN_BAND",
-              "proj": 108,
+              "proj": 110,
               "target": 100,
-              "used": 63,
+              "used": 64,
               "day": 5,
               "active": null,
               "wall": false
             },
             "glm": {
               "verdict": "OVERBURN",
-              "proj": 209,
+              "proj": 211,
               "target": 100,
-              "used": 55,
+              "used": 56,
               "day": 2,
               "active": "G2",
               "wall": false
@@ -4242,7 +4244,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-07T22:55:56Z",
+          "updated": "2026-11-07T23:11:05Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4258,7 +4260,7 @@
           ]
         }
       },
-      "snapshot_id": "d88e8f5cbdfc1a89"
+      "snapshot_id": "71a11dc7f420293f"
     }
   },
   "pm": {
@@ -4286,22 +4288,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 21
       }
     ]
   },
-  "snapshot_id": "cf2dd69cbbc80e81",
-  "published_at": "2026-11-07T23:04:51Z"
+  "snapshot_id": "bde265f01d332339",
+  "published_at": "2026-11-07T23:11:11Z"
 }
