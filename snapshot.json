@@ -246,7 +246,7 @@
         ],
         "trail": [
           [
-            57.4,
+            57.5,
             14.0
           ]
         ]
@@ -493,7 +493,7 @@
             22.0
           ],
           [
-            9.9,
+            10.0,
             22.0
           ]
         ]
@@ -826,7 +826,7 @@
           54.0
         ],
         [
-          25.6,
+          25.7,
           54.0
         ]
       ]
@@ -3431,13 +3431,19 @@
           ]
         }
       },
-      "snapshot_id": "82e5cf483bca665e"
+      "snapshot_id": "5809c2313ec07d01"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "REFUSAL-RECORD-COMPLETION",
+            "kind": "escalate",
+            "raised_at": 1794087748
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3470,7 +3476,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 41,
+          "ctx_pct": 44,
           "last_commit_at": 1794087165,
           "head": "210001cd",
           "subfence": {
@@ -3554,9 +3560,9 @@
         {
           "id": "REFUSAL-RECORD-COMPLETION",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 26,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 27,
           "last_commit_at": 1794086654,
           "head": "578b21ef",
           "subfence": {
@@ -3592,7 +3598,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -3903,7 +3909,7 @@
           ]
         }
       },
-      "snapshot_id": "e851e7cd2e364f7e"
+      "snapshot_id": "0b435c2e5f0e3813"
     },
     "scriptgen": {
       "schema": 1,
@@ -4209,7 +4215,7 @@
           ]
         }
       },
-      "snapshot_id": "f52574f157880258"
+      "snapshot_id": "1049c7dbb7db5b85"
     }
   },
   "pm": {
@@ -4237,22 +4243,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 28
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 28
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 22
+        "monitor_last_pass_min": 28
       }
     ]
   },
-  "snapshot_id": "7ca5451d0fec3c38",
-  "published_at": "2026-11-07T21:41:34Z"
+  "snapshot_id": "ed6cecd90c9ae09b",
+  "published_at": "2026-11-07T21:47:50Z"
 }
