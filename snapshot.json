@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "promax",
-        "projected": 88,
+        "projected": 87,
         "used": 41,
-        "at": 1794023861,
+        "at": 1794026903,
         "reset": "13:14 on 10 Nov",
         "spark": [
           [
@@ -174,11 +174,15 @@
           [
             1794020400,
             86
+          ],
+          [
+            1794024000,
+            87
           ]
         ],
         "trail": [
           [
-            47.3,
+            47.4,
             14.0
           ]
         ]
@@ -189,10 +193,10 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 80,
-        "used": 79,
-        "at": 1794023861,
-        "reset": "Nov 6, 9pm (America/Los_Angeles)",
+        "projected": 82,
+        "used": 82,
+        "at": 1794026903,
+        "reset": "Nov 6, 8:59pm (America/Los_Angeles)",
         "spark": [
           [
             1793869200,
@@ -357,6 +361,10 @@
           [
             1794020400,
             79
+          ],
+          [
+            1794024000,
+            82
           ]
         ],
         "trail": [
@@ -521,17 +529,21 @@
             78.0
           ],
           [
-            99.8,
+            99.0,
             78.0
+          ],
+          [
+            99.9,
+            82.0
           ]
         ]
       }
     ],
     "glm": {
       "target": 100,
-      "projected": 166,
+      "projected": 161,
       "used": 25,
-      "at": 1794023861,
+      "at": 1794026903,
       "reset": "Nov 12, 18:39",
       "level": "pro",
       "spark": [
@@ -622,6 +634,10 @@
         [
           1794020400,
           168
+        ],
+        [
+          1794024000,
+          161
         ]
       ],
       "trail": [
@@ -718,7 +734,11 @@
           25.0
         ],
         [
-          15.5,
+          15.0,
+          25.0
+        ],
+        [
+          15.6,
           25.0
         ]
       ]
@@ -727,9 +747,9 @@
       "balance": -0.0,
       "currency": "USD",
       "available": false,
-      "burn_per_day": null,
+      "burn_per_day": 0.0,
       "days_to_empty": null,
-      "at": 1794023861,
+      "at": 1794026903,
       "spark": [
         [
           1793869200,
@@ -893,6 +913,10 @@
         ],
         [
           1794020400,
+          -0.0
+        ],
+        [
+          1794024000,
           -0.0
         ]
       ]
@@ -1531,6 +1555,10 @@
           [
             1794023010,
             40.0
+          ],
+          [
+            1794026903,
+            41.0
           ]
         ]
       },
@@ -2123,6 +2151,10 @@
           [
             1794023010,
             78.0
+          ],
+          [
+            1794026903,
+            82.0
           ]
         ]
       },
@@ -2758,6 +2790,10 @@
         [
           1794023010,
           25.0
+        ],
+        [
+          1794026903,
+          25.0
         ]
       ]
     }
@@ -3063,7 +3099,7 @@
           ]
         }
       },
-      "snapshot_id": "67c1cfbe2d8f5592"
+      "snapshot_id": "d6151a5ffe522b18"
     },
     "outbound": {
       "schema": 1,
@@ -3437,13 +3473,19 @@
           ]
         }
       },
-      "snapshot_id": "640491e6d457dba0"
+      "snapshot_id": "bec35622ad75ce90"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "S6-CLEANUP-C",
+            "kind": "needs-owner",
+            "raised_at": 1794026922
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3474,9 +3516,9 @@
         {
           "id": "S6-CLEANUP-C",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 36,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 41,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3491,7 +3533,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -3764,7 +3806,7 @@
           ]
         }
       },
-      "snapshot_id": "c668741d87e2e98b"
+      "snapshot_id": "83ab0e152d8aa017"
     }
   },
   "pm": {
@@ -3783,7 +3825,7 @@
       "available_note": "owner back 2026-10-23T02:57:40Z"
     },
     "pm_session": {
-      "lock": "3731450 2026-11-07T03:51:31Z",
+      "lock": "4101661 2026-11-07T04:47:11Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -3792,22 +3834,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 13
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7
+        "monitor_last_pass_min": 13
       }
     ]
   },
-  "snapshot_id": "e8de00a141e02666",
-  "published_at": "2026-11-07T04:43:29Z"
+  "snapshot_id": "8a4c99052d071973",
+  "published_at": "2026-11-07T04:49:18Z"
 }
