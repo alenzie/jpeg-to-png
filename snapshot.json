@@ -178,7 +178,7 @@
         ],
         "trail": [
           [
-            47.1,
+            47.2,
             14.0
           ]
         ]
@@ -718,7 +718,7 @@
           25.0
         ],
         [
-          15.3,
+          15.4,
           25.0
         ]
       ]
@@ -3063,13 +3063,19 @@
           ]
         }
       },
-      "snapshot_id": "dfef17135287a6c8"
+      "snapshot_id": "05a79fe856f82c8b"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "VOICE-HANDOFF-PRIVACY",
+            "kind": "needs-owner",
+            "raised_at": 1794025778
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3100,9 +3106,9 @@
         {
           "id": "VOICE-HANDOFF-PRIVACY",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 30,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3117,7 +3123,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -3431,7 +3437,7 @@
           ]
         }
       },
-      "snapshot_id": "8d43d7a29be9c104"
+      "snapshot_id": "523b8c40f6af690f"
     },
     "scriptgen": {
       "schema": 1,
@@ -3470,7 +3476,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 31,
+          "ctx_pct": 35,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -3758,7 +3764,7 @@
           ]
         }
       },
-      "snapshot_id": "cba74061645a63d9"
+      "snapshot_id": "26b6cfabc356df6a"
     }
   },
   "pm": {
@@ -3786,22 +3792,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 6
+        "monitor_last_pass_min": 12
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6
+        "monitor_last_pass_min": 12
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6
+        "monitor_last_pass_min": 12
       }
     ]
   },
-  "snapshot_id": "a134596ebe1afd5a",
-  "published_at": "2026-11-07T04:25:29Z"
+  "snapshot_id": "33af1369d0ccb71f",
+  "published_at": "2026-11-07T04:31:29Z"
 }
