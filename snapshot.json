@@ -485,7 +485,7 @@
             77.0
           ],
           [
-            97.7,
+            97.8,
             77.0
           ]
         ]
@@ -2955,7 +2955,7 @@
           ]
         }
       },
-      "snapshot_id": "06df27366fb3d1c6"
+      "snapshot_id": "61b526c22cba4148"
     },
     "outbound": {
       "schema": 1,
@@ -3301,19 +3301,13 @@
           ]
         }
       },
-      "snapshot_id": "8f664e7db79b2745"
+      "snapshot_id": "02f8a102b8ca0174"
     },
     "scriptgen": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "S6-CLEANUP-B",
-            "kind": "escalate",
-            "raised_at": 1794008993
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3343,37 +3337,37 @@
       "units": [
         {
           "id": "S6-CLEANUP-B",
-          "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 26,
-          "last_commit_at": 1794008737,
-          "head": "57d62054",
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 27,
+          "last_commit_at": 1792912592,
+          "head": "66e1f7f1",
           "subfence": {
             "done": 9,
-            "total": 9
+            "total": null
           },
           "review_rounds": [],
           "commits": [
             {
-              "sha": "57d62054",
-              "at": 1794008737
+              "sha": "66e1f7f1",
+              "at": 1792912592
             },
             {
-              "sha": "d10105d8",
-              "at": 1794006963
+              "sha": "d782091b",
+              "at": 1792912356
             },
             {
-              "sha": "71640e86",
-              "at": 1794006681
+              "sha": "7212f11f",
+              "at": 1792911650
             },
             {
-              "sha": "da0a814d",
-              "at": 1794006292
+              "sha": "e5ae7470",
+              "at": 1792904791
             },
             {
-              "sha": "9fa5aabb",
-              "at": 1794003792
+              "sha": "b5f5cb23",
+              "at": 1792904754
             }
           ],
           "fences": {
@@ -3382,15 +3376,22 @@
             "build": true,
             "review": true
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
         "KEYCHAIN-UNAVAILABLE-PROMPT",
         "KEYRING-TEST-ISOLATION",
-        "S6-CLEANUP-A2"
+        "S6-CLEANUP-A2",
+        "S6-CLEANUP-C"
       ],
       "merge_feed": [
+        {
+          "pr": 66,
+          "unit": "S6-CLEANUP-B",
+          "merged_at": 1794013755,
+          "sha": "896897b7"
+        },
         {
           "pr": 67,
           "unit": "WRAPPER-V9-HARDEN",
@@ -3414,12 +3415,6 @@
           "unit": "ORIGINALITY-JUDGE",
           "merged_at": 1793059755,
           "sha": "dc5b6c33"
-        },
-        {
-          "pr": 62,
-          "unit": "CLI-QUALIFY-GATE",
-          "merged_at": 1793050143,
-          "sha": "30538d7e"
         }
       ],
       "decisions": [],
@@ -3655,7 +3650,7 @@
           ]
         }
       },
-      "snapshot_id": "2cf43d84fcb52121"
+      "snapshot_id": "57c83b89dabdbfe7"
     }
   },
   "pm": {
@@ -3683,22 +3678,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 6
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 0
+        "monitor_last_pass_min": 6
       }
     ]
   },
-  "snapshot_id": "58864f569dcb7d63",
-  "published_at": "2026-11-07T01:07:18Z"
+  "snapshot_id": "e9dc040b59885ee6",
+  "published_at": "2026-11-07T01:13:07Z"
 }
