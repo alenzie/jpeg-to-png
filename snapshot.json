@@ -214,7 +214,7 @@
         ],
         "trail": [
           [
-            52.8,
+            52.9,
             14.0
           ]
         ]
@@ -698,7 +698,7 @@
           33.0
         ],
         [
-          21.0,
+          21.1,
           37.0
         ]
       ]
@@ -3175,13 +3175,19 @@
           ]
         }
       },
-      "snapshot_id": "1389dcfe0f0dec27"
+      "snapshot_id": "23a381f57f8b9bfc"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "VOICE-HANDOFF-PRIVACY",
+            "kind": "escalate",
+            "raised_at": 1794060288
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3257,7 +3263,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 21,
+          "ctx_pct": 30,
           "last_commit_at": 1794059383,
           "head": "9ca11d64",
           "subfence": {
@@ -3298,58 +3304,25 @@
         {
           "id": "VOICE-HANDOFF-PRIVACY",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 49,
-          "last_commit_at": 1794059120,
-          "head": "e5ce0794",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 51,
+          "last_commit_at": 1794060299,
+          "head": "a761cdcc",
           "subfence": {
             "done": 6,
             "total": 6
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-6-astra xhigh breadth-1",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-sol high + GLM swarm-2 find-only",
-              "must": 0,
-              "should": 1,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra high cumulative + GLM swar",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.6-sol high + GLM swarm-2 find-only",
-              "must": 0,
-              "should": 0,
-              "could": 2,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.6-terra xhigh declarer + GLM swarm",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "a761cdcc",
+              "at": 1794060299
+            },
+            {
+              "sha": "e03b22d3",
+              "at": 1794060146
+            },
             {
               "sha": "e5ce0794",
               "at": 1794059120
@@ -3361,14 +3334,6 @@
             {
               "sha": "a481031b",
               "at": 1794057420
-            },
-            {
-              "sha": "de140410",
-              "at": 1794057222
-            },
-            {
-              "sha": "f6d6e21f",
-              "at": 1794056197
             }
           ],
           "fences": {
@@ -3377,7 +3342,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -3689,7 +3654,7 @@
           ]
         }
       },
-      "snapshot_id": "d6812aac57865025"
+      "snapshot_id": "67a9a1cab48bef41"
     },
     "scriptgen": {
       "schema": 1,
@@ -3728,7 +3693,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 14,
+          "ctx_pct": 16,
           "last_commit_at": 1794054944,
           "head": "0f2e6e50",
           "subfence": {
@@ -3761,7 +3726,7 @@
           "fences": {
             "plan": true,
             "synth": true,
-            "build": true,
+            "build": false,
             "review": false
           },
           "gate_open": false
@@ -4037,7 +4002,7 @@
           ]
         }
       },
-      "snapshot_id": "1e96252dcb59eb1f"
+      "snapshot_id": "cf8da5b409cea09d"
     }
   },
   "pm": {
@@ -4065,22 +4030,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20
+        "monitor_last_pass_min": 26
       }
     ]
   },
-  "snapshot_id": "deecaf46b1604219",
-  "published_at": "2026-11-07T14:00:22Z"
+  "snapshot_id": "f96bb4ac5e147ba0",
+  "published_at": "2026-11-07T14:06:39Z"
 }
