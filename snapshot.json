@@ -621,7 +621,7 @@
             29.0
           ],
           [
-            16.7,
+            16.8,
             29.0
           ]
         ]
@@ -3795,7 +3795,7 @@
           ]
         }
       },
-      "snapshot_id": "55b541c68fae1ef9"
+      "snapshot_id": "7afa1b44b14dd6ad"
     },
     "outbound": {
       "schema": 1,
@@ -3831,67 +3831,26 @@
       "units": [
         {
           "id": "EMAIL-WIRING-2",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 25,
-          "last_commit_at": 1794128095,
-          "head": "30be0931",
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 26,
+          "last_commit_at": 1794128890,
+          "head": "3e86e18a",
           "subfence": {
             "done": 10,
             "total": 10
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "breadth",
-              "must": 1,
-              "should": 4,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "iterate",
-              "must": 1,
-              "should": 4,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "iterate",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "declarer",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "iterate",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "declarer",
-              "must": 0,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "3e86e18a",
+              "at": 1794128890
+            },
+            {
+              "sha": "416d205e",
+              "at": 1794128797
+            },
             {
               "sha": "30be0931",
               "at": 1794128095
@@ -3903,21 +3862,13 @@
             {
               "sha": "d54cc89f",
               "at": 1794126021
-            },
-            {
-              "sha": "54a8e340",
-              "at": 1794124824
-            },
-            {
-              "sha": "6ef9c502",
-              "at": 1794124536
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         },
@@ -3966,12 +3917,20 @@
         }
       ],
       "eligible": [
+        "ACCOUNT-HOLDER-RIGHTS",
         "ACCT-LEVELS-2",
         "REFUSAL-EXPORT-MACHINE",
         "REFUSAL-RECORD-COMPLETION-2",
+        "EMAIL-WIRING-3",
         "MSG12"
       ],
       "merge_feed": [
+        {
+          "pr": 388,
+          "unit": "EMAIL-WIRING-2",
+          "merged_at": 1794128797,
+          "sha": "416d205e"
+        },
         {
           "pr": 387,
           "unit": "CONTACT-ERASURE-FOLLOW",
@@ -3995,12 +3954,6 @@
           "unit": "CONTACT-EMAIL",
           "merged_at": 1793997454,
           "sha": "249decdb"
-        },
-        {
-          "pr": 383,
-          "unit": "VOICE-LEG-METER",
-          "merged_at": 1793987782,
-          "sha": "a54a906f"
         }
       ],
       "decisions": [
@@ -4274,7 +4227,7 @@
           ]
         }
       },
-      "snapshot_id": "4e6ab8bf5996e0d8"
+      "snapshot_id": "fc1036a116156c45"
     },
     "scriptgen": {
       "schema": 1,
@@ -4580,7 +4533,7 @@
           ]
         }
       },
-      "snapshot_id": "f9acf8c7dbcafdfd"
+      "snapshot_id": "01a6f1d5b6c9227e"
     }
   },
   "pm": {
@@ -4608,22 +4561,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 18
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 18
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12
+        "monitor_last_pass_min": 18
       }
     ]
   },
-  "snapshot_id": "4103947fb61e0fd9",
-  "published_at": "2026-11-08T09:03:35Z"
+  "snapshot_id": "e3e82bf87d01ed21",
+  "published_at": "2026-11-08T09:09:26Z"
 }
