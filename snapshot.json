@@ -286,7 +286,7 @@
             14.0
           ],
           [
-            62.7,
+            62.8,
             71.0
           ]
         ]
@@ -994,7 +994,7 @@
           59.0
         ],
         [
-          30.9,
+          31.0,
           59.0
         ]
       ]
@@ -1281,7 +1281,7 @@
       "codex": {
         "B": [
           [
-            1790232030,
+            1790232376,
             87.0
           ],
           [
@@ -2009,7 +2009,7 @@
       "claude": {
         "B": [
           [
-            1790232030,
+            1790232376,
             100.0
           ],
           [
@@ -2692,7 +2692,7 @@
       },
       "glm": [
         [
-          1790232030,
+          1790232376,
           100.0
         ],
         [
@@ -3719,13 +3719,19 @@
           ]
         }
       },
-      "snapshot_id": "ea13257e6ed4f7cc"
+      "snapshot_id": "3bcb7774c2e3b876"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "EMAIL-WIRING-2",
+            "kind": "escalate",
+            "raised_at": 1794120099
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -3756,58 +3762,29 @@
         {
           "id": "EMAIL-WIRING-2",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 43,
-          "last_commit_at": 1794119073,
-          "head": "f2c5d6ae",
+          "last_commit_at": 1794120128,
+          "head": "7aad01e0",
           "subfence": {
             "done": 10,
             "total": 10
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "breadth",
-              "must": 1,
-              "should": 4,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "iterate",
-              "must": 1,
-              "should": 4,
-              "could": 1,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "iterate",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "declarer",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "iterate",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "7aad01e0",
+              "at": 1794120128
+            },
+            {
+              "sha": "95143168",
+              "at": 1794120022
+            },
+            {
+              "sha": "003d33bc",
+              "at": 1794119852
+            },
             {
               "sha": "f2c5d6ae",
               "at": 1794119073
@@ -3815,18 +3792,6 @@
             {
               "sha": "8e2c4951",
               "at": 1794118847
-            },
-            {
-              "sha": "814e5edd",
-              "at": 1794118731
-            },
-            {
-              "sha": "a2593cc5",
-              "at": 1794117440
-            },
-            {
-              "sha": "b634553c",
-              "at": 1794117097
             }
           ],
           "fences": {
@@ -3835,7 +3800,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "UC-1B",
@@ -4190,7 +4155,7 @@
           ]
         }
       },
-      "snapshot_id": "96c6c9fb068e8b98"
+      "snapshot_id": "f4bf893bc86ae426"
     },
     "scriptgen": {
       "schema": 1,
@@ -4496,7 +4461,7 @@
           ]
         }
       },
-      "snapshot_id": "66a258744ac71348"
+      "snapshot_id": "3e7f27378402441e"
     }
   },
   "pm": {
@@ -4524,22 +4489,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 21
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15
+        "monitor_last_pass_min": 21
       }
     ]
   },
-  "snapshot_id": "9ba2fa7d41f23f5a",
-  "published_at": "2026-11-08T06:36:43Z"
+  "snapshot_id": "2f0fb2a2b384ba7e",
+  "published_at": "2026-11-08T06:42:45Z"
 }
