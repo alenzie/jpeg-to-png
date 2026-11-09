@@ -4791,18 +4791,26 @@
       "units": [
         {
           "id": "LEAD-UNSUBSCRIBE",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 38,
-          "last_commit_at": 1794227473,
-          "head": "b53ccbb0",
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 40,
+          "last_commit_at": 1794229087,
+          "head": "df9213ba",
           "subfence": {
             "done": 7,
             "total": 7
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "df9213ba",
+              "at": 1794229087
+            },
+            {
+              "sha": "5d1bc2c4",
+              "at": 1794228946
+            },
             {
               "sha": "b53ccbb0",
               "at": 1794227473
@@ -4814,14 +4822,6 @@
             {
               "sha": "7e6a0b3c",
               "at": 1794224138
-            },
-            {
-              "sha": "8459b83f",
-              "at": 1794223969
-            },
-            {
-              "sha": "7e160783",
-              "at": 1794222098
             }
           ],
           "fences": {
@@ -4837,7 +4837,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 25,
+          "ctx_pct": 26,
           "last_commit_at": 1794227777,
           "head": "0bf7593f",
           "subfence": {
@@ -4880,12 +4880,20 @@
         "UC-2",
         "ACCOUNT-HOLDER-RIGHTS",
         "ACCT-LEVELS-2",
+        "LEAD-OPTOUT-EVIDENCE",
         "REFUSAL-EXPORT-MACHINE",
         "REFUSAL-RECORD-COMPLETION-2",
+        "CONTACT-EMAIL-AD-WAIVER",
         "EMAIL-WIRING-3",
         "MSG12"
       ],
       "merge_feed": [
+        {
+          "pr": 390,
+          "unit": "LEAD-UNSUBSCRIBE",
+          "merged_at": 1794228946,
+          "sha": "5d1bc2c4"
+        },
         {
           "pr": 388,
           "unit": "EMAIL-WIRING-2",
@@ -4909,12 +4917,6 @@
           "unit": "VOICE-HANDOFF-PRIVACY",
           "merged_at": 1794063413,
           "sha": "8ddee44b"
-        },
-        {
-          "pr": 384,
-          "unit": "CONTACT-EMAIL",
-          "merged_at": 1793997454,
-          "sha": "249decdb"
         }
       ],
       "decisions": [
@@ -5188,7 +5190,7 @@
           ]
         }
       },
-      "snapshot_id": "4e84d3f9857336bd"
+      "snapshot_id": "21ea81e79b15d0e2"
     },
     "scriptgen": {
       "schema": 1,
@@ -5494,7 +5496,7 @@
           ]
         }
       },
-      "snapshot_id": "1e49afa0882940ba"
+      "snapshot_id": "a6fdd4cba81b6bdb"
     }
   },
   "pm": {
@@ -5522,22 +5524,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 7
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 7
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1
+        "monitor_last_pass_min": 7
       }
     ]
   },
-  "snapshot_id": "8560995c4506448d",
-  "published_at": "2026-11-09T12:56:04Z"
+  "snapshot_id": "af558b870e75bdf8",
+  "published_at": "2026-11-09T13:01:46Z"
 }
