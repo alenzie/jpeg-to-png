@@ -482,7 +482,7 @@
             0.0
           ],
           [
-            12.5,
+            12.6,
             2.0
           ]
         ]
@@ -2214,7 +2214,7 @@
           82.0
         ],
         [
-          80.7,
+          80.8,
           82.0
         ]
       ]
@@ -5839,19 +5839,13 @@
           ]
         }
       },
-      "snapshot_id": "d7797c7b7e44c4c0"
+      "snapshot_id": "565af8279304bf9a"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "UC-1C",
-            "kind": "escalate",
-            "raised_at": 1794420852
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5882,8 +5876,8 @@
         {
           "id": "UC-1C",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "phase-4 review",
+          "stage_i": 5,
           "ctx_pct": 31,
           "last_commit_at": 1794421019,
           "head": "5e7a4972",
@@ -5891,7 +5885,56 @@
             "done": 9,
             "total": 9
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "gpt-5.6-terra xhigh solo",
+              "must": 2,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "gpt-5.6-terra high",
+              "must": 0,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terra xhigh solo declarer",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 1,
+              "seats": "gpt-6-astra xhigh ×4 step clusters",
+              "must": 2,
+              "should": 7,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terra xhigh solo ×4 path partiti",
+              "must": 0,
+              "should": 2,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "gpt-5.6-sol xhigh solo ×4 cumulative ful",
+              "must": 0,
+              "should": 3,
+              "could": 3,
+              "nit": 0
+            }
+          ],
           "commits": [
             {
               "sha": "5e7a4972",
@@ -5920,7 +5963,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -6237,7 +6280,7 @@
           ]
         }
       },
-      "snapshot_id": "1ba880e75c6356d0"
+      "snapshot_id": "13c2482b521c753d"
     },
     "scriptgen": {
       "schema": 1,
@@ -6543,7 +6586,7 @@
           ]
         }
       },
-      "snapshot_id": "72b964116b3c4bf9"
+      "snapshot_id": "fc01450d012a81f9"
     }
   },
   "pm": {
@@ -6571,22 +6614,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1065
+        "monitor_last_pass_min": 1070
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1065
+        "monitor_last_pass_min": 1070
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1065
+        "monitor_last_pass_min": 1070
       }
     ]
   },
-  "snapshot_id": "3354948c06f6d957",
-  "published_at": "2026-11-11T18:17:29Z"
+  "snapshot_id": "c847bade5c802a26",
+  "published_at": "2026-11-11T18:23:01Z"
 }
