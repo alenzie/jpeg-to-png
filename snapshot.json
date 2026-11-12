@@ -1445,7 +1445,7 @@
             70.0
           ],
           [
-            72.6,
+            72.7,
             71.0
           ]
         ]
@@ -3049,7 +3049,7 @@
       "codex": {
         "B": [
           [
-            1790578857,
+            1790579192,
             54.0
           ],
           [
@@ -4017,8 +4017,8 @@
       "claude": {
         "B": [
           [
-            1790578857,
-            66.0
+            1790579192,
+            67.0
           ],
           [
             1790597251,
@@ -4984,7 +4984,7 @@
       },
       "glm": [
         [
-          1790578857,
+          1790579192,
           65.0
         ],
         [
@@ -5988,7 +5988,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 42,
+          "ctx_pct": 44,
           "last_commit_at": 1794466663,
           "head": "9f7906dd",
           "subfence": {
@@ -6296,13 +6296,19 @@
           ]
         }
       },
-      "snapshot_id": "fff5cefa7d805c45"
+      "snapshot_id": "452aee96578252e8"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "ACCOUNT-HOLDER-RIGHTS",
+            "kind": "escalate",
+            "raised_at": null
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6335,15 +6341,23 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 48,
-          "last_commit_at": 1794466442,
-          "head": "d9d6e711",
+          "ctx_pct": 49,
+          "last_commit_at": 1794467026,
+          "head": "70c387e3",
           "subfence": {
             "done": 6,
             "total": 6
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "70c387e3",
+              "at": 1794467026
+            },
+            {
+              "sha": "ca2e4299",
+              "at": 1794466988
+            },
             {
               "sha": "d9d6e711",
               "at": 1794466442
@@ -6355,14 +6369,6 @@
             {
               "sha": "ccf12d35",
               "at": 1794465236
-            },
-            {
-              "sha": "96a96110",
-              "at": 1794465183
-            },
-            {
-              "sha": "72bb7c81",
-              "at": 1794464160
             }
           ],
           "fences": {
@@ -6371,7 +6377,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6688,7 +6694,7 @@
           ]
         }
       },
-      "snapshot_id": "dcea32601eb4e439"
+      "snapshot_id": "6bc0f366db5e99ab"
     },
     "scriptgen": {
       "schema": 1,
@@ -6727,15 +6733,36 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 27,
-          "last_commit_at": 1794466157,
-          "head": "fe49382a",
+          "ctx_pct": 30,
+          "last_commit_at": 1794466871,
+          "head": "a0b2c640",
           "subfence": {
             "done": 9,
             "total": 9
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 2,
+              "seats": "R1 fix and immediate callerscallees",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "Cumulative branch seven declarer ranges",
+              "must": 0,
+              "should": 1,
+              "could": 1,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "a0b2c640",
+              "at": 1794466871
+            },
             {
               "sha": "fe49382a",
               "at": 1794466157
@@ -6751,10 +6778,6 @@
             {
               "sha": "1bcb63d3",
               "at": 1794459690
-            },
-            {
-              "sha": "dac725e9",
-              "at": 1794459471
             }
           ],
           "fences": {
@@ -7037,7 +7060,7 @@
           ]
         }
       },
-      "snapshot_id": "48dec00c860816b4"
+      "snapshot_id": "e68f33261fafde57"
     }
   },
   "pm": {
@@ -7056,7 +7079,7 @@
       "available_note": "owner back 2026-10-23T02:57:40Z"
     },
     "pm_session": {
-      "lock": "1321335 2026-11-12T06:55:41Z",
+      "lock": "1379433 2026-11-12T07:03:47Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -7065,22 +7088,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1826
+        "monitor_last_pass_min": 1832
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1826
+        "monitor_last_pass_min": 1832
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 1826
+        "monitor_last_pass_min": 1832
       }
     ]
   },
-  "snapshot_id": "c563dd0a4c72edfb",
-  "published_at": "2026-11-12T06:59:17Z"
+  "snapshot_id": "6706e2cc11e90b2b",
+  "published_at": "2026-11-12T07:04:47Z"
 }
