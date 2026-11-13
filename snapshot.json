@@ -522,7 +522,7 @@
             0.0
           ],
           [
-            42.9,
+            43.0,
             2.0
           ]
         ]
@@ -1553,7 +1553,7 @@
             90.0
           ],
           [
-            95.4,
+            95.5,
             90.0
           ]
         ]
@@ -5894,7 +5894,7 @@
           ]
         }
       },
-      "snapshot_id": "5f74bda67ad8fa0c"
+      "snapshot_id": "41bf93261f449378"
     },
     "outbound": {
       "schema": 1,
@@ -5905,11 +5905,6 @@
             "id": "BOOKING-PAGE",
             "kind": "escalate",
             "raised_at": 1794571878
-          },
-          {
-            "id": "VOICE-BOOK-LINK",
-            "kind": "needs-owner",
-            "raised_at": 1794569023
           }
         ]
       },
@@ -5985,17 +5980,62 @@
         {
           "id": "VOICE-BOOK-LINK",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 48,
-          "last_commit_at": 1794567479,
-          "head": "cb067e9b",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 52,
+          "last_commit_at": 1794605059,
+          "head": "bb2c38a9",
           "subfence": {
             "done": 9,
             "total": 9
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "gpt-5.6-soldeep seed non-converging",
+              "must": 11,
+              "should": 5,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "gpt-5.6-terrahigh iterate",
+              "must": 3,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terrahigh iterate",
+              "must": 2,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 1,
+              "seats": "gpt-6-astraxhigh breadth-1 two disjoint ",
+              "must": 2,
+              "should": 5,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "gpt-5.6-solxhigh + GLM swarm-1 addendum",
+              "must": 0,
+              "should": 3,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "bb2c38a9",
+              "at": 1794605059
+            },
             {
               "sha": "cb067e9b",
               "at": 1794567479
@@ -6011,10 +6051,6 @@
             {
               "sha": "39020ee9",
               "at": 1794566092
-            },
-            {
-              "sha": "b987fbc7",
-              "at": 1794565986
             }
           ],
           "fences": {
@@ -6023,7 +6059,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -6341,7 +6377,7 @@
           ]
         }
       },
-      "snapshot_id": "ac3f125d0147362d"
+      "snapshot_id": "3c47a73b997c4512"
     },
     "scriptgen": {
       "schema": 1,
@@ -6647,7 +6683,7 @@
           ]
         }
       },
-      "snapshot_id": "1e359ec4f8f87028"
+      "snapshot_id": "bef747907245c8a0"
     }
   },
   "pm": {
@@ -6675,22 +6711,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4126
+        "monitor_last_pass_min": 4132
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4126
+        "monitor_last_pass_min": 4132
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4126
+        "monitor_last_pass_min": 4132
       }
     ]
   },
-  "snapshot_id": "0d5ebec3196c18c4",
-  "published_at": "2026-11-13T21:19:26Z"
+  "snapshot_id": "c1ba144f4b781297",
+  "published_at": "2026-11-13T21:24:51Z"
 }
