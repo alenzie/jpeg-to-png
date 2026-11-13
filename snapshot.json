@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "promax",
-        "projected": 94,
+        "projected": 93,
         "used": 34,
-        "at": 1794564675,
+        "at": 1794565837,
         "reset": "13:14 on 17 Nov",
         "spark": [
           [
@@ -534,7 +534,7 @@
             0.0
           ],
           [
-            36.4,
+            36.5,
             2.0
           ]
         ]
@@ -545,9 +545,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 95,
-        "used": 84,
-        "at": 1794564675,
+        "projected": 97,
+        "used": 86,
+        "at": 1794565837,
         "reset": "Nov 13, 9pm (America/Los_Angeles)",
         "spark": [
           [
@@ -2060,7 +2060,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1794564675,
+      "at": 1794565837,
       "spark": [
         [
           1793959200,
@@ -5591,7 +5591,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 27,
+          "ctx_pct": 28,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5613,18 +5613,39 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 24,
-          "last_commit_at": null,
-          "head": null,
+          "ctx_pct": 32,
+          "last_commit_at": 1794565840,
+          "head": "3412dd50",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
-          "commits": [],
+          "commits": [
+            {
+              "sha": "3412dd50",
+              "at": 1794565840
+            },
+            {
+              "sha": "956f7609",
+              "at": 1794564151
+            },
+            {
+              "sha": "d3a00bb5",
+              "at": 1794556998
+            },
+            {
+              "sha": "e639781e",
+              "at": 1794556764
+            },
+            {
+              "sha": "b532ad91",
+              "at": 1794556631
+            }
+          ],
           "fences": {
             "plan": false,
-            "synth": false,
+            "synth": true,
             "build": false,
             "review": false
           },
@@ -5860,7 +5881,7 @@
           "pools": {
             "codex": {
               "verdict": "IN_BAND",
-              "proj": 94,
+              "proj": 93,
               "target": 100,
               "used": 34,
               "day": 3,
@@ -5871,22 +5892,22 @@
               "verdict": "OVERBURN",
               "proj": null,
               "target": 100,
-              "used": 21,
+              "used": 24,
               "day": 1,
               "active": "G2",
               "wall": false
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 95,
+              "proj": 97,
               "target": 100,
-              "used": 84,
+              "used": 86,
               "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-13T10:11:40Z",
+          "updated": "2026-11-13T10:31:35Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5902,19 +5923,13 @@
           ]
         }
       },
-      "snapshot_id": "da48552d442c4bff"
+      "snapshot_id": "2db7b832f2955b38"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "BOOKING-PAGE",
-            "kind": "needs-owner",
-            "raised_at": 1794544951
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5945,9 +5960,9 @@
         {
           "id": "BOOKING-PAGE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 31,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 32,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5962,14 +5977,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "VOICE-BOOK-LINK",
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 39,
+          "ctx_pct": 43,
           "last_commit_at": 1794563941,
           "head": "73b02f0d",
           "subfence": {
@@ -6321,7 +6336,7 @@
           "pools": {
             "codex": {
               "verdict": "IN_BAND",
-              "proj": 94,
+              "proj": 93,
               "target": 100,
               "used": 34,
               "day": 3,
@@ -6332,22 +6347,22 @@
               "verdict": "OVERBURN",
               "proj": null,
               "target": 100,
-              "used": 21,
+              "used": 24,
               "day": 1,
               "active": "G2",
               "wall": false
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 95,
+              "proj": 97,
               "target": 100,
-              "used": 84,
+              "used": 86,
               "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-13T10:11:40Z",
+          "updated": "2026-11-13T10:31:35Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6363,7 +6378,7 @@
           ]
         }
       },
-      "snapshot_id": "f1db03348e3a3076"
+      "snapshot_id": "54a5d47f3098abff"
     },
     "scriptgen": {
       "schema": 1,
@@ -6627,7 +6642,7 @@
           "pools": {
             "codex": {
               "verdict": "IN_BAND",
-              "proj": 94,
+              "proj": 93,
               "target": 100,
               "used": 34,
               "day": 3,
@@ -6638,22 +6653,22 @@
               "verdict": "OVERBURN",
               "proj": null,
               "target": 100,
-              "used": 21,
+              "used": 24,
               "day": 1,
               "active": "G2",
               "wall": false
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 95,
+              "proj": 97,
               "target": 100,
-              "used": 84,
+              "used": 86,
               "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-13T10:11:40Z",
+          "updated": "2026-11-13T10:31:35Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6669,7 +6684,7 @@
           ]
         }
       },
-      "snapshot_id": "cb7efecf44c0c3a2"
+      "snapshot_id": "7417abb770acec95"
     }
   },
   "pm": {
@@ -6697,22 +6712,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3474
+        "monitor_last_pass_min": 3479
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3474
+        "monitor_last_pass_min": 3479
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3474
+        "monitor_last_pass_min": 3479
       }
     ]
   },
-  "snapshot_id": "04867a16acde026c",
-  "published_at": "2026-11-13T10:26:42Z"
+  "snapshot_id": "c0d7a1466ccf34cd",
+  "published_at": "2026-11-13T10:32:19Z"
 }
