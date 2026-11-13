@@ -8,7 +8,7 @@
         "tier": "promax",
         "projected": 94,
         "used": 31,
-        "at": 1794544069,
+        "at": 1794544984,
         "reset": "13:14 on 17 Nov",
         "spark": [
           [
@@ -547,7 +547,7 @@
         "mult": "20x",
         "projected": 95,
         "used": 81,
-        "at": 1794544069,
+        "at": 1794544984,
         "reset": "Nov 13, 9pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1521,7 +1521,7 @@
             79.0
           ],
           [
-            85.5,
+            85.6,
             81.0
           ]
         ]
@@ -2049,7 +2049,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1794544069,
+      "at": 1794544984,
       "spark": [
         [
           1793937600,
@@ -5815,7 +5815,7 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 100,
-              "used": 8,
+              "used": 9,
               "day": 1,
               "active": null,
               "wall": false
@@ -5825,12 +5825,12 @@
               "proj": 95,
               "target": 100,
               "used": 81,
-              "day": 6,
+              "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-13T04:27:51Z",
+          "updated": "2026-11-13T04:43:06Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5846,13 +5846,19 @@
           ]
         }
       },
-      "snapshot_id": "945ef2c48feae7c2"
+      "snapshot_id": "296082083b5e0e0c"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "BOOKING-PAGE",
+            "kind": "needs-owner",
+            "raised_at": 1794544951
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5883,9 +5889,9 @@
         {
           "id": "BOOKING-PAGE",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 30,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 31,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5900,22 +5906,26 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "VOICE-BOOK-LINK",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 49,
-          "last_commit_at": 1794544166,
-          "head": "aabf2bf0",
+          "ctx_pct": 51,
+          "last_commit_at": 1794544922,
+          "head": "99678748",
           "subfence": {
             "done": 5,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "99678748",
+              "at": 1794544922
+            },
             {
               "sha": "aabf2bf0",
               "at": 1794544166
@@ -5931,10 +5941,6 @@
             {
               "sha": "bf494ac3",
               "at": 1794541937
-            },
-            {
-              "sha": "515d60a5",
-              "at": 1794541291
             }
           ],
           "fences": {
@@ -6229,7 +6235,7 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 100,
-              "used": 8,
+              "used": 9,
               "day": 1,
               "active": null,
               "wall": false
@@ -6239,12 +6245,12 @@
               "proj": 95,
               "target": 100,
               "used": 81,
-              "day": 6,
+              "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-13T04:27:51Z",
+          "updated": "2026-11-13T04:43:06Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6260,7 +6266,7 @@
           ]
         }
       },
-      "snapshot_id": "6a59a5b24d7e95f2"
+      "snapshot_id": "af2385a2ba39dafd"
     },
     "scriptgen": {
       "schema": 1,
@@ -6535,7 +6541,7 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 100,
-              "used": 8,
+              "used": 9,
               "day": 1,
               "active": null,
               "wall": false
@@ -6545,12 +6551,12 @@
               "proj": 95,
               "target": 100,
               "used": 81,
-              "day": 6,
+              "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-13T04:27:51Z",
+          "updated": "2026-11-13T04:43:06Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6566,7 +6572,7 @@
           ]
         }
       },
-      "snapshot_id": "c353e74368c27bc2"
+      "snapshot_id": "ff370b5e2820d06d"
     }
   },
   "pm": {
@@ -6585,7 +6591,7 @@
       "available_note": "owner back 2026-10-23T02:57:40Z"
     },
     "pm_session": {
-      "lock": "3553157 2026-11-13T03:53:33Z",
+      "lock": "3923328 2026-11-13T04:43:05Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -6594,22 +6600,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3127
+        "monitor_last_pass_min": 3132
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3127
+        "monitor_last_pass_min": 3132
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3127
+        "monitor_last_pass_min": 3132
       }
     ]
   },
-  "snapshot_id": "c91cdf905a1ee879",
-  "published_at": "2026-11-13T04:39:38Z"
+  "snapshot_id": "3f405279111102a5",
+  "published_at": "2026-11-13T04:45:00Z"
 }
