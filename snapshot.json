@@ -5938,8 +5938,14 @@
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "VOICE-BOOK-LINK",
+            "kind": "needs-owner",
+            "raised_at": 1794569023
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5972,15 +5978,19 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 46,
-          "last_commit_at": 1794568660,
-          "head": "97791ad4",
+          "ctx_pct": 47,
+          "last_commit_at": 1794569152,
+          "head": "71ca3ba6",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "71ca3ba6",
+              "at": 1794569152
+            },
             {
               "sha": "97791ad4",
               "at": 1794568660
@@ -5996,10 +6006,6 @@
             {
               "sha": "1e5ed70e",
               "at": 1794565955
-            },
-            {
-              "sha": "c1f9b7e7",
-              "at": 1794565764
             }
           ],
           "fences": {
@@ -6013,8 +6019,8 @@
         {
           "id": "VOICE-BOOK-LINK",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
+          "stage": "interviewing",
+          "stage_i": 2,
           "ctx_pct": 48,
           "last_commit_at": 1794567479,
           "head": "cb067e9b",
@@ -6022,48 +6028,7 @@
             "done": 9,
             "total": 9
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-5.6-soldeep seed non-converging",
-              "must": 11,
-              "should": 5,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-terrahigh iterate",
-              "must": 3,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terrahigh iterate",
-              "must": 2,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 1,
-              "seats": "gpt-6-astraxhigh breadth-1 two disjoint ",
-              "must": 2,
-              "should": 5,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-solxhigh + GLM swarm-1 addendum",
-              "must": 0,
-              "should": 3,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "cb067e9b",
@@ -6092,7 +6057,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6410,7 +6375,7 @@
           ]
         }
       },
-      "snapshot_id": "f8c121cabb410694"
+      "snapshot_id": "88845bc4db546447"
     },
     "scriptgen": {
       "schema": 1,
@@ -6735,7 +6700,7 @@
       "available_note": "owner back 2026-10-23T02:57:40Z"
     },
     "pm_session": {
-      "lock": "2497143 2026-11-13T11:17:10Z",
+      "lock": "2552899 2026-11-13T11:24:33Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -6744,22 +6709,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3528
+        "monitor_last_pass_min": 3534
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3528
+        "monitor_last_pass_min": 3534
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 3528
+        "monitor_last_pass_min": 3534
       }
     ]
   },
-  "snapshot_id": "3283d392bf17a079",
-  "published_at": "2026-11-13T11:21:08Z"
+  "snapshot_id": "982d5818807be8f8",
+  "published_at": "2026-11-13T11:26:36Z"
 }
