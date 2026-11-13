@@ -526,7 +526,7 @@
             0.0
           ],
           [
-            44.0,
+            44.1,
             2.0
           ]
         ]
@@ -2656,7 +2656,7 @@
       "codex": {
         "B": [
           [
-            1790723919,
+            1790724584,
             42.0
           ],
           [
@@ -3620,8 +3620,8 @@
       "claude": {
         "B": [
           [
-            1790723919,
-            57.0
+            1790724584,
+            58.0
           ],
           [
             1790726603,
@@ -4583,7 +4583,7 @@
       },
       "glm": [
         [
-          1790723919,
+          1790724584,
           69.0
         ],
         [
@@ -5552,11 +5552,6 @@
         "active": true,
         "units": [
           {
-            "id": "AUTH-SOUND-CALIBRATE",
-            "kind": "escalate",
-            "raised_at": 1794611631
-          },
-          {
             "id": "FLOW-BRIEF",
             "kind": "needs-owner",
             "raised_at": 1794582857
@@ -5592,17 +5587,21 @@
         {
           "id": "AUTH-SOUND-CALIBRATE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "planning",
+          "stage_i": 1,
           "ctx_pct": 51,
-          "last_commit_at": 1794611610,
-          "head": "c1a0fdb7",
+          "last_commit_at": 1794611828,
+          "head": "5c320d3c",
           "subfence": {
             "done": 0,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "5c320d3c",
+              "at": 1794611828
+            },
             {
               "sha": "c1a0fdb7",
               "at": 1794611610
@@ -5618,10 +5617,6 @@
             {
               "sha": "09b768c9",
               "at": 1794610588
-            },
-            {
-              "sha": "07e88db4",
-              "at": 1794609949
             }
           ],
           "fences": {
@@ -5630,7 +5625,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "FLOW-BRIEF",
@@ -5947,19 +5942,13 @@
           ]
         }
       },
-      "snapshot_id": "f51d568d071359a4"
+      "snapshot_id": "dce1f8d38cab55cd"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "BOOKING-PAGE",
-            "kind": "escalate",
-            "raised_at": 1794571878
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5990,11 +5979,11 @@
         {
           "id": "BOOKING-PAGE",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 16,
-          "last_commit_at": 1794571854,
-          "head": "1cdd60c8",
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": 19,
+          "last_commit_at": 1794611831,
+          "head": "9177cdf5",
           "subfence": {
             "done": 0,
             "total": 9
@@ -6002,24 +5991,24 @@
           "review_rounds": [],
           "commits": [
             {
-              "sha": "1cdd60c8",
-              "at": 1794571854
+              "sha": "9177cdf5",
+              "at": 1794611831
             },
             {
-              "sha": "2b2c2ac8",
-              "at": 1794571438
+              "sha": "19562617",
+              "at": 1794611532
             },
             {
-              "sha": "37185842",
-              "at": 1794571346
+              "sha": "eccd70b3",
+              "at": 1794610761
             },
             {
-              "sha": "1d02540d",
-              "at": 1794571340
+              "sha": "f4628544",
+              "at": 1794610574
             },
             {
-              "sha": "ad22bd1a",
-              "at": 1794570555
+              "sha": "eacbb8ca",
+              "at": 1794609378
             }
           ],
           "fences": {
@@ -6028,7 +6017,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -6346,7 +6335,7 @@
           ]
         }
       },
-      "snapshot_id": "7b197c5bfe5e99ac"
+      "snapshot_id": "5c5eeaffc7be43e6"
     },
     "scriptgen": {
       "schema": 1,
@@ -6652,7 +6641,7 @@
           ]
         }
       },
-      "snapshot_id": "442c847f11939f61"
+      "snapshot_id": "de6dce1bc9bd7484"
     }
   },
   "pm": {
@@ -6671,7 +6660,7 @@
       "available_note": "owner back 2026-10-23T02:57:40Z"
     },
     "pm_session": {
-      "lock": "1854560 2026-11-13T21:51:11Z",
+      "lock": "2382026 2026-11-13T23:15:04Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -6680,22 +6669,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4241
+        "monitor_last_pass_min": 4247
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4241
+        "monitor_last_pass_min": 4247
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4241
+        "monitor_last_pass_min": 4247
       }
     ]
   },
-  "snapshot_id": "c16a4847e55c253a",
-  "published_at": "2026-11-13T23:14:16Z"
+  "snapshot_id": "a7dbab5ee8821398",
+  "published_at": "2026-11-13T23:19:41Z"
 }
