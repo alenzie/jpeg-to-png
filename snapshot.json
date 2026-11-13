@@ -1545,7 +1545,7 @@
             90.0
           ],
           [
-            95.7,
+            95.8,
             90.0
           ]
         ]
@@ -2624,7 +2624,7 @@
       "codex": {
         "B": [
           [
-            1790718494,
+            1790719257,
             40.0
           ],
           [
@@ -3580,7 +3580,7 @@
       "claude": {
         "B": [
           [
-            1790718494,
+            1790719257,
             57.0
           ],
           [
@@ -4535,7 +4535,7 @@
       },
       "glm": [
         [
-          1790718494,
+          1790719257,
           69.0
         ],
         [
@@ -5555,15 +5555,19 @@
           "status": "building",
           "stage": "interviewing",
           "stage_i": 2,
-          "ctx_pct": 17,
-          "last_commit_at": 1794605416,
-          "head": "600f2597",
+          "ctx_pct": 18,
+          "last_commit_at": 1794606457,
+          "head": "cc8898e8",
           "subfence": {
             "done": 5,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "cc8898e8",
+              "at": 1794606457
+            },
             {
               "sha": "600f2597",
               "at": 1794605416
@@ -5579,10 +5583,6 @@
             {
               "sha": "a3fc0caf",
               "at": 1794582525
-            },
-            {
-              "sha": "741631d4",
-              "at": 1794581973
             }
           ],
           "fences": {
@@ -5865,7 +5865,7 @@
           ]
         }
       },
-      "snapshot_id": "23d12e333a8cdf19"
+      "snapshot_id": "544ec2d9081c632e"
     },
     "outbound": {
       "schema": 1,
@@ -5876,11 +5876,6 @@
             "id": "BOOKING-PAGE",
             "kind": "escalate",
             "raised_at": 1794571878
-          },
-          {
-            "id": "VOICE-BOOK-LINK",
-            "kind": "needs-owner",
-            "raised_at": 1794605470
           }
         ]
       },
@@ -5956,17 +5951,62 @@
         {
           "id": "VOICE-BOOK-LINK",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 53,
-          "last_commit_at": 1794605108,
-          "head": "eda0cb4c",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 54,
+          "last_commit_at": 1794606696,
+          "head": "ce6d3824",
           "subfence": {
             "done": 9,
             "total": 9
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "gpt-5.6-soldeep seed non-converging",
+              "must": 11,
+              "should": 5,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "gpt-5.6-terrahigh iterate",
+              "must": 3,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terrahigh iterate",
+              "must": 2,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 1,
+              "seats": "gpt-6-astraxhigh breadth-1 two disjoint ",
+              "must": 2,
+              "should": 5,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "gpt-5.6-solxhigh + GLM swarm-1 addendum",
+              "must": 0,
+              "should": 3,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "ce6d3824",
+              "at": 1794606696
+            },
             {
               "sha": "eda0cb4c",
               "at": 1794605108
@@ -5982,10 +6022,6 @@
             {
               "sha": "2948d89f",
               "at": 1794567427
-            },
-            {
-              "sha": "a354979c",
-              "at": 1794566185
             }
           ],
           "fences": {
@@ -5994,7 +6030,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -6312,7 +6348,7 @@
           ]
         }
       },
-      "snapshot_id": "2cbb8ec19cfc988a"
+      "snapshot_id": "0d91b49e43f11a70"
     },
     "scriptgen": {
       "schema": 1,
@@ -6618,7 +6654,7 @@
           ]
         }
       },
-      "snapshot_id": "1d758b30765a4e36"
+      "snapshot_id": "7f5976e20ddd5c88"
     }
   },
   "pm": {
@@ -6637,7 +6673,7 @@
       "available_note": "owner back 2026-10-23T02:57:40Z"
     },
     "pm_session": {
-      "lock": "1749073 2026-11-13T21:32:19Z",
+      "lock": "1854560 2026-11-13T21:51:11Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -6646,22 +6682,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4154
+        "monitor_last_pass_min": 4160
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4154
+        "monitor_last_pass_min": 4160
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4154
+        "monitor_last_pass_min": 4160
       }
     ]
   },
-  "snapshot_id": "55b7b163d739e091",
-  "published_at": "2026-11-13T21:47:19Z"
+  "snapshot_id": "140490848d1b6bf2",
+  "published_at": "2026-11-13T21:52:44Z"
 }
