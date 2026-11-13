@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "promax",
-        "projected": 87,
+        "projected": 86,
         "used": 38,
-        "at": 1794610664,
+        "at": 1794611629,
         "reset": "13:14 on 17 Nov",
         "spark": [
           [
@@ -514,6 +514,10 @@
           [
             1794607200,
             85
+          ],
+          [
+            1794610800,
+            86
           ]
         ],
         "trail": [
@@ -535,8 +539,8 @@
         "mult": "20x",
         "projected": 96,
         "used": 93,
-        "at": 1794610664,
-        "reset": "Nov 13, 8:59pm (America/Los_Angeles)",
+        "at": 1794611629,
+        "reset": "Nov 13, 9pm (America/Los_Angeles)",
         "spark": [
           [
             1794006000,
@@ -1017,6 +1021,10 @@
           [
             1794607200,
             97
+          ],
+          [
+            1794610800,
+            96
           ]
         ],
         "trail": [
@@ -1557,7 +1565,11 @@
             90.0
           ],
           [
-            96.5,
+            96.0,
+            93.0
+          ],
+          [
+            96.6,
             93.0
           ]
         ]
@@ -2072,7 +2084,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1794610664,
+      "at": 1794611629,
       "spark": [
         [
           1794006000,
@@ -2632,6 +2644,10 @@
         ],
         [
           1794607200,
+          -0.0
+        ],
+        [
+          1794610800,
           -0.0
         ]
       ]
@@ -3594,6 +3610,10 @@
           [
             1794608338,
             37.0
+          ],
+          [
+            1794611629,
+            38.0
           ]
         ]
       },
@@ -4554,6 +4574,10 @@
           [
             1794608338,
             93.0
+          ],
+          [
+            1794611629,
+            93.0
           ]
         ]
       },
@@ -5513,6 +5537,10 @@
         [
           1794608338,
           28.0
+        ],
+        [
+          1794611629,
+          29.0
         ]
       ]
     }
@@ -5523,6 +5551,11 @@
       "gate_alert": {
         "active": true,
         "units": [
+          {
+            "id": "AUTH-SOUND-CALIBRATE",
+            "kind": "escalate",
+            "raised_at": 1794611631
+          },
           {
             "id": "FLOW-BRIEF",
             "kind": "needs-owner",
@@ -5559,17 +5592,25 @@
         {
           "id": "AUTH-SOUND-CALIBRATE",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 50,
-          "last_commit_at": 1794610591,
-          "head": "c9b22d6d",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 51,
+          "last_commit_at": 1794611610,
+          "head": "c1a0fdb7",
           "subfence": {
             "done": 0,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "c1a0fdb7",
+              "at": 1794611610
+            },
+            {
+              "sha": "de9e9c3f",
+              "at": 1794611605
+            },
             {
               "sha": "c9b22d6d",
               "at": 1794610591
@@ -5581,14 +5622,6 @@
             {
               "sha": "07e88db4",
               "at": 1794609949
-            },
-            {
-              "sha": "8ea5c674",
-              "at": 1794609946
-            },
-            {
-              "sha": "ff47a693",
-              "at": 1794609560
             }
           ],
           "fences": {
@@ -5597,7 +5630,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "FLOW-BRIEF",
@@ -5872,7 +5905,7 @@
           "pools": {
             "codex": {
               "verdict": "IN_BAND",
-              "proj": 87,
+              "proj": 86,
               "target": 100,
               "used": 38,
               "day": 4,
@@ -5898,7 +5931,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-13T23:02:06Z",
+          "updated": "2026-11-13T23:13:59Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5914,7 +5947,7 @@
           ]
         }
       },
-      "snapshot_id": "79d516e607eca182"
+      "snapshot_id": "f51d568d071359a4"
     },
     "outbound": {
       "schema": 1,
@@ -5996,49 +6029,6 @@
             "review": false
           },
           "gate_open": true
-        },
-        {
-          "id": "VOICE-BOOK-LINK",
-          "status": "done",
-          "stage": "done",
-          "stage_i": 7,
-          "ctx_pct": 10,
-          "last_commit_at": 1794609378,
-          "head": "eacbb8ca",
-          "subfence": {
-            "done": 9,
-            "total": 9
-          },
-          "review_rounds": [],
-          "commits": [
-            {
-              "sha": "eacbb8ca",
-              "at": 1794609378
-            },
-            {
-              "sha": "909fe2c2",
-              "at": 1794608734
-            },
-            {
-              "sha": "8cdec19e",
-              "at": 1794608175
-            },
-            {
-              "sha": "52516490",
-              "at": 1794607676
-            },
-            {
-              "sha": "f3a0f5fd",
-              "at": 1794607161
-            }
-          ],
-          "fences": {
-            "plan": true,
-            "synth": true,
-            "build": true,
-            "review": true
-          },
-          "gate_open": false
         }
       ],
       "eligible": [
@@ -6314,7 +6304,7 @@
           "pools": {
             "codex": {
               "verdict": "IN_BAND",
-              "proj": 87,
+              "proj": 86,
               "target": 100,
               "used": 38,
               "day": 4,
@@ -6340,7 +6330,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-13T23:02:06Z",
+          "updated": "2026-11-13T23:13:59Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6356,7 +6346,7 @@
           ]
         }
       },
-      "snapshot_id": "eece7e55a68ad03d"
+      "snapshot_id": "7b197c5bfe5e99ac"
     },
     "scriptgen": {
       "schema": 1,
@@ -6620,7 +6610,7 @@
           "pools": {
             "codex": {
               "verdict": "IN_BAND",
-              "proj": 87,
+              "proj": 86,
               "target": 100,
               "used": 38,
               "day": 4,
@@ -6646,7 +6636,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-13T23:02:06Z",
+          "updated": "2026-11-13T23:13:59Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6662,7 +6652,7 @@
           ]
         }
       },
-      "snapshot_id": "e2c4d165f8937487"
+      "snapshot_id": "442c847f11939f61"
     }
   },
   "pm": {
@@ -6690,22 +6680,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4236
+        "monitor_last_pass_min": 4241
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4236
+        "monitor_last_pass_min": 4241
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4236
+        "monitor_last_pass_min": 4241
       }
     ]
   },
-  "snapshot_id": "021959d4b782a03a",
-  "published_at": "2026-11-13T23:08:47Z"
+  "snapshot_id": "c16a4847e55c253a",
+  "published_at": "2026-11-13T23:14:16Z"
 }
