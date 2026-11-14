@@ -13,7 +13,7 @@
         "spark": [
           [
             1794038400,
-            88
+            90
           ],
           [
             1794042000,
@@ -1065,7 +1065,7 @@
       "spark": [
         [
           1794038400,
-          145
+          144
         ],
         [
           1794042000,
@@ -2269,7 +2269,7 @@
       "codex": {
         "B": [
           [
-            1790758459,
+            1790758886,
             75.0
           ],
           [
@@ -2665,8 +2665,8 @@
             41.0
           ],
           [
-            1794041465,
-            44.0
+            1794041948,
+            45.0
           ],
           [
             1794042502,
@@ -3241,8 +3241,8 @@
       "claude": {
         "B": [
           [
-            1790758459,
-            73.0
+            1790758886,
+            74.0
           ],
           [
             1790769740,
@@ -3637,8 +3637,8 @@
             3.0
           ],
           [
-            1794041465,
-            9.0
+            1794041948,
+            10.0
           ],
           [
             1794042502,
@@ -4212,7 +4212,7 @@
       },
       "glm": [
         [
-          1790758459,
+          1790758886,
           72.0
         ],
         [
@@ -4608,7 +4608,7 @@
           25.0
         ],
         [
-          1794041465,
+          1794041948,
           26.0
         ],
         [
@@ -5223,50 +5223,17 @@
       "units": [
         {
           "id": "AUTH-SOUND-CALIBRATE",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 19,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 12,
           "last_commit_at": 1794646060,
           "head": "d38715dd",
           "subfence": {
             "done": 9,
             "total": 9
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "lead-family reviewer",
-              "must": 4,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 1,
-              "seats": "cross-family reviewer",
-              "must": 0,
-              "should": 1,
-              "could": 1,
-              "nit": 1
-            },
-            {
-              "round": 2,
-              "seats": "lead-family reviewer",
-              "must": 3,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "lead-family reviewer",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "d38715dd",
@@ -5293,7 +5260,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         },
@@ -5343,11 +5310,18 @@
       ],
       "eligible": [
         "AUTH-SOUND-SAFETY",
+        "DETECTOR-AUDIO-MISFIT-DEGRADE",
         "BM-SONG-BOUNDS",
         "FLOW-EVIDENCE-KIT",
         "SUPABASE-LEGACY-KEY-MIGRATION"
       ],
       "merge_feed": [
+        {
+          "pr": 81,
+          "unit": "AUTH-SOUND-CALIBRATE",
+          "merged_at": 1794646422,
+          "sha": "df47e49c"
+        },
         {
           "pr": 80,
           "unit": "AUTH-SOUND",
@@ -5371,12 +5345,6 @@
           "unit": "LICENSING-HARDENING",
           "merged_at": 1793939883,
           "sha": "11ef800d"
-        },
-        {
-          "pr": 75,
-          "unit": "DESKTOP-RUNTIME-MAINTENA",
-          "merged_at": 1793003575,
-          "sha": "ea9aad07"
         }
       ],
       "decisions": [],
@@ -5570,7 +5538,7 @@
           "pools": {
             "codex": {
               "verdict": "IN_BAND",
-              "proj": 91,
+              "proj": 90,
               "target": 100,
               "used": 45,
               "day": 4,
@@ -5579,7 +5547,7 @@
             },
             "glm": {
               "verdict": "OVERBURN",
-              "proj": 208,
+              "proj": 206,
               "target": 100,
               "used": 37,
               "day": 2,
@@ -5596,7 +5564,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-14T08:37:06Z",
+          "updated": "2026-11-14T08:52:31Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5612,7 +5580,7 @@
           ]
         }
       },
-      "snapshot_id": "33404149b06e259c"
+      "snapshot_id": "eb14f5a8dd52578b"
     },
     "outbound": {
       "schema": 1,
@@ -5919,7 +5887,7 @@
           "pools": {
             "codex": {
               "verdict": "IN_BAND",
-              "proj": 91,
+              "proj": 90,
               "target": 100,
               "used": 45,
               "day": 4,
@@ -5928,7 +5896,7 @@
             },
             "glm": {
               "verdict": "OVERBURN",
-              "proj": 208,
+              "proj": 206,
               "target": 100,
               "used": 37,
               "day": 2,
@@ -5945,7 +5913,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-14T08:37:06Z",
+          "updated": "2026-11-14T08:52:31Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5961,7 +5929,7 @@
           ]
         }
       },
-      "snapshot_id": "f922ee39e9350af8"
+      "snapshot_id": "f26b56e4eb73bad4"
     },
     "scriptgen": {
       "schema": 1,
@@ -6225,7 +6193,7 @@
           "pools": {
             "codex": {
               "verdict": "IN_BAND",
-              "proj": 91,
+              "proj": 90,
               "target": 100,
               "used": 45,
               "day": 4,
@@ -6234,7 +6202,7 @@
             },
             "glm": {
               "verdict": "OVERBURN",
-              "proj": 208,
+              "proj": 206,
               "target": 100,
               "used": 37,
               "day": 2,
@@ -6251,7 +6219,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-14T08:37:06Z",
+          "updated": "2026-11-14T08:52:31Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6267,7 +6235,7 @@
           ]
         }
       },
-      "snapshot_id": "d3b4e07acfee9989"
+      "snapshot_id": "88e28d07e2a92958"
     }
   },
   "pm": {
@@ -6295,22 +6263,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4817
+        "monitor_last_pass_min": 4823
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4817
+        "monitor_last_pass_min": 4823
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 4817
+        "monitor_last_pass_min": 4823
       }
     ]
   },
-  "snapshot_id": "8a4707aa80537046",
-  "published_at": "2026-11-14T08:50:00Z"
+  "snapshot_id": "d44018e09d59377d",
+  "published_at": "2026-11-14T08:55:30Z"
 }
