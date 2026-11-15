@@ -1117,7 +1117,7 @@
             21.0
           ],
           [
-            21.3,
+            21.4,
             21.0
           ]
         ]
@@ -2365,10 +2365,6 @@
       "codex": {
         "B": [
           [
-            1790873298,
-            80.0
-          ],
-          [
             1790881672,
             80.0
           ],
@@ -3305,10 +3301,6 @@
       "claude": {
         "B": [
           [
-            1790873298,
-            87.0
-          ],
-          [
             1790881672,
             88.0
           ],
@@ -4243,10 +4235,6 @@
         ]
       },
       "glm": [
-        [
-          1790873298,
-          83.0
-        ],
         [
           1790881672,
           83.0
@@ -5226,7 +5214,7 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 38,
+          "ctx_pct": 39,
           "last_commit_at": 1794760987,
           "head": "e98a6c98",
           "subfence": {
@@ -5561,7 +5549,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-15T16:45:07Z",
+          "updated": "2026-11-15T16:47:10Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5577,7 +5565,7 @@
           ]
         }
       },
-      "snapshot_id": "fdcbf5afcbcba691"
+      "snapshot_id": "eac3c36cbb1e2ef4"
     },
     "outbound": {
       "schema": 1,
@@ -5613,12 +5601,12 @@
       "units": [
         {
           "id": "CONTACT-INBOUND-MESSAGES-CHECK",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 51,
-          "last_commit_at": 1794760501,
-          "head": "8c03f768",
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 53,
+          "last_commit_at": 1794761531,
+          "head": "3c3c081d",
           "subfence": {
             "done": 7,
             "total": 8
@@ -5626,31 +5614,31 @@
           "review_rounds": [],
           "commits": [
             {
+              "sha": "3c3c081d",
+              "at": 1794761531
+            },
+            {
+              "sha": "6038f057",
+              "at": 1794761443
+            },
+            {
+              "sha": "44ce02b1",
+              "at": 1794761372
+            },
+            {
+              "sha": "2ddee830",
+              "at": 1794761355
+            },
+            {
               "sha": "8c03f768",
               "at": 1794760501
-            },
-            {
-              "sha": "d22bf5d3",
-              "at": 1794759931
-            },
-            {
-              "sha": "9af08af0",
-              "at": 1794759334
-            },
-            {
-              "sha": "b30f7da1",
-              "at": 1794758373
-            },
-            {
-              "sha": "0f42f699",
-              "at": 1794758340
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         },
@@ -5719,7 +5707,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 23,
+          "ctx_pct": 24,
           "last_commit_at": 1794761200,
           "head": "c8b3f53e",
           "subfence": {
@@ -5770,6 +5758,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 397,
+          "unit": "CONTACT-INBOUND-MESSAGES",
+          "merged_at": 1794761372,
+          "sha": "44ce02b1"
+        },
+        {
           "pr": 396,
           "unit": "BOOKING-PAGE",
           "merged_at": 1794644169,
@@ -5792,12 +5786,6 @@
           "unit": "UC-2",
           "merged_at": 1794463137,
           "sha": "eab7e6b8"
-        },
-        {
-          "pr": 392,
-          "unit": "UC-1C",
-          "merged_at": 1794423816,
-          "sha": "e4668a3c"
         }
       ],
       "decisions": [
@@ -6055,7 +6043,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-15T16:45:07Z",
+          "updated": "2026-11-15T16:47:10Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6071,7 +6059,7 @@
           ]
         }
       },
-      "snapshot_id": "8ced267ad70f4d7c"
+      "snapshot_id": "ee521af1c0d12c34"
     },
     "scriptgen": {
       "schema": 1,
@@ -6361,7 +6349,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-15T16:45:07Z",
+          "updated": "2026-11-15T16:47:10Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6377,7 +6365,7 @@
           ]
         }
       },
-      "snapshot_id": "99bc2a433cb04fb3"
+      "snapshot_id": "05d1eb318b270335"
     }
   },
   "pm": {
@@ -6405,22 +6393,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6734
+        "monitor_last_pass_min": 6740
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6734
+        "monitor_last_pass_min": 6740
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 6734
+        "monitor_last_pass_min": 6740
       }
     ]
   },
-  "snapshot_id": "7f508f137e3a8853",
-  "published_at": "2026-11-15T16:46:57Z"
+  "snapshot_id": "f35c7bec52296771",
+  "published_at": "2026-11-15T16:52:40Z"
 }
