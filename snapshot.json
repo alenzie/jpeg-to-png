@@ -506,7 +506,7 @@
             0.0
           ],
           [
-            80.1,
+            80.2,
             2.0
           ]
         ]
@@ -1970,7 +1970,7 @@
           100.0
         ],
         [
-          48.3,
+          48.4,
           100.0
         ]
       ]
@@ -5404,81 +5404,16 @@
         {
           "id": "FLOW-EVIDENCE-KIT",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 44,
+          "stage": "merge+cleanup",
+          "stage_i": 6,
+          "ctx_pct": 11,
           "last_commit_at": 1794829864,
           "head": "d8fa213b",
           "subfence": {
             "done": 9,
             "total": 9
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-6-astra  xhigh ×3 dimensions",
-              "must": 8,
-              "should": 8,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-sol  high",
-              "must": 4,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra  high",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.6-terra  xhigh declarer",
-              "must": 5,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.6-terra  xhigh declarer",
-              "must": 3,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "gpt-5.6-terra  xhigh declarer",
-              "must": 5,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 7,
-              "seats": "gpt-5.6-terra  xhigh",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 8,
-              "seats": "gpt-5.6-sol  xhigh gpt-5.6-terra  xhigh ",
-              "must": 1,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "d8fa213b",
@@ -5505,7 +5440,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         },
@@ -5538,6 +5473,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 85,
+          "unit": "FLOW-EVIDENCE-KIT",
+          "merged_at": 1794830158,
+          "sha": "2a0fe3c6"
+        },
+        {
           "pr": 84,
           "unit": "AUTH-SOUND-SAFETY",
           "merged_at": 1794819237,
@@ -5560,12 +5501,6 @@
           "unit": "AUTH-SOUND-CALIBRATE",
           "merged_at": 1794646422,
           "sha": "df47e49c"
-        },
-        {
-          "pr": 80,
-          "unit": "AUTH-SOUND",
-          "merged_at": 1794481255,
-          "sha": "5bbee46c"
         }
       ],
       "decisions": [],
@@ -5785,7 +5720,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-16T11:51:37Z",
+          "updated": "2026-11-16T11:53:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5801,7 +5736,7 @@
           ]
         }
       },
-      "snapshot_id": "b8d9e874b642e8e5"
+      "snapshot_id": "1e3af2a86464dd0a"
     },
     "outbound": {
       "schema": 1,
@@ -5840,7 +5775,7 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 34,
+          "ctx_pct": 37,
           "last_commit_at": 1794828433,
           "head": "d5a8ccbb",
           "subfence": {
@@ -5883,7 +5818,7 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 54,
+          "ctx_pct": 55,
           "last_commit_at": 1794829804,
           "head": "90571d84",
           "subfence": {
@@ -6244,7 +6179,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-16T11:51:37Z",
+          "updated": "2026-11-16T11:53:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6260,7 +6195,7 @@
           ]
         }
       },
-      "snapshot_id": "38af7797a7defca7"
+      "snapshot_id": "88b120e8253714ce"
     },
     "scriptgen": {
       "schema": 1,
@@ -6550,7 +6485,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-16T11:51:37Z",
+          "updated": "2026-11-16T11:53:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6566,7 +6501,7 @@
           ]
         }
       },
-      "snapshot_id": "67042f3910c5d96e"
+      "snapshot_id": "43298e70ac59e189"
     }
   },
   "pm": {
@@ -6594,22 +6529,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7879
+        "monitor_last_pass_min": 7885
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7879
+        "monitor_last_pass_min": 7885
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7879
+        "monitor_last_pass_min": 7885
       }
     ]
   },
-  "snapshot_id": "3294e60cd627d8d4",
-  "published_at": "2026-11-16T11:52:13Z"
+  "snapshot_id": "a66e45b5a92943fb",
+  "published_at": "2026-11-16T11:57:39Z"
 }
