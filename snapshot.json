@@ -510,7 +510,7 @@
             0.0
           ],
           [
-            81.0,
+            81.1,
             2.0
           ]
         ]
@@ -5764,7 +5764,7 @@
           ]
         }
       },
-      "snapshot_id": "b64a4bb3fe97b61c"
+      "snapshot_id": "5b1669e524c5f375"
     },
     "outbound": {
       "schema": 1,
@@ -5803,7 +5803,7 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 41,
+          "ctx_pct": 42,
           "last_commit_at": 1794833911,
           "head": "dff4c275",
           "subfence": {
@@ -5868,67 +5868,26 @@
         },
         {
           "id": "HOSTED-VOICE-RUNNERS",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 68,
-          "last_commit_at": 1794834267,
-          "head": "d0c78406",
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 69,
+          "last_commit_at": 1794835567,
+          "head": "2aeedf2c",
           "subfence": {
             "done": 8,
             "total": 8
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-6-astraxhigh breadth",
-              "must": 3,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-solxhigh",
-              "must": 3,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terraxhigh",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.6-solxhigh",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.6-terraxhigh declarer",
-              "must": 0,
-              "should": 4,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "gpt-5.6-terraxhigh declarer",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "2aeedf2c",
+              "at": 1794835567
+            },
+            {
+              "sha": "1ebdd1e3",
+              "at": 1794835478
+            },
             {
               "sha": "d0c78406",
               "at": 1794834267
@@ -5940,27 +5899,20 @@
             {
               "sha": "1a398455",
               "at": 1794833016
-            },
-            {
-              "sha": "c6f1f381",
-              "at": 1794831449
-            },
-            {
-              "sha": "90571d84",
-              "at": 1794829804
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
       ],
       "eligible": [
         "UC-1C-OPENAI",
+        "HOSTED-VOICE-CUTOFF-INDEX",
         "ACCOUNT-HOLDER-ERASE",
         "ACCT-LEVELS-2",
         "LEAD-OPTOUT-EVIDENCE",
@@ -5970,6 +5922,12 @@
         "MSG12"
       ],
       "merge_feed": [
+        {
+          "pr": 400,
+          "unit": "HOSTED-VOICE-RUNNERS",
+          "merged_at": 1794835478,
+          "sha": "1ebdd1e3"
+        },
         {
           "pr": 399,
           "unit": "HOSTED-VOICE",
@@ -5993,12 +5951,6 @@
           "unit": "BOOKING-PAGE",
           "merged_at": 1794644169,
           "sha": "aac25bb5"
-        },
-        {
-          "pr": 395,
-          "unit": "VOICE-BOOK-LINK",
-          "merged_at": 1794610574,
-          "sha": "f4628544"
         }
       ],
       "decisions": [
@@ -6272,7 +6224,7 @@
           ]
         }
       },
-      "snapshot_id": "a4f7d0c47b2c855a"
+      "snapshot_id": "bec9d2f472edaa4d"
     },
     "scriptgen": {
       "schema": 1,
@@ -6606,22 +6558,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7971
+        "monitor_last_pass_min": 7976
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7971
+        "monitor_last_pass_min": 7976
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 7971
+        "monitor_last_pass_min": 7976
       }
     ]
   },
-  "snapshot_id": "5d7687b6812928f5",
-  "published_at": "2026-11-16T13:23:52Z"
+  "snapshot_id": "d8a096b9ee076ceb",
+  "published_at": "2026-11-16T13:29:15Z"
 }
