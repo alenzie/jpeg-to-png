@@ -8,7 +8,7 @@
         "tier": "promax",
         "projected": 105,
         "used": 91,
-        "at": 1794871194,
+        "at": 1794871720,
         "reset": "13:14 on 17 Nov",
         "spark": [
           [
@@ -510,7 +510,7 @@
             0.0
           ],
           [
-            87.0,
+            87.1,
             2.0
           ]
         ]
@@ -521,9 +521,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 122,
+        "projected": 121,
         "used": 48,
-        "at": 1794871194,
+        "at": 1794871720,
         "reset": "Nov 20, 9pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1267,7 +1267,7 @@
       "target": 100,
       "projected": 181,
       "used": 100,
-      "at": 1794871194,
+      "at": 1794871720,
       "reset": "Nov 19, 18:39",
       "level": "pro",
       "spark": [
@@ -2078,7 +2078,7 @@
           100.0
         ],
         [
-          55.2,
+          55.3,
           100.0
         ]
       ]
@@ -2089,7 +2089,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1794871194,
+      "at": 1794871720,
       "spark": [
         [
           1794265200,
@@ -5510,36 +5510,36 @@
         {
           "id": "FLOW-EVIDENCE-READ",
           "status": "building",
-          "stage": "building",
-          "stage_i": 3,
-          "ctx_pct": 44,
-          "last_commit_at": 1794871096,
-          "head": "2f6da94f",
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": null,
+          "last_commit_at": 1794871916,
+          "head": "162aaaa1",
           "subfence": {
-            "done": 0,
+            "done": 1,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
             {
+              "sha": "162aaaa1",
+              "at": 1794871916
+            },
+            {
+              "sha": "e08cce67",
+              "at": 1794871806
+            },
+            {
+              "sha": "2c3afb30",
+              "at": 1794871782
+            },
+            {
+              "sha": "77ea8c31",
+              "at": 1794871746
+            },
+            {
               "sha": "2f6da94f",
               "at": 1794871096
-            },
-            {
-              "sha": "90f45fa5",
-              "at": 1794871055
-            },
-            {
-              "sha": "156a7494",
-              "at": 1794870466
-            },
-            {
-              "sha": "321a8768",
-              "at": 1794870389
-            },
-            {
-              "sha": "78760be7",
-              "at": 1794869559
             }
           ],
           "fences": {
@@ -5839,7 +5839,7 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 122,
+              "proj": 121,
               "target": 100,
               "used": 48,
               "day": 3,
@@ -5847,7 +5847,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-16T23:23:24Z",
+          "updated": "2026-11-16T23:32:17Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5863,7 +5863,7 @@
           ]
         }
       },
-      "snapshot_id": "d9b8426f8aad3c8c"
+      "snapshot_id": "e858721d5651fe38"
     },
     "outbound": {
       "schema": 1,
@@ -5896,7 +5896,30 @@
           "up": false
         }
       },
-      "units": [],
+      "units": [
+        {
+          "id": "REFUSAL-RECORD-COMPLETION-2",
+          "status": "proposed",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 16,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        }
+      ],
       "eligible": [
         "UC-1C-OPENAI",
         "HOSTED-VOICE-CUTOFF-INDEX",
@@ -6187,7 +6210,7 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 122,
+              "proj": 121,
               "target": 100,
               "used": 48,
               "day": 3,
@@ -6195,7 +6218,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-16T23:23:24Z",
+          "updated": "2026-11-16T23:32:17Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6211,7 +6234,7 @@
           ]
         }
       },
-      "snapshot_id": "7378c5bc447b6197"
+      "snapshot_id": "f2baa9e15f9b66e4"
     },
     "scriptgen": {
       "schema": 1,
@@ -6493,7 +6516,7 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 122,
+              "proj": 121,
               "target": 100,
               "used": 48,
               "day": 3,
@@ -6501,7 +6524,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-16T23:23:24Z",
+          "updated": "2026-11-16T23:32:17Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6517,7 +6540,7 @@
           ]
         }
       },
-      "snapshot_id": "466854add3144db5"
+      "snapshot_id": "91365aec3b754003"
     }
   },
   "pm": {
@@ -6545,22 +6568,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8574
+        "monitor_last_pass_min": 8580
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8574
+        "monitor_last_pass_min": 8580
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8574
+        "monitor_last_pass_min": 8580
       }
     ]
   },
-  "snapshot_id": "70eec9259c5e217c",
-  "published_at": "2026-11-16T23:27:13Z"
+  "snapshot_id": "356925fe53f57df7",
+  "published_at": "2026-11-16T23:32:37Z"
 }
