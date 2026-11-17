@@ -518,7 +518,7 @@
             0.0
           ],
           [
-            90.8,
+            90.9,
             2.0
           ]
         ]
@@ -5582,8 +5582,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "FLOW-EVIDENCE-READ",
+            "kind": "escalate",
+            "raised_at": 1794895018
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5614,42 +5620,21 @@
         {
           "id": "FLOW-EVIDENCE-READ",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 39,
-          "last_commit_at": 1794894247,
-          "head": "99845a50",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 42,
+          "last_commit_at": 1794894944,
+          "head": "8217a069",
           "subfence": {
             "done": 9,
             "total": 9
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-6-astra  xhigh breadth",
-              "must": 2,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-sol  high iterate",
-              "must": 1,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra  high iterate",
-              "must": 0,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "8217a069",
+              "at": 1794894944
+            },
             {
               "sha": "99845a50",
               "at": 1794894247
@@ -5665,10 +5650,6 @@
             {
               "sha": "dddf599d",
               "at": 1794893681
-            },
-            {
-              "sha": "bc11340a",
-              "at": 1794892725
             }
           ],
           "fences": {
@@ -5677,16 +5658,16 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "FLOW-PROJECT-IMPORT",
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 17,
-          "last_commit_at": 1794894058,
-          "head": "1b97f393",
+          "ctx_pct": 19,
+          "last_commit_at": 1794894924,
+          "head": "1d1d55f8",
           "subfence": {
             "done": 9,
             "total": 9
@@ -5699,35 +5680,43 @@
               "should": 0,
               "could": 2,
               "nit": 3
+            },
+            {
+              "round": 2,
+              "seats": "lead-family reviewerxhigh fresh",
+              "must": 0,
+              "should": 0,
+              "could": 0,
+              "nit": 3
             }
           ],
           "commits": [
             {
+              "sha": "1d1d55f8",
+              "at": 1794894924
+            },
+            {
+              "sha": "45e9922a",
+              "at": 1794894903
+            },
+            {
+              "sha": "c1277368",
+              "at": 1794894716
+            },
+            {
+              "sha": "24233329",
+              "at": 1794894703
+            },
+            {
               "sha": "1b97f393",
               "at": 1794894058
-            },
-            {
-              "sha": "006a9232",
-              "at": 1794894035
-            },
-            {
-              "sha": "a4703990",
-              "at": 1794894020
-            },
-            {
-              "sha": "d3814040",
-              "at": 1794892614
-            },
-            {
-              "sha": "82e7a2c1",
-              "at": 1794892599
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -6001,7 +5990,7 @@
           ]
         }
       },
-      "snapshot_id": "1c4bed11b5b52ce5"
+      "snapshot_id": "e19c7d515104ed6c"
     },
     "outbound": {
       "schema": 1,
@@ -6040,7 +6029,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 29,
+          "ctx_pct": 30,
           "last_commit_at": 1794894408,
           "head": "28af4955",
           "subfence": {
@@ -6392,7 +6381,7 @@
           ]
         }
       },
-      "snapshot_id": "d8b7a2091bf65d4e"
+      "snapshot_id": "d3c989bd99f4fb25"
     },
     "scriptgen": {
       "schema": 1,
@@ -6726,22 +6715,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8959
+        "monitor_last_pass_min": 8964
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8959
+        "monitor_last_pass_min": 8964
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8959
+        "monitor_last_pass_min": 8964
       }
     ]
   },
-  "snapshot_id": "d2c53af6d292d22c",
-  "published_at": "2026-11-17T05:51:47Z"
+  "snapshot_id": "f193b87b15dbaa4a",
+  "published_at": "2026-11-17T05:57:20Z"
 }
