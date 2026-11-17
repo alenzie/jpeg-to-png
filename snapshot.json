@@ -8,7 +8,7 @@
         "tier": "promax",
         "projected": 105,
         "used": 95,
-        "at": 1794894496,
+        "at": 1794895061,
         "reset": "13:14 on 17 Nov",
         "spark": [
           [
@@ -518,7 +518,7 @@
             0.0
           ],
           [
-            90.9,
+            91.0,
             2.0
           ]
         ]
@@ -531,8 +531,8 @@
         "mult": "20x",
         "projected": 136,
         "used": 59,
-        "at": 1794894496,
-        "reset": "Nov 20, 8:59pm (America/Los_Angeles)",
+        "at": 1794895061,
+        "reset": "Nov 20, 9pm (America/Los_Angeles)",
         "spark": [
           [
             1794294000,
@@ -1297,7 +1297,7 @@
             57.0
           ],
           [
-            43.4,
+            43.5,
             58.0
           ]
         ]
@@ -1307,7 +1307,7 @@
       "target": 100,
       "projected": 169,
       "used": 100,
-      "at": 1794894496,
+      "at": 1794895061,
       "reset": "Nov 19, 18:39",
       "level": "pro",
       "spark": [
@@ -2150,7 +2150,7 @@
           100.0
         ],
         [
-          59.1,
+          59.2,
           100.0
         ]
       ]
@@ -2161,7 +2161,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1794894496,
+      "at": 1794895061,
       "spark": [
         [
           1794294000,
@@ -5582,14 +5582,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "FLOW-EVIDENCE-READ",
-            "kind": "escalate",
-            "raised_at": 1794895018
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5620,17 +5614,54 @@
         {
           "id": "FLOW-EVIDENCE-READ",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 42,
-          "last_commit_at": 1794894944,
-          "head": "8217a069",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 49,
+          "last_commit_at": 1794895052,
+          "head": "f8757d5d",
           "subfence": {
             "done": 9,
             "total": 9
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "gpt-6-astra  xhigh breadth",
+              "must": 2,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "gpt-5.6-sol  high iterate",
+              "must": 1,
+              "should": 2,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "gpt-5.6-terra  high iterate",
+              "must": 0,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "gpt-5.6-sol  high iterate",
+              "must": 1,
+              "should": 2,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "f8757d5d",
+              "at": 1794895052
+            },
             {
               "sha": "8217a069",
               "at": 1794894944
@@ -5646,10 +5677,6 @@
             {
               "sha": "bd32fce7",
               "at": 1794893768
-            },
-            {
-              "sha": "dddf599d",
-              "at": 1794893681
             }
           ],
           "fences": {
@@ -5657,66 +5684,6 @@
             "synth": true,
             "build": true,
             "review": false
-          },
-          "gate_open": true
-        },
-        {
-          "id": "FLOW-PROJECT-IMPORT",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 19,
-          "last_commit_at": 1794894924,
-          "head": "1d1d55f8",
-          "subfence": {
-            "done": 9,
-            "total": 9
-          },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "lead-family reviewerxhigh",
-              "must": 0,
-              "should": 0,
-              "could": 2,
-              "nit": 3
-            },
-            {
-              "round": 2,
-              "seats": "lead-family reviewerxhigh fresh",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 3
-            }
-          ],
-          "commits": [
-            {
-              "sha": "1d1d55f8",
-              "at": 1794894924
-            },
-            {
-              "sha": "45e9922a",
-              "at": 1794894903
-            },
-            {
-              "sha": "c1277368",
-              "at": 1794894716
-            },
-            {
-              "sha": "24233329",
-              "at": 1794894703
-            },
-            {
-              "sha": "1b97f393",
-              "at": 1794894058
-            }
-          ],
-          "fences": {
-            "plan": true,
-            "synth": true,
-            "build": true,
-            "review": true
           },
           "gate_open": false
         }
@@ -5974,7 +5941,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-17T05:48:20Z",
+          "updated": "2026-11-17T05:57:47Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5990,7 +5957,7 @@
           ]
         }
       },
-      "snapshot_id": "e19c7d515104ed6c"
+      "snapshot_id": "ef8830f0d66956d0"
     },
     "outbound": {
       "schema": 1,
@@ -6029,15 +5996,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 30,
-          "last_commit_at": 1794894408,
-          "head": "28af4955",
+          "ctx_pct": 31,
+          "last_commit_at": 1794895032,
+          "head": "4651af98",
           "subfence": {
             "done": 6,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "4651af98",
+              "at": 1794895032
+            },
             {
               "sha": "28af4955",
               "at": 1794894408
@@ -6053,10 +6024,6 @@
             {
               "sha": "5855b991",
               "at": 1794893539
-            },
-            {
-              "sha": "88ecdb53",
-              "at": 1794889896
             }
           ],
           "fences": {
@@ -6365,7 +6332,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-17T05:48:20Z",
+          "updated": "2026-11-17T05:57:47Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6381,7 +6348,7 @@
           ]
         }
       },
-      "snapshot_id": "d3c989bd99f4fb25"
+      "snapshot_id": "969b26497df3e107"
     },
     "scriptgen": {
       "schema": 1,
@@ -6671,7 +6638,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-17T05:48:20Z",
+          "updated": "2026-11-17T05:57:47Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6687,7 +6654,7 @@
           ]
         }
       },
-      "snapshot_id": "c33a7aedc8945e38"
+      "snapshot_id": "d05ea3748ee3bd6b"
     }
   },
   "pm": {
@@ -6715,22 +6682,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8964
+        "monitor_last_pass_min": 8970
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8964
+        "monitor_last_pass_min": 8970
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 8964
+        "monitor_last_pass_min": 8970
       }
     ]
   },
-  "snapshot_id": "f193b87b15dbaa4a",
-  "published_at": "2026-11-17T05:57:20Z"
+  "snapshot_id": "e74e719f81f274f8",
+  "published_at": "2026-11-17T06:02:45Z"
 }
