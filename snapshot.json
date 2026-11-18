@@ -638,7 +638,7 @@
             52.0
           ],
           [
-            13.9,
+            14.0,
             54.0
           ]
         ]
@@ -1633,7 +1633,7 @@
             83.0
           ],
           [
-            66.5,
+            66.6,
             84.0
           ]
         ]
@@ -6386,14 +6386,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "FLOW-STORY-PLAN",
-            "kind": "escalate",
-            "raised_at": 1795034538
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6424,16 +6418,81 @@
         {
           "id": "FLOW-STORY-PLAN",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 45,
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 48,
           "last_commit_at": 1795034507,
           "head": "17a4afe7",
           "subfence": {
             "done": 9,
             "total": 9
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "Astra breadth 8 clusters",
+              "must": 26,
+              "should": 11,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "Sol repair + blast radius",
+              "must": 3,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "Terra repair + blast radius",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "Sol repair + blast radius",
+              "must": 2,
+              "should": 3,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "Terra declarer",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 6,
+              "seats": "Terra clustered cumulative declarer",
+              "must": 7,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 7,
+              "seats": "Terra post-cap confirmation PM-authorize",
+              "must": 2,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 8,
+              "seats": "Terra hard-stop declarer PM-authorized",
+              "must": 3,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
             {
               "sha": "17a4afe7",
@@ -6462,7 +6521,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -6737,7 +6796,7 @@
           ]
         }
       },
-      "snapshot_id": "5949697f251b36df"
+      "snapshot_id": "3aa3ca8b7a838218"
     },
     "outbound": {
       "schema": 1,
@@ -7086,7 +7145,7 @@
           ]
         }
       },
-      "snapshot_id": "e69bc4364e6fe43f"
+      "snapshot_id": "ba277ac8a642bf4c"
     },
     "scriptgen": {
       "schema": 1,
@@ -7392,7 +7451,7 @@
           ]
         }
       },
-      "snapshot_id": "2c44cd0b91639d1c"
+      "snapshot_id": "348de388a927931b"
     }
   },
   "pm": {
@@ -7420,22 +7479,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11290
+        "monitor_last_pass_min": 11296
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11290
+        "monitor_last_pass_min": 11296
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11290
+        "monitor_last_pass_min": 11296
       }
     ]
   },
-  "snapshot_id": "9f32f788c4a072fc",
-  "published_at": "2026-11-18T20:43:07Z"
+  "snapshot_id": "2f927bc183dbd3bb",
+  "published_at": "2026-11-18T20:48:28Z"
 }
