@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": null,
         "used": 7,
-        "at": 1794979205,
+        "at": 1794979635,
         "reset": "13:19 on 24 Nov",
         "spark": [
           [
@@ -574,7 +574,7 @@
             6.0
           ],
           [
-            4.8,
+            4.9,
             7.0
           ]
         ]
@@ -587,8 +587,8 @@
         "mult": "20x",
         "projected": 134,
         "used": 77,
-        "at": 1794979205,
-        "reset": "Nov 20, 9pm (America/Los_Angeles)",
+        "at": 1794979635,
+        "reset": "Nov 20, 8:59pm (America/Los_Angeles)",
         "spark": [
           [
             1794380400,
@@ -1501,7 +1501,7 @@
             73.0
           ],
           [
-            57.4,
+            57.5,
             76.0
           ]
         ]
@@ -1511,7 +1511,7 @@
       "target": 100,
       "projected": 137,
       "used": 100,
-      "at": 1794979205,
+      "at": 1794979635,
       "reset": "Nov 19, 18:39",
       "level": "pro",
       "spark": [
@@ -2513,7 +2513,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1794979205,
+      "at": 1794979635,
       "spark": [
         [
           1794380400,
@@ -3129,7 +3129,7 @@
       "codex": {
         "B": [
           [
-            1791091661,
+            1791092160,
             100.0
           ],
           [
@@ -4137,7 +4137,7 @@
       "claude": {
         "B": [
           [
-            1791091661,
+            1791092160,
             40.0
           ],
           [
@@ -5144,7 +5144,7 @@
       },
       "glm": [
         [
-          1791091661,
+          1791092160,
           54.0
         ],
         [
@@ -6154,8 +6154,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "FLOW-STORY-PLAN",
+            "kind": "escalate",
+            "raised_at": 1794979796
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6186,11 +6192,11 @@
         {
           "id": "FLOW-STORY-PLAN",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 49,
-          "last_commit_at": 1794979208,
-          "head": "2966737a",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 51,
+          "last_commit_at": 1794979777,
+          "head": "8fa14942",
           "subfence": {
             "done": 0,
             "total": 9
@@ -6198,24 +6204,24 @@
           "review_rounds": [],
           "commits": [
             {
+              "sha": "8fa14942",
+              "at": 1794979777
+            },
+            {
+              "sha": "559d83c7",
+              "at": 1794979766
+            },
+            {
+              "sha": "da84483b",
+              "at": 1794979749
+            },
+            {
               "sha": "2966737a",
               "at": 1794979208
             },
             {
               "sha": "b64e0b69",
               "at": 1794979193
-            },
-            {
-              "sha": "f103e8fd",
-              "at": 1794979190
-            },
-            {
-              "sha": "a850a124",
-              "at": 1794978799
-            },
-            {
-              "sha": "82e3869f",
-              "at": 1794978797
             }
           ],
           "fences": {
@@ -6224,7 +6230,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "FLOW-TRANSCRIPT",
@@ -6500,7 +6506,7 @@
             "codex": {
               "verdict": "IN_BAND",
               "proj": null,
-              "target": 100,
+              "target": 250,
               "used": 7,
               "day": 1,
               "active": null,
@@ -6525,7 +6531,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-18T05:20:13Z",
+          "updated": "2026-11-18T05:29:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6541,7 +6547,7 @@
           ]
         }
       },
-      "snapshot_id": "11e3949d7af55af2"
+      "snapshot_id": "edf163fc9e1e59f1"
     },
     "outbound": {
       "schema": 1,
@@ -6849,7 +6855,7 @@
             "codex": {
               "verdict": "IN_BAND",
               "proj": null,
-              "target": 100,
+              "target": 250,
               "used": 7,
               "day": 1,
               "active": null,
@@ -6874,7 +6880,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-18T05:20:13Z",
+          "updated": "2026-11-18T05:29:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6890,7 +6896,7 @@
           ]
         }
       },
-      "snapshot_id": "b73cae48516342b6"
+      "snapshot_id": "485f7c960825288e"
     },
     "scriptgen": {
       "schema": 1,
@@ -7155,7 +7161,7 @@
             "codex": {
               "verdict": "IN_BAND",
               "proj": null,
-              "target": 100,
+              "target": 250,
               "used": 7,
               "day": 1,
               "active": null,
@@ -7180,7 +7186,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-18T05:20:13Z",
+          "updated": "2026-11-18T05:29:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7196,7 +7202,7 @@
           ]
         }
       },
-      "snapshot_id": "9ef1f7cf85e11979"
+      "snapshot_id": "a0392246538f190a"
     }
   },
   "pm": {
@@ -7224,22 +7230,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10372
+        "monitor_last_pass_min": 10378
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10372
+        "monitor_last_pass_min": 10378
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10372
+        "monitor_last_pass_min": 10378
       }
     ]
   },
-  "snapshot_id": "d10b4e8a527caee8",
-  "published_at": "2026-11-18T05:25:25Z"
+  "snapshot_id": "b47356f8a3dbb37a",
+  "published_at": "2026-11-18T05:30:55Z"
 }
