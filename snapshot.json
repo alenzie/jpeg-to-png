@@ -7,8 +7,8 @@
         "label": "B",
         "tier": "Pro",
         "projected": null,
-        "used": 5,
-        "at": 1794973914,
+        "used": 6,
+        "at": 1794975597,
         "reset": "13:19 on 24 Nov",
         "spark": [
           [
@@ -566,8 +566,12 @@
             4.0
           ],
           [
-            4.2,
+            3.0,
             5.0
+          ],
+          [
+            4.2,
+            6.0
           ]
         ]
       }
@@ -577,10 +581,10 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 128,
-        "used": 72,
-        "at": 1794973914,
-        "reset": "Nov 20, 9pm (America/Los_Angeles)",
+        "projected": 129,
+        "used": 73,
+        "at": 1794975597,
+        "reset": "Nov 20, 8:59pm (America/Los_Angeles)",
         "spark": [
           [
             1794369600,
@@ -1137,6 +1141,10 @@
           [
             1794970800,
             127
+          ],
+          [
+            1794974400,
+            129
           ]
         ],
         "trail": [
@@ -1481,17 +1489,21 @@
             68.0
           ],
           [
-            56.7,
+            56.0,
             71.0
+          ],
+          [
+            56.8,
+            73.0
           ]
         ]
       }
     ],
     "glm": {
       "target": 100,
-      "projected": 139,
+      "projected": 138,
       "used": 100,
-      "at": 1794973914,
+      "at": 1794975597,
       "reset": "Nov 19, 18:39",
       "level": "pro",
       "spark": [
@@ -2030,6 +2042,10 @@
         [
           1794970800,
           139
+        ],
+        [
+          1794974400,
+          138
         ]
       ],
       "trail": [
@@ -2470,7 +2486,11 @@
           100.0
         ],
         [
-          72.4,
+          72.0,
+          100.0
+        ],
+        [
+          72.5,
           100.0
         ]
       ]
@@ -2481,7 +2501,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1794973914,
+      "at": 1794975597,
       "spark": [
         [
           1794369600,
@@ -3085,6 +3105,10 @@
         ],
         [
           1794970800,
+          -0.0
+        ],
+        [
+          1794974400,
           -0.0
         ]
       ]
@@ -4091,6 +4115,10 @@
           [
             1794971424,
             5.0
+          ],
+          [
+            1794975597,
+            6.0
           ]
         ]
       },
@@ -5095,6 +5123,10 @@
           [
             1794971424,
             71.0
+          ],
+          [
+            1794975597,
+            73.0
           ]
         ]
       },
@@ -6098,6 +6130,10 @@
         [
           1794971424,
           100.0
+        ],
+        [
+          1794975597,
+          100.0
         ]
       ]
     }
@@ -6106,19 +6142,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "FLOW-STORY-PLAN",
-            "kind": "needs-owner",
-            "raised_at": 1794975249
-          },
-          {
-            "id": "FLOW-TRANSCRIPT",
-            "kind": "needs-owner",
-            "raised_at": 1794970769
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6149,9 +6174,9 @@
         {
           "id": "FLOW-STORY-PLAN",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 32,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 33,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6166,14 +6191,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "FLOW-TRANSCRIPT",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 9,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 14,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6188,7 +6213,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -6422,14 +6447,14 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 100,
-              "used": 5,
+              "used": 6,
               "day": 1,
               "active": null,
               "wall": false
             },
             "glm": {
               "verdict": "UNAVAILABLE",
-              "proj": 139,
+              "proj": 138,
               "target": 100,
               "used": 100,
               "day": 6,
@@ -6438,15 +6463,15 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 128,
+              "proj": 129,
               "target": 100,
-              "used": 72,
+              "used": 73,
               "day": 4,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-18T03:51:57Z",
+          "updated": "2026-11-18T04:21:27Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6462,7 +6487,7 @@
           ]
         }
       },
-      "snapshot_id": "06ed944d693ab84c"
+      "snapshot_id": "477c08fb4ec12770"
     },
     "outbound": {
       "schema": 1,
@@ -6771,14 +6796,14 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 100,
-              "used": 5,
+              "used": 6,
               "day": 1,
               "active": null,
               "wall": false
             },
             "glm": {
               "verdict": "UNAVAILABLE",
-              "proj": 139,
+              "proj": 138,
               "target": 100,
               "used": 100,
               "day": 6,
@@ -6787,15 +6812,15 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 128,
+              "proj": 129,
               "target": 100,
-              "used": 72,
+              "used": 73,
               "day": 4,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-18T03:51:57Z",
+          "updated": "2026-11-18T04:21:27Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6811,7 +6836,7 @@
           ]
         }
       },
-      "snapshot_id": "f30a9bb74e366874"
+      "snapshot_id": "169b4b3432bdac9d"
     },
     "scriptgen": {
       "schema": 1,
@@ -7077,14 +7102,14 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 100,
-              "used": 5,
+              "used": 6,
               "day": 1,
               "active": null,
               "wall": false
             },
             "glm": {
               "verdict": "UNAVAILABLE",
-              "proj": 139,
+              "proj": 138,
               "target": 100,
               "used": 100,
               "day": 6,
@@ -7093,15 +7118,15 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 128,
+              "proj": 129,
               "target": 100,
-              "used": 72,
+              "used": 73,
               "day": 4,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-18T03:51:57Z",
+          "updated": "2026-11-18T04:21:27Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7117,7 +7142,7 @@
           ]
         }
       },
-      "snapshot_id": "41ba30d9cdc6050f"
+      "snapshot_id": "3e51b93070575096"
     }
   },
   "pm": {
@@ -7145,22 +7170,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10307
+        "monitor_last_pass_min": 10313
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10307
+        "monitor_last_pass_min": 10313
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10307
+        "monitor_last_pass_min": 10313
       }
     ]
   },
-  "snapshot_id": "b3d5a26defa94975",
-  "published_at": "2026-11-18T04:19:59Z"
+  "snapshot_id": "2ae56ec1f02dd1de",
+  "published_at": "2026-11-18T04:25:43Z"
 }
