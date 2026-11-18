@@ -7,8 +7,8 @@
         "label": "B",
         "tier": "Pro",
         "projected": null,
-        "used": 44,
-        "at": 1795014493,
+        "used": 45,
+        "at": 1795014913,
         "reset": "13:19 on 24 Nov",
         "spark": [
           [
@@ -627,7 +627,7 @@
         "mult": "20x",
         "projected": 131,
         "used": 83,
-        "at": 1795014493,
+        "at": 1795014913,
         "reset": "Nov 20, 9pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1589,7 +1589,7 @@
             82.0
           ],
           [
-            63.2,
+            63.3,
             83.0
           ]
         ]
@@ -1599,7 +1599,7 @@
       "target": 100,
       "projected": 127,
       "used": 100,
-      "at": 1795014493,
+      "at": 1795014913,
       "reset": "Nov 19, 18:39",
       "level": "pro",
       "spark": [
@@ -2638,7 +2638,7 @@
           100.0
         ],
         [
-          78.9,
+          79.0,
           100.0
         ]
       ]
@@ -2649,7 +2649,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1795014493,
+      "at": 1795014913,
       "spark": [
         [
           1794409200,
@@ -3273,7 +3273,7 @@
       "codex": {
         "B": [
           [
-            1791126927,
+            1791128275,
             100.0
           ],
           [
@@ -4289,8 +4289,8 @@
       "claude": {
         "B": [
           [
-            1791126927,
-            46.0
+            1791128275,
+            47.0
           ],
           [
             1791136820,
@@ -5304,7 +5304,7 @@
       },
       "glm": [
         [
-          1791126927,
+          1791128275,
           54.0
         ],
         [
@@ -6356,7 +6356,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 12,
+          "ctx_pct": 24,
           "last_commit_at": 1795014557,
           "head": "065e8654",
           "subfence": {
@@ -6396,66 +6396,17 @@
         },
         {
           "id": "FLOW-TRANSCRIPT",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 65,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 8,
           "last_commit_at": 1795014547,
           "head": "e81eaff2",
           "subfence": {
             "done": 8,
             "total": 8
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "gpt-6-astra  xhigh breadth",
-              "must": 7,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "gpt-5.6-sol  xhigh fix seam",
-              "must": 0,
-              "should": 2,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "gpt-5.6-terra  cumulative source slices",
-              "must": 9,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "gpt-5.6-terra  PM seam declarer",
-              "must": 1,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "gpt-5.6-terra  PM fresh confirm",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "gpt-5.6-terra  terminal declarer",
-              "must": 0,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "e81eaff2",
@@ -6490,10 +6441,17 @@
       "eligible": [
         "DETECTOR-SOUND-MIDSCAN-DEGRADE",
         "FLOW-EDIT-DIFF",
+        "FLOW-TRANSCRIPT-HARDEN",
         "DEP-AUDIT-2026-11",
         "SUPABASE-LEGACY-KEY-MIGRATION"
       ],
       "merge_feed": [
+        {
+          "pr": 92,
+          "unit": "FLOW-TRANSCRIPT",
+          "merged_at": 1795015057,
+          "sha": "26278355"
+        },
         {
           "pr": 89,
           "unit": "FLOW-CHAT-SCALE",
@@ -6517,12 +6475,6 @@
           "unit": "FLOW-EVIDENCE-READ",
           "merged_at": 1794897631,
           "sha": "2d3eff4e"
-        },
-        {
-          "pr": 85,
-          "unit": "FLOW-EVIDENCE-KIT",
-          "merged_at": 1794830158,
-          "sha": "2a0fe3c6"
         }
       ],
       "decisions": [],
@@ -6718,7 +6670,7 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 250,
-              "used": 44,
+              "used": 45,
               "day": 1,
               "active": null,
               "wall": false
@@ -6742,7 +6694,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-18T15:09:50Z",
+          "updated": "2026-11-18T15:15:21Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6758,7 +6710,7 @@
           ]
         }
       },
-      "snapshot_id": "46bba8dbbc3977f9"
+      "snapshot_id": "ee5891d34b7ff81f"
     },
     "outbound": {
       "schema": 1,
@@ -7067,7 +7019,7 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 250,
-              "used": 44,
+              "used": 45,
               "day": 1,
               "active": null,
               "wall": false
@@ -7091,7 +7043,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-18T15:09:50Z",
+          "updated": "2026-11-18T15:15:21Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7107,7 +7059,7 @@
           ]
         }
       },
-      "snapshot_id": "4fe06b64e1908c65"
+      "snapshot_id": "bca5b3e390bc01bf"
     },
     "scriptgen": {
       "schema": 1,
@@ -7373,7 +7325,7 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 250,
-              "used": 44,
+              "used": 45,
               "day": 1,
               "active": null,
               "wall": false
@@ -7397,7 +7349,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-18T15:09:50Z",
+          "updated": "2026-11-18T15:15:21Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7413,7 +7365,7 @@
           ]
         }
       },
-      "snapshot_id": "e7a59d3e1b47579c"
+      "snapshot_id": "ff97d57c5ce3ea2f"
     }
   },
   "pm": {
@@ -7432,7 +7384,7 @@
       "available_note": "owner back 2026-10-23T02:57:40Z"
     },
     "pm_session": {
-      "lock": "3135953 2026-11-18T14:18:53Z",
+      "lock": "3490450 2026-11-18T15:18:57Z",
       "fresh": true
     },
     "sterling_up": true,
@@ -7441,22 +7393,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10961
+        "monitor_last_pass_min": 10967
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10961
+        "monitor_last_pass_min": 10967
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10961
+        "monitor_last_pass_min": 10967
       }
     ]
   },
-  "snapshot_id": "cc555330de6d526c",
-  "published_at": "2026-11-18T15:14:19Z"
+  "snapshot_id": "4e792ffab7bd9bc4",
+  "published_at": "2026-11-18T15:19:59Z"
 }
