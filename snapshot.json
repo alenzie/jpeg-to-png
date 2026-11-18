@@ -2602,7 +2602,7 @@
           100.0
         ],
         [
-          77.4,
+          77.5,
           100.0
         ]
       ]
@@ -6286,8 +6286,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "FLOW-NARRATIVE-EXPORT",
+            "kind": "escalate",
+            "raised_at": 1795006180
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6318,9 +6324,9 @@
         {
           "id": "FLOW-NARRATIVE-EXPORT",
           "status": "pr-open",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 18,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 20,
           "last_commit_at": 1795005832,
           "head": "74faf459",
           "subfence": {
@@ -6356,14 +6362,14 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "FLOW-STORY-PLAN",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": null,
+          "ctx_pct": 13,
           "last_commit_at": 1795005757,
           "head": "e02a383d",
           "subfence": {
@@ -6406,7 +6412,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": null,
+          "ctx_pct": 17,
           "last_commit_at": 1795005831,
           "head": "60b21765",
           "subfence": {
@@ -6716,7 +6722,7 @@
           ]
         }
       },
-      "snapshot_id": "75681bad90751522"
+      "snapshot_id": "6787cfc6dfef22b4"
     },
     "outbound": {
       "schema": 1,
@@ -7049,7 +7055,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-18T12:44:22Z",
+          "updated": "2026-11-18T12:44:28Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7065,7 +7071,7 @@
           ]
         }
       },
-      "snapshot_id": "f3d470c6a3ff3cf5"
+      "snapshot_id": "f102e3cce518e230"
     },
     "scriptgen": {
       "schema": 1,
@@ -7371,7 +7377,7 @@
           ]
         }
       },
-      "snapshot_id": "d2865795adb2db90"
+      "snapshot_id": "b427828621d2f0f1"
     }
   },
   "pm": {
@@ -7399,22 +7405,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10812
+        "monitor_last_pass_min": 10817
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10812
+        "monitor_last_pass_min": 10817
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10812
+        "monitor_last_pass_min": 10817
       }
     ]
   },
-  "snapshot_id": "298ec41cce979dcd",
-  "published_at": "2026-11-18T12:44:35Z"
+  "snapshot_id": "5ae35af58a6a6f62",
+  "published_at": "2026-11-18T12:50:20Z"
 }
