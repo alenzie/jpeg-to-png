@@ -562,7 +562,7 @@
             4.0
           ],
           [
-            3.3,
+            3.4,
             4.0
           ]
         ]
@@ -3069,7 +3069,7 @@
       "codex": {
         "B": [
           [
-            1791082674,
+            1791083301,
             100.0
           ],
           [
@@ -4069,7 +4069,7 @@
       "claude": {
         "B": [
           [
-            1791082674,
+            1791083301,
             39.0
           ],
           [
@@ -5068,7 +5068,7 @@
       },
       "glm": [
         [
-          1791082674,
+          1791083301,
           53.0
         ],
         [
@@ -6070,8 +6070,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "FLOW-STORY-PLAN",
+            "kind": "needs-owner",
+            "raised_at": 1794970607
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6081,7 +6087,7 @@
       },
       "runstate": {
         "auto": false,
-        "parallel": 2,
+        "parallel": 3,
         "pickconfirm": true
       },
       "daemons": {
@@ -6102,9 +6108,9 @@
         {
           "id": "FLOW-STORY-PLAN",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 26,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 29,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6119,7 +6125,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "FLOW-TRANSCRIPT",
@@ -6146,6 +6152,7 @@
       ],
       "eligible": [
         "DETECTOR-SOUND-MIDSCAN-DEGRADE",
+        "FLOW-EDIT-DIFF",
         "DEP-AUDIT-2026-11",
         "SUPABASE-LEGACY-KEY-MIGRATION"
       ],
@@ -6414,7 +6421,7 @@
           ]
         }
       },
-      "snapshot_id": "b028639605149db8"
+      "snapshot_id": "60a356faf44e0e0b"
     },
     "outbound": {
       "schema": 1,
@@ -6763,7 +6770,7 @@
           ]
         }
       },
-      "snapshot_id": "77d05382542ce406"
+      "snapshot_id": "2c476f091fd13313"
     },
     "scriptgen": {
       "schema": 1,
@@ -7069,7 +7076,7 @@
           ]
         }
       },
-      "snapshot_id": "7c6cbd589bcdee36"
+      "snapshot_id": "076c2acf58f6d6b0"
     }
   },
   "pm": {
@@ -7097,22 +7104,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10220
+        "monitor_last_pass_min": 10225
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10220
+        "monitor_last_pass_min": 10225
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10220
+        "monitor_last_pass_min": 10225
       }
     ]
   },
-  "snapshot_id": "de0b1821db58ad76",
-  "published_at": "2026-11-18T02:52:49Z"
+  "snapshot_id": "6c3486b17f3f0127",
+  "published_at": "2026-11-18T02:58:24Z"
 }
