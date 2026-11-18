@@ -13,7 +13,7 @@
         "spark": [
           [
             1794427200,
-            79
+            78
           ],
           [
             1794430800,
@@ -2702,7 +2702,7 @@
           100.0
         ],
         [
-          82.1,
+          82.2,
           100.0
         ]
       ]
@@ -3733,7 +3733,7 @@
             10.0
           ],
           [
-            1794429584,
+            1794430200,
             11.0
           ],
           [
@@ -4749,7 +4749,7 @@
             50.0
           ],
           [
-            1794429584,
+            1794430200,
             52.0
           ],
           [
@@ -5764,7 +5764,7 @@
           82.0
         ],
         [
-          1794429584,
+          1794430200,
           85.0
         ],
         [
@@ -6386,8 +6386,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "FLOW-STORY-PLAN",
+            "kind": "escalate",
+            "raised_at": 1795034538
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6418,66 +6424,25 @@
         {
           "id": "FLOW-STORY-PLAN",
           "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 43,
-          "last_commit_at": 1795034060,
-          "head": "e1be5532",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 45,
+          "last_commit_at": 1795034507,
+          "head": "17a4afe7",
           "subfence": {
             "done": 9,
             "total": 9
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "Astra breadth 8 clusters",
-              "must": 26,
-              "should": 11,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 2,
-              "seats": "Sol repair + blast radius",
-              "must": 3,
-              "should": 1,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 3,
-              "seats": "Terra repair + blast radius",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 4,
-              "seats": "Sol repair + blast radius",
-              "must": 2,
-              "should": 3,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 5,
-              "seats": "Terra declarer",
-              "must": 1,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            },
-            {
-              "round": 6,
-              "seats": "Terra clustered cumulative declarer",
-              "must": 7,
-              "should": 0,
-              "could": 0,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
+            {
+              "sha": "17a4afe7",
+              "at": 1795034507
+            },
+            {
+              "sha": "b4e94795",
+              "at": 1795034485
+            },
             {
               "sha": "e1be5532",
               "at": 1795034060
@@ -6489,14 +6454,6 @@
             {
               "sha": "5bb9fa0b",
               "at": 1795033242
-            },
-            {
-              "sha": "6bd47ce7",
-              "at": 1795033180
-            },
-            {
-              "sha": "0870b938",
-              "at": 1795033036
             }
           ],
           "fences": {
@@ -6505,7 +6462,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6780,7 +6737,7 @@
           ]
         }
       },
-      "snapshot_id": "90ff3fee37b1d3dd"
+      "snapshot_id": "5949697f251b36df"
     },
     "outbound": {
       "schema": 1,
@@ -7129,7 +7086,7 @@
           ]
         }
       },
-      "snapshot_id": "6953c44dbc89323b"
+      "snapshot_id": "e69bc4364e6fe43f"
     },
     "scriptgen": {
       "schema": 1,
@@ -7435,7 +7392,7 @@
           ]
         }
       },
-      "snapshot_id": "011940209eb0920c"
+      "snapshot_id": "2c44cd0b91639d1c"
     }
   },
   "pm": {
@@ -7463,22 +7420,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11285
+        "monitor_last_pass_min": 11290
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11285
+        "monitor_last_pass_min": 11290
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11285
+        "monitor_last_pass_min": 11290
       }
     ]
   },
-  "snapshot_id": "855833e7fdde8e3e",
-  "published_at": "2026-11-18T20:37:39Z"
+  "snapshot_id": "9f32f788c4a072fc",
+  "published_at": "2026-11-18T20:43:07Z"
 }
