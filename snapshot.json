@@ -7,8 +7,8 @@
         "label": "B",
         "tier": "Pro",
         "projected": null,
-        "used": 4,
-        "at": 1794969786,
+        "used": 5,
+        "at": 1794971424,
         "reset": "13:19 on 24 Nov",
         "spark": [
           [
@@ -562,8 +562,12 @@
             4.0
           ],
           [
-            3.5,
+            3.0,
             4.0
+          ],
+          [
+            3.5,
+            5.0
           ]
         ]
       }
@@ -573,10 +577,10 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 126,
-        "used": 70,
-        "at": 1794969786,
-        "reset": "Nov 20, 9pm (America/Los_Angeles)",
+        "projected": 127,
+        "used": 71,
+        "at": 1794971424,
+        "reset": "Nov 20, 8:59pm (America/Los_Angeles)",
         "spark": [
           [
             1794369600,
@@ -1129,6 +1133,10 @@
           [
             1794967200,
             122
+          ],
+          [
+            1794970800,
+            127
           ]
         ],
         "trail": [
@@ -1471,15 +1479,19 @@
           [
             56.0,
             68.0
+          ],
+          [
+            56.1,
+            71.0
           ]
         ]
       }
     ],
     "glm": {
       "target": 100,
-      "projected": 140,
+      "projected": 139,
       "used": 100,
-      "at": 1794969786,
+      "at": 1794971424,
       "reset": "Nov 19, 18:39",
       "level": "pro",
       "spark": [
@@ -2014,6 +2026,10 @@
         [
           1794967200,
           140
+        ],
+        [
+          1794970800,
+          139
         ]
       ],
       "trail": [
@@ -2450,7 +2466,11 @@
           100.0
         ],
         [
-          71.7,
+          71.0,
+          100.0
+        ],
+        [
+          71.8,
           100.0
         ]
       ]
@@ -2461,7 +2481,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1794969786,
+      "at": 1794971424,
       "spark": [
         [
           1794369600,
@@ -3061,6 +3081,10 @@
         ],
         [
           1794967200,
+          -0.0
+        ],
+        [
+          1794970800,
           -0.0
         ]
       ]
@@ -4063,6 +4087,10 @@
           [
             1794968454,
             4.0
+          ],
+          [
+            1794971424,
+            5.0
           ]
         ]
       },
@@ -5063,6 +5091,10 @@
           [
             1794968454,
             68.0
+          ],
+          [
+            1794971424,
+            71.0
           ]
         ]
       },
@@ -6062,6 +6094,10 @@
         [
           1794968454,
           100.0
+        ],
+        [
+          1794971424,
+          100.0
         ]
       ]
     }
@@ -6075,7 +6111,7 @@
           {
             "id": "FLOW-STORY-PLAN",
             "kind": "needs-owner",
-            "raised_at": 1794970723
+            "raised_at": 1794971415
           },
           {
             "id": "FLOW-TRANSCRIPT",
@@ -6111,11 +6147,33 @@
       },
       "units": [
         {
+          "id": "FLOW-CHAT-SCALE",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 15,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
           "id": "FLOW-STORY-PLAN",
           "status": "building",
           "stage": "interviewing",
           "stage_i": 2,
-          "ctx_pct": 30,
+          "ctx_pct": 31,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6157,7 +6215,6 @@
       ],
       "eligible": [
         "DETECTOR-SOUND-MIDSCAN-DEGRADE",
-        "FLOW-CHAT-SCALE",
         "FLOW-EDIT-DIFF",
         "DEP-AUDIT-2026-11",
         "SUPABASE-LEGACY-KEY-MIGRATION"
@@ -6387,31 +6444,31 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 100,
-              "used": 4,
+              "used": 5,
               "day": 1,
               "active": null,
               "wall": false
             },
             "glm": {
               "verdict": "UNAVAILABLE",
-              "proj": 140,
+              "proj": 139,
               "target": 100,
               "used": 100,
-              "day": 5,
+              "day": 6,
               "active": "G2",
               "wall": false
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 126,
+              "proj": 127,
               "target": 100,
-              "used": 70,
+              "used": 71,
               "day": 4,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-18T02:43:09Z",
+          "updated": "2026-11-18T03:10:56Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6427,7 +6484,7 @@
           ]
         }
       },
-      "snapshot_id": "29ff2484f219c66b"
+      "snapshot_id": "c9263ce6d67058c7"
     },
     "outbound": {
       "schema": 1,
@@ -6736,31 +6793,31 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 100,
-              "used": 4,
+              "used": 5,
               "day": 1,
               "active": null,
               "wall": false
             },
             "glm": {
               "verdict": "UNAVAILABLE",
-              "proj": 140,
+              "proj": 139,
               "target": 100,
               "used": 100,
-              "day": 5,
+              "day": 6,
               "active": "G2",
               "wall": false
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 126,
+              "proj": 127,
               "target": 100,
-              "used": 70,
+              "used": 71,
               "day": 4,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-18T02:43:09Z",
+          "updated": "2026-11-18T03:10:56Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6776,7 +6833,7 @@
           ]
         }
       },
-      "snapshot_id": "afe5db230ca8737b"
+      "snapshot_id": "89e463086eae5a50"
     },
     "scriptgen": {
       "schema": 1,
@@ -7042,31 +7099,31 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 100,
-              "used": 4,
+              "used": 5,
               "day": 1,
               "active": null,
               "wall": false
             },
             "glm": {
               "verdict": "UNAVAILABLE",
-              "proj": 140,
+              "proj": 139,
               "target": 100,
               "used": 100,
-              "day": 5,
+              "day": 6,
               "active": "G2",
               "wall": false
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 126,
+              "proj": 127,
               "target": 100,
-              "used": 70,
+              "used": 71,
               "day": 4,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-18T02:43:09Z",
+          "updated": "2026-11-18T03:10:56Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7082,7 +7139,7 @@
           ]
         }
       },
-      "snapshot_id": "39733619c9ea51d6"
+      "snapshot_id": "d310a4c2c5b6ad80"
     }
   },
   "pm": {
@@ -7110,22 +7167,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10236
+        "monitor_last_pass_min": 10242
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10236
+        "monitor_last_pass_min": 10242
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 10236
+        "monitor_last_pass_min": 10242
       }
     ]
   },
-  "snapshot_id": "ec9e5f5c225d5e9c",
-  "published_at": "2026-11-18T03:09:14Z"
+  "snapshot_id": "1bf684a495c00d09",
+  "published_at": "2026-11-18T03:14:38Z"
 }
