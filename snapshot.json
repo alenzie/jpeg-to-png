@@ -638,7 +638,7 @@
             52.0
           ],
           [
-            13.7,
+            13.8,
             54.0
           ]
         ]
@@ -6386,14 +6386,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "FLOW-STORY-PLAN",
-            "kind": "escalate",
-            "raised_at": 1795033285
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -6424,17 +6418,70 @@
         {
           "id": "FLOW-STORY-PLAN",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 38,
-          "last_commit_at": 1795033242,
-          "head": "5bb9fa0b",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 40,
+          "last_commit_at": 1795033388,
+          "head": "e8361873",
           "subfence": {
             "done": 9,
             "total": 9
           },
-          "review_rounds": [],
+          "review_rounds": [
+            {
+              "round": 1,
+              "seats": "Astra breadth 8 clusters",
+              "must": 26,
+              "should": 11,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 2,
+              "seats": "Sol repair + blast radius",
+              "must": 3,
+              "should": 1,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 3,
+              "seats": "Terra repair + blast radius",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 4,
+              "seats": "Sol repair + blast radius",
+              "must": 2,
+              "should": 3,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 5,
+              "seats": "Terra declarer",
+              "must": 1,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            },
+            {
+              "round": 6,
+              "seats": "Terra clustered cumulative declarer",
+              "must": 7,
+              "should": 0,
+              "could": 0,
+              "nit": 0
+            }
+          ],
           "commits": [
+            {
+              "sha": "e8361873",
+              "at": 1795033388
+            },
             {
               "sha": "5bb9fa0b",
               "at": 1795033242
@@ -6450,10 +6497,6 @@
             {
               "sha": "68eca486",
               "at": 1795030338
-            },
-            {
-              "sha": "bbd35a3d",
-              "at": 1795030294
             }
           ],
           "fences": {
@@ -6462,7 +6505,7 @@
             "build": true,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -6695,16 +6738,16 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 401,
+              "proj": 395,
               "target": 250,
-              "used": 53,
+              "used": 54,
               "day": 1,
               "active": "C2",
               "wall": false
             },
             "glm": {
               "verdict": "UNAVAILABLE",
-              "proj": 123,
+              "proj": 122,
               "target": 100,
               "used": 100,
               "day": 6,
@@ -6713,7 +6756,7 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 128,
+              "proj": 127,
               "target": 100,
               "used": 84,
               "day": 5,
@@ -6721,7 +6764,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-18T19:36:38Z",
+          "updated": "2026-11-18T20:23:15Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6737,7 +6780,7 @@
           ]
         }
       },
-      "snapshot_id": "5d4e3b3003feebf3"
+      "snapshot_id": "c96c7ecfe7dba342"
     },
     "outbound": {
       "schema": 1,
@@ -7044,16 +7087,16 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 401,
+              "proj": 395,
               "target": 250,
-              "used": 53,
+              "used": 54,
               "day": 1,
               "active": "C2",
               "wall": false
             },
             "glm": {
               "verdict": "UNAVAILABLE",
-              "proj": 123,
+              "proj": 122,
               "target": 100,
               "used": 100,
               "day": 6,
@@ -7062,7 +7105,7 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 128,
+              "proj": 127,
               "target": 100,
               "used": 84,
               "day": 5,
@@ -7070,7 +7113,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-18T19:36:38Z",
+          "updated": "2026-11-18T20:23:15Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7086,7 +7129,7 @@
           ]
         }
       },
-      "snapshot_id": "ebcdea39caae3e7f"
+      "snapshot_id": "cc925574eabec7c4"
     },
     "scriptgen": {
       "schema": 1,
@@ -7350,16 +7393,16 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 401,
+              "proj": 395,
               "target": 250,
-              "used": 53,
+              "used": 54,
               "day": 1,
               "active": "C2",
               "wall": false
             },
             "glm": {
               "verdict": "UNAVAILABLE",
-              "proj": 123,
+              "proj": 122,
               "target": 100,
               "used": 100,
               "day": 6,
@@ -7368,7 +7411,7 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 128,
+              "proj": 127,
               "target": 100,
               "used": 84,
               "day": 5,
@@ -7376,7 +7419,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-18T19:36:38Z",
+          "updated": "2026-11-18T20:23:15Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7392,7 +7435,7 @@
           ]
         }
       },
-      "snapshot_id": "83848200fba386ef"
+      "snapshot_id": "4de53507c37c4113"
     }
   },
   "pm": {
@@ -7420,22 +7463,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11269
+        "monitor_last_pass_min": 11274
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11269
+        "monitor_last_pass_min": 11274
       },
       {
         "fleet": "scriptgen",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 11269
+        "monitor_last_pass_min": 11274
       }
     ]
   },
-  "snapshot_id": "42f42b9c817ab204",
-  "published_at": "2026-11-18T20:21:40Z"
+  "snapshot_id": "98b862dab1891b7a",
+  "published_at": "2026-11-18T20:26:58Z"
 }
