@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 364,
+        "projected": 362,
         "used": 96,
-        "at": 1795110120,
+        "at": 1795110897,
         "reset": "13:19 on 24 Nov",
         "spark": [
           [
@@ -706,7 +706,7 @@
             90.0
           ],
           [
-            26.5,
+            26.6,
             93.0
           ]
         ]
@@ -719,7 +719,7 @@
         "mult": "20x",
         "projected": 120,
         "used": 95,
-        "at": 1795110120,
+        "at": 1795110897,
         "reset": "Nov 20, 8:59pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1769,7 +1769,7 @@
             94.0
           ],
           [
-            79.1,
+            79.2,
             95.0
           ]
         ]
@@ -1779,7 +1779,7 @@
       "target": 100,
       "projected": 106,
       "used": 100,
-      "at": 1795110120,
+      "at": 1795110897,
       "reset": "Nov 19, 18:39",
       "level": "pro",
       "spark": [
@@ -2917,7 +2917,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1795110120,
+      "at": 1795110897,
       "spark": [
         [
           1794506400,
@@ -6599,26 +6599,17 @@
       "units": [
         {
           "id": "FLOW-STORY-LANES",
-          "status": "building",
-          "stage": "phase-4 review",
-          "stage_i": 5,
-          "ctx_pct": 29,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 9,
           "last_commit_at": 1795110741,
           "head": "e084f134",
           "subfence": {
             "done": 8,
             "total": 8
           },
-          "review_rounds": [
-            {
-              "round": 1,
-              "seats": "codex gpt-6-astraxhigh breadth ×5 cluste",
-              "must": 1,
-              "should": 9,
-              "could": 1,
-              "nit": 0
-            }
-          ],
+          "review_rounds": [],
           "commits": [
             {
               "sha": "e084f134",
@@ -6645,7 +6636,7 @@
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         },
@@ -6704,6 +6695,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 95,
+          "unit": "FLOW-STORY-LANES",
+          "merged_at": 1795110976,
+          "sha": "ef014f32"
+        },
+        {
           "pr": 94,
           "unit": "FLOW-EDIT-DIFF",
           "merged_at": 1795108230,
@@ -6726,12 +6723,6 @@
           "unit": "FLOW-TRANSCRIPT",
           "merged_at": 1795015057,
           "sha": "26278355"
-        },
-        {
-          "pr": 89,
-          "unit": "FLOW-CHAT-SCALE",
-          "merged_at": 1794975121,
-          "sha": "8da0a759"
         }
       ],
       "decisions": [],
@@ -6925,7 +6916,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 364,
+              "proj": 362,
               "target": 250,
               "used": 96,
               "day": 2,
@@ -6951,7 +6942,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-19T17:42:11Z",
+          "updated": "2026-11-19T17:55:07Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6967,7 +6958,7 @@
           ]
         }
       },
-      "snapshot_id": "5ae10eaa95482cc3"
+      "snapshot_id": "b7589b02290de6d0"
     },
     "outbound": {
       "schema": 1,
@@ -7274,7 +7265,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 364,
+              "proj": 362,
               "target": 250,
               "used": 96,
               "day": 2,
@@ -7300,7 +7291,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-19T17:42:11Z",
+          "updated": "2026-11-19T17:55:07Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7316,7 +7307,7 @@
           ]
         }
       },
-      "snapshot_id": "d9c186528bd7f93a"
+      "snapshot_id": "9bd7e6e6f1d55be5"
     },
     "scriptgen": {
       "schema": 1,
@@ -7580,7 +7571,7 @@
           "pools": {
             "codex": {
               "verdict": "OVERBURN",
-              "proj": 364,
+              "proj": 362,
               "target": 250,
               "used": 96,
               "day": 2,
@@ -7606,7 +7597,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-19T17:42:11Z",
+          "updated": "2026-11-19T17:55:07Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7622,7 +7613,7 @@
           ]
         }
       },
-      "snapshot_id": "fbc3d9859a8a05ee"
+      "snapshot_id": "8b080dffa00967de"
     }
   },
   "pm": {
@@ -7650,22 +7641,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 12560
+        "monitor_last_pass_min": 12565
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12560
+        "monitor_last_pass_min": 12565
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 12560
+        "monitor_last_pass_min": 12565
       }
     ]
   },
-  "snapshot_id": "7bea665aef9ffaa1",
-  "published_at": "2026-11-19T17:52:33Z"
+  "snapshot_id": "a12d6c0fb131d168",
+  "published_at": "2026-11-19T17:57:58Z"
 }
