@@ -534,7 +534,7 @@
             2.0
           ],
           [
-            0.6,
+            0.7,
             3.0
           ]
         ]
@@ -1601,7 +1601,7 @@
             95.0
           ],
           [
-            82.5,
+            82.6,
             96.0
           ]
         ]
@@ -2742,7 +2742,7 @@
           100.0
         ],
         [
-          98.2,
+          98.3,
           100.0
         ]
       ]
@@ -6408,11 +6408,33 @@
       },
       "units": [
         {
+          "id": "DETECTOR-SOUND-MIDSCAN-DEGRADE",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 19,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
           "id": "FLOW-STORY-PANEL",
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 6,
+          "ctx_pct": 19,
           "last_commit_at": 1795130945,
           "head": "9fcfa136",
           "subfence": {
@@ -6452,10 +6474,10 @@
         },
         {
           "id": "FLOW-TRANSCRIPT-HARDEN",
-          "status": "proposed",
+          "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 0,
+          "ctx_pct": 20,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6477,7 +6499,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 0,
+          "ctx_pct": 18,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6496,8 +6518,6 @@
         }
       ],
       "eligible": [
-        "DETECTOR-SOUND-MIDSCAN-DEGRADE",
-        "FLOW-TRANSCRIPT-HARDEN",
         "DEP-AUDIT-2026-11",
         "SUPABASE-LEGACY-KEY-MIGRATION"
       ],
@@ -6750,7 +6770,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-19T23:36:58Z",
+          "updated": "2026-11-19T23:37:40Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6766,7 +6786,7 @@
           ]
         }
       },
-      "snapshot_id": "dabc6373eddb9016"
+      "snapshot_id": "a764659d6e569cd1"
     },
     "outbound": {
       "schema": 1,
@@ -7099,7 +7119,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-19T23:36:58Z",
+          "updated": "2026-11-19T23:37:40Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7115,7 +7135,7 @@
           ]
         }
       },
-      "snapshot_id": "cfbd40c579d72537"
+      "snapshot_id": "52d2fa0f3b8e2912"
     },
     "scriptgen": {
       "schema": 1,
@@ -7405,7 +7425,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-19T23:36:58Z",
+          "updated": "2026-11-19T23:37:40Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -7421,7 +7441,7 @@
           ]
         }
       },
-      "snapshot_id": "455bb902d7539395"
+      "snapshot_id": "5b977e7ffd9deac6"
     }
   },
   "pm": {
@@ -7449,22 +7469,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 12904
+        "monitor_last_pass_min": 12910
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12904
+        "monitor_last_pass_min": 12910
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 12904
+        "monitor_last_pass_min": 12910
       }
     ]
   },
-  "snapshot_id": "f52f27001c5b9bf6",
-  "published_at": "2026-11-19T23:37:10Z"
+  "snapshot_id": "347b2adfe37dd4a5",
+  "published_at": "2026-11-19T23:42:47Z"
 }
