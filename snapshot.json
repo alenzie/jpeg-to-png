@@ -706,7 +706,7 @@
             90.0
           ],
           [
-            26.1,
+            26.2,
             93.0
           ]
         ]
@@ -6611,39 +6611,18 @@
       "units": [
         {
           "id": "FLOW-EDIT-DIFF",
-          "status": "building",
-          "stage": "merge+cleanup",
-          "stage_i": 6,
-          "ctx_pct": 0,
-          "last_commit_at": 1795107986,
-          "head": "573fb972",
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 10,
+          "last_commit_at": null,
+          "head": null,
           "subfence": {
             "done": 9,
             "total": 9
           },
           "review_rounds": [],
-          "commits": [
-            {
-              "sha": "573fb972",
-              "at": 1795107986
-            },
-            {
-              "sha": "6395aab6",
-              "at": 1795107780
-            },
-            {
-              "sha": "dacc4457",
-              "at": 1795107528
-            },
-            {
-              "sha": "748dab28",
-              "at": 1795107200
-            },
-            {
-              "sha": "0c7c71a4",
-              "at": 1795107057
-            }
-          ],
+          "commits": [],
           "fences": {
             "plan": true,
             "synth": true,
@@ -6750,12 +6729,20 @@
       ],
       "eligible": [
         "DETECTOR-SOUND-MIDSCAN-DEGRADE",
+        "FLOW-EDIT-DIFF-2",
+        "FLOW-PATTERN-LEDGER",
         "FLOW-STORY-INTAKE",
         "FLOW-TRANSCRIPT-HARDEN",
         "DEP-AUDIT-2026-11",
         "SUPABASE-LEGACY-KEY-MIGRATION"
       ],
       "merge_feed": [
+        {
+          "pr": 94,
+          "unit": "FLOW-EDIT-DIFF",
+          "merged_at": 1795108230,
+          "sha": "92a21b0c"
+        },
         {
           "pr": 91,
           "unit": "FLOW-NARRATIVE-EXPORT",
@@ -6779,12 +6766,6 @@
           "unit": "FLOW-CHAT-SCALE",
           "merged_at": 1794975121,
           "sha": "8da0a759"
-        },
-        {
-          "pr": 88,
-          "unit": "FLOW-CHAT-RECALL",
-          "merged_at": 1794963632,
-          "sha": "c980026f"
         }
       ],
       "decisions": [],
@@ -7020,7 +7001,7 @@
           ]
         }
       },
-      "snapshot_id": "8444d4a3e1aaac00"
+      "snapshot_id": "50cd25afabf1be20"
     },
     "outbound": {
       "schema": 1,
@@ -7369,7 +7350,7 @@
           ]
         }
       },
-      "snapshot_id": "507c8000484449c1"
+      "snapshot_id": "a416d19882067163"
     },
     "scriptgen": {
       "schema": 1,
@@ -7675,7 +7656,7 @@
           ]
         }
       },
-      "snapshot_id": "9a6d9b8a31e3f7a6"
+      "snapshot_id": "a156a96378a920dd"
     }
   },
   "pm": {
@@ -7703,22 +7684,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 12517
+        "monitor_last_pass_min": 12522
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 12517
+        "monitor_last_pass_min": 12522
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 12517
+        "monitor_last_pass_min": 12522
       }
     ]
   },
-  "snapshot_id": "cda16522845b5a24",
-  "published_at": "2026-11-19T17:09:49Z"
+  "snapshot_id": "ea56130ee997b3c2",
+  "published_at": "2026-11-19T17:15:09Z"
 }
