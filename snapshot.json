@@ -552,7 +552,7 @@
         "spark": [
           [
             1794578400,
-            99
+            98
           ],
           [
             1794582000,
@@ -1165,7 +1165,7 @@
             59.0
           ],
           [
-            91.2,
+            91.3,
             60.0
           ]
         ]
@@ -2728,7 +2728,7 @@
             36.0
           ],
           [
-            1794579570,
+            1794580382,
             36.0
           ],
           [
@@ -3732,7 +3732,7 @@
             89.0
           ],
           [
-            1794579570,
+            1794580382,
             90.0
           ],
           [
@@ -4735,7 +4735,7 @@
           26.0
         ],
         [
-          1794579570,
+          1794580382,
           27.0
         ],
         [
@@ -5345,8 +5345,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "FLOW-REACTIONS-SPIKE",
+            "kind": "needs-owner",
+            "raised_at": 1795184312
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5377,17 +5383,21 @@
         {
           "id": "FLOW-REACTIONS-SPIKE",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 20,
-          "last_commit_at": 1795183759,
-          "head": "ead15dd8",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 22,
+          "last_commit_at": 1795184256,
+          "head": "cabafdde",
           "subfence": {
-            "done": 5,
+            "done": 6,
             "total": 8
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "cabafdde",
+              "at": 1795184256
+            },
             {
               "sha": "ead15dd8",
               "at": 1795183759
@@ -5403,10 +5413,6 @@
             {
               "sha": "33ebb536",
               "at": 1795174343
-            },
-            {
-              "sha": "e9249dba",
-              "at": 1795173422
             }
           ],
           "fences": {
@@ -5415,7 +5421,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "FLOW-ROUGHCUT-PREVIEW",
@@ -5465,7 +5471,7 @@
           "status": "pr-open",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 21,
+          "ctx_pct": 24,
           "last_commit_at": 1795181596,
           "head": "ab6c06e6",
           "subfence": {
@@ -5774,7 +5780,7 @@
           ]
         }
       },
-      "snapshot_id": "599b6aeb458035ba"
+      "snapshot_id": "4cca695cabf08a90"
     },
     "outbound": {
       "schema": 1,
@@ -6119,7 +6125,7 @@
           ]
         }
       },
-      "snapshot_id": "26a612bc4466c4f8"
+      "snapshot_id": "aff4ee36e351b657"
     },
     "scriptgen": {
       "schema": 1,
@@ -6425,7 +6431,7 @@
           ]
         }
       },
-      "snapshot_id": "e47f4c497cd0e51c"
+      "snapshot_id": "18280cad3cba6d84"
     }
   },
   "pm": {
@@ -6445,7 +6451,7 @@
     },
     "pm_session": {
       "lock": "156047 2026-11-19T11:11:52Z",
-      "fresh": true
+      "fresh": false
     },
     "sterling_up": true,
     "fleets": [
@@ -6453,22 +6459,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13782
+        "monitor_last_pass_min": 13787
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13782
+        "monitor_last_pass_min": 13787
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 13782
+        "monitor_last_pass_min": 13787
       }
     ]
   },
-  "snapshot_id": "00cdb8457de3df35",
-  "published_at": "2026-11-20T14:14:37Z"
+  "snapshot_id": "fff466c46d7b8e11",
+  "published_at": "2026-11-20T14:20:15Z"
 }
