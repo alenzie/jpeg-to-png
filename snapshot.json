@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 204,
+        "projected": 203,
         "used": 29,
-        "at": 1795213606,
+        "at": 1795213974,
         "reset": "14:32 on 26 Nov",
         "spark": [
           [
@@ -551,8 +551,8 @@
         "mult": "20x",
         "projected": 66,
         "used": 63,
-        "at": 1795213606,
-        "reset": "Nov 20, 9pm (America/Los_Angeles)",
+        "at": 1795213974,
+        "reset": "Nov 20, 8:59pm (America/Los_Angeles)",
         "spark": [
           [
             1794607200,
@@ -1173,7 +1173,7 @@
             63.0
           ],
           [
-            96.1,
+            96.2,
             63.0
           ]
         ]
@@ -1726,9 +1726,9 @@
       "balance": -0.0,
       "currency": "USD",
       "available": false,
-      "burn_per_day": 0.0,
+      "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1795213606,
+      "at": 1795213974,
       "spark": [
         [
           1794607200,
@@ -5350,7 +5350,7 @@
       },
       "runstate": {
         "auto": false,
-        "parallel": 3,
+        "parallel": 4,
         "pickconfirm": true
       },
       "daemons": {
@@ -5373,7 +5373,7 @@
           "status": "proposed",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 0,
+          "ctx_pct": 14,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5392,10 +5392,10 @@
         },
         {
           "id": "FLOW-PATTERN-APPLY",
-          "status": "proposed",
+          "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": null,
+          "ctx_pct": 20,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5497,12 +5497,32 @@
             "review": false
           },
           "gate_open": false
+        },
+        {
+          "id": "FLOWMASTER-BRIDGE-RELEASE",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 15,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
         }
       ],
       "eligible": [
-        "FLOW-PATTERN-APPLY",
-        "DEP-AUDIT-2026-11",
-        "FLOWMASTER-BRIDGE-RELEASE"
+        "DEP-AUDIT-2026-11"
       ],
       "merge_feed": [
         {
@@ -5727,7 +5747,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 204,
+              "proj": 203,
               "target": 250,
               "used": 29,
               "day": 1,
@@ -5753,7 +5773,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-20T22:29:58Z",
+          "updated": "2026-11-20T22:32:55Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5769,7 +5789,7 @@
           ]
         }
       },
-      "snapshot_id": "518f91c1ad64d525"
+      "snapshot_id": "8cedb16cc2b7d82f"
     },
     "outbound": {
       "schema": 1,
@@ -5802,7 +5822,30 @@
           "up": false
         }
       },
-      "units": [],
+      "units": [
+        {
+          "id": "HOSTED-VOICE-CUTOFF-INDEX",
+          "status": "proposed",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 14,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        }
+      ],
       "eligible": [
         "UC-1C-OPENAI",
         "HOSTED-VOICE-CUTOFF-INDEX",
@@ -6072,7 +6115,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 204,
+              "proj": 203,
               "target": 250,
               "used": 29,
               "day": 1,
@@ -6098,7 +6141,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-20T22:29:58Z",
+          "updated": "2026-11-20T22:32:55Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6114,7 +6157,7 @@
           ]
         }
       },
-      "snapshot_id": "d96e2ab5fed0aa9c"
+      "snapshot_id": "b86df3dc2941a9b5"
     },
     "scriptgen": {
       "schema": 1,
@@ -6378,7 +6421,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 204,
+              "proj": 203,
               "target": 250,
               "used": 29,
               "day": 1,
@@ -6404,7 +6447,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-20T22:30:15Z",
+          "updated": "2026-11-20T22:32:55Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6420,7 +6463,7 @@
           ]
         }
       },
-      "snapshot_id": "1046baa3fb67e948"
+      "snapshot_id": "824ff7ec8e7370f3"
     }
   },
   "pm": {
@@ -6448,22 +6491,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14277
+        "monitor_last_pass_min": 14283
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14277
+        "monitor_last_pass_min": 14283
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 14277
+        "monitor_last_pass_min": 14283
       }
     ]
   },
-  "snapshot_id": "61cb2c2d7f658bf8",
-  "published_at": "2026-11-20T22:30:24Z"
+  "snapshot_id": "296f45c6b6928fc1",
+  "published_at": "2026-11-20T22:35:40Z"
 }
