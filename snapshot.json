@@ -7,8 +7,8 @@
         "label": "B",
         "tier": "Pro",
         "projected": null,
-        "used": 25,
-        "at": 1795164384,
+        "used": 26,
+        "at": 1795164716,
         "reset": "14:32 on 26 Nov",
         "spark": [
           [
@@ -530,7 +530,7 @@
             21.0
           ],
           [
-            6.1,
+            6.2,
             22.0
           ]
         ]
@@ -541,10 +541,10 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 43,
-        "used": 38,
-        "at": 1795164384,
-        "reset": "Nov 20, 8:59pm (America/Los_Angeles)",
+        "projected": 44,
+        "used": 39,
+        "at": 1795164716,
+        "reset": "Nov 20, 9pm (America/Los_Angeles)",
         "spark": [
           [
             1794560400,
@@ -1688,7 +1688,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1795164384,
+      "at": 1795164716,
       "spark": [
         [
           1794560400,
@@ -5374,7 +5374,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 38,
+          "ctx_pct": 44,
           "last_commit_at": 1795163423,
           "head": "35bdd6a2",
           "subfence": {
@@ -5414,10 +5414,10 @@
         },
         {
           "id": "FLOW-TRANSCRIPT-HARDEN",
-          "status": "building",
-          "stage": "merge+cleanup",
-          "stage_i": 6,
-          "ctx_pct": 12,
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 14,
           "last_commit_at": 1795163971,
           "head": "bf81cdf5",
           "subfence": {
@@ -5460,7 +5460,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 21,
+          "ctx_pct": 26,
           "last_commit_at": 1795163969,
           "head": "0258f35a",
           "subfence": {
@@ -5506,6 +5506,12 @@
       ],
       "merge_feed": [
         {
+          "pr": 100,
+          "unit": "FLOW-TRANSCRIPT-HARDEN",
+          "merged_at": 1795164587,
+          "sha": "8a65e689"
+        },
+        {
           "pr": 99,
           "unit": "DETECTOR-SOUND-MIDSCAN-D",
           "merged_at": 1795161298,
@@ -5528,12 +5534,6 @@
           "unit": "FLOW-STORY-LANES",
           "merged_at": 1795110976,
           "sha": "ef014f32"
-        },
-        {
-          "pr": 94,
-          "unit": "FLOW-EDIT-DIFF",
-          "merged_at": 1795108230,
-          "sha": "92a21b0c"
         }
       ],
       "decisions": [],
@@ -5769,7 +5769,7 @@
           ]
         }
       },
-      "snapshot_id": "7ef6479d359e18c5"
+      "snapshot_id": "6e96d1218d3d0be6"
     },
     "outbound": {
       "schema": 1,
@@ -5808,15 +5808,23 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 65,
-          "last_commit_at": 1795163999,
-          "head": "d680dcd1",
+          "ctx_pct": 20,
+          "last_commit_at": 1795164696,
+          "head": "0576f9eb",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "0576f9eb",
+              "at": 1795164696
+            },
+            {
+              "sha": "cdc0c8c7",
+              "at": 1795164648
+            },
             {
               "sha": "d680dcd1",
               "at": 1795163999
@@ -5828,14 +5836,6 @@
             {
               "sha": "3c821972",
               "at": 1795161732
-            },
-            {
-              "sha": "e117585b",
-              "at": 1795160595
-            },
-            {
-              "sha": "f8527643",
-              "at": 1795160494
             }
           ],
           "fences": {
@@ -5851,7 +5851,7 @@
           "status": "pr-open",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 9,
+          "ctx_pct": 19,
           "last_commit_at": 1795163433,
           "head": "7b3fce93",
           "subfence": {
@@ -6201,7 +6201,7 @@
           ]
         }
       },
-      "snapshot_id": "f31bd145e1bdb4ac"
+      "snapshot_id": "5d36b95d93c7b405"
     },
     "scriptgen": {
       "schema": 1,
@@ -6507,7 +6507,7 @@
           ]
         }
       },
-      "snapshot_id": "959449e7af4d3b86"
+      "snapshot_id": "8697deac55303277"
     }
   },
   "pm": {
@@ -6535,22 +6535,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13457
+        "monitor_last_pass_min": 13462
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13457
+        "monitor_last_pass_min": 13462
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 13457
+        "monitor_last_pass_min": 13462
       }
     ]
   },
-  "snapshot_id": "0024fd5fa2db07bf",
-  "published_at": "2026-11-20T08:49:34Z"
+  "snapshot_id": "ffd3f2b29517ee53",
+  "published_at": "2026-11-20T08:55:01Z"
 }
