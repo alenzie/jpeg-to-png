@@ -7,8 +7,8 @@
         "label": "B",
         "tier": "Pro",
         "projected": null,
-        "used": 18,
-        "at": 1795156095,
+        "used": 19,
+        "at": 1795156588,
         "reset": "14:32 on 26 Nov",
         "spark": [
           [
@@ -545,10 +545,10 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 18,
-        "used": 16,
-        "at": 1795156095,
-        "reset": "Nov 20, 8:59pm (America/Los_Angeles)",
+        "projected": 20,
+        "used": 17,
+        "at": 1795156588,
+        "reset": "Nov 20, 9pm (America/Los_Angeles)",
         "spark": [
           [
             1794549600,
@@ -1133,7 +1133,7 @@
             13.0
           ],
           [
-            86.6,
+            86.7,
             15.0
           ]
         ]
@@ -1709,7 +1709,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1795156095,
+      "at": 1795156588,
       "spark": [
         [
           1794549600,
@@ -2321,7 +2321,7 @@
       "codex": {
         "B": [
           [
-            1791268482,
+            1791268996,
             100.0
           ],
           [
@@ -3325,7 +3325,7 @@
       "claude": {
         "B": [
           [
-            1791268482,
+            1791268996,
             83.0
           ],
           [
@@ -4328,7 +4328,7 @@
       },
       "glm": [
         [
-          1791268482,
+          1791268996,
           64.0
         ],
         [
@@ -5369,14 +5369,18 @@
           "stage": "subfencing",
           "stage_i": 4,
           "ctx_pct": 36,
-          "last_commit_at": 1795155601,
-          "head": "17484517",
+          "last_commit_at": 1795156598,
+          "head": "8a1eeed0",
           "subfence": {
             "done": 6,
             "total": 8
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "8a1eeed0",
+              "at": 1795156598
+            },
             {
               "sha": "17484517",
               "at": 1795155601
@@ -5392,10 +5396,6 @@
             {
               "sha": "6cffaaed",
               "at": 1795154431
-            },
-            {
-              "sha": "91fa6ef9",
-              "at": 1795154191
             }
           ],
           "fences": {
@@ -5497,7 +5497,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 39,
+          "ctx_pct": 40,
           "last_commit_at": 1795155818,
           "head": "3534c74e",
           "subfence": {
@@ -5791,7 +5791,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-20T06:29:35Z",
+          "updated": "2026-11-20T06:33:13Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5807,7 +5807,7 @@
           ]
         }
       },
-      "snapshot_id": "d56f4d47a646b462"
+      "snapshot_id": "9f1762dced2228f6"
     },
     "outbound": {
       "schema": 1,
@@ -5840,14 +5840,57 @@
           "up": false
         }
       },
-      "units": [],
+      "units": [
+        {
+          "id": "ACCOUNT-HOLDER-ERASE",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 16,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "LEAD-CONSENT-EVIDENCE",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 16,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        }
+      ],
       "eligible": [
         "UC-1C-OPENAI",
         "HOSTED-VOICE-CUTOFF-INDEX",
-        "ACCOUNT-HOLDER-ERASE",
         "ACCT-LEVELS-2",
         "CONTACT-ACCESS-PACK",
-        "LEAD-CONSENT-EVIDENCE",
         "CONTACT-EMAIL-AD-WAIVER",
         "MSG12"
       ],
@@ -6138,7 +6181,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-20T06:29:35Z",
+          "updated": "2026-11-20T06:33:13Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6154,7 +6197,7 @@
           ]
         }
       },
-      "snapshot_id": "021d8b4f7d9c4c84"
+      "snapshot_id": "1d08912ade675f29"
     },
     "scriptgen": {
       "schema": 1,
@@ -6444,7 +6487,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-20T06:29:35Z",
+          "updated": "2026-11-20T06:33:13Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6460,7 +6503,7 @@
           ]
         }
       },
-      "snapshot_id": "ad241492a54fed77"
+      "snapshot_id": "e2f43950977d785b"
     }
   },
   "pm": {
@@ -6488,22 +6531,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13319
+        "monitor_last_pass_min": 13324
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13319
+        "monitor_last_pass_min": 13324
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 13319
+        "monitor_last_pass_min": 13324
       }
     ]
   },
-  "snapshot_id": "b258a7fd71382f87",
-  "published_at": "2026-11-20T06:31:42Z"
+  "snapshot_id": "73b4a22ec7a40df6",
+  "published_at": "2026-11-20T06:37:09Z"
 }
