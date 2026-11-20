@@ -7,8 +7,8 @@
         "label": "B",
         "tier": "Pro",
         "projected": null,
-        "used": 7,
-        "at": 1795144364,
+        "used": 8,
+        "at": 1795144807,
         "reset": "14:32 on 26 Nov",
         "spark": [
           [
@@ -534,7 +534,7 @@
             5.0
           ],
           [
-            2.8,
+            2.9,
             7.0
           ]
         ]
@@ -545,10 +545,10 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 11,
-        "used": 9,
-        "at": 1795144364,
-        "reset": "Nov 20, 8:59pm (America/Los_Angeles)",
+        "projected": 12,
+        "used": 10,
+        "at": 1795144807,
+        "reset": "Nov 20, 9pm (America/Los_Angeles)",
         "spark": [
           [
             1794538800,
@@ -1685,7 +1685,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1795144364,
+      "at": 1795144807,
       "spark": [
         [
           1794538800,
@@ -5310,8 +5310,14 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "FLOW-VO",
+            "kind": "escalate",
+            "raised_at": 1795144880
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5344,15 +5350,23 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 43,
-          "last_commit_at": 1795144401,
-          "head": "d7785337",
+          "ctx_pct": 45,
+          "last_commit_at": 1795144675,
+          "head": "d2466303",
           "subfence": {
             "done": 0,
-            "total": null
+            "total": 8
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "d2466303",
+              "at": 1795144675
+            },
+            {
+              "sha": "72041208",
+              "at": 1795144672
+            },
             {
               "sha": "d7785337",
               "at": 1795144401
@@ -5364,14 +5378,6 @@
             {
               "sha": "334e0160",
               "at": 1795143523
-            },
-            {
-              "sha": "289b48a0",
-              "at": 1795142137
-            },
-            {
-              "sha": "e6a5d583",
-              "at": 1795141601
             }
           ],
           "fences": {
@@ -5387,15 +5393,23 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 29,
-          "last_commit_at": 1795143799,
-          "head": "44875175",
+          "ctx_pct": 33,
+          "last_commit_at": 1795144660,
+          "head": "23f6cff7",
           "subfence": {
-            "done": 6,
+            "done": 7,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "23f6cff7",
+              "at": 1795144660
+            },
+            {
+              "sha": "61f89baf",
+              "at": 1795144574
+            },
             {
               "sha": "44875175",
               "at": 1795143799
@@ -5407,14 +5421,6 @@
             {
               "sha": "9d728f36",
               "at": 1795143103
-            },
-            {
-              "sha": "4f9eb8ae",
-              "at": 1795142319
-            },
-            {
-              "sha": "0f7099ca",
-              "at": 1795142218
             }
           ],
           "fences": {
@@ -5471,11 +5477,11 @@
         {
           "id": "FLOW-VO",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 40,
-          "last_commit_at": 1795143990,
-          "head": "fffd63b8",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 41,
+          "last_commit_at": 1795144823,
+          "head": "f777f5fc",
           "subfence": {
             "done": 0,
             "total": 10
@@ -5483,24 +5489,24 @@
           "review_rounds": [],
           "commits": [
             {
+              "sha": "f777f5fc",
+              "at": 1795144823
+            },
+            {
+              "sha": "7e63da06",
+              "at": 1795144794
+            },
+            {
+              "sha": "f059f74e",
+              "at": 1795144791
+            },
+            {
               "sha": "fffd63b8",
               "at": 1795143990
             },
             {
               "sha": "4ac1a191",
               "at": 1795143915
-            },
-            {
-              "sha": "bf80d891",
-              "at": 1795143913
-            },
-            {
-              "sha": "7fe64a86",
-              "at": 1795143420
-            },
-            {
-              "sha": "671d0c03",
-              "at": 1795143418
             }
           ],
           "fences": {
@@ -5509,7 +5515,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -5742,7 +5748,7 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 250,
-              "used": 7,
+              "used": 8,
               "day": 1,
               "active": null,
               "wall": false
@@ -5758,15 +5764,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 11,
+              "proj": 12,
               "target": 100,
-              "used": 9,
+              "used": 10,
               "day": 6,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-20T03:13:23Z",
+          "updated": "2026-11-20T03:21:11Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5782,7 +5788,7 @@
           ]
         }
       },
-      "snapshot_id": "13e0e8d0b9722b84"
+      "snapshot_id": "f5710bd46dfdcb3d"
     },
     "outbound": {
       "schema": 1,
@@ -6091,7 +6097,7 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 250,
-              "used": 7,
+              "used": 8,
               "day": 1,
               "active": null,
               "wall": false
@@ -6107,15 +6113,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 11,
+              "proj": 12,
               "target": 100,
-              "used": 9,
+              "used": 10,
               "day": 6,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-20T03:13:23Z",
+          "updated": "2026-11-20T03:21:11Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6131,7 +6137,7 @@
           ]
         }
       },
-      "snapshot_id": "02779db524442c76"
+      "snapshot_id": "e10de2b253b3d046"
     },
     "scriptgen": {
       "schema": 1,
@@ -6397,7 +6403,7 @@
               "verdict": "IN_BAND",
               "proj": null,
               "target": 250,
-              "used": 7,
+              "used": 8,
               "day": 1,
               "active": null,
               "wall": false
@@ -6413,15 +6419,15 @@
             },
             "claude": {
               "verdict": "UNDERBURN",
-              "proj": 11,
+              "proj": 12,
               "target": 100,
-              "used": 9,
+              "used": 10,
               "day": 6,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-20T03:13:23Z",
+          "updated": "2026-11-20T03:21:11Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6437,7 +6443,7 @@
           ]
         }
       },
-      "snapshot_id": "fe775f44f4317a1e"
+      "snapshot_id": "e4b496c74f415596"
     }
   },
   "pm": {
@@ -6465,22 +6471,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 13123
+        "monitor_last_pass_min": 13129
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13123
+        "monitor_last_pass_min": 13129
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 13123
+        "monitor_last_pass_min": 13129
       }
     ]
   },
-  "snapshot_id": "3080ed784c554870",
-  "published_at": "2026-11-20T03:16:16Z"
+  "snapshot_id": "969efa23046d78a3",
+  "published_at": "2026-11-20T03:21:44Z"
 }
