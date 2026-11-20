@@ -530,7 +530,7 @@
             7.0
           ],
           [
-            3.8,
+            3.9,
             11.0
           ]
         ]
@@ -1117,7 +1117,7 @@
             9.0
           ],
           [
-            85.7,
+            85.8,
             11.0
           ]
         ]
@@ -5328,7 +5328,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 36,
+          "ctx_pct": 37,
           "last_commit_at": 1795150277,
           "head": "2803702c",
           "subfence": {
@@ -5361,6 +5361,28 @@
           "fences": {
             "plan": true,
             "synth": true,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "FLOW-REACTIONS-SPIKE",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 19,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
             "build": false,
             "review": false
           },
@@ -5414,15 +5436,27 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 43,
-          "last_commit_at": 1795150271,
-          "head": "5399f6f2",
+          "ctx_pct": null,
+          "last_commit_at": 1795151069,
+          "head": "a5e89ed0",
           "subfence": {
-            "done": 1,
+            "done": 2,
             "total": 10
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "a5e89ed0",
+              "at": 1795151069
+            },
+            {
+              "sha": "3752e807",
+              "at": 1795150974
+            },
+            {
+              "sha": "9936cd2a",
+              "at": 1795150940
+            },
             {
               "sha": "5399f6f2",
               "at": 1795150271
@@ -5430,18 +5464,6 @@
             {
               "sha": "9ceeb541",
               "at": 1795149806
-            },
-            {
-              "sha": "ba970c93",
-              "at": 1795148498
-            },
-            {
-              "sha": "596e192a",
-              "at": 1795148168
-            },
-            {
-              "sha": "5d877c5e",
-              "at": 1795147027
             }
           ],
           "fences": {
@@ -5455,7 +5477,6 @@
       ],
       "eligible": [
         "FLOW-PATTERN-APPLY",
-        "FLOW-REACTIONS-SPIKE",
         "FLOW-ROUGHCUT-PREVIEW",
         "DEP-AUDIT-2026-11",
         "FLOWMASTER-BRIDGE-RELEASE"
@@ -5709,7 +5730,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-20T04:59:52Z",
+          "updated": "2026-11-20T05:03:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5725,7 +5746,7 @@
           ]
         }
       },
-      "snapshot_id": "45adea7bafb9d38f"
+      "snapshot_id": "28693ff66e03580f"
     },
     "outbound": {
       "schema": 1,
@@ -6058,7 +6079,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-20T04:59:06Z",
+          "updated": "2026-11-20T05:03:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6074,7 +6095,7 @@
           ]
         }
       },
-      "snapshot_id": "23e25044c1f5ec90"
+      "snapshot_id": "57f9a4db3f223042"
     },
     "scriptgen": {
       "schema": 1,
@@ -6364,7 +6385,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-20T04:59:52Z",
+          "updated": "2026-11-20T05:03:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6380,7 +6401,7 @@
           ]
         }
       },
-      "snapshot_id": "a9ebe91066d4ba85"
+      "snapshot_id": "f929c232c23656e9"
     }
   },
   "pm": {
@@ -6408,22 +6429,22 @@
         "fleet": "outbound",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 13227
+        "monitor_last_pass_min": 13232
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 13227
+        "monitor_last_pass_min": 13232
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": true,
-        "monitor_last_pass_min": 13227
+        "monitor_last_pass_min": 13232
       }
     ]
   },
-  "snapshot_id": "2405862b305b22bc",
-  "published_at": "2026-11-20T05:00:00Z"
+  "snapshot_id": "451d13bbf8bd779c",
+  "published_at": "2026-11-20T05:05:24Z"
 }
