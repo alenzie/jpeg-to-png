@@ -6,15 +6,11 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 209,
+        "projected": 208,
         "used": 35,
-        "at": 1795229055,
+        "at": 1795229532,
         "reset": "14:32 on 26 Nov",
         "spark": [
-          [
-            1794621600,
-            87
-          ],
           [
             1794625200,
             86
@@ -554,7 +550,7 @@
             31.0
           ],
           [
-            16.8,
+            16.9,
             33.0
           ]
         ]
@@ -565,15 +561,11 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 86,
-        "used": 85,
-        "at": 1795229055,
-        "reset": "Nov 20, 8:59pm (America/Los_Angeles)",
+        "projected": 87,
+        "used": 86,
+        "at": 1795229532,
+        "reset": "Nov 20, 9pm (America/Los_Angeles)",
         "spark": [
-          [
-            1794621600,
-            95
-          ],
           [
             1794625200,
             95
@@ -1205,7 +1197,7 @@
             78.0
           ],
           [
-            98.7,
+            98.8,
             83.0
           ]
         ]
@@ -1213,16 +1205,12 @@
     ],
     "glm": {
       "target": 100,
-      "projected": 217,
+      "projected": 215,
       "used": 31,
-      "at": 1795229055,
+      "at": 1795229532,
       "reset": "Nov 26, 18:39",
       "level": "pro",
       "spark": [
-        [
-          1794621600,
-          222
-        ],
         [
           1794625200,
           220
@@ -1845,12 +1833,8 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1795229055,
+      "at": 1795229532,
       "spark": [
-        [
-          1794621600,
-          -0.0
-        ],
         [
           1794625200,
           -0.0
@@ -2849,10 +2833,6 @@
             38.0
           ],
           [
-            1794624803,
-            40.0
-          ],
-          [
             1794625475,
             40.0
           ],
@@ -3846,10 +3826,6 @@
           ],
           [
             1794614544,
-            94.0
-          ],
-          [
-            1794624803,
             94.0
           ],
           [
@@ -4848,10 +4824,6 @@
           30.0
         ],
         [
-          1794624803,
-          32.0
-        ],
-        [
           1794625475,
           32.0
         ],
@@ -5490,15 +5462,23 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 43,
-          "last_commit_at": 1795228952,
-          "head": "c9bf6dd7",
+          "ctx_pct": 44,
+          "last_commit_at": 1795229619,
+          "head": "73ed33c0",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "73ed33c0",
+              "at": 1795229619
+            },
+            {
+              "sha": "37aee10c",
+              "at": 1795229616
+            },
             {
               "sha": "c9bf6dd7",
               "at": 1795228952
@@ -5510,14 +5490,6 @@
             {
               "sha": "d51c721c",
               "at": 1795227698
-            },
-            {
-              "sha": "df8a4853",
-              "at": 1795227224
-            },
-            {
-              "sha": "f667d1e9",
-              "at": 1795227110
             }
           ],
           "fences": {
@@ -5533,7 +5505,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 37,
+          "ctx_pct": 38,
           "last_commit_at": 1795229301,
           "head": "e753e9ba",
           "subfence": {
@@ -5692,7 +5664,7 @@
           {
             "role": "discovery.web_codex",
             "model": "gpt-5.6-terra",
-            "effort": "xhigh"
+            "effort": "high"
           },
           {
             "role": "invariant_map",
@@ -5713,7 +5685,7 @@
           {
             "role": "coplan.codex",
             "model": "gpt-6-astra",
-            "effort": "xhigh",
+            "effort": "high",
             "non_degradable": true
           },
           {
@@ -5734,12 +5706,12 @@
           {
             "role": "plan_scrutiny.confirm",
             "model": "gpt-5.6-terra",
-            "effort": "xhigh"
+            "effort": "high"
           },
           {
             "role": "prebuild_review.codex",
             "model": "gpt-5.6-terra",
-            "effort": "xhigh"
+            "effort": "high"
           },
           {
             "role": "build.hard",
@@ -5765,7 +5737,7 @@
           {
             "role": "p4.r1_swarm",
             "model": "gpt-6-astra",
-            "effort": "xhigh",
+            "effort": "high",
             "note": "R1 breadth seat — Sonnet swarm REMOVED owner 2026-08-30 (claude-burn cut); 1 codex-sol pass, never a swarm (see review.codex_deep_r1_cap). Was claude-sonnet-4-6"
           },
           {
@@ -5839,7 +5811,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 209,
+              "proj": 208,
               "target": 250,
               "used": 35,
               "day": 2,
@@ -5848,7 +5820,7 @@
             },
             "glm": {
               "verdict": "OVERBURN",
-              "proj": 217,
+              "proj": 215,
               "target": 100,
               "used": 31,
               "day": 1,
@@ -5857,15 +5829,15 @@
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 86,
+              "proj": 87,
               "target": 100,
-              "used": 85,
+              "used": 86,
               "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-21T02:48:28Z",
+          "updated": "2026-11-21T02:53:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5881,7 +5853,7 @@
           ]
         }
       },
-      "snapshot_id": "cb7c80eae59c7ed2"
+      "snapshot_id": "cabf1b8c34bbfe9f"
     },
     "outbound": {
       "schema": 1,
@@ -5920,18 +5892,39 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 39,
-          "last_commit_at": null,
-          "head": null,
+          "ctx_pct": 44,
+          "last_commit_at": 1795229436,
+          "head": "0ef40a39",
           "subfence": {
             "done": 0,
-            "total": null
+            "total": 9
           },
           "review_rounds": [],
-          "commits": [],
+          "commits": [
+            {
+              "sha": "0ef40a39",
+              "at": 1795229436
+            },
+            {
+              "sha": "b6566058",
+              "at": 1795227038
+            },
+            {
+              "sha": "6707db5c",
+              "at": 1795226847
+            },
+            {
+              "sha": "875c0797",
+              "at": 1795226764
+            },
+            {
+              "sha": "008b8d1f",
+              "at": 1795226549
+            }
+          ],
           "fences": {
             "plan": false,
-            "synth": false,
+            "synth": true,
             "build": false,
             "review": false
           },
@@ -5985,15 +5978,19 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 42,
-          "last_commit_at": 1795229167,
-          "head": "f9718822",
+          "ctx_pct": 43,
+          "last_commit_at": 1795229564,
+          "head": "c59878bc",
           "subfence": {
             "done": 0,
             "total": 8
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "c59878bc",
+              "at": 1795229564
+            },
             {
               "sha": "f9718822",
               "at": 1795229167
@@ -6009,10 +6006,6 @@
             {
               "sha": "ff2692cf",
               "at": 1795227087
-            },
-            {
-              "sha": "5ed5fd1d",
-              "at": 1795227035
             }
           ],
           "fences": {
@@ -6030,6 +6023,12 @@
         "MSG12"
       ],
       "merge_feed": [
+        {
+          "pr": 404,
+          "unit": "LEAD-CONSENT-EVIDENCE",
+          "merged_at": 1795229455,
+          "sha": "73012b13"
+        },
         {
           "pr": 403,
           "unit": "owner-stage-a-20261118",
@@ -6053,12 +6052,6 @@
           "unit": "HOSTED-VOICE-RUNNERS",
           "merged_at": 1794835478,
           "sha": "1ebdd1e3"
-        },
-        {
-          "pr": 399,
-          "unit": "HOSTED-VOICE",
-          "merged_at": 1794777485,
-          "sha": "83dbe1ae"
         }
       ],
       "decisions": [
@@ -6290,7 +6283,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 209,
+              "proj": 208,
               "target": 250,
               "used": 35,
               "day": 2,
@@ -6299,7 +6292,7 @@
             },
             "glm": {
               "verdict": "OVERBURN",
-              "proj": 217,
+              "proj": 215,
               "target": 100,
               "used": 31,
               "day": 1,
@@ -6308,15 +6301,15 @@
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 86,
+              "proj": 87,
               "target": 100,
-              "used": 85,
+              "used": 86,
               "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-21T02:46:39Z",
+          "updated": "2026-11-21T02:53:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6332,7 +6325,7 @@
           ]
         }
       },
-      "snapshot_id": "e58ec270a083907d"
+      "snapshot_id": "7524eaf80264578d"
     },
     "scriptgen": {
       "schema": 1,
@@ -6449,7 +6442,7 @@
           {
             "role": "discovery.web_codex",
             "model": "gpt-5.6-terra",
-            "effort": "xhigh"
+            "effort": "high"
           },
           {
             "role": "invariant_map",
@@ -6470,7 +6463,7 @@
           {
             "role": "coplan.codex",
             "model": "gpt-6-astra",
-            "effort": "xhigh",
+            "effort": "high",
             "non_degradable": true
           },
           {
@@ -6491,12 +6484,12 @@
           {
             "role": "plan_scrutiny.confirm",
             "model": "gpt-5.6-terra",
-            "effort": "xhigh"
+            "effort": "high"
           },
           {
             "role": "prebuild_review.codex",
             "model": "gpt-5.6-terra",
-            "effort": "xhigh"
+            "effort": "high"
           },
           {
             "role": "build.hard",
@@ -6522,7 +6515,7 @@
           {
             "role": "p4.r1_swarm",
             "model": "gpt-6-astra",
-            "effort": "xhigh",
+            "effort": "high",
             "note": "R1 breadth seat — Sonnet swarm REMOVED owner 2026-08-30 (claude-burn cut); 1 codex-sol pass, never a swarm (see review.codex_deep_r1_cap). Was claude-sonnet-4-6"
           },
           {
@@ -6596,7 +6589,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 209,
+              "proj": 208,
               "target": 250,
               "used": 35,
               "day": 2,
@@ -6605,7 +6598,7 @@
             },
             "glm": {
               "verdict": "OVERBURN",
-              "proj": 217,
+              "proj": 215,
               "target": 100,
               "used": 31,
               "day": 1,
@@ -6614,15 +6607,15 @@
             },
             "claude": {
               "verdict": "IN_BAND",
-              "proj": 86,
+              "proj": 87,
               "target": 100,
-              "used": 85,
+              "used": 86,
               "day": 7,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-21T02:48:28Z",
+          "updated": "2026-11-21T02:53:42Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6638,7 +6631,7 @@
           ]
         }
       },
-      "snapshot_id": "747d048e43807437"
+      "snapshot_id": "ad0d946ec83c9fd4"
     }
   },
   "pm": {
@@ -6666,22 +6659,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14536
+        "monitor_last_pass_min": 14542
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14536
+        "monitor_last_pass_min": 14542
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 14536
+        "monitor_last_pass_min": 14542
       }
     ]
   },
-  "snapshot_id": "c086af9406a74f1e",
-  "published_at": "2026-11-21T02:48:41Z"
+  "snapshot_id": "c64e2c33662b320c",
+  "published_at": "2026-11-21T02:54:32Z"
 }
