@@ -564,7 +564,7 @@
         "spark": [
           [
             1794621600,
-            96
+            95
           ],
           [
             1794625200,
@@ -1205,7 +1205,7 @@
       "spark": [
         [
           1794621600,
-          229
+          227
         ],
         [
           1794625200,
@@ -1810,7 +1810,7 @@
           26.0
         ],
         [
-          13.9,
+          14.0,
           27.0
         ]
       ]
@@ -2821,7 +2821,7 @@
             38.0
           ],
           [
-            1794622069,
+            1794623081,
             40.0
           ],
           [
@@ -3817,7 +3817,7 @@
             94.0
           ],
           [
-            1794622069,
+            1794623081,
             94.0
           ],
           [
@@ -4812,7 +4812,7 @@
           30.0
         ],
         [
-          1794622069,
+          1794623081,
           32.0
         ],
         [
@@ -5493,7 +5493,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 29,
+          "ctx_pct": 30,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5515,15 +5515,19 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 23,
-          "last_commit_at": 1795225818,
-          "head": "b1850844",
+          "ctx_pct": 24,
+          "last_commit_at": 1795226937,
+          "head": "ff0fd89c",
           "subfence": {
             "done": 2,
             "total": 9
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "ff0fd89c",
+              "at": 1795226937
+            },
             {
               "sha": "b1850844",
               "at": 1795225818
@@ -5539,10 +5543,6 @@
             {
               "sha": "ffed4ec0",
               "at": 1795224089
-            },
-            {
-              "sha": "27963867",
-              "at": 1795222861
             }
           ],
           "fences": {
@@ -5601,9 +5601,9 @@
           "status": "building",
           "stage": "phase-4 review",
           "stage_i": 5,
-          "ctx_pct": 17,
-          "last_commit_at": 1795226637,
-          "head": "1bc02c19",
+          "ctx_pct": 18,
+          "last_commit_at": 1795226929,
+          "head": "2aa37864",
           "subfence": {
             "done": 7,
             "total": 8
@@ -5628,6 +5628,10 @@
           ],
           "commits": [
             {
+              "sha": "2aa37864",
+              "at": 1795226929
+            },
+            {
               "sha": "1bc02c19",
               "at": 1795226637
             },
@@ -5642,17 +5646,13 @@
             {
               "sha": "4d484aa6",
               "at": 1795225788
-            },
-            {
-              "sha": "6513fd67",
-              "at": 1795225765
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
             "build": true,
-            "review": false
+            "review": true
           },
           "gate_open": false
         }
@@ -5923,13 +5923,24 @@
           ]
         }
       },
-      "snapshot_id": "f4c339b8d7b0781a"
+      "snapshot_id": "1fa426efc3924b8f"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CONTACT-ACCESS-PACK",
+            "kind": "needs-owner",
+            "raised_at": 1795226847
+          },
+          {
+            "id": "VOICE-OWNREC-RECORD",
+            "kind": "needs-owner",
+            "raised_at": 1795226946
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5960,9 +5971,9 @@
         {
           "id": "CONTACT-ACCESS-PACK",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 28,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 31,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -5977,14 +5988,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "CONTACT-EMAIL-AD-WAIVER",
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 30,
+          "ctx_pct": 31,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6004,9 +6015,9 @@
         {
           "id": "VOICE-OWNREC-RECORD",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 26,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 29,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -6021,7 +6032,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -6332,7 +6343,7 @@
           ]
         }
       },
-      "snapshot_id": "b85fbd7da87be9c1"
+      "snapshot_id": "1d705ad72717b67a"
     },
     "scriptgen": {
       "schema": 1,
@@ -6638,7 +6649,7 @@
           ]
         }
       },
-      "snapshot_id": "8902b4a7fe751a9e"
+      "snapshot_id": "32abef6437f0ac92"
     }
   },
   "pm": {
@@ -6666,22 +6677,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14492
+        "monitor_last_pass_min": 14497
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14492
+        "monitor_last_pass_min": 14497
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 14492
+        "monitor_last_pass_min": 14497
       }
     ]
   },
-  "snapshot_id": "cdf8bee5b3ec41dd",
-  "published_at": "2026-11-21T02:04:32Z"
+  "snapshot_id": "58bf38b7e3de7693",
+  "published_at": "2026-11-21T02:10:06Z"
 }
