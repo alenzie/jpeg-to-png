@@ -1822,7 +1822,7 @@
           27.0
         ],
         [
-          14.4,
+          14.5,
           30.0
         ]
       ]
@@ -5467,7 +5467,7 @@
           "head": "73ed33c0",
           "subfence": {
             "done": 0,
-            "total": null
+            "total": 10
           },
           "review_rounds": [],
           "commits": [
@@ -5648,13 +5648,7 @@
           {
             "role": "discovery.lattice",
             "model": "glm-5.3",
-            "effort": "4-6 lanes",
-            "note": "GLM coverage lattice — enumerate + cite only (file:line); ADDENDUM-DELTA ≤25 lines; advisory, never gates"
-          },
-          {
-            "role": "discovery.web_glm",
-            "model": "glm-5.3",
-            "effort": "web"
+            "effort": "high"
           },
           {
             "role": "discovery.web_claude",
@@ -5717,12 +5711,6 @@
             "role": "build.hard",
             "model": "claude-opus-5-5",
             "effort": "xhigh"
-          },
-          {
-            "role": "build.checkpoint_find",
-            "model": "glm-5.3",
-            "effort": "every rung",
-            "note": "FIND round at every rung (light: GLM also declares); A1 consent|money|pg steps = no GLM"
           },
           {
             "role": "build.checkpoint_confirm",
@@ -5853,13 +5841,19 @@
           ]
         }
       },
-      "snapshot_id": "cabf1b8c34bbfe9f"
+      "snapshot_id": "5c72723aa0240a3e"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CONTACT-EMAIL-AD-WAIVER",
+            "kind": "escalate",
+            "raised_at": 1795229654
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -5933,17 +5927,25 @@
         {
           "id": "CONTACT-EMAIL-AD-WAIVER",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 41,
-          "last_commit_at": 1795229218,
-          "head": "5830e692",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 42,
+          "last_commit_at": 1795229682,
+          "head": "be9d1f90",
           "subfence": {
             "done": 0,
             "total": 7
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "be9d1f90",
+              "at": 1795229682
+            },
+            {
+              "sha": "c3aa9c97",
+              "at": 1795229661
+            },
             {
               "sha": "5830e692",
               "at": 1795229218
@@ -5955,23 +5957,15 @@
             {
               "sha": "c02f96c0",
               "at": 1795229192
-            },
-            {
-              "sha": "bdca6de9",
-              "at": 1795228889
-            },
-            {
-              "sha": "19278c28",
-              "at": 1795228865
             }
           ],
           "fences": {
-            "plan": false,
+            "plan": true,
             "synth": true,
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "VOICE-OWNREC-RECORD",
@@ -6120,13 +6114,7 @@
           {
             "role": "discovery.lattice",
             "model": "glm-5.3",
-            "effort": "4-6 lanes",
-            "note": "GLM coverage lattice — enumerate + cite only (file:line); ADDENDUM-DELTA ≤25 lines; advisory, never gates"
-          },
-          {
-            "role": "discovery.web_glm",
-            "model": "glm-5.3",
-            "effort": "web"
+            "effort": "high"
           },
           {
             "role": "discovery.web_claude",
@@ -6136,7 +6124,7 @@
           {
             "role": "discovery.web_codex",
             "model": "gpt-5.6-terra",
-            "effort": "xhigh"
+            "effort": "high"
           },
           {
             "role": "invariant_map",
@@ -6157,7 +6145,7 @@
           {
             "role": "coplan.codex",
             "model": "gpt-6-astra",
-            "effort": "xhigh",
+            "effort": "high",
             "non_degradable": true
           },
           {
@@ -6178,23 +6166,17 @@
           {
             "role": "plan_scrutiny.confirm",
             "model": "gpt-5.6-terra",
-            "effort": "xhigh"
+            "effort": "high"
           },
           {
             "role": "prebuild_review.codex",
             "model": "gpt-5.6-terra",
-            "effort": "xhigh"
+            "effort": "high"
           },
           {
             "role": "build.hard",
             "model": "claude-opus-5-5",
             "effort": "xhigh"
-          },
-          {
-            "role": "build.checkpoint_find",
-            "model": "glm-5.3",
-            "effort": "every rung",
-            "note": "FIND round at every rung (light: GLM also declares); A1 consent|money|pg steps = no GLM"
           },
           {
             "role": "build.checkpoint_confirm",
@@ -6209,7 +6191,7 @@
           {
             "role": "p4.r1_swarm",
             "model": "gpt-6-astra",
-            "effort": "xhigh",
+            "effort": "high",
             "note": "R1 breadth seat — Sonnet swarm REMOVED owner 2026-08-30 (claude-burn cut); 1 codex-sol pass, never a swarm (see review.codex_deep_r1_cap). Was claude-sonnet-4-6"
           },
           {
@@ -6325,7 +6307,7 @@
           ]
         }
       },
-      "snapshot_id": "7524eaf80264578d"
+      "snapshot_id": "4ab42e2cdac0b533"
     },
     "scriptgen": {
       "schema": 1,
@@ -6426,13 +6408,7 @@
           {
             "role": "discovery.lattice",
             "model": "glm-5.3",
-            "effort": "4-6 lanes",
-            "note": "GLM coverage lattice — enumerate + cite only (file:line); ADDENDUM-DELTA ≤25 lines; advisory, never gates"
-          },
-          {
-            "role": "discovery.web_glm",
-            "model": "glm-5.3",
-            "effort": "web"
+            "effort": "high"
           },
           {
             "role": "discovery.web_claude",
@@ -6495,12 +6471,6 @@
             "role": "build.hard",
             "model": "claude-opus-5-5",
             "effort": "xhigh"
-          },
-          {
-            "role": "build.checkpoint_find",
-            "model": "glm-5.3",
-            "effort": "every rung",
-            "note": "FIND round at every rung (light: GLM also declares); A1 consent|money|pg steps = no GLM"
           },
           {
             "role": "build.checkpoint_confirm",
@@ -6631,7 +6601,7 @@
           ]
         }
       },
-      "snapshot_id": "ad0d946ec83c9fd4"
+      "snapshot_id": "954a93ea6406fd6d"
     }
   },
   "pm": {
@@ -6659,22 +6629,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14542
+        "monitor_last_pass_min": 14547
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14542
+        "monitor_last_pass_min": 14547
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 14542
+        "monitor_last_pass_min": 14547
       }
     ]
   },
-  "snapshot_id": "c64e2c33662b320c",
-  "published_at": "2026-11-21T02:54:32Z"
+  "snapshot_id": "d32ce5f77a9a0117",
+  "published_at": "2026-11-21T03:00:03Z"
 }
