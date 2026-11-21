@@ -1213,7 +1213,7 @@
             83.0
           ],
           [
-            99.1,
+            99.2,
             86.0
           ]
         ]
@@ -1229,7 +1229,7 @@
       "spark": [
         [
           1794625200,
-          222
+          221
         ],
         [
           1794628800,
@@ -1846,7 +1846,7 @@
           30.0
         ],
         [
-          14.8,
+          14.9,
           32.0
         ]
       ]
@@ -2861,7 +2861,7 @@
             38.0
           ],
           [
-            1794627458,
+            1794627986,
             41.0
           ],
           [
@@ -3861,7 +3861,7 @@
             94.0
           ],
           [
-            1794627458,
+            1794627986,
             95.0
           ],
           [
@@ -4860,7 +4860,7 @@
           30.0
         ],
         [
-          1794627458,
+          1794627986,
           33.0
         ],
         [
@@ -5502,7 +5502,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 11,
+          "ctx_pct": 20,
           "last_commit_at": 1795231853,
           "head": "cf089c76",
           "subfence": {
@@ -5545,7 +5545,7 @@
           "status": "building",
           "stage": "subfencing",
           "stage_i": 4,
-          "ctx_pct": 28,
+          "ctx_pct": 29,
           "last_commit_at": 1795231408,
           "head": "db5a065b",
           "subfence": {
@@ -5865,7 +5865,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-21T03:32:23Z",
+          "updated": "2026-11-21T03:35:46Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5881,7 +5881,7 @@
           ]
         }
       },
-      "snapshot_id": "f0369304ece0e4e6"
+      "snapshot_id": "f339fd19ef1bef71"
     },
     "outbound": {
       "schema": 1,
@@ -5924,11 +5924,11 @@
         {
           "id": "CONTACT-ACCESS-PACK",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 18,
-          "last_commit_at": 1795231579,
-          "head": "70bb8b94",
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": 17,
+          "last_commit_at": 1795232087,
+          "head": "4023935c",
           "subfence": {
             "done": 0,
             "total": 9
@@ -5936,28 +5936,28 @@
           "review_rounds": [],
           "commits": [
             {
+              "sha": "4023935c",
+              "at": 1795232087
+            },
+            {
+              "sha": "fe1fabdb",
+              "at": 1795232010
+            },
+            {
+              "sha": "3e507aac",
+              "at": 1795232005
+            },
+            {
               "sha": "70bb8b94",
               "at": 1795231579
             },
             {
               "sha": "4fded7dc",
               "at": 1795231574
-            },
-            {
-              "sha": "db10105f",
-              "at": 1795231073
-            },
-            {
-              "sha": "c1283693",
-              "at": 1795231069
-            },
-            {
-              "sha": "1cb0ec2d",
-              "at": 1795230563
             }
           ],
           "fences": {
-            "plan": false,
+            "plan": true,
             "synth": true,
             "build": false,
             "review": false
@@ -6010,17 +6010,25 @@
         {
           "id": "VOICE-OWNREC-RECORD",
           "status": "building",
-          "stage": "building",
-          "stage_i": 3,
-          "ctx_pct": 25,
-          "last_commit_at": 1795231590,
-          "head": "678fde0a",
+          "stage": "subfencing",
+          "stage_i": 4,
+          "ctx_pct": 26,
+          "last_commit_at": 1795232104,
+          "head": "d81bfeb1",
           "subfence": {
-            "done": 0,
+            "done": 1,
             "total": 8
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "d81bfeb1",
+              "at": 1795232104
+            },
+            {
+              "sha": "1133a4eb",
+              "at": 1795232042
+            },
             {
               "sha": "678fde0a",
               "at": 1795231590
@@ -6032,14 +6040,6 @@
             {
               "sha": "7274b903",
               "at": 1795231071
-            },
-            {
-              "sha": "713d7131",
-              "at": 1795230243
-            },
-            {
-              "sha": "c59878bc",
-              "at": 1795229564
             }
           ],
           "fences": {
@@ -6332,7 +6332,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-21T03:32:23Z",
+          "updated": "2026-11-21T03:35:46Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6348,7 +6348,7 @@
           ]
         }
       },
-      "snapshot_id": "04d78dbb5daf2eba"
+      "snapshot_id": "633aec5527f82d13"
     },
     "scriptgen": {
       "schema": 1,
@@ -6626,7 +6626,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-21T03:32:23Z",
+          "updated": "2026-11-21T03:35:46Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -6642,7 +6642,7 @@
           ]
         }
       },
-      "snapshot_id": "2736d8fc55ead2fe"
+      "snapshot_id": "c15b4384b761552f"
     }
   },
   "pm": {
@@ -6670,22 +6670,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14580
+        "monitor_last_pass_min": 14586
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 14580
+        "monitor_last_pass_min": 14586
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 14580
+        "monitor_last_pass_min": 14586
       }
     ]
   },
-  "snapshot_id": "0f745b7f02434fcf",
-  "published_at": "2026-11-21T03:33:25Z"
+  "snapshot_id": "dea4fe6b082f5fbe",
+  "published_at": "2026-11-21T03:38:55Z"
 }
