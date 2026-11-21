@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": 176,
         "used": 49,
-        "at": 1795295886,
+        "at": 1795296270,
         "reset": "14:32 on 26 Nov",
         "spark": [
           [
@@ -662,9 +662,9 @@
         "label": "B",
         "mult": "20x",
         "projected": null,
-        "used": 24,
-        "at": 1795295886,
-        "reset": "Nov 27, 8:59pm (America/Los_Angeles)",
+        "used": 25,
+        "at": 1795296270,
+        "reset": "Nov 27, 9pm (America/Los_Angeles)",
         "spark": [
           [
             1794708000,
@@ -1277,7 +1277,7 @@
             17.0
           ],
           [
-            9.7,
+            9.8,
             23.0
           ]
         ]
@@ -1289,7 +1289,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1795295886,
+      "at": 1795296270,
       "spark": [
         [
           1794704400,
@@ -1913,7 +1913,7 @@
       "codex": {
         "B": [
           [
-            1791408082,
+            1791408704,
             13.0
           ],
           [
@@ -2933,7 +2933,7 @@
       "claude": {
         "B": [
           [
-            1791408082,
+            1791408704,
             87.0
           ],
           [
@@ -3962,6 +3962,11 @@
             "id": "FLOW-REACTIONS-SPIKE",
             "kind": "needs-owner",
             "raised_at": 1795184312
+          },
+          {
+            "id": "FLOW-VO-PREMIERE",
+            "kind": "escalate",
+            "raised_at": 1795296110
           }
         ]
       },
@@ -4015,46 +4020,25 @@
         },
         {
           "id": "FLOW-VO-PREMIERE",
-          "status": "pr-open",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 20,
-          "last_commit_at": 1795295180,
-          "head": "9ca4ffe1",
+          "status": "done",
+          "stage": "done",
+          "stage_i": 7,
+          "ctx_pct": 21,
+          "last_commit_at": null,
+          "head": null,
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
-          "commits": [
-            {
-              "sha": "9ca4ffe1",
-              "at": 1795295180
-            },
-            {
-              "sha": "f5e99668",
-              "at": 1795292846
-            },
-            {
-              "sha": "8eba3545",
-              "at": 1795291655
-            },
-            {
-              "sha": "f8d4a61a",
-              "at": 1795261749
-            },
-            {
-              "sha": "c20657ed",
-              "at": 1795261099
-            }
-          ],
+          "commits": [],
           "fences": {
             "plan": false,
             "synth": false,
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4062,6 +4046,12 @@
         "FLOW-FINALCUT-LEARN"
       ],
       "merge_feed": [
+        {
+          "pr": 90,
+          "unit": "OBS-ZERO-SETUP",
+          "merged_at": 1795296144,
+          "sha": "2e63eed5"
+        },
         {
           "pr": 110,
           "unit": "FLOW-VO-PREMIERE",
@@ -4085,12 +4075,6 @@
           "unit": "roughcut-audit",
           "merged_at": 1795238225,
           "sha": "57286661"
-        },
-        {
-          "pr": 106,
-          "unit": "main-lib-tests",
-          "merged_at": 1795230401,
-          "sha": "aa63153b"
         }
       ],
       "decisions": [],
@@ -4267,7 +4251,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 177,
+              "proj": 176,
               "target": 250,
               "used": 49,
               "day": 2,
@@ -4278,13 +4262,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 23,
+              "used": 25,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-21T21:07:58Z",
+          "updated": "2026-11-21T21:24:31Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4298,18 +4282,13 @@
           ]
         }
       },
-      "snapshot_id": "cc17a83a96cd0d30"
+      "snapshot_id": "b3ce3b93c5de5e26"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
-          {
-            "id": "MSG12",
-            "kind": "needs-owner",
-            "raised_at": 1795295993
-          },
           {
             "id": "VOICE-OWNREC-PHONE",
             "kind": "needs-owner",
@@ -4346,39 +4325,64 @@
         {
           "id": "MSG12",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 49,
-          "last_commit_at": null,
-          "head": null,
-          "subfence": {
-            "done": 0,
-            "total": null
-          },
-          "review_rounds": [],
-          "commits": [],
-          "fences": {
-            "plan": false,
-            "synth": false,
-            "build": false,
-            "review": false
-          },
-          "gate_open": true
-        },
-        {
-          "id": "UC-1B-OWNER-ON",
-          "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 32,
-          "last_commit_at": 1795295819,
-          "head": "3a421051",
+          "ctx_pct": 9,
+          "last_commit_at": 1795296204,
+          "head": "7d924084",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "7d924084",
+              "at": 1795296204
+            },
+            {
+              "sha": "9d12872c",
+              "at": 1795295993
+            },
+            {
+              "sha": "23fc7c41",
+              "at": 1795294563
+            },
+            {
+              "sha": "ad235a61",
+              "at": 1795291971
+            },
+            {
+              "sha": "231f8015",
+              "at": 1795253530
+            }
+          ],
+          "fences": {
+            "plan": true,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "UC-1B-OWNER-ON",
+          "status": "building",
+          "stage": "building",
+          "stage_i": 3,
+          "ctx_pct": 34,
+          "last_commit_at": 1795296329,
+          "head": "66ae2946",
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [
+            {
+              "sha": "66ae2946",
+              "at": 1795296329
+            },
             {
               "sha": "3a421051",
               "at": 1795295819
@@ -4394,10 +4398,6 @@
             {
               "sha": "1c2477be",
               "at": 1795294909
-            },
-            {
-              "sha": "da6ff413",
-              "at": 1795294200
             }
           ],
           "fences": {
@@ -4680,7 +4680,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 177,
+              "proj": 176,
               "target": 250,
               "used": 49,
               "day": 2,
@@ -4691,13 +4691,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 23,
+              "used": 25,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-21T21:07:58Z",
+          "updated": "2026-11-21T21:24:31Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4711,7 +4711,7 @@
           ]
         }
       },
-      "snapshot_id": "adadfe0f6ae98e99"
+      "snapshot_id": "261174d8c65c22c4"
     },
     "scriptgen": {
       "schema": 1,
@@ -4958,7 +4958,7 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 177,
+              "proj": 176,
               "target": 250,
               "used": 49,
               "day": 2,
@@ -4969,13 +4969,13 @@
               "verdict": "UNKNOWN",
               "proj": null,
               "target": 100,
-              "used": 23,
+              "used": 25,
               "day": 1,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-21T21:07:58Z",
+          "updated": "2026-11-21T21:24:31Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4989,7 +4989,7 @@
           ]
         }
       },
-      "snapshot_id": "5643eb9d465b8272"
+      "snapshot_id": "2fa731745996019b"
     }
   },
   "pm": {
@@ -5017,22 +5017,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15647
+        "monitor_last_pass_min": 15653
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15647
+        "monitor_last_pass_min": 15653
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 15647
+        "monitor_last_pass_min": 15653
       }
     ]
   },
-  "snapshot_id": "b98f47c6ac35d8bf",
-  "published_at": "2026-11-21T21:20:26Z"
+  "snapshot_id": "a46038f5c77ba4d3",
+  "published_at": "2026-11-21T21:26:01Z"
 }
