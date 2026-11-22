@@ -682,7 +682,7 @@
             51.0
           ],
           [
-            30.2,
+            30.3,
             51.0
           ]
         ]
@@ -1325,7 +1325,7 @@
             28.0
           ],
           [
-            12.1,
+            12.2,
             35.0
           ]
         ]
@@ -1977,7 +1977,7 @@
       "codex": {
         "B": [
           [
-            1791422580,
+            1791423235,
             31.0
           ],
           [
@@ -3009,7 +3009,7 @@
       "claude": {
         "B": [
           [
-            1791422580,
+            1791423235,
             87.0
           ],
           [
@@ -4391,13 +4391,19 @@
           ]
         }
       },
-      "snapshot_id": "af4d7be08e0384dc"
+      "snapshot_id": "47628edb1dc09d25"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CONTACT-EMAIL-SEND",
+            "kind": "needs-owner",
+            "raised_at": 1795310428
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4428,9 +4434,9 @@
         {
           "id": "CONTACT-EMAIL-SEND",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 35,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 37,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4445,16 +4451,16 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "VOICE-OWNREC-PHONE",
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 37,
-          "last_commit_at": 1795309717,
-          "head": "6895b71e",
+          "ctx_pct": 40,
+          "last_commit_at": 1795310741,
+          "head": "ac7bdd62",
           "subfence": {
             "done": 0,
             "total": null
@@ -4462,24 +4468,24 @@
           "review_rounds": [],
           "commits": [
             {
-              "sha": "6895b71e",
-              "at": 1795309717
+              "sha": "ac7bdd62",
+              "at": 1795310741
             },
             {
-              "sha": "aaa11232",
-              "at": 1795308822
+              "sha": "f263b268",
+              "at": 1795310536
             },
             {
-              "sha": "67f60b14",
-              "at": 1795308794
+              "sha": "1fa162cd",
+              "at": 1795310532
             },
             {
-              "sha": "04b74a08",
-              "at": 1795255102
+              "sha": "d1387868",
+              "at": 1795310529
             },
             {
-              "sha": "231f8015",
-              "at": 1795253530
+              "sha": "00290c4c",
+              "at": 1795310525
             }
           ],
           "fences": {
@@ -4773,7 +4779,7 @@
           ]
         }
       },
-      "snapshot_id": "5a0859868495a44e"
+      "snapshot_id": "5a4e26bd5470644e"
     },
     "scriptgen": {
       "schema": 1,
@@ -5051,7 +5057,7 @@
           ]
         }
       },
-      "snapshot_id": "b389d4a1f40aff57"
+      "snapshot_id": "dc8ddfd7aec4d4c5"
     }
   },
   "pm": {
@@ -5079,22 +5085,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15888
+        "monitor_last_pass_min": 15893
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 15888
+        "monitor_last_pass_min": 15893
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 15888
+        "monitor_last_pass_min": 15893
       }
     ]
   },
-  "snapshot_id": "ec88e0bf3c846583",
-  "published_at": "2026-11-22T01:20:37Z"
+  "snapshot_id": "ba1ac3d3a85e47d7",
+  "published_at": "2026-11-22T01:26:02Z"
 }
