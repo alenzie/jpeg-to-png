@@ -778,7 +778,7 @@
             55.0
           ],
           [
-            44.7,
+            44.8,
             57.0
           ]
         ]
@@ -4248,14 +4248,8 @@
     "flowmaster": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "FLOW-PATTERN-MEDIA",
-            "kind": "needs-owner",
-            "raised_at": 1795387590
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4286,8 +4280,8 @@
         {
           "id": "FLOW-PATTERN-MEDIA",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "planning",
+          "stage_i": 1,
           "ctx_pct": 25,
           "last_commit_at": null,
           "head": null,
@@ -4303,7 +4297,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "FLOW-ROUGHCUT-PREVIEW",
@@ -4568,7 +4562,7 @@
           ]
         }
       },
-      "snapshot_id": "3a47102fa5475260"
+      "snapshot_id": "577ea0f66cb4974c"
     },
     "outbound": {
       "schema": 1,
@@ -4660,9 +4654,16 @@
       ],
       "eligible": [
         "UC-1C-OPENAI",
-        "ACCT-LEVELS-2"
+        "ACCT-LEVELS-2",
+        "CONTACT-EMAIL-AUTODETECT"
       ],
       "merge_feed": [
+        {
+          "pr": 414,
+          "unit": "CONTACT-EMAIL-SEND",
+          "merged_at": 1795398129,
+          "sha": "1da26ed1"
+        },
         {
           "pr": 413,
           "unit": "VOICE-OWNREC-PHONE",
@@ -4686,12 +4687,6 @@
           "unit": "CONTACT-ACCESS-PACK",
           "merged_at": 1795253184,
           "sha": "4fc69c00"
-        },
-        {
-          "pr": 409,
-          "unit": "CONTACT-EMAIL-AD-WAIVER",
-          "merged_at": 1795250235,
-          "sha": "acc0f4b2"
         }
       ],
       "decisions": [
@@ -4937,7 +4932,7 @@
           ]
         }
       },
-      "snapshot_id": "62ccd83c96a28024"
+      "snapshot_id": "d8d7679967231e9a"
     },
     "scriptgen": {
       "schema": 1,
@@ -5215,7 +5210,7 @@
           ]
         }
       },
-      "snapshot_id": "5f5ad5a1a69f6f64"
+      "snapshot_id": "d4964a66850575ef"
     }
   },
   "pm": {
@@ -5243,22 +5238,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 17347
+        "monitor_last_pass_min": 17352
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 17347
+        "monitor_last_pass_min": 17352
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 17347
+        "monitor_last_pass_min": 17352
       }
     ]
   },
-  "snapshot_id": "09ae9a194724caf4",
-  "published_at": "2026-11-23T01:39:56Z"
+  "snapshot_id": "5a6a882fbb32d31c",
+  "published_at": "2026-11-23T01:45:20Z"
 }
