@@ -1501,7 +1501,7 @@
             60.0
           ],
           [
-            39.1,
+            39.2,
             61.0
           ]
         ]
@@ -4283,10 +4283,10 @@
       "units": [
         {
           "id": "FLOW-FINALCUT-LEARN",
-          "status": "proposed",
+          "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": null,
+          "ctx_pct": 18,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4326,9 +4326,7 @@
           "gate_open": false
         }
       ],
-      "eligible": [
-        "FLOW-FINALCUT-LEARN"
-      ],
+      "eligible": [],
       "merge_feed": [
         {
           "pr": 114,
@@ -4552,7 +4550,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-23T22:43:00Z",
+          "updated": "2026-11-23T22:47:12Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4566,7 +4564,7 @@
           ]
         }
       },
-      "snapshot_id": "bb932c2d16ea2c83"
+      "snapshot_id": "bbb48ed4345d84b3"
     },
     "outbound": {
       "schema": 1,
@@ -4599,12 +4597,56 @@
           "up": false
         }
       },
-      "units": [],
+      "units": [
+        {
+          "id": "ACCT-LEVELS-2",
+          "status": "proposed",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 10,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        },
+        {
+          "id": "CONTACT-EMAIL-AUTODETECT",
+          "status": "building",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 10,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
+        }
+      ],
       "eligible": [
         "UC-1C-OPENAI",
         "ACCOUNT-ERASE-COMPLETION",
-        "ACCT-LEVELS-2",
-        "CONTACT-EMAIL-AUTODETECT"
+        "ACCT-LEVELS-2"
       ],
       "merge_feed": [
         {
@@ -4867,7 +4909,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-23T22:43:00Z",
+          "updated": "2026-11-23T22:47:12Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4881,7 +4923,7 @@
           ]
         }
       },
-      "snapshot_id": "e3afa628b1345525"
+      "snapshot_id": "c8a62bb23c75569e"
     },
     "scriptgen": {
       "schema": 1,
@@ -5145,7 +5187,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-23T22:43:00Z",
+          "updated": "2026-11-23T22:47:12Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5159,7 +5201,7 @@
           ]
         }
       },
-      "snapshot_id": "03623f6880a64414"
+      "snapshot_id": "d36bbde6db2122b5"
     }
   },
   "pm": {
@@ -5187,22 +5229,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18610
+        "monitor_last_pass_min": 18616
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18610
+        "monitor_last_pass_min": 18616
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 18610
+        "monitor_last_pass_min": 18616
       }
     ]
   },
-  "snapshot_id": "a7eccbf2fde28624",
-  "published_at": "2026-11-23T22:43:20Z"
+  "snapshot_id": "9031c80f5cac193e",
+  "published_at": "2026-11-23T22:48:52Z"
 }
