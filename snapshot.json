@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 127,
+        "projected": 126,
         "used": 57,
-        "at": 1795398899,
+        "at": 1795400805,
         "reset": "14:32 on 26 Nov",
         "spark": [
           [
@@ -490,6 +490,10 @@
           [
             1795395600,
             128
+          ],
+          [
+            1795399200,
+            126
           ]
         ],
         "trail": [
@@ -774,7 +778,11 @@
             55.0
           ],
           [
-            45.1,
+            44.0,
+            57.0
+          ],
+          [
+            45.2,
             57.0
           ]
         ]
@@ -786,13 +794,13 @@
         "label": "B",
         "mult": "20x",
         "projected": 251,
-        "used": 67,
-        "at": 1795398899,
-        "reset": "Nov 27, 8:59pm (America/Los_Angeles)",
+        "used": 68,
+        "at": 1795400805,
+        "reset": "Nov 27, 9pm (America/Los_Angeles)",
         "spark": [
           [
             1794794400,
-            129
+            132
           ],
           [
             1794798000,
@@ -1333,6 +1341,10 @@
           [
             1795395600,
             250
+          ],
+          [
+            1795399200,
+            251
           ]
         ],
         "trail": [
@@ -1513,8 +1525,12 @@
             64.0
           ],
           [
-            27.0,
+            26.0,
             66.0
+          ],
+          [
+            27.1,
+            68.0
           ]
         ]
       }
@@ -1525,7 +1541,7 @@
       "available": false,
       "burn_per_day": 0.0,
       "days_to_empty": null,
-      "at": 1795398899,
+      "at": 1795400805,
       "spark": [
         [
           1794794400,
@@ -2154,6 +2170,10 @@
         [
           1795395600,
           -0.0
+        ],
+        [
+          1795399200,
+          -0.0
         ]
       ]
     },
@@ -2561,7 +2581,7 @@
             70.0
           ],
           [
-            1794795962,
+            1794797437,
             73.0
           ],
           [
@@ -3187,6 +3207,10 @@
           [
             1795396689,
             57.0
+          ],
+          [
+            1795400805,
+            57.0
           ]
         ]
       },
@@ -3593,8 +3617,8 @@
             34.0
           ],
           [
-            1794795962,
-            35.0
+            1794797437,
+            36.0
           ],
           [
             1794798830,
@@ -4219,6 +4243,10 @@
           [
             1795396689,
             66.0
+          ],
+          [
+            1795400805,
+            68.0
           ]
         ]
       }
@@ -4263,14 +4291,18 @@
           "stage": "building",
           "stage_i": 3,
           "ctx_pct": 55,
-          "last_commit_at": 1795398983,
-          "head": "f87cf16d",
+          "last_commit_at": 1795400808,
+          "head": "2c57daf0",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "2c57daf0",
+              "at": 1795400808
+            },
             {
               "sha": "f87cf16d",
               "at": 1795398983
@@ -4286,10 +4318,6 @@
             {
               "sha": "286b2b0b",
               "at": 1795325004
-            },
-            {
-              "sha": "4ab6c9d7",
-              "at": 1795324987
             }
           ],
           "fences": {
@@ -4563,24 +4591,13 @@
           ]
         }
       },
-      "snapshot_id": "9204f24599a44649"
+      "snapshot_id": "1760fcddc97ef24d"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": true,
-        "units": [
-          {
-            "id": "CONTACT-RIGHTS-INAPP",
-            "kind": "needs-owner",
-            "raised_at": 1795390435
-          },
-          {
-            "id": "VOICE-SMS-OPTIN",
-            "kind": "needs-owner",
-            "raised_at": 1795388594
-          }
-        ]
+        "active": false,
+        "units": []
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4611,8 +4628,8 @@
         {
           "id": "CONTACT-RIGHTS-INAPP",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
+          "stage": "planning",
+          "stage_i": 1,
           "ctx_pct": 62,
           "last_commit_at": null,
           "head": null,
@@ -4628,14 +4645,14 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         },
         {
           "id": "VOICE-SMS-OPTIN",
           "status": "building",
-          "stage": "interviewing",
-          "stage_i": 2,
-          "ctx_pct": 41,
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 42,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4650,7 +4667,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": true
+          "gate_open": false
         }
       ],
       "eligible": [
@@ -4933,7 +4950,7 @@
           ]
         }
       },
-      "snapshot_id": "f26a7848c20815c9"
+      "snapshot_id": "7b462339da692a91"
     },
     "scriptgen": {
       "schema": 1,
@@ -5211,7 +5228,7 @@
           ]
         }
       },
-      "snapshot_id": "845a185325dbfc66"
+      "snapshot_id": "65db919827badd9f"
     }
   },
   "pm": {
@@ -5239,22 +5256,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 17390
+        "monitor_last_pass_min": 17396
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 17390
+        "monitor_last_pass_min": 17396
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 17390
+        "monitor_last_pass_min": 17396
       }
     ]
   },
-  "snapshot_id": "91322906c37d30f5",
-  "published_at": "2026-11-23T02:23:11Z"
+  "snapshot_id": "a867290f9ae9a1ba",
+  "published_at": "2026-11-23T02:28:36Z"
 }
