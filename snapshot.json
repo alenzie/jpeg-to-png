@@ -1509,7 +1509,7 @@
             61.0
           ],
           [
-            39.6,
+            39.7,
             73.0
           ]
         ]
@@ -4294,7 +4294,7 @@
           "status": "building",
           "stage": "building",
           "stage_i": 3,
-          "ctx_pct": 13,
+          "ctx_pct": 36,
           "last_commit_at": 1795476598,
           "head": "54f862e5",
           "subfence": {
@@ -4593,13 +4593,19 @@
           ]
         }
       },
-      "snapshot_id": "b08f027e6afaf742"
+      "snapshot_id": "f075e7241557d7a6"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "ERASURE-HOLD-SCOPE",
+            "kind": "needs-owner",
+            "raised_at": 1795476798
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4674,9 +4680,9 @@
         {
           "id": "ERASURE-HOLD-SCOPE",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 40,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 41,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4691,7 +4697,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4973,7 +4979,7 @@
           ]
         }
       },
-      "snapshot_id": "eb437604c804f556"
+      "snapshot_id": "54c3811c38a74cc2"
     },
     "scriptgen": {
       "schema": 1,
@@ -5251,7 +5257,7 @@
           ]
         }
       },
-      "snapshot_id": "814acf59bd177ace"
+      "snapshot_id": "d801e161a76084b4"
     }
   },
   "pm": {
@@ -5279,22 +5285,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18661
+        "monitor_last_pass_min": 18666
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 18661
+        "monitor_last_pass_min": 18666
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 18661
+        "monitor_last_pass_min": 18666
       }
     ]
   },
-  "snapshot_id": "19ec9dc7085c6e80",
-  "published_at": "2026-11-23T23:33:30Z"
+  "snapshot_id": "70b7f18e56d38a27",
+  "published_at": "2026-11-23T23:38:59Z"
 }
