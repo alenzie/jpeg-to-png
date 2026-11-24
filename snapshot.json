@@ -6,9 +6,9 @@
         "target": 100,
         "label": "B",
         "tier": "Pro",
-        "projected": 115,
-        "used": 75,
-        "at": 1795521869,
+        "projected": 116,
+        "used": 76,
+        "at": 1795522324,
         "reset": "14:32 on 26 Nov",
         "spark": [
           [
@@ -913,9 +913,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 166,
+        "projected": 165,
         "used": 78,
-        "at": 1795521869,
+        "at": 1795522324,
         "reset": "Nov 27, 8:59pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1485,7 +1485,7 @@
             76.0
           ],
           [
-            47.1,
+            47.2,
             78.0
           ]
         ]
@@ -1497,7 +1497,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1795521869,
+      "at": 1795522324,
       "spark": [
         [
           1794916800,
@@ -4231,7 +4231,7 @@
       },
       "runstate": {
         "auto": false,
-        "parallel": 1,
+        "parallel": 2,
         "pickconfirm": true
       },
       "daemons": {
@@ -4270,9 +4270,33 @@
             "review": false
           },
           "gate_open": false
+        },
+        {
+          "id": "FLOWMASTER-RAILWAY-1",
+          "status": "proposed",
+          "stage": "planning",
+          "stage_i": 1,
+          "ctx_pct": 13,
+          "last_commit_at": null,
+          "head": null,
+          "subfence": {
+            "done": 0,
+            "total": null
+          },
+          "review_rounds": [],
+          "commits": [],
+          "fences": {
+            "plan": false,
+            "synth": false,
+            "build": false,
+            "review": false
+          },
+          "gate_open": false
         }
       ],
-      "eligible": [],
+      "eligible": [
+        "FLOWMASTER-RAILWAY-1"
+      ],
       "merge_feed": [
         {
           "pr": 116,
@@ -4479,16 +4503,16 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 115,
+              "proj": 116,
               "target": 250,
-              "used": 75,
+              "used": 76,
               "day": 5,
               "active": "C1",
               "wall": false
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 166,
+              "proj": 165,
               "target": 100,
               "used": 78,
               "day": 4,
@@ -4496,7 +4520,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-24T12:04:30Z",
+          "updated": "2026-11-24T12:12:43Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4510,7 +4534,7 @@
           ]
         }
       },
-      "snapshot_id": "b5a56c7571eabfcf"
+      "snapshot_id": "387b9b6e78df4fda"
     },
     "outbound": {
       "schema": 1,
@@ -4549,7 +4573,7 @@
           "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 24,
+          "ctx_pct": 26,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4818,16 +4842,16 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 115,
+              "proj": 116,
               "target": 250,
-              "used": 75,
+              "used": 76,
               "day": 5,
               "active": "C1",
               "wall": false
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 166,
+              "proj": 165,
               "target": 100,
               "used": 78,
               "day": 4,
@@ -4835,7 +4859,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-24T12:04:30Z",
+          "updated": "2026-11-24T12:12:43Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4849,7 +4873,7 @@
           ]
         }
       },
-      "snapshot_id": "22732dcf2f915f3c"
+      "snapshot_id": "56a46bdae6c6956b"
     },
     "scriptgen": {
       "schema": 1,
@@ -5096,16 +5120,16 @@
           "pools": {
             "codex": {
               "verdict": "UNDERBURN",
-              "proj": 115,
+              "proj": 116,
               "target": 250,
-              "used": 75,
+              "used": 76,
               "day": 5,
               "active": "C1",
               "wall": false
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 166,
+              "proj": 165,
               "target": 100,
               "used": 78,
               "day": 4,
@@ -5113,7 +5137,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-24T12:04:30Z",
+          "updated": "2026-11-24T12:12:43Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5127,7 +5151,7 @@
           ]
         }
       },
-      "snapshot_id": "3f9c24bfaf03a20c"
+      "snapshot_id": "9d66a0ba23880a4b"
     }
   },
   "pm": {
@@ -5155,22 +5179,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 19417
+        "monitor_last_pass_min": 19422
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 19417
+        "monitor_last_pass_min": 19422
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 19417
+        "monitor_last_pass_min": 19422
       }
     ]
   },
-  "snapshot_id": "5b33bf143bde610b",
-  "published_at": "2026-11-24T12:09:32Z"
+  "snapshot_id": "b71b9a30829df96a",
+  "published_at": "2026-11-24T12:14:58Z"
 }
