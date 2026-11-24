@@ -13,7 +13,7 @@
         "spark": [
           [
             1794916800,
-            102
+            103
           ],
           [
             1794920400,
@@ -902,7 +902,7 @@
             74.0
           ],
           [
-            65.3,
+            65.4,
             75.0
           ]
         ]
@@ -2545,8 +2545,8 @@
             97.0
           ],
           [
-            1794917996,
-            97.0
+            1794918545,
+            98.0
           ],
           [
             1794921607,
@@ -3589,7 +3589,7 @@
             66.0
           ],
           [
-            1794917996,
+            1794918545,
             66.0
           ],
           [
@@ -4273,10 +4273,10 @@
         },
         {
           "id": "FLOWMASTER-RAILWAY-1",
-          "status": "proposed",
+          "status": "building",
           "stage": "planning",
           "stage_i": 1,
-          "ctx_pct": 13,
+          "ctx_pct": 18,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4294,9 +4294,7 @@
           "gate_open": false
         }
       ],
-      "eligible": [
-        "FLOWMASTER-RAILWAY-1"
-      ],
+      "eligible": [],
       "merge_feed": [
         {
           "pr": 116,
@@ -4534,13 +4532,19 @@
           ]
         }
       },
-      "snapshot_id": "387b9b6e78df4fda"
+      "snapshot_id": "8f3344f4c6d35975"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "CUSTODY-VAULT",
+            "kind": "needs-owner",
+            "raised_at": 1795522632
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4571,9 +4575,9 @@
         {
           "id": "CUSTODY-VAULT",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 26,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 27,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4588,7 +4592,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -4873,7 +4877,7 @@
           ]
         }
       },
-      "snapshot_id": "56a46bdae6c6956b"
+      "snapshot_id": "2a3e37fd236f13c4"
     },
     "scriptgen": {
       "schema": 1,
@@ -5151,7 +5155,7 @@
           ]
         }
       },
-      "snapshot_id": "9d66a0ba23880a4b"
+      "snapshot_id": "50d56c860eb96147"
     }
   },
   "pm": {
@@ -5179,22 +5183,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 19422
+        "monitor_last_pass_min": 19427
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 19422
+        "monitor_last_pass_min": 19427
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 19422
+        "monitor_last_pass_min": 19427
       }
     ]
   },
-  "snapshot_id": "b71b9a30829df96a",
-  "published_at": "2026-11-24T12:14:58Z"
+  "snapshot_id": "801b1ea6f0182079",
+  "published_at": "2026-11-24T12:20:25Z"
 }
