@@ -1018,7 +1018,7 @@
             88.0
           ],
           [
-            76.5,
+            76.6,
             99.0
           ]
         ]
@@ -4492,6 +4492,8 @@
         }
       ],
       "eligible": [
+        "FLOW-ASSET-LIBRARY-PREVIEWS",
+        "FLOW-ASSET-LIBRARY-TAGGING-AIDS",
         "FLOW-ASSET-TAG-IMPORT"
       ],
       "merge_feed": [
@@ -4717,7 +4719,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-25T07:04:43Z",
+          "updated": "2026-11-25T07:08:59Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4731,7 +4733,7 @@
           ]
         }
       },
-      "snapshot_id": "4d1ea864832e0b69"
+      "snapshot_id": "9d1112900ed9d675"
     },
     "outbound": {
       "schema": 1,
@@ -4741,7 +4743,12 @@
           {
             "id": "CUSTODY-VAULT",
             "kind": "escalate",
-            "raised_at": 1795590212
+            "raised_at": 1795590305
+          },
+          {
+            "id": "SQ-CONNECT",
+            "kind": "escalate",
+            "raised_at": 1795590554
           },
           {
             "id": "TRIAL-SANDBOX-START",
@@ -4803,7 +4810,7 @@
           "status": "building",
           "stage": "interviewing",
           "stage_i": 2,
-          "ctx_pct": 30,
+          "ctx_pct": 31,
           "last_commit_at": 1795590210,
           "head": "34d207ac",
           "subfence": {
@@ -4844,17 +4851,25 @@
         {
           "id": "SQ-CONNECT",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 38,
-          "last_commit_at": 1795589698,
-          "head": "fd5eb5bf",
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 40,
+          "last_commit_at": 1795590531,
+          "head": "726d6d70",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "726d6d70",
+              "at": 1795590531
+            },
+            {
+              "sha": "0bbb9bcd",
+              "at": 1795590528
+            },
             {
               "sha": "fd5eb5bf",
               "at": 1795589698
@@ -4866,14 +4881,6 @@
             {
               "sha": "73d356c9",
               "at": 1795588299
-            },
-            {
-              "sha": "2f835b6c",
-              "at": 1795586654
-            },
-            {
-              "sha": "8fb7b979",
-              "at": 1795586608
             }
           ],
           "fences": {
@@ -4882,7 +4889,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "TRIAL-SANDBOX-START",
@@ -5174,7 +5181,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-25T07:04:43Z",
+          "updated": "2026-11-25T07:08:59Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5188,7 +5195,7 @@
           ]
         }
       },
-      "snapshot_id": "0743332db874775c"
+      "snapshot_id": "1acb879b1b4d88fa"
     },
     "scriptgen": {
       "schema": 1,
@@ -5452,7 +5459,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-25T07:04:43Z",
+          "updated": "2026-11-25T07:08:59Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5466,7 +5473,7 @@
           ]
         }
       },
-      "snapshot_id": "4cdf862194034191"
+      "snapshot_id": "f4216df781ee587a"
     }
   },
   "pm": {
@@ -5494,22 +5501,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20552
+        "monitor_last_pass_min": 20557
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20552
+        "monitor_last_pass_min": 20557
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 20552
+        "monitor_last_pass_min": 20557
       }
     ]
   },
-  "snapshot_id": "3b6ad39717a66c8c",
-  "published_at": "2026-11-25T07:04:58Z"
+  "snapshot_id": "61f87a9a57ff50f3",
+  "published_at": "2026-11-25T07:10:20Z"
 }
