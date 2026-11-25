@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": 116,
         "used": 88,
-        "at": 1795586106,
+        "at": 1795586619,
         "reset": "14:32 on 26 Nov",
         "spark": [
           [
@@ -518,6 +518,10 @@
           [
             1795582800,
             114
+          ],
+          [
+            1795586400,
+            116
           ]
         ],
         "trail": [
@@ -1002,8 +1006,12 @@
             84.0
           ],
           [
-            75.9,
+            75.0,
             86.0
+          ],
+          [
+            75.9,
+            88.0
           ]
         ]
       }
@@ -1013,9 +1021,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 165,
+        "projected": 164,
         "used": 95,
-        "at": 1795586106,
+        "at": 1795586619,
         "reset": "Nov 27, 8:59pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1553,6 +1561,10 @@
           [
             1795582800,
             162
+          ],
+          [
+            1795586400,
+            164
           ]
         ],
         "trail": [
@@ -1649,8 +1661,12 @@
             92.0
           ],
           [
-            57.7,
+            57.0,
             93.0
+          ],
+          [
+            57.8,
+            95.0
           ]
         ]
       }
@@ -1661,7 +1677,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1795586106,
+      "at": 1795586619,
       "spark": [
         [
           1794981600,
@@ -2281,6 +2297,10 @@
         ],
         [
           1795582800,
+          -0.0
+        ],
+        [
+          1795586400,
           -0.0
         ]
       ]
@@ -3319,6 +3339,10 @@
           [
             1795583890,
             86.0
+          ],
+          [
+            1795586619,
+            88.0
           ]
         ]
       },
@@ -4355,6 +4379,10 @@
           [
             1795583890,
             93.0
+          ],
+          [
+            1795586619,
+            95.0
           ]
         ]
       }
@@ -4661,7 +4689,7 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 165,
+              "proj": 164,
               "target": 100,
               "used": 95,
               "day": 5,
@@ -4669,7 +4697,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-25T05:57:35Z",
+          "updated": "2026-11-25T06:03:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4683,13 +4711,19 @@
           ]
         }
       },
-      "snapshot_id": "3ff2d0915f901056"
+      "snapshot_id": "ef3db86612c74bd2"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
-        "active": false,
-        "units": []
+        "active": true,
+        "units": [
+          {
+            "id": "SQ-CONNECT",
+            "kind": "needs-owner",
+            "raised_at": 1795586655
+          }
+        ]
       },
       "pm": {
         "ctx_proxy_pct": null,
@@ -4742,17 +4776,25 @@
         {
           "id": "CUSTODY-VAULT",
           "status": "building",
-          "stage": "subfencing",
-          "stage_i": 4,
-          "ctx_pct": 26,
-          "last_commit_at": 1795585637,
-          "head": "e0df7eed",
+          "stage": "phase-4 review",
+          "stage_i": 5,
+          "ctx_pct": 14,
+          "last_commit_at": 1795586531,
+          "head": "44f870fc",
           "subfence": {
             "done": 8,
             "total": 8
           },
           "review_rounds": [],
           "commits": [
+            {
+              "sha": "44f870fc",
+              "at": 1795586531
+            },
+            {
+              "sha": "308b157a",
+              "at": 1795586527
+            },
             {
               "sha": "e0df7eed",
               "at": 1795585637
@@ -4764,20 +4806,12 @@
             {
               "sha": "24a45b40",
               "at": 1795585064
-            },
-            {
-              "sha": "435609a6",
-              "at": 1795585039
-            },
-            {
-              "sha": "dfaaf05f",
-              "at": 1795584945
             }
           ],
           "fences": {
             "plan": true,
             "synth": true,
-            "build": false,
+            "build": true,
             "review": false
           },
           "gate_open": false
@@ -4785,9 +4819,9 @@
         {
           "id": "SQ-CONNECT",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 26,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 27,
           "last_commit_at": null,
           "head": null,
           "subfence": {
@@ -4802,7 +4836,7 @@
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         }
       ],
       "eligible": [
@@ -5064,7 +5098,7 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 165,
+              "proj": 164,
               "target": 100,
               "used": 95,
               "day": 5,
@@ -5072,7 +5106,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-25T05:57:35Z",
+          "updated": "2026-11-25T06:03:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5086,7 +5120,7 @@
           ]
         }
       },
-      "snapshot_id": "d4e41c492e6df486"
+      "snapshot_id": "71249efeb5701221"
     },
     "scriptgen": {
       "schema": 1,
@@ -5342,7 +5376,7 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 165,
+              "proj": 164,
               "target": 100,
               "used": 95,
               "day": 5,
@@ -5350,7 +5384,7 @@
               "wall": false
             }
           },
-          "updated": "2026-11-25T05:57:35Z",
+          "updated": "2026-11-25T06:03:41Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5364,7 +5398,7 @@
           ]
         }
       },
-      "snapshot_id": "dde5a1d655872869"
+      "snapshot_id": "0bace3d2e8cb5096"
     }
   },
   "pm": {
@@ -5392,22 +5426,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20487
+        "monitor_last_pass_min": 20492
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20487
+        "monitor_last_pass_min": 20492
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 20487
+        "monitor_last_pass_min": 20492
       }
     ]
   },
-  "snapshot_id": "c00345197dcf6d03",
-  "published_at": "2026-11-25T05:59:55Z"
+  "snapshot_id": "9e1e2668478e683b",
+  "published_at": "2026-11-25T06:05:17Z"
 }
