@@ -8,7 +8,7 @@
         "tier": "Pro",
         "projected": 129,
         "used": 99,
-        "at": 1795591084,
+        "at": 1795591466,
         "reset": "14:32 on 26 Nov",
         "spark": [
           [
@@ -1029,9 +1029,9 @@
         "target": 100,
         "label": "B",
         "mult": "20x",
-        "projected": 167,
-        "used": 98,
-        "at": 1795591084,
+        "projected": 169,
+        "used": 99,
+        "at": 1795591466,
         "reset": "Nov 27, 8:59pm (America/Los_Angeles)",
         "spark": [
           [
@@ -1689,7 +1689,7 @@
       "available": false,
       "burn_per_day": null,
       "days_to_empty": null,
-      "at": 1795591084,
+      "at": 1795591466,
       "spark": [
         [
           1794985200,
@@ -2737,8 +2737,8 @@
             8.0
           ],
           [
-            1794986691,
-            10.0
+            1794987094,
+            11.0
           ],
           [
             1794989470,
@@ -3781,7 +3781,7 @@
             78.0
           ],
           [
-            1794986691,
+            1794987094,
             78.0
           ],
           [
@@ -4711,15 +4711,15 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 168,
+              "proj": 169,
               "target": 100,
-              "used": 98,
+              "used": 99,
               "day": 5,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-25T07:08:59Z",
+          "updated": "2026-11-25T07:25:06Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -4733,13 +4733,18 @@
           ]
         }
       },
-      "snapshot_id": "ea572b8681d0ac7f"
+      "snapshot_id": "cb1c76b42a03ab3c"
     },
     "outbound": {
       "schema": 1,
       "gate_alert": {
         "active": true,
         "units": [
+          {
+            "id": "CHANNEL-IG-CONNECT",
+            "kind": "escalate",
+            "raised_at": 1795591528
+          },
           {
             "id": "CUSTODY-VAULT",
             "kind": "escalate",
@@ -4786,24 +4791,45 @@
         {
           "id": "CHANNEL-IG-CONNECT",
           "status": "building",
-          "stage": "planning",
-          "stage_i": 1,
-          "ctx_pct": 33,
-          "last_commit_at": null,
-          "head": null,
+          "stage": "interviewing",
+          "stage_i": 2,
+          "ctx_pct": 42,
+          "last_commit_at": 1795591390,
+          "head": "662c6807",
           "subfence": {
             "done": 0,
             "total": null
           },
           "review_rounds": [],
-          "commits": [],
+          "commits": [
+            {
+              "sha": "662c6807",
+              "at": 1795591390
+            },
+            {
+              "sha": "3f9acbba",
+              "at": 1795588299
+            },
+            {
+              "sha": "fe70d8df",
+              "at": 1795588217
+            },
+            {
+              "sha": "eb0f62cd",
+              "at": 1795588143
+            },
+            {
+              "sha": "096d6c64",
+              "at": 1795587234
+            }
+          ],
           "fences": {
             "plan": false,
-            "synth": false,
+            "synth": true,
             "build": false,
             "review": false
           },
-          "gate_open": false
+          "gate_open": true
         },
         {
           "id": "CUSTODY-VAULT",
@@ -5173,15 +5199,15 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 168,
+              "proj": 169,
               "target": 100,
-              "used": 98,
+              "used": 99,
               "day": 5,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-25T07:08:59Z",
+          "updated": "2026-11-25T07:25:06Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5195,7 +5221,7 @@
           ]
         }
       },
-      "snapshot_id": "58a804552a31ec3c"
+      "snapshot_id": "685da99857f6ad55"
     },
     "scriptgen": {
       "schema": 1,
@@ -5451,15 +5477,15 @@
             },
             "claude": {
               "verdict": "OVERBURN",
-              "proj": 168,
+              "proj": 169,
               "target": 100,
-              "used": 98,
+              "used": 99,
               "day": 5,
               "active": null,
               "wall": false
             }
           },
-          "updated": "2026-11-25T07:08:59Z",
+          "updated": "2026-11-25T07:25:06Z",
           "moments": [
             "unit_dispatch",
             "phase_start",
@@ -5473,7 +5499,7 @@
           ]
         }
       },
-      "snapshot_id": "7c351f32d74da99f"
+      "snapshot_id": "e585694fef07f812"
     }
   },
   "pm": {
@@ -5501,22 +5527,22 @@
         "fleet": "outbound",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20568
+        "monitor_last_pass_min": 20574
       },
       {
         "fleet": "flowmaster",
         "repl_up": true,
         "bridge_up": true,
-        "monitor_last_pass_min": 20568
+        "monitor_last_pass_min": 20574
       },
       {
         "fleet": "scriptgen",
         "repl_up": false,
         "bridge_up": false,
-        "monitor_last_pass_min": 20568
+        "monitor_last_pass_min": 20574
       }
     ]
   },
-  "snapshot_id": "19aad814ad6f0626",
-  "published_at": "2026-11-25T07:21:04Z"
+  "snapshot_id": "098f88f39f7258ab",
+  "published_at": "2026-11-25T07:26:29Z"
 }
